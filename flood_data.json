@@ -1,6 +1,8 @@
 {
- "generated": "2026-11-02T21:34:08Z",
- "errors": [],
+ "generated": "2026-11-02T23:56:39Z",
+ "errors": [
+  "FL511 map locations: 2 report(s) without a pin"
+ ],
  "items": [
   {
    "id": "man-minton-192",
@@ -21,55 +23,7 @@
    "roadShort": "Minton Rd",
    "dir": "SB",
    "spot": "at US 192 (W New Haven Ave)",
-   "where": "Minton Rd SB at US 192 (W New Haven Ave)",
-   "from": "Livingstone Ln",
-   "to": "Helen St",
-   "line": [
-    [
-     28.081233,
-     -80.672582
-    ],
-    [
-     28.078956,
-     -80.672574
-    ],
-    [
-     28.078878,
-     -80.67257
-    ],
-    [
-     28.078801,
-     -80.672567
-    ],
-    [
-     28.078784,
-     -80.672566
-    ],
-    [
-     28.07863,
-     -80.6726
-    ],
-    [
-     28.077636,
-     -80.672596
-    ],
-    [
-     28.077187,
-     -80.672545
-    ],
-    [
-     28.076625,
-     -80.672446
-    ],
-    [
-     28.076119,
-     -80.672294
-    ],
-    [
-     28.075572,
-     -80.672092
-    ]
-   ]
+   "where": "Minton Rd SB at US 192 (W New Haven Ave)"
   },
   {
    "id": "man-minton-helen",
@@ -90,51 +44,7 @@
    "roadShort": "Minton Rd",
    "dir": "NB",
    "spot": "at Helen St",
-   "where": "Minton Rd NB at Helen St",
-   "from": "Henry Ave",
-   "to": "Helen St",
-   "line": [
-    [
-     28.072117,
-     -80.670809
-    ],
-    [
-     28.072634,
-     -80.670868
-    ],
-    [
-     28.073018,
-     -80.67095
-    ],
-    [
-     28.073281,
-     -80.67103
-    ],
-    [
-     28.073604,
-     -80.671128
-    ],
-    [
-     28.073988,
-     -80.671283
-    ],
-    [
-     28.074462,
-     -80.671505
-    ],
-    [
-     28.074856,
-     -80.671746
-    ],
-    [
-     28.075341,
-     -80.672001
-    ],
-    [
-     28.075572,
-     -80.672092
-    ]
-   ]
+   "where": "Minton Rd NB at Helen St"
   },
   {
    "id": "man-jupiter-garvey",
@@ -310,31 +220,7 @@
    "lanes": "All lanes closed",
    "layer": "manual",
    "roadShort": "Sarno Rd",
-   "spot": "near Eau Gallie Blvd",
-   "from": "Washburn Rd",
-   "to": "Porcella Ave",
-   "line": [
-    [
-     28.120956,
-     -80.686538
-    ],
-    [
-     28.121017,
-     -80.684986
-    ],
-    [
-     28.12123,
-     -80.679517
-    ],
-    [
-     28.121311,
-     -80.677528
-    ],
-    [
-     28.121386,
-     -80.675733
-    ]
-   ]
+   "spot": "near Eau Gallie Blvd"
   },
   {
    "id": "man-portmalabar-turkeycreek",
@@ -425,7 +311,7 @@
    "status": "flooded",
    "fullClosure": true,
    "reported": "2026-11-02T09:24:00Z",
-   "updated": "2026-11-02T21:03:00Z",
+   "updated": "2026-11-02T23:28:00Z",
    "lat": 28.07888,
    "lng": -80.672522,
    "layer": "Closures",
@@ -480,81 +366,6 @@
    "to": "Pine St"
   },
   {
-   "id": "fl511-937053",
-   "source": "FL511 (FDOT)",
-   "sourceUrl": "https://fl511.com",
-   "road": "SR-507",
-   "title": "Flooding on SR-507 South, at Palm Bay Rd. All lanes blocked",
-   "status": "flooded",
-   "fullClosure": true,
-   "reported": "2026-11-02T12:56:00Z",
-   "updated": "2026-11-02T21:27:00Z",
-   "lat": 28.035179,
-   "lng": -80.621814,
-   "layer": "Closures",
-   "dir": "SB",
-   "lanes": "All lanes blocked",
-   "roadShort": "SR-507",
-   "spot": "at Palm Bay Rd",
-   "line": [
-    [
-     28.042323,
-     -80.621674
-    ],
-    [
-     28.041151,
-     -80.621679
-    ],
-    [
-     28.039948,
-     -80.621734
-    ],
-    [
-     28.038718,
-     -80.621809
-    ],
-    [
-     28.038518,
-     -80.621819
-    ],
-    [
-     28.038098,
-     -80.621832
-    ],
-    [
-     28.03789,
-     -80.621838
-    ],
-    [
-     28.037489,
-     -80.62185
-    ],
-    [
-     28.036665,
-     -80.621874
-    ],
-    [
-     28.035239,
-     -80.621917
-    ],
-    [
-     28.035186,
-     -80.621922
-    ],
-    [
-     28.035076,
-     -80.621931
-    ],
-    [
-     28.031547,
-     -80.621938
-    ]
-   ],
-   "where": "SR-507 SB at Palm Bay Rd",
-   "from": "Sun Lakes Rd",
-   "to": "Hunter Ave NE"
-  },
-  {
    "id": "fl511-937082",
    "source": "FL511 (FDOT)",
    "sourceUrl": "https://fl511.com",
@@ -563,7 +374,7 @@
    "status": "closed",
    "fullClosure": true,
    "reported": "2026-11-02T13:10:00Z",
-   "updated": "2026-11-02T21:27:00Z",
+   "updated": "2026-11-02T23:39:00Z",
    "lat": 28.076526,
    "lng": -80.621403,
    "layer": "Closures",
@@ -602,7 +413,7 @@
    "status": "flooded",
    "fullClosure": true,
    "reported": "2026-11-02T13:35:00Z",
-   "updated": "2026-11-02T21:27:00Z",
+   "updated": "2026-11-02T23:29:00Z",
    "lat": 28.078862,
    "lng": -80.703539,
    "layer": "Closures",
@@ -705,7 +516,7 @@
    "status": "flooded",
    "fullClosure": true,
    "reported": "2026-11-02T13:12:00Z",
-   "updated": "2026-11-02T21:27:00Z",
+   "updated": "2026-11-02T23:39:00Z",
    "lat": 28.064037,
    "lng": -80.621372,
    "layer": "Closures",
@@ -760,7 +571,7 @@
    "status": "flooded",
    "fullClosure": true,
    "reported": "2026-11-02T14:29:00Z",
-   "updated": "2026-11-02T21:27:00Z",
+   "updated": "2026-11-02T23:29:00Z",
    "lat": 28.078871,
    "lng": -80.700181,
    "layer": "Closures",
@@ -835,7 +646,7 @@
    "status": "closed",
    "fullClosure": true,
    "reported": "2026-11-02T17:07:00Z",
-   "updated": "2026-11-02T21:02:00Z",
+   "updated": "2026-11-02T23:52:00Z",
    "lat": 28.41054,
    "lng": -80.755162,
    "layer": "Closures",
@@ -898,7 +709,7 @@
    "status": "closed",
    "fullClosure": true,
    "reported": "2026-11-02T17:19:00Z",
-   "updated": "2026-11-02T21:02:00Z",
+   "updated": "2026-11-02T23:52:00Z",
    "lat": 28.41054,
    "lng": -80.755162,
    "layer": "Closures",
@@ -953,6 +764,70 @@
    "to": "Beau Geste Rd"
   },
   {
+   "id": "fl511-937842",
+   "source": "FL511 (FDOT)",
+   "sourceUrl": "https://fl511.com",
+   "road": "US-1",
+   "title": "Flooding on US-1 South, before SR-514. All lanes closed",
+   "status": "flooded",
+   "fullClosure": true,
+   "reported": "2026-11-02T21:42:00Z",
+   "updated": "2026-11-02T23:15:00Z",
+   "lat": 28.004405,
+   "lng": -80.563736,
+   "layer": "Closures",
+   "dir": "SB",
+   "lanes": "All lanes closed",
+   "roadShort": "US-1",
+   "spot": "before SR-514",
+   "line": [
+    [
+     28.00436,
+     -80.56379
+    ],
+    [
+     28.00392,
+     -80.56345
+    ]
+   ],
+   "where": "US-1 SB before SR-514"
+  },
+  {
+   "id": "fl511-937844",
+   "source": "FL511 (FDOT)",
+   "sourceUrl": "https://fl511.com",
+   "road": "SR-514",
+   "title": "Flooding on SR-514 East, at US-1. All lanes closed",
+   "status": "flooded",
+   "fullClosure": true,
+   "reported": "2026-11-02T21:51:00Z",
+   "updated": "2026-11-02T23:15:00Z",
+   "lat": 28.004412,
+   "lng": -80.56374,
+   "layer": "Closures",
+   "dir": "EB",
+   "lanes": "All lanes closed",
+   "roadShort": "SR-514",
+   "spot": "at US-1",
+   "line": [
+    [
+     28.004349,
+     -80.563803
+    ],
+    [
+     28.004395,
+     -80.563727
+    ],
+    [
+     28.004422,
+     -80.563682
+    ]
+   ],
+   "where": "SR-514 EB at US-1",
+   "from": "Highway 1",
+   "to": "Highway 1"
+  },
+  {
    "id": "fl511-937677",
    "source": "FL511 (FDOT)",
    "sourceUrl": "https://fl511.com",
@@ -961,7 +836,7 @@
    "status": "caution",
    "fullClosure": false,
    "reported": "2026-11-02T20:22:00Z",
-   "updated": "2026-11-02T21:01:00Z",
+   "updated": "2026-11-02T23:29:00Z",
    "lat": 28.093019,
    "lng": -80.613661,
    "layer": "Incidents",
@@ -982,55 +857,126 @@
    "where": "SR-508 EB at Hickory St"
   },
   {
-   "id": "fl511-937781",
-   "source": "FL511 (FDOT)",
-   "sourceUrl": "https://fl511.com",
-   "road": "US-1",
-   "title": "MVC on US-1 South, beyond Viera Blvd/River Way. Right shoulder blocked",
-   "status": "caution",
-   "fullClosure": false,
-   "reported": "2026-11-02T21:17:00Z",
-   "updated": "2026-11-02T21:22:00Z",
-   "lat": 28.261588,
-   "lng": -80.68799,
-   "layer": "Incidents",
-   "dir": "SB",
-   "lanes": "Right shoulder blocked",
-   "roadShort": "US-1",
-   "spot": "beyond Viera Blvd/River Way",
-   "line": [
-    [
-     28.26155,
-     -80.68809
-    ],
-    [
-     28.26153,
-     -80.68808
-    ]
-   ],
-   "where": "US-1 SB beyond Viera Blvd/River Way"
-  },
-  {
-   "id": "fhp-11022026041536-4593",
+   "id": "fhp-11022026065510-360",
    "source": "FHP live CAD",
    "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-   "road": "US-1",
-   "title": "MVC at US-1 x[VIERA BLVD] [ROCKLEDGE] (Roiad Open)",
+   "road": "BEACHLINE EXPY WB (SR-528 WB) [MM52]",
+   "title": "MVC at BEACHLINE EXPY WB (SR-528 WB) [MM52] x[MM52] [MERRITT ISLAND] (No Roadblock)",
    "status": "caution",
-   "fullClosure": false,
-   "reported": "2026-11-02T09:15:36Z",
-   "updated": "2026-11-02T09:22:07Z",
-   "lat": 28.2614668686869,
-   "lng": -80.6879587657643,
+   "fullClosure": true,
+   "reported": "2026-11-02T11:55:10Z",
+   "updated": "2026-11-02T11:55:10Z",
+   "lat": 28.4051549099693,
+   "lng": -80.6525199250313,
    "layer": "FHP",
-   "roadShort": "US-1",
+   "roadShort": "Beachline Expy Wb (SR-528 Wb) [MM52]",
    "dir": "",
-   "spot": "at Viera Blvd",
-   "lanes": "Roiad Open",
-   "where": "US-1 at Viera Blvd"
+   "spot": "at Mm52",
+   "lanes": "No Roadblock",
+   "where": "Beachline Expy Wb (SR-528 Wb) [MM52] at Mm52"
   },
   {
-   "id": "fhp-11022026112806-6302",
+   "id": "fhp-11022026065310-6490",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "road": "I-95 NB [MM184]",
+   "title": "MVC at I-95 NB [MM184] x[MM184] [MELBOURNE] (Roadway Open)",
+   "status": "caution",
+   "fullClosure": false,
+   "reported": "2026-11-02T11:53:10Z",
+   "updated": "2026-11-02T11:53:10Z",
+   "lat": 28.1304866490997,
+   "lng": -80.7059541902203,
+   "layer": "FHP",
+   "roadShort": "I-95 Nb [MM184]",
+   "dir": "",
+   "spot": "at Mm184",
+   "lanes": "Roadway Open",
+   "where": "I-95 Nb [MM184] at Mm184"
+  },
+  {
+   "id": "fhp-11022026064129-9140",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "road": "FAY BLVD",
+   "title": "MVC W/Roadblock at FAY BLVD x[N COCOA BLVD] [COCOA] (Partial Roadblock - Use Caution)",
+   "status": "closed",
+   "fullClosure": true,
+   "reported": "2026-11-02T11:41:29Z",
+   "updated": "2026-11-02T11:42:17Z",
+   "lat": 28.4777264822134,
+   "lng": -80.76903786308,
+   "layer": "FHP",
+   "roadShort": "Fay Blvd",
+   "dir": "",
+   "spot": "at N Cocoa Blvd",
+   "lanes": "Partial Roadblock - Use Caution",
+   "where": "Fay Blvd at N Cocoa Blvd",
+   "from": "Haverhill Rd",
+   "to": "N Highway 1",
+   "line": [
+    [
+     28.477453,
+     -80.770267
+    ],
+    [
+     28.477743,
+     -80.769525
+    ],
+    [
+     28.477826,
+     -80.769275
+    ],
+    [
+     28.477868,
+     -80.769237
+    ],
+    [
+     28.477904,
+     -80.769204
+    ]
+   ]
+  },
+  {
+   "id": "fhp-11022026060625-9491",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "road": "I-95 SB [MM205]",
+   "title": "Roadway Debris/Object at I-95 SB [MM205] x[MM205] [COCOA] (Debris In The Roadway Use Caution)",
+   "status": "caution",
+   "fullClosure": false,
+   "reported": "2026-11-02T11:06:25Z",
+   "updated": "2026-11-02T11:06:25Z",
+   "lat": 28.4095070750988,
+   "lng": -80.8206074357304,
+   "layer": "FHP",
+   "roadShort": "I-95 Sb [MM205]",
+   "dir": "",
+   "spot": "at Mm205",
+   "lanes": "Debris In The Roadway Use Caution",
+   "where": "I-95 Sb [MM205] at Mm205"
+  },
+  {
+   "id": "fhp-11022026043943-9382",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "road": "US-1 [2 MILES SOF]",
+   "title": "Road Closed Due To Water at US-1 [2 MILES SOF] x[MALABAR RD] [MALABAR] (Southbound Lanes Under Water Use Caution)",
+   "status": "flooded",
+   "fullClosure": true,
+   "reported": "2026-11-02T09:39:43Z",
+   "updated": "2026-11-02T09:39:43Z",
+   "lat": 28.0043366754502,
+   "lng": -80.5636179775855,
+   "layer": "FHP",
+   "roadShort": "US-1 [2 Miles Sof]",
+   "dir": "",
+   "spot": "at Malabar Rd",
+   "lanes": "Southbound Lanes Under Water Use Caution",
+   "where": "US-1 [2 Miles Sof] at Malabar Rd"
+  },
+  {
+   "id": "fhp-11022026112806-9752",
    "source": "FHP live CAD",
    "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
    "road": "NORFOLK PKWY",
@@ -1277,7 +1223,7 @@
    ]
   },
   {
-   "id": "fhp-11022026112110-1210",
+   "id": "fhp-11022026112110-7155",
    "source": "FHP live CAD",
    "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
    "road": "PALM BAY RD NE [ENT RAMP TO]",
@@ -1296,7 +1242,7 @@
    "where": "Palm Bay Rd Ne [Ent Ramp To] at I-95 Nb"
   },
   {
-   "id": "fhp-11022026090844-1548",
+   "id": "fhp-11022026090844-5163",
    "source": "FHP live CAD",
    "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
    "road": "US-1",
@@ -1347,7 +1293,7 @@
    ]
   },
   {
-   "id": "fhp-11022026065558-6208",
+   "id": "fhp-11022026065558-4968",
    "source": "FHP live CAD",
    "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
    "road": "W NEW HAVEN AVE",
@@ -1384,49 +1330,21 @@
  ],
  "alerts": [
   {
-   "id": "urn:oid:2.49.0.1.840.0.16625d1167e193976bf5a5cca5bb838331b3e36b.001.1",
+   "id": "urn:oid:2.49.0.1.840.0.c1ead2969ba9e85cf3775b0d5243405038977644.001.1",
    "event": "Flood Warning",
    "severity": "Severe",
-   "headline": "Flood Warning issued November 2 at 3:52PM EST until November 2 at 6:00PM EST by NWS Melbourne FL",
+   "headline": "Flood Warning issued November 2 at 5:51PM EST until November 2 at 8:00PM EST by NWS Melbourne FL",
    "areas": "Brevard, FL",
-   "effective": "2026-11-02T15:52:00-05:00",
-   "expires": "2026-11-02T18:00:00-05:00",
-   "description": "* WHAT...Flooding caused by excessive rainfall continues.\n\n* WHERE...Central Brevard County in east central Florida...\n\n* WHEN...Until 600 PM EST.\n\n* IMPACTS...Flooding of rivers, creeks, streams, and other low-lying\nand flood-prone locations is imminent or occurring. Expect many\nareas of slow moving or standing water.\n\n* ADDITIONAL DETAILS...\n- At 352 PM EST, Doppler radar and automated rain gauges indicated\nheavy rain due to thunderstorms. Flooding is already occurring in\nthe warned area. Between 6 and 10 inches of rain have fallen.\n- Additional rainfall amounts up to 1 inch are possible in the\nwarned area.\n- Some locations that will experience flooding include...\nMelbourne, Titusville, Rockledge, Cocoa, Cocoa Beach, Satellite\nBeach, Cape Canaveral, Indialantic, Sharpes, Merritt Island, Port\nSaint John, Port Canaveral, Titusville Airport, Patrick Space\nForce Base, Playalinda Beach, Mims, Indian Harbour Beach, Jetty\nPark and Canaveral Groves.\n- http://www.weather.gov/safety/flood",
+   "effective": "2026-11-02T17:51:00-05:00",
+   "expires": "2026-11-02T20:00:00-05:00",
+   "description": "* WHAT...Flooding caused by excessive rainfall continues.\n\n* WHERE...Central Brevard County in east central Florida...\n\n* WHEN...Until 800 PM EST.\n\n* IMPACTS...Flooding of rivers, creeks, streams, and other low-lying\nand flood-prone locations is imminent or occurring. Expect many\nareas of slow moving or standing water.\n\n* ADDITIONAL DETAILS...\n- At 551 PM EST, Doppler radar and automated rain gauges indicated\nheavy rain due to thunderstorms. Flooding is already occurring in\nthe warned area. Between 6 and 10 inches of rain have fallen.\n- Additional rainfall amounts up to 1 inch are possible in the\nwarned area.\n- Some locations that will experience flooding include...\nMelbourne, Rockledge, Satellite Beach, Indialantic, Patrick Space\nForce Base, Merritt Island, Indian Harbour Beach, Suntree, Viera,\nSouth Patrick Shores, Palm Shores, Pineda, Space Coast Stadium,\nEau Gallie, Georgiana and Melbourne Airport.\n- http://www.weather.gov/safety/flood",
    "geometry": {
     "type": "Polygon",
     "coordinates": [
      [
       [
-       -80.88,
-       28.7
-      ],
-      [
-       -80.64,
-       28.7
-      ],
-      [
-       -80.6,
-       28.66
-      ],
-      [
-       -80.56,
-       28.6
-      ],
-      [
-       -80.5,
-       28.47
-      ],
-      [
-       -80.51,
-       28.44
-      ],
-      [
-       -80.56,
-       28.39
-      ],
-      [
        -80.58,
-       28.31
+       28.3
       ],
       [
        -80.57,
@@ -1434,7 +1352,7 @@
       ],
       [
        -80.54,
-       28.14
+       28.13
       ],
       [
        -80.55,
@@ -1445,73 +1363,12 @@
        28.11
       ],
       [
-       -80.88,
-       28.63
+       -80.86,
+       28.3
       ],
       [
-       -80.88,
-       28.7
-      ]
-     ]
-    ]
-   }
-  },
-  {
-   "id": "urn:oid:2.49.0.1.840.0.f00f358b4dff8320cd32ca345d37fca634f3da30.001.1",
-   "event": "Flood Advisory",
-   "severity": "Minor",
-   "headline": "Flood Advisory issued November 2 at 3:38PM EST until November 2 at 5:15PM EST by NWS Melbourne FL",
-   "areas": "Brevard, FL; Indian River, FL; Okeechobee, FL; Osceola, FL; St. Lucie, FL",
-   "effective": "2026-11-02T15:38:00-05:00",
-   "expires": "2026-11-02T17:15:00-05:00",
-   "description": "* WHAT...Flooding caused by excessive rainfall continues.\n\n* WHERE...South Central Brevard County in east central Florida...\nIndian River County in east central Florida...\nNortheastern Okeechobee County in east central Florida...\nSoutheastern Osceola County in east central Florida...\nNorthwestern St. Lucie County in east central Florida...\n\n* WHEN...Until 515 PM EST.\n\n* IMPACTS...Minor flooding in low-lying and poor drainage areas.\n\n* ADDITIONAL DETAILS...\n- At 338 PM EST, Doppler radar indicated heavy rain due to\nthunderstorms. Minor flooding is ongoing or expected to begin\nshortly in the advisory area. Between 3 and 7 inches of rain have\nfallen.\n- Additional rainfall amounts of 2 to 4 inches are expected over\nthe area. This additional rain will result in minor flooding.\n- Some locations that will experience flooding include...\nFellsmere, Indian River Shores, Blue Cypress Lake, Winter Beach,\nGifford and Vero Lake Estates.\n- http://www.weather.gov/safety/flood",
-   "geometry": {
-    "type": "Polygon",
-    "coordinates": [
-     [
-      [
-       -80.77,
-       27.51
-      ],
-      [
-       -81,
-       27.74
-      ],
-      [
-       -80.81,
-       28.01
-      ],
-      [
-       -80.7,
-       27.92
-      ],
-      [
-       -80.64,
-       27.91
-      ],
-      [
-       -80.51,
-       27.73
-      ],
-      [
-       -80.35,
-       27.73
-      ],
-      [
-       -80.34,
-       27.7
-      ],
-      [
-       -80.51,
-       27.66
-      ],
-      [
-       -80.54,
-       27.56
-      ],
-      [
-       -80.77,
-       27.51
+       -80.58,
+       28.3
       ]
      ]
     ]
@@ -1727,6 +1584,12 @@
    "time": "2026-11-02T14:00:00Z",
    "text": "Palm Bay officials declared a shelter-in-place on Monday morning because heavy rain is flooding streets and roads. Residents are asked to stay home and conserve water. Parts of Port Malabar Rd are washed out after Turkey Creek overflowed.",
    "url": "https://mynews13.com/fl/orlando/news/2026/11/02/brevard-school-officials-cancel-classes-due-to-weather-concerns"
+  },
+  {
+   "agency": "City of Cocoa Beach (via Florida Today/Yahoo News)",
+   "time": "2026-11-02T15:22:00Z",
+   "text": "Waste Management warns that trash and recycling pickup in Cocoa Beach may be delayed because of heavy rain and flooding across Brevard County. City recreation facilities are closed.",
+   "url": "https://www.yahoo.com/news/weather-news/articles/live-updates-parts-florida-under-121138617.html"
   }
  ]
 }
