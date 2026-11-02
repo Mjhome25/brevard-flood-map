@@ -1,8 +1,6 @@
 {
- "generated": "2026-11-02T21:32:26Z",
- "errors": [
-  "FL511 map locations: 1 report(s) without a pin"
- ],
+ "generated": "2026-11-02T21:33:35Z",
+ "errors": [],
  "items": [
   {
    "id": "man-minton-192",
@@ -417,25 +415,6 @@
      -80.615843
     ]
    ]
-  },
-  {
-   "road": "US 192",
-   "where": "US 192 (W New Haven Ave) at the I-95 interchange area, just before I-95 (FDOT lists it as at Vine St / Bronson Hwy W)",
-   "title": "All lanes of US 192 closed by flooding near I-95",
-   "city": "West Melbourne",
-   "status": "closed",
-   "fullClosure": true,
-   "lanes": "All lanes",
-   "lat": 28.073,
-   "lng": -80.69,
-   "approx": true,
-   "source": "Florida Department of Transportation (via Palm Beach Post/Yahoo News)",
-   "sourceUrl": "https://www.yahoo.com/news/weather-news/articles/live-updates-parts-florida-under-121138617.html",
-   "reported": "2026-11-02T09:12:00Z",
-   "note": "FDOT reported at 4:12 a.m. EST that flooding had closed all lanes of US 192 just before I-95. The cross-street names it gave (Vine St, Bronson Hwy W) are not Brevard road names, so the pin is approximate near the I-95 interchange and needs checking. I found no report that it has reopened.",
-   "id": "man-us-192-w-new-haven-ave-at-the-i-95-inter",
-   "updated": "2026-11-02T09:12:00Z",
-   "layer": "manual"
   },
   {
    "id": "fl511-937010",
@@ -1032,7 +1011,7 @@
    "where": "US-1 SB beyond Viera Blvd/River Way"
   },
   {
-   "id": "fhp-11022026041536-4820",
+   "id": "fhp-11022026041536-8057",
    "source": "FHP live CAD",
    "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
    "road": "US-1",
@@ -1051,7 +1030,7 @@
    "where": "US-1 at Viera Blvd"
   },
   {
-   "id": "fhp-11022026112806-1091",
+   "id": "fhp-11022026112806-3577",
    "source": "FHP live CAD",
    "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
    "road": "NORFOLK PKWY",
@@ -1298,7 +1277,7 @@
    ]
   },
   {
-   "id": "fhp-11022026112110-2594",
+   "id": "fhp-11022026112110-3139",
    "source": "FHP live CAD",
    "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
    "road": "PALM BAY RD NE [ENT RAMP TO]",
@@ -1317,7 +1296,7 @@
    "where": "Palm Bay Rd Ne [Ent Ramp To] at I-95 Nb"
   },
   {
-   "id": "fhp-11022026090844-6697",
+   "id": "fhp-11022026090844-7663",
    "source": "FHP live CAD",
    "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
    "road": "US-1",
@@ -1368,7 +1347,7 @@
    ]
   },
   {
-   "id": "fhp-11022026065558-7163",
+   "id": "fhp-11022026065558-294",
    "source": "FHP live CAD",
    "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
    "road": "W NEW HAVEN AVE",
