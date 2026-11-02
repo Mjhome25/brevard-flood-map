@@ -1,0 +1,514 @@
+<title>Brevard Emergency</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap">
+<style>
+/* Layout: a slim identity bar, then the map as the whole working area with a tabbed report panel beside it (below it on phones). Nothing sits between the viewer and the map. */
+:root{
+  --bg:#eef1f4; --panel:#ffffff; --fg:#16202a; --muted:#5f6d7a; --line:#d8dee5; --line-soft:#e9edf1; --hover:#f4f6f8;
+  --accent:#1d4e89; --accent-fg:#ffffff;
+  --closed:#c62828; --flooded:#1565c0; --caution:#c99700; --mvc:#ef6c00; --zone:#7b1fa2; --edge:#3d0a6b; --ok:#1b7f4b;
+  --alert-bg:#fbe9e7; --alert-fg:#8e1b1b; --watch-bg:#fff3df; --watch-fg:#6f4400; --ok-bg:#e6f4ec; --ok-fg:#14532d;
+  --map-bg:#e4e9ee;
+  --font:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --fs-0:12px; --fs-1:13px; --fs-2:15px; --fs-3:17px; --fs-4:20px;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0e1419; --panel:#161d24; --fg:#e7ecf1; --muted:#9aa8b5; --line:#2a343e; --line-soft:#202a33; --hover:#1c252e;
+  --accent:#78b0e6; --accent-fg:#0e1419;
+  --closed:#ff6f6f; --flooded:#64aeff; --caution:#ffd54a; --mvc:#ff9a3c; --zone:#d58cff; --edge:#2a0650; --ok:#4fd08a;
+  --alert-bg:#3b1b1b; --alert-fg:#ffb8b8; --watch-bg:#3a2a10; --watch-fg:#ffd08a; --ok-bg:#15301f; --ok-fg:#9fe3b9;
+  --map-bg:#1a222a; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0e1419; --panel:#161d24; --fg:#e7ecf1; --muted:#9aa8b5; --line:#2a343e; --line-soft:#202a33; --hover:#1c252e;
+  --accent:#78b0e6; --accent-fg:#0e1419;
+  --closed:#ff6f6f; --flooded:#64aeff; --caution:#ffd54a; --mvc:#ff9a3c; --zone:#d58cff; --edge:#2a0650; --ok:#4fd08a;
+  --alert-bg:#3b1b1b; --alert-fg:#ffb8b8; --watch-bg:#3a2a10; --watch-fg:#ffd08a; --ok-bg:#15301f; --ok-fg:#9fe3b9;
+  --map-bg:#1a222a; color-scheme:dark}
+__LEAFLET_CSS__
+*{box-sizing:border-box}
+html,body{height:100%}
+body{margin:0;background:var(--bg);color:var(--fg);font:var(--fs-2)/1.45 var(--font);display:flex;flex-direction:column;min-height:100%;font-variant-numeric:tabular-nums}
+a{color:var(--accent)}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+button:focus-visible,a:focus-visible,input:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+h1,h2,h3{margin:0;text-wrap:balance}
+
+/* identity bar */
+.top{background:var(--panel);border-bottom:1px solid var(--line);display:flex;align-items:center;gap:10px 18px;flex-wrap:wrap;min-height:56px;padding-block:8px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.brand{display:flex;align-items:center;gap:10px;min-width:0}
+.brand svg{flex:none}
+.brand h1{font-size:var(--fs-4);font-weight:700;letter-spacing:-.01em;white-space:nowrap}
+.brand .sub{font-size:var(--fs-1);color:var(--muted);white-space:nowrap}
+.status{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-left:auto}
+.pill{display:inline-flex;align-items:center;gap:6px;border-radius:999px;padding:4px 11px;font-size:var(--fs-1);font-weight:500;line-height:1.2;white-space:nowrap}
+.pill.fresh{background:var(--ok-bg);color:var(--ok-fg)}
+.pill.aging{background:var(--watch-bg);color:var(--watch-fg)}
+.pill.stale{background:var(--alert-bg);color:var(--alert-fg)}
+.pill.warn{background:var(--alert-bg);color:var(--alert-fg)}
+.pill.watch{background:var(--watch-bg);color:var(--watch-fg)}
+.pill.quiet{background:var(--hover);color:var(--muted)}
+.pill button{text-decoration:underline;text-underline-offset:2px;padding:0}
+.pill .dot{width:8px;height:8px;border-radius:50%;background:currentColor}
+
+.banner{padding-block:9px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));font-weight:500;background:var(--alert-bg);color:var(--alert-fg)}
+.banner.warn{background:var(--watch-bg);color:var(--watch-fg);font-weight:400;font-size:var(--fs-1)}
+
+/* working area */
+.main{flex:1;display:flex;min-height:0}
+.mapwrap{flex:1;min-width:0;display:flex;flex-direction:column}
+.mapbox{position:relative;flex:1;min-height:0;display:flex}
+.stalenote{margin:0;padding-block:5px;padding-left:max(12px,env(safe-area-inset-left,0px));padding-right:12px;font-size:var(--fs-0);color:var(--alert-fg);background:var(--panel);border-top:1px solid var(--line)}
+#map{flex:1;min-height:0;background:var(--map-bg)}
+.legend{position:absolute;left:max(12px,env(safe-area-inset-left,0px));bottom:22px;z-index:500;display:flex;gap:4px 14px;flex-wrap:wrap;align-items:center;background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:6px 12px;font-size:var(--fs-0);color:var(--fg);box-shadow:0 1px 4px rgba(0,0,0,.12);max-width:calc(100% - 24px)}
+.legend span{display:inline-flex;align-items:center;gap:6px;white-space:nowrap}
+.legend i{display:inline-block;width:10px;height:10px;border-radius:50%}
+.legend svg{width:16px;height:16px;flex:none;overflow:visible}
+.legend .zone{width:16px;height:11px;border:2px dashed var(--zone);background:color-mix(in srgb,var(--zone) 12%,transparent);border-radius:2px}
+.mk{background:none;border:0}
+.leaflet-tooltip.lbl{padding:2px 7px;border-radius:5px;font:600 12px/1.3 var(--font);color:var(--fg);background:var(--panel);border:1px solid var(--line);box-shadow:0 1px 3px rgba(0,0,0,.25);white-space:nowrap}
+.leaflet-tooltip.lbl.closed{border:2px solid var(--closed)}
+.leaflet-tooltip.lbl.closed b{color:var(--closed)}
+.leaflet-tooltip.lbl.k-mvc b{color:var(--mvc)}
+.leaflet-tooltip.lbl::before{display:none}
+.z-lo .leaflet-tooltip.lbl{display:none}
+.z-mid .leaflet-tooltip.lbl.minor{display:none}
+.mk svg{display:block;overflow:visible;filter:drop-shadow(0 1px 2px rgba(0,0,0,.5))}
+
+.side{width:400px;flex:none;background:var(--panel);border-left:1px solid var(--line);display:flex;flex-direction:column;min-height:0}
+.tabs{display:flex;border-bottom:1px solid var(--line);padding:0 8px;gap:2px;flex:none}
+.tab{padding:12px 10px 10px;font-size:var(--fs-2);font-weight:500;color:var(--muted);border-bottom:2px solid transparent;margin-bottom:-1px}
+.tab[aria-selected="true"]{color:var(--fg);border-bottom-color:var(--accent)}
+.tab .n{font-size:var(--fs-0);background:var(--hover);color:var(--muted);border-radius:999px;padding:1px 7px;margin-left:5px;font-weight:600}
+.pane{display:none;flex:1;min-height:0;overflow:auto;flex-direction:column}
+.pane[aria-hidden="false"]{display:flex}
+.tools{padding:8px 16px;border-bottom:1px solid var(--line-soft);display:flex;gap:16px;flex-wrap:wrap;align-items:center;font-size:var(--fs-1);color:var(--muted);flex:none}
+.tools label{display:inline-flex;align-items:center;gap:6px;cursor:pointer}
+.tools input[type=checkbox]{margin:0}
+.find{display:flex;gap:8px;padding:10px 16px 8px;flex:none}
+.find input{flex:1;min-width:0;font:inherit;font-size:var(--fs-2);padding:7px 10px;border:1px solid var(--line);border-radius:6px;background:var(--panel);color:var(--fg)}
+.find select{font:inherit;font-size:var(--fs-1);padding:6px 8px;border:1px solid var(--line);border-radius:6px;background:var(--panel);color:var(--fg)}
+.summary{margin:0 16px 4px;padding:9px 12px;border-radius:6px;font-size:var(--fs-1);font-weight:500;text-align:left;width:calc(100% - 32px)}
+.summary.hit{background:var(--alert-bg);color:var(--alert-fg)}
+.summary.quiet{background:var(--hover);color:var(--muted)}
+.summary u{text-underline-offset:2px}
+.list{flex:1}
+.row .ic{grid-row:span 4;padding-top:1px;width:30px;display:flex;justify-content:center}
+.row .imp{grid-column:2;font-size:var(--fs-2);color:var(--fg)}
+.row .imp.closed{color:var(--closed);font-weight:600}
+.row .imp.sub{font-size:var(--fs-1);color:var(--muted)}
+.secc{color:var(--closed);margin-left:4px}
+.row{display:grid;grid-template-columns:auto 1fr auto;gap:2px 12px;padding:12px 16px;border-bottom:1px solid var(--line-soft);cursor:pointer;align-items:start}
+.row:hover,.row.active{background:var(--hover)}
+.row:focus-visible{outline:2px solid var(--accent);outline-offset:-2px}
+.badge.new{background:var(--accent);color:var(--accent-fg)}
+.row .st{width:10px;height:10px;border-radius:50%;margin-top:7px;background:var(--muted);border:2px solid var(--muted)}
+.row .st.closed{background:var(--closed);border-color:var(--closed)}.row .st.mvc{background:var(--mvc);border-color:var(--mvc);border-radius:2px;transform:rotate(45deg) scale(.9)}.row .st.flooded{background:var(--flooded);border-color:var(--flooded)}.row .st.caution{background:var(--caution);border-color:var(--caution)}
+.row .st.approx{background:transparent}
+.row .st.stale{background:transparent;border-color:var(--muted)}
+.row .ttl{font-weight:500;font-size:16px;line-height:1.35;min-width:0}
+.row .meta{grid-column:2;color:var(--muted);font-size:var(--fs-1);min-width:0}
+.row .age{font-size:var(--fs-1);color:var(--muted);white-space:nowrap;padding-top:1px}
+.row .age.old{color:var(--caution)}
+.badge{display:inline-block;font-size:11px;font-weight:600;letter-spacing:.03em;text-transform:uppercase;padding:1px 6px;border-radius:4px;margin-right:6px;vertical-align:1px}
+.badge.full{background:var(--closed);color:#fff}
+.badge.feed{background:var(--hover);color:var(--muted)}
+.badge.unc{color:var(--muted);border:1px solid var(--line)}
+.empty{padding:32px 16px;color:var(--muted);text-align:center}
+.note{padding:10px 16px;color:var(--muted);font-size:var(--fs-1);border-top:1px solid var(--line-soft)}
+
+/* alerts pane */
+.alist{padding:4px 0}
+.alert{padding:12px 16px;border-bottom:1px solid var(--line-soft)}
+.alert h3{font-size:var(--fs-2);font-weight:600;display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.alert h3 .tm{font-weight:400;color:var(--muted);font-size:var(--fs-1)}
+.alert p{margin:4px 0 0;color:var(--fg);font-size:var(--fs-1);line-height:1.5}
+.sec{padding:14px 16px 6px;font-size:var(--fs-0);font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+
+/* corridors pane */
+.routes table{width:100%;border-collapse:collapse}
+.routes td{padding:10px 16px;border-bottom:1px solid var(--line-soft);vertical-align:top}
+.routes td:last-child{text-align:right;white-space:nowrap;font-size:var(--fs-1)}
+.routes .ok{color:var(--ok)}.routes .hit{color:var(--closed);font-weight:600}.routes .cau{color:var(--caution)}
+
+/* footer */
+.foot{background:var(--panel);border-top:1px solid var(--line);font-size:var(--fs-1);color:var(--muted);padding-block:8px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:flex;gap:6px 18px;flex-wrap:wrap;align-items:center}
+.foot b{color:var(--fg);font-weight:500}
+.foot button{color:var(--accent);text-decoration:underline;text-underline-offset:2px;padding:0}
+.about:not([hidden]){display:grid}
+.about{background:var(--panel);border-top:1px solid var(--line-soft);font-size:var(--fs-1);color:var(--muted);padding-block:10px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));gap:6px}
+.about p{margin:0;max-width:72ch}
+
+/* map chrome */
+.leaflet-container{font:inherit;background:var(--map-bg)}
+.leaflet-popup-content-wrapper,.leaflet-popup-tip{background:var(--panel);color:var(--fg);box-shadow:0 2px 10px rgba(0,0,0,.25)}
+.leaflet-popup-content{margin:10px 12px;font-size:var(--fs-1);line-height:1.45}
+.leaflet-popup-content .src{color:var(--muted);margin-top:4px}
+.leaflet-control-attribution{background:var(--panel)!important;color:var(--muted)!important;font-size:10px}
+.leaflet-control-attribution a{color:var(--muted)}
+.leaflet-bar a{background:var(--panel);color:var(--fg);border-bottom-color:var(--line)}
+.leaflet-bar a:hover{background:var(--hover)}
+
+@media (max-width:900px){
+  .main{flex-direction:column}
+  .mapwrap{flex:none;height:min(58vh,520px);min-height:320px}
+  html,body{height:auto}
+  .main{flex:none}
+  .side{width:auto;border-left:0;border-top:1px solid var(--line);flex:none}
+  .pane{overflow:visible}
+  .brand .sub{display:none}
+  .status{margin-left:0;width:100%}
+  .legend{bottom:18px}
+}
+@media (max-width:520px){
+  .legend{gap:3px 10px;padding:5px 10px}
+}
+@media (prefers-reduced-motion: reduce){*{transition:none!important}}
+</style>
+
+<header class="top">
+  <div class="brand">
+    <svg width="28" height="28" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#1d4e89"/><path d="M32 12c-8 11-14 19-14 27a14 14 0 0 0 28 0c0-8-6-16-14-27z" fill="#fff"/><path d="M22 41c3 2 6 2 10 0s7-2 10 0" fill="none" stroke="#1d4e89" stroke-width="3" stroke-linecap="round"/></svg>
+    <h1>Brevard Emergency</h1><span class="sub">Road &amp; flood status · Brevard County</span>
+  </div>
+  <div class="status">
+    <span class="pill" id="updated"><span class="dot"></span><span>loading…</span></span>
+    <span id="alertpill"></span>
+  </div>
+</header>
+<div class="banner warn" id="health" hidden></div>
+
+<div class="main">
+  <div class="mapwrap">
+   <div class="mapbox">
+    <div id="map" role="application" aria-label="Map of Brevard County road closures and flooding"></div>
+    <div class="legend" aria-label="Legend">
+      <span><svg viewBox="-13 -13 26 26" aria-hidden="true"><circle r="11" fill="var(--flooded)" stroke="#fff" stroke-width="2.5"/><path d="M-7-2q1.75-3 3.5 0t3.5 0 3.5 0 3.5 0M-7 4q1.75-3 3.5 0t3.5 0 3.5 0 3.5 0" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>Flooding</span>
+      <span><svg viewBox="-13 -13 26 26" aria-hidden="true"><path d="M0-12L12 10H-12Z" fill="var(--mvc)" stroke="#fff" stroke-width="2.5" stroke-linejoin="round"/><path d="M0-4V3" stroke="#fff" stroke-width="3" stroke-linecap="round"/><circle cy="7" r="1.7" fill="#fff"/></svg>MVC</span>
+      <span><svg viewBox="-13 -13 26 26" aria-hidden="true"><circle r="11" fill="var(--closed)" stroke="#fff" stroke-width="2.5"/><rect x="-6" y="-2" width="12" height="4" rx="1" fill="#fff"/></svg>Other closure</span>
+      <span class="opt"><svg viewBox="-13 -13 26 26" aria-hidden="true"><circle r="7.5" fill="var(--caution)" stroke="#fff" stroke-width="2"/><path d="M0-3.5V1" stroke="#1a1a1a" stroke-width="2" stroke-linecap="round"/><circle cy="3.6" r="1.2" fill="#1a1a1a"/></svg>Hazard</span>
+      <span><svg viewBox="-16 -16 32 32" aria-hidden="true"><circle r="13" fill="none" stroke="var(--closed)" stroke-width="3.5"/><path d="M-12 0H12" stroke="var(--edge)" stroke-width="9" stroke-linecap="round"/><path d="M-12 0H12" stroke="var(--closed)" stroke-width="4.5" stroke-linecap="round"/></svg>Closed stretch (cross street to cross street)</span>
+      <span><i class="zone"></i>Flood warning area</span>
+    </div>
+   </div>
+   <p class="stalenote" id="stale" role="status" hidden></p>
+  </div>
+  <aside class="side">
+    <div class="tabs" role="tablist">
+      <button class="tab" role="tab" id="tab-reports" aria-selected="true" aria-controls="pane-reports">Roads<span class="n" id="count">0</span></button>
+      <button class="tab" role="tab" id="tab-alerts" aria-selected="false" aria-controls="pane-alerts">Alerts<span class="n" id="acount">0</span></button>
+      <button class="tab" role="tab" id="tab-routes" aria-selected="false" aria-controls="pane-routes">Corridors</button>
+    </div>
+    <div class="pane" id="pane-reports" role="tabpanel" aria-hidden="false">
+      <div class="find">
+        <input type="search" id="q" placeholder="Search a road or city" aria-label="Search a road or city" autocomplete="off">
+        <select id="sort" aria-label="Sort reports"><option value="sev">Most severe</option><option value="new">Newest</option></select>
+      </div>
+      <button type="button" class="summary" id="summary"></button>
+      <div class="tools">
+        <label><input type="checkbox" id="f-flood" checked> Flooding</label>
+        <label><input type="checkbox" id="f-mvc" checked> MVCs</label>
+        <label><input type="checkbox" id="f-closure" checked> Other closures</label>
+        <label><input type="checkbox" id="f-caution" checked> Minor hazards</label>
+        <label><input type="checkbox" id="f-nws" checked> Warning areas</label>
+      </div>
+      <div class="list" id="list"></div>
+      <div class="note">Hollow pin = approximate location. Grey = hand-entered report not re-confirmed for 10 hours. Tap a row to jump to it.</div>
+    </div>
+    <div class="pane" id="pane-alerts" role="tabpanel" aria-hidden="true">
+      <div class="sec">National Weather Service</div>
+      <div class="alist" id="alerts"></div>
+      <div class="sec">Agency statements</div>
+      <div class="alist" id="adv"></div>
+    </div>
+    <div class="pane routes" id="pane-routes" role="tabpanel" aria-hidden="true">
+      <table id="routes"></table>
+      <div class="note">A corridor is flagged when a closure or flooding report lies within about a mile of it.</div>
+    </div>
+  </aside>
+</div>
+
+<div class="foot">
+  <span><b>Not an official source.</b> Call 911 for emergencies. No patient information.</span>
+  <span>FL511 · FHP · NWS Melbourne · local agencies</span>
+  <button id="aboutbtn" aria-expanded="false" aria-controls="about">How this works</button>
+</div>
+<div class="about" id="about" hidden>
+  <p><b>Refresh.</b> Road data is pulled about every 15 minutes while the feed on the office computer is running; NWS alerts refresh live every 5 minutes, and the page reloads itself when newer road data is posted. A red note under the map appears when road data is more than 30 minutes old.</p>
+  <p><b>Tiers.</b> FL511 (FDOT), Florida Highway Patrol live CAD and NWS items come from agency feeds. Items marked "unconfirmed" are hand-entered from police, county or news posts; each shows its post time and link, and turns grey after 10 hours without re-confirmation.</p>
+  <p><b>Privacy.</b> No patient information is ever shown here. Map data © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors.</p>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<script id="flood-data" type="application/json">__DATA_JSON__</script>
+<script id="tile-data" type="application/json">__TILES_JSON__</script>
+<script>
+(function(){
+  const DATA = JSON.parse(document.getElementById('flood-data').textContent);
+  const TILES = JSON.parse(document.getElementById('tile-data').textContent);
+  const ROUTES = [
+    {name:'SR 520 causeway (Cocoa – Merritt Island – Cocoa Beach)', pts:[[28.3587,-80.72],[28.3592,-80.69],[28.3596,-80.66],[28.3596,-80.63]]},
+    {name:'SR 528 Beachline (I-95 – Port Canaveral)', pts:[[28.41,-80.80],[28.41,-80.74],[28.405,-80.68],[28.40,-80.63],[28.41,-80.60]]},
+    {name:'SR 404 Pineda Causeway', pts:[[28.22,-80.69],[28.215,-80.66],[28.21,-80.63],[28.20,-80.605]]},
+    {name:'Eau Gallie Causeway (SR 518)',pts:[[28.13,-80.63],[28.13,-80.61],[28.13,-80.59]]},
+    {name:'US 192 Melbourne Causeway',pts:[[28.08,-80.61],[28.08,-80.59],[28.08,-80.57]]},
+    {name:'N Wickham Rd (Viera – Melbourne)', pts:[[28.26,-80.73],[28.2277,-80.729],[28.20,-80.71],[28.16,-80.68],[28.12,-80.675]]},
+    {name:'A1A beachside (Cape Canaveral – Indialantic)', pts:[[28.39,-80.605],[28.33,-80.61],[28.28,-80.605],[28.24,-80.606],[28.18,-80.595],[28.12,-80.57]]},
+    {name:'US 1 (Titusville – Palm Bay)', pts:[[28.61,-80.81],[28.45,-80.76],[28.36,-80.73],[28.25,-80.70],[28.14,-80.64],[28.03,-80.59]]},
+    {name:'I-95 through Brevard', pts:[[28.70,-80.87],[28.55,-80.83],[28.40,-80.80],[28.25,-80.73],[28.12,-80.66],[28.00,-80.64],[27.85,-80.60]]}
+  ];
+
+  // ---------- helpers ----------
+  const fmtTime = iso => iso ? new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'numeric',minute:'2-digit'}).format(new Date(iso)) : '';
+  const fmtDay = iso => iso ? new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',month:'short',day:'numeric'}).format(new Date(iso)) : '';
+  const sameDay = iso => iso && fmtDay(iso)===fmtDay(new Date().toISOString());
+  const when = iso => iso ? (sameDay(iso)?'':fmtDay(iso)+' ')+fmtTime(iso) : '';
+  const ago = iso => { if(!iso) return ''; const m=Math.round((Date.now()-new Date(iso))/60000); if(m<1) return 'just now'; if(m<60) return m+' min ago'; const h=Math.floor(m/60); if(h<48) return h+' h '+(m%60)+' min ago'; return Math.floor(h/24)+' d ago'; };
+  const esc = s => String(s==null?'':s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+  const km = (a,b)=>{const R=6371,dLat=(b[0]-a[0])*Math.PI/180,dLng=(b[1]-a[1])*Math.PI/180,x=Math.sin(dLat/2)**2+Math.cos(a[0]*Math.PI/180)*Math.cos(b[0]*Math.PI/180)*Math.sin(dLng/2)**2;return 2*R*Math.asin(Math.sqrt(x));};
+  const col = s => getComputedStyle(document.documentElement).getPropertyValue('--'+s).trim();
+
+  // ---------- tabs ----------
+  const tabs=[...document.querySelectorAll('.tab')];
+  function showTab(id){ tabs.forEach(t=>{const on=t.id===id; t.setAttribute('aria-selected',on); document.getElementById(t.getAttribute('aria-controls')).setAttribute('aria-hidden',!on);}); }
+  tabs.forEach(t=>t.addEventListener('click',()=>showTab(t.id)));
+  const aboutBtn=document.getElementById('aboutbtn'), about=document.getElementById('about');
+  aboutBtn.addEventListener('click',()=>{ about.hidden=!about.hidden; aboutBtn.setAttribute('aria-expanded',!about.hidden); });
+
+  // ---------- freshness ----------
+  const gen = DATA.generated;
+  const upd = document.getElementById('updated');
+  const staleEl=document.getElementById('stale');
+  function paintUpdated(){
+    const mins=(Date.now()-new Date(gen))/60000;
+    upd.className='pill '+(mins<=20?'fresh':mins<=30?'aging':'stale');
+    upd.lastElementChild.textContent='Road data '+fmtTime(gen)+' · '+ago(gen);
+    staleEl.hidden=mins<=30;
+    staleEl.textContent='Road data has not updated since '+when(gen)+' ('+ago(gen)+'). The feed may have temporarily stopped.';
+  }
+  paintUpdated(); setInterval(paintUpdated,60000);
+  const errs=DATA.errors||[]; if(errs.length){ const h=document.getElementById('health'); h.hidden=false; h.textContent='Source problem at last pull: '+errs.map(e=>e.split(':')[0]).join(', ')+'. Those items may be missing or outdated.'; }
+
+  // ---------- alerts ----------
+  const alertsEl=document.getElementById('alerts'), pillEl=document.getElementById('alertpill'), acount=document.getElementById('acount');
+  let activeAlerts=[];
+  function paintAlerts(list,live){
+    const now=Date.now();
+    activeAlerts=(list||[]).filter(a=>!a.expires || new Date(a.expires)>now);
+    const byEvent=new Map();
+    activeAlerts.forEach(a=>{ const e=byEvent.get(a.event); if(!e||new Date(a.expires)>new Date(e.expires)) byEvent.set(a.event,a); });
+    const groups=[...byEvent.values()].sort((a,b)=>(/Warning/.test(b.event)-/Warning/.test(a.event)));
+    const top=groups[0];
+    pillEl.innerHTML = top ? `<span class="pill ${/Warning/.test(top.event)?'warn':'watch'}"><button type="button" id="gotoalerts">${esc(top.event)} until ${esc(when(top.expires))}${groups.length>1?' · +'+(groups.length-1)+' more':''}</button></span>` : `<span class="pill quiet">No NWS alerts${live?'':' at last pull'}</span>`;
+    const g=document.getElementById('gotoalerts'); if(g) g.addEventListener('click',()=>{showTab('tab-alerts'); document.querySelector('.side').scrollIntoView({block:'nearest'});});
+    acount.textContent=groups.length+(DATA.advisories||[]).length;
+    alertsEl.innerHTML = groups.length ? groups.map(a=>{
+      const n=activeAlerts.filter(x=>x.event===a.event).length;
+      const d=(a.description||'').replace(/\s+/g,' ');
+      const m=d.match(/WHAT\.\.\.\s*([^*]+)/)||d.match(/Warning for\.\.\.\s*([^*]+)/i)||d.match(/Advisory for\.\.\.\s*([^*]+)/i);
+      const what=(m?m[1]:'').replace(/\.\.\.$/,'').trim();
+      const others=activeAlerts.filter(x=>x.event===a.event&&x!==a).map(x=>{const dd=(x.description||'').replace(/\s+/g,' ');const mm=dd.match(/Warning for\.\.\.\s*([^*]+)/i);return mm?mm[1].replace(/ in east central Florida.*$/,'').trim():'';}).filter(Boolean);
+      return `<div class="alert"><h3>${esc(a.event)}${n>1?' <span class="tm">('+n+' areas)</span>':''}<span class="tm">until ${esc(when(a.expires))}${live?' · live':''}</span></h3><p>${esc(what.replace(/ in east central Florida.*$/,'')||'Brevard County')}${others.length?'; also '+esc(others.join('; ')):''}</p></div>`;
+    }).join('') : '<div class="empty">No active NWS alerts for Brevard.</div>';
+  }
+  paintAlerts(DATA.alerts,false);
+  const advEl=document.getElementById('adv');
+  const advs=(DATA.advisories||[]).slice().sort((a,b)=>new Date(b.time)-new Date(a.time));
+  advEl.innerHTML = advs.length ? advs.map(a=>`<div class="alert"><h3>${esc(a.agency)}<span class="tm">${esc(when(a.time))}</span></h3><p>${esc(a.text)}${a.url?' <a href="'+esc(a.url)+'" target="_blank" rel="noopener">post</a>':''}</p></div>`).join('') : '<div class="empty">No agency statements recorded.</div>';
+
+  // ---------- map ----------
+  const map = L.map('map',{zoomControl:true,minZoom:10,maxZoom:18,attributionControl:true}).setView([28.22,-80.68],10);
+  map.attributionControl.setPrefix('');
+  const MINZ=11;
+  const Embedded = L.GridLayer.extend({
+    createTile:function(c){
+      const d=document.createElement('div'); d.style.width=d.style.height='256px'; d.className='tile-fallback';
+      if(c.z<MINZ){
+        const f=1<<(MINZ-c.z), sz=256/f;
+        for(let i=0;i<f;i++) for(let j=0;j<f;j++){
+          const key=MINZ+'/'+((c.x<<(MINZ-c.z))+i)+'/'+((c.y<<(MINZ-c.z))+j); if(!TILES[key]) continue;
+          const k=document.createElement('div'); k.style.cssText=`position:absolute;left:${i*sz}px;top:${j*sz}px;width:${sz}px;height:${sz}px;background:url("${TILES[key]}") 0 0/${sz}px ${sz}px`; d.appendChild(k);
+        }
+        return d;
+      }
+      for(let z=c.z; z>=MINZ; z--){
+        const dz=c.z-z, x=c.x>>dz, y=c.y>>dz, key=z+'/'+x+'/'+y;
+        if(TILES[key]){
+          const f=1<<dz, ox=(c.x-(x<<dz))*256, oy=(c.y-(y<<dz))*256;
+          d.style.backgroundImage='url("'+TILES[key]+'")'; d.style.backgroundSize=(256*f)+'px '+(256*f)+'px'; d.style.backgroundPosition=(-ox)+'px '+(-oy)+'px';
+          break;
+        }
+      }
+      return d;
+    }
+  });
+  new Embedded({attribution:'© OpenStreetMap contributors'}).addTo(map);
+  // On brevardemergency.com live tiles load over the embedded set; inside the artifact sandbox they are blocked and the embedded set shows.
+  if(location.protocol.startsWith('http')&&!/claudeusercontent|claude\.ai/.test(location.host)) L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:19,attribution:''}).addTo(map);
+
+  map.createPane('zones').style.zIndex=350;
+  const nwsLayer=L.layerGroup().addTo(map);
+  function drawNws(){
+    nwsLayer.clearLayers();
+    activeAlerts.filter(a=>a.geometry).forEach(a=>{
+      const warn=/Warning/.test(a.event);
+      L.geoJSON(a.geometry,{pane:'zones',interactive:false,style:{color:col('zone'),weight:warn?2:1.5,opacity:warn?.85:.6,fillColor:col('zone'),fillOpacity:warn?.06:.03,dashArray:warn?'8 6':'2 6'}})
+        .bindPopup(`<b>${esc(a.event)}</b><br>${esc(a.headline||'')}<div class="src">${esc((a.description||'').slice(0,500))}…</div>`).addTo(nwsLayer);
+    });
+  }
+  drawNws();
+  async function liveNws(){
+    try{
+      const r=await fetch('https://api.weather.gov/alerts/active?zone=FLC009,FLZ247,FLZ347,FLZ447,FLZ547,FLZ647,FLZ747',{headers:{'Accept':'application/geo+json'}});
+      if(!r.ok) return; const j=await r.json(); const seen=new Set();
+      const list=(j.features||[]).filter(f=>!seen.has(f.properties.id)&&seen.add(f.properties.id)).map(f=>({id:f.properties.id,event:f.properties.event,headline:f.properties.headline,areas:f.properties.areaDesc,expires:f.properties.expires,description:(f.properties.description||'').slice(0,1200),geometry:f.geometry}));
+      paintAlerts(list,true); drawNws();
+    }catch(e){}
+  }
+  liveNws(); setInterval(liveNws,5*60000);
+
+
+  // ---------- reports ----------
+  // Cause decides the marker shape and colour; "closed" is shown separately as a red ring, red stretch and label.
+  const cause=it=>/\bMVC\b/.test(it.title||'')?'mvc':it.status==='flooded'?'flood':it.status==='closed'?'closure':'hazard';
+  const isClosed=it=>!!(it.fullClosure||it.status==='closed');
+  const ORDER={flood:0,mvc:1,closure:2,hazard:3};
+  const SEC={flood:'Flooding',mvc:'MVCs',closure:'Other closures',hazard:'Minor hazards'};
+  const COLOR={flood:'flooded',mvc:'mvc',closure:'closed',hazard:'caution'};
+  const SZ={flood:24,mvc:28,closure:26,hazard:18};
+  function glyph(k,c){
+    if(k==='closure') return `<circle r="11" fill="${c}" stroke="#fff" stroke-width="2.5"/><rect x="-6" y="-2" width="12" height="4" rx="1" fill="#fff"/>`;
+    if(k==='mvc') return `<path d="M0-12L12 10H-12Z" fill="${c}" stroke="#fff" stroke-width="2.5" stroke-linejoin="round"/><path d="M0-4V3" stroke="#fff" stroke-width="3" stroke-linecap="round"/><circle cy="7" r="1.7" fill="#fff"/>`;
+    if(k==='flood') return `<circle r="11" fill="${c}" stroke="#fff" stroke-width="2.5"/><path d="M-7-2q1.75-3 3.5 0t3.5 0 3.5 0 3.5 0M-7 4q1.75-3 3.5 0t3.5 0 3.5 0 3.5 0" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"/>`;
+    return `<circle r="7.5" fill="${c}" stroke="#fff" stroke-width="2"/><path d="M0-3.5V1" stroke="#1a1a1a" stroke-width="2" stroke-linecap="round"/><circle cy="3.6" r="1.2" fill="#1a1a1a"/>`;
+  }
+  function svgFor(it,st,scale){
+    const k=cause(it), c=st?col('muted'):col(COLOR[k]), ring=isClosed(it)&&k!=='closure'&&!st;
+    const base=SZ[k]+(ring?8:0), sz=Math.round(base*scale);
+    return {sz, html:`<svg width="${sz}" height="${sz}" viewBox="${-base/2} ${-base/2} ${base} ${base}" style="opacity:${(it.approx||st)?.6:1}" aria-hidden="true">${ring?`<circle r="15" fill="none" stroke="${col('closed')}" stroke-width="3"/>`:''}${glyph(k,c)}</svg>`};
+  }
+  function mkIcon(it,st){ const g=svgFor(it,st,1.3); return L.divIcon({className:'mk',html:g.html,iconSize:[g.sz,g.sz],iconAnchor:[g.sz/2,g.sz/2],popupAnchor:[0,-g.sz/2],tooltipAnchor:[g.sz/2,0]}); }
+  const isStale=it=>it.layer==='manual' && (Date.now()-new Date(it.updated||it.reported||0))>10*3600e3;
+  const sevSort=(a,b)=>(ORDER[cause(a)]-ORDER[cause(b)])||((isClosed(b)|0)-(isClosed(a)|0))||(new Date(b.updated||0)-new Date(a.updated||0));
+  const items=(DATA.items||[]).slice().sort(sevSort);
+  const where=it=>it.where||it.road||it.title;
+  const roadDir=it=>[it.roadShort||it.road||'',it.dir||''].filter(Boolean).join(' ');
+  const span=it=>(it.from&&it.to)?`from ${it.from} to ${it.to}`:'';
+  const closedWhere=it=>span(it)?`${roadDir(it)} ${span(it)}`:where(it);
+  const impact=it=>{ if(isStale(it)) return 'Not re-confirmed'; const l=(it.lanes||'').trim(); if(isClosed(it)) return /all lanes|closed|blocked/i.test(l)?l.replace(/^Road Flooded - Seek Alt Route$/i,'Closed, seek another route'):'Closed at this spot'; return l||({flood:'Water on road',mvc:'MVC',hazard:'Use caution',closure:''}[cause(it)]); };
+  const markers=L.layerGroup().addTo(map);
+  const byId={};
+  const tier=it=>it.layer==='manual'?(isStale(it)?'Unverified, not re-confirmed for over 10 h':'Unconfirmed report (not from an agency feed)'):'Agency feed';
+  function popupHtml(it){
+    const c=isClosed(it)&&!isStale(it);
+    return `<b>${c?'<span style="color:'+col('closed')+'">CLOSED</span> · ':''}${esc(c?closedWhere(it):where(it))}</b><br>${esc(impact(it))}${c&&span(it)?`<br><span class="src">Reported ${esc(it.spot||'')}. The stretch shown runs to the nearest cross street on each side.</span>`:''}<div class="src">${esc(it.title)}${it.city?' · '+esc(it.city):''}<br>${tier(it)} · ${esc(it.source)} · ${esc(when(it.updated||it.reported))}${it.approx?' · approximate location':''}${it.note?'<br>'+esc(it.note):''}${it.sourceUrl?'<br><a href="'+esc(it.sourceUrl)+'" target="_blank" rel="noopener">source</a>':''}</div>`;
+  }
+  const FILT={flood:'f-flood',mvc:'f-mvc',closure:'f-closure',hazard:'f-caution'};
+  const shown=k=>document.getElementById(FILT[k]).checked;
+  function draw(){
+    markers.clearLayers();
+    const q=document.getElementById('q').value.trim().toLowerCase();
+    const byNew=document.getElementById('sort').value==='new';
+    let vis=items.filter(it=>shown(cause(it)));
+    if(q) vis=vis.filter(it=>[it.title,it.road,it.where,it.city].join(' ').toLowerCase().includes(q));
+    if(byNew) vis=vis.slice().sort((a,b)=>new Date(b.updated||b.reported||0)-new Date(a.updated||a.reported||0));
+    vis.filter(it=>it.lat!=null).forEach(it=>{
+      const st=isStale(it), closed=isClosed(it)&&!st, k=cause(it);
+      if(it.line&&it.line.length>1){
+        if(closed){
+          L.polyline(it.line,{color:col('edge'),weight:14,opacity:1,lineCap:'round',lineJoin:'round',interactive:false}).addTo(markers);
+          L.polyline(it.line,{color:col('closed'),weight:7,opacity:1,lineCap:'round',lineJoin:'round',interactive:false}).addTo(markers);
+          [it.line[0],it.line[it.line.length-1]].forEach(p=>L.circleMarker(p,{radius:5,color:col('edge'),weight:3,fillColor:'#fff',fillOpacity:1,interactive:false}).addTo(markers));
+        } else {
+          L.polyline(it.line,{color:'#fff',weight:9,opacity:.95,interactive:false}).addTo(markers);
+          L.polyline(it.line,{color:col(COLOR[k]),weight:5,opacity:1,lineCap:'round',interactive:false}).addTo(markers);
+        }
+      }
+      const m=L.marker([it.lat,it.lng],{icon:mkIcon(it,st),zIndexOffset:(st?0:(closed?800:0)+(4-ORDER[k])*100),title:where(it),keyboard:false}).bindPopup(popupHtml(it));
+      if(!st) m.bindTooltip(`${closed?'<b>CLOSED</b> · ':(k==='mvc'?'<b>MVC</b> · ':'')}${esc(closed?closedWhere(it):where(it))}`,{permanent:true,direction:'right',offset:[2,0],className:'lbl '+(closed?'closed':'minor')+' k-'+k,opacity:1});
+      m.on('click',()=>select(it.id,false)); m.addTo(markers); byId[it.id]=m;
+    });
+    renderList(vis, byNew);
+  }
+  const listEl=document.getElementById('list');
+  function rowHtml(it){
+    const t=it.updated||it.reported; const old=t&&(Date.now()-new Date(t))>6*3600e3; const stale=isStale(it); const closed=isClosed(it)&&!stale;
+    const badge = it.layer==='manual' ? `<span class="badge unc">${stale?'unverified':'unconfirmed'}</span>` : `<span class="badge feed">${esc(it.layer==='FHP'?'FHP':'FL511')}</span>`;
+    const isNew=t&&(Date.now()-new Date(t))<3600e3;
+    return `<div class="row" data-id="${esc(it.id)}" tabindex="0" role="button" aria-label="${esc(where(it))}, show on map"><span class="ic">${svgFor(it,stale,.85).html}</span><div class="ttl">${isNew?'<span class="badge new">New</span>':''}${closed?'<span class="badge full">Closed</span>':''}${esc(closed&&span(it)?roadDir(it):where(it))}</div><span class="age ${old?'old':''}" title="${esc(when(t))}">${esc(ago(t))}</span><div class="imp ${closed?'closed':''}">${esc(closed&&span(it)?'Closed '+span(it):impact(it))}</div>${closed&&span(it)?`<div class="imp sub">Reported ${esc(it.spot||'')}${it.lanes?' · '+esc(it.lanes):''}</div>`:''}<div class="meta">${badge}${esc([it.title!==where(it)?it.title:'',it.city,it.source,when(t)].filter(Boolean).join(' · '))}${it.lat==null?' · no map location yet':''}</div></div>`;
+  }
+  function renderList(arr, byNew){
+    document.getElementById('count').textContent=arr.length;
+    if(!arr.length){listEl.innerHTML='<div class="empty">'+(document.getElementById('q').value.trim()?'No reports match that search.':'No road reports at the last pull.')+'</div>';return;}
+    if(byNew){ listEl.innerHTML=arr.map(rowHtml).join(''); return; }
+    listEl.innerHTML=['flood','mvc','closure','hazard'].map(k=>{
+      const g=arr.filter(it=>cause(it)===k); if(!g.length) return '';
+      const nc=g.filter(it=>isClosed(it)&&!isStale(it)).length;
+      return `<div class="sec">${SEC[k]} · ${g.length}${nc?` <span class="secc">${nc} closed</span>`:''}</div>`+g.map(rowHtml).join('');
+    }).join('');
+  }
+  listEl.addEventListener('click',e=>{const r=e.target.closest('.row'); if(r) select(r.dataset.id,true);});
+  listEl.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){const r=e.target.closest('.row'); if(r){e.preventDefault(); select(r.dataset.id,true);}}});
+  function select(id,fly){
+    listEl.querySelectorAll('.row.active').forEach(r=>r.classList.remove('active'));
+    const r=listEl.querySelector(`.row[data-id="${CSS.escape(id)}"]`); if(r){r.classList.add('active'); r.scrollIntoView({block:'nearest'});}
+    const m=byId[id]; if(m&&fly){ if(window.innerWidth<=900) document.getElementById('map').scrollIntoView({block:'start',behavior:'smooth'}); map.flyTo(m.getLatLng(),Math.max(map.getZoom(),14),{duration:.6}); setTimeout(()=>m.openPopup(),650);}
+  }
+  Object.values(FILT).forEach(id=>document.getElementById(id).addEventListener('change',draw));
+  document.getElementById('q').addEventListener('input',draw);
+  document.getElementById('sort').addEventListener('change',draw);
+  document.getElementById('f-nws').addEventListener('change',e=>{ e.target.checked?nwsLayer.addTo(map):map.removeLayer(nwsLayer); });
+  // Labels: none at county zoom, closures from zoom 11, everything from zoom 13.
+  const zc=()=>{ const z=map.getZoom(), el=map.getContainer(); el.classList.toggle('z-lo',z<11); el.classList.toggle('z-mid',z>=11&&z<13); };
+  map.on('zoomend',zc); zc();
+  draw();
+
+  // ---------- corridors ----------
+  const hitIds=new Set(); let hitRoutes=0;
+  document.getElementById('routes').innerHTML=ROUTES.map(r=>{
+    const near=it=>it.lat!=null&&r.pts.some(p=>km(p,[it.lat,it.lng])<1.6);
+    const hits=items.filter(it=>cause(it)!=='hazard'&&!isStale(it)&&near(it));
+    const cau=items.filter(it=>cause(it)==='hazard'&&near(it));
+    if(hits.length){hitRoutes++; hits.forEach(h=>hitIds.add(h.id));}
+    const s=hits.length?`<span class="hit">${hits.length} closure, MVC or flood report${hits.length>1?'s':''} nearby</span>`:cau.length?`<span class="cau">${cau.length} hazard${cau.length>1?'s':''} nearby</span>`:'<span class="ok">No nearby reports</span>';
+    return `<tr><td>${esc(r.name)}</td><td>${s}</td></tr>`;
+  }).join('');
+  const sumEl=document.getElementById('summary');
+  sumEl.className='summary '+(hitIds.size?'hit':'quiet');
+  sumEl.innerHTML=hitIds.size?`${hitIds.size} closure or flood report${hitIds.size>1?'s':''} near ${hitRoutes} key corridor${hitRoutes>1?'s':''}. <u>See corridors</u>`:'No closure or flood reports near key corridors. <u>See corridors</u>';
+  sumEl.addEventListener('click',()=>showTab('tab-routes'));
+
+  const pts=items.filter(i=>i.lat!=null).map(i=>[i.lat,i.lng]);
+  if(pts.length>1) map.fitBounds(L.latLngBounds(pts).pad(0.12));
+
+  // ---------- auto-update: check for newer road data every 5 minutes ----------
+  const VKEY='bfm-view';
+  try{
+    const v=JSON.parse(sessionStorage.getItem(VKEY)||'null'); sessionStorage.removeItem(VKEY);
+    if(v && Date.now()-v.t<120000){
+      map.setView([v.lat,v.lng],v.z,{animate:false});
+      if(v.tab) showTab(v.tab);
+      const setV=(id,prop,val,ev)=>{const el=document.getElementById(id); if(el && val!=null && el[prop]!==val){el[prop]=val; el.dispatchEvent(new Event(ev));}};
+      setV('q','value',v.q,'input'); setV('sort','value',v.sort,'change');
+      if(v.f) Object.keys(v.f).forEach(id=>setV(id,'checked',v.f[id],'change'));
+      if(v.y) window.scrollTo(0,v.y);
+    }
+  }catch(e){}
+  function busy(){ const a=document.activeElement; return (a && a.id==='q') || !!document.querySelector('.leaflet-popup'); }
+  async function checkNew(){
+    if(document.hidden) return;
+    try{
+      const r=await fetch('data.json?t='+Date.now(),{cache:'no-store'}); if(!r.ok) return;
+      const j=await r.json();
+      if(!j.generated || new Date(j.generated)<=new Date(gen)) return;
+      if(busy()) return;  // try again next round so a reload never interrupts someone
+      const c=map.getCenter(), sel=document.querySelector('.tab[aria-selected="true"]');
+      try{ sessionStorage.setItem(VKEY,JSON.stringify({t:Date.now(),lat:c.lat,lng:c.lng,z:map.getZoom(),tab:sel&&sel.id,
+        q:document.getElementById('q').value,sort:document.getElementById('sort').value,
+        f:Object.fromEntries([...document.querySelectorAll('.tools input[type=checkbox]')].map(x=>[x.id,x.checked])),y:window.scrollY})); }catch(e){}
+      location.reload();
+    }catch(e){}
+  }
+  setInterval(checkNew,5*60000);
+  document.addEventListener('visibilitychange',()=>{ if(!document.hidden) checkNew(); });
+})();
+</script>

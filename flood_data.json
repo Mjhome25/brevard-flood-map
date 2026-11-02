@@ -1,0 +1,1689 @@
+{
+ "generated": "2026-11-02T20:05:47Z",
+ "errors": [],
+ "items": [
+  {
+   "id": "man-minton-192",
+   "road": "Minton Rd southbound at US 192 (W New Haven Ave)",
+   "title": "Minton Rd southbound at US 192 closed, flooding",
+   "city": "West Melbourne",
+   "status": "flooded",
+   "fullClosure": true,
+   "lat": 28.0788,
+   "lng": -80.6726,
+   "approx": false,
+   "source": "West Melbourne Police Dept (Facebook)",
+   "sourceUrl": "https://www.facebook.com/westmelbournepolicedepartment/",
+   "reported": "2026-11-02T12:45:00Z",
+   "updated": "2026-11-02T12:45:00Z",
+   "note": "WMPD: 'Minton Road at U.S. 192, Southbound is CLOSED due to flooding and is currently impassable.' Cars disabled throughout the city.",
+   "layer": "manual",
+   "roadShort": "Minton Rd",
+   "dir": "SB",
+   "spot": "at US 192 (W New Haven Ave)",
+   "where": "Minton Rd SB at US 192 (W New Haven Ave)",
+   "from": "Livingstone Ln",
+   "to": "Helen St",
+   "line": [
+    [
+     28.081233,
+     -80.672582
+    ],
+    [
+     28.078956,
+     -80.672574
+    ],
+    [
+     28.078878,
+     -80.67257
+    ],
+    [
+     28.078801,
+     -80.672567
+    ],
+    [
+     28.078784,
+     -80.672566
+    ],
+    [
+     28.07863,
+     -80.6726
+    ],
+    [
+     28.077636,
+     -80.672596
+    ],
+    [
+     28.077187,
+     -80.672545
+    ],
+    [
+     28.076625,
+     -80.672446
+    ],
+    [
+     28.076119,
+     -80.672294
+    ],
+    [
+     28.075572,
+     -80.672092
+    ]
+   ]
+  },
+  {
+   "id": "man-minton-helen",
+   "road": "Minton Rd northbound at Helen St",
+   "title": "Minton Rd northbound at Helen St closed, flooding",
+   "city": "West Melbourne",
+   "status": "flooded",
+   "fullClosure": true,
+   "lat": 28.073,
+   "lng": -80.6722,
+   "approx": true,
+   "source": "West Melbourne Police Dept (Facebook)",
+   "sourceUrl": "https://www.facebook.com/westmelbournepolicedepartment/",
+   "reported": "2026-11-02T12:45:00Z",
+   "updated": "2026-11-02T12:45:00Z",
+   "note": "WMPD: 'Minton Road Northbound at Helen Street is CLOSED due to flooding.' Pin approximate (block-level).",
+   "layer": "manual",
+   "roadShort": "Minton Rd",
+   "dir": "NB",
+   "spot": "at Helen St",
+   "where": "Minton Rd NB at Helen St",
+   "from": "Henry Ave",
+   "to": "Helen St",
+   "line": [
+    [
+     28.072117,
+     -80.670809
+    ],
+    [
+     28.072634,
+     -80.670868
+    ],
+    [
+     28.073018,
+     -80.67095
+    ],
+    [
+     28.073281,
+     -80.67103
+    ],
+    [
+     28.073604,
+     -80.671128
+    ],
+    [
+     28.073988,
+     -80.671283
+    ],
+    [
+     28.074462,
+     -80.671505
+    ],
+    [
+     28.074856,
+     -80.671746
+    ],
+    [
+     28.075341,
+     -80.672001
+    ],
+    [
+     28.075572,
+     -80.672092
+    ]
+   ]
+  },
+  {
+   "id": "man-jupiter-garvey",
+   "road": "Jupiter Blvd NW at Garvey Rd NW",
+   "title": "Jupiter Blvd heavily flooded near Garvey Rd",
+   "city": "Palm Bay",
+   "status": "flooded",
+   "fullClosure": false,
+   "lat": 28.012,
+   "lng": -80.677,
+   "approx": true,
+   "source": "Palm Bay Police Dept (via Florida Today)",
+   "sourceUrl": "https://www.yahoo.com/news/weather-news/articles/heavy-rains-trigger-flooding-across-114314094.html",
+   "reported": "2026-11-02T11:00:00Z",
+   "updated": "2026-11-02T11:43:00Z",
+   "note": "PBPD: streets in NW Palm Bay underwater, stay off them. Pin approximate.",
+   "layer": "manual",
+   "roadShort": "Jupiter Blvd NW",
+   "spot": "at Garvey Rd NW",
+   "where": "Jupiter Blvd NW at Garvey Rd NW"
+  },
+  {
+   "id": "man-jupiter-elmont",
+   "road": "Jupiter Blvd NW at Elmont St NW",
+   "title": "Jupiter Blvd flooded near Elmont St",
+   "city": "Palm Bay",
+   "status": "flooded",
+   "fullClosure": false,
+   "lat": 28.012,
+   "lng": -80.689,
+   "approx": true,
+   "source": "Palm Bay Police Dept (via Florida Today)",
+   "sourceUrl": "https://www.yahoo.com/news/weather-news/articles/heavy-rains-trigger-flooding-across-114314094.html",
+   "reported": "2026-11-02T11:00:00Z",
+   "updated": "2026-11-02T11:43:00Z",
+   "note": "Pin approximate.",
+   "layer": "manual",
+   "roadShort": "Jupiter Blvd NW",
+   "spot": "at Elmont St NW",
+   "where": "Jupiter Blvd NW at Elmont St NW"
+  },
+  {
+   "id": "man-lombard-glencove",
+   "road": "Lombard St NW at Glencove Ave NW",
+   "title": "Neighborhood flooding, Lombard St NW / Glencove Ave NW",
+   "city": "Palm Bay",
+   "status": "flooded",
+   "fullClosure": false,
+   "lat": 28.01598,
+   "lng": -80.71373,
+   "approx": false,
+   "source": "News 6 photo report",
+   "sourceUrl": "https://www.clickorlando.com/news/local/2026/11/02/brevard-county-schools-closed-amid-flash-flood-warning-heavy-rain/",
+   "reported": "2026-11-02T11:43:00Z",
+   "updated": "2026-11-02T13:05:00Z",
+   "note": "",
+   "layer": "manual",
+   "roadShort": "Lombard St NW",
+   "spot": "at Glencove Ave NW",
+   "where": "Lombard St NW at Glencove Ave NW"
+  },
+  {
+   "id": "man-ocean-blvd",
+   "road": "Ocean Blvd",
+   "title": "Flooding on Ocean Blvd",
+   "city": "Satellite Beach",
+   "status": "flooded",
+   "fullClosure": false,
+   "lat": 28.1745,
+   "lng": -80.5935,
+   "approx": true,
+   "source": "Florida Today",
+   "sourceUrl": "https://www.yahoo.com/news/weather-news/articles/heavy-rains-trigger-flooding-across-114314094.html",
+   "reported": "2026-11-02T11:00:00Z",
+   "updated": "2026-11-02T11:43:00Z",
+   "note": "Segment not specified; pin approximate.",
+   "layer": "manual",
+   "where": "Ocean Blvd"
+  },
+  {
+   "id": "man-a1a-patrick",
+   "road": "SR A1A at Patrick Space Force Base",
+   "title": "Major flooding on A1A in front of Patrick SFB",
+   "city": "Patrick SFB / Satellite Beach",
+   "status": "flooded",
+   "fullClosure": false,
+   "lat": 28.24,
+   "lng": -80.606,
+   "approx": true,
+   "source": "Florida Today photo report",
+   "sourceUrl": "https://www.yahoo.com/news/weather-news/articles/heavy-rains-trigger-flooding-across-114314094.html",
+   "reported": "2026-11-02T11:00:00Z",
+   "updated": "2026-11-02T11:43:00Z",
+   "note": "A1A is the beachside route between Cape Canaveral Hospital and Satellite Beach / Indialantic. Pin approximate.",
+   "layer": "manual",
+   "roadShort": "SR A1A",
+   "spot": "at Patrick Space Force Base",
+   "where": "SR A1A at Patrick Space Force Base"
+  },
+  {
+   "id": "man-ksc",
+   "road": "Kennedy Space Center access roads",
+   "title": "Roadway flooding at Kennedy Space Center; staff told to work from home",
+   "city": "Merritt Island / KSC",
+   "status": "caution",
+   "fullClosure": false,
+   "lat": 28.52,
+   "lng": -80.68,
+   "approx": true,
+   "source": "KSC officials (via Florida Today)",
+   "sourceUrl": "https://www.yahoo.com/news/weather-news/articles/heavy-rains-trigger-flooding-across-114314094.html",
+   "reported": "2026-11-02T11:00:00Z",
+   "updated": "2026-11-02T11:43:00Z",
+   "note": "No specific road named.",
+   "layer": "manual",
+   "where": "Kennedy Space Center access roads"
+  },
+  {
+   "id": "man-patrick-omalley",
+   "road": "O'Malley Rd / South Patrick Dr",
+   "title": "Patrick SFB: water to car-door level at O'Malley Rd and South Patrick Dr",
+   "city": "Patrick Space Force Base",
+   "status": "flooded",
+   "fullClosure": false,
+   "lat": 28.23,
+   "lng": -80.609,
+   "approx": true,
+   "source": "Space Launch Delta 45 commander (via Florida Today)",
+   "sourceUrl": "https://www.floridatoday.com/story/weather/2026/11/02/florida-flood-watch-rain-updates-monday--live/92560023007/",
+   "reported": "2026-11-02T14:07:00Z",
+   "updated": "2026-11-02T14:07:00Z",
+   "note": "Base also reports tire-level water on Rescue Rd, at the marina and at the Visitor Control Center. Pin approximate.",
+   "layer": "manual",
+   "where": "O'Malley Rd / South Patrick Dr"
+  },
+  {
+   "id": "man-aurora-stewart",
+   "road": "Aurora Rd near Stewart Rd",
+   "where": "Aurora Rd at Stewart Rd",
+   "title": "Aurora Rd closed near Stewart Rd, flooding",
+   "city": "West Melbourne / Melbourne",
+   "status": "flooded",
+   "fullClosure": true,
+   "lat": 28.1345,
+   "lng": -80.6469,
+   "approx": true,
+   "source": "City of West Melbourne (via Spectrum News 13)",
+   "sourceUrl": "https://mynews13.com/fl/orlando/news/2026/11/02/brevard-school-officials-cancel-classes-due-to-weather-concerns",
+   "reported": "2026-11-02T13:22:00Z",
+   "updated": "2026-11-02T13:22:00Z",
+   "note": "Closed in the area of Stewart Rd. Pin approximate.",
+   "lanes": "All lanes closed",
+   "layer": "manual",
+   "roadShort": "Aurora Rd",
+   "spot": "near Stewart Rd"
+  },
+  {
+   "id": "man-sarno-eaugallie",
+   "road": "Sarno Rd near Eau Gallie Blvd",
+   "where": "Sarno Rd between Eau Gallie Blvd and its west end (limits as reported unclear)",
+   "title": "Sarno Rd closed near Eau Gallie Blvd, flooding",
+   "city": "West Melbourne / Melbourne",
+   "status": "flooded",
+   "fullClosure": true,
+   "lat": 28.1213,
+   "lng": -80.685,
+   "approx": true,
+   "source": "City of West Melbourne (via Spectrum News 13)",
+   "sourceUrl": "https://mynews13.com/fl/orlando/news/2026/11/02/brevard-school-officials-cancel-classes-due-to-weather-concerns",
+   "reported": "2026-11-02T13:22:00Z",
+   "updated": "2026-11-02T13:22:00Z",
+   "note": "Reported closed 'between Eau Gallie Blvd and Sarno Rd'; exact limits unclear. Pin approximate.",
+   "lanes": "All lanes closed",
+   "layer": "manual",
+   "roadShort": "Sarno Rd",
+   "spot": "near Eau Gallie Blvd",
+   "from": "Washburn Rd",
+   "to": "Porcella Ave",
+   "line": [
+    [
+     28.120956,
+     -80.686538
+    ],
+    [
+     28.121017,
+     -80.684986
+    ],
+    [
+     28.12123,
+     -80.679517
+    ],
+    [
+     28.121311,
+     -80.677528
+    ],
+    [
+     28.121386,
+     -80.675733
+    ]
+   ]
+  },
+  {
+   "id": "man-portmalabar-turkeycreek",
+   "road": "Port Malabar Blvd at Turkey Creek",
+   "where": "Port Malabar Blvd NE at the Turkey Creek crossing (near Turkey Creek Sanctuary)",
+   "title": "Port Malabar Blvd partly washed out, Turkey Creek overflowing",
+   "city": "Palm Bay",
+   "status": "flooded",
+   "fullClosure": false,
+   "lat": 28.0195,
+   "lng": -80.6075,
+   "approx": true,
+   "source": "Spectrum News 13",
+   "sourceUrl": "https://mynews13.com/fl/orlando/news/2026/11/02/brevard-school-officials-cancel-classes-due-to-weather-concerns",
+   "reported": "2026-11-02T16:26:00Z",
+   "updated": "2026-11-02T16:26:00Z",
+   "note": "Parts of road washed out; exact segment and closure status not stated, agency not named. Pin approximate.",
+   "lanes": "Unknown; washout reported",
+   "layer": "manual",
+   "roadShort": "Port Malabar Blvd",
+   "spot": "at Turkey Creek"
+  },
+  {
+   "id": "man-knecht-ne",
+   "road": "Knecht Rd NE",
+   "where": "Knecht Rd NE, The Pines area (exact block limits not stated)",
+   "title": "Knecht Rd NE blocked to traffic, flooding",
+   "city": "Palm Bay",
+   "status": "flooded",
+   "fullClosure": true,
+   "lat": 28.0232,
+   "lng": -80.6154,
+   "approx": true,
+   "source": "Melbourne Fire Dept (via Florida Today/Yahoo News)",
+   "sourceUrl": "https://www.yahoo.com/news/weather-news/articles/flash-flood-emergency-issued-floridas-170000906.html",
+   "reported": "2026-11-02T17:00:00Z",
+   "updated": "2026-11-02T17:00:00Z",
+   "note": "Blocked to traffic by Melbourne Fire Dept; segment not specified. Pin approximate.",
+   "lanes": "All lanes blocked",
+   "layer": "manual",
+   "from": "Mark Twain Ln NE",
+   "to": "Isom Ln NE",
+   "line": [
+    [
+     28.020664,
+     -80.614909
+    ],
+    [
+     28.022014,
+     -80.614877
+    ],
+    [
+     28.022133,
+     -80.614913
+    ],
+    [
+     28.022182,
+     -80.615038
+    ],
+    [
+     28.022198,
+     -80.615227
+    ],
+    [
+     28.022184,
+     -80.615713
+    ],
+    [
+     28.022232,
+     -80.61583
+    ],
+    [
+     28.023196,
+     -80.61584
+    ],
+    [
+     28.023502,
+     -80.615843
+    ]
+   ]
+  },
+  {
+   "id": "fl511-937010",
+   "source": "FL511 (FDOT)",
+   "sourceUrl": "https://fl511.com",
+   "road": "US-192 / Vine St / Bronson Hwy",
+   "title": "Flooding on US-192 / Vine St / Bronson Hwy East, at Minton Rd/S Wickham Rd. All lanes blocked",
+   "status": "flooded",
+   "fullClosure": true,
+   "reported": "2026-11-02T09:24:00Z",
+   "updated": "2026-11-02T19:54:00Z",
+   "lat": 28.07888,
+   "lng": -80.672522,
+   "layer": "Closures",
+   "dir": "EB",
+   "lanes": "All lanes blocked",
+   "roadShort": "US-192",
+   "spot": "at Minton Rd/S Wickham Rd",
+   "line": [
+    [
+     28.078981,
+     -80.676815
+    ],
+    [
+     28.078975,
+     -80.67635
+    ],
+    [
+     28.078968,
+     -80.675278
+    ],
+    [
+     28.078968,
+     -80.674805
+    ],
+    [
+     28.078968,
+     -80.674291
+    ],
+    [
+     28.078964,
+     -80.67341
+    ],
+    [
+     28.078956,
+     -80.672574
+    ],
+    [
+     28.078956,
+     -80.672522
+    ],
+    [
+     28.078964,
+     -80.670757
+    ],
+    [
+     28.078953,
+     -80.670161
+    ]
+   ],
+   "where": "US-192 EB at Minton Rd/S Wickham Rd",
+   "from": "Hickory St",
+   "to": "Pine St"
+  },
+  {
+   "id": "fl511-937053",
+   "source": "FL511 (FDOT)",
+   "sourceUrl": "https://fl511.com",
+   "road": "SR-507",
+   "title": "Flooding on SR-507 South, at Palm Bay Rd. All lanes blocked",
+   "status": "flooded",
+   "fullClosure": true,
+   "reported": "2026-11-02T12:56:00Z",
+   "updated": "2026-11-02T19:54:00Z",
+   "lat": 28.035179,
+   "lng": -80.621814,
+   "layer": "Closures",
+   "dir": "SB",
+   "lanes": "All lanes blocked",
+   "roadShort": "SR-507",
+   "spot": "at Palm Bay Rd",
+   "line": [
+    [
+     28.042323,
+     -80.621674
+    ],
+    [
+     28.041151,
+     -80.621679
+    ],
+    [
+     28.039948,
+     -80.621734
+    ],
+    [
+     28.038718,
+     -80.621809
+    ],
+    [
+     28.038518,
+     -80.621819
+    ],
+    [
+     28.038098,
+     -80.621832
+    ],
+    [
+     28.03789,
+     -80.621838
+    ],
+    [
+     28.037489,
+     -80.62185
+    ],
+    [
+     28.036665,
+     -80.621874
+    ],
+    [
+     28.035239,
+     -80.621917
+    ],
+    [
+     28.035186,
+     -80.621922
+    ],
+    [
+     28.035076,
+     -80.621931
+    ],
+    [
+     28.031547,
+     -80.621938
+    ]
+   ],
+   "where": "SR-507 SB at Palm Bay Rd",
+   "from": "Sun Lakes Rd",
+   "to": "Hunter Ave NE"
+  },
+  {
+   "id": "fl511-937082",
+   "source": "FL511 (FDOT)",
+   "sourceUrl": "https://fl511.com",
+   "road": "SR-507",
+   "title": "Emergency vehicles on SR-507 North, at Melbourne Ave. All lanes closed",
+   "status": "closed",
+   "fullClosure": true,
+   "reported": "2026-11-02T13:10:00Z",
+   "updated": "2026-11-02T19:54:00Z",
+   "lat": 28.076526,
+   "lng": -80.621403,
+   "layer": "Closures",
+   "dir": "NB",
+   "lanes": "All lanes closed",
+   "roadShort": "SR-507",
+   "spot": "at Melbourne Ave",
+   "line": [
+    [
+     28.074977,
+     -80.621358
+    ],
+    [
+     28.076498,
+     -80.621415
+    ],
+    [
+     28.076526,
+     -80.621415
+    ],
+    [
+     28.078038,
+     -80.621439
+    ]
+   ],
+   "where": "SR-507 NB at Melbourne Ave",
+   "from": "Devonshire Dr",
+   "to": "Harding Blvd"
+  },
+  {
+   "id": "fl511-937141",
+   "source": "FL511 (FDOT)",
+   "sourceUrl": "https://fl511.com",
+   "road": "US-192 / Vine St / Bronson Hwy",
+   "title": "Flooding on US-192 / Vine St / Bronson Hwy East, beyond Coastal Ln. All lanes blocked",
+   "status": "flooded",
+   "fullClosure": true,
+   "reported": "2026-11-02T13:35:00Z",
+   "updated": "2026-11-02T19:54:00Z",
+   "lat": 28.078862,
+   "lng": -80.703539,
+   "layer": "Closures",
+   "dir": "EB",
+   "lanes": "All lanes blocked",
+   "roadShort": "US-192",
+   "spot": "beyond Coastal Ln",
+   "line": [
+    [
+     28.07878,
+     -80.708531
+    ],
+    [
+     28.078795,
+     -80.707487
+    ],
+    [
+     28.078793,
+     -80.707032
+    ],
+    [
+     28.078793,
+     -80.706015
+    ],
+    [
+     28.078799,
+     -80.705729
+    ],
+    [
+     28.078801,
+     -80.705426
+    ],
+    [
+     28.078797,
+     -80.705048
+    ],
+    [
+     28.078777,
+     -80.70354
+    ],
+    [
+     28.078776,
+     -80.703492
+    ],
+    [
+     28.078786,
+     -80.701787
+    ],
+    [
+     28.078795,
+     -80.700195
+    ],
+    [
+     28.078793,
+     -80.700003
+    ],
+    [
+     28.078796,
+     -80.699648
+    ],
+    [
+     28.078803,
+     -80.698946
+    ],
+    [
+     28.0788,
+     -80.698369
+    ],
+    [
+     28.078805,
+     -80.697228
+    ],
+    [
+     28.078805,
+     -80.696874
+    ],
+    [
+     28.078814,
+     -80.695373
+    ],
+    [
+     28.078815,
+     -80.694034
+    ],
+    [
+     28.078818,
+     -80.693612
+    ]
+   ],
+   "where": "US-192 EB beyond Coastal Ln",
+   "from": "Brandywine Ln",
+   "to": "Circle Dr"
+  },
+  {
+   "id": "fl511-937180",
+   "source": "FL511 (FDOT)",
+   "sourceUrl": "https://fl511.com",
+   "road": "SR-507",
+   "title": "Flooding on SR-507 South, at University Blvd. All lanes closed",
+   "status": "flooded",
+   "fullClosure": true,
+   "reported": "2026-11-02T13:12:00Z",
+   "updated": "2026-11-02T19:54:00Z",
+   "lat": 28.064037,
+   "lng": -80.621372,
+   "layer": "Closures",
+   "dir": "SB",
+   "lanes": "All lanes closed",
+   "roadShort": "SR-507",
+   "spot": "at University Blvd",
+   "line": [
+    [
+     28.067445,
+     -80.621271
+    ],
+    [
+     28.066419,
+     -80.62128
+    ],
+    [
+     28.064088,
+     -80.621312
+    ],
+    [
+     28.064037,
+     -80.621312
+    ],
+    [
+     28.063969,
+     -80.621313
+    ],
+    [
+     28.062028,
+     -80.621331
+    ],
+    [
+     28.060239,
+     -80.621357
+    ],
+    [
+     28.059819,
+     -80.621355
+    ]
+   ],
+   "where": "SR-507 SB at University Blvd",
+   "from": "Southgate Blvd",
+   "to": "Villagewood Pl"
+  },
+  {
+   "id": "fl511-937222",
+   "source": "FL511 (FDOT)",
+   "sourceUrl": "https://fl511.com",
+   "road": "US-192 / Vine St / Bronson Hwy",
+   "title": "Flooding on US-192 / Vine St / Bronson Hwy West, at S John Rodes Blvd. All lanes closed",
+   "status": "flooded",
+   "fullClosure": true,
+   "reported": "2026-11-02T14:29:00Z",
+   "updated": "2026-11-02T19:54:00Z",
+   "lat": 28.078871,
+   "lng": -80.700181,
+   "layer": "Closures",
+   "dir": "WB",
+   "lanes": "All lanes closed",
+   "roadShort": "US-192",
+   "spot": "at S John Rodes Blvd",
+   "line": [
+    [
+     28.078818,
+     -80.693612
+    ],
+    [
+     28.078815,
+     -80.694034
+    ],
+    [
+     28.078814,
+     -80.695373
+    ],
+    [
+     28.078805,
+     -80.696874
+    ],
+    [
+     28.078805,
+     -80.697228
+    ],
+    [
+     28.0788,
+     -80.698369
+    ],
+    [
+     28.078803,
+     -80.698946
+    ],
+    [
+     28.078796,
+     -80.699648
+    ],
+    [
+     28.078793,
+     -80.700003
+    ],
+    [
+     28.078795,
+     -80.700182
+    ],
+    [
+     28.078795,
+     -80.700195
+    ],
+    [
+     28.078786,
+     -80.701787
+    ],
+    [
+     28.078776,
+     -80.703492
+    ]
+   ],
+   "where": "US-192 WB at S John Rodes Blvd",
+   "from": "Circle Dr",
+   "to": "Coastal Ln"
+  },
+  {
+   "id": "fl511-937435",
+   "source": "FL511 (FDOT)",
+   "sourceUrl": "https://fl511.com",
+   "road": "US-1",
+   "title": "MVC on US-1 North, at Cidco Rd. All lanes closed",
+   "status": "closed",
+   "fullClosure": true,
+   "reported": "2026-11-02T17:07:00Z",
+   "updated": "2026-11-02T19:53:00Z",
+   "lat": 28.41054,
+   "lng": -80.755162,
+   "layer": "Closures",
+   "dir": "NB",
+   "lanes": "All lanes closed",
+   "roadShort": "US-1",
+   "spot": "at Cidco Rd",
+   "line": [
+    [
+     28.404586,
+     -80.75507
+    ],
+    [
+     28.405013,
+     -80.75515
+    ],
+    [
+     28.40545,
+     -80.755222
+    ],
+    [
+     28.405899,
+     -80.755255
+    ],
+    [
+     28.408567,
+     -80.755258
+    ],
+    [
+     28.410541,
+     -80.755239
+    ],
+    [
+     28.410549,
+     -80.755239
+    ],
+    [
+     28.413251,
+     -80.755214
+    ],
+    [
+     28.4139,
+     -80.755208
+    ],
+    [
+     28.415137,
+     -80.755219
+    ]
+   ],
+   "where": "US-1 NB at Cidco Rd",
+   "from": "Beau Geste Rd",
+   "to": "Cross Rd"
+  },
+  {
+   "id": "fl511-937445",
+   "source": "FL511 (FDOT)",
+   "sourceUrl": "https://fl511.com",
+   "road": "US-1",
+   "title": "Emergency vehicles on US-1 South, at Cidco Rd. All lanes closed",
+   "status": "closed",
+   "fullClosure": true,
+   "reported": "2026-11-02T17:19:00Z",
+   "updated": "2026-11-02T19:44:00Z",
+   "lat": 28.41054,
+   "lng": -80.755162,
+   "layer": "Closures",
+   "dir": "SB",
+   "lanes": "All lanes closed",
+   "roadShort": "US-1",
+   "spot": "at Cidco Rd",
+   "line": [
+    [
+     28.415137,
+     -80.755219
+    ],
+    [
+     28.4139,
+     -80.755208
+    ],
+    [
+     28.413251,
+     -80.755214
+    ],
+    [
+     28.410549,
+     -80.755239
+    ],
+    [
+     28.410541,
+     -80.755239
+    ],
+    [
+     28.408567,
+     -80.755258
+    ],
+    [
+     28.405899,
+     -80.755255
+    ],
+    [
+     28.40545,
+     -80.755222
+    ],
+    [
+     28.405013,
+     -80.75515
+    ],
+    [
+     28.404586,
+     -80.75507
+    ]
+   ],
+   "where": "US-1 SB at Cidco Rd",
+   "from": "Cross Rd",
+   "to": "Beau Geste Rd"
+  },
+  {
+   "id": "fhp-11022026030132-1818",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "road": "I-95 NB [MM220]",
+   "title": "MVC at I-95 NB [MM220] x[MM220] [TITUSVILLE]",
+   "status": "caution",
+   "fullClosure": false,
+   "reported": "2026-11-02T08:01:32Z",
+   "updated": "2026-11-02T08:03:14Z",
+   "lat": 28.6181386341678,
+   "lng": -80.8511167860298,
+   "layer": "FHP",
+   "roadShort": "I-95 Nb [MM220]",
+   "dir": "",
+   "spot": "at Mm220",
+   "lanes": "",
+   "where": "I-95 Nb [MM220] at Mm220"
+  },
+  {
+   "id": "fhp-11022026112806-2362",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "road": "NORFOLK PKWY",
+   "title": "Road Closed Due To Water at NORFOLK PKWY x[MINTON RD] [WEST MELBOURNE] (Roadway Flooded - Seek Alternate Route)",
+   "status": "flooded",
+   "fullClosure": true,
+   "reported": "2026-11-02T16:28:06Z",
+   "updated": "2026-11-02T16:28:06Z",
+   "lat": 28.0434206060606,
+   "lng": -80.6714937607397,
+   "layer": "FHP",
+   "roadShort": "Norfolk Pkwy",
+   "dir": "",
+   "spot": "at Minton Rd",
+   "lanes": "Roadway Flooded - Seek Alternate Route",
+   "where": "Norfolk Pkwy at Minton Rd",
+   "from": "Shallow Creek Blvd",
+   "to": "Culver Dr NE",
+   "line": [
+    [
+     28.043502,
+     -80.686209
+    ],
+    [
+     28.043525,
+     -80.684216
+    ],
+    [
+     28.043618,
+     -80.679677
+    ],
+    [
+     28.043607,
+     -80.678954
+    ],
+    [
+     28.04347,
+     -80.677991
+    ],
+    [
+     28.043493,
+     -80.677327
+    ],
+    [
+     28.043492,
+     -80.676684
+    ],
+    [
+     28.043514,
+     -80.67553
+    ],
+    [
+     28.043529,
+     -80.675005
+    ],
+    [
+     28.043584,
+     -80.674202
+    ],
+    [
+     28.043618,
+     -80.67337
+    ],
+    [
+     28.043591,
+     -80.672348
+    ],
+    [
+     28.043635,
+     -80.671508
+    ],
+    [
+     28.04364,
+     -80.67142
+    ],
+    [
+     28.043636,
+     -80.671284
+    ],
+    [
+     28.043636,
+     -80.670485
+    ],
+    [
+     28.043658,
+     -80.66955
+    ],
+    [
+     28.043644,
+     -80.668682
+    ],
+    [
+     28.043617,
+     -80.667615
+    ],
+    [
+     28.043607,
+     -80.667155
+    ],
+    [
+     28.043505,
+     -80.66664
+    ],
+    [
+     28.043354,
+     -80.6662
+    ],
+    [
+     28.043171,
+     -80.665871
+    ],
+    [
+     28.042935,
+     -80.665552
+    ],
+    [
+     28.042599,
+     -80.665258
+    ],
+    [
+     28.042373,
+     -80.665073
+    ],
+    [
+     28.042107,
+     -80.664936
+    ],
+    [
+     28.041513,
+     -80.664745
+    ],
+    [
+     28.040171,
+     -80.664327
+    ],
+    [
+     28.040044,
+     -80.664288
+    ],
+    [
+     28.039813,
+     -80.66421
+    ],
+    [
+     28.039601,
+     -80.664136
+    ],
+    [
+     28.039332,
+     -80.66405
+    ],
+    [
+     28.039141,
+     -80.663966
+    ],
+    [
+     28.038931,
+     -80.663815
+    ],
+    [
+     28.038722,
+     -80.663676
+    ],
+    [
+     28.038544,
+     -80.663484
+    ],
+    [
+     28.038352,
+     -80.66326
+    ],
+    [
+     28.0382,
+     -80.66305
+    ],
+    [
+     28.038105,
+     -80.662947
+    ],
+    [
+     28.038037,
+     -80.662889
+    ],
+    [
+     28.037949,
+     -80.662817
+    ],
+    [
+     28.037877,
+     -80.662763
+    ],
+    [
+     28.037757,
+     -80.662674
+    ],
+    [
+     28.037646,
+     -80.662611
+    ],
+    [
+     28.03753,
+     -80.662567
+    ],
+    [
+     28.037426,
+     -80.662527
+    ],
+    [
+     28.037311,
+     -80.662473
+    ],
+    [
+     28.037267,
+     -80.66246
+    ],
+    [
+     28.037063,
+     -80.66242
+    ],
+    [
+     28.03692,
+     -80.662398
+    ],
+    [
+     28.036741,
+     -80.662399
+    ],
+    [
+     28.036541,
+     -80.662399
+    ],
+    [
+     28.036338,
+     -80.662395
+    ],
+    [
+     28.035852,
+     -80.662392
+    ],
+    [
+     28.035514,
+     -80.662409
+    ]
+   ]
+  },
+  {
+   "id": "fhp-11022026112110-4796",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "road": "PALM BAY RD NE [ENT RAMP TO]",
+   "title": "Road Closed Due To Water at PALM BAY RD NE [ENT RAMP TO] x[I-95 NB] [WEST MELBOURNE] (Roadway Under Water At Entrance Ramp - Seek Alternate Route)",
+   "status": "flooded",
+   "fullClosure": true,
+   "reported": "2026-11-02T16:21:10Z",
+   "updated": "2026-11-02T16:21:10Z",
+   "lat": 28.0392217654809,
+   "lng": -80.6590090171911,
+   "layer": "FHP",
+   "roadShort": "Palm Bay Rd Ne [Ent Ramp To]",
+   "dir": "",
+   "spot": "at I-95 Nb",
+   "lanes": "Roadway Under Water At Entrance Ramp - Seek Alternate Route",
+   "where": "Palm Bay Rd Ne [Ent Ramp To] at I-95 Nb"
+  },
+  {
+   "id": "fhp-11022026090844-5127",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "road": "US-1",
+   "title": "Road Closed Due To Water at US-1 x[SUNTREE BLVD] [ROCKLEDGE] (Road Flooded - Seek Alt Route)",
+   "status": "flooded",
+   "fullClosure": true,
+   "reported": "2026-11-02T14:08:44Z",
+   "updated": "2026-11-02T14:08:44Z",
+   "lat": 28.2293062889767,
+   "lng": -80.6733064581332,
+   "layer": "FHP",
+   "roadShort": "US-1",
+   "dir": "",
+   "spot": "at Suntree Blvd",
+   "lanes": "Road Flooded - Seek Alt Route",
+   "where": "US-1 at Suntree Blvd",
+   "from": "Aspinwall Ave",
+   "to": "Ernest Sands Rd",
+   "line": [
+    [
+     28.228212,
+     -80.672586
+    ],
+    [
+     28.229381,
+     -80.673081
+    ],
+    [
+     28.229447,
+     -80.673109
+    ],
+    [
+     28.229555,
+     -80.673158
+    ],
+    [
+     28.230691,
+     -80.67363
+    ],
+    [
+     28.233289,
+     -80.674709
+    ],
+    [
+     28.234491,
+     -80.675209
+    ]
+   ]
+  },
+  {
+   "id": "fhp-11022026065558-7276",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "road": "W NEW HAVEN AVE",
+   "title": "Road Closed Due To Water at W NEW HAVEN AVE x[S WICKHAM RD] [MELBOURNE] (Use Caution - Roadway Flooded)",
+   "status": "flooded",
+   "fullClosure": true,
+   "reported": "2026-11-02T11:55:58Z",
+   "updated": "2026-11-02T11:55:58Z",
+   "lat": 28.0787733509003,
+   "lng": -80.6726282719424,
+   "layer": "FHP",
+   "roadShort": "W New Haven Ave",
+   "dir": "",
+   "spot": "at S Wickham Rd",
+   "lanes": "Use Caution - Roadway Flooded",
+   "where": "W New Haven Ave at S Wickham Rd",
+   "from": "Stacia Strife Way",
+   "to": "Minton Rd",
+   "line": [
+    [
+     28.078789,
+     -80.673412
+    ],
+    [
+     28.078784,
+     -80.672628
+    ],
+    [
+     28.078784,
+     -80.672566
+    ]
+   ]
+  }
+ ],
+ "alerts": [
+  {
+   "id": "urn:oid:2.49.0.1.840.0.46fe17c50ca3866332ebe19381a45115c766a171.001.1",
+   "event": "Flood Warning",
+   "severity": "Severe",
+   "headline": "Flood Warning issued November 2 at 2:15PM EST by NWS Melbourne FL",
+   "areas": "Brevard, FL",
+   "effective": "2026-11-02T14:15:00-05:00",
+   "expires": "2026-11-02T23:30:00-05:00",
+   "description": "...The Flood Warning is extended for the following rivers in\nFlorida...\n\nSt Johns River Near Cocoa 9w affecting Brevard County.\n\n.Heavy rainfall has caused the St. Johns River near Cocoa to rise\ninto Minor Flood Stage. The river is forecast to rise through Minor\nflood stage and into Moderate flood stage mid to late week.\n\nFor the St. Johns River...including Cocoa 9w...Moderate flooding is\nforecast.\n\n* WHAT...Minor flooding is occurring and moderate flooding is\nforecast.\n\n* WHERE...St Johns River near Cocoa 9w.\n\n* WHEN...From this afternoon until further notice.\n\n* IMPACTS...At 16.7 feet, Water covers yards, encroaches on homes and\nmay enter low lying homes along the St Johns River in the Lake\nPoinsett area.\n\n* ADDITIONAL DETAILS...\n- At 1:15 PM EST Monday the stage was 16.0 feet.\n- Bankfull stage is 15.8 feet.\n- Recent Activity...The maximum river stage in the 24 hours ending\nat 1:15 PM EST Monday was 16.0 feet.\n- Forecast...The river is expected to rise to 16.8 feet early\nThursday afternoon. Additional rises are possible thereafter.\n- Flood stage is 16.0 feet.\n- http://www.weather.gov/safety/flood",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -80.99,
+       28.54
+      ],
+      [
+       -80.9,
+       28.55
+      ],
+      [
+       -80.8,
+       28.35
+      ],
+      [
+       -80.72,
+       28.05
+      ],
+      [
+       -80.99,
+       28.54
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "id": "urn:oid:2.49.0.1.840.0.07c0e06fc0d22f706c72f8ae58a58e7e14a84d6c.001.1",
+   "event": "Flood Warning",
+   "severity": "Severe",
+   "headline": "Flood Warning issued November 2 at 1:54PM EST until November 2 at 4:00PM EST by NWS Melbourne FL",
+   "areas": "Brevard, FL",
+   "effective": "2026-11-02T13:54:00-05:00",
+   "expires": "2026-11-02T16:00:00-05:00",
+   "description": "* WHAT...Flooding caused by excessive rainfall continues.\n\n* WHERE...Central Brevard County in east central Florida...\n\n* WHEN...Until 400 PM EST.\n\n* IMPACTS...Flooding of rivers, creeks, streams, and other low-lying\nand flood-prone locations is imminent or occurring. Expect many\nareas of slow moving or standing water.\n\n* ADDITIONAL DETAILS...\n- At 154 PM EST, Doppler radar and automated rain gauges indicated\nheavy rain due to thunderstorms. Flooding is already occurring in\nthe warned area. Between 6 and 10 inches of rain have fallen.\n- Additional rainfall amounts of 2 to 3 inches are possible in the\nwarned area.\n- Some locations that will experience flooding include...\nMelbourne, Titusville, Rockledge, Cocoa, Cocoa Beach, Satellite\nBeach, Cape Canaveral, Indialantic, Sharpes, Merritt Island, Port\nSaint John, Port Canaveral, Titusville Airport, Patrick Space\nForce Base, Playalinda Beach, Mims, Indian Harbour Beach, Jetty\nPark and Canaveral Groves.\n- http://www.weather.gov/safety/flood",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -80.88,
+       28.7
+      ],
+      [
+       -80.64,
+       28.7
+      ],
+      [
+       -80.6,
+       28.66
+      ],
+      [
+       -80.56,
+       28.6
+      ],
+      [
+       -80.5,
+       28.47
+      ],
+      [
+       -80.51,
+       28.44
+      ],
+      [
+       -80.56,
+       28.39
+      ],
+      [
+       -80.58,
+       28.31
+      ],
+      [
+       -80.57,
+       28.19
+      ],
+      [
+       -80.54,
+       28.14
+      ],
+      [
+       -80.55,
+       28.09
+      ],
+      [
+       -80.85,
+       28.11
+      ],
+      [
+       -80.88,
+       28.63
+      ],
+      [
+       -80.88,
+       28.7
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "id": "urn:oid:2.49.0.1.840.0.e0274af1bc86b4adce8f65761518048c98f00da2.001.1",
+   "event": "Flood Advisory",
+   "severity": "Minor",
+   "headline": "Flood Advisory issued November 2 at 1:48PM EST until November 2 at 3:45PM EST by NWS Melbourne FL",
+   "areas": "Brevard, FL; Indian River, FL; Okeechobee, FL; Osceola, FL; St. Lucie, FL",
+   "effective": "2026-11-02T13:48:00-05:00",
+   "expires": "2026-11-02T15:45:00-05:00",
+   "description": "* WHAT...Flooding caused by excessive rainfall is expected.\n\n* WHERE...South Central Brevard County in east central Florida...\nIndian River County in east central Florida...\nNortheastern Okeechobee County in east central Florida...\nSoutheastern Osceola County in east central Florida...\nNorthwestern St. Lucie County in east central Florida...\n\n* WHEN...Until 345 PM EST.\n\n* IMPACTS...Minor flooding in low-lying and poor drainage areas.\n\n* ADDITIONAL DETAILS...\n- At 148 PM EST, Doppler radar indicated heavy rain due to\nthunderstorms. Minor flooding is ongoing or expected to begin\nshortly in the advisory area. Between 2 and 6 inches of rain have\nfallen.\n- Additional rainfall amounts of 2 to 3 inches are expected over\nthe area. This additional rain will result in minor flooding.\n- Some locations that will experience flooding include...\nFellsmere, Indian River Shores, Blue Cypress Lake, Winter Beach,\nGifford and Vero Lake Estates.\n- http://www.weather.gov/safety/flood",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -80.77,
+       27.51
+      ],
+      [
+       -81,
+       27.74
+      ],
+      [
+       -80.81,
+       28.01
+      ],
+      [
+       -80.7,
+       27.92
+      ],
+      [
+       -80.64,
+       27.91
+      ],
+      [
+       -80.51,
+       27.73
+      ],
+      [
+       -80.35,
+       27.73
+      ],
+      [
+       -80.34,
+       27.7
+      ],
+      [
+       -80.51,
+       27.66
+      ],
+      [
+       -80.54,
+       27.56
+      ],
+      [
+       -80.77,
+       27.51
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "id": "urn:oid:2.49.0.1.840.0.676f6e8605e814d3e3c120abdda027e486d7709c.002.1",
+   "event": "High Surf Advisory",
+   "severity": "Minor",
+   "headline": "High Surf Advisory issued November 2 at 1:44PM EST until November 3 at 3:00AM EST by NWS Melbourne FL",
+   "areas": "Coastal Volusia; Coastal Indian River; Mainland Northern Brevard; Northern Brevard Barrier Islands; Mainland Southern Brevard; Southern Brevard Barrier Islands",
+   "effective": "2026-11-02T13:44:00-05:00",
+   "expires": "2026-11-03T19:00:00-05:00",
+   "description": "* WHAT...For the High Surf Advisory, large breaking waves of 5\nto 6 feet in the surf zone. For the High Rip Current Risk,\ndangerous rip currents.\n\n* WHERE...Coastal Volusia, Coastal Indian River, and Coastal\nBrevard Counties.\n\n* WHEN...For the High Surf Advisory, until 3 AM EST Tuesday. For\nthe High Rip Current Risk, through late Tuesday night.\n\n* IMPACTS...Dangerous swimming and surfing conditions and\nlocalized beach erosion. Rip currents can sweep even the best\nswimmers away from shore into deeper water.",
+   "geometry": null
+  },
+  {
+   "id": "urn:oid:2.49.0.1.840.0.676f6e8605e814d3e3c120abdda027e486d7709c.002.2",
+   "event": "Rip Current Statement",
+   "severity": "Moderate",
+   "headline": "Rip Current Statement issued November 2 at 1:44PM EST until November 4 at 1:00AM EST by NWS Melbourne FL",
+   "areas": "Coastal Volusia; Coastal Indian River; Mainland Northern Brevard; Northern Brevard Barrier Islands; Mainland Southern Brevard; Southern Brevard Barrier Islands",
+   "effective": "2026-11-02T13:44:00-05:00",
+   "expires": "2026-11-03T19:00:00-05:00",
+   "description": "* WHAT...For the High Surf Advisory, large breaking waves of 5\nto 6 feet in the surf zone. For the High Rip Current Risk,\ndangerous rip currents.\n\n* WHERE...Coastal Volusia, Coastal Indian River, and Coastal\nBrevard Counties.\n\n* WHEN...For the High Surf Advisory, until 3 AM EST Tuesday. For\nthe High Rip Current Risk, through late Tuesday night.\n\n* IMPACTS...Dangerous swimming and surfing conditions and\nlocalized beach erosion. Rip currents can sweep even the best\nswimmers away from shore into deeper water.",
+   "geometry": null
+  },
+  {
+   "id": "urn:oid:2.49.0.1.840.0.942cd81a31811fa71509464ab040e82e5c6c53fb.001.1",
+   "event": "Flash Flood Warning",
+   "severity": "Severe",
+   "headline": "Flash Flood Warning issued November 2 at 1:40PM EST until November 2 at 3:45PM EST by NWS Melbourne FL",
+   "areas": "Brevard, FL; Indian River, FL",
+   "effective": "2026-11-02T13:40:00-05:00",
+   "expires": "2026-11-02T15:45:00-05:00",
+   "description": "FFWMLB\n\nThe National Weather Service in Melbourne has extended the\n\n* Flash Flood Warning for...\nSoutheastern Brevard County in east central Florida...\nNortheastern Indian River County in east central Florida...\n\n* Until 345 PM EST.\n\n* At 140 PM EST, Doppler radar and automated rain gauges indicated\nthunderstorms producing heavy rain across the warned area. Between\n8 and 12 inches of rain have fallen. Additional rainfall amounts of\n2 to 3 inches are possible in the warned area. Flash flooding is\nalready occurring.\n\nHAZARD...Flash flooding caused by thunderstorms.\n\nSOURCE...Radar and automated gauges.\n\nIMPACT...Flash flooding of small creeks and streams, urban areas,\nhighways, streets and underpasses as well as other poor\ndrainage and low-lying areas.\n\n* Some locations that will experience flash flooding include...\nSebastian, Indian River Shores, Roseland, Sebastian Highlands,\nSebastian Inlet, Barefoot Bay, Wabasso, Sebastian Inlet State Park,\nMicco, Orchid, North Beach, Wabasso Beach and Disneys Vero Beach\nResort.",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -80.51,
+       27.73
+      ],
+      [
+       -80.65,
+       27.91
+      ],
+      [
+       -80.43,
+       27.89
+      ],
+      [
+       -80.41,
+       27.87
+      ],
+      [
+       -80.36,
+       27.75
+      ],
+      [
+       -80.35,
+       27.73
+      ],
+      [
+       -80.51,
+       27.73
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "id": "urn:oid:2.49.0.1.840.0.701f244fd8bae34327273b82689ee4b7d758900d.001.1",
+   "event": "Flash Flood Warning",
+   "severity": "Severe",
+   "headline": "Flash Flood Warning issued November 2 at 1:38PM EST until November 2 at 3:45PM EST by NWS Melbourne FL",
+   "areas": "Brevard, FL",
+   "effective": "2026-11-02T13:38:00-05:00",
+   "expires": "2026-11-02T15:45:00-05:00",
+   "description": "FFWMLB\n\nThe National Weather Service in Melbourne has extended the\n\n* Flash Flood Warning for...\nSoutheastern Brevard County in east central Florida...\n\n* Until 345 PM EST.\n\n* At 138 PM EST, Doppler radar and automated rain gauges indicated\nthunderstorms producing heavy rain across the warned area. Between\n15 and 20 inches of rain have fallen. Additional rainfall amounts\nof 1 to 3 inches are possible in the warned area. Flash flooding is\nalready occurring.\n\nHAZARD...Life threatening flash flooding. Thunderstorms producing\nflash flooding.\n\nSOURCE...Radar and automated gauges.\n\nIMPACT...Life threatening flash flooding of creeks and streams,\nurban areas, highways, streets and underpasses.\n\n* Some locations that will experience flash flooding include...\nPalm Bay, Melbourne, Malabar, Indialantic, Camp Holly Fish Camp,\nWest Melbourne, Melbourne Beach, Grant-Valkaria, Micco, Melbourne\nVillage, June Park, Melbourne Airport, Spessard Holland Park,\nMelbourne Shores and Floridana Beach.",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -80.85,
+       28.11
+      ],
+      [
+       -80.59,
+       28.1
+      ],
+      [
+       -80.51,
+       28.05
+      ],
+      [
+       -80.46,
+       27.95
+      ],
+      [
+       -80.43,
+       27.88
+      ],
+      [
+       -80.7,
+       27.91
+      ],
+      [
+       -80.85,
+       28.04
+      ],
+      [
+       -80.85,
+       28.11
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "id": "urn:oid:2.49.0.1.840.0.4f9ab229bb871cb475159ccd676055c9332e21ca.001.1",
+   "event": "Flood Watch",
+   "severity": "Severe",
+   "headline": "Flood Watch issued November 2 at 1:37PM EST until November 3 at 10:00AM EST by NWS Melbourne FL",
+   "areas": "Inland Volusia; Okeechobee; Coastal Volusia; Coastal Indian River; Coastal St. Lucie; Coastal Martin; Inland Northern Brevard; Inland Indian River; Inland St. Lucie; Inland Martin; Mainland Northern Brevard; Northern Brevard Barrier Islands; Inland Southern Brevard; Mainland Southern Brevard; Southern Brevard Barrier Islands",
+   "effective": "2026-11-02T13:37:00-05:00",
+   "expires": "2026-11-03T10:00:00-05:00",
+   "description": "* WHAT...Flooding caused by excessive rainfall continues to be\npossible.\n\n* WHERE...A portion of east central Florida, including the following\nareas, Indian River, Martin, Saint Lucie, Volusia, Okeechobee and\nBrevard.\n\n* WHEN...Through Tuesday morning.\n\n* IMPACTS...Excessive runoff may result in flooding of rivers,\ncreeks, streams, and other low-lying and flood-prone locations.\nCreeks and streams may rise out of their banks. Flooding may occur\nin poor drainage and urban areas.\n\n* ADDITIONAL DETAILS...\n- Heavy to extreme rainfall has occurred over coastal portions of\neast central Florida today. Any additional rainfall overnight may\nexacerbate ongoing flooding.\n- http://www.weather.gov/safety/flood",
+   "geometry": null
+  }
+ ],
+ "advisories": [
+  {
+   "agency": "Brevard County Sheriff's Office",
+   "time": "2026-11-02T12:25:00Z",
+   "text": "Stay home and off the roadways unless necessary to travel to and from work or to escape high flooding. US 192 in Melbourne has flooded out. Expect significant delays.",
+   "url": "https://www.facebook.com/BrevardCountySheriff/"
+  },
+  {
+   "agency": "West Melbourne Police",
+   "time": "2026-11-02T12:50:00Z",
+   "text": "Stay off the roads. Roads are flooded and cars are disabled throughout the city. Call 911 for life-or-death emergencies only.",
+   "url": "https://www.facebook.com/westmelbournepolicedepartment/"
+  },
+  {
+   "agency": "City of Palm Bay",
+   "time": "2026-11-02T14:55:00Z",
+   "text": "Palm Bay City Hall and city offices closed today due to flooding. Widespread flooding in Palm Bay; avoid flooded roadways. Recreation facilities closed; trash collection cancelled today.",
+   "url": "https://www.facebook.com/cityofpalmbayfl/"
+  },
+  {
+   "agency": "Cocoa Beach Police",
+   "time": "2026-11-02T13:27:00Z",
+   "text": "Never drive through standing water; stay indoors during the warning. No specific Cocoa Beach road closures posted.",
+   "url": "https://www.facebook.com/CocoaBeachPolice/"
+  },
+  {
+   "agency": "Brevard County Emergency Management",
+   "time": "2026-11-02T13:15:00Z",
+   "text": "Limit water use: rain plus normal use is stressing the wastewater system (Cocoa Beach lift stations at capacity).",
+   "url": "https://www.facebook.com/BrevardEOC/"
+  },
+  {
+   "agency": "Brevard Public Schools",
+   "time": "2026-11-02T11:45:00Z",
+   "text": "All schools closed today due to flooding.",
+   "url": "https://www.facebook.com/BrevardPublicSchools/"
+  },
+  {
+   "agency": "Space Launch Delta 45 (Patrick SFB / Cape Canaveral SFS)",
+   "time": "2026-11-02T14:07:00Z",
+   "text": "Non-mission-essential personnel should not report today because of hazardous roads and local flooding on base.",
+   "url": "https://www.floridatoday.com/story/weather/2026/11/02/florida-flood-watch-rain-updates-monday--live/92560023007/"
+  },
+  {
+   "agency": "City of Titusville",
+   "time": "2026-11-02T11:30:00Z",
+   "text": "Wastewater system at capacity after overnight rain; controlled release of treated reclaimed water into the Indian River Lagoon began about 6:30 a.m. at the Osprey facility. Residents asked to cut nonessential water use (laundry, dishwashers, long showers) until further notice. Some Titusville streets impassable.",
+   "url": "https://www.wftv.com/news/local/titusville-begins-emergency-release-treated-water-into-indian-river-lagoon/NRBSPUPMXRDOHNBDRXZ4X2G55I/"
+  },
+  {
+   "agency": "Space Coast Area Transit (via WFTV)",
+   "time": "2026-11-02T16:46:00Z",
+   "text": "Routes 20, 21, 22, 23, 24, 25, 27, 28 and 30 (Melbourne and Palm Bay area) suspended for Monday because of flooding. Routes 26 and 29 running with long delays; long delays on all other routes.",
+   "url": "https://www.wftv.com/news/local/flooding-shuts-down-nine-space-coast-transit-routes-melbourne-palm-bay/E75GXCEVONBVXM25BUGW7U6ZH4/"
+  },
+  {
+   "agency": "Brevard County Government (via Spectrum News 13)",
+   "time": "2026-11-02T13:22:00Z",
+   "text": "Brevard County government facilities closed countywide today because of flooding; all courts also closed.",
+   "url": "https://mynews13.com/fl/orlando/news/2026/11/02/brevard-school-officials-cancel-classes-due-to-weather-concerns"
+  }
+ ]
+}

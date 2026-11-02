@@ -1,0 +1,12 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "brevardemergency",
+  "account_id": "35eda903f9264997e98abda46ef035f7",
+  "compatibility_date": "2026-11-01",
+  "observability": { "enabled": true },
+  "assets": { "directory": "site" },
+  "routes": [
+    { "pattern": "brevardemergency.com", "custom_domain": true },
+    { "pattern": "www.brevardemergency.com", "custom_domain": true }
+  ]
+}

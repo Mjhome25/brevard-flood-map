@@ -1,0 +1,8 @@
+/
+  Cache-Control: no-cache
+/index.html
+  Cache-Control: no-cache
+/og.png
+  Cache-Control: public, max-age=86400
+/data.json
+  Cache-Control: no-store
