@@ -1,6 +1,8 @@
 {
- "generated": "2026-11-02T21:20:45Z",
- "errors": [],
+ "generated": "2026-11-02T21:32:26Z",
+ "errors": [
+  "FL511 map locations: 1 report(s) without a pin"
+ ],
  "items": [
   {
    "id": "man-minton-192",
@@ -417,6 +419,25 @@
    ]
   },
   {
+   "road": "US 192",
+   "where": "US 192 (W New Haven Ave) at the I-95 interchange area, just before I-95 (FDOT lists it as at Vine St / Bronson Hwy W)",
+   "title": "All lanes of US 192 closed by flooding near I-95",
+   "city": "West Melbourne",
+   "status": "closed",
+   "fullClosure": true,
+   "lanes": "All lanes",
+   "lat": 28.073,
+   "lng": -80.69,
+   "approx": true,
+   "source": "Florida Department of Transportation (via Palm Beach Post/Yahoo News)",
+   "sourceUrl": "https://www.yahoo.com/news/weather-news/articles/live-updates-parts-florida-under-121138617.html",
+   "reported": "2026-11-02T09:12:00Z",
+   "note": "FDOT reported at 4:12 a.m. EST that flooding had closed all lanes of US 192 just before I-95. The cross-street names it gave (Vine St, Bronson Hwy W) are not Brevard road names, so the pin is approximate near the I-95 interchange and needs checking. I found no report that it has reopened.",
+   "id": "man-us-192-w-new-haven-ave-at-the-i-95-inter",
+   "updated": "2026-11-02T09:12:00Z",
+   "layer": "manual"
+  },
+  {
    "id": "fl511-937010",
    "source": "FL511 (FDOT)",
    "sourceUrl": "https://fl511.com",
@@ -488,7 +509,7 @@
    "status": "flooded",
    "fullClosure": true,
    "reported": "2026-11-02T12:56:00Z",
-   "updated": "2026-11-02T20:52:00Z",
+   "updated": "2026-11-02T21:27:00Z",
    "lat": 28.035179,
    "lng": -80.621814,
    "layer": "Closures",
@@ -563,7 +584,7 @@
    "status": "closed",
    "fullClosure": true,
    "reported": "2026-11-02T13:10:00Z",
-   "updated": "2026-11-02T20:52:00Z",
+   "updated": "2026-11-02T21:27:00Z",
    "lat": 28.076526,
    "lng": -80.621403,
    "layer": "Closures",
@@ -602,7 +623,7 @@
    "status": "flooded",
    "fullClosure": true,
    "reported": "2026-11-02T13:35:00Z",
-   "updated": "2026-11-02T20:52:00Z",
+   "updated": "2026-11-02T21:27:00Z",
    "lat": 28.078862,
    "lng": -80.703539,
    "layer": "Closures",
@@ -705,7 +726,7 @@
    "status": "flooded",
    "fullClosure": true,
    "reported": "2026-11-02T13:12:00Z",
-   "updated": "2026-11-02T20:52:00Z",
+   "updated": "2026-11-02T21:27:00Z",
    "lat": 28.064037,
    "lng": -80.621372,
    "layer": "Closures",
@@ -760,7 +781,7 @@
    "status": "flooded",
    "fullClosure": true,
    "reported": "2026-11-02T14:29:00Z",
-   "updated": "2026-11-02T20:52:00Z",
+   "updated": "2026-11-02T21:27:00Z",
    "lat": 28.078871,
    "lng": -80.700181,
    "layer": "Closures",
@@ -982,7 +1003,36 @@
    "where": "SR-508 EB at Hickory St"
   },
   {
-   "id": "fhp-11022026041536-8776",
+   "id": "fl511-937781",
+   "source": "FL511 (FDOT)",
+   "sourceUrl": "https://fl511.com",
+   "road": "US-1",
+   "title": "MVC on US-1 South, beyond Viera Blvd/River Way. Right shoulder blocked",
+   "status": "caution",
+   "fullClosure": false,
+   "reported": "2026-11-02T21:17:00Z",
+   "updated": "2026-11-02T21:22:00Z",
+   "lat": 28.261588,
+   "lng": -80.68799,
+   "layer": "Incidents",
+   "dir": "SB",
+   "lanes": "Right shoulder blocked",
+   "roadShort": "US-1",
+   "spot": "beyond Viera Blvd/River Way",
+   "line": [
+    [
+     28.26155,
+     -80.68809
+    ],
+    [
+     28.26153,
+     -80.68808
+    ]
+   ],
+   "where": "US-1 SB beyond Viera Blvd/River Way"
+  },
+  {
+   "id": "fhp-11022026041536-4820",
    "source": "FHP live CAD",
    "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
    "road": "US-1",
@@ -990,7 +1040,7 @@
    "status": "caution",
    "fullClosure": false,
    "reported": "2026-11-02T09:15:36Z",
-   "updated": "2026-11-02T09:15:36Z",
+   "updated": "2026-11-02T09:22:07Z",
    "lat": 28.2614668686869,
    "lng": -80.6879587657643,
    "layer": "FHP",
@@ -1001,7 +1051,7 @@
    "where": "US-1 at Viera Blvd"
   },
   {
-   "id": "fhp-11022026112806-3137",
+   "id": "fhp-11022026112806-1091",
    "source": "FHP live CAD",
    "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
    "road": "NORFOLK PKWY",
@@ -1248,7 +1298,7 @@
    ]
   },
   {
-   "id": "fhp-11022026112110-1445",
+   "id": "fhp-11022026112110-2594",
    "source": "FHP live CAD",
    "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
    "road": "PALM BAY RD NE [ENT RAMP TO]",
@@ -1267,7 +1317,7 @@
    "where": "Palm Bay Rd Ne [Ent Ramp To] at I-95 Nb"
   },
   {
-   "id": "fhp-11022026090844-5117",
+   "id": "fhp-11022026090844-6697",
    "source": "FHP live CAD",
    "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
    "road": "US-1",
@@ -1318,7 +1368,7 @@
    ]
   },
   {
-   "id": "fhp-11022026065558-6269",
+   "id": "fhp-11022026065558-7163",
    "source": "FHP live CAD",
    "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
    "road": "W NEW HAVEN AVE",
@@ -1692,6 +1742,12 @@
    "time": "2026-11-02T20:40:00Z",
    "text": "Fairhaven area of Palm Bay is inaccessible because of flooding; no specific roads named.",
    "url": "https://www.clickorlando.com/news/local/2026/11/02/brevard-county-schools-closed-amid-flash-flood-warning-heavy-rain/"
+  },
+  {
+   "agency": "City of Palm Bay (via Spectrum News 13)",
+   "time": "2026-11-02T14:00:00Z",
+   "text": "Palm Bay officials declared a shelter-in-place on Monday morning because heavy rain is flooding streets and roads. Residents are asked to stay home and conserve water. Parts of Port Malabar Rd are washed out after Turkey Creek overflowed.",
+   "url": "https://mynews13.com/fl/orlando/news/2026/11/02/brevard-school-officials-cancel-classes-due-to-weather-concerns"
   }
  ]
 }
