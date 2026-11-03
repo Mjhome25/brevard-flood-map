@@ -32,6 +32,10 @@ import reconcile as R  # noqa: E402
 
 AUDIT = os.path.join(HERE, "audit")
 END = "2026-12-03"  # Mike: one month
+# Mike, Nov 3: a week of FHP/FL511 drops with no evidence the road was still closed or a problem, and drops alone may
+# take reports off; until he reviews the week, nothing is removed for a drop beyond the FHP crash rule
+TRIAL = ("2026-11-03", "2026-11-10")
+CONTRADICTS = ("still-blocked", "source-relisted", "later-report")
 DUE_HOUR = 12  # UTC: the first run at or after 7 AM Eastern
 
 
@@ -102,6 +106,17 @@ def water_cases(path: str) -> tuple[list[dict], bool]:
     return out, True
 
 
+def drop_trial(rows: list[dict]) -> dict:
+    """Every FHP/FL511 drop (a removal or a kept disappearance) and anything at that place that says it was wrong:
+    contradicted = reported again after the drop; stale = another source's older entry still on the map."""
+    drops = [r for r in rows if r["src"] in ("fhp", "fl511") and r["kind"] in ("removed", "disappeared")]
+    flag = lambda vs: sorted({r["rid"] for r in drops if r["verdict"] in vs})
+    show = [{"rid": r["rid"], "src": r["src"], "where": r["where"], "status": r["status"], "dropped": r["at"],
+             "verdict": r["verdict"], "seen": r["seen"]} for r in drops if r["verdict"] in CONTRADICTS + ("stale-unresolved",)]
+    return {"from": TRIAL[0], "to": TRIAL[1], "drops": len({r["rid"] for r in drops}),
+            "contradicted": flag(CONTRADICTS), "stale": flag(("stale-unresolved",)), "forMike": show}
+
+
 def run(now: datetime.datetime, events_path: str = E.EVENTS, water_path: str = os.path.join(HERE, "water_notices.json"),
         known: dict | None = None) -> dict:
     """The full report for today; `known` is yesterday's case book (first-checked dates and verdict history)."""
@@ -133,7 +148,13 @@ def run(now: datetime.datetime, events_path: str = E.EVENTS, water_path: str = o
     down = sorted(s for s, h in final["sources"].items() if h.get("state") != "up")
     return {"date": today, "through": E.iso(now), "scope": "removal ledger; official-page coverage is in audit/coverage.json", "complete": water_ok, "unavailable": [] if water_ok else ["water_notices.json"],
             "sourcesNotUp": down, "cases": len(rows), "new": sum(r["new"] for r in rows),
-            "changed": sum(r["changed"] for r in rows), "byKind": by_kind, "rows": rows, "book": book}
+            "changed": sum(r["changed"] for r in rows), "byKind": by_kind, "dropTrial": drop_trial(rows), "rows": rows,
+            "book": book}
+
+
+def trial_line(t: dict) -> str:
+    return (f"FHP/FL511 drop trial ({t['from']} to {t['to']}): {t['drops']} dropped, {len(t['contradicted'])} contradicted "
+            f"by a later report, {len(t['stale'])} with an older entry from another source still on the map.")
 
 
 def coverage_line(path: str = os.path.join(AUDIT, "coverage.json"), now: datetime.datetime | None = None) -> str:
@@ -182,7 +203,7 @@ def main(argv: list[str]) -> int:
                           for k, v in rep["byKind"].items())
         line = (f"- {today}: {rep['cases']} cases, {rep['new']} new, {rep['changed']} changed verdict. {kinds}. "
                 f"Sources not up: {', '.join(rep['sourcesNotUp']) or 'none'}. "
-                f"Unavailable: {', '.join(rep['unavailable']) or 'none'}. {coverage_line()}\n")
+                f"Unavailable: {', '.join(rep['unavailable']) or 'none'}. {trial_line(rep['dropTrial'])} {coverage_line()}\n")
     except Exception as exc:  # a failed audit leaves a durable record and never stops the map
         line = f"- {today}: AUDIT FAILED ({type(exc).__name__}); no report written, will retry next run.\n"
         rep = None

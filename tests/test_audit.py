@@ -105,6 +105,15 @@ for bad, why in ((None, "missing"), (["not", "a", "dict"], "corrupt")):
     check(f"a {why} water file is reported unavailable, never as zero rescissions",
           not r["complete"] and r["unavailable"] == ["water_notices.json"] and V(r) == ["unknown"])
 
+t = rep([early] + base + [again])["dropTrial"]
+check("the drop trial lists an FHP drop contradicted by a closure reported again after it, with the evidence",
+      t["contradicted"] == ["brevard:fhp:1"] and t["forMike"][0]["seen"] and t["drops"] == 1)
+t = rep([early] + base)["dropTrial"]
+check("an older entry from another source still on the map is listed as stale, not as a contradiction",
+      t["contradicted"] == [] and t["stale"] == ["brevard:fhp:1"])
+check("a drop with nothing else at that place is counted but not listed", rep(base)["dropTrial"]["forMike"] == []
+      and rep(base)["dropTrial"]["drops"] == 1)
+
 # --due runs once a day, from 7 AM Eastern, until Dec 3; it writes only under audit/
 A.AUDIT = os.path.join(tmp, "audit")
 real_now = E.utcnow
@@ -115,6 +124,7 @@ E.utcnow = lambda: datetime.datetime(2026, 11, 3, 12, 5, tzinfo=datetime.timezon
 A.main(["--due"]); A.main(["--due"])
 led = open(os.path.join(A.AUDIT, "ledger.md")).read()
 check("due once at 12:00 UTC; a second run that day writes nothing", led.count("- 2026-11-03:") == 1
+      and "FHP/FL511 drop trial (2026-11-03 to 2026-11-10)" in led
       and os.path.exists(os.path.join(A.AUDIT, "2026-11-03.json")) and os.path.exists(os.path.join(A.AUDIT, "cases.json")))
 E.utcnow = lambda: datetime.datetime(2026, 11, 4, 12, 5, tzinfo=datetime.timezone.utc)
 real_run = A.run
