@@ -151,7 +151,8 @@ def lsr_item(e: dict, when: str, url: str) -> dict:
         road, spot = (m.group(1), f"in {near}") if m else (f"{near} area", "")
     key = f"{e['time']}|{e['lat']:.2f}|{e['lng']:.2f}"
     return {"id": "nws-" + hashlib.sha1(key.encode()).hexdigest()[:10], "layer": "NWS", "status": "closed" if closed else "flooded",
-            "fullClosure": False, "road": road, "roadShort": road, "spot": spot, "lat": e["lat"], "lng": e["lng"],
+            "fullClosure": False, "road": road, "roadShort": road, "spot": spot, "where": f"{road} {spot}".strip(),
+            "lat": e["lat"], "lng": e["lng"],
             "title": f"{e['event']} reported to NWS Melbourne ({e['source']})", "note": rem, "city": near, "approx": True,
             "reported": when, "updated": when, "source": f"NWS Melbourne storm report ({e['source']})", "sourceUrl": url}
 
@@ -260,7 +261,41 @@ def display(state: dict) -> tuple[list[dict], list[dict]]:
             it.update(reopenedAt=r["reopenedAt"], evidence=r["evidence"])
             reopened.append(it)
     items.sort(key=lambda it: it["id"])
-    return items, reopened
+    return merge_nws(items), reopened
+
+
+def place(it: dict) -> frozenset | None:
+    """The intersection a pin is at, as the two road names in either order ('Minton Rd at Helen St' is the same place
+    as 'Helen St at Minton Rd'); None when there is no cross street to match on."""
+    road = E.road_words(re.split(r"\s*\(|/", it.get("roadShort") or it.get("road") or "")[0])
+    cross = re.sub(r"^(?:at|near|between)\s+", "", it.get("spot") or "", flags=re.I)
+    cross = E.road_words(re.split(r"\s+(?:and|to)\s+|\s*\(", cross)[0])
+    return frozenset((road, cross)) if road and cross and road != cross else None
+
+
+def merge_nws(items: list[dict]) -> list[dict]:
+    """Mike (Nov 3): one pin per place. An NWS storm report at the same intersection as another pin joins that pin
+    (listed first in it, as an NWS storm report) instead of adding a second pin. The pin shows the more serious status
+    of the two; nothing in the history changes. Each pin carries its NWS reports in 'nws', newest first."""
+    hosts, out = {}, []
+    for it in sorted(items, key=lambda i: i["id"].split(":")[1] == "nws"):  # other pins claim their place first
+        nws = it["id"].split(":")[1] == "nws"
+        report = {"status": it.get("status"), "reporter": it.get("source", "").partition("(")[2].rstrip(")"),
+                  "at": it.get("reported"), "url": it.get("sourceUrl"), "note": it.get("note")} if nws else None
+        host = hosts.get(place(it)) if nws and place(it) else None
+        if host is None:
+            if nws:
+                it["nws"] = [report]
+            if place(it):
+                hosts.setdefault(place(it), it)
+            out.append(it)
+            continue
+        host.setdefault("nws", []).append(report)
+        host["nws"].sort(key=lambda r: r["at"] or "", reverse=True)
+        if E.SEVERITY.get(report["status"], 0) > E.SEVERITY.get(host.get("status"), 0):
+            host["status"], host["statusBy"] = report["status"], "NWS storm report"
+    out.sort(key=lambda it: it["id"])
+    return out
 
 
 def main() -> int:

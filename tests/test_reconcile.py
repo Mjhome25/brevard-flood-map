@@ -389,6 +389,26 @@ check("a storm report that ages off the NWS list stays on the map with no 'no lo
 check("a storm report is shown as reported (not government verified), naming who reported it",
       shownn[R.rid_of(its[1])]["verified"] is None and "Trained Spotter" in shownn[R.rid_of(its[1])]["source"])
 
+# One pin per place (Mike, Nov 3): an NWS report at a pin's intersection joins that pin, listed with its reporter
+pm = os.path.join(tmp, "merge.jsonl")
+helen = R.lsr_item(ents[0], "2026-11-02T13:51:00Z", "https://api.weather.gov/products/x")
+check("storm report carries a where label with its cross street", helen["where"] == "Helen St at Minton Rd")
+run(pm, {"sources": {"manual": "up", "nws": "up"}, "items": [
+    man("minton-helen", road="Minton Rd", dir="NB", spot="at Helen St", where="Minton Rd NB at Helen St"),
+    man("minton-192", road="Minton Rd", spot="at US 192 (W New Haven Ave)"), helen, its[1]]}, 0)
+shownm = {i["id"]: i for i in R.display(E.derive(E.load(pm)))[0]}
+host = shownm["brevard:manual:minton-helen"]
+check("an NWS report at the same intersection (either road order) joins the existing pin, no second pin",
+      R.rid_of(helen) not in shownm and len(host["nws"]) == 1 and host["nws"][0]["reporter"] == "Broadcast Media")
+check("the joined pin shows the more serious report (closed), saying which report set it, history unchanged",
+      host["status"] == "closed" and host["statusBy"] == "NWS storm report"
+      and E.derive(E.load(pm))["records"]["brevard:manual:minton-helen"]["fields"]["status"] == "flooded")
+check("a different intersection on the same road is not merged", "nws" not in shownm["brevard:manual:minton-192"])
+check("an NWS report with no matching pin is its own pin, carrying its own report",
+      shownm[R.rid_of(its[1])]["nws"][0]["reporter"] == "Trained Spotter")
+check("the page labels NWS reports green 'NWS storm report', never 'Government verified'",
+      "<b>NWS storm report</b>" in open(os.path.join(repo, "template.html")).read())
+
 # FHP ids are the same in separate processes (the old id used Python's per-process hash)
 code = ("import sys; sys.path.insert(0, sys.argv[1]); import reconcile as R; "
         "print(R.rid_of({'layer': 'FHP', 'id': 'fhp-x', 'reported': '2026-11-02T14:14:28Z', "
