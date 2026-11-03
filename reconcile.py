@@ -57,6 +57,32 @@ def fhp_classify(typ: str, remark: str) -> tuple[str, bool]:
     return status, full
 
 
+FHP_COLUMNS = ("Incident Type", "Received", "Dispatched", "Arrived", "County", "Location", "Remarks", "Latitude",
+               "Longitude")
+
+
+def fhp_rows(page: str, county: str = "BREVARD") -> list[dict]:
+    """The FHP live CAD table as dicts keyed by its own header names. The columns are bound by header text, never by
+    position: the page has Received, Dispatched and Arrived times and NO cleared time (an incident leaves the page
+    when it is over). Raises ValueError when the expected headers are not all present, so a changed page is a
+    source failure, not silently shifted columns."""
+    import html as _html
+    clean = lambda c: re.sub(r"\s+", " ", _html.unescape(re.sub(r"<[^>]+>", " ", c))).replace("\xa0", " ").strip()
+    heads = [clean(h) for h in re.findall(r"<th[^>]*>(.*?)</th>", page, flags=re.S | re.I)]
+    if not all(c in heads for c in FHP_COLUMNS):
+        raise ValueError(f"FHP CAD headers changed: {heads[:12]}")
+    idx = {c: heads.index(c) for c in FHP_COLUMNS}
+    out = []
+    for row in re.findall(r"<tr[^>]*>(.*?)</tr>", page, flags=re.S | re.I):
+        cells = [clean(c) for c in re.findall(r"<td[^>]*>(.*?)</td>", row, flags=re.S | re.I)]
+        if len(cells) < len(heads[:len(FHP_COLUMNS)]) or max(idx.values()) >= len(cells):
+            continue
+        r = {c: cells[i] for c, i in idx.items()}
+        if r["County"].upper() == county:
+            out.append(r)
+    return out
+
+
 def fhp_normalize(it: dict) -> dict | None:
     """For an FHP item recorded by the old parser (which read 'ROADBLOCK' inside 'NO ROADBLOCK' or 'PARTIAL
     ROADBLOCK' as a closure): the corrected status and fullClosure with an audit note, or None when nothing changes.

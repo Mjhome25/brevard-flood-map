@@ -127,6 +127,25 @@ it4 = R.display(E.derive(E.load(p4)))[0][0]
 check("a 'Roadway Open' remark on an active record reads as an unverified dated note",
       it4["lanes"].startswith('Source said "Roadway Open"') and "not a verified reopening" in it4["lanes"])
 
+# FHP CAD table: columns bound by header text; an incident with an Arrived time is still active
+H = "".join(f"<th>{c}&nbsp;</th>" for c in R.FHP_COLUMNS)
+row = lambda *c: "<tr>" + "".join(f"<td>{x}</td>" for x in c) + "</tr>"
+page = (f"<table><tr>{H}</tr>" + row("MVC", "11/03/2026 06:00:00", "11/03/2026 06:02:00", "11/03/2026 06:10:00",
+                                     "BREVARD", "SR-520 x[SAMPLE RD] [COCOA]", "Right lane blocked", "28.3", "-80.7")
+        + row("MVC", "11/03/2026 06:05:00", "", "", "ORANGE", "SR-50 x[X] [ORLANDO]", "", "28.5", "-81.3") + "</table>")
+rows = R.fhp_rows(page)
+check("an FHP incident with an Arrived time is kept (Arrived is not Cleared); other counties dropped",
+      len(rows) == 1 and rows[0]["Arrived"] == "11/03/2026 06:10:00" and rows[0]["Remarks"] == "Right lane blocked")
+swapped = page.replace("<th>Dispatched&nbsp;</th><th>Arrived&nbsp;</th>", "<th>Arrived&nbsp;</th><th>Dispatched&nbsp;</th>")
+check("columns follow the header, not position", R.fhp_rows(swapped)[0]["Arrived"] == "11/03/2026 06:02:00")
+try:
+    R.fhp_rows(page.replace("Arrived", "Cleared")); ok = False
+except ValueError:
+    ok = True
+check("a changed header set is a source failure, not shifted columns", ok)
+upd = open(os.path.join(repo, "update_flood_data.py")).read()
+check("the updater no longer drops incidents by a third time column", "t_clr" not in upd and "fhp_rows(s)" in upd)
+
 # FHP ids are the same in separate processes (the old id used Python's per-process hash)
 code = ("import sys; sys.path.insert(0, sys.argv[1]); import reconcile as R; "
         "print(R.rid_of({'layer': 'FHP', 'id': 'fhp-x', 'reported': '2026-11-02T14:14:28Z', "

@@ -11,7 +11,7 @@ Run:  python3 update_flood_data.py   (writes flood_data.json next to it)
 import json, re, html, os, sys, urllib.request, urllib.parse, datetime
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
-from reconcile import fhp_classify  # noqa: E402
+from reconcile import fhp_classify, fhp_rows  # noqa: E402
 UA = "BrevardFloodMap/0.1 (+https://brevardemergency.com)"
 from zoneinfo import ZoneInfo
 TZ = ZoneInfo("America/New_York")  # FL511 and FHP times are Eastern, across daylight saving
@@ -128,14 +128,10 @@ json.dump({k: v for k, v in dcache.items() if k in live}, open(dcache_path, "w")
 # ---- FHP CAD ----------------------------------------------------------
 try:
     s = get("https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx", accept="text/html")
-    for row in re.findall(r"<tr[^>]*>(.*?)</tr>", s, flags=re.S | re.I):
-        if "BREVARD" not in row: continue
-        cells = [re.sub(r"\s+", " ", html.unescape(re.sub(r"<[^>]+>", " ", c))).strip()
-                 for c in re.findall(r"<td[^>]*>(.*?)</td>", row, flags=re.S | re.I)]
-        if len(cells) < 9 or cells[4] != "BREVARD": continue
-        typ, t_rep, t_arr, t_clr, _, loc, remark, lat, lng = cells[:9]
+    for r in fhp_rows(s):  # bound by header; Received/Dispatched/Arrived, no cleared column
+        typ, t_rep, loc, remark, lat, lng = (r["Incident Type"], r["Received"], r["Location"], r["Remarks"],
+                                             r["Latitude"], r["Longitude"])
         if typ.upper() == "WEATHER WARNING": continue
-        if t_clr: continue  # cleared incidents drop off
         try: lat, lng = float(lat), float(lng)
         except Exception: lat = lng = None
         status, full = fhp_classify(typ, remark)
@@ -143,7 +139,7 @@ try:
             "id": f"fhp-{re.sub(r'[^0-9]', '', t_rep)}-{abs(hash(loc)) % 10000}", "source": "FHP live CAD", "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
             "road": loc.split(" x[")[0], "title": f"{typ.title()} at {loc}" + (f" ({remark.title()})" if remark else ""),
             "status": status, "fullClosure": full,
-            "reported": parse_fhp_time(t_rep), "updated": parse_fhp_time(t_arr or t_rep), "lat": lat, "lng": lng, "layer": "FHP",
+            "reported": parse_fhp_time(t_rep), "updated": parse_fhp_time(t_rep), "lat": lat, "lng": lng, "layer": "FHP",
             "roadShort": " ".join(w if re.search(r"\d", w) else w.title() for w in loc.split(" x[")[0].split()), "dir": "",
             "spot": ("at " + m.group(1).title()) if (m := re.search(r"x\[([^\]]+)\]", loc)) else "",
             "lanes": remark.title() if remark else "",
