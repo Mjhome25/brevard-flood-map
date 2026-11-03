@@ -207,6 +207,29 @@ for lanes in ("Roadway open", "One lane closed"):
     check(f"an empty lane field is not filled by a relisted '{lanes}', and it is flagged",
           not s["fields"].get("lanes") and "source changed its lane description" in s["recheck"])
 
+p = fresh("k.jsonl")
+E.append([rep(A, 0, status="caution", fullClosure=False, lanes="")], p, now=T0)
+E.append([rep(A, 1, kind="relisted", status="closed", fullClosure=True)], p, now=T0)
+E.append([rep(A, 2, kind="relisted", status="caution", fullClosure=False)], p, now=T0)
+s = state(p, 3)[A]
+check("caution, then full closure, then caution: stays full closed and is flagged",
+      s["fields"]["status"] == "closed" and s["fields"]["fullClosure"] and "source shows reduced impact" in s["recheck"])
+
+# 5e. The closed stretch (line, from, to) and the pin: filled once, never moved -------------------------------
+p = fresh("l.jsonl")
+E.append([rep(A, 0, lat=None, lng=None)], p, now=T0)
+ext = {"line": [[28.0, -80.6], [28.01, -80.6]], "from": "Main St", "to": "Oak Ave", "length_m": 1100}
+E.append([rep(A, 1, kind="relisted", lat=28.0, lng=-80.6, **ext)], p, now=T0)
+s = state(p, 2)[A]["fields"]
+check("an unlocated record gains its pin and closed stretch from a later report",
+      s["lat"] == 28.0 and s["from"] == "Main St" and s["to"] == "Oak Ave" and s["line"] == ext["line"])
+E.append([rep(A, 2, kind="relisted", lat=28.5, lng=-80.9, line=[[28.0, -80.6], [28.001, -80.6]], **{"from": "Main St",
+          "to": "1st St", "length_m": 100})], p, now=T0)
+s2 = state(p, 3)[A]
+check("a later different stretch never replaces the known one, and is flagged",
+      s2["fields"]["to"] == "Oak Ave" and s2["fields"]["line"] == ext["line"] and s2["fields"]["lat"] == 28.0
+      and "source changed the closed stretch" in s2["recheck"])
+
 # 6. Reducer behaviour for an accepted reopening (replay of a cleared event built directly, not via append) ------
 evs = E.load(fresh("f.jsonl")) + [dict(rep(A, 0), seq=1, at=at(0))]
 evs.append({"seq": 2, "at": at(10), "rid": A, "kind": "cleared", "src": "manual", "stime": at(10),

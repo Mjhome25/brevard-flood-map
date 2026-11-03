@@ -5,9 +5,9 @@ cutoff commit (Phase 1 batch 2). Run by hand, reviewed before its commit.
   python3 migrate.py --cutoff <commit>            dry run: prints the grouped report, writes nothing
   python3 migrate.py --cutoff <commit> --write    appends the events (refuses if the history already exists)
 
-Every record ever published becomes a `reported` event with its first published version (original category,
-fullClosure, source and times; never relabeled as confirmed), then a `relisted` with its last published version
-(which the reducer can only raise, never lower). A record missing from the cutoff snapshot also gets `missing` and a
+Every snapshot is replayed in order: a record's first published version is `reported` (original category,
+fullClosure, source and times; never relabeled as confirmed) and each later changed version is `relisted`, which the
+reducer can only raise, never lower, so a stronger restriction seen in any snapshot is kept. A record missing from the cutoff snapshot also gets `missing` and a
 `recheck` saying it was recovered: its absence is not an all-clear. Nothing here can clear a record.
 """
 import argparse
@@ -25,55 +25,63 @@ def git(*args) -> str:
     return subprocess.run(["git", "-C", E.HERE, *args], capture_output=True, text=True, check=True).stdout
 
 
-def scan(cutoff: str):
-    revs = [line.split() for line in git("log", "--reverse", "--format=%H %cI", cutoff, "--", "flood_data.json").splitlines()]
-    first, last, seen_at = {}, {}, {}
-    final_ids = set()
-    for n, (h, t) in enumerate(revs):
+def snapshots(cutoff: str):
+    """Chronological flood_data.json snapshots up to the cutoff: [(commit, time, items)]."""
+    out = []
+    for h, t in (line.split() for line in git("log", "--reverse", "--format=%H %cI", cutoff, "--", "flood_data.json").splitlines()):
         try:
             d = json.loads(git("show", f"{h}:flood_data.json"))
         except (subprocess.CalledProcessError, json.JSONDecodeError):
             continue
-        ids = set()
-        for it in d.get("items", []):
-            if it.get("status") not in E.SEVERITY:
-                continue
-            r = rid_of(it)
-            ids.add(r)
-            first.setdefault(r, (h, t, it))
-            last[r] = (h, t, it)
-            seen_at[r] = t
-        if n == len(revs) - 1:
-            final_ids = ids
-    return revs, first, last, seen_at, final_ids
+        out.append((h, t, [it for it in d.get("items", []) if it.get("status") in E.SEVERITY]))
+    return out
+
+
+def manual_only(cutoff: str, known: set) -> list[str]:
+    """Hand-entered ids that appear in manual_closures.json history but never in a published snapshot."""
+    ids = set()
+    for h in git("log", "--format=%H", cutoff, "--", "manual_closures.json").split():
+        try:
+            ids |= {rid_of(dict(c, layer="manual")) for c in json.loads(git("show", f"{h}:manual_closures.json"))}
+        except (subprocess.CalledProcessError, json.JSONDecodeError):
+            continue
+    return sorted(ids - known)
 
 
 def build(cutoff: str):
-    revs, first, last, seen_at, final_ids = scan(cutoff)
+    """Replay every snapshot in order: each record's first observation is `reported`, and every later observation
+    whose content changed is `relisted`, so an intermediate stronger restriction is kept (the reducer only raises)."""
+    snaps = snapshots(cutoff)
     cutoff_full = git("rev-parse", cutoff).strip()
-    evs, groups = [], collections.defaultdict(list)
-    for r in sorted(first):
-        h0, t0, it0 = first[r]
-        h1, t1, it1 = last[r]
-        base = {"rid": r, "src": src_of(it0), "actor": "migration", "migratedFrom": cutoff_full[:12]}
-        s0 = stime_of(it0, "")
-        if not E.parse(s0):
-            groups["unlocatable (no usable source time)"].append(r)
-            continue
-        evs.append({**base, "kind": "reported", "stime": s0, "fields": fields_of(it0)})
-        s1 = stime_of(it1, s0)
-        if fields_of(it1) != fields_of(it0) or s1 != s0:
-            evs.append({**base, "kind": "relisted", "stime": s1, "fields": fields_of(it1)})
-        if it1.get("lat") is None:
+    evs, groups, prev, last, seen_at = [], collections.defaultdict(list), {}, {}, {}
+    for h, t, items in snaps:
+        for it in items:
+            r = rid_of(it)
+            f, st = fields_of(it), stime_of(it, "")
+            if not E.parse(st):
+                groups["unlocatable (no usable source time)"].append(r)
+                continue
+            if prev.get(r) != (f, st):
+                evs.append({"rid": r, "src": src_of(it), "actor": "migration", "migratedFrom": cutoff_full[:12],
+                            "kind": "relisted" if r in prev else "reported", "stime": st, "fields": f, "snapshot": h[:12]})
+                prev[r] = (f, st)
+            last[r], seen_at[r] = it, t
+    final_ids = {rid_of(it) for it in snaps[-1][2]} if snaps else set()
+    for r in sorted(last):
+        if last[r].get("lat") is None:
             groups["no map location (list only)"].append(r)
         if r in final_ids:
             groups["still published at cutoff"].append(r)
-        else:
-            evs.append({**base, "kind": "missing", "stime": s1, "lastSeen": seen_at[r]})
-            evs.append({**base, "kind": "recheck", "stime": s1,
-                        "reason": f"recovered from history: no longer listed after {seen_at[r][:16]}; no official reopening found"})
-            groups["recovered (vanished before Phase 1, no clearance evidence)"].append(r)
-    return revs, cutoff_full, evs, groups, last
+            continue
+        base = {"rid": r, "src": src_of(last[r]), "actor": "migration", "migratedFrom": cutoff_full[:12],
+                "stime": stime_of(last[r], "")}
+        evs.append({**base, "kind": "missing", "lastSeen": seen_at[r]})
+        evs.append({**base, "kind": "recheck",
+                    "reason": f"recovered from history: no longer listed after {seen_at[r][:16]}; no official reopening found"})
+        groups["recovered (vanished before Phase 1, no clearance evidence)"].append(r)
+    groups["hand-entered only in manual_closures.json, never published (not imported)"] = manual_only(cutoff, set(last))
+    groups["unlocatable (no usable source time)"] = sorted(set(groups["unlocatable (no usable source time)"]))
+    return snaps, cutoff_full, evs, groups, last
 
 
 def main(argv=None) -> int:
@@ -82,15 +90,16 @@ def main(argv=None) -> int:
     p.add_argument("--write", action="store_true")
     p.add_argument("--events", default=E.EVENTS)
     a = p.parse_args(argv)
-    revs, cutoff_full, evs, groups, last = build(a.cutoff)
-    print(f"migration from {len(revs)} flood_data.json snapshots up to {cutoff_full[:12]}: {len(evs)} events")
+    snaps, cutoff_full, evs, groups, last = build(a.cutoff)
+    print(f"migration from {len(snaps)} flood_data.json snapshots up to {cutoff_full[:12]}: {len(evs)} candidate events")
     print("groups:")
     for g in ("still published at cutoff", "recovered (vanished before Phase 1, no clearance evidence)",
-              "no map location (list only)", "unlocatable (no usable source time)"):
+              "no map location (list only)", "unlocatable (no usable source time)",
+              "hand-entered only in manual_closures.json, never published (not imported)"):
         print(f"  {g}: {len(groups.get(g, []))}")
     print("  evidenced clearance found: 0 (none of the history carries official reopening evidence)")
     for r in groups.get("recovered (vanished before Phase 1, no clearance evidence)", []):
-        it = last[r][2]
+        it = last[r]
         print(f"    {r}  {it.get('status')}{' full' if it.get('fullClosure') else ''}  "
               f"{(it.get('where') or it.get('title') or '')[:60]}")
     if not a.write:

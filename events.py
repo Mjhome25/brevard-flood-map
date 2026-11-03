@@ -31,8 +31,9 @@ GREEN_HOURS = 24
 RECHECK_AFTER_HOURS = 72
 # Display fields a record carries. Geometry and location (where, lat, lng, approx, line) are set by the first report.
 FIELDS = ("road", "roadShort", "dir", "spot", "where", "title", "city", "status", "fullClosure", "lanes", "lat", "lng",
-          "approx", "source", "sourceUrl", "reported", "note", "layer", "line")
-SCOPE_FIXED = ("road", "roadShort", "dir", "spot", "where", "city", "lat", "lng", "approx", "line", "layer", "reported")
+          "approx", "source", "sourceUrl", "reported", "note", "layer", "line", "from", "to", "length_m")
+# The closed stretch travels as one set: filled once when the record had none, never moved or narrowed afterwards.
+EXTENT = ("line", "from", "to", "length_m")
 SEVERITY = {"caution": 0, "hazard": 1, "mvc": 1, "flooded": 1, "closed": 2}
 
 
@@ -152,7 +153,7 @@ def append(new: list[dict], path: str = EVENTS, clearance_enabled: bool = False,
 def _merge_up(cur: dict, new: dict) -> tuple[dict, list[str]]:
     """Category and fullClosure only rise, each on its own. Scope and description (where, lanes, title, note, source)
     keep the first report's wording; a later lane description (even where the first had none) is flagged, never
-    written.
+    written. A record without a pin or closed stretch gains one from a later report; a known one never moves.
     Returns (merged fields, recheck reasons)."""
     merged, reasons = dict(cur), []
     sev_new, sev_cur = SEVERITY.get(new.get("status"), 1), SEVERITY.get(cur.get("status"), 1)
@@ -166,6 +167,13 @@ def _merge_up(cur: dict, new: dict) -> tuple[dict, list[str]]:
         reasons.append("source shows reduced impact")
     if new.get("lanes") and new["lanes"] != cur.get("lanes"):  # never written, even into an empty field
         reasons.append("source changed its lane description")
+    if cur.get("lat") is None and new.get("lat") is not None:  # an unlocated record gains its pin
+        merged.update(lat=new["lat"], lng=new.get("lng"), approx=new.get("approx", cur.get("approx")))
+    if new.get("line") or new.get("from"):
+        if not (cur.get("line") or cur.get("from")):
+            merged.update({k: new[k] for k in EXTENT if k in new})
+        elif any(new.get(k) != cur.get(k) for k in EXTENT if k in new):
+            reasons.append("source changed the closed stretch")
     return merged, reasons
 
 
