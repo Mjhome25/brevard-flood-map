@@ -511,7 +511,7 @@ h1,h2,h3{margin:0;text-wrap:balance}
     const t=it.updated||it.reported; const old=t&&(Date.now()-new Date(t))>6*3600e3; const stale=isStale(it); const closed=isClosed(it)&&!stale;
     const badge = it.layer==='manual' ? '' : `<span class="badge feed">${esc(it.layer==='FHP'?'FHP':it.layer==='NWS'?'NWS':'FL511')}</span>`;
     const isNew=t&&(Date.now()-new Date(t))<3600e3;
-    return `<div class="row" data-id="${esc(it.id)}" tabindex="0" role="button" aria-label="${esc(where(it))}, show on map"><span class="ic">${svgFor(it,stale,.85).html}</span><div class="ttl">${isNew?'<span class="badge new">New</span>':''}${closed?'<span class="badge full">Closed</span>':''}${esc(closed&&span(it)?roadDir(it):where(it))}</div><span class="age ${old?'old':''}" title="${esc(when(t))}">${esc(ago(t))}</span><div class="imp ${closed?'closed':''}">${esc(closed&&span(it)?'Closed '+span(it):impact(it))}</div>${closed&&span(it)?`<div class="imp sub">Reported ${esc(it.spot||'')}${it.lanes&&!NOLANES.test(it.lanes.trim())?' · '+esc(it.lanes):''}</div>`:''}<div class="meta">${vshort(it)}${badge}${esc([it.title!==where(it)?it.title:'',it.city,it.source,t?'last reported '+when(t):'',it.awaitingOfficial?'awaiting official reopening':''].filter(Boolean).join(' · '))}${it.noLongerListed?' · no longer listed'+(it.noLongerListed.wasClosed?' as closed':'')+' by '+esc(it.noLongerListed.agency):''}${it.lat==null?' · no map location yet':''}</div></div>`;
+    return `<div class="row" data-id="${esc(it.id)}" tabindex="0" role="button" aria-label="${esc(where(it))}, show on map"><span class="ic">${svgFor(it,stale,.85).html}</span><div class="ttl">${isNew?'<span class="badge new">New</span>':''}${closed?'<span class="badge full">Closed</span>':''}${esc(closed&&span(it)?roadDir(it):where(it))}</div><span class="age ${old?'old':''}" title="${esc(when(t))}">${esc(ago(t))}</span><div class="imp ${closed?'closed':''}">${esc(closed&&span(it)?'Closed '+span(it):impact(it))}</div>${closed&&span(it)?`<div class="imp sub">Reported ${esc(it.spot||'')}${it.lanes&&!NOLANES.test(it.lanes.trim())?' · '+esc(it.lanes):''}</div>`:''}<div class="meta">${vshort(it)}${badge}${esc([it.title!==where(it)?it.title:'',it.city,it.source,t?'last reported '+when(t):'',it.awaitingOfficial?'awaiting official reopening':''].filter(Boolean).join(' · '))}${it.noLongerListed?' · no longer listed'+(it.noLongerListed.wasClosed?' as closed':'')+' by '+esc(it.noLongerListed.agency):''}${it.lat==null?' · no map location yet':''}${it.lat==null&&it.sourceUrl?' · <a href="'+esc(it.sourceUrl)+'" target="_blank" rel="noopener">Read the report at '+esc(srcHost(it))+' ↗</a>':''}${it.lat==null&&it.note?'<br>'+esc(it.note):''}</div></div>`;
   }
   let clearedN=0;
   function renderList(arr, byNew){
@@ -524,7 +524,7 @@ h1,h2,h3{margin:0;text-wrap:balance}
       return `<div class="sec">${SEC[k]} · ${g.length}${nc?` <span class="secc">${nc} closed</span>`:''}</div>`+g.map(rowHtml).join('');
     }).join('');
   }
-  listEl.addEventListener('click',e=>{const r=e.target.closest('.row'); if(r) select(r.dataset.id,true);});
+  listEl.addEventListener('click',e=>{if(e.target.closest('a')) return; const r=e.target.closest('.row'); if(r) select(r.dataset.id,true);});
   listEl.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){const r=e.target.closest('.row'); if(r){e.preventDefault(); select(r.dataset.id,true);}}});
   function select(id,fly){
     listEl.querySelectorAll('.row.active').forEach(r=>r.classList.remove('active'));
