@@ -193,8 +193,8 @@
   "source": "Spectrum News 13",
   "sourceUrl": "https://mynews13.com/fl/orlando/news/2026/11/02/brevard-school-officials-cancel-classes-due-to-weather-concerns",
   "reported": "2026-11-02T16:26:00Z",
-  "updated": "2026-11-02T16:26:00Z",
-  "note": "Spectrum News 13: parts of the road washed out when Turkey Creek overflowed. Listed as closed ('Port Malabar Boulevard is washed out') in the WESH 2 list of Brevard roads closed because of flooding: https://www.newsbeep.com/795319/ . Exact limits not given. Pin approximate.",
+  "updated": "2026-11-03T07:12:24Z",
+  "note": "Spectrum News 13 (Nov 2): parts of the road washed out when Turkey Creek overflowed. The WESH 2 list headed 'Below is a list of roads closed because of flooding' (published Nov 3 7:12 UTC) includes 'Port Malabar Boulevard is washed out': https://www.newsbeep.com/795319/ . Exact limits not given. Pin approximate.",
   "lanes": "Closed (road washed out)"
  },
  {
@@ -661,9 +661,9 @@
   "approx": true,
   "source": "City of Melbourne",
   "sourceUrl": "https://www.melbourneflorida.org/Government/City-News/Traffic-Advisories/Road-Closures-Dairy-Babcock-Lake-Washington",
-  "reported": "2026-11-03T14:27:38Z",
-  "updated": "2026-11-03T14:27:38Z",
-  "note": "City of Melbourne traffic update, published Nov 2 (no time given): 'All of Dairy Road is closed.' The city's list (via Space Coast Daily) also names Dairy Rd at Snicole Rd and at Edgewood Dr. Pin approximate; the whole road is closed."
+  "reported": "2026-11-02T12:00:00Z",
+  "updated": "2026-11-03T07:12:24Z",
+  "note": "City of Melbourne traffic update, published Nov 2 (no time given): 'All of Dairy Road is closed.' The city's list (via Space Coast Daily) also names Dairy Rd at Snicole Rd and at Edgewood Dr. Pin approximate; the whole road is closed. The city gives a date only (Nov 2), so the first-report time is shown as midday Nov 2. Also on the WESH 2 closed-roads list published Nov 3 7:12 UTC: https://www.newsbeep.com/795319/"
  },
  {
   "id": "man-all-lake-washington-rd",
@@ -679,9 +679,9 @@
   "approx": true,
   "source": "City of Melbourne",
   "sourceUrl": "https://www.melbourneflorida.org/Government/City-News/Traffic-Advisories/Road-Closures-Dairy-Babcock-Lake-Washington",
-  "reported": "2026-11-03T14:27:38Z",
-  "updated": "2026-11-03T14:27:38Z",
-  "note": "City of Melbourne traffic update, published Nov 2 (no time given): 'All of Lake Washington Road is closed.' Pin approximate; the whole road is closed."
+  "reported": "2026-11-02T12:00:00Z",
+  "updated": "2026-11-03T07:12:24Z",
+  "note": "City of Melbourne traffic update, published Nov 2 (no time given): 'All of Lake Washington Road is closed.' Pin approximate; the whole road is closed. The city gives a date only (Nov 2), so the first-report time is shown as midday Nov 2. Also on the WESH 2 closed-roads list published Nov 3 7:12 UTC: https://www.newsbeep.com/795319/"
  },
  {
   "id": "man-dubber-rd",
@@ -697,9 +697,9 @@
   "approx": true,
   "source": "City of Melbourne (via Space Coast Daily)",
   "sourceUrl": "https://spacecoastdaily.com/2026/11/city-of-melbourne-reports-multiple-road-closures-urges-residents-to-shelter-in-place/",
-  "reported": "2026-11-03T14:27:38Z",
-  "updated": "2026-11-03T14:27:38Z",
-  "note": "The city lists Dubber Rd as closed without limits. Pin approximate."
+  "reported": "2026-11-02T17:43:55Z",
+  "updated": "2026-11-02T17:43:55Z",
+  "note": "The city lists Dubber Rd as closed without limits. Pin approximate. Time is the Space Coast Daily publication time of the city's list."
  },
  {
   "id": "man-edgewood-ruffner",
@@ -715,9 +715,9 @@
   "approx": true,
   "source": "City of Melbourne (via Space Coast Daily)",
   "sourceUrl": "https://spacecoastdaily.com/2026/11/city-of-melbourne-reports-multiple-road-closures-urges-residents-to-shelter-in-place/",
-  "reported": "2026-11-03T14:27:38Z",
-  "updated": "2026-11-03T14:27:38Z",
-  "note": "The city lists 'Edgewood Road and Ruffner Road' as closed. Pin approximate."
+  "reported": "2026-11-02T17:43:55Z",
+  "updated": "2026-11-02T17:43:55Z",
+  "note": "The city lists 'Edgewood Road and Ruffner Road' as closed. Pin approximate. Time is the Space Coast Daily publication time of the city's list."
  },
  {
   "id": "man-stewart-rd",
@@ -733,9 +733,9 @@
   "approx": true,
   "source": "City of Melbourne (via Space Coast Daily)",
   "sourceUrl": "https://spacecoastdaily.com/2026/11/city-of-melbourne-reports-multiple-road-closures-urges-residents-to-shelter-in-place/",
-  "reported": "2026-11-03T14:27:38Z",
-  "updated": "2026-11-03T14:27:38Z",
-  "note": "The city lists Stewart Rd as closed without limits. Pin approximate."
+  "reported": "2026-11-02T17:43:55Z",
+  "updated": "2026-11-02T17:43:55Z",
+  "note": "The city lists Stewart Rd as closed without limits. Pin approximate. Time is the Space Coast Daily publication time of the city's list."
  },
  {
   "city": "Melbourne",
