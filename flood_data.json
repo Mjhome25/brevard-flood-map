@@ -1,7 +1,7 @@
 {
- "generated": "2026-11-03T01:47:35Z",
+ "generated": "2026-11-03T02:00:26Z",
  "errors": [
-  "FL511 map locations: 1 report(s) without a pin"
+  "FL511 map locations: 2 report(s) without a pin"
  ],
  "items": [
   {
@@ -997,7 +997,74 @@
    "where": "I-95 SB before MM 169/Rest Area"
   },
   {
-   "id": "fhp-11022026060625-8340",
+   "id": "fl511-938153",
+   "source": "FL511 (FDOT)",
+   "sourceUrl": "https://fl511.com",
+   "road": "Wickham Rd",
+   "title": "MVC on Wickham Rd South, at Pineda Causeway. Left lane blocked",
+   "status": "caution",
+   "fullClosure": false,
+   "reported": "2026-11-03T01:47:00Z",
+   "updated": "2026-11-03T01:51:00Z",
+   "lat": 28.200945,
+   "lng": -80.671973,
+   "layer": "Incidents",
+   "dir": "SB",
+   "lanes": "Left lane blocked",
+   "roadShort": "Wickham Rd",
+   "spot": "at Pineda Causeway",
+   "line": [
+    [
+     28.20095,
+     -80.67206
+    ],
+    [
+     28.20083,
+     -80.67206
+    ]
+   ],
+   "where": "Wickham Rd SB at Pineda Causeway"
+  },
+  {
+   "id": "fhp-11022026085723-8273",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "road": "I-95 SB [MM222]",
+   "title": "MVC W/Roadblock at I-95 SB [MM222] x[MM222] [TITUSVILLE] (Roadblock)",
+   "status": "closed",
+   "fullClosure": true,
+   "reported": "2026-11-02T13:57:23Z",
+   "updated": "2026-11-02T13:57:23Z",
+   "lat": 28.6455809793588,
+   "lng": -80.8615091958664,
+   "layer": "FHP",
+   "roadShort": "I-95 Sb [MM222]",
+   "dir": "",
+   "spot": "at Mm222",
+   "lanes": "Roadblock",
+   "where": "I-95 Sb [MM222] at Mm222"
+  },
+  {
+   "id": "fhp-11022026085723-7861",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "road": "I-95 NB [MM223]",
+   "title": "MVC at I-95 NB [MM223] x[MM223] [MIMS] (No Road Block)",
+   "status": "caution",
+   "fullClosure": false,
+   "reported": "2026-11-02T13:57:23Z",
+   "updated": "2026-11-02T13:57:23Z",
+   "lat": 28.6588670750988,
+   "lng": -80.8667062405654,
+   "layer": "FHP",
+   "roadShort": "I-95 Nb [MM223]",
+   "dir": "",
+   "spot": "at Mm223",
+   "lanes": "No Road Block",
+   "where": "I-95 Nb [MM223] at Mm223"
+  },
+  {
+   "id": "fhp-11022026060625-4832",
    "source": "FHP live CAD",
    "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
    "road": "I-95 SB [MM205]",
@@ -1016,7 +1083,7 @@
    "where": "I-95 Sb [MM205] at Mm205"
   },
   {
-   "id": "fhp-11022026043943-692",
+   "id": "fhp-11022026043943-3886",
    "source": "FHP live CAD",
    "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
    "road": "US-1 [2 MILES SOF]",
@@ -1035,7 +1102,7 @@
    "where": "US-1 [2 Miles Sof] at Malabar Rd"
   },
   {
-   "id": "fhp-11022026112806-7085",
+   "id": "fhp-11022026112806-4631",
    "source": "FHP live CAD",
    "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
    "road": "NORFOLK PKWY",
@@ -1282,7 +1349,7 @@
    ]
   },
   {
-   "id": "fhp-11022026112110-1652",
+   "id": "fhp-11022026112110-351",
    "source": "FHP live CAD",
    "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
    "road": "PALM BAY RD NE [ENT RAMP TO]",
@@ -1301,7 +1368,7 @@
    "where": "Palm Bay Rd Ne [Ent Ramp To] at I-95 Nb"
   },
   {
-   "id": "fhp-11022026090844-5468",
+   "id": "fhp-11022026090844-866",
    "source": "FHP live CAD",
    "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
    "road": "US-1",
@@ -1352,7 +1419,7 @@
    ]
   },
   {
-   "id": "fhp-11022026065558-961",
+   "id": "fhp-11022026065558-4208",
    "source": "FHP live CAD",
    "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
    "road": "W NEW HAVEN AVE",
