@@ -1,8 +1,6 @@
 {
- "generated": "2026-11-03T13:00:44Z",
- "errors": [
-  "FL511 map locations: 1 report(s) without a pin"
- ],
+ "generated": "2026-11-03T13:15:27Z",
+ "errors": [],
  "items": [
   {
    "fullClosure": false,
@@ -1118,6 +1116,34 @@
     "since": "2026-11-03T12:46:41Z",
     "wasClosed": false
    }
+  },
+  {
+   "fullClosure": false,
+   "lanes": "No Roadblock",
+   "lat": 28.3598662626263,
+   "layer": "FHP",
+   "lng": -80.7926031263217,
+   "reported": "2026-11-03T13:13:23Z",
+   "road": "4455 W KING ST [COCOA]",
+   "roadShort": "4455 W King St [Cocoa]",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "status": "caution",
+   "title": "MVC at 4455 W KING ST [COCOA] (No Roadblock)",
+   "where": "4455 W King St [Cocoa]",
+   "id": "brevard:fhp:20261103131323-a948d655",
+   "updated": "2026-11-03T13:13:23Z",
+   "lastReported": "2026-11-03T13:13:23Z",
+   "firstReported": "2026-11-03T13:13:23Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-03T13:13:23Z"
+   },
+   "awaitingOfficial": false,
+   "missingSince": null,
+   "recheck": []
   },
   {
    "dir": "EB",
@@ -2395,9 +2421,15 @@
     "kind": "feed",
     "publishedAt": "2026-11-03T12:51:00Z"
    },
-   "awaitingOfficial": false,
-   "missingSince": null,
-   "recheck": []
+   "awaitingOfficial": true,
+   "missingSince": "2026-11-03T13:15:31Z",
+   "recheck": [],
+   "noLongerListed": {
+    "agency": "FL511 (FDOT)",
+    "url": "https://fl511.com",
+    "since": "2026-11-03T13:15:31Z",
+    "wasClosed": false
+   }
   },
   {
    "approx": true,
