@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-03T16:45:36Z",
+ "generated": "2026-11-03T17:00:39Z",
  "errors": [],
  "items": [
   {
@@ -1129,40 +1129,6 @@
     "agency": "Florida Highway Patrol",
     "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
     "since": "2026-11-03T15:33:12Z",
-    "wasClosed": false
-   }
-  },
-  {
-   "fullClosure": false,
-   "lanes": "No Roadblock",
-   "lat": 28.206751559069,
-   "layer": "FHP",
-   "lng": -80.6719050420452,
-   "reported": "2026-11-03T15:42:09Z",
-   "road": "5965 N WICKHAM RD [MELBOURNE]",
-   "roadShort": "5965 N Wickham Rd [Melbourne]",
-   "source": "FHP live CAD",
-   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-   "status": "caution",
-   "title": "MVC at 5965 N WICKHAM RD [MELBOURNE] (No Roadblock)",
-   "where": "5965 N Wickham Rd [Melbourne]",
-   "id": "brevard:fhp:20261103154209-98e87cc1",
-   "updated": "2026-11-03T15:42:09Z",
-   "lastReported": "2026-11-03T15:42:09Z",
-   "firstReported": "2026-11-03T15:42:09Z",
-   "verified": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "kind": "feed",
-    "publishedAt": "2026-11-03T15:42:09Z"
-   },
-   "awaitingOfficial": true,
-   "missingSince": "2026-11-03T16:45:43Z",
-   "recheck": [],
-   "noLongerListed": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "since": "2026-11-03T16:45:43Z",
     "wasClosed": false
    }
   },
@@ -4969,6 +4935,40 @@
   }
  ],
  "reopened": [
+  {
+   "fullClosure": false,
+   "lanes": "No Roadblock",
+   "lat": 28.206751559069,
+   "layer": "FHP",
+   "lng": -80.6719050420452,
+   "reported": "2026-11-03T15:42:09Z",
+   "road": "5965 N WICKHAM RD [MELBOURNE]",
+   "roadShort": "5965 N Wickham Rd [Melbourne]",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "status": "caution",
+   "title": "MVC at 5965 N WICKHAM RD [MELBOURNE] (No Roadblock)",
+   "where": "5965 N Wickham Rd [Melbourne]",
+   "id": "brevard:fhp:20261103154209-98e87cc1",
+   "updated": "2026-11-03T15:42:09Z",
+   "lastReported": "2026-11-03T15:42:09Z",
+   "firstReported": "2026-11-03T15:42:09Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-03T15:42:09Z"
+   },
+   "reopenedAt": "2026-11-03T17:00:49Z",
+   "evidence": {
+    "agency": "Florida Highway Patrol",
+    "kind": "fhp-dropped",
+    "missingSince": "2026-11-03T16:45:43Z",
+    "reopenedAt": "2026-11-03T17:00:49Z",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
+   },
+   "stillReported": []
+  },
   {
    "fullClosure": false,
    "lanes": "No Roadblock",
