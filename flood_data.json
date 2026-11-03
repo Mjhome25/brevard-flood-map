@@ -1,8 +1,6 @@
 {
- "generated": "2026-11-03T21:02:12Z",
- "errors": [
-  "FL511 map locations: 1 report(s) without a pin"
- ],
+ "generated": "2026-11-03T21:15:38Z",
+ "errors": [],
  "items": [
   {
    "fullClosure": true,
@@ -1657,8 +1655,8 @@
    "to": "Pine St",
    "where": "US-192 EB at Minton Rd/S Wickham Rd",
    "id": "brevard:fl511:937010",
-   "updated": "2026-11-03T20:31:00Z",
-   "lastReported": "2026-11-03T20:31:00Z",
+   "updated": "2026-11-03T21:12:00Z",
+   "lastReported": "2026-11-03T21:12:00Z",
    "firstReported": "2026-11-02T19:54:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
@@ -1923,8 +1921,8 @@
    "to": "Circle Dr",
    "where": "US-192 EB beyond Coastal Ln",
    "id": "brevard:fl511:937141",
-   "updated": "2026-11-03T20:31:00Z",
-   "lastReported": "2026-11-03T20:31:00Z",
+   "updated": "2026-11-03T21:13:00Z",
+   "lastReported": "2026-11-03T21:13:00Z",
    "firstReported": "2026-11-02T19:54:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
@@ -2433,8 +2431,8 @@
    "to": "Highway 1",
    "where": "SR-514 EB at US-1",
    "id": "brevard:fl511:937844",
-   "updated": "2026-11-03T20:31:00Z",
-   "lastReported": "2026-11-03T20:31:00Z",
+   "updated": "2026-11-03T21:12:00Z",
+   "lastReported": "2026-11-03T21:12:00Z",
    "firstReported": "2026-11-02T23:15:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
@@ -3160,9 +3158,15 @@
     "kind": "feed",
     "publishedAt": "2026-11-03T18:19:00Z"
    },
-   "awaitingOfficial": false,
-   "missingSince": null,
-   "recheck": []
+   "awaitingOfficial": true,
+   "missingSince": "2026-11-03T21:15:51Z",
+   "recheck": [],
+   "noLongerListed": {
+    "agency": "FL511 (FDOT)",
+    "url": "https://fl511.com",
+    "since": "2026-11-03T21:15:51Z",
+    "wasClosed": false
+   }
   },
   {
    "dir": "SB",
@@ -3685,9 +3689,15 @@
     "kind": "feed",
     "publishedAt": "2026-11-03T20:45:00Z"
    },
-   "awaitingOfficial": false,
-   "missingSince": null,
-   "recheck": []
+   "awaitingOfficial": true,
+   "missingSince": "2026-11-03T21:15:51Z",
+   "recheck": [],
+   "noLongerListed": {
+    "agency": "FL511 (FDOT)",
+    "url": "https://fl511.com",
+    "since": "2026-11-03T21:15:51Z",
+    "wasClosed": false
+   }
   },
   {
    "dir": "NB",
@@ -3823,9 +3833,15 @@
     "kind": "feed",
     "publishedAt": "2026-11-03T20:51:00Z"
    },
-   "awaitingOfficial": false,
-   "missingSince": null,
-   "recheck": []
+   "awaitingOfficial": true,
+   "missingSince": "2026-11-03T21:15:51Z",
+   "recheck": [],
+   "noLongerListed": {
+    "agency": "FL511 (FDOT)",
+    "url": "https://fl511.com",
+    "since": "2026-11-03T21:15:51Z",
+    "wasClosed": true
+   }
   },
   {
    "approx": true,
