@@ -13,3 +13,4 @@ peerline/bus.db*
 peerline/.wait-*.lock
 peerline/__pycache__/
 observations.json
+site/tiles/

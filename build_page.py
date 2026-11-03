@@ -2,7 +2,7 @@
 """Assemble brevard-flood-map.html from template.html + flood_data.json + tiles.json + leaflet.css.
 Run after update_flood_data.py:  python3 build_page.py
 """
-import json, os
+import base64, json, os
 HERE = os.path.dirname(os.path.abspath(__file__))
 rd = lambda n: open(os.path.join(HERE, n), encoding="utf-8").read()
 safe = lambda s: s.replace("</", "<\\/")  # keep JSON from closing the script tag
@@ -18,10 +18,22 @@ except (OSError, ValueError):
 data["waterNotices"] = water
 page = page.replace("__LEAFLET_CSS__", rd("leaflet.css").replace("</", "<\\/"))
 page = page.replace("__DATA_JSON__", safe(json.dumps(data, separators=(",", ":"))))
-page = page.replace("__TILES_JSON__", safe(json.dumps(json.load(open(os.path.join(HERE, "tiles.json"))), separators=(",", ":"))))
+tiles = json.load(open(os.path.join(HERE, "tiles.json")))
+artifact_page = page.replace("__TILES_JSON__", safe(json.dumps(tiles, separators=(",", ":"))))
 out = os.path.join(HERE, "brevard-flood-map.html")
-open(out, "w", encoding="utf-8").write(page)  # artifact body (the Artifact tool adds the document skeleton)
-# Standalone copy for brevardemergency.com needs its own skeleton with the charset declared.
+open(out, "w", encoding="utf-8").write(artifact_page)  # artifact body (the Artifact tool adds the document skeleton)
+# Standalone copy for brevardemergency.com: the fallback map tiles are separate cached files under site/tiles/, so a
+# visitor downloads only the few tiles on screen instead of all 735 inside the page (about 5 MB per visit before).
+# The artifact copy keeps them embedded because the sandbox blocks outside requests.
+os.makedirs(os.path.join(HERE, "site"), exist_ok=True)
+for key, uri in tiles.items():
+    f = os.path.join(HERE, "site", "tiles", key + ".webp")
+    raw = base64.b64decode(uri.split(",", 1)[1])
+    if not os.path.exists(f) or open(f, "rb").read() != raw:
+        os.makedirs(os.path.dirname(f), exist_ok=True)
+        open(f, "wb").write(raw)
+page = page.replace("__TILES_JSON__", safe(json.dumps({k: "/tiles/" + k + ".webp" for k in tiles}, separators=(",", ":"))))
+# The standalone copy needs its own skeleton with the charset declared.
 site = ('<!doctype html><html lang="en"><head><meta charset="utf-8">'
         '<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">'
         '<meta name="description" content="Live map of closed and flooded roads in Brevard County, Florida, from FL511, Florida Highway Patrol, the National Weather Service and local agencies.">'
@@ -42,4 +54,4 @@ open(os.path.join(HERE, "site", "index.html"), "w", encoding="utf-8").write(site
 # Small file the live page polls every 5 minutes to learn when newer road data exists.
 json.dump({k:v for k,v in data.items() if k != "waterNotices"}, open(os.path.join(HERE, "site", "data.json"), "w"), separators=(",", ":"))
 json.dump(water, open(os.path.join(HERE, "site", "water.json"), "w"), separators=(",", ":"))
-print("wrote", out, len(page.encode()) // 1024, "KB; site/index.html", len(site.encode()) // 1024, "KB")
+print("wrote", out, len(artifact_page.encode()) // 1024, "KB; site/index.html", len(site.encode()) // 1024, "KB")
