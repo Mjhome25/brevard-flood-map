@@ -278,9 +278,15 @@ def place(it: dict) -> frozenset | None:
 
 # NWS storm report sources that are government agencies (Mike, Nov 3): only these get the check and "Government
 # verified". Public, media, spotters, amateur radio and social media stay green "NWS storm report" with no check.
-NWS_GOV = {"law enforcement", "emergency mngr", "emergency manager", "fire dept/rescue", "nws employee",
-           "official nws obs", "dept of highways", "local official", "county official", "state official",
-           "other federal agency", "coast guard", "park/forest srvc"}
+NWS_GOV = {"law enforcement", "emergency mngr", "emergency manager", "nws employee", "official nws obs",
+           "nws storm survey", "dept of highways", "local official", "county official", "state official",
+           "other federal", "other federal agency", "coast guard", "park/forest srvc"}
+# Fire Dept/Rescue is left out: fire and rescue services can be contract or private (USFA registry), so the category
+# alone does not prove a government agency (Codex #96).
+
+
+def nws_gov(reporter: str) -> bool:
+    return re.sub(r"\s+", " ", (reporter or "").strip().lower()) in NWS_GOV
 
 
 def merge_nws(items: list[dict]) -> list[dict]:
@@ -293,7 +299,7 @@ def merge_nws(items: list[dict]) -> list[dict]:
         report = {"status": it.get("status"), "reporter": it.get("source", "").partition("(")[2].rstrip(")"),
                   "at": it.get("reported"), "url": it.get("sourceUrl"), "note": it.get("note")} if nws else None
         if report:
-            report["gov"] = report["reporter"].strip().lower() in NWS_GOV
+            report["gov"] = nws_gov(report["reporter"])
         host = hosts.get(place(it)) if nws and place(it) else None
         if host is None:
             if nws:

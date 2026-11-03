@@ -427,9 +427,26 @@ check("an NWS report with no matching pin is its own pin, carrying its own repor
 check("NWS reports from the media or a spotter are not marked government; police and emergency managers are",
       not host["nws"][0]["gov"] and not shownm[R.rid_of(its[1])]["nws"][0]["gov"]
       and R.merge_nws([dict(R.lsr_item(dict(ents[0], source="Law Enforcement"), "x", "u"), id="brevard:nws:z")])[0]["nws"][0]["gov"])
+for src, gov in (("Law Enforcement", True), ("Emergency Mngr", True), ("Emergency Manager", True), ("NWS Employee", True),
+                 ("Official NWS Obs", True), ("NWS Storm Survey", True), ("Other Federal", True),
+                 ("Other Federal Agency", True), ("Local Official", True), ("County Official", True),
+                 ("Fire Dept/Rescue", False), ("Broadcast Media", False), ("Public", False), ("Trained Spotter", False),
+                 ("Amateur Radio", False), ("Social Media", False), ("Unknown", False), ("", False)):
+    check(f"NWS source '{src}' government: {gov}", R.nws_gov(src) == gov)
+mixed_host = man("mx", road="Helen St", spot="at Minton Rd")
+older_media = R.lsr_item(ents[0], "2026-11-02T13:51:00Z", "https://api.weather.gov/products/media")
+newer_police = R.lsr_item(dict(ents[0], time="11/02/2026 1051 AM", source="Law Enforcement",
+                               remarks="Police report flooding near Helen St & Minton Rd."),
+                          "2026-11-02T15:51:00Z", "https://api.weather.gov/products/police")
+pmx = os.path.join(tmp, "mixed.jsonl")
+run(pmx, {"sources": {"manual": "up", "nws": "up"}, "items": [mixed_host, older_media, newer_police]}, 0)
+mx = R.display(E.derive(E.load(pmx)))[0][0]
+check("mixed: the closure stays attributed to the media report; the government report is flooding, both cited",
+      mx["status"] == "closed" and not mx["statusBy"]["gov"] and mx["statusBy"]["url"].endswith("media")
+      and [r["gov"] for r in mx["nws"]] == [True, False] and mx["nws"][0]["status"] == "flooded")
 tpl = open(os.path.join(repo, "template.html")).read()
-check("the page gives NWS reports a check and 'Government verified' only for a government reporter",
-      "n.gov?'✓':'i'" in tpl and "n.gov?'Government verified · NWS storm report':'NWS storm report'" in tpl)
+check("the page's government NWS badge names what the government reporter said (flooding or road closure)",
+      "'Government verified '+esc(gw)" in tpl and "g.status==='closed'?'road closure':'flooding'" in tpl)
 
 # FHP ids are the same in separate processes (the old id used Python's per-process hash)
 code = ("import sys; sys.path.insert(0, sys.argv[1]); import reconcile as R; "
