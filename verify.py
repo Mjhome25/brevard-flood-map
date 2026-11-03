@@ -111,21 +111,29 @@ def post_of(page: str, quote: str) -> tuple[str, str] | None:
     return None
 
 
-STATED = re.compile(r"\b(\d{1,2}):(\d{2})\s*([ap])\.?\s?m\.?", re.I)
+# The update's own heading time only ("Nov. 3, 8:30 a.m. traffic update"): a time directly naming the update. Any other
+# time in the post (a scheduled next update, an event time) is never borrowed (Codex #190).
+STATED = re.compile(r"(?<![\w:])(\d{1,2}):(\d{2})\s*([ap])\.?\s?m\.?,?\s+(?:(?:traffic|road)\s+)?update\b", re.I)
+NOT_NOW = re.compile(r"\b(?:next|following|upcoming|later|scheduled|another)\W+(?:\w+\W+){0,3}$", re.I)
 
 
 def stated_time(post: str, quote: str, published: str) -> str:
-    """The post's own update time ("Nov. 3, 8:30 a.m. traffic update"), the last one stated before the sentence, in
-    Eastern time on the publish day; "" when the post gives none."""
-    found = list(STATED.finditer(post[:post.index(quote)]))
-    if not found:
+    """The update's own heading time, in Eastern time on the publish day; "" (date-only) when the post names no
+    update time before the sentence, or names more than one (ambiguous)."""
+    head = post[:post.index(quote)]
+    times = set()
+    for m in STATED.finditer(head):
+        if NOT_NOW.search(head[max(0, m.start() - 40):m.start()]):
+            continue
+        h, mi, ap = int(m.group(1)), int(m.group(2)), m.group(3).lower()
+        if not (1 <= h <= 12 and mi < 60):
+            return ""
+        times.add((h % 12 + (12 if ap == "p" else 0), mi))
+    if len(times) != 1:
         return ""
-    h, m, ap = int(found[-1].group(1)), int(found[-1].group(2)), found[-1].group(3).lower()
-    if not (1 <= h <= 12 and m < 60):
-        return ""
-    h = h % 12 + (12 if ap == "p" else 0)
+    (h, mi), = times
     day = datetime.datetime.strptime(published, "%Y-%m-%d")
-    return E.iso(day.replace(hour=h, minute=m, tzinfo=E.ET))
+    return E.iso(day.replace(hour=h, minute=mi, tzinfo=E.ET))
 
 
 class SameHost(urllib.request.HTTPRedirectHandler):

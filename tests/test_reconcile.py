@@ -674,6 +674,24 @@ run(pc3, {"sources": {"manual": "up"}, "items": [man("sarno3", road="Sarno Rd", 
 check("a date-only post clears a report from an earlier day, dated the start of its publish day (Eastern)",
       not opened2(DPAGE, pc3, "brevard:manual:sarno3")
       and E.derive(E.load(pc3), NOWO)["records"]["brevard:manual:sarno3"]["reopenedAt"] == "2026-11-03T05:00:00Z")
+# Codex #190: only the update's own heading time dates it; a scheduled next update or any other time is never borrowed
+ST = lambda body: V.stated_time(body, q, "2026-11-03")
+for body, want, why in (
+        ("Nov. 3, 8:30 a.m. traffic update: " + q, "2026-11-03T13:30:00Z", "the heading time"),
+        ("8:30am traffic update; next update scheduled 10:30am; " + q, "2026-11-03T13:30:00Z",
+         "a scheduled next update (10:30) after the heading"),
+        ("Next 10:30 a.m. update will follow. " + q, "", "a 'next ... update' time is not the post's own"),
+        ("Crews arrived at 9:15 a.m. " + q, "", "a time that does not name the update"),
+        ("8:30 a.m. traffic update. 10:30 a.m. update: " + q, "", "two different update times (ambiguous)"),
+        (q + " 10:30 a.m. update", "", "a time after the sentence")):
+    check(f"stated time: {why} -> {want or 'date-only'}", ST(body) == want)
+pc4 = os.path.join(tmp, "open-next.jsonl")
+run(pc4, {"sources": {"manual": "up"}, "items": [man("sarno4", road="Sarno Rd", where="Sarno Rd at Eau Gallie Blvd",
+     status="closed", reported="2026-11-03T14:45:00Z", updated="2026-11-03T14:45:00Z")]}, 0)
+NPAGE = OPAGE.replace("Nov. 3, 8:30 a.m. traffic update:", "8:30am traffic update; next update scheduled 10:30am;")
+check("Codex #190 repro: a 'next update 10:30' line never lets the 8:30 statement clear a 9:45 report",
+      "not newer" in opened2(NPAGE, pc4, "brevard:manual:sarno4")
+      and E.derive(E.load(pc4), NOWO)["records"]["brevard:manual:sarno4"]["status"] == "active")
 late = [e for e in E.load(po) if e["kind"] == "cleared"][0]
 try:
     E.append([{"rid": "brevard:manual:babb", "src": "manual", "kind": "cleared", "actor": "x",
