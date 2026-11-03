@@ -70,8 +70,7 @@ h1,h2,h3{margin:0;text-wrap:balance}
 .leaflet-tooltip.lbl.closed b{color:var(--closed)}
 .leaflet-tooltip.lbl.k-mvc b{color:var(--mvc)}
 .leaflet-tooltip.lbl::before{display:none}
-.z-lo .leaflet-tooltip.lbl{display:none}
-.z-mid .leaflet-tooltip.lbl.minor{display:none}
+@media (max-width:900px){.leaflet-container:has(.leaflet-popup) .leaflet-control-zoom{visibility:hidden}}  /* zoom buttons would cover an open popup */
 .mk svg{display:block;overflow:visible;filter:drop-shadow(0 1px 2px rgba(0,0,0,.5))}
 
 .side{width:400px;flex:none;background:var(--panel);border-left:1px solid var(--line);display:flex;flex-direction:column;min-height:0}
@@ -386,6 +385,7 @@ h1,h2,h3{margin:0;text-wrap:balance}
     const base=SZ[k]+(ring?8:0), sz=Math.round(base*scale);
     return {sz, html:`<svg width="${sz}" height="${sz}" viewBox="${-base/2} ${-base/2} ${base} ${base}" style="opacity:${(it.approx||st)?.6:1}" aria-hidden="true">${ring?`<circle r="15" fill="none" stroke="${col('closed')}" stroke-width="3"/>`:''}${glyph(k,c)}</svg>`};
   }
+  const canHover=matchMedia('(hover: hover) and (pointer: fine)').matches;  // touch: tap opens the popup instead
   function mkIcon(it,st){ const g=svgFor(it,st,1.3); return L.divIcon({className:'mk',html:g.html,iconSize:[g.sz,g.sz],iconAnchor:[g.sz/2,g.sz/2],popupAnchor:[0,-g.sz/2],tooltipAnchor:[g.sz/2,0]}); }
   const isStale=it=>false;  // Closures never fade (Mike, November 3, 2026): a road stays reported closed until an official all-clear.
   const sevSort=(a,b)=>(ORDER[cause(a)]-ORDER[cause(b)])||((isClosed(b)|0)-(isClosed(a)|0))||(new Date(b.updated||0)-new Date(a.updated||0));
@@ -424,7 +424,7 @@ h1,h2,h3{margin:0;text-wrap:balance}
         }
       }
       const m=L.marker([it.lat,it.lng],{icon:mkIcon(it,st),zIndexOffset:(st?0:(closed?800:0)+(4-ORDER[k])*100),title:where(it),keyboard:false}).bindPopup(popupHtml(it));
-      if(!st) m.bindTooltip(`${closed?'<b>CLOSED</b> · ':(k==='mvc'?'<b>MVC</b> · ':'')}${esc(closed?closedWhere(it):where(it))}`,{permanent:true,direction:'right',offset:[2,0],className:'lbl '+(closed?'closed':'minor')+' k-'+k,opacity:1});
+      if(!st&&canHover) m.bindTooltip(`${closed?'<b>CLOSED</b> · ':(k==='mvc'?'<b>MVC</b> · ':'')}${esc(closed?closedWhere(it):where(it))}`,{direction:'right',offset:[2,0],className:'lbl '+(closed?'closed':'minor')+' k-'+k,opacity:1});
       m.on('click',()=>select(it.id,false)); m.addTo(markers); byId[it.id]=m;
     });
     renderList(vis, byNew);
@@ -450,7 +450,7 @@ h1,h2,h3{margin:0;text-wrap:balance}
   listEl.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){const r=e.target.closest('.row'); if(r){e.preventDefault(); select(r.dataset.id,true);}}});
   function select(id,fly){
     listEl.querySelectorAll('.row.active').forEach(r=>r.classList.remove('active'));
-    const r=listEl.querySelector(`.row[data-id="${CSS.escape(id)}"]`); if(r){r.classList.add('active'); r.scrollIntoView({block:'nearest'});}
+    const r=listEl.querySelector(`.row[data-id="${CSS.escape(id)}"]`); if(r){r.classList.add('active'); if(fly||window.innerWidth>900) r.scrollIntoView({block:'nearest'});}  // a map tap on a phone stays on the map
     const m=byId[id]; if(m&&fly){ if(window.innerWidth<=900) document.getElementById('map').scrollIntoView({block:'start',behavior:'smooth'}); map.flyTo(m.getLatLng(),Math.max(map.getZoom(),14),{duration:.6}); setTimeout(()=>m.openPopup(),650);}
   }
   Object.values(FILT).forEach(id=>document.getElementById(id).addEventListener('change',draw));
