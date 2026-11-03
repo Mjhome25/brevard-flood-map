@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-03T14:39:37Z",
+ "generated": "2026-11-03T14:45:28Z",
  "errors": [
   "FL511 Closures: 'NoneType' object has no attribute 'group'"
  ],
@@ -1095,9 +1095,15 @@
     "kind": "feed",
     "publishedAt": "2026-11-03T14:34:07Z"
    },
-   "awaitingOfficial": false,
-   "missingSince": null,
-   "recheck": []
+   "awaitingOfficial": true,
+   "missingSince": "2026-11-03T14:45:30Z",
+   "recheck": [],
+   "noLongerListed": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "since": "2026-11-03T14:45:30Z",
+    "wasClosed": false
+   }
   },
   {
    "fullClosure": false,
