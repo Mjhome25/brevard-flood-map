@@ -71,6 +71,10 @@ SENTENCES = [  # every sentence must match one of these exactly; anything else i
 ]
 # A list under "The below roads/intersections are closed:" names each closure bare: "A and B", or a road alone.
 LEAD = re.compile(r"\b(?:below|following) (?:roads?|intersections?)(?:\s*/\s*(?:roads?|intersections?))? (?:are|is) closed:", re.I)
+# any "The below/following ...:" heading starts a new list section; only these two say what their items are
+SECTION = re.compile(r"\b(?:below|following) [^:.]{3,80}:", re.I)
+FLOODLEAD = re.compile(r"\b(?:below|following) (?:roads?|intersections?)(?:\s*/\s*(?:roads?|intersections?))? (?:are|is) "
+                       r"experiencing (?:severe )?flooding:", re.I)
 LISTITEM = re.compile(rf"^(?P<a>{_NL})(?: and (?P<b>{_NL}))?(?: \([A-Za-z ]{{3,40}}\))?$")
 BOILER = re.compile(r"^(?:Road Closures:|Current Road Closures:|Please drive with extreme caution\.|Do not drive around barricades\.|"
                     r"Please drive with caution\.|Public Notices|Tagged as:.*|Back to top)$")
@@ -94,13 +98,13 @@ def sentences(unit: str) -> list[str]:
     return [s.strip() for s in re.split(r"(?<!\bDr\.)(?<!\bJr\.)(?<!\bSt\.)(?<!\bS\.)(?<=[.!?])\s+(?=[A-Z])", unit) if s.strip()]
 
 
-def list_item(u: str) -> dict | None:
+def list_item(u: str, claim: str = "closure") -> dict | None:
     m = LISTITEM.match(u)
     if not m or E.SENSITIVE.search(u) or E.CRASH.search(u) or not (ROADISH.search(u) or len(u.split()) <= 2):
         return None
     if m["b"]:
-        return {"claim": "closure", "scope": "point", "road": core(m["a"]), "cross": [core(m["b"])], "dirs": []}
-    return {"claim": "closure", "scope": "road", "road": core(m["a"]), "cross": [], "dirs": []}
+        return {"claim": claim, "scope": "point", "road": core(m["a"]), "cross": [core(m["b"])], "dirs": []}
+    return {"claim": claim, "scope": "road", "road": core(m["a"]), "cross": [], "dirs": []}
 
 
 def classify(s: str) -> dict | None:
@@ -185,7 +189,9 @@ def judge(c: dict, active: dict) -> tuple[str, list[str]]:
         same.append(rid)
     if c["claim"] == "open":
         return ("reopen-review" if on_road else "no-active-pin"), on_road
-    closed = [r for r in same if page_closed(active[r]["fields"])]
+    # a flooding claim is matched by a pin showing flooding or more; a closure claim only by a closed pin
+    shows = (lambda f: page_closed(f) or E.rank(f) >= E.rank({"status": "flooded"})) if c["claim"] == "flooding" else page_closed
+    closed = [r for r in same if shows(active[r]["fields"])]
     if closed:
         shown = [r for r in closed if located(active[r]["fields"])]
         if not shown:
@@ -220,14 +226,22 @@ def read_post(page: str, now: datetime.datetime) -> dict:
     text = flat(parser.posts[i])
     units = [flat(u) for j, u in parser.units if j == i and flat(u)]
     body = [u for u in units if not V.PUBLISHED.search(u) and not V.HEADING.fullmatch(u) and not BOILER.match(u)]
-    lead = LEAD.search(text)
-    listed = {u for u in body if lead and text.find(u) > lead.start()}
+    # each list item belongs to the section heading above it: closed, severe flooding, or another (unread) kind
+    heads = [(m.start(), "closure" if LEAD.fullmatch(m.group(0)) else "flooding" if FLOODLEAD.fullmatch(m.group(0)) else None)
+             for m in SECTION.finditer(text)]
+    listed, at = {}, 0
+    for u in body:
+        pos = text.find(u, at)
+        at = pos + len(u) if pos >= 0 else at
+        kind = [k for h, k in heads if h < pos]
+        if kind and kind[-1]:
+            listed[u] = kind[-1]
     time = V.stated_time(units, body[-1], date) if body else ""
     if (time or date) > (E.iso(now) if time else now.astimezone(E.ET).strftime("%Y-%m-%d")):
         return {"error": "future-time", "date": date}
     items = []  # (text, claim or None); a paragraph or list item is the unit whose whole meaning must be read
     for u in body:
-        c = list_item(u) if u in listed else None
+        c = list_item(u, listed[u]) if u in listed else None
         if c:
             items.append((u, c))
             continue
@@ -352,7 +366,7 @@ def run(now: datetime.datetime, prev: dict | None = None, get=fetch, events_path
         rows = []
         for k, c in sorted(latest.items()):
             resolved = None
-            if c["claim"] == "closure" and not c.get("ambiguous"):
+            if c["claim"] in ("closure", "flooding") and not c.get("ambiguous"):
                 # a later whole-road open statement for this road, from the city itself or accepted in our history
                 later = [o for o in opens if o["road"] == c["road"] and after(o["stamp"], c["stamp"])]
                 acc = [o for o in official if o["road"] == c["road"] and after(o["at"], c["stamp"])]
@@ -375,7 +389,7 @@ def run(now: datetime.datetime, prev: dict | None = None, get=fetch, events_path
         summary = {}
         for r in rows:
             summary[r["verdict"]] = summary.get(r["verdict"], 0) + 1
-        summary["older-unresolved"] = sum(1 for r in rows if r["claim"] == "closure" and not r["inNewest"]
+        summary["older-unresolved"] = sum(1 for r in rows if r["claim"] in ("closure", "flooding") and not r["inNewest"]
                                           and r["verdict"] not in ("covered", "covered-road", "resolved-by-city", "resolved-official"))
         summary["needs-review"] = sum(len(p.get("needsReview") or []) for p in out["posts"].values()
                                       if p.get("agency") == src["agency"])

@@ -242,5 +242,33 @@ check("Codex repro: a record with a line but no coordinates is not on the map (t
       not C.located({"line": [[28.1, -80.6], [28.2, -80.6]]}) and not C.located({"lat": 40.0, "lng": -80.6, "line": [[28.1, -80.6]]})
       and C.located({"lat": 28.1, "lng": -80.6}))
 
+# Codex #239: the real Nov 2 advisory layout - a closed list, then a NEW "severe flooding" heading and list; every one of
+# the 22 entries keeps its own section (fixture mirrors the page's markup; no names of people)
+CLOSED22 = ["Babcock Street and Avenue B", "Babcock Street and Florida Avenue", "Dairy Road and Snicole Road",
+            "Dairy Road and Edgewood Drive", "Dubber Road", "Eau Gallie Boulevard and Sarno Road",
+            "Riverside Drive (Southbound) is closed at Eau Gallie Boulevard", "Edgewood Road and Ruffner Road", "Golfclub",
+            "Lake Washington Road and Stewart Road", "North Drive", "Snicole Road", "Stewart Road",
+            "University Boulevard and Babcock Street"]
+FLOOD22 = ["Eau Gallie Boulevard and Commodore Boulevard", "Dr. Martin Luther King, Jr. Boulevard and New Haven Avenue",
+           "Dr. Martin Luther King, Jr. Boulevard and NASA Boulevard",
+           "University Boulevard and Main Street (Briarwood Community)", "Dairy Road and Florida Avenue",
+           "Lipscomb Street and University Boulevard", "Babcock Street and Southgate Boulevard", "US-192 and Country Club Road"]
+ol = lambda xs: "<ol>" + "".join(f'<li><div role="presentation">{x}</div></li>' for x in xs) + "</ol>"
+NOV2 = ('<html><body><article><p>Published on November 02, 2026</p>'
+        '<div><span>Some roads are heavily flooded and completely impassable.</span></div>'
+        '<div><span><strong>The below roads/intersections are closed:</strong></span></div>' + ol(CLOSED22) +
+        '<div id="x_Signature"><div><strong>The below roads are experiencing severe flooding:</strong></div>' + ol(FLOOD22) +
+        '<p>Please do not travel.</p></div></article></body></html>')
+got = C.read_post(NOV2, NOW)
+claims = [(u, c["claim"]) for u, c in got["items"] if c]
+check("real Nov 2 layout: all 14 closed-list entries are closures and all 8 severe-flooding entries are flooding claims",
+      [u for u, k in claims if k == "closure"] == CLOSED22 and [u for u, k in claims if k == "flooding"] == FLOOD22)
+t = timeline({"N": NOV2})
+check("a flooding claim is covered by a flooded pin (never called closed, never 'weaker' for lacking a closure)",
+      t("point|lipscomb|university")["claim"] == "flooding" and t("point|lipscomb|university")["verdict"] == "covered")
+other = C.read_post(NOV2.replace("experiencing severe flooding:", "under a detour:"), NOW)
+check("an unrecognised list heading ends the closed list; its items are not read as closures",
+      not any(c for u, c in other["items"] if u in FLOOD22))
+
 print("failures:", fails)
 sys.exit(1 if fails else 0)
