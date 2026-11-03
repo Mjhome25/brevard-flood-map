@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-03T09:46:24Z",
+ "generated": "2026-11-03T09:58:24Z",
  "errors": [],
  "items": [
   {
@@ -21,7 +21,55 @@
    "roadShort": "Minton Rd",
    "dir": "SB",
    "spot": "at US 192 (W New Haven Ave)",
-   "where": "Minton Rd SB at US 192 (W New Haven Ave)"
+   "where": "Minton Rd SB at US 192 (W New Haven Ave)",
+   "from": "Livingstone Ln",
+   "to": "Helen St",
+   "line": [
+    [
+     28.081233,
+     -80.672582
+    ],
+    [
+     28.078956,
+     -80.672574
+    ],
+    [
+     28.078878,
+     -80.67257
+    ],
+    [
+     28.078801,
+     -80.672567
+    ],
+    [
+     28.078784,
+     -80.672566
+    ],
+    [
+     28.07863,
+     -80.6726
+    ],
+    [
+     28.077636,
+     -80.672596
+    ],
+    [
+     28.077187,
+     -80.672545
+    ],
+    [
+     28.076625,
+     -80.672446
+    ],
+    [
+     28.076119,
+     -80.672294
+    ],
+    [
+     28.075572,
+     -80.672092
+    ]
+   ]
   },
   {
    "id": "man-minton-helen",
@@ -42,7 +90,51 @@
    "roadShort": "Minton Rd",
    "dir": "NB",
    "spot": "at Helen St",
-   "where": "Minton Rd NB at Helen St"
+   "where": "Minton Rd NB at Helen St",
+   "from": "Henry Ave",
+   "to": "Helen St",
+   "line": [
+    [
+     28.072117,
+     -80.670809
+    ],
+    [
+     28.072634,
+     -80.670868
+    ],
+    [
+     28.073018,
+     -80.67095
+    ],
+    [
+     28.073281,
+     -80.67103
+    ],
+    [
+     28.073604,
+     -80.671128
+    ],
+    [
+     28.073988,
+     -80.671283
+    ],
+    [
+     28.074462,
+     -80.671505
+    ],
+    [
+     28.074856,
+     -80.671746
+    ],
+    [
+     28.075341,
+     -80.672001
+    ],
+    [
+     28.075572,
+     -80.672092
+    ]
+   ]
   },
   {
    "id": "man-jupiter-garvey",
@@ -218,7 +310,31 @@
    "lanes": "All lanes closed",
    "layer": "manual",
    "roadShort": "Sarno Rd",
-   "spot": "near Eau Gallie Blvd"
+   "spot": "near Eau Gallie Blvd",
+   "from": "Washburn Rd",
+   "to": "Porcella Ave",
+   "line": [
+    [
+     28.120956,
+     -80.686538
+    ],
+    [
+     28.121017,
+     -80.684986
+    ],
+    [
+     28.12123,
+     -80.679517
+    ],
+    [
+     28.121311,
+     -80.677528
+    ],
+    [
+     28.121386,
+     -80.675733
+    ]
+   ]
   },
   {
    "id": "man-portmalabar-turkeycreek",
@@ -258,7 +374,47 @@
    "updated": "2026-11-02T17:00:00Z",
    "note": "Blocked to traffic by Melbourne Fire Dept; segment not specified. Pin approximate.",
    "lanes": "All lanes blocked",
-   "layer": "manual"
+   "layer": "manual",
+   "from": "Mark Twain Ln NE",
+   "to": "Isom Ln NE",
+   "line": [
+    [
+     28.020664,
+     -80.614909
+    ],
+    [
+     28.022014,
+     -80.614877
+    ],
+    [
+     28.022133,
+     -80.614913
+    ],
+    [
+     28.022182,
+     -80.615038
+    ],
+    [
+     28.022198,
+     -80.615227
+    ],
+    [
+     28.022184,
+     -80.615713
+    ],
+    [
+     28.022232,
+     -80.61583
+    ],
+    [
+     28.023196,
+     -80.61584
+    ],
+    [
+     28.023502,
+     -80.615843
+    ]
+   ]
   },
   {
    "road": "Riverside Dr",
@@ -649,7 +805,7 @@
    "status": "flooded",
    "fullClosure": true,
    "reported": "2026-11-02T09:24:00Z",
-   "updated": "2026-11-03T05:31:00Z",
+   "updated": "2026-11-03T09:50:00Z",
    "lat": 28.07888,
    "lng": -80.672522,
    "layer": "Closures",
@@ -712,7 +868,7 @@
    "status": "flooded",
    "fullClosure": true,
    "reported": "2026-11-02T13:35:00Z",
-   "updated": "2026-11-03T05:31:00Z",
+   "updated": "2026-11-03T09:50:00Z",
    "lat": 28.078862,
    "lng": -80.703539,
    "layer": "Closures",
@@ -815,7 +971,7 @@
    "status": "flooded",
    "fullClosure": true,
    "reported": "2026-11-02T13:12:00Z",
-   "updated": "2026-11-03T05:32:00Z",
+   "updated": "2026-11-03T09:51:00Z",
    "lat": 28.064037,
    "lng": -80.621372,
    "layer": "Closures",
@@ -870,7 +1026,7 @@
    "status": "flooded",
    "fullClosure": true,
    "reported": "2026-11-02T14:29:00Z",
-   "updated": "2026-11-03T05:32:00Z",
+   "updated": "2026-11-03T09:50:00Z",
    "lat": 28.078871,
    "lng": -80.700181,
    "layer": "Closures",
@@ -945,7 +1101,7 @@
    "status": "flooded",
    "fullClosure": true,
    "reported": "2026-11-02T21:42:00Z",
-   "updated": "2026-11-03T05:31:00Z",
+   "updated": "2026-11-03T09:51:00Z",
    "lat": 28.004405,
    "lng": -80.563736,
    "layer": "Closures",
@@ -974,7 +1130,7 @@
    "status": "flooded",
    "fullClosure": true,
    "reported": "2026-11-02T21:51:00Z",
-   "updated": "2026-11-03T05:31:00Z",
+   "updated": "2026-11-03T09:51:00Z",
    "lat": 28.004412,
    "lng": -80.56374,
    "layer": "Closures",
@@ -1009,7 +1165,7 @@
    "status": "flooded",
    "fullClosure": true,
    "reported": "2026-11-03T06:49:00Z",
-   "updated": "2026-11-03T06:50:00Z",
+   "updated": "2026-11-03T09:51:00Z",
    "lat": 28.057,
    "lng": -80.621458,
    "layer": "Closures",
@@ -1064,7 +1220,7 @@
    "status": "caution",
    "fullClosure": false,
    "reported": "2026-11-02T13:30:00Z",
-   "updated": "2026-11-03T05:32:00Z",
+   "updated": "2026-11-03T09:52:00Z",
    "lat": 28.078871,
    "lng": -80.700181,
    "layer": "Incidents",
@@ -1085,7 +1241,7 @@
    "where": "US-192 EB at S John Rodes Blvd"
   },
   {
-   "id": "fhp-11022026043943-2671",
+   "id": "fhp-11022026043943-1785",
    "source": "FHP live CAD",
    "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
    "road": "US-1 [2 MILES SOF]",
@@ -1104,7 +1260,7 @@
    "where": "US-1 [2 Miles Sof] at Malabar Rd"
   },
   {
-   "id": "fhp-11022026112806-7903",
+   "id": "fhp-11022026112806-7942",
    "source": "FHP live CAD",
    "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
    "road": "NORFOLK PKWY",
@@ -1351,7 +1507,7 @@
    ]
   },
   {
-   "id": "fhp-11022026112110-4909",
+   "id": "fhp-11022026112110-2979",
    "source": "FHP live CAD",
    "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
    "road": "PALM BAY RD NE [ENT RAMP TO]",
@@ -1370,7 +1526,7 @@
    "where": "Palm Bay Rd Ne [Ent Ramp To] at I-95 Nb"
   },
   {
-   "id": "fhp-11022026090844-4880",
+   "id": "fhp-11022026090844-6409",
    "source": "FHP live CAD",
    "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
    "road": "US-1",
@@ -1421,7 +1577,7 @@
    ]
   },
   {
-   "id": "fhp-11022026065558-8420",
+   "id": "fhp-11022026065558-758",
    "source": "FHP live CAD",
    "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
    "road": "W NEW HAVEN AVE",
