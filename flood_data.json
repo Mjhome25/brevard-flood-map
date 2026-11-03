@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-03T15:00:39Z",
+ "generated": "2026-11-03T15:15:20Z",
  "errors": [],
  "items": [
   {
@@ -1193,8 +1193,8 @@
    "to": "Pine St",
    "where": "US-192 EB at Minton Rd/S Wickham Rd",
    "id": "brevard:fl511:937010",
-   "updated": "2026-11-03T14:37:00Z",
-   "lastReported": "2026-11-03T14:37:00Z",
+   "updated": "2026-11-03T15:10:00Z",
+   "lastReported": "2026-11-03T15:10:00Z",
    "firstReported": "2026-11-02T19:54:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
@@ -1459,8 +1459,8 @@
    "to": "Circle Dr",
    "where": "US-192 EB beyond Coastal Ln",
    "id": "brevard:fl511:937141",
-   "updated": "2026-11-03T14:37:00Z",
-   "lastReported": "2026-11-03T14:37:00Z",
+   "updated": "2026-11-03T15:10:00Z",
+   "lastReported": "2026-11-03T15:10:00Z",
    "firstReported": "2026-11-02T19:54:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
@@ -1617,8 +1617,8 @@
    "to": "Coastal Ln",
    "where": "US-192 WB at S John Rodes Blvd",
    "id": "brevard:fl511:937222",
-   "updated": "2026-11-03T14:37:00Z",
-   "lastReported": "2026-11-03T14:37:00Z",
+   "updated": "2026-11-03T15:10:00Z",
+   "lastReported": "2026-11-03T15:10:00Z",
    "firstReported": "2026-11-02T19:54:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
@@ -1917,8 +1917,8 @@
    "title": "Flooding on US-1 South, before SR-514. All lanes closed",
    "where": "US-1 SB before SR-514",
    "id": "brevard:fl511:937842",
-   "updated": "2026-11-03T14:37:00Z",
-   "lastReported": "2026-11-03T14:37:00Z",
+   "updated": "2026-11-03T15:11:00Z",
+   "lastReported": "2026-11-03T15:11:00Z",
    "firstReported": "2026-11-02T23:15:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
@@ -1963,8 +1963,8 @@
    "to": "Highway 1",
    "where": "SR-514 EB at US-1",
    "id": "brevard:fl511:937844",
-   "updated": "2026-11-03T14:37:00Z",
-   "lastReported": "2026-11-03T14:37:00Z",
+   "updated": "2026-11-03T15:10:00Z",
+   "lastReported": "2026-11-03T15:10:00Z",
    "firstReported": "2026-11-02T23:15:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
@@ -2223,8 +2223,8 @@
    "title": "Traffic lights not working on US-192 / Vine St / Bronson Hwy East, at S John Rodes Blvd",
    "where": "US-192 EB at S John Rodes Blvd",
    "id": "brevard:fl511:938257",
-   "updated": "2026-11-03T14:31:00Z",
-   "lastReported": "2026-11-03T14:31:00Z",
+   "updated": "2026-11-03T15:02:00Z",
+   "lastReported": "2026-11-03T15:02:00Z",
    "firstReported": "2026-11-03T03:18:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
@@ -2503,8 +2503,8 @@
    "title": "MVC on SR-405 East, at Grissom Pkwy. Right shoulder blocked",
    "where": "SR-405 EB at Grissom Pkwy",
    "id": "brevard:fl511:938818",
-   "updated": "2026-11-03T14:29:00Z",
-   "lastReported": "2026-11-03T14:29:00Z",
+   "updated": "2026-11-03T15:01:00Z",
+   "lastReported": "2026-11-03T15:01:00Z",
    "firstReported": "2026-11-03T13:45:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
@@ -2613,6 +2613,49 @@
    "updated": "2026-11-02T13:22:00Z",
    "lastReported": "2026-11-02T13:22:00Z",
    "firstReported": "2026-11-02T13:22:00Z",
+   "verified": null,
+   "awaitingOfficial": false,
+   "missingSince": null,
+   "recheck": []
+  },
+  {
+   "approx": false,
+   "city": "Melbourne",
+   "from": "Crown Blvd",
+   "fullClosure": false,
+   "lanes": "Southbound and eastbound closed, barricades",
+   "lat": 28.04965,
+   "layer": "manual",
+   "line": [
+    [
+     28.046087,
+     -80.621532
+    ],
+    [
+     28.04965,
+     -80.621502
+    ],
+    [
+     28.04965,
+     -80.621502
+    ]
+   ],
+   "lng": -80.6215,
+   "note": "City of Melbourne 8:30 a.m. Nov 3 traffic update: southbound and eastbound remain closed with barricades blocking the roadway. Pin at the intersection (county road map).",
+   "reported": "2026-11-03T13:30:00Z",
+   "road": "Babcock St at Eber Blvd",
+   "roadShort": "Babcock St",
+   "source": "City of Melbourne",
+   "sourceUrl": "https://www.melbourneflorida.org/Government/City-News/Traffic-Advisories/Road-Closures-0830",
+   "spot": "at Eber Blvd",
+   "status": "closed",
+   "title": "Babcock St southbound and Eber Blvd eastbound closed at the intersection",
+   "to": "Pirate Ln",
+   "where": "Babcock St SB and Eber Blvd EB at their intersection",
+   "id": "brevard:manual:babcock-eber",
+   "updated": "2026-11-03T13:30:00Z",
+   "lastReported": "2026-11-03T13:30:00Z",
+   "firstReported": "2026-11-03T13:30:00Z",
    "verified": null,
    "awaitingOfficial": false,
    "missingSince": null,
@@ -2738,6 +2781,81 @@
    "updated": "2026-11-02T17:43:55Z",
    "lastReported": "2026-11-02T17:43:55Z",
    "firstReported": "2026-11-02T17:43:55Z",
+   "verified": null,
+   "awaitingOfficial": false,
+   "missingSince": null,
+   "recheck": []
+  },
+  {
+   "approx": true,
+   "city": "Melbourne",
+   "from": "Palm Bay Rd NE",
+   "fullClosure": false,
+   "lanes": "Northbound and eastbound closed, barricades",
+   "lat": 28.04232,
+   "layer": "manual",
+   "line": [
+    [
+     28.035239,
+     -80.621917
+    ],
+    [
+     28.036665,
+     -80.621874
+    ],
+    [
+     28.037489,
+     -80.62185
+    ],
+    [
+     28.03789,
+     -80.621838
+    ],
+    [
+     28.038098,
+     -80.621832
+    ],
+    [
+     28.038518,
+     -80.621819
+    ],
+    [
+     28.038718,
+     -80.621809
+    ],
+    [
+     28.039948,
+     -80.621734
+    ],
+    [
+     28.041151,
+     -80.621679
+    ],
+    [
+     28.04232,
+     -80.621674
+    ],
+    [
+     28.042323,
+     -80.621674
+    ]
+   ],
+   "lng": -80.62167,
+   "note": "City of Melbourne 8:30 a.m. Nov 3 traffic update ('Babcock St/Sunlake Rd'): northbound and eastbound remain closed with barricades blocking the roadway. The county road map names the crossing road Sun Lakes Rd. Pin approximate.",
+   "reported": "2026-11-03T13:30:00Z",
+   "road": "Babcock St at Sun Lakes Rd",
+   "roadShort": "Babcock St",
+   "source": "City of Melbourne",
+   "sourceUrl": "https://www.melbourneflorida.org/Government/City-News/Traffic-Advisories/Road-Closures-0830",
+   "spot": "at Sun Lakes Rd",
+   "status": "closed",
+   "title": "Babcock St northbound and Sun Lakes Rd eastbound closed at the intersection",
+   "to": "Lake In The Woods Dr",
+   "where": "Babcock St NB and Sun Lakes Rd EB at their intersection",
+   "id": "brevard:manual:babcock-sunlakes",
+   "updated": "2026-11-03T13:30:00Z",
+   "lastReported": "2026-11-03T13:30:00Z",
+   "firstReported": "2026-11-03T13:30:00Z",
    "verified": null,
    "awaitingOfficial": false,
    "missingSince": null,
@@ -2938,6 +3056,70 @@
    "updated": "2026-11-03T00:00:00Z",
    "lastReported": "2026-11-03T00:00:00Z",
    "firstReported": "2026-11-03T00:00:00Z",
+   "verified": null,
+   "awaitingOfficial": false,
+   "missingSince": null,
+   "recheck": []
+  },
+  {
+   "approx": false,
+   "city": "Melbourne",
+   "dir": "SB",
+   "from": "Decatur Cir",
+   "fullClosure": false,
+   "lanes": "Southbound closed, barricades",
+   "lat": 28.12059,
+   "layer": "manual",
+   "line": [
+    [
+     28.123394,
+     -80.700337
+    ],
+    [
+     28.121053,
+     -80.700312
+    ],
+    [
+     28.120734,
+     -80.70028
+    ],
+    [
+     28.12059,
+     -80.70028
+    ],
+    [
+     28.120588,
+     -80.70028
+    ],
+    [
+     28.120106,
+     -80.700279
+    ],
+    [
+     28.118997,
+     -80.700295
+    ],
+    [
+     28.117579,
+     -80.700294
+    ]
+   ],
+   "lng": -80.70028,
+   "note": "City of Melbourne 8:30 a.m. Nov 3 traffic update: southbound remains closed with barricades blocking the roadway. Pin at the intersection (county road map).",
+   "reported": "2026-11-03T13:30:00Z",
+   "road": "John Rodes Blvd southbound at Eau Gallie Blvd",
+   "roadShort": "John Rodes Blvd",
+   "source": "City of Melbourne",
+   "sourceUrl": "https://www.melbourneflorida.org/Government/City-News/Traffic-Advisories/Road-Closures-0830",
+   "spot": "at Eau Gallie Blvd",
+   "status": "closed",
+   "title": "John Rodes Blvd southbound closed at Eau Gallie Blvd",
+   "to": "Enterprise Ct",
+   "where": "John Rodes Blvd SB at Eau Gallie Blvd",
+   "id": "brevard:manual:john-rodes-sb-at-eau-gallie",
+   "updated": "2026-11-03T13:30:00Z",
+   "lastReported": "2026-11-03T13:30:00Z",
+   "firstReported": "2026-11-03T13:30:00Z",
    "verified": null,
    "awaitingOfficial": false,
    "missingSince": null,
