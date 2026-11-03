@@ -229,8 +229,48 @@ for bad, why in ((dict(good["evidence"], quote="Any unrelated statement about a 
 up = {"rid": "brevard:manual:dairy", "src": "manual", "kind": "relisted", "actor": "x", "stime": "2026-11-02T00:00:00Z",
       "fields": dict(recv("dairy")["fields"], status="caution", fullClosure=False), "raisedBy": good["evidence"]}
 E.append([up], pv, now=NOWV)
+run(pv, {"sources": {"manual": "up"}, "items": [man("dairy", road="Dairy Rd", spot="at Florida Ave", status="caution",
+                                                    where="Dairy Rd at Florida Ave", updated="2026-11-03T09:00:00Z")]}, 2)
+check("a NEW weaker report after a cited raise is flagged, closure kept",
+      recv("dairy")["fields"]["status"] == "closed" and "source shows reduced impact" in recv("dairy")["recheck"])
 check("a cited event cannot lower a closure (flagged instead)",
       recv("dairy")["fields"]["status"] == "closed" and recv("dairy")["recheck"])
+# Codex #66: the subject is the road, the impact must match, only road wording is stored, the post is this episode
+pq = os.path.join(tmp, "q.jsonl")
+run(pq, {"sources": {"manual": "up"}, "items": [
+    man("dairy", road="Dairy Rd", spot="at Florida Ave", where="Dairy Rd at Florida Ave"),
+    man("dfull", road="Dairy Rd", spot="at Babcock St", status="closed", fullClosure=True)]}, 0)
+recq = lambda r: E.derive(E.load(pq), NOWV)["records"]["brevard:manual:" + r]
+def refusedq(rid, quote, raise_to=None, page=PAGE):
+    before = open(pq).read()
+    try:
+        V.issue("brevard:manual:" + rid, MEL, quote, raise_to, page, MEL, NOWV, pq)
+    except E.Refused as exc:
+        return str(exc) if open(pq).read() == before else ""  # a refusal leaves the history untouched
+    return ""
+P2 = PAGE.replace("All of Dairy Road is closed. ", "All of Babcock Street is closed near Dairy Road. All of Dairy Road "
+                  "is flooded. All of Dairy Road is closed, John Smith confirms. ")
+check("refused: 'all of' belongs to another road that only mentions this one",
+      refusedq("dairy", "All of Babcock Street is closed near Dairy Road.", "full", P2) and recq("dairy")["verified"] is None
+      and recq("dairy")["fields"]["status"] == "flooded")
+check("refused: a flooding sentence cannot verify a full closure",
+      refusedq("dfull", "All of Dairy Road is flooded.", None, P2) and recq("dfull")["verified"] is None)
+check("refused: a sentence carrying a person's name is never stored",
+      refusedq("dairy", "All of Dairy Road is closed, John Smith confirms.", "full", P2)
+      and "John" not in open(pq).read())
+OLD = PAGE.replace("Published on November 02, 2026", "Published on January 1, 2020")
+check("refused: a 2020 post is another event, not this November report",
+      refusedq("dairy", "All of Dairy Road is closed.", "full", OLD) and recq("dairy")["verified"] is None)
+SIDE = ("<html><body><aside>Published on November 02, 2026</aside><h2>Archive</h2><p>Published on January 1, 2020</p>"
+        "<p>All of Dairy Road is closed.</p></body></html>")
+check("refused: the date comes from the sentence's own post, not a newer item elsewhere on the page",
+      refusedq("dairy", "All of Dairy Road is closed.", "full", SIDE))
+check("a same-post, same-episode closure sentence raises and verifies (positive control)",
+      not refusedq("dfull", "All of Dairy Road is closed.") and recq("dfull")["verified"]["publishedDate"] == "2026-11-02")
+fake = dict(good["evidence"], quote="All of Hollywood Boulevard is closed.")
+E.append([{"rid": "brevard:manual:dfull", "src": "manual", "kind": "verified", "actor": "x", "evidence": fake}], pq, now=NOWV)
+check("a well-formed raw receipt about another road does not badge this record",
+      recq("dfull")["verified"]["quote"] == "All of Dairy Road is closed.")
 st = E.derive(E.load(p))
 feed = [i for i in R.display(st)[0] if i["id"] == "brevard:fl511:3"][0]
 check("an FL511 feed record is government verified as listed by FL511",

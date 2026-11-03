@@ -47,6 +47,32 @@ SEVERITY = {"caution": 0, "hazard": 1, "mvc": 1, "flooded": 1, "closed": 2}
 CRASH = re.compile(r"\b(?:(?:fatal(?:ity)?|serious|injury|traffic|vehicle|motor vehicle|multi-vehicle|vehicle fire\W+)?\s*(?:crash(?:es)?|collisions?|accidents?|wrecks?)|hit\s*(?:and|&)\s*run|fatal(?:ity|ities)?|pedestrian\s+(?:struck|crash|accident))\b", re.I)
 SENSITIVE = re.compile(r"\b(?:with\s+)?(?:fatal(?:ity|ities)?|(?<!or-)deaths?|dead|died|dies|killed|deceased|injur(?:y|ies|ed)|entrap\w*|trapped|ejected|victims?|bod(?:y|ies)|trauma(?:\s+alert)?|airlift\w*|life\s*flight|transported|hospitali[sz]ed|critical(?:ly)?\s+(?:condition|injured)|drivers?|passengers?|occupants?|pedestrians?|juveniles?|man|woman|child(?:ren)?|teen(?:ager)?s?|person|people|(?:\d+|one|two|three)\s+(?:people|persons|vehicles?\s+occupants))\b", re.I)
 DATE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
+VERIFIERS = ("verify.py/3",)
+_R = r"(?P<road>[A-Z][A-Za-z0-9.' ]{1,40}?)"
+_X = r"(?P<cross>[A-Z][A-Za-z0-9.' ]{1,40}?)"
+# The only sentence shapes accepted as a government statement about one road. The whole sentence must match:
+# anything else (other subjects, extra clauses, names, hedges) is unsupported and stays unverified.
+NOTICE = [(re.compile(rf"^All of {_R} is (?P<impact>closed|flooded)\.?$"), True),
+          (re.compile(rf"^{_R} at {_X} is (?P<impact>closed|flooded)\.?$"), False),
+          (re.compile(rf"^(?P<impact>Flooding) on {_R} at {_X}\.?$"), False)]
+SUFFIX = {"st": "street", "rd": "road", "ave": "avenue", "blvd": "boulevard", "dr": "drive", "pkwy": "parkway",
+          "ln": "lane", "hwy": "highway", "ct": "court", "pl": "place", "cswy": "causeway"}
+
+
+def road_words(s: str) -> str:
+    """Lower-case road wording with suffixes spelled out: 'Babcock St' -> 'babcock street'."""
+    return " ".join(SUFFIX.get(w, w) for w in re.findall(r"[a-z0-9]+", (s or "").lower()))
+
+
+def notice(sentence: str) -> dict | None:
+    """Parse one supported government sentence: {road, cross, whole, impact} or None."""
+    for rx, whole in NOTICE:
+        m = rx.match(sentence.strip())
+        if m:
+            g = m.groupdict()
+            return {"road": road_words(g["road"]), "cross": road_words(g.get("cross") or ""), "whole": whole,
+                    "impact": "flooded" if g["impact"].lower() in ("flooded", "flooding") else "closed"}
+    return None
 SHA = re.compile(r"^[0-9a-f]{64}$")
 
 
@@ -111,23 +137,53 @@ def load(path: str = EVENTS) -> list[dict]:
 GOV_FIELDS = ("host", "url", "finalUrl", "agency", "quote", "publishedDate", "checkedAt", "pageSha256", "verifier")
 
 
+def supports(fields: dict, quote: str, raise_to: str | None = None) -> str | None:
+    """None when the parsed sentence is about THIS report's road and supports its impact, else the reason it is not.
+    The road is the sentence's subject; a cross street must be this report's unless the sentence covers all of the
+    road; a closure sentence supports a closure (or raises to one), a flooding sentence only a flood report."""
+    n = notice(quote)
+    if not n:
+        return "the sentence is not one of the supported road-notice forms"
+    road = road_words(re.split(r"\s*\(|/", fields.get("roadShort") or fields.get("road") or "")[0])
+    if not road or n["road"] != road:
+        return f"the sentence is about {n['road']!r}, not this road ({road or 'unknown'})"
+    spot = fields.get("spot") or (fields.get("where") or "").partition(" at ")[2]
+    cross = road_words(re.sub(r"^(?:at|near|from)\s+", "", spot, flags=re.I).split(" to ")[0])
+    if not n["whole"] and (not cross or n["cross"] != cross):
+        return f"the sentence is about {n['cross']!r}, not this report's cross street ({cross or 'none recorded'})"
+    if raise_to == "full" and not n["whole"]:
+        return "a full closure needs a sentence covering all of the road"
+    status = "closed" if raise_to else fields.get("status")
+    if n["impact"] == "closed" and status != "closed":
+        return "the sentence says closed but the report is not a closure (use --closed to raise it)"
+    if n["impact"] == "flooded" and (raise_to or status != "flooded"):
+        return "a flooding sentence supports a flood report only, never a closure"
+    return None
+
+
 def _check_gov(seq, v: dict, at: str) -> None:
     """Evidence read from a government page by verify.py: every receipt field present and well formed, https on an exact
-    host from the county's verify list (also after redirects), the configured agency for that host, a page date that is
-    not after the event, and a short road-only quote with no personal detail."""
+    host from the county's verify list (also after redirects), the configured agency for that host, a real page date
+    not after the event, a check time not after the event, a supported verifier, and a quote that is exactly one
+    supported road sentence (so it can carry nothing but road wording)."""
     if not isinstance(v, dict) or not all(v.get(k) for k in GOV_FIELDS):
         raise Refused(f"seq {seq}: government evidence needs {', '.join(GOV_FIELDS)}")
     hosts = verify_hosts()
     for u in (v["url"], v["finalUrl"]):
         p = urllib.parse.urlparse(u)
-        if p.scheme != "https" or p.hostname != v["host"]:
-            raise Refused(f"seq {seq}: evidence URL {u!r} is not https on {v['host']!r}")
+        if p.scheme != "https" or p.hostname != v["host"] or p.port or p.username or p.password:
+            raise Refused(f"seq {seq}: evidence URL {u!r} is not plain https on {v['host']!r}")
     if v["host"] not in hosts or hosts[v["host"]] != v["agency"]:
         raise Refused(f"seq {seq}: {v.get('host')!r} is not a government host on the county's verify list")
-    if not DATE.match(v["publishedDate"]) or v["publishedDate"] > at[:10] or not parse(v["checkedAt"]):
+    try:
+        real = datetime.datetime.strptime(v["publishedDate"], "%Y-%m-%d").strftime("%Y-%m-%d") == v["publishedDate"]
+    except ValueError:
+        real = False
+    checked = parse(v["checkedAt"])
+    if not real or v["publishedDate"] > at[:10] or not checked or checked > parse(at):
         raise Refused(f"seq {seq}: evidence dates are malformed or in the future")
-    if not SHA.match(v["pageSha256"]) or len(v["quote"]) > 200 or SENSITIVE.search(v["quote"]):
-        raise Refused(f"seq {seq}: evidence quote or page hash is not acceptable")
+    if v["verifier"] not in VERIFIERS or not SHA.match(v["pageSha256"]) or not notice(v["quote"]):
+        raise Refused(f"seq {seq}: evidence is not a supported verifier receipt with one supported road sentence")
 
 
 def validate(ev: dict, prev_seq: int, clearance_enabled: bool, prev_eid: str = "") -> None:
@@ -252,21 +308,25 @@ def apply(state: dict, ev: dict) -> None:
             recs[rid] = {"rid": rid, "src": ev.get("src"), "status": "active", "fields": dict(ev["fields"]),
                          "firstReported": ev["stime"], "lastReported": ev["stime"], "recheck": [], "missingSince": None,
                          "reopenedAt": None, "evidence": None, "verified": None, "raisedBy": None,
-                         "statusAt": ev["stime"]}
+                         "statusAt": ev["stime"], "episodeStart": ev["stime"]}
             return
         if r["status"] == "reopened":
             if st and st > parse(r["reopenedAt"]):
                 r.update(status="active", fields=dict(ev["fields"]), lastReported=ev["stime"], recheck=[],
                          missingSince=None, reopenedAt=None, evidence=None, verified=None, raisedBy=None,
-                         statusAt=ev["stime"])  # a new incarnation never inherits the old one's badge
+                         statusAt=ev["stime"], episodeStart=ev["stime"])  # a new incarnation never inherits the old one's badge
             return
+        gov = ev.get("raisedBy")
+        if gov and (gov["publishedDate"] < _episode(r) or supports(r["fields"], gov["quote"], _raise_of(ev["fields"]))):
+            return  # a cited raise must be about this road and this episode
         was = rank(r["fields"])
         r["fields"], reasons = _merge_up(r["fields"], ev["fields"])
         if rank(r["fields"]) > was:  # remember which observation supports the current impact
             r["statusAt"], r["raisedBy"] = ev["stime"], ev.get("raisedBy")
             if ev.get("raisedBy"):
-                r["belowRaise"] = was
-        if r.get("raisedBy") and not ev.get("raisedBy") and rank(ev["fields"]) >= tuple(r.get("belowRaise") or ()):
+                r["belowRaise"], r["raiseBase"] = was, r["lastReported"]
+        if (r.get("raisedBy") and not ev.get("raisedBy") and rank(ev["fields"]) >= tuple(r.get("belowRaise") or ())
+                and st and st <= parse(r.get("raiseBase"))):
             # the original report repeating its own weaker wording is not new reduced impact
             reasons = [x for x in reasons if x != "source shows reduced impact"]
         if st and st > parse(r["lastReported"]):
@@ -284,10 +344,21 @@ def apply(state: dict, ev: dict) -> None:
         if r["status"] == "active" and ev["reason"] not in r["recheck"]:
             r["recheck"].append(ev["reason"])
     elif kind == "verified":  # the newest official statement wins; earlier ones stay in the history
+        v = ev["evidence"]
+        if r["status"] != "active" or v["publishedDate"] < _episode(r) or supports(r["fields"], v["quote"]):
+            return
         if not r.get("verified") or ev["evidence"]["publishedDate"] >= r["verified"]["publishedDate"]:
             r["verified"] = ev["evidence"]
     elif kind == "cleared":
         r.update(status="reopened", reopenedAt=ev["evidence"]["reopenedAt"], evidence=ev["evidence"])
+
+
+def _episode(r: dict) -> str:
+    return (r.get("episodeStart") or r["firstReported"])[:10]
+
+
+def _raise_of(fields: dict) -> str:
+    return "full" if fields.get("fullClosure") else "closed"
 
 
 def derive(events: list[dict], now: datetime.datetime | None = None) -> dict:
