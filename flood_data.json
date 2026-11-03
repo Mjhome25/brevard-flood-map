@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-03T20:30:45Z",
+ "generated": "2026-11-03T20:45:33Z",
  "errors": [],
  "items": [
   {
@@ -824,6 +824,64 @@
    }
   },
   {
+   "fullClosure": false,
+   "lanes": "Road Blockage",
+   "lat": 28.4127850900307,
+   "layer": "FHP",
+   "lng": -80.7062550960295,
+   "reported": "2026-11-03T08:40:34Z",
+   "road": "COURTENAY PKWY N [NOF]",
+   "roadShort": "Courtenay Pkwy N [Nof]",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "spot": "at Smith Rd",
+   "status": "closed",
+   "title": "MVC W/ And Roadblock at COURTENAY PKWY N [NOF] x[SMITH RD] [MERRITT ISLAND] (Road Blockage)",
+   "where": "Courtenay Pkwy N [Nof] at Smith Rd",
+   "id": "brevard:fhp:20261103084034-abe303ba",
+   "updated": "2026-11-03T08:40:34Z",
+   "lastReported": "2026-11-03T08:40:34Z",
+   "firstReported": "2026-11-03T08:40:34Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-03T08:40:34Z"
+   },
+   "awaitingOfficial": false,
+   "missingSince": null,
+   "recheck": []
+  },
+  {
+   "fullClosure": false,
+   "lanes": "Debris In The Left Lane - Use Caution",
+   "lat": 27.9846166622749,
+   "layer": "FHP",
+   "lng": -80.6205894697848,
+   "reported": "2026-11-03T08:43:25Z",
+   "road": "I-95 SB [MM172-MM173]",
+   "roadShort": "I-95 Sb [MM172-MM173]",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "spot": "at Mm172",
+   "status": "caution",
+   "title": "Roadway Debris/Object at I-95 SB [MM172-MM173] x[MM172] [PALM BAY] (Debris In The Left Lane - Use Caution)",
+   "where": "I-95 Sb [MM172-MM173] at Mm172",
+   "id": "brevard:fhp:20261103084325-5382925a",
+   "updated": "2026-11-03T08:43:25Z",
+   "lastReported": "2026-11-03T08:43:25Z",
+   "firstReported": "2026-11-03T08:43:25Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-03T08:43:25Z"
+   },
+   "awaitingOfficial": false,
+   "missingSince": null,
+   "recheck": []
+  },
+  {
    "from": "Lakes Of Melbourne Dr",
    "fullClosure": true,
    "lanes": "Roadway Flooded -- Seek Alternate Route",
@@ -1452,8 +1510,8 @@
    "to": "Pine St",
    "where": "US-192 EB at Minton Rd/S Wickham Rd",
    "id": "brevard:fl511:937010",
-   "updated": "2026-11-03T19:49:00Z",
-   "lastReported": "2026-11-03T19:49:00Z",
+   "updated": "2026-11-03T20:31:00Z",
+   "lastReported": "2026-11-03T20:31:00Z",
    "firstReported": "2026-11-02T19:54:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
@@ -1718,8 +1776,8 @@
    "to": "Circle Dr",
    "where": "US-192 EB beyond Coastal Ln",
    "id": "brevard:fl511:937141",
-   "updated": "2026-11-03T19:50:00Z",
-   "lastReported": "2026-11-03T19:50:00Z",
+   "updated": "2026-11-03T20:31:00Z",
+   "lastReported": "2026-11-03T20:31:00Z",
    "firstReported": "2026-11-02T19:54:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
@@ -2234,8 +2292,8 @@
    "to": "Highway 1",
    "where": "SR-514 EB at US-1",
    "id": "brevard:fl511:937844",
-   "updated": "2026-11-03T19:49:00Z",
-   "lastReported": "2026-11-03T19:49:00Z",
+   "updated": "2026-11-03T20:31:00Z",
+   "lastReported": "2026-11-03T20:31:00Z",
    "firstReported": "2026-11-02T23:15:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
