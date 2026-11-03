@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-03T13:15:27Z",
+ "generated": "2026-11-03T13:30:30Z",
  "errors": [],
  "items": [
   {
@@ -1146,6 +1146,35 @@
    "recheck": []
   },
   {
+   "fullClosure": true,
+   "lanes": "Ellis Rd Closed At John Rodes Blvd Due To Flooding",
+   "lat": 28.0987615854194,
+   "layer": "FHP",
+   "lng": -80.700088949939,
+   "reported": "2026-11-03T13:16:50Z",
+   "road": "J",
+   "roadShort": "J",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "spot": "at S John Rodes Blvd",
+   "status": "flooded",
+   "title": "Road Closed Due To Water at J x[S JOHN RODES BLVD] [MELBOURNE] (Ellis Rd Closed At John Rodes Blvd Due To Flooding)",
+   "where": "J at S John Rodes Blvd",
+   "id": "brevard:fhp:20261103131650-95f1bd34",
+   "updated": "2026-11-03T13:16:50Z",
+   "lastReported": "2026-11-03T13:16:50Z",
+   "firstReported": "2026-11-03T13:16:50Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-03T13:16:50Z"
+   },
+   "awaitingOfficial": false,
+   "missingSince": null,
+   "recheck": []
+  },
+  {
    "dir": "EB",
    "from": "Hickory St",
    "fullClosure": true,
@@ -2236,8 +2265,8 @@
    "title": "Traffic lights not working on US-192 / Vine St / Bronson Hwy East, at S John Rodes Blvd",
    "where": "US-192 EB at S John Rodes Blvd",
    "id": "brevard:fl511:938257",
-   "updated": "2026-11-03T12:57:00Z",
-   "lastReported": "2026-11-03T12:57:00Z",
+   "updated": "2026-11-03T13:28:00Z",
+   "lastReported": "2026-11-03T13:28:00Z",
    "firstReported": "2026-11-03T03:18:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
