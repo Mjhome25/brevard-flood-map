@@ -136,14 +136,23 @@ def run(now: datetime.datetime, events_path: str = E.EVENTS, water_path: str = o
             "changed": sum(r["changed"] for r in rows), "byKind": by_kind, "rows": rows, "book": book}
 
 
-def coverage_line(path: str = os.path.join(AUDIT, "coverage.json")) -> str:
-    """The latest official advisory coverage counts (coverage.py), or that they are unavailable."""
+def coverage_line(path: str = os.path.join(AUDIT, "coverage.json"), now: datetime.datetime | None = None) -> str:
+    """The latest official advisory coverage counts (coverage.py), labelled stale or failed when they are."""
+    now = now or E.utcnow()
     try:
         cov = json.load(open(path))
-        parts = [f"{s['agency']} {', '.join(f'{v} {k}' for k, v in s['summary'].items())}" for s in cov["sources"]]
-        parts += [f"unavailable {u['url']}" for u in cov.get("unavailable", [])]
-        return f"Coverage ({cov['checkedAt']}): {'; '.join(parts) or 'no sources read'}."
-    except (OSError, ValueError, KeyError, TypeError):
+        parts = [f"{s['agency']} {', '.join(f'{v} {k}' for k, v in s['summary'].items())}"
+                 + (" (inventory partial)" if s.get("partial") else "") for s in cov["sources"]]
+        parts += [f"{u.get('state', 'unavailable')} {u['url']}" for u in cov.get("unavailable", [])]
+        age = (now - E.parse(cov["checkedAt"])).total_seconds() / 60
+        flag = ""
+        if not cov.get("fresh", True) or cov.get("lastFailure"):
+            flag = f" LAST CHECK FAILED {cov.get('lastFailure', {}).get('at', '')}; counts are from the last good check."
+        elif age > 60:
+            flag = f" STALE: last good check {int(age)} min old."
+        pending = f" Pending sources: {', '.join(cov.get('pending') or [])}." if cov.get("pending") else ""
+        return f"Coverage ({cov.get('pilot', '')} pilot, {cov['checkedAt']}): {'; '.join(parts) or 'no sources read'}.{flag}{pending}"
+    except (OSError, ValueError, KeyError, TypeError, AttributeError):
         return "Coverage: unavailable."
 
 

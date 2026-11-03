@@ -1,18 +1,25 @@
 #!/usr/bin/env python3
-"""Official advisory coverage check (Mike, Nov 3 2026: "how do we fix this and catch these closures").
+"""Official advisory coverage (Mike, Nov 3 2026: "how do we fix this and catch these closures"). Melbourne pilot.
 
-Each run reads the newest same-day traffic updates on official city advisory pages and accounts for every line:
-  closure lines - covered (an active pin at that place, shown closed), weaker (a pin there, not shown closed: a raise
-                  candidate) or missed (no pin: an add candidate)
-  open / clear  - the active pins on that road, as reopening candidates for a human or verify.py --open
-  dropped       - a closure in an earlier same-day update that the newest update no longer lists (by place, not wording)
-  earlierOpen   - open / clear statements in earlier same-day updates, still candidates
-Writes audit/coverage.json. Read-only: it never writes closure_events.jsonl or changes a pin; a source that cannot be
-read is listed as unavailable, never as zero closures.
+Every run it reads the City of Melbourne traffic advisories, keeps an inventory of every road claim in every post of the
+emergency episode (closed / open, with place, scope and direction), and compares the latest claim for each place with
+our active pins:
+  covered          - a pin with the same place, scope and direction (or no direction) that the page shows closed
+  covered-road     - a road named alone in a closed list (extent not stated) has a closed pin on it
+  partial          - pins on that road, but not the same scope (an endpoint for a stretch, a spot for "all of")
+  direction        - a pin at that place for another direction only
+  weaker           - a pin with that scope that the page does not show closed (a raise candidate)
+  missed           - no pin (an add candidate)
+  reopen-review    - the latest claim says open / clear; the pins on that road are listed for a human, never reopened
+Sentences it cannot read strictly are counted as needs-review with a hash only: no unvetted prose is published.
+A source it cannot read, whose layout it does not recognise, or that has no supported sentences is recorded as such,
+never as zero closures. County-wide sources other than Melbourne are listed as pending.
+Read-only: it never writes closure_events.jsonl or changes a pin. Writes audit/coverage.json.
 """
 from __future__ import annotations
 
 import datetime
+import hashlib
 import json
 import os
 import re
@@ -26,66 +33,137 @@ import events as E  # noqa: E402
 import verify as V  # noqa: E402
 
 OUT = os.path.join(HERE, "audit", "coverage.json")
+EPISODE_START = "2026-11-02"
 SOURCES = [{"agency": "City of Melbourne", "host": "www.melbourneflorida.org",
             "index": "https://www.melbourneflorida.org/Government/City-News/Traffic-Advisories"}]
-POSTS = 4  # newest posts read per source
-DIRS = r"(?:north|south|east|west)bound"
-GENERIC = {"street", "road", "boulevard", "avenue", "drive", "parkway", "lane", "highway", "court", "place", "causeway",
-           "north", "south", "east", "west", "n", "s", "e", "w", "nb", "sb", "eb", "wb", "the", "of", "all"}
+PENDING = ["Space Coast Daily City of Melbourne closure list (14 closed, 8 flooded)", "WESH 2 closed-roads list",
+           "Palm Bay", "West Melbourne", "Brevard County", "Cocoa", "Rockledge", "Titusville"]
+DISCOVER = 15  # index links considered per run; more marks the inventory partial
+REFETCH = 3  # newest posts re-read every run; older posts are read once
+STALE_MIN = 60
+ALIASES = {"sunlake road": "sun lakes road"}  # reviewed spellings of one road
+SUFFIX_ONLY = {"street", "road", "boulevard", "avenue", "drive", "parkway", "lane", "highway", "court", "place", "causeway"}
+DIRS = {"north": "NB", "south": "SB", "east": "EB", "west": "WB"}
+
+# A road name is capitalised words (a lower-case suffix word allowed: "Palm Bay road"), so a verb phrase such as
+# "Eber Road is no longer" can never be read as a name.
+_W = r"[A-Z0-9][A-Za-z0-9.'-]*"
+_N = rf"{_W}(?: (?:{_W}|of|the|road|street|avenue|boulevard|drive))*"
+_NL = rf"{_W},?(?: (?:{_W},?|of|the))*"  # a list item may name "Dr. Martin Luther King, Jr. Boulevard"
+_D = r"(?:(?:north|south|east|west)bound)"
+CLOSED_TAIL = r"(?:remains|is) closed(?: with barricades blocking the roadway)?"
+SENTENCES = [  # every sentence must match one of these exactly; anything else is needs-review
+    ("closure", "point", re.compile(rf"^(?P<a>{_N})\s*/\s*(?P<b>{_N})\s*-\s*(?:(?P<dirs>{_D}(?: and {_D})?) )?{CLOSED_TAIL}\.?$")),
+    ("closure", "segment", re.compile(rf"^(?P<a>{_N})\s*-\s*between (?P<x>{_N}) and (?P<y>{_N}) {CLOSED_TAIL}\.?$")),
+    ("closure", "point", re.compile(rf"^(?P<a>{_N}) at (?P<b>{_N}) is closed\.?$")),
+    ("closure", "point", re.compile(rf"^(?P<a>{_N}) \((?P<dirs>{_D})\) is closed at (?P<b>{_N})\.?$", re.I)),
+    ("closure", "area", re.compile(rf"^(?P<a>{_N}) is closed in the area of (?P<b>{_N})\.?$")),
+    ("closure", "segment", re.compile(rf"^(?P<a>{_N}) is closed between (?P<x>{_N}) and (?P<y>{_N})\.?$")),
+    ("closure", "whole", re.compile(rf"^(?:All of )?(?P<a>{_N}) (?:is |has been )?closed(?: (?:because of|due to) flooding)?\.?$")),
+    ("open", "segment", re.compile(rf"^(?P<a>{_N}) is (?:now )?(?:clear|open) from (?P<x>{_N}) to (?P<y>{_N})\.?$")),
+    ("open", "point", re.compile(rf"^(?P<a>{_N}) at (?P<b>{_N}) is (?:now )?(?:clear|open)\.?$")),
+    ("open", "whole", re.compile(rf"^(?:All of )?(?P<a>{_N}) is (?:now )?(?:clear|open)(?:, but there (?:is|are) (?:some )?[a-z ]{{3,60}} on the shoulder)?\.?$")),
+]
+# A list under "The below roads/intersections are closed:" names each closure bare: "A and B", or a road alone.
+LEAD = re.compile(r"\b(?:below|following) (?:roads?|intersections?)(?:\s*/\s*(?:roads?|intersections?))? (?:are|is) closed:", re.I)
+LISTITEM = re.compile(rf"^(?P<a>{_NL})(?: and (?P<b>{_NL}))?(?: \([A-Za-z ]{{3,40}}\))?$")
+BOILER = re.compile(r"^(?:Road Closures:|Current Road Closures:|Please drive with extreme caution\.|Do not drive around barricades\.|"
+                    r"Please drive with caution\.|Public Notices|Tagged as:.*|Back to top)$")
+ROADISH = re.compile(r"\b(?:St|Street|Rd|Road|Ave|Avenue|Blvd|Boulevard|Dr|Drive|Pkwy|Parkway|Hwy|Highway|Cswy|Causeway|"
+                     r"Ln|Lane|U\.S\. ?\d+|US ?\d+|SR ?\d+|I-\d+)\b")
 
 
-def base(name: str) -> str:
-    """'Sun Lakes Rd' and 'Sunlake Road' -> 'sunlake'; 'East Ave B' -> 'b'... kept as the road's own words."""
-    words = [w for w in E.road_words(name).split() if w not in GENERIC]
-    s = "".join(words)
-    return s[:-1] if len(s) > 4 and s.endswith("s") else s
+def norm(name: str) -> str:
+    n = E.road_words(name)
+    return ALIASES.get(n, n)
 
 
-def names(fields: dict) -> set[str]:
-    raw = " / ".join(str(fields.get(k) or "") for k in ("road", "roadShort", "where", "spot"))
-    raw = re.sub(r"\[[^\]]*\]|\([^)]*\)|\bat their intersection\b|\ball directions\b|\b(?:NB|SB|EB|WB)\b", " ", raw)
-    parts = re.split(r"\s*(?:/|,|\bat\b|\band\b|\bbetween\b|\bnear\b|\bto\b)\s*", raw, flags=re.I)
-    return {b for b in (base(p) for p in parts) if b}
+def core(name: str) -> str:
+    """The road's name without its suffix word: 'babcock street' -> 'babcock'. Directional prefixes are kept."""
+    words = norm(name).split()
+    return " ".join(words[:-1] if len(words) > 1 and words[-1] in SUFFIX_ONLY else words)
 
 
-CLOSURE = [re.compile(rf"^(?P<a>[A-Z][\w .']+?)\s*/\s*(?P<b>[A-Z][\w .']+?)\s*[-–]\s*(?P<rest>.*\bclosed\b.*)$"),
-           re.compile(rf"^(?P<a>[A-Z][\w .']+?)\s*[-–]\s*between (?P<b>[\w .']+?) and (?P<c>[\w .']+?) (?P<rest>.*\bclosed\b.*)$"),
-           re.compile(rf"^(?:All of )?(?P<a>[A-Z][\w .']+?) (?:at (?P<b>[A-Z][\w .']+?) )?(?:is|remains) (?P<rest>closed.*)$")]
-OPENING = re.compile(rf"^(?P<a>[A-Z][\w .']+?) (?:is|has) (?:now )?(?:clear|open|reopened)"
-                     rf"(?: from (?P<b>[\w .']+?) to (?P<c>[\w .']+?))?(?=[,.\s]|$)")
+def sentences(unit: str) -> list[str]:
+    """Split on sentence ends, never after the abbreviations in road names (Dr., Jr., St., U.S.)."""
+    return [s.strip() for s in re.split(r"(?<!\bDr\.)(?<!\bJr\.)(?<!\bSt\.)(?<!\bS\.)(?<=[.!?])\s+(?=[A-Z])", unit) if s.strip()]
 
 
-def classify(line: str) -> dict | None:
-    for rx in CLOSURE:
-        m = rx.match(line)
+def list_item(u: str) -> dict | None:
+    m = LISTITEM.match(u)
+    if not m or E.SENSITIVE.search(u) or E.CRASH.search(u) or not (ROADISH.search(u) or len(u.split()) <= 2):
+        return None
+    if m["b"]:
+        return {"claim": "closure", "scope": "point", "road": core(m["a"]), "cross": [core(m["b"])], "dirs": []}
+    return {"claim": "closure", "scope": "road", "road": core(m["a"]), "cross": [], "dirs": []}
+
+
+def classify(s: str) -> dict | None:
+    if E.SENSITIVE.search(s) or E.CRASH.search(s):
+        return None
+    for claim, scope, rx in SENTENCES:
+        m = rx.match(s)
         if m:
             d = m.groupdict()
-            dirs = re.findall(DIRS, d.get("rest") or "", re.I)
-            if rx is CLOSURE[1]:
-                return {"kind": "closure", "road": base(d["a"]), "cross": [base(d["b"]), base(d["c"])], "dirs": dirs}
-            return {"kind": "closure", "road": base(d["a"]), "cross": [base(d["b"])] if d.get("b") else [], "dirs": dirs}
-    m = OPENING.match(line)
-    if m:
-        return {"kind": "open", "road": base(m["a"]), "cross": [base(x) for x in (m["b"], m["c"]) if x]}
+            dirs = sorted({DIRS[w.lower()[:-5]] for w in re.findall(_D, d.get("dirs") or "", re.I)})
+            cross = [core(d[k]) for k in ("b", "x", "y") if d.get(k)]
+            return {"claim": claim, "scope": scope, "road": core(d["a"]), "cross": cross, "dirs": dirs}
     return None
 
 
-def account(line: str, c: dict, active: dict) -> dict:
-    hits = []
+def pin_shape(fields: dict) -> dict:
+    """The place, scope and directions a pin states, from its own words."""
+    where = re.sub(r"\[[^\]]*\]|\([^)]*\)", " ", fields.get("where") or fields.get("road") or "")
+    dirs = sorted(set(re.findall(r"\b(NB|SB|EB|WB)\b", where)))
+    clean = re.sub(r"\b(?:NB|SB|EB|WB)\b|\bat their intersection\b|,?\s*all directions\b", " ", where)
+    m = re.match(rf"^All of (?P<a>.+)$", clean.strip())
+    if m:
+        return {"scope": "whole", "road": core(m["a"]), "cross": [], "dirs": dirs}
+    m = re.match(r"^(?P<a>.+?) between (?P<x>.+?) and (?P<y>.+?)$", clean.strip())
+    if m:
+        return {"scope": "segment", "road": core(m["a"]), "cross": [core(m["x"]), core(m["y"])], "dirs": dirs}
+    parts = [core(p) for p in re.split(r"\s+(?:at|and)\s+", clean.strip()) if p.strip()]
+    if len(parts) == 2:
+        return {"scope": "point", "road": parts[0], "cross": [parts[1]], "dirs": dirs}
+    return {"scope": "road", "road": core(fields.get("road") or clean), "cross": [], "dirs": dirs}
+
+
+def page_closed(fields: dict) -> bool:
+    return fields.get("status") == "closed" or bool(fields.get("fullClosure"))
+
+
+def judge(c: dict, active: dict) -> tuple[str, list[str]]:
+    on_road, same, wrong_dir = [], [], []
     for rid, r in active.items():
-        n = names(r["fields"])
-        if c["road"] not in n:
+        p = pin_shape(r["fields"])
+        names = {p["road"], *p["cross"]}
+        if c["road"] not in names:
             continue
-        if c["kind"] == "closure" and c["cross"] and not any(x in n for x in c["cross"]):
+        on_road.append(rid)
+        if c["scope"] == "road":  # a road named alone, extent not stated: any pin on it is the most that can be said
+            same.append(rid)
             continue
-        hits.append(rid)
-    row = {"line": line, "kind": c["kind"], "pins": hits}
-    if c["kind"] == "closure":
-        closed = [rid for rid in hits if active[rid]["fields"].get("status") == "closed"]
-        row["verdict"] = "covered" if closed else "weaker" if hits else "missed"
-    else:
-        row["verdict"] = "reopen-candidates" if hits else "no-active-pin"
-    return row
+        scope = "point" if c["scope"] == "area" else c["scope"]
+        pscope = "whole" if p["scope"] == "road" and not p["cross"] else p["scope"]  # a pin naming only the road
+        if pscope != scope or (scope != "whole" and {c["road"], *c["cross"]} != names):
+            continue
+        # The city's "A/B- eastbound" does not say which road the direction belongs to, so a directional pin covers it
+        # only with exactly the same directions; a pin with no direction closes the whole place, which includes it.
+        if c["dirs"] and p["dirs"] and set(c["dirs"]) != set(p["dirs"]):
+            wrong_dir.append(rid)
+            continue
+        same.append(rid)
+    if c["claim"] == "open":
+        return ("reopen-review" if on_road else "no-active-pin"), on_road
+    if any(page_closed(active[r]["fields"]) for r in same):
+        return ("covered-road" if c["scope"] == "road" else "covered"), [r for r in same if page_closed(active[r]["fields"])]
+    if same:
+        return "weaker", same
+    if wrong_dir:
+        return "direction", wrong_dir
+    if on_road:
+        return "partial", on_road
+    return "missed", []
 
 
 def fetch(url: str, host: str) -> str:
@@ -97,89 +175,141 @@ def fetch(url: str, host: str) -> str:
         return resp.read().decode("utf-8", "replace")
 
 
-def post_lines(page: str) -> tuple[str | None, str, list[str]]:
-    """(published date, update heading, the post's lines after it)."""
+def read_post(page: str, now: datetime.datetime) -> dict:
+    """The one dated post on the page: its date, heading time and sentences, all from that same post block."""
     parser = V.Posts()
     parser.feed(re.sub(r"<script.*?</script>|<style.*?</style>", " ", page, flags=re.S | re.I))
     flat = lambda parts: re.sub(r"\s+", " ", " ".join(parts).replace("\xa0", " ")).strip()
-    units = [flat(u) for _, u in parser.units if flat(u)]
-    date = None
-    for u in units:
-        m = V.PUBLISHED.search(u)
-        if m:
-            date = datetime.datetime.strptime(" ".join(m.groups()), "%B %d %Y").strftime("%Y-%m-%d")
-            break
-    head = next((u for u in units if V.HEADING.fullmatch(u)), "")
-    return date, head, units
+    dated = [i for i, parts in enumerate(parser.posts) if len(list(V.PUBLISHED.finditer(flat(parts)))) == 1]
+    if len(dated) != 1:
+        return {"error": "layout-unsupported"}
+    i = dated[0]
+    m = V.PUBLISHED.search(flat(parser.posts[i]))
+    date = datetime.datetime.strptime(" ".join(m.groups()), "%B %d %Y").strftime("%Y-%m-%d")
+    text = flat(parser.posts[i])
+    units = [flat(u) for j, u in parser.units if j == i and flat(u)]
+    body = [u for u in units if not V.PUBLISHED.search(u) and not V.HEADING.fullmatch(u) and not BOILER.match(u)]
+    lead = LEAD.search(text)
+    listed = {u for u in body if lead and text.find(u) > lead.start()}
+    time = V.stated_time(units, body[-1], date) if body else ""
+    if (time or date) > (E.iso(now) if time else now.astimezone(E.ET).strftime("%Y-%m-%d")):
+        return {"error": "future-time", "date": date}
+    items = []
+    for u in body:
+        c = list_item(u) if u in listed else None
+        items += [(u, c)] if c else [(s, classify(s)) for s in sentences(u)]
+    return {"date": date, "time": time, "items": items}
 
 
-def run(now: datetime.datetime, get=fetch, events_path: str = E.EVENTS) -> dict:
-    today = now.astimezone(E.ET).strftime("%Y-%m-%d")
+def place_key(c: dict) -> str:
+    return "|".join([c["scope"], c["road"], *sorted(c["cross"]), *c["dirs"]])
+
+
+def run(now: datetime.datetime, prev: dict | None = None, get=fetch, events_path: str = E.EVENTS) -> dict:
+    prev = prev or {}
     active = {k: r for k, r in E.derive(E.load(events_path), now)["records"].items() if r["status"] == "active"}
-    out = {"checkedAt": E.iso(now), "sources": [], "unavailable": []}
+    out = {"checkedAt": E.iso(now), "fresh": True, "pilot": "City of Melbourne", "pending": PENDING,
+           "sources": [], "unavailable": [], "posts": dict(prev.get("posts") or {})}
     for src in SOURCES:
         try:
             index = get(src["index"], src["host"])
         except Exception as exc:
-            out["unavailable"].append({"agency": src["agency"], "url": src["index"], "error": type(exc).__name__})
+            out["unavailable"].append({"url": src["index"], "state": "unreadable", "error": type(exc).__name__})
             continue
-        urls = []
+        links = []
         for href in re.findall(r'href="([^"]+)"', index):
-            u = urllib.parse.urljoin(src["index"] + "/", href)
-            if u.startswith(src["index"] + "/") and u not in urls:
-                urls.append(u)
-        posts = []
-        for u in urls[:POSTS]:
-            try:
-                date, head, units = post_lines(get(u, src["host"]))
-            except Exception as exc:
-                out["unavailable"].append({"agency": src["agency"], "url": u, "error": type(exc).__name__})
+            u = urllib.parse.urldefrag(urllib.parse.urljoin(src["index"] + "/", href))[0]
+            if u.startswith(src["index"] + "/") and len(u) > len(src["index"]) + 1 and u not in links:
+                links.append(u)
+        if not links:
+            out["unavailable"].append({"url": src["index"], "state": "layout-unsupported"})
+            continue
+        partial = True  # until the index reaches a post from before the episode, within the discovery budget
+        for n, u in enumerate(links[:DISCOVER]):
+            known = out["posts"].get(u)
+            if known and known.get("outside"):
+                partial = False
+                break  # the index lists newest first
+            if known and n >= REFETCH and not known.get("error"):
                 continue
-            if date == today:
-                posts.append({"url": u, "heading": head, "units": units,
-                              "time": V.stated_time(units, units[-1], date) if units else ""})
-        posts.sort(key=lambda p: p["time"] or "", reverse=True)
-        rep = {"agency": src["agency"], "index": src["index"], "posts": [p["url"] for p in posts], "lines": [],
-               "dropped": [], "earlierOpen": []}
-        place = lambda c: (c["kind"], frozenset([c["road"], *c["cross"]]))
-        if posts:
-            newest = posts[0]
-            rep["newest"] = {"url": newest["url"], "heading": newest["heading"], "time": newest["time"]}
-            seen = set()
-            for u in newest["units"]:
-                c = classify(u)
+            try:
+                page = get(u, src["host"])
+            except Exception as exc:
+                out["unavailable"].append({"url": u, "state": "unreadable", "error": type(exc).__name__})
+                continue
+            post = read_post(page, now)
+            if post.get("error"):
+                out["posts"][u] = {"error": post["error"], "date": post.get("date")}
+                out["unavailable"].append({"url": u, "state": post["error"]})
+                continue
+            if post["date"] < EPISODE_START:
+                out["posts"][u] = {"date": post["date"], "outside": True}
+                partial = False
+                break
+            claims, review = [], []
+            for s, c in post["items"]:
+                h = hashlib.sha256(s.encode()).hexdigest()
                 if c:
-                    rep["lines"].append(account(u, c, active))
-                    seen.add(place(c))
-            for p in posts[1:]:  # newest first, so each place is reported once, from its latest mention
-                for u in p["units"]:
-                    c = classify(u)
-                    if not c or place(c) in seen:
-                        continue
-                    seen.add(place(c))
-                    row = dict(account(u, c, active), url=p["url"], heading=p["heading"])
-                    (rep["dropped"] if c["kind"] == "closure" else rep["earlierOpen"]).append(row)
-        count = lambda v: sum(1 for x in rep["lines"] if x["verdict"] == v)
-        rep["summary"] = {v: count(v) for v in ("covered", "weaker", "missed", "reopen-candidates")}
-        rep["summary"]["dropped"] = len(rep["dropped"])
-        out["sources"].append(rep)
+                    claims.append(dict(c, sentence=s, sha256=h))
+                elif not BOILER.match(s):
+                    review.append(h)  # every sentence is accounted for; unread ones are kept as a hash only
+            out["posts"][u] = {"agency": src["agency"], "date": post["date"], "time": post["time"], "claims": claims,
+                               "needsReview": review, "sha256": hashlib.sha256(page.encode()).hexdigest(),
+                               "readAt": E.iso(now)}
+            if not claims and not review:
+                out["unavailable"].append({"url": u, "state": "no-supported-sentences"})
+        latest = {}
+        for u, p in out["posts"].items():
+            if p.get("agency") != src["agency"] or p.get("error") or p.get("outside"):
+                continue
+            stamp = p["time"] or p["date"]
+            for c in p["claims"]:
+                k = place_key(c)
+                cur = latest.get(k)
+                if cur and cur["stamp"] == stamp and cur["claim"] != c["claim"]:
+                    latest[k] = dict(cur, ambiguous=True)
+                elif not cur or stamp > cur["stamp"]:
+                    latest[k] = dict(c, stamp=stamp, url=u)
+        stamps = [p["time"] or p["date"] for p in out["posts"].values()
+                  if p.get("agency") == src["agency"] and not p.get("error") and not p.get("outside")]
+        newest = max(stamps) if stamps else ""
+        rows = []
+        for k, c in sorted(latest.items()):
+            v, pins = ("ambiguous", []) if c.get("ambiguous") else judge(c, active)
+            rows.append({"place": k, "claim": c["claim"], "scope": c["scope"], "road": c["road"], "cross": c["cross"],
+                         "dirs": c["dirs"], "sentence": c["sentence"], "sha256": c["sha256"], "source": c["url"],
+                         "sourceTime": c["stamp"], "inNewest": c["stamp"] == newest, "verdict": v, "pins": pins})
+        summary = {}
+        for r in rows:
+            summary[r["verdict"]] = summary.get(r["verdict"], 0) + 1
+        summary["needs-review"] = sum(len(p.get("needsReview") or []) for p in out["posts"].values()
+                                      if p.get("agency") == src["agency"])
+        out["sources"].append({"agency": src["agency"], "index": src["index"], "partial": partial, "rows": rows,
+                               "summary": summary})
     return out
 
 
 def main() -> int:
     try:
-        rep = run(E.utcnow())
+        prev = json.load(open(OUT))
+    except (OSError, ValueError):
+        prev = {}
+    try:
+        rep = run(E.utcnow(), prev if isinstance(prev, dict) else {})
+    except Exception as exc:  # keep the last good inventory, mark it stale, never stop the map
+        rep = dict(prev if isinstance(prev, dict) else {}, fresh=False,
+                   lastFailure={"at": E.iso(E.utcnow()), "error": type(exc).__name__})
+        print("coverage failed:", type(exc).__name__, file=sys.stderr)
+    try:
         os.makedirs(os.path.dirname(OUT), exist_ok=True)
         with open(OUT + ".tmp", "w") as f:
             json.dump(rep, f, indent=1)
             f.write("\n")
         os.replace(OUT + ".tmp", OUT)
-        for s in rep["sources"]:
-            print("coverage:", s["agency"], s["summary"])
-        if rep["unavailable"]:
-            print("coverage: unavailable", [u["url"] for u in rep["unavailable"]])
-    except Exception as exc:  # never stops the map
-        print("coverage failed:", type(exc).__name__, file=sys.stderr)
+    except OSError as exc:
+        print("coverage not written:", type(exc).__name__, file=sys.stderr)
+    for s in rep.get("sources") or []:
+        print("coverage:", s["agency"], s["summary"])
     return 0
 
 
