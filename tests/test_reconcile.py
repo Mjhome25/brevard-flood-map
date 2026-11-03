@@ -193,6 +193,33 @@ out = subprocess.run([sys.executable, "-I", os.path.join(repo, "verify.py"), "br
 check("verify.py refuses a non-government host before fetching anything",
       out.returncode != 0 and "not on the county's government verify list" in out.stderr)
 
+# A government page saying a road is closed raises the report to closed, cited (Mike, Nov 3); it never lowers
+cite = lambda host, url: {"host": host, "url": url, "agency": "City of Melbourne", "quote": "All of Dairy Road is closed."}
+up = lambda c, **f: {"rid": "brevard:manual:x", "src": "manual", "kind": "relisted", "actor": "test",
+                     "stime": "2026-11-02T00:00:00Z", "fields": dict(rec()["fields"], **f), "raisedBy": c}
+try:
+    E.append([up(cite("www.spacecoastdaily.com", "https://www.spacecoastdaily.com/a"), status="closed", fullClosure=True)], pv)
+    ok = False
+except E.Refused:
+    ok = True
+check("a news site cannot raise a report to closed", ok and rec()["fields"]["status"] == "flooded")
+E.append([up(cite("www.melbourneflorida.org", "https://www.melbourneflorida.org/a"), status="closed", fullClosure=True)], pv)
+check("a government closure statement raises the report to closed and keeps the citation",
+      rec()["fields"]["status"] == "closed" and rec()["fields"]["fullClosure"]
+      and rec()["raisedBy"]["host"] == "www.melbourneflorida.org" and rec()["status"] == "active")
+E.append([up(cite("www.melbourneflorida.org", "https://www.melbourneflorida.org/z"), status="caution", fullClosure=False)], pv)
+check("a cited event cannot lower a closure (flagged instead)",
+      rec()["fields"]["status"] == "closed" and rec()["raisedBy"]["url"].endswith("/a") and rec()["recheck"])
+shown = [i for i in R.display(E.derive(E.load(pv)))[0] if i["id"] == "brevard:manual:x"][0]
+check("the page gets the citation for the raised closure", shown["raisedBy"]["agency"] == "City of Melbourne")
+check("check_events accepts the raised history", subprocess.run(
+    [sys.executable, "-I", os.path.join(repo, "check_events.py"), "--before", "", "--bootstrap", "--events", pv],
+    capture_output=True).returncode == 0)
+for q in ("Dairy Road is not closed.", "Dairy Road has reopened.", "The right lane is closed.", "Dairy Road will be closed."):
+    out = subprocess.run([sys.executable, "-I", os.path.join(repo, "verify.py"), "brevard:manual:x",
+                          "https://www.melbourneflorida.org/a", q, "2026-11-02", "--closed"], capture_output=True, text=True)
+    check(f"verify.py will not raise from {q!r}", out.returncode != 0 and "does not plainly say" in out.stderr)
+
 # FHP ids are the same in separate processes (the old id used Python's per-process hash)
 code = ("import sys; sys.path.insert(0, sys.argv[1]); import reconcile as R; "
         "print(R.rid_of({'layer': 'FHP', 'id': 'fhp-x', 'reported': '2026-11-02T14:14:28Z', "

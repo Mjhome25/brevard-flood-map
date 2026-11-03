@@ -181,6 +181,8 @@ def display(state: dict) -> tuple[list[dict], list[dict]]:
         it = dict(r["fields"], id=r["rid"], updated=r["lastReported"], lastReported=r["lastReported"],
                   firstReported=r["firstReported"])
         it["verified"] = verification(r)
+        if r.get("raisedBy"):
+            it["raisedBy"] = r["raisedBy"]
         if r["status"] == "active":
             it.update(awaitingOfficial=r["awaitingOfficial"], missingSince=r["missingSince"], recheck=r["recheck"])
             if r["missingSince"] and r["src"] in FEEDS:

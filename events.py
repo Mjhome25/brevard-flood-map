@@ -10,7 +10,9 @@ Each line of closure_events.jsonl is one event: {seq, at, eid, rid, kind, actor,
   src    source key (fl511, fhp, manual, nws ...); stime is the source's own time for this observation
 Kinds:
   reported   a record first appears (carries `fields`); reactivates a cleared record only if newer than its reopening
-  relisted   the source still lists it; may raise severity or scope, never lower it (a lower reading flags recheck)
+  relisted   the source still lists it; may raise severity or scope, never lower it (a lower reading flags recheck).
+             With `raisedBy` (host, url, agency, quote) it is a government page's own closure statement (Mike, Nov 3:
+             "go by what the government page says and cite it"); it can only raise
   missing    the source no longer lists it: flag only
   recheck    a reason to look again: flag only
   source     per-source health (`state`: up, down, empty): no record changes
@@ -75,6 +77,8 @@ def eid_of(ev: dict, prev: str = "") -> str:
     """Hash of the event's content chained to the previous event's eid: unique and tamper-evident. Retries are not
     caught by the eid but by append(), which writes nothing that would not change the derived state."""
     core = {k: ev.get(k) for k in ("rid", "kind", "src", "stime", "fields", "state", "reason", "evidence")}
+    if "raisedBy" in ev:  # added later; only hashed where present so earlier eids are unchanged
+        core["raisedBy"] = ev["raisedBy"]
     return hashlib.sha256((prev + canon(core)).encode()).hexdigest()[:32]
 
 
@@ -94,6 +98,14 @@ def load(path: str = EVENTS) -> list[dict]:
                 raise Refused(f"line {n}: blank line")
             out.append(json.loads(line))
     return out
+
+
+def _check_gov(seq, v: dict, need: tuple) -> None:
+    """Evidence from a government page: required fields, an exact host on the county's verify list, URL on that host."""
+    if not all(v.get(k) for k in need):
+        raise Refused(f"seq {seq}: government evidence needs {', '.join(need)}")
+    if v["host"] not in verify_hosts() or urllib.parse.urlparse(v["url"]).hostname != v["host"]:
+        raise Refused(f"seq {seq}: {v.get('host')!r} is not a government host on the county's verify list")
 
 
 def validate(ev: dict, prev_seq: int, clearance_enabled: bool, prev_eid: str = "") -> None:
@@ -119,13 +131,10 @@ def validate(ev: dict, prev_seq: int, clearance_enabled: bool, prev_eid: str = "
         raise Refused(f"seq {ev['seq']}: bad source state")
     if kind == "recheck" and not ev.get("reason"):
         raise Refused(f"seq {ev['seq']}: recheck needs a reason")
+    if kind == "relisted" and "raisedBy" in ev:
+        _check_gov(ev["seq"], ev["raisedBy"], ("host", "url", "agency", "quote"))
     if kind == "verified":
-        v = ev.get("evidence") or {}
-        hosts = verify_hosts()
-        if not all(v.get(k) for k in ("host", "url", "agency", "quote", "publishedAt")):
-            raise Refused(f"seq {ev['seq']}: verified needs host, url, agency, quote and publishedAt")
-        if v["host"] not in hosts or urllib.parse.urlparse(v["url"]).hostname != v["host"]:
-            raise Refused(f"seq {ev['seq']}: {v.get('host')!r} is not a government host on the county's verify list")
+        _check_gov(ev["seq"], ev.get("evidence") or {}, ("host", "url", "agency", "quote", "publishedAt"))
     if kind == "cleared":
         if not clearance_enabled:
             raise Refused(f"seq {ev['seq']}: clearance is disabled for this county")
@@ -227,7 +236,10 @@ def apply(state: dict, ev: dict) -> None:
                 r.update(status="active", fields=dict(ev["fields"]), lastReported=ev["stime"], recheck=[],
                          missingSince=None, reopenedAt=None, evidence=None)
             return
+        was = rank(r["fields"])
         r["fields"], reasons = _merge_up(r["fields"], ev["fields"])
+        if ev.get("raisedBy") and rank(r["fields"]) > was:
+            r["raisedBy"] = ev["raisedBy"]
         if st and st > parse(r["lastReported"]):
             r["lastReported"] = ev["stime"]
         r["missingSince"] = None
