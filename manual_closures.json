@@ -183,10 +183,10 @@
   "id": "man-portmalabar-turkeycreek",
   "road": "Port Malabar Blvd at Turkey Creek",
   "where": "Port Malabar Blvd NE at the Turkey Creek crossing (near Turkey Creek Sanctuary)",
-  "title": "Port Malabar Blvd partly washed out, Turkey Creek overflowing",
+  "title": "Port Malabar Blvd closed: washed out at Turkey Creek",
   "city": "Palm Bay",
-  "status": "flooded",
-  "fullClosure": false,
+  "status": "closed",
+  "fullClosure": true,
   "lat": 28.0195,
   "lng": -80.6075,
   "approx": true,
@@ -194,8 +194,8 @@
   "sourceUrl": "https://mynews13.com/fl/orlando/news/2026/11/02/brevard-school-officials-cancel-classes-due-to-weather-concerns",
   "reported": "2026-11-02T16:26:00Z",
   "updated": "2026-11-02T16:26:00Z",
-  "note": "Parts of road washed out; exact segment and closure status not stated, agency not named. Pin approximate.",
-  "lanes": "Unknown; washout reported"
+  "note": "Spectrum News 13: parts of the road washed out when Turkey Creek overflowed. Listed as closed ('Port Malabar Boulevard is washed out') in the WESH 2 list of Brevard roads closed because of flooding: https://www.newsbeep.com/795319/ . Exact limits not given. Pin approximate.",
+  "lanes": "Closed (road washed out)"
  },
  {
   "id": "man-knecht-ne",
