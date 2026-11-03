@@ -147,7 +147,8 @@ forged = {"rid": A, "kind": "cleared", "src": "manual", "actor": "someone", "sti
 forged["eid"] = E.eid_of(forged, json.loads(lines[-1])["eid"])
 open(edited, "w").write(open(p).read() + E.canon(forged) + "\n")
 rc, err = run_check(before, edited)
-check("check_events fails on a hand-written cleared event while clearance is disabled", rc == 1 and "disabled" in err)
+check("check_events fails on a hand-written cleared event (only an FHP drop can clear)",
+      rc == 1 and ("disabled" in err or "FHP" in err))
 
 # 5b. Baseline handling --------------------------------------------------------------------------------------------
 rc, err = run_check(os.path.join(tmp, "no-such-file"), p)

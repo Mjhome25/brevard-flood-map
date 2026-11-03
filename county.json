@@ -21,8 +21,11 @@
   "fl511County": "Brevard",
   "streetLayer": "https://gis.brevardfl.gov/gissrv/rest/services/Emergency_Management/9_1_1_Emergency_Response_Layers/MapServer/1/query",
   "clearance": {
-    "enabled": false,
-    "note": "No road may be cleared until the verifier (batch 3) and the reopened display (batch 4) qualify together. Hosts are added only after vetting against an official reference.",
+    "enabled": true,
+    "kinds": [
+      "fhp-dropped"
+    ],
+    "note": "Mike, Nov 3 2026: 'ok if FHP drops it, lets clear it for now.' Only an FHP crash the FHP live CAD page stops listing (gone on two successful fetches) is cleared, citing the FHP page. Temporary; to be revisited. Every other clearance still needs a cited official reopening (not installed).",
     "hosts": {}
   },
   "verify": {

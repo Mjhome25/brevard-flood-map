@@ -218,7 +218,22 @@ def validate(ev: dict, prev_seq: int, clearance_enabled: bool, prev_eid: str = "
     if kind == "cleared":
         if not clearance_enabled:
             raise Refused(f"seq {ev['seq']}: clearance is disabled for this county")
-        raise Refused(f"seq {ev['seq']}: no clearance verifier is installed yet")  # batch 3 replaces this
+        _check_fhp_drop(ev)
+
+
+FHP_URL = "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
+
+
+def _check_fhp_drop(ev: dict) -> None:
+    """The only clearance installed (Mike, Nov 3, "ok if FHP drops it, lets clear it for now"): an FHP crash the
+    FHP live CAD page no longer lists, seen gone on two successful fetches. Its evidence names the FHP page, when the
+    crash was first missing, and when it was confirmed gone (the clearance time). Nothing else can be cleared."""
+    v = ev.get("evidence") or {}
+    keys = {"kind", "agency", "url", "missingSince", "reopenedAt"}
+    if (set(v) != keys or v["kind"] != "fhp-dropped" or v["url"] != FHP_URL or v["agency"] != "Florida Highway Patrol"
+            or ev.get("src") != "fhp" or not str(ev.get("rid", "")).split(":")[1:2] == ["fhp"]
+            or not parse(v["missingSince"]) or v["reopenedAt"] != ev["at"] or parse(v["missingSince"]) >= parse(ev["at"])):
+        raise Refused(f"seq {ev['seq']}: the only clearance is an FHP crash the FHP page stopped listing")
 
 
 # ---- writing (the only writer) ---------------------------------------------------------------------------------
@@ -236,9 +251,11 @@ def append(new: list[dict], path: str = EVENTS, clearance_enabled: bool = False,
     at = iso(now or utcnow())
     written = []
     for raw in new:
-        if raw.get("kind") == "cleared":
+        if raw.get("kind") == "cleared" and (raw.get("evidence") or {}).get("kind") != "fhp-dropped":
             raise Refused("cleared events come only from the verifier path")
         ev = {k: v for k, v in raw.items() if k not in ("seq", "at", "eid")}
+        if ev["kind"] == "cleared":  # the clearance time is the time it is written
+            ev["evidence"] = dict(ev["evidence"], reopenedAt=at)
         ev["seq"], ev["at"], ev["eid"] = seq + 1, at, eid_of(ev, prev)
         ev = {k: ev[k] for k in ("seq", "at", "eid", *sorted(k for k in ev if k not in ("seq", "at", "eid")))}
         validate(ev, seq, clearance_enabled, prev)
@@ -313,7 +330,9 @@ def apply(state: dict, ev: dict) -> None:
                          "statusAt": ev["stime"], "episodeStart": ev["stime"]}
             return
         if r["status"] == "reopened":
-            if st and st > parse(r["reopenedAt"]):
+            # an FHP crash listed again after it dropped off is active again (its source time is the old Received time)
+            again = (r["evidence"] or {}).get("kind") == "fhp-dropped" and parse(ev["at"]) > parse(r["reopenedAt"])
+            if again or (st and st > parse(r["reopenedAt"])):
                 r.update(status="active", fields=dict(ev["fields"]), lastReported=ev["stime"], recheck=[],
                          missingSince=None, reopenedAt=None, evidence=None, verified=None, raisedBy=None,
                          statusAt=ev["stime"], episodeStart=ev["stime"])  # a new incarnation never inherits the old one's badge
@@ -352,7 +371,11 @@ def apply(state: dict, ev: dict) -> None:
         if not r.get("verified") or ev["evidence"]["publishedDate"] >= r["verified"]["publishedDate"]:
             r["verified"] = ev["evidence"]
     elif kind == "cleared":
-        r.update(status="reopened", reopenedAt=ev["evidence"]["reopenedAt"], evidence=ev["evidence"])
+        v = ev["evidence"]
+        if v.get("kind") == "fhp-dropped" and not (r["status"] == "active" and r["src"] == "fhp"
+                                                    and r["missingSince"] == v["missingSince"]):
+            return  # only a still-missing FHP record, gone since the time its evidence says
+        r.update(status="reopened", reopenedAt=v["reopenedAt"], evidence=v)
 
 
 def _episode(r: dict) -> str:

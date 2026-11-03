@@ -187,7 +187,8 @@ def stime_of(it: dict, fallback: str = "") -> str:
     return fallback
 
 
-def plan(obs: dict, state: dict, now: str, county: str = "brevard") -> tuple[list[dict], list[str]]:
+def plan(obs: dict, state: dict, now: str, county: str = "brevard", fhp_clears: bool = False
+         ) -> tuple[list[dict], list[str]]:
     """The events this run adds, and notes for the page's errors list."""
     new, notes = [], []
     for src, health in sorted(obs.get("sources", {}).items()):
@@ -215,6 +216,11 @@ def plan(obs: dict, state: dict, now: str, county: str = "brevard") -> tuple[lis
         for r in recs:
             if r["rid"] not in observed and not r["missingSince"]:
                 new.append({"rid": r["rid"], "kind": "missing", "src": src, "actor": "reconcile", "stime": now})
+            elif r["rid"] not in observed and src == "fhp" and fhp_clears and health == "up":
+                # Mike (Nov 3), for now: an FHP crash still gone on the next successful fetch is cleared, citing FHP
+                new.append({"rid": r["rid"], "kind": "cleared", "src": src, "actor": "reconcile", "stime": now,
+                            "evidence": {"kind": "fhp-dropped", "agency": FEEDS["fhp"]["agency"], "url": E.FHP_URL,
+                                         "missingSince": r["missingSince"], "reopenedAt": ""}})
     return new, notes
 
 
@@ -258,9 +264,10 @@ def display(state: dict) -> tuple[list[dict], list[dict]]:
                 # An old source remark such as "Roadway Open" is not a verified reopening; show it as a dated note.
                 it["lanes"] = f"Source said \"{it['lanes']}\" ({r['firstReported'][:16].replace('T', ' ')} UTC); not a verified reopening"
             items.append(it)
-        elif r["show"] == "green":
+        elif r["show"] == "green":  # cleared in the last day: listed with its citation, not drawn on the map
             it.update(reopenedAt=r["reopenedAt"], evidence=r["evidence"])
             reopened.append(it)
+    reopened.sort(key=lambda it: it["reopenedAt"], reverse=True)
     items.sort(key=lambda it: it["id"])
     return merge_nws(items), reopened
 
@@ -323,8 +330,9 @@ def main() -> int:
     obs = json.load(open(OBS))
     now = E.utcnow()
     state = E.derive(E.load(), now)
-    new, notes = plan(obs, state, E.iso(now), county["id"])
-    written = E.append(new, clearance_enabled=bool(county.get("clearance", {}).get("enabled")), now=now)
+    clearance = county.get("clearance", {})
+    new, notes = plan(obs, state, E.iso(now), county["id"], fhp_clears="fhp-dropped" in clearance.get("kinds", []))
+    written = E.append(new, clearance_enabled=bool(clearance.get("enabled")), now=now)
     state = E.derive(E.load(), now)
     items, reopened = display(state)
     data = {"generated": obs["generated"], "errors": obs.get("errors", []) + notes, "items": items,

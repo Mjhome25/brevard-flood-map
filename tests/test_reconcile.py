@@ -448,6 +448,49 @@ tpl = open(os.path.join(repo, "template.html")).read()
 check("the page's government NWS badge names what the government reporter said (flooding or road closure)",
       "'Government verified '+esc(gw)" in tpl and "g.status==='closed'?'road closure':'flooding'" in tpl)
 
+# Mike (Nov 3), for now: an FHP crash the FHP page stops listing is cleared on the next successful fetch, cited
+def runc(path, obs, hours):
+    now = T0 + datetime.timedelta(hours=hours)
+    new, _ = R.plan(obs, E.derive(E.load(path), now), E.iso(now), fhp_clears=True)
+    E.append(new, path, clearance_enabled=True, now=now)
+    return E.derive(E.load(path), now)
+crash = {"id": "fhp-1", "layer": "FHP", "status": "mvc", "road": "I-95", "spot": "at Palm Bay Rd",
+         "reported": "2026-11-02T13:00:00Z", "updated": "2026-11-02T13:00:00Z", "title": "Crash at I-95"}
+other = dict(crash, id="fhp-2", spot="at Malabar Rd", road="I-95")
+fl = item(7)
+crid = R.rid_of(crash)
+pc = os.path.join(tmp, "clear.jsonl")
+runc(pc, {"sources": {"fhp": "up", "fl511": "up"}, "items": [crash, other, fl]}, 0)
+s1 = runc(pc, {"sources": {"fhp": "up", "fl511": "up"}, "items": [other]}, 0.25)
+check("FHP drop: first miss only flags it (missing), still active",
+      s1["records"][crid]["status"] == "active" and s1["records"][crid]["missingSince"])
+s2 = runc(pc, {"sources": {"fhp": "down", "fl511": "up"}, "items": [other]}, 0.5)
+check("FHP drop: no clearing while the FHP page is down", s2["records"][crid]["status"] == "active")
+s3 = runc(pc, {"sources": {"fhp": "up", "fl511": "up"}, "items": [other]}, 0.75)
+ev = s3["records"][crid]["evidence"] or {}
+check("FHP drop: still gone on the next successful fetch -> cleared, citing the FHP page and both times",
+      s3["records"][crid]["status"] == "reopened" and ev.get("kind") == "fhp-dropped" and ev.get("url") == E.FHP_URL
+      and ev.get("missingSince") == s1["records"][crid]["missingSince"] and ev.get("reopenedAt"))
+check("FL511 dropping a closure never clears it", s3["records"]["brevard:fl511:7"]["status"] == "active")
+items3, cleared3 = R.display(s3)
+check("a cleared FHP crash leaves the map and is listed as cleared, with its evidence",
+      crid not in {i["id"] for i in items3} and cleared3 and cleared3[0]["evidence"]["kind"] == "fhp-dropped")
+check("check_events accepts the FHP-drop clearance with clearance enabled", subprocess.run(
+    [sys.executable, "-I", os.path.join(repo, "check_events.py"), "--before", "", "--bootstrap", "--events", pc],
+    capture_output=True).returncode == 0)
+s4 = runc(pc, {"sources": {"fhp": "up", "fl511": "up"}, "items": [crash, other]}, 1)
+check("the same FHP crash listed again after clearing is active again", s4["records"][crid]["status"] == "active")
+for bad, why in (({"kind": "fhp-dropped", "agency": "Florida Highway Patrol", "url": E.FHP_URL,
+                   "missingSince": "2026-11-02T12:00:00Z", "reopenedAt": ""}, "an FL511 record"),
+                 ({"kind": "official", "url": "https://example.com", "reopenedAt": ""}, "another clearance kind")):
+    try:
+        E.append([{"rid": "brevard:fl511:7", "src": "fl511", "kind": "cleared", "actor": "x", "evidence": bad}], pc,
+                 clearance_enabled=True)
+        ok = E.derive(E.load(pc))["records"]["brevard:fl511:7"]["status"] == "active"
+    except E.Refused:
+        ok = True
+    check(f"no clearance for {why}", ok)
+
 # FHP ids are the same in separate processes (the old id used Python's per-process hash)
 code = ("import sys; sys.path.insert(0, sys.argv[1]); import reconcile as R; "
         "print(R.rid_of({'layer': 'FHP', 'id': 'fhp-x', 'reported': '2026-11-02T14:14:28Z', "
