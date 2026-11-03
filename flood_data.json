@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-03T19:15:49Z",
+ "generated": "2026-11-03T19:30:49Z",
  "errors": [],
  "items": [
   {
@@ -734,41 +734,6 @@
   {
    "fullClosure": false,
    "lanes": "No Roadblock",
-   "lat": 28.1720886209925,
-   "layer": "FHP",
-   "lng": -80.6719020463109,
-   "reported": "2026-11-03T06:22:38Z",
-   "road": "N WICKHAM RD",
-   "roadShort": "N Wickham Rd",
-   "source": "FHP live CAD",
-   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-   "spot": "at Post Rd",
-   "status": "caution",
-   "title": "MVC at N WICKHAM RD x[POST RD] [MELBOURNE] (No Roadblock)",
-   "where": "N Wickham Rd at Post Rd",
-   "id": "brevard:fhp:20261103062238-88d5c6e2",
-   "updated": "2026-11-03T06:22:38Z",
-   "lastReported": "2026-11-03T06:22:38Z",
-   "firstReported": "2026-11-03T06:22:38Z",
-   "verified": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "kind": "feed",
-    "publishedAt": "2026-11-03T06:22:38Z"
-   },
-   "awaitingOfficial": true,
-   "missingSince": "2026-11-03T19:16:02Z",
-   "recheck": [],
-   "noLongerListed": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "since": "2026-11-03T19:16:02Z",
-    "wasClosed": false
-   }
-  },
-  {
-   "fullClosure": false,
-   "lanes": "No Roadblock",
    "lat": 28.2668358761528,
    "layer": "FHP",
    "lng": -80.7364321289582,
@@ -1094,9 +1059,15 @@
     "kind": "feed",
     "publishedAt": "2026-11-03T13:31:52Z"
    },
-   "awaitingOfficial": false,
-   "missingSince": null,
-   "recheck": []
+   "awaitingOfficial": true,
+   "missingSince": "2026-11-03T19:30:55Z",
+   "recheck": [],
+   "noLongerListed": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "since": "2026-11-03T19:30:55Z",
+    "wasClosed": false
+   }
   },
   {
    "from": "S Sail Dr",
@@ -1476,8 +1447,8 @@
    "to": "Pine St",
    "where": "US-192 EB at Minton Rd/S Wickham Rd",
    "id": "brevard:fl511:937010",
-   "updated": "2026-11-03T18:42:00Z",
-   "lastReported": "2026-11-03T18:42:00Z",
+   "updated": "2026-11-03T19:17:00Z",
+   "lastReported": "2026-11-03T19:17:00Z",
    "firstReported": "2026-11-02T19:54:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
@@ -1742,8 +1713,8 @@
    "to": "Circle Dr",
    "where": "US-192 EB beyond Coastal Ln",
    "id": "brevard:fl511:937141",
-   "updated": "2026-11-03T18:43:00Z",
-   "lastReported": "2026-11-03T18:43:00Z",
+   "updated": "2026-11-03T19:17:00Z",
+   "lastReported": "2026-11-03T19:17:00Z",
    "firstReported": "2026-11-02T19:54:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
@@ -1900,8 +1871,8 @@
    "to": "Coastal Ln",
    "where": "US-192 WB at S John Rodes Blvd",
    "id": "brevard:fl511:937222",
-   "updated": "2026-11-03T18:44:00Z",
-   "lastReported": "2026-11-03T18:44:00Z",
+   "updated": "2026-11-03T19:18:00Z",
+   "lastReported": "2026-11-03T19:18:00Z",
    "firstReported": "2026-11-02T19:54:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
@@ -2512,8 +2483,8 @@
    "title": "Traffic lights not working on US-192 / Vine St / Bronson Hwy East, at S John Rodes Blvd",
    "where": "US-192 EB at S John Rodes Blvd",
    "id": "brevard:fl511:938257",
-   "updated": "2026-11-03T18:45:00Z",
-   "lastReported": "2026-11-03T18:45:00Z",
+   "updated": "2026-11-03T19:18:00Z",
+   "lastReported": "2026-11-03T19:18:00Z",
    "firstReported": "2026-11-03T03:18:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
@@ -5853,6 +5824,41 @@
   }
  ],
  "reopened": [
+  {
+   "fullClosure": false,
+   "lanes": "No Roadblock",
+   "lat": 28.1720886209925,
+   "layer": "FHP",
+   "lng": -80.6719020463109,
+   "reported": "2026-11-03T06:22:38Z",
+   "road": "N WICKHAM RD",
+   "roadShort": "N Wickham Rd",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "spot": "at Post Rd",
+   "status": "caution",
+   "title": "MVC at N WICKHAM RD x[POST RD] [MELBOURNE] (No Roadblock)",
+   "where": "N Wickham Rd at Post Rd",
+   "id": "brevard:fhp:20261103062238-88d5c6e2",
+   "updated": "2026-11-03T06:22:38Z",
+   "lastReported": "2026-11-03T06:22:38Z",
+   "firstReported": "2026-11-03T06:22:38Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-03T06:22:38Z"
+   },
+   "reopenedAt": "2026-11-03T19:30:55Z",
+   "evidence": {
+    "agency": "Florida Highway Patrol",
+    "kind": "fhp-dropped",
+    "missingSince": "2026-11-03T19:16:02Z",
+    "reopenedAt": "2026-11-03T19:30:55Z",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
+   },
+   "stillReported": []
+  },
   {
    "fullClosure": false,
    "lat": 28.1139329512516,
