@@ -144,11 +144,11 @@ def pin_shape(fields: dict) -> dict:
 
 
 def located(fields: dict) -> bool:
-    """On the map: finite coordinates inside the county box, or a drawn line."""
+    """On the map: finite coordinates inside the county box (the page draws nothing, line included, without them)."""
     try:
         lat, lng = float(fields.get("lat")), float(fields.get("lng"))
     except (TypeError, ValueError):
-        return bool(fields.get("line"))
+        return False
     box = E.BREVARD_BOX
     return box[0] <= lat <= box[1] and box[2] <= lng <= box[3]
 
@@ -244,6 +244,19 @@ def read_post(page: str, now: datetime.datetime) -> dict:
     return {"date": date, "time": time, "items": items}
 
 
+def _day(stamp: str) -> str:
+    return E.parse(stamp).astimezone(E.ET).strftime("%Y-%m-%d") if "T" in stamp else stamp
+
+
+def after(a: str, b: str) -> bool:
+    """Stamp a is provably later than b (a stated time, or an Eastern publish date). A date-only stamp on the same day
+    as another stamp cannot be ordered against it."""
+    da, db = _day(a), _day(b)
+    if da != db:
+        return da > db
+    return "T" in a and "T" in b and a > b
+
+
 def place_key(c: dict) -> str:
     return "|".join([c["scope"], c["road"], *sorted(c["cross"]), *c["dirs"]])
 
@@ -316,29 +329,33 @@ def run(now: datetime.datetime, prev: dict | None = None, get=fetch, events_path
                                "readAt": E.iso(now)}
             if not claims and not review:
                 out["unavailable"].append({"url": u, "state": "no-supported-sentences"})
-        latest = {}
+        found = {}
         for u, p in out["posts"].items():
             if p.get("agency") != src["agency"] or p.get("error") or p.get("outside"):
                 continue
             stamp = p["time"] or p["date"]
             for c in p["claims"]:
-                k = place_key(c)
-                cur = latest.get(k)
-                if cur and cur["stamp"] == stamp and cur["claim"] != c["claim"]:
-                    latest[k] = dict(cur, ambiguous=True)
-                elif not cur or stamp > cur["stamp"]:
-                    latest[k] = dict(c, stamp=stamp, url=u)
+                found.setdefault(place_key(c), []).append(dict(c, stamp=stamp, url=u))
+        latest = {}
+        for k, cs in found.items():
+            # the newest claims are those no other claim is provably later than; differing ones stay a contradiction
+            top = [c for c in cs if not any(after(o["stamp"], c["stamp"]) for o in cs)]
+            top.sort(key=lambda c: ("T" in c["stamp"], c["stamp"]), reverse=True)
+            latest[k] = dict(top[0])
+            if len({c["claim"] for c in top}) > 1:
+                latest[k].update(ambiguous=True, evidence=[{"source": c["url"], "sentence": c["sentence"],
+                                                            "claim": c["claim"], "sourceTime": c["stamp"]} for c in top])
         stamps = [p["time"] or p["date"] for p in out["posts"].values()
                   if p.get("agency") == src["agency"] and not p.get("error") and not p.get("outside")]
-        newest = max(stamps) if stamps else ""
-        opens = [c for c in latest.values() if c["claim"] == "open" and c["scope"] == "whole" and not c.get("context")]
+        opens = [c for c in latest.values() if c["claim"] == "open" and c["scope"] == "whole" and not c.get("context")
+                 and not c.get("ambiguous")]
         rows = []
         for k, c in sorted(latest.items()):
             resolved = None
             if c["claim"] == "closure" and not c.get("ambiguous"):
                 # a later whole-road open statement for this road, from the city itself or accepted in our history
-                later = [o for o in opens if o["road"] == c["road"] and o["stamp"] > c["stamp"]]
-                acc = [o for o in official if o["road"] == c["road"] and o["at"] > c["stamp"]]
+                later = [o for o in opens if o["road"] == c["road"] and after(o["stamp"], c["stamp"])]
+                acc = [o for o in official if o["road"] == c["road"] and after(o["at"], c["stamp"])]
                 if later:
                     resolved = {"verdict": "resolved-by-city", "by": {"source": later[0]["url"], "sentence": later[0]["sentence"],
                                                                       "sourceTime": later[0]["stamp"]}}
@@ -351,9 +368,10 @@ def run(now: datetime.datetime, prev: dict | None = None, get=fetch, events_path
                 v, pins = ("ambiguous", []) if c.get("ambiguous") else judge(c, active)
             rows.append({"place": k, "claim": c["claim"], "scope": c["scope"], "road": c["road"], "cross": c["cross"],
                          "dirs": c["dirs"], "sentence": c["sentence"], "sha256": c["sha256"], "source": c["url"],
-                         "sourceTime": c["stamp"], "inNewest": c["stamp"] == newest, "verdict": v, "pins": pins,
+                         "sourceTime": c["stamp"], "inNewest": not any(after(x, c["stamp"]) for x in stamps), "verdict": v, "pins": pins,
                          **({"resolvedBy": resolved["by"]} if resolved else {}),
-                         **({"context": c["context"]} if c.get("context") else {})})
+                         **({"context": c["context"]} if c.get("context") else {}),
+                         **({"evidence": c["evidence"]} if c.get("evidence") else {})})
         summary = {}
         for r in rows:
             summary[r["verdict"]] = summary.get(r["verdict"], 0) + 1

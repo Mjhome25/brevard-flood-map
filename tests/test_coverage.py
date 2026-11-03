@@ -217,5 +217,30 @@ check("the ledger line names the pilot and the pending sources", "Melbourne pilo
 check("a missing coverage file is unavailable in the ledger", A.coverage_line(os.path.join(tmp, "none.json"), NOW)
       == "Coverage: unavailable.")
 
+# Codex #237: chronology a date-only same-day claim cannot be ordered against; ambiguous opens resolve nothing; line-only
+# records are not drawn by the page
+DFL = "Dairy Rd/Florida Ave- remains closed with barricades blocking the roadway."
+def timeline(pages):
+    idx = "".join(f'<a href="{IDX}/{k}">{k}</a>' for k in pages) + f'<a href="{IDX}/Old">o</a>'
+    got = C.run(NOW, None, getter(dict({IDX: idx, IDX + "/Old": PAGES[IDX + "/Old"]},
+                                       **{IDX + "/" + k: v for k, v in pages.items()})), path)
+    rows = got["sources"][0]["rows"]
+    return lambda key: next((r for r in rows if r["place"] == key), {})
+t = timeline({"T": post("8:30 a.m.", ["Dairy Road is open."]), "D": post("", [DFL, "All of Dairy Rd is closed."])})
+check("Codex repro: a same-day date-only closure is not resolved by a timed 8:30 opening (it may be later)",
+      t("point|dairy|florida")["verdict"] not in ("resolved-by-city", "resolved-official"))
+check("Codex repro: a same-place date-only whole closure and a timed same-day opening stay a contradiction with both receipts",
+      t("whole|dairy")["verdict"] == "ambiguous" and {e["claim"] for e in t("whole|dairy")["evidence"]} == {"open", "closure"})
+t = timeline({"T": post("8:30 a.m.", ["Dairy Road is open."]), "D": post("", [DFL], day="02")})
+check("a prior-day closure on Dairy and a current-day timed whole-Dairy opening may resolve",
+      t("point|dairy|florida")["verdict"] == "resolved-by-city" and t("point|dairy|florida")["resolvedBy"]["sourceTime"] > "2026-11-03")
+t = timeline({"A": post("8:30 a.m.", ["Dairy Road is open."]), "B": post("8:30 a.m.", ["All of Dairy Rd is closed."]),
+              "D": post("", [DFL], day="02")})
+check("Codex repro: an ambiguous whole-road opening resolves no other claim; the contradiction stays for review",
+      t("whole|dairy")["verdict"] == "ambiguous" and t("point|dairy|florida")["verdict"] not in ("resolved-by-city", "resolved-official"))
+check("Codex repro: a record with a line but no coordinates is not on the map (the page skips lat==null)",
+      not C.located({"line": [[28.1, -80.6], [28.2, -80.6]]}) and not C.located({"lat": 40.0, "lng": -80.6, "line": [[28.1, -80.6]]})
+      and C.located({"lat": 28.1, "lng": -80.6}))
+
 print("failures:", fails)
 sys.exit(1 if fails else 0)
