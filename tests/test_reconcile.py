@@ -674,22 +674,27 @@ run(pc3, {"sources": {"manual": "up"}, "items": [man("sarno3", road="Sarno Rd", 
 check("a date-only post clears a report from an earlier day, dated the start of its publish day (Eastern)",
       not opened2(DPAGE, pc3, "brevard:manual:sarno3")
       and E.derive(E.load(pc3), NOWO)["records"]["brevard:manual:sarno3"]["reopenedAt"] == "2026-11-03T05:00:00Z")
-# Codex #190: only the update's own heading time dates it; a scheduled next update or any other time is never borrowed
-ST = lambda body: V.stated_time(body, q, "2026-11-03")
-for body, want, why in (
-        ("Nov. 3, 8:30 a.m. traffic update: " + q, "2026-11-03T13:30:00Z", "the heading time"),
-        ("8:30am traffic update; next update scheduled 10:30am; " + q, "2026-11-03T13:30:00Z",
-         "a scheduled next update (10:30) after the heading"),
-        ("Next 10:30 a.m. update will follow. " + q, "", "a 'next ... update' time is not the post's own"),
-        ("Crews arrived at 9:15 a.m. " + q, "", "a time that does not name the update"),
-        ("8:30 a.m. traffic update. 10:30 a.m. update: " + q, "", "two different update times (ambiguous)"),
-        (q + " 10:30 a.m. update", "", "a time after the sentence")):
-    check(f"stated time: {why} -> {want or 'date-only'}", ST(body) == want)
+# Codex #190/#204: only a whole update-heading paragraph above the sentence dates it; prose or scheduled times never do
+ST = lambda units: V.stated_time(units + [q], q, "2026-11-03")
+for units, want, why in (
+        (["Nov. 3, 8:30 a.m. traffic update:"], "2026-11-03T13:30:00Z", "the heading paragraph"),
+        (["8:30 a.m. update"], "2026-11-03T13:30:00Z", "a heading without a date"),
+        (["8:30am traffic update; next update scheduled 10:30am;"], "", "a heading line that goes on into prose"),
+        (["We will post a 10:30 a.m. update."], "", "a future update named in prose (Codex #204)"),
+        (["Next 10:30 a.m. update"], "", "a 'next' heading-like line"),
+        (["Crews arrived at 9:15 a.m."], "", "a time that does not name the update"),
+        (["Nov. 3, 8:30 a.m. traffic update:", "10:30 a.m. update:"], "", "two different update times (ambiguous)"),
+        (["Nov. 2, 8:30 a.m. traffic update:"], "", "a heading dated another day"),
+        ([], "", "no heading")):
+    check(f"stated time: {why} -> {want or 'date-only'}", ST(units) == want)
+check("stated time: a heading after the sentence never dates it",
+      V.stated_time([q, "10:30 a.m. update"], q, "2026-11-03") == "")
 pc4 = os.path.join(tmp, "open-next.jsonl")
 run(pc4, {"sources": {"manual": "up"}, "items": [man("sarno4", road="Sarno Rd", where="Sarno Rd at Eau Gallie Blvd",
      status="closed", reported="2026-11-03T14:45:00Z", updated="2026-11-03T14:45:00Z")]}, 0)
-NPAGE = OPAGE.replace("Nov. 3, 8:30 a.m. traffic update:", "8:30am traffic update; next update scheduled 10:30am;")
-check("Codex #190 repro: a 'next update 10:30' line never lets the 8:30 statement clear a 9:45 report",
+NPAGE = OPAGE.replace("<p>Nov. 3, 8:30 a.m. traffic update:</p>",
+                      "<p>8:30am traffic update; next update scheduled 10:30am;</p><p>We will post a 10:30 a.m. update.</p>")
+check("Codex #190/#204 repros: scheduled or future update times never let the statement clear a 9:45 report",
       "not newer" in opened2(NPAGE, pc4, "brevard:manual:sarno4")
       and E.derive(E.load(pc4), NOWO)["records"]["brevard:manual:sarno4"]["status"] == "active")
 late = [e for e in E.load(po) if e["kind"] == "cleared"][0]

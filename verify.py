@@ -92,8 +92,8 @@ class Posts(html.parser.HTMLParser):
                 self.units[u][1].append(data)
 
 
-def post_of(page: str, quote: str) -> tuple[str, str] | None:
-    """(date, post text) of the one supported post block holding the sentence, with its own 'Published on' before it.
+def post_of(page: str, quote: str) -> tuple[str, str, list[str]] | None:
+    """(date, post text, the post's paragraphs and list items in order) of the one supported post block holding the sentence, with its own 'Published on' before it.
     The sentence must be a whole paragraph or list item of that post on its own: no prefix ("This claim is false:"),
     no continuation ("... no longer in effect"). Otherwise, or with no date or several dates, it is not supported."""
     parser = Posts()
@@ -107,32 +107,36 @@ def post_of(page: str, quote: str) -> tuple[str, str] | None:
         dates = list(PUBLISHED.finditer(text))
         if len(dates) != 1 or dates[0].start() > text.index(quote):
             return None
-        return datetime.datetime.strptime(" ".join(dates[0].groups()), "%B %d %Y").strftime("%Y-%m-%d"), text
+        return (datetime.datetime.strptime(" ".join(dates[0].groups()), "%B %d %Y").strftime("%Y-%m-%d"), text,
+                [flat(u) for j, u in parser.units if j == i])
     return None
 
 
-# The update's own heading time only ("Nov. 3, 8:30 a.m. traffic update"): a time directly naming the update. Any other
-# time in the post (a scheduled next update, an event time) is never borrowed (Codex #190).
-STATED = re.compile(r"(?<![\w:])(\d{1,2}):(\d{2})\s*([ap])\.?\s?m\.?,?\s+(?:(?:traffic|road)\s+)?update\b", re.I)
-NOT_NOW = re.compile(r"\b(?:next|following|upcoming|later|scheduled|another)\W+(?:\w+\W+){0,3}$", re.I)
+# The update's own heading, as a whole paragraph on its own ("Nov. 3, 8:30 a.m. traffic update:"): optional date, the
+# time, then "update". A time anywhere else (prose, a scheduled next update) can never date the post (Codex #190/#204).
+_MON = r"(?P<mon>Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Sept|Oct|Nov|Dec)[a-z]*\.?"
+HEADING = re.compile(rf"(?:{_MON}\s+(?P<day>\d{{1,2}}),?\s+)?(?P<h>\d{{1,2}}):(?P<m>\d{{2}})\s*(?P<ap>[ap])\.?\s?m\.?,?"
+                     r"\s+(?:(?:traffic|road)\s+)?update:?", re.I)
 
 
-def stated_time(post: str, quote: str, published: str) -> str:
-    """The update's own heading time, in Eastern time on the publish day; "" (date-only) when the post names no
-    update time before the sentence, or names more than one (ambiguous)."""
-    head = post[:post.index(quote)]
+def stated_time(units: list[str], quote: str, published: str) -> str:
+    """The time of the update heading above the sentence, in Eastern time on the publish day; "" (date-only) when there
+    is no such heading, its date is not the publish day, or there is more than one heading time (ambiguous)."""
+    day = datetime.datetime.strptime(published, "%Y-%m-%d")
     times = set()
-    for m in STATED.finditer(head):
-        if NOT_NOW.search(head[max(0, m.start() - 40):m.start()]):
+    for u in units[:units.index(quote)] if quote in units else []:
+        m = HEADING.fullmatch(u.strip())
+        if not m:
             continue
-        h, mi, ap = int(m.group(1)), int(m.group(2)), m.group(3).lower()
+        if m["mon"] and (m["mon"][:3].title() != day.strftime("%b") or int(m["day"]) != day.day):
+            return ""
+        h, mi = int(m["h"]), int(m["m"])
         if not (1 <= h <= 12 and mi < 60):
             return ""
-        times.add((h % 12 + (12 if ap == "p" else 0), mi))
+        times.add((h % 12 + (12 if m["ap"].lower() == "p" else 0), mi))
     if len(times) != 1:
         return ""
     (h, mi), = times
-    day = datetime.datetime.strptime(published, "%Y-%m-%d")
     return E.iso(day.replace(hour=h, minute=mi, tzinfo=E.ET))
 
 
@@ -178,7 +182,7 @@ def issue(rid: str, url: str, quote: str, raise_to: str | None, page: str, final
         clearance = json.load(open(os.path.join(E.HERE, "county.json"))).get("clearance", {})
         if not (clearance.get("enabled") and "official" in clearance.get("kinds", [])):
             raise E.Refused("official reopenings are not enabled for this county")
-        stated = stated_time(post[1], quote, published)
+        stated = stated_time(post[2], quote, published)
         if not E.official_after({"sourceTime": stated, "publishedDate": published}, rec["lastReported"]):
             raise E.Refused(f"the statement ({stated or published + ', no time given'}) is not newer than this road's "
                             f"latest report ({rec['lastReported']}); a same-day report with a date-only post stays")
