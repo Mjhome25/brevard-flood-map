@@ -1,7 +1,38 @@
 {
- "generated": "2026-11-03T17:30:39Z",
- "errors": [],
+ "generated": "2026-11-03T17:45:36Z",
+ "errors": [
+  "FL511 map locations: 3 report(s) without a pin"
+ ],
  "items": [
+  {
+   "fullClosure": true,
+   "lanes": "Malabar Rd Closed Between Us 1 And Marie St",
+   "lat": 28.0043366754502,
+   "layer": "FHP",
+   "lng": -80.5636179775855,
+   "reported": "2026-11-02T09:39:43Z",
+   "road": "US-1 [WEST OF]",
+   "roadShort": "US-1 [West Of]",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "spot": "at Malabar Rd",
+   "status": "flooded",
+   "title": "Road Closed Due To Water at US-1 [WEST OF] x[MALABAR RD] [MALABAR] (Malabar Rd Closed Between Us 1 And Marie St)",
+   "where": "US-1 [West Of] at Malabar Rd",
+   "id": "brevard:fhp:20261102093943-1755147b",
+   "updated": "2026-11-02T09:39:43Z",
+   "lastReported": "2026-11-02T09:39:43Z",
+   "firstReported": "2026-11-02T09:39:43Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-02T09:39:43Z"
+   },
+   "awaitingOfficial": false,
+   "missingSince": null,
+   "recheck": []
+  },
   {
    "fullClosure": true,
    "lanes": "Malabar Rd Closed Between Us 1 And Marie St",
@@ -27,9 +58,15 @@
     "kind": "feed",
     "publishedAt": "2026-11-02T09:39:43Z"
    },
-   "awaitingOfficial": false,
-   "missingSince": null,
-   "recheck": []
+   "awaitingOfficial": true,
+   "missingSince": "2026-11-03T17:45:52Z",
+   "recheck": [],
+   "noLongerListed": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "since": "2026-11-03T17:45:52Z",
+    "wasClosed": true
+   }
   },
   {
    "fullClosure": true,
@@ -1211,6 +1248,40 @@
     "kind": "feed",
     "publishedAt": "2026-11-03T17:16:20Z"
    },
+   "awaitingOfficial": true,
+   "missingSince": "2026-11-03T17:45:52Z",
+   "recheck": [],
+   "noLongerListed": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "since": "2026-11-03T17:45:52Z",
+    "wasClosed": false
+   }
+  },
+  {
+   "fullClosure": false,
+   "lat": 28.1139329512516,
+   "layer": "FHP",
+   "lng": -80.7060114228013,
+   "reported": "2026-11-03T17:30:29Z",
+   "road": "I-95 NB [MM183]",
+   "roadShort": "I-95 Nb [MM183]",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "spot": "at Mm183",
+   "status": "caution",
+   "title": "MVC at I-95 NB [MM183] x[MM183] [MELBOURNE]",
+   "where": "I-95 Nb [MM183] at Mm183",
+   "id": "brevard:fhp:20261103173029-68d24a6b",
+   "updated": "2026-11-03T17:30:29Z",
+   "lastReported": "2026-11-03T17:30:29Z",
+   "firstReported": "2026-11-03T17:30:29Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-03T17:30:29Z"
+   },
    "awaitingOfficial": false,
    "missingSince": null,
    "recheck": []
@@ -1276,8 +1347,8 @@
    "to": "Pine St",
    "where": "US-192 EB at Minton Rd/S Wickham Rd",
    "id": "brevard:fl511:937010",
-   "updated": "2026-11-03T17:02:00Z",
-   "lastReported": "2026-11-03T17:02:00Z",
+   "updated": "2026-11-03T17:38:00Z",
+   "lastReported": "2026-11-03T17:38:00Z",
    "firstReported": "2026-11-02T19:54:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
@@ -1542,8 +1613,8 @@
    "to": "Circle Dr",
    "where": "US-192 EB beyond Coastal Ln",
    "id": "brevard:fl511:937141",
-   "updated": "2026-11-03T17:02:00Z",
-   "lastReported": "2026-11-03T17:02:00Z",
+   "updated": "2026-11-03T17:38:00Z",
+   "lastReported": "2026-11-03T17:38:00Z",
    "firstReported": "2026-11-02T19:54:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
@@ -1700,8 +1771,8 @@
    "to": "Coastal Ln",
    "where": "US-192 WB at S John Rodes Blvd",
    "id": "brevard:fl511:937222",
-   "updated": "2026-11-03T17:02:00Z",
-   "lastReported": "2026-11-03T17:02:00Z",
+   "updated": "2026-11-03T17:38:00Z",
+   "lastReported": "2026-11-03T17:38:00Z",
    "firstReported": "2026-11-02T19:54:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
@@ -2052,8 +2123,8 @@
    "to": "Highway 1",
    "where": "SR-514 EB at US-1",
    "id": "brevard:fl511:937844",
-   "updated": "2026-11-03T17:02:00Z",
-   "lastReported": "2026-11-03T17:02:00Z",
+   "updated": "2026-11-03T17:38:00Z",
+   "lastReported": "2026-11-03T17:38:00Z",
    "firstReported": "2026-11-02T23:15:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
@@ -2552,8 +2623,8 @@
    "to": "S John Rodes Blvd",
    "where": "Ellis Rd both directions at I-95 Northbound",
    "id": "brevard:fl511:938811",
-   "updated": "2026-11-03T17:14:00Z",
-   "lastReported": "2026-11-03T17:14:00Z",
+   "updated": "2026-11-03T17:31:00Z",
+   "lastReported": "2026-11-03T17:31:00Z",
    "firstReported": "2026-11-03T13:43:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
@@ -2721,6 +2792,190 @@
     "url": "https://fl511.com",
     "kind": "feed",
     "publishedAt": "2026-11-03T17:11:00Z"
+   },
+   "awaitingOfficial": false,
+   "missingSince": null,
+   "recheck": []
+  },
+  {
+   "dir": "SB",
+   "from": "W Eau Gallie Blvd",
+   "fullClosure": true,
+   "lanes": "All lanes closed",
+   "lat": 28.1200589197526,
+   "layer": "Closures",
+   "line": [
+    [
+     28.120588,
+     -80.70028
+    ],
+    [
+     28.120106,
+     -80.700279
+    ],
+    [
+     28.120059,
+     -80.70028
+    ],
+    [
+     28.118997,
+     -80.700295
+    ],
+    [
+     28.117579,
+     -80.700294
+    ]
+   ],
+   "lng": -80.70027,
+   "reported": "2026-11-03T17:31:00Z",
+   "road": "CR-511",
+   "roadShort": "CR-511",
+   "source": "FL511 (FDOT)",
+   "sourceUrl": "https://fl511.com",
+   "status": "flooded",
+   "title": "Flooding on CR-511 Southbound At SR-518 Eastbound. All lanes closed.<div class='cellSpacer'><i><b>Comments:</b></i> John Rodes from SR 518 to US 192 is closed</div>",
+   "to": "Enterprise Ct",
+   "where": "CR-511 SB",
+   "id": "brevard:fl511:939199",
+   "updated": "2026-11-03T17:33:00Z",
+   "lastReported": "2026-11-03T17:33:00Z",
+   "firstReported": "2026-11-03T17:33:00Z",
+   "verified": {
+    "agency": "FL511 (FDOT)",
+    "url": "https://fl511.com",
+    "kind": "feed",
+    "publishedAt": "2026-11-03T17:33:00Z"
+   },
+   "awaitingOfficial": false,
+   "missingSince": null,
+   "recheck": []
+  },
+  {
+   "dir": "NB",
+   "from": "W New Haven Ave",
+   "fullClosure": true,
+   "lanes": "All lanes closed",
+   "lat": 28.0794471036223,
+   "layer": "Closures",
+   "line": [
+    [
+     28.078975,
+     -80.70019
+    ],
+    [
+     28.079048,
+     -80.700166
+    ],
+    [
+     28.079447,
+     -80.700158
+    ],
+    [
+     28.080695,
+     -80.700132
+    ]
+   ],
+   "lng": -80.70018,
+   "reported": "2026-11-03T17:34:00Z",
+   "road": "CR-511",
+   "roadShort": "CR-511",
+   "source": "FL511 (FDOT)",
+   "sourceUrl": "https://fl511.com",
+   "status": "flooded",
+   "title": "Flooding on CR-511 Northbound At US-192 Westbound. All lanes closed.",
+   "to": "Rogers Pl",
+   "where": "CR-511 NB",
+   "id": "brevard:fl511:939202",
+   "updated": "2026-11-03T17:34:00Z",
+   "lastReported": "2026-11-03T17:34:00Z",
+   "firstReported": "2026-11-03T17:34:00Z",
+   "verified": {
+    "agency": "FL511 (FDOT)",
+    "url": "https://fl511.com",
+    "kind": "feed",
+    "publishedAt": "2026-11-03T17:34:00Z"
+   },
+   "awaitingOfficial": false,
+   "missingSince": null,
+   "recheck": []
+  },
+  {
+   "dir": "both directions",
+   "from": "Fortune Pl",
+   "fullClosure": true,
+   "lanes": "All lanes closed",
+   "lat": 28.0989396362947,
+   "layer": "Closures",
+   "line": [
+    [
+     28.094737,
+     -80.700208
+    ],
+    [
+     28.095391,
+     -80.700216
+    ],
+    [
+     28.095694,
+     -80.700215
+    ],
+    [
+     28.096429,
+     -80.700207
+    ],
+    [
+     28.097324,
+     -80.700213
+    ],
+    [
+     28.098337,
+     -80.700212
+    ],
+    [
+     28.098938,
+     -80.700211
+    ],
+    [
+     28.09894,
+     -80.700211
+    ],
+    [
+     28.100774,
+     -80.700217
+    ],
+    [
+     28.101686,
+     -80.700224
+    ],
+    [
+     28.102404,
+     -80.700222
+    ],
+    [
+     28.104668,
+     -80.700234
+    ]
+   ],
+   "lng": -80.70021,
+   "reported": "2026-11-03T17:38:00Z",
+   "road": "CR-511",
+   "roadShort": "CR-511",
+   "source": "FL511 (FDOT)",
+   "sourceUrl": "https://fl511.com",
+   "spot": "At Ellis Rd",
+   "status": "flooded",
+   "title": "Flooding on CR-511 Both Directions At Ellis Rd. All lanes closed.",
+   "to": "Waterfront St",
+   "where": "CR-511 both directions At Ellis Rd",
+   "id": "brevard:fl511:939209",
+   "updated": "2026-11-03T17:41:00Z",
+   "lastReported": "2026-11-03T17:41:00Z",
+   "firstReported": "2026-11-03T17:41:00Z",
+   "verified": {
+    "agency": "FL511 (FDOT)",
+    "url": "https://fl511.com",
+    "kind": "feed",
+    "publishedAt": "2026-11-03T17:41:00Z"
    },
    "awaitingOfficial": false,
    "missingSince": null,

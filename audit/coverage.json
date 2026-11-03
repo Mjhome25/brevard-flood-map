@@ -1,5 +1,5 @@
 {
- "checkedAt": "2026-11-03T17:30:53Z",
+ "checkedAt": "2026-11-03T17:45:52Z",
  "fresh": true,
  "pilot": "City of Melbourne",
  "pending": [
@@ -775,7 +775,7 @@
     "resolved-by-city": 1,
     "no-active-pin": 1,
     "older-unresolved": 5,
-    "needs-review": 11
+    "needs-review": 12
    }
   }
  ],
@@ -934,8 +934,8 @@
     }
    ],
    "needsReview": [],
-   "sha256": "045dbaec0b54d42b31a6d354d6d2445b102bc144ec7982f0c561e5ee7972b5f4",
-   "readAt": "2026-11-03T17:30:53Z"
+   "sha256": "cfe5a6a14d3615dae2fc68e0836187ade249cf5a4c71b6a75529543ce1a3f443",
+   "readAt": "2026-11-03T17:45:52Z"
   },
   "https://www.melbourneflorida.org/Government/City-News/Traffic-Advisories/Road-Closures-1020": {
    "agency": "City of Melbourne",
@@ -1032,8 +1032,8 @@
    "needsReview": [
     "d54071e726fa2354c58e08d89eb84b6797fc16d3ebe4259b1f257e4db1a39e2a"
    ],
-   "sha256": "3fe863d5d9c5282517aaabd0eb8c61d58f96fb61bd3648203a93672b29606c8d",
-   "readAt": "2026-11-03T17:30:53Z"
+   "sha256": "fbbd683715edda5705df079a99c6617769a97cec32d09f28bcfb456999e895e2",
+   "readAt": "2026-11-03T17:45:52Z"
   },
   "https://www.melbourneflorida.org/Government/City-News/Traffic-Advisories/Road-Closures-0830": {
    "agency": "City of Melbourne",
@@ -1474,6 +1474,78 @@
   "https://www.melbourneflorida.org/Government/City-News/Traffic-Advisories/Lane-Closure-Country-Club-Road": {
    "date": "2026-10-27",
    "outside": true
+  },
+  "https://www.melbourneflorida.org/Government/City-News/Traffic-Advisories/Road-Closures-1150": {
+   "agency": "City of Melbourne",
+   "date": "2026-11-03",
+   "time": "2026-11-03T16:50:00Z",
+   "claims": [
+    {
+     "claim": "closure",
+     "scope": "point",
+     "road": "eau gallie",
+     "cross": [
+      "john rodes"
+     ],
+     "dirs": [
+      "SB"
+     ],
+     "sentence": "Eau Gallie Blvd/ John Rodes Blvd- southbound remains closed with barricades blocking the roadway.",
+     "sha256": "2c9805ea3219402ec4ea7707669ed6991eb9f9a9961d2cb7d9ca6265573e6a78"
+    },
+    {
+     "claim": "open",
+     "scope": "whole",
+     "road": "sarno",
+     "cross": [],
+     "dirs": [],
+     "sentence": "Sarno Road is open, but there are some infrastructure issues on the shoulder.",
+     "sha256": "5070f04e5804846f6538408c391579793d19758a2a93b38de8c54bbd6c090861"
+    },
+    {
+     "claim": "closure",
+     "scope": "point",
+     "road": "eber",
+     "cross": [
+      "babcock"
+     ],
+     "dirs": [
+      "EB",
+      "SB"
+     ],
+     "sentence": "Eber Blvd/Babcock St- southbound and eastbound remains closed with barricades blocking the roadway.",
+     "sha256": "fd088a0bad3a30b07513ba03827da4124b6ddbdc460cc5463a9e5ff91c74a6d1"
+    },
+    {
+     "claim": "closure",
+     "scope": "point",
+     "road": "florida",
+     "cross": [
+      "dairy"
+     ],
+     "dirs": [
+      "EB"
+     ],
+     "sentence": "Florida Ave/Dairy Rd- eastbound remains closed with barricades blocking the roadway.",
+     "sha256": "6a2ce68f2f27c8382552cb7bc4f7fb86a18dbfb0cb0811ad7edeea6d97b47c0d"
+    },
+    {
+     "claim": "closure",
+     "scope": "point",
+     "road": "sun lakes",
+     "cross": [
+      "babcock"
+     ],
+     "dirs": [],
+     "sentence": "Sunlake Rd/Babcock St- remains closed with barricades blocking the roadway.",
+     "sha256": "d5dfe1bf454eecbe65c642bcfc251e0391ff7284843830f0a841a81f2be17e73"
+    }
+   ],
+   "needsReview": [
+    "9e46547042046a48bf68a9c51e6e8dd4bae89001c507c957662f2239def46d47"
+   ],
+   "sha256": "471ba6a6a5fd7b016b06911fa78514c45b2b7ab4e64b492d9fc5f6a0fa73e6a7",
+   "readAt": "2026-11-03T17:45:52Z"
   }
  }
 }
