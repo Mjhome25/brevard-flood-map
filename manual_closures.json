@@ -661,9 +661,9 @@
   "approx": true,
   "source": "City of Melbourne",
   "sourceUrl": "https://www.melbourneflorida.org/Government/City-News/Traffic-Advisories/Road-Closures-Dairy-Babcock-Lake-Washington",
-  "reported": "2026-11-02T12:00:00Z",
+  "reported": "2026-11-02T17:00:00Z",
   "updated": "2026-11-03T07:12:24Z",
-  "note": "City of Melbourne traffic update, published Nov 2 (no time given): 'All of Dairy Road is closed.' The city's list (via Space Coast Daily) also names Dairy Rd at Snicole Rd and at Edgewood Dr. Pin approximate; the whole road is closed. The city gives a date only (Nov 2), so the first-report time is shown as midday Nov 2. Also on the WESH 2 closed-roads list published Nov 3 7:12 UTC: https://www.newsbeep.com/795319/"
+  "note": "City of Melbourne traffic update, published Nov 2 (no time given): 'All of Dairy Road is closed.' The city's list (via Space Coast Daily) also names Dairy Rd at Snicole Rd and at Edgewood Dr. Pin approximate; the whole road is closed. The city gives a date only (Nov 2), so the first-report time is shown as noon Eastern on Nov 2 (an estimate). Also on the WESH 2 closed-roads list published Nov 3 7:12 UTC: https://www.newsbeep.com/795319/"
  },
  {
   "id": "man-all-lake-washington-rd",
@@ -679,9 +679,9 @@
   "approx": true,
   "source": "City of Melbourne",
   "sourceUrl": "https://www.melbourneflorida.org/Government/City-News/Traffic-Advisories/Road-Closures-Dairy-Babcock-Lake-Washington",
-  "reported": "2026-11-02T12:00:00Z",
+  "reported": "2026-11-02T17:00:00Z",
   "updated": "2026-11-03T07:12:24Z",
-  "note": "City of Melbourne traffic update, published Nov 2 (no time given): 'All of Lake Washington Road is closed.' Pin approximate; the whole road is closed. The city gives a date only (Nov 2), so the first-report time is shown as midday Nov 2. Also on the WESH 2 closed-roads list published Nov 3 7:12 UTC: https://www.newsbeep.com/795319/"
+  "note": "City of Melbourne traffic update, published Nov 2 (no time given): 'All of Lake Washington Road is closed.' Pin approximate; the whole road is closed. The city gives a date only (Nov 2), so the first-report time is shown as noon Eastern on Nov 2 (an estimate). Also on the WESH 2 closed-roads list published Nov 3 7:12 UTC: https://www.newsbeep.com/795319/"
  },
  {
   "id": "man-dubber-rd",
