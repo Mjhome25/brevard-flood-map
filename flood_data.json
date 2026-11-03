@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-03T15:42:08Z",
+ "generated": "2026-11-03T15:45:33Z",
  "errors": [],
  "items": [
   {
@@ -1123,6 +1123,34 @@
    }
   },
   {
+   "fullClosure": false,
+   "lanes": "No Roadblock",
+   "lat": 28.206751559069,
+   "layer": "FHP",
+   "lng": -80.6719050420452,
+   "reported": "2026-11-03T15:42:09Z",
+   "road": "5965 N WICKHAM RD [MELBOURNE]",
+   "roadShort": "5965 N Wickham Rd [Melbourne]",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "status": "caution",
+   "title": "MVC at 5965 N WICKHAM RD [MELBOURNE] (No Roadblock)",
+   "where": "5965 N Wickham Rd [Melbourne]",
+   "id": "brevard:fhp:20261103154209-98e87cc1",
+   "updated": "2026-11-03T15:42:09Z",
+   "lastReported": "2026-11-03T15:42:09Z",
+   "firstReported": "2026-11-03T15:42:09Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-03T15:42:09Z"
+   },
+   "awaitingOfficial": false,
+   "missingSince": null,
+   "recheck": []
+  },
+  {
    "dir": "EB",
    "from": "Hickory St",
    "fullClosure": true,
@@ -1953,8 +1981,8 @@
    "to": "Highway 1",
    "where": "SR-514 EB at US-1",
    "id": "brevard:fl511:937844",
-   "updated": "2026-11-03T15:10:00Z",
-   "lastReported": "2026-11-03T15:10:00Z",
+   "updated": "2026-11-03T15:44:00Z",
+   "lastReported": "2026-11-03T15:44:00Z",
    "firstReported": "2026-11-02T23:15:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
