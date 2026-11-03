@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-03T21:30:42Z",
+ "generated": "2026-11-03T21:45:42Z",
  "errors": [],
  "items": [
   {
@@ -1021,6 +1021,88 @@
     "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
     "kind": "feed",
     "publishedAt": "2026-11-03T08:52:18Z"
+   },
+   "awaitingOfficial": false,
+   "missingSince": null,
+   "recheck": []
+  },
+  {
+   "fullClosure": false,
+   "lanes": "Source said \"Road Open\" (2026-11-03 09:31 UTC); not a verified reopening",
+   "lat": 28.2804243170839,
+   "layer": "FHP",
+   "lng": -80.7143258891384,
+   "reported": "2026-11-03T09:31:55Z",
+   "road": "CLUBHOUSE DR [1600 CLUB HOUSE]",
+   "roadShort": "Clubhouse Dr [1600 Club House]",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "spot": "at Templeton Pl",
+   "status": "caution",
+   "title": "MVC at CLUBHOUSE DR [1600 CLUB HOUSE] x[TEMPLETON PL] [ROCKLEDGE] (Road Open)",
+   "where": "Clubhouse Dr [1600 Club House] at Templeton Pl",
+   "id": "brevard:fhp:20261103093155-02e72f6c",
+   "updated": "2026-11-03T09:31:55Z",
+   "lastReported": "2026-11-03T09:31:55Z",
+   "firstReported": "2026-11-03T09:31:55Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-03T09:31:55Z"
+   },
+   "awaitingOfficial": false,
+   "missingSince": null,
+   "recheck": []
+  },
+  {
+   "from": "Ruthann Cir",
+   "fullClosure": false,
+   "lanes": "Unknown Road Block",
+   "lat": 28.1865805928854,
+   "layer": "FHP",
+   "line": [
+    [
+     28.184595,
+     -80.672131
+    ],
+    [
+     28.185665,
+     -80.672138
+    ],
+    [
+     28.186581,
+     -80.672137
+    ],
+    [
+     28.186658,
+     -80.672137
+    ],
+    [
+     28.189367,
+     -80.672119
+    ]
+   ],
+   "lng": -80.6720939578278,
+   "reported": "2026-11-03T09:37:20Z",
+   "road": "N WICKHAM RD",
+   "roadShort": "N Wickham Rd",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "spot": "at Summer Brook St",
+   "status": "closed",
+   "title": "MVC at N WICKHAM RD x[SUMMER BROOK ST] [MELBOURNE] (Unknown Road Block)",
+   "to": "Constellation Dr",
+   "where": "N Wickham Rd at Summer Brook St",
+   "id": "brevard:fhp:20261103093720-6ceb1787",
+   "updated": "2026-11-03T09:37:20Z",
+   "lastReported": "2026-11-03T09:37:20Z",
+   "firstReported": "2026-11-03T09:37:20Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-03T09:37:20Z"
    },
    "awaitingOfficial": false,
    "missingSince": null,
