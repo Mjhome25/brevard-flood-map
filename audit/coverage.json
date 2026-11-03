@@ -1,5 +1,5 @@
 {
- "checkedAt": "2026-11-03T22:45:38Z",
+ "checkedAt": "2026-11-03T23:02:54Z",
  "fresh": true,
  "pilot": "City of Melbourne",
  "pending": [
@@ -761,8 +761,10 @@
      "source": "https://www.melbourneflorida.org/Government/City-News/Traffic-Advisories/Copy-of-Road-Closures-1150",
      "sourceTime": "2026-11-03T16:50:00Z",
      "inNewest": false,
-     "verdict": "no-active-pin",
-     "pins": []
+     "verdict": "reopen-review",
+     "pins": [
+      "brevard:manual:sarno-rd-at-wickham-rd"
+     ]
     }
    ],
    "summary": {
@@ -771,9 +773,8 @@
     "direction-unstated": 2,
     "covered-road": 3,
     "unlocated": 2,
-    "reopen-review": 3,
+    "reopen-review": 4,
     "resolved-by-city": 1,
-    "no-active-pin": 1,
     "older-unresolved": 6,
     "needs-review": 19
    }
@@ -1607,8 +1608,8 @@
    "needsReview": [
     "0034d78371196ede2a8228bda807ad82d45b4a1f24031814f0a540732938db51"
    ],
-   "sha256": "14a4585f859d84db9446afeb9f195a10868c7b22bd93d81f6eff6014ca9b8d4a",
-   "readAt": "2026-11-03T22:45:38Z"
+   "sha256": "43bf29967ef957b1abe2d3159ae0d8e42e8afeb7f5c3d74d7aaee7dd7b9d7765",
+   "readAt": "2026-11-03T23:02:54Z"
   },
   "https://www.melbourneflorida.org/Government/City-News/Traffic-Advisories/Road-Closures-1450": {
    "agency": "City of Melbourne",
@@ -1620,8 +1621,8 @@
     "679866428cf4406fd68d4376fb3934bf99e6e314857217c03f7ed8a888d60e4f",
     "746cdc91f2e0b08cdb9dadc4c9f958c6d390971a96b2908eb8496905fb973e6f"
    ],
-   "sha256": "7c25800236162be32c71471703953ee0efade405834d5d8178685cf72e961dd3",
-   "readAt": "2026-11-03T22:45:38Z"
+   "sha256": "c82f685628ec4ea359435a3d024e7884ec2f44a1301028b8182f60b95ae40a95",
+   "readAt": "2026-11-03T23:02:54Z"
   },
   "https://www.melbourneflorida.org/Government/City-News/Traffic-Advisories/Road-Closures-1525": {
    "agency": "City of Melbourne",
@@ -1633,8 +1634,8 @@
     "97e677fe040fc517ea06a0c0051d7e189466888dc0cbea88d01828d21040db05",
     "746cdc91f2e0b08cdb9dadc4c9f958c6d390971a96b2908eb8496905fb973e6f"
    ],
-   "sha256": "098b2a09e650fe64a59db615391da0997a4ea24fcc63979e696e144fabd642af",
-   "readAt": "2026-11-03T22:45:38Z"
+   "sha256": "603353f31b1aa8d23679e856d314e02de83dd64df95f6ba11f804a4cbba2a1c5",
+   "readAt": "2026-11-03T23:02:54Z"
   }
  }
 }

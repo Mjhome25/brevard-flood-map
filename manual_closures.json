@@ -1102,5 +1102,23 @@
   "note": "Spectrum News 13 updated its story at 3:38 PM ET and added this item to the City of Melbourne's list. It says the turn lanes are closed because flooding is affecting eastbound travel on Ellis Rd. The coordinates are approximate, near the I-95 / Ellis Rd–NASA Blvd interchange. In the same update the city also says some roads reopened Tuesday, but it does not name them.",
   "id": "man-i-95-nb-and-sb-off-ramps-turn-lanes-to-e",
   "updated": "2026-11-03T20:38:00Z"
+ },
+ {
+  "road": "Sarno Rd",
+  "where": "Sarno Rd at Wickham Rd",
+  "title": "Floodwaters remain high at Sarno Rd and Wickham Rd",
+  "city": "Melbourne",
+  "status": "flooded",
+  "fullClosure": false,
+  "lanes": "Intersection flooded; closure status not stated",
+  "lat": 28.137,
+  "lng": -80.668,
+  "approx": true,
+  "source": "FOX 35 Orlando",
+  "sourceUrl": "https://www.fox35orlando.com/news/floodwaters-remain-high-melbourne-intersection-crews-work-clear-roads",
+  "reported": "2026-11-03T00:00:00Z",
+  "note": "Water stayed high Monday evening even after crews cleared storm drains. Officials warned it could take several days for water levels to return to normal. Avoid the area, especially after dark. Pin approximate.",
+  "id": "man-sarno-rd-at-wickham-rd",
+  "updated": "2026-11-03T00:00:00Z"
  }
 ]
