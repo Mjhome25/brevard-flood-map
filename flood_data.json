@@ -1,8 +1,6 @@
 {
- "generated": "2026-11-03T14:45:28Z",
- "errors": [
-  "FL511 Closures: 'NoneType' object has no attribute 'group'"
- ],
+ "generated": "2026-11-03T14:59:25Z",
+ "errors": [],
  "items": [
   {
    "fullClosure": true,
@@ -1195,8 +1193,8 @@
    "to": "Pine St",
    "where": "US-192 EB at Minton Rd/S Wickham Rd",
    "id": "brevard:fl511:937010",
-   "updated": "2026-11-03T12:58:00Z",
-   "lastReported": "2026-11-03T12:58:00Z",
+   "updated": "2026-11-03T14:37:00Z",
+   "lastReported": "2026-11-03T14:37:00Z",
    "firstReported": "2026-11-02T19:54:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
@@ -1461,8 +1459,8 @@
    "to": "Circle Dr",
    "where": "US-192 EB beyond Coastal Ln",
    "id": "brevard:fl511:937141",
-   "updated": "2026-11-03T12:58:00Z",
-   "lastReported": "2026-11-03T12:58:00Z",
+   "updated": "2026-11-03T14:37:00Z",
+   "lastReported": "2026-11-03T14:37:00Z",
    "firstReported": "2026-11-02T19:54:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
@@ -1619,8 +1617,8 @@
    "to": "Coastal Ln",
    "where": "US-192 WB at S John Rodes Blvd",
    "id": "brevard:fl511:937222",
-   "updated": "2026-11-03T12:58:00Z",
-   "lastReported": "2026-11-03T12:58:00Z",
+   "updated": "2026-11-03T14:37:00Z",
+   "lastReported": "2026-11-03T14:37:00Z",
    "firstReported": "2026-11-02T19:54:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
@@ -1919,8 +1917,8 @@
    "title": "Flooding on US-1 South, before SR-514. All lanes closed",
    "where": "US-1 SB before SR-514",
    "id": "brevard:fl511:937842",
-   "updated": "2026-11-03T12:58:00Z",
-   "lastReported": "2026-11-03T12:58:00Z",
+   "updated": "2026-11-03T14:37:00Z",
+   "lastReported": "2026-11-03T14:37:00Z",
    "firstReported": "2026-11-02T23:15:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
@@ -1965,8 +1963,8 @@
    "to": "Highway 1",
    "where": "SR-514 EB at US-1",
    "id": "brevard:fl511:937844",
-   "updated": "2026-11-03T12:57:00Z",
-   "lastReported": "2026-11-03T12:57:00Z",
+   "updated": "2026-11-03T14:37:00Z",
+   "lastReported": "2026-11-03T14:37:00Z",
    "firstReported": "2026-11-02T23:15:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
@@ -2421,6 +2419,64 @@
    }
   },
   {
+   "dir": "both directions",
+   "from": "I 95 Hwy",
+   "fullClosure": true,
+   "lanes": "All lanes closed",
+   "lat": 28.0986342673557,
+   "layer": "Closures",
+   "line": [
+    [
+     28.098492,
+     -80.704218
+    ],
+    [
+     28.098542,
+     -80.703567
+    ],
+    [
+     28.098684,
+     -80.702528
+    ],
+    [
+     28.098731,
+     -80.702184
+    ],
+    [
+     28.098962,
+     -80.700669
+    ],
+    [
+     28.098938,
+     -80.700211
+    ]
+   ],
+   "lng": -80.702519357298,
+   "reported": "2026-11-03T13:41:00Z",
+   "road": "Ellis Rd",
+   "roadShort": "Ellis Rd",
+   "source": "FL511 (FDOT)",
+   "sourceUrl": "https://fl511.com",
+   "spot": "at I-95 Northbound",
+   "status": "flooded",
+   "title": "Flooding on Ellis Rd Both Directions at I-95 Northbound. All lanes closed.",
+   "to": "S John Rodes Blvd",
+   "where": "Ellis Rd both directions at I-95 Northbound",
+   "id": "brevard:fl511:938811",
+   "updated": "2026-11-03T13:43:00Z",
+   "lastReported": "2026-11-03T13:43:00Z",
+   "firstReported": "2026-11-03T13:43:00Z",
+   "verified": {
+    "agency": "FL511 (FDOT)",
+    "url": "https://fl511.com",
+    "kind": "feed",
+    "publishedAt": "2026-11-03T13:43:00Z"
+   },
+   "awaitingOfficial": false,
+   "missingSince": null,
+   "recheck": []
+  },
+  {
    "dir": "EB",
    "fullClosure": false,
    "lanes": "Right shoulder blocked",
@@ -2455,6 +2511,55 @@
     "url": "https://fl511.com",
     "kind": "feed",
     "publishedAt": "2026-11-03T13:45:00Z"
+   },
+   "awaitingOfficial": false,
+   "missingSince": null,
+   "recheck": []
+  },
+  {
+   "from": "Malabar Rd",
+   "fullClosure": true,
+   "lanes": "All lanes closed",
+   "lat": 28.0011443804258,
+   "layer": "Closures",
+   "line": [
+    [
+     28.001099,
+     -80.573026
+    ],
+    [
+     28.001144,
+     -80.573032
+    ],
+    [
+     28.001471,
+     -80.573074
+    ],
+    [
+     28.005152,
+     -80.572965
+    ]
+   ],
+   "lng": -80.5730301118899,
+   "reported": "2026-11-03T14:28:00Z",
+   "road": "Marie St",
+   "roadShort": "Marie St",
+   "source": "FL511 (FDOT)",
+   "sourceUrl": "https://fl511.com",
+   "spot": "At SR-514",
+   "status": "flooded",
+   "title": "Flooding on Marie St All Directions At SR-514. All lanes closed.",
+   "to": "Johnston Ave",
+   "where": "Marie St At SR-514",
+   "id": "brevard:fl511:938907",
+   "updated": "2026-11-03T14:30:00Z",
+   "lastReported": "2026-11-03T14:30:00Z",
+   "firstReported": "2026-11-03T14:30:00Z",
+   "verified": {
+    "agency": "FL511 (FDOT)",
+    "url": "https://fl511.com",
+    "kind": "feed",
+    "publishedAt": "2026-11-03T14:30:00Z"
    },
    "awaitingOfficial": false,
    "missingSince": null,
@@ -4148,8 +4253,8 @@
    "since": "2026-11-03T10:49:24Z"
   },
   "fl511": {
-   "state": "down",
-   "since": "2026-11-03T13:46:49Z"
+   "state": "up",
+   "since": "2026-11-03T14:59:36Z"
   },
   "manual": {
    "state": "up",
