@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-03T01:15:28Z",
+ "generated": "2026-11-03T01:30:30Z",
  "errors": [],
  "items": [
   {
@@ -708,7 +708,7 @@
    "status": "caution",
    "fullClosure": false,
    "reported": "2026-11-02T23:57:00Z",
-   "updated": "2026-11-03T00:40:00Z",
+   "updated": "2026-11-03T01:29:00Z",
    "lat": 28.130089,
    "lng": -80.705866,
    "layer": "Incidents",
@@ -733,7 +733,26 @@
    "where": "I-95 NB at MM 184"
   },
   {
-   "id": "fhp-11022026081213-4399",
+   "id": "fhp-11022026082754-3452",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "road": "SR-528 WB [MM52]",
+   "title": "MVC at SR-528 WB [MM52] x[MM52] [MERRITT ISLAND]",
+   "status": "caution",
+   "fullClosure": false,
+   "reported": "2026-11-02T13:27:54Z",
+   "updated": "2026-11-02T13:27:54Z",
+   "lat": 28.405322345191,
+   "lng": -80.6528467666249,
+   "layer": "FHP",
+   "roadShort": "SR-528 Wb [MM52]",
+   "dir": "",
+   "spot": "at Mm52",
+   "lanes": "",
+   "where": "SR-528 Wb [MM52] at Mm52"
+  },
+  {
+   "id": "fhp-11022026081213-5381",
    "source": "FHP live CAD",
    "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
    "road": "N WICKHAM RD",
@@ -741,7 +760,7 @@
    "status": "closed",
    "fullClosure": true,
    "reported": "2026-11-02T13:12:13Z",
-   "updated": "2026-11-02T13:12:13Z",
+   "updated": "2026-11-02T13:17:10Z",
    "lat": 28.2009644971454,
    "lng": -80.6721034952351,
    "layer": "FHP",
@@ -804,7 +823,7 @@
    ]
   },
   {
-   "id": "fhp-11022026060625-1773",
+   "id": "fhp-11022026060625-6225",
    "source": "FHP live CAD",
    "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
    "road": "I-95 SB [MM205]",
@@ -823,7 +842,7 @@
    "where": "I-95 Sb [MM205] at Mm205"
   },
   {
-   "id": "fhp-11022026043943-7270",
+   "id": "fhp-11022026043943-9895",
    "source": "FHP live CAD",
    "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
    "road": "US-1 [2 MILES SOF]",
@@ -842,7 +861,7 @@
    "where": "US-1 [2 Miles Sof] at Malabar Rd"
   },
   {
-   "id": "fhp-11022026112806-8671",
+   "id": "fhp-11022026112806-3148",
    "source": "FHP live CAD",
    "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
    "road": "NORFOLK PKWY",
@@ -1089,7 +1108,7 @@
    ]
   },
   {
-   "id": "fhp-11022026112110-938",
+   "id": "fhp-11022026112110-6286",
    "source": "FHP live CAD",
    "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
    "road": "PALM BAY RD NE [ENT RAMP TO]",
@@ -1108,7 +1127,7 @@
    "where": "Palm Bay Rd Ne [Ent Ramp To] at I-95 Nb"
   },
   {
-   "id": "fhp-11022026090844-2654",
+   "id": "fhp-11022026090844-7786",
    "source": "FHP live CAD",
    "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
    "road": "US-1",
@@ -1159,7 +1178,7 @@
    ]
   },
   {
-   "id": "fhp-11022026065558-738",
+   "id": "fhp-11022026065558-1554",
    "source": "FHP live CAD",
    "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
    "road": "W NEW HAVEN AVE",
