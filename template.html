@@ -65,6 +65,14 @@ h1,h2,h3{margin:0;text-wrap:balance}
 .legend svg{width:16px;height:16px;flex:none;overflow:visible}
 .legend .zone{width:16px;height:11px;border:2px dashed var(--zone);background:color-mix(in srgb,var(--zone) 12%,transparent);border-radius:2px}
 .mk{background:none;border:0}
+.vb{display:flex;gap:8px;align-items:flex-start;margin:8px 0 6px;padding:7px 9px;border-radius:8px;line-height:1.35}
+.vb.ok{background:var(--ok-bg);color:var(--ok-fg)}.vb.unv{background:var(--watch-bg);color:var(--watch-fg)}
+.vb .seal{flex:none;display:grid;place-items:center;width:22px;height:22px;border-radius:50%;font:700 13px/1 var(--font);color:#fff}
+.vb.ok .seal{background:var(--ok)}.vb.unv .seal{background:var(--caution);color:#3a2a00}
+.vb b{display:block;font-size:13px}.vb .d{font-size:12px;opacity:.9}.vb a{color:inherit}
+.vbs{display:inline-flex;align-items:center;gap:4px;font-size:11px;font-weight:600;padding:1px 6px;border-radius:10px;margin-right:6px;vertical-align:1px}
+.vbs.ok{background:var(--ok-bg);color:var(--ok-fg)}.vbs.unv{background:var(--watch-bg);color:var(--watch-fg)}
+.nll{font-size:12px;color:var(--muted);margin-top:4px}
 .leaflet-tooltip.lbl{padding:2px 7px;border-radius:5px;font:600 12px/1.3 var(--font);color:var(--fg);background:var(--panel);border:1px solid var(--line);box-shadow:0 1px 3px rgba(0,0,0,.25);white-space:nowrap}
 .leaflet-tooltip.lbl.closed{border:2px solid var(--closed)}
 .leaflet-tooltip.lbl.closed b{color:var(--closed)}
@@ -397,10 +405,23 @@ h1,h2,h3{margin:0;text-wrap:balance}
   const impact=it=>{ if(isStale(it)) return 'Not re-confirmed'; const l=(it.lanes||'').trim(); if(isClosed(it)) return /all lanes|closed|blocked/i.test(l)?l.replace(/^Road Flooded - Seek Alt Route$/i,'Closed, seek another route'):'Closed at this spot'; return l||({flood:'Water on road',mvc:'MVC',hazard:'Use caution',closure:''}[cause(it)]); };
   const markers=L.layerGroup().addTo(map);
   const byId={};
-  const tier=it=>it.layer==='manual'?(isStale(it)?'Unverified, not re-confirmed for over 10 h':'Unconfirmed report (not from an agency feed)'):'Agency feed';
+  const tier=it=>it.layer==='manual'?'Hand-entered report':'Agency feed';  // verification is shown by the badge
+  // Government verification badge (Mike, Nov 3): verification is shown, never used to clear anything.
+  function claimOf(it){ const k=cause(it); return isClosed(it)?'closure':k==='mvc'?'crash':k==='flood'?'flooding report':'report'; }
+  function vbadge(it){
+    const v=it.verified, pending=it.noLongerListed||it.awaitingOfficial;
+    if(v){
+      const what=v.kind==='feed'?`${esc(v.agency)} listed this ${claimOf(it)} · ${esc(when(v.publishedAt))}`
+        :`${esc(v.agency)}: “${esc(v.quote)}” · published ${esc(new Date(v.publishedAt).toLocaleDateString('en-US',{month:'short',day:'numeric',timeZone:'UTC'}))}`;
+      return `<div class="vb ok" role="note"><span class="seal" aria-hidden="true">✓</span><div><b>Government verified</b><div class="d">${what} · <a href="${esc(v.url)}" target="_blank" rel="noopener">source</a>${pending?'<br>Current status: awaiting official confirmation':''}</div></div></div>`;
+    }
+    return `<div class="vb unv" role="note"><span class="seal" aria-hidden="true">!</span><div><b>Reported, not government verified</b><div class="d">Awaiting government confirmation${it.source?' · reported by '+esc(it.source):''}</div></div></div>`;
+  }
+  const vshort=it=>it.verified?'<span class="vbs ok">✓ Government verified</span>':'<span class="vbs unv">! Not government verified</span>';
+  function nll(it){ const n=it.noLongerListed; return n?`<div class="nll">No longer listed${n.wasClosed?' as closed':''} by <a href="${esc(n.url)}" target="_blank" rel="noopener">${esc(n.agency)}</a> since ${esc(when(n.since))}. Not an official reopening.</div>`:''; }
   function popupHtml(it){
     const c=isClosed(it)&&!isStale(it);
-    return `<b>${c?'<span style="color:'+col('closed')+'">CLOSED</span> · ':''}${esc(c?closedWhere(it):where(it))}</b><br>${esc(impact(it))}${c&&span(it)?`<br><span class="src">Reported ${esc(it.spot||'')}. The stretch shown runs to the nearest cross street on each side.</span>`:''}<div class="src">${esc(it.title)}${it.city?' · '+esc(it.city):''}<br>${tier(it)} · ${esc(it.source)} · ${esc(when(it.updated||it.reported))}${it.approx?' · approximate location':''}${it.note?'<br>'+esc(it.note):''}${it.sourceUrl?'<br><a href="'+esc(it.sourceUrl)+'" target="_blank" rel="noopener">source</a>':''}</div>`;
+    return `<b>${c?'<span style="color:'+col('closed')+'">CLOSED</span> · ':''}${esc(c?closedWhere(it):where(it))}</b>${vbadge(it)}${esc(impact(it))}${nll(it)}${c&&span(it)?`<br><span class="src">Reported ${esc(it.spot||'')}. The stretch shown runs to the nearest cross street on each side.</span>`:''}<div class="src">${esc(it.title)}${it.city?' · '+esc(it.city):''}<br>${tier(it)} · ${esc(it.source)} · ${esc(when(it.updated||it.reported))}${it.approx?' · approximate location':''}${it.note?'<br>'+esc(it.note):''}${it.sourceUrl?'<br><a href="'+esc(it.sourceUrl)+'" target="_blank" rel="noopener">source</a>':''}</div>`;
   }
   const FILT={flood:'f-flood',mvc:'f-mvc',closure:'f-closure',hazard:'f-caution'};
   const shown=k=>document.getElementById(FILT[k]).checked;
@@ -424,7 +445,7 @@ h1,h2,h3{margin:0;text-wrap:balance}
         }
       }
       const m=L.marker([it.lat,it.lng],{icon:mkIcon(it,st),zIndexOffset:(st?0:(closed?800:0)+(4-ORDER[k])*100),title:where(it),keyboard:false}).bindPopup(popupHtml(it));
-      if(!st&&canHover) m.bindTooltip(`${closed?'<b>CLOSED</b> · ':(k==='mvc'?'<b>MVC</b> · ':'')}${esc(closed?closedWhere(it):where(it))}`,{direction:'right',offset:[2,0],className:'lbl '+(closed?'closed':'minor')+' k-'+k,opacity:1});
+      if(!st&&canHover) m.bindTooltip(`${closed?'<b>CLOSED</b> · ':(k==='mvc'?'<b>MVC</b> · ':'')}${esc(closed?closedWhere(it):where(it))}<br>${vshort(it)}`,{direction:'right',offset:[2,0],className:'lbl '+(closed?'closed':'minor')+' k-'+k,opacity:1});
       m.on('click',()=>select(it.id,false)); m.addTo(markers); byId[it.id]=m;
     });
     renderList(vis, byNew);
@@ -432,9 +453,9 @@ h1,h2,h3{margin:0;text-wrap:balance}
   const listEl=document.getElementById('list');
   function rowHtml(it){
     const t=it.updated||it.reported; const old=t&&(Date.now()-new Date(t))>6*3600e3; const stale=isStale(it); const closed=isClosed(it)&&!stale;
-    const badge = it.layer==='manual' ? `<span class="badge unc">${stale?'unverified':'unconfirmed'}</span>` : `<span class="badge feed">${esc(it.layer==='FHP'?'FHP':'FL511')}</span>`;
+    const badge = it.layer==='manual' ? '' : `<span class="badge feed">${esc(it.layer==='FHP'?'FHP':'FL511')}</span>`;
     const isNew=t&&(Date.now()-new Date(t))<3600e3;
-    return `<div class="row" data-id="${esc(it.id)}" tabindex="0" role="button" aria-label="${esc(where(it))}, show on map"><span class="ic">${svgFor(it,stale,.85).html}</span><div class="ttl">${isNew?'<span class="badge new">New</span>':''}${closed?'<span class="badge full">Closed</span>':''}${esc(closed&&span(it)?roadDir(it):where(it))}</div><span class="age ${old?'old':''}" title="${esc(when(t))}">${esc(ago(t))}</span><div class="imp ${closed?'closed':''}">${esc(closed&&span(it)?'Closed '+span(it):impact(it))}</div>${closed&&span(it)?`<div class="imp sub">Reported ${esc(it.spot||'')}${it.lanes?' · '+esc(it.lanes):''}</div>`:''}<div class="meta">${badge}${esc([it.title!==where(it)?it.title:'',it.city,it.source,t?'last reported '+when(t):'',it.awaitingOfficial?'awaiting official reopening':''].filter(Boolean).join(' · '))}${it.lat==null?' · no map location yet':''}</div></div>`;
+    return `<div class="row" data-id="${esc(it.id)}" tabindex="0" role="button" aria-label="${esc(where(it))}, show on map"><span class="ic">${svgFor(it,stale,.85).html}</span><div class="ttl">${isNew?'<span class="badge new">New</span>':''}${closed?'<span class="badge full">Closed</span>':''}${esc(closed&&span(it)?roadDir(it):where(it))}</div><span class="age ${old?'old':''}" title="${esc(when(t))}">${esc(ago(t))}</span><div class="imp ${closed?'closed':''}">${esc(closed&&span(it)?'Closed '+span(it):impact(it))}</div>${closed&&span(it)?`<div class="imp sub">Reported ${esc(it.spot||'')}${it.lanes?' · '+esc(it.lanes):''}</div>`:''}<div class="meta">${vshort(it)}${badge}${esc([it.title!==where(it)?it.title:'',it.city,it.source,t?'last reported '+when(t):'',it.awaitingOfficial?'awaiting official reopening':''].filter(Boolean).join(' · '))}${it.noLongerListed?' · no longer listed'+(it.noLongerListed.wasClosed?' as closed':'')+' by '+esc(it.noLongerListed.agency):''}${it.lat==null?' · no map location yet':''}</div></div>`;
   }
   function renderList(arr, byNew){
     document.getElementById('count').textContent=arr.length;

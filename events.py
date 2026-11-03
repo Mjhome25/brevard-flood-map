@@ -14,6 +14,8 @@ Kinds:
   missing    the source no longer lists it: flag only
   recheck    a reason to look again: flag only
   source     per-source health (`state`: up, down, empty): no record changes
+  verified   a government page confirms the report (`evidence`: host, url, agency, quote, publishedAt): a badge
+             only, never a status change; the newest statement is shown
   cleared    official reopening; written only by the verifier path (batch 3) while county clearance is enabled
 Status comes only from reported and cleared.
 """
@@ -23,10 +25,11 @@ import datetime
 import hashlib
 import json
 import os
+import urllib.parse
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 EVENTS = os.path.join(HERE, "closure_events.jsonl")
-KINDS = ("reported", "relisted", "missing", "recheck", "source", "cleared")
+KINDS = ("reported", "relisted", "missing", "recheck", "source", "verified", "cleared")
 GREEN_HOURS = 24
 RECHECK_AFTER_HOURS = 72
 # Display fields a record carries. Geometry and location (where, lat, lng, approx, line) are set by the first report.
@@ -35,6 +38,14 @@ FIELDS = ("road", "roadShort", "dir", "spot", "where", "title", "city", "status"
 # The closed stretch travels as one set: filled once when the record had none, never moved or narrowed afterwards.
 EXTENT = ("line", "from", "to", "length_m")
 SEVERITY = {"caution": 0, "hazard": 1, "mvc": 1, "flooded": 1, "closed": 2}
+
+
+def verify_hosts(county_path: str = os.path.join(HERE, "county.json")) -> dict:
+    """Exact government hosts whose pages may mark a report Government verified: {host: agency}."""
+    try:
+        return json.load(open(county_path)).get("verify", {}).get("hosts", {})
+    except (OSError, ValueError):
+        return {}
 
 
 class Refused(ValueError):
@@ -108,6 +119,13 @@ def validate(ev: dict, prev_seq: int, clearance_enabled: bool, prev_eid: str = "
         raise Refused(f"seq {ev['seq']}: bad source state")
     if kind == "recheck" and not ev.get("reason"):
         raise Refused(f"seq {ev['seq']}: recheck needs a reason")
+    if kind == "verified":
+        v = ev.get("evidence") or {}
+        hosts = verify_hosts()
+        if not all(v.get(k) for k in ("host", "url", "agency", "quote", "publishedAt")):
+            raise Refused(f"seq {ev['seq']}: verified needs host, url, agency, quote and publishedAt")
+        if v["host"] not in hosts or urllib.parse.urlparse(v["url"]).hostname != v["host"]:
+            raise Refused(f"seq {ev['seq']}: {v.get('host')!r} is not a government host on the county's verify list")
     if kind == "cleared":
         if not clearance_enabled:
             raise Refused(f"seq {ev['seq']}: clearance is disabled for this county")
@@ -202,7 +220,7 @@ def apply(state: dict, ev: dict) -> None:
         if r is None:
             recs[rid] = {"rid": rid, "src": ev.get("src"), "status": "active", "fields": dict(ev["fields"]),
                          "firstReported": ev["stime"], "lastReported": ev["stime"], "recheck": [], "missingSince": None,
-                         "reopenedAt": None, "evidence": None}
+                         "reopenedAt": None, "evidence": None, "verified": None}
             return
         if r["status"] == "reopened":
             if st and st > parse(r["reopenedAt"]):
@@ -224,6 +242,9 @@ def apply(state: dict, ev: dict) -> None:
     elif kind == "recheck":
         if r["status"] == "active" and ev["reason"] not in r["recheck"]:
             r["recheck"].append(ev["reason"])
+    elif kind == "verified":  # the newest official statement wins; earlier ones stay in the history
+        if not r.get("verified") or ev["evidence"]["publishedAt"] >= r["verified"]["publishedAt"]:
+            r["verified"] = ev["evidence"]
     elif kind == "cleared":
         r.update(status="reopened", reopenedAt=ev["evidence"]["reopenedAt"], evidence=ev["evidence"])
 

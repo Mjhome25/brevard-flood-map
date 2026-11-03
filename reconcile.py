@@ -160,14 +160,34 @@ def plan(obs: dict, state: dict, now: str, county: str = "brevard") -> tuple[lis
 _OPEN_WORDS = re.compile(r"\b(?:ro\w*d(?:way)?\s+)?(?:open|clear(?:ed)?)\b", re.I)
 
 
+FEEDS = {"fl511": {"agency": "FL511 (FDOT)", "url": "https://fl511.com"},
+         "fhp": {"agency": "Florida Highway Patrol", "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"}}
+
+
+def verification(r: dict) -> dict | None:
+    """Government verified: the report came from a government feed itself, or a government page confirmed it
+    (a `verified` event). Otherwise None: shown as reported, not government verified."""
+    if r["src"] in FEEDS:
+        return dict(FEEDS[r["src"]], kind="feed", publishedAt=r["firstReported"])
+    if r.get("verified"):
+        return dict(r["verified"], kind="page")
+    return None
+
+
 def display(state: dict) -> tuple[list[dict], list[dict]]:
     """Active records in the page's existing item schema, plus reopened records still inside their green window."""
     items, reopened = [], []
     for r in state["records"].values():
         it = dict(r["fields"], id=r["rid"], updated=r["lastReported"], lastReported=r["lastReported"],
                   firstReported=r["firstReported"])
+        it["verified"] = verification(r)
         if r["status"] == "active":
             it.update(awaitingOfficial=r["awaitingOfficial"], missingSince=r["missingSince"], recheck=r["recheck"])
+            if r["missingSince"] and r["src"] in FEEDS:
+                # Mike: a feed dropping a closure is cited but stays a flag; it is not an official reopening.
+                f = r["fields"]
+                it["noLongerListed"] = dict(FEEDS[r["src"]], since=r["missingSince"],
+                                            wasClosed=f.get("status") == "closed" or bool(f.get("fullClosure")))
             if it.get("lanes") and _OPEN_WORDS.search(it["lanes"]):
                 # An old source remark such as "Roadway Open" is not a verified reopening; show it as a dated note.
                 it["lanes"] = f"Source said \"{it['lanes']}\" ({r['firstReported'][:16].replace('T', ' ')} UTC); not a verified reopening"

@@ -1,15 +1,42 @@
 {
- "id": "brevard",
- "name": "Brevard County",
- "state": "FL",
- "tz": "America/New_York",
- "bbox": {"latMin": 27.80, "latMax": 28.80, "lngMin": -81.10, "lngMax": -80.40},
- "nwsZones": ["FLC009", "FLZ247", "FLZ347", "FLZ447", "FLZ547", "FLZ647", "FLZ747"],
- "fl511County": "Brevard",
- "streetLayer": "https://gis.brevardfl.gov/gissrv/rest/services/Emergency_Management/9_1_1_Emergency_Response_Layers/MapServer/1/query",
- "clearance": {
-  "enabled": false,
-  "note": "No road may be cleared until the verifier (batch 3) and the reopened display (batch 4) qualify together. Hosts are added only after vetting against an official reference.",
-  "hosts": {}
- }
+  "id": "brevard",
+  "name": "Brevard County",
+  "state": "FL",
+  "tz": "America/New_York",
+  "bbox": {
+    "latMin": 27.8,
+    "latMax": 28.8,
+    "lngMin": -81.1,
+    "lngMax": -80.4
+  },
+  "nwsZones": [
+    "FLC009",
+    "FLZ247",
+    "FLZ347",
+    "FLZ447",
+    "FLZ547",
+    "FLZ647",
+    "FLZ747"
+  ],
+  "fl511County": "Brevard",
+  "streetLayer": "https://gis.brevardfl.gov/gissrv/rest/services/Emergency_Management/9_1_1_Emergency_Response_Layers/MapServer/1/query",
+  "clearance": {
+    "enabled": false,
+    "note": "No road may be cleared until the verifier (batch 3) and the reopened display (batch 4) qualify together. Hosts are added only after vetting against an official reference.",
+    "hosts": {}
+  },
+  "verify": {
+    "note": "Exact government hosts whose own pages may mark a report Government verified. Verification never changes status or clears anything.",
+    "hosts": {
+      "www.melbourneflorida.org": "City of Melbourne",
+      "www.titusville.com": "City of Titusville",
+      "www.cocoafl.gov": "City of Cocoa",
+      "www.cityofrockledge.org": "City of Rockledge",
+      "www.westmelbourne.gov": "City of West Melbourne",
+      "www.brevardsheriff.com": "Brevard County Sheriff's Office",
+      "www.fdot.gov": "FDOT",
+      "fl511.com": "FL511 (FDOT)",
+      "trafficincidents.flhsmv.gov": "Florida Highway Patrol"
+    }
+  }
 }
