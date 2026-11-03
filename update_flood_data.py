@@ -10,6 +10,8 @@ Run:  python3 update_flood_data.py   (writes flood_data.json next to it)
 """
 import json, re, html, os, sys, urllib.request, urllib.parse, datetime
 HERE = os.path.dirname(os.path.abspath(__file__))
+sys.path.insert(0, HERE)
+from reconcile import fhp_full_closure  # noqa: E402
 UA = "BrevardFloodMap/0.1 (+https://brevardemergency.com)"
 from zoneinfo import ZoneInfo
 TZ = ZoneInfo("America/New_York")  # FL511 and FHP times are Eastern, across daylight saving
@@ -142,7 +144,7 @@ try:
         items.append({
             "id": f"fhp-{re.sub(r'[^0-9]', '', t_rep)}-{abs(hash(loc)) % 10000}", "source": "FHP live CAD", "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
             "road": loc.split(" x[")[0], "title": f"{typ.title()} at {loc}" + (f" ({remark.title()})" if remark else ""),
-            "status": status, "fullClosure": "ROADBLOCK" in remark.upper() or "ROAD BLOCKED" in remark.upper() or "CLOSED" in typ.upper(),
+            "status": status, "fullClosure": fhp_full_closure(typ, remark),
             "reported": parse_fhp_time(t_rep), "updated": parse_fhp_time(t_arr or t_rep), "lat": lat, "lng": lng, "layer": "FHP",
             "roadShort": " ".join(w if re.search(r"\d", w) else w.title() for w in loc.split(" x[")[0].split()), "dir": "",
             "spot": ("at " + m.group(1).title()) if (m := re.search(r"x\[([^\]]+)\]", loc)) else "",

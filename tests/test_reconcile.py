@@ -74,6 +74,34 @@ check("a valid empty feed with fewer than 3 open records marks them missing (sti
 d = R.display(E.derive(E.load(p)))[0]
 check("display keeps every active record in the page schema", len(d) == 4 and all("where" in it and it["id"] for it in d))
 
+# FHP roadblock wording (the old parser read 'ROADBLOCK' inside 'NO ROADBLOCK' as a full closure)
+cases = [("MVC", "No Roadblock", False), ("MVC", "No Road Block", False), ("MVC W/O ROADBLOCK", "", False),
+         ("MVC WITHOUT ROADBLOCK", "", False), ("MVC", "Partial Roadblock - Use Caution", False),
+         ("MVC", "Roadblock", True), ("MVC", "Road Blocked", True), ("MVC", "All Lanes Blocked", True),
+         ("ROAD CLOSED", "", True), ("MVC", "Roadway Open", False), ("MVC", "Right lane blocked", False),
+         ("MVC W/Roadblock", "Partial Roadblock - Use Caution", True), ("MVC W/O Roadblock", "No Roadblock", False)]
+bad = [(t_, r_) for t_, r_, want in cases if R.fhp_full_closure(t_, r_) != want]
+check(f"FHP full-closure wording: no/w-o/without/partial roadblock are not full closures ({bad})", not bad)
+fix = R.fhp_normalize({"layer": "FHP", "title": "Mvc at BEACHLINE EXPY WB [MM52] (No Roadblock)", "lanes": "No Roadblock",
+                       "fullClosure": True})
+check("migration normalizes the old misreading with an audit note", fix and fix["now"] is False and "parser correction" in fix["reason"])
+check("a correct FHP flag is left alone", R.fhp_normalize({"layer": "FHP", "title": "Mvc at X", "lanes": "Roadblock",
+                                                          "fullClosure": True}) is None)
+p3 = os.path.join(tmp, "c.jsonl")
+fhp = lambda **kw: dict({"id": "fhp-1", "layer": "FHP", "status": "caution", "road": "SR-528", "spot": "at MM52",
+                         "reported": "2026-11-02T11:00:00Z", "updated": "2026-11-02T11:00:00Z", "title": "Mvc at SR-528"}, **kw)
+run(p3, {"sources": {"fhp": "up"}, "items": [fhp(fullClosure=True, lanes="Roadblock")]}, 0)
+w, _, recs = run(p3, {"sources": {"fhp": "up"}, "items": [fhp(fullClosure=False, lanes="No Roadblock",
+                                                              updated="2026-11-02T12:00:00Z")]}, 1)
+r3 = next(iter(recs.values()))
+check("a genuine earlier roadblock followed by 'No Roadblock' stays a full closure, flagged",
+      r3["fields"]["fullClosure"] and r3["recheck"])
+p4 = os.path.join(tmp, "d.jsonl")
+run(p4, {"sources": {"fhp": "up"}, "items": [fhp(fullClosure=False, lanes="Roadway Open")]}, 0)
+it4 = R.display(E.derive(E.load(p4)))[0][0]
+check("a 'Roadway Open' remark on an active record reads as an unverified dated note",
+      it4["lanes"].startswith('Source said "Roadway Open"') and "not a verified reopening" in it4["lanes"])
+
 # FHP ids are the same in separate processes (the old id used Python's per-process hash)
 code = ("import sys; sys.path.insert(0, sys.argv[1]); import reconcile as R; "
         "print(R.rid_of({'layer': 'FHP', 'id': 'fhp-x', 'reported': '2026-11-02T14:14:28Z', "

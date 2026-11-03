@@ -7,6 +7,8 @@ A record seen this run is `reported` (new) or `relisted`; an active record its s
 (a flag, never a status change). Source health is recorded on change. Clearance is not issued here: county clearance
 is disabled until the verifier and the reopened display qualify (Phase 1 batches 3 and 4).
 """
+from __future__ import annotations
+
 import hashlib
 import json
 import os
@@ -19,6 +21,35 @@ import events as E  # noqa: E402
 OBS = os.path.join(E.HERE, "observations.json")
 OUT = os.path.join(E.HERE, "flood_data.json")
 ANOMALY_MIN = 3  # an empty feed while we hold at least this many of its records is treated as a fault, not news
+
+
+_FHP_NOT_FULL = re.compile(r"\b(?:NO|W/?O|WITHOUT|PARTIAL)\s+ROAD\s*BLOCK", re.I)
+_FHP_FULL = re.compile(r"\bROAD\s*BLOCK(?:ED)?\b|\bROAD(?:WAY)?\s+CLOSED\b|\bALL\s+LANES\s+(?:CLOSED|BLOCKED)\b", re.I)
+
+
+def fhp_full_closure(typ: str, remark: str) -> bool:
+    """FHP CAD row: is the road fully blocked? Type and remark are both read; 'NO ROADBLOCK', 'W/O ROADBLOCK' and
+    'PARTIAL ROADBLOCK' are not, but a type 'W/ROADBLOCK' stays a full closure even beside a 'partial' remark: only an
+    explicit negation lowers it."""
+    if re.search(r"CLOSED", typ or "", re.I):
+        return True
+    text = f"{typ or ''} {remark or ''}"
+    return bool(_FHP_FULL.search(_FHP_NOT_FULL.sub(" ", text)))
+
+
+def fhp_normalize(it: dict) -> dict | None:
+    """For an FHP item recorded by the old parser (which read 'ROADBLOCK' inside 'NO ROADBLOCK' or 'PARTIAL
+    ROADBLOCK' as a full closure): the corrected fullClosure with an audit note, or None when nothing changes.
+    The CAD type is the title before ' at ', and the remark is the lanes text."""
+    if it.get("layer") != "FHP":
+        return None
+    typ = (it.get("title") or "").split(" at ")[0]
+    fixed = fhp_full_closure(typ, it.get("lanes") or "")
+    if bool(it.get("fullClosure")) == fixed:
+        return None
+    return {"field": "fullClosure", "was": bool(it.get("fullClosure")), "now": fixed,
+            "reason": f"parser correction: FHP remark '{it.get('lanes', '')}' with type '{typ}' is not a full closure"
+            if not fixed else f"parser correction: FHP type '{typ}' / remark '{it.get('lanes', '')}' is a full closure"}
 
 
 def rid_of(it: dict, county: str = "brevard") -> str:
@@ -79,6 +110,9 @@ def plan(obs: dict, state: dict, now: str, county: str = "brevard") -> tuple[lis
     return new, notes
 
 
+_OPEN_WORDS = re.compile(r"\b(?:ro\w*d(?:way)?\s+)?(?:open|clear(?:ed)?)\b", re.I)
+
+
 def display(state: dict) -> tuple[list[dict], list[dict]]:
     """Active records in the page's existing item schema, plus reopened records still inside their green window."""
     items, reopened = [], []
@@ -87,6 +121,9 @@ def display(state: dict) -> tuple[list[dict], list[dict]]:
                   firstReported=r["firstReported"])
         if r["status"] == "active":
             it.update(awaitingOfficial=r["awaitingOfficial"], missingSince=r["missingSince"], recheck=r["recheck"])
+            if it.get("lanes") and _OPEN_WORDS.search(it["lanes"]):
+                # An old source remark such as "Roadway Open" is not a verified reopening; show it as a dated note.
+                it["lanes"] = f"Source said \"{it['lanes']}\" ({r['firstReported'][:16].replace('T', ' ')} UTC); not a verified reopening"
             items.append(it)
         elif r["show"] == "green":
             it.update(reopenedAt=r["reopenedAt"], evidence=r["evidence"])

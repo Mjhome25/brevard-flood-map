@@ -19,7 +19,7 @@ import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import events as E  # noqa: E402
-from reconcile import fields_of, rid_of, src_of, stime_of  # noqa: E402
+from reconcile import fhp_normalize, fields_of, rid_of, src_of, stime_of  # noqa: E402
 
 def git(*args) -> str:
     return subprocess.run(["git", "-C", E.HERE, *args], capture_output=True, text=True, check=True).stdout
@@ -57,13 +57,19 @@ def build(cutoff: str):
     for h, t, items in snaps:
         for it in items:
             r = rid_of(it)
+            fix = fhp_normalize(it)
+            if fix:  # the old FHP parser's proven misreadings are corrected, with an audit note on the event
+                it = dict(it, fullClosure=fix["now"])
             f, st = fields_of(it), stime_of(it, "")
             if not E.parse(st):
                 groups["unlocatable (no usable source time)"].append(r)
                 continue
             if prev.get(r) != (f, st):
                 evs.append({"rid": r, "src": src_of(it), "actor": "migration", "migratedFrom": cutoff_full[:12],
-                            "kind": "relisted" if r in prev else "reported", "stime": st, "fields": f, "snapshot": h[:12]})
+                            "kind": "relisted" if r in prev else "reported", "stime": st, "fields": f, "snapshot": h[:12],
+                            **({"normalized": fix} if fix else {})})
+                if fix:
+                    groups["FHP parser corrections"].append(f"{r}: {fix['was']} -> {fix['now']}")
                 prev[r] = (f, st)
             last[r], seen_at[r] = it, t
     final_ids = {rid_of(it) for it in snaps[-1][2]} if snaps else set()
@@ -95,8 +101,11 @@ def main(argv=None) -> int:
     print("groups:")
     for g in ("still published at cutoff", "recovered (vanished before Phase 1, no clearance evidence)",
               "no map location (list only)", "unlocatable (no usable source time)",
-              "hand-entered only in manual_closures.json, never published (not imported)"):
+              "hand-entered only in manual_closures.json, never published (not imported)", "FHP parser corrections"):
         print(f"  {g}: {len(groups.get(g, []))}")
+        if g == "FHP parser corrections":
+            for x in sorted(set(groups.get(g, []))):
+                print(f"    {x}")
     print("  evidenced clearance found: 0 (none of the history carries official reopening evidence)")
     for r in groups.get("recovered (vanished before Phase 1, no clearance evidence)", []):
         it = last[r]
