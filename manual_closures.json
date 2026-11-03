@@ -54,14 +54,20 @@
   "city": "Palm Bay",
   "status": "flooded",
   "fullClosure": false,
-  "lat": 28.012,
-  "lng": -80.689,
+  "lat": 28.02454,
+  "lng": -80.69633,
   "approx": true,
   "source": "Palm Bay Police Dept (via Florida Today)",
   "sourceUrl": "https://www.yahoo.com/news/weather-news/articles/heavy-rains-trigger-flooding-across-114314094.html",
   "reported": "2026-11-02T11:00:00Z",
   "updated": "2026-11-02T11:43:00Z",
-  "note": "Pin approximate."
+  "note": "Pin approximate.",
+  "locatedPer": {
+   "source": "Brevard County 911 road map",
+   "url": "https://gis.brevardfl.gov/gissrv/rest/services/Emergency_Management/9_1_1_Emergency_Response_Layers/MapServer/1/query?where=ADD_LBL+IN+%28%27JUPITER+BLVD+NW%27%2C%27ELMONT+ST+NW%27%29&outFields=ADD_LBL&outSR=4326&returnGeometry=true&f=json",
+   "checked": "2026-11-03T15:10:00Z",
+   "note": "Jupiter Blvd NW x Elmont St NW"
+  }
  },
  {
   "id": "man-lombard-glencove",
@@ -229,15 +235,21 @@
   "status": "closed",
   "fullClosure": true,
   "lanes": "Southbound",
-  "lat": 28.129,
-  "lng": -80.6255,
+  "lat": 28.13848,
+  "lng": -80.59852,
   "approx": true,
   "source": "City of Melbourne (via Space Coast Daily)",
   "sourceUrl": "https://spacecoastdaily.com/2026/11/city-of-melbourne-reports-multiple-road-closures-urges-residents-to-shelter-in-place/",
   "reported": "2026-11-02T17:43:55Z",
   "note": "City of Melbourne road closure list, flooding. Pin approximate.",
   "id": "man-riverside-dr-sb-at-eau-gallie-blvd",
-  "updated": "2026-11-02T17:43:55Z"
+  "updated": "2026-11-02T17:43:55Z",
+  "locatedPer": {
+   "source": "Brevard County 911 road map",
+   "url": "https://gis.brevardfl.gov/gissrv/rest/services/Emergency_Management/9_1_1_Emergency_Response_Layers/MapServer/1/query?where=ADD_LBL+IN+%28%27N+RIVERSIDE+DR%27%2C%27E+EAU+GALLIE+BLVD%27%29&outFields=ADD_LBL&outSR=4326&returnGeometry=true&f=json",
+   "checked": "2026-11-03T15:10:00Z",
+   "note": "N Riverside Dr x E Eau Gallie Blvd"
+  }
  },
  {
   "road": "Lake Washington Rd",
@@ -247,15 +259,21 @@
   "status": "closed",
   "fullClosure": true,
   "lanes": "All lanes at the intersection",
-  "lat": 28.15,
-  "lng": -80.666,
+  "lat": 28.14709,
+  "lng": -80.64696,
   "approx": true,
   "source": "City of Melbourne (via Space Coast Daily)",
   "sourceUrl": "https://spacecoastdaily.com/2026/11/city-of-melbourne-reports-multiple-road-closures-urges-residents-to-shelter-in-place/",
   "reported": "2026-11-02T17:43:55Z",
   "note": "The city also lists Stewart Rd as closed but gives no limits. Pin approximate.",
   "id": "man-lake-washington-rd-at-stewart-rd",
-  "updated": "2026-11-02T17:43:55Z"
+  "updated": "2026-11-02T17:43:55Z",
+  "locatedPer": {
+   "source": "Brevard County 911 road map",
+   "url": "https://gis.brevardfl.gov/gissrv/rest/services/Emergency_Management/9_1_1_Emergency_Response_Layers/MapServer/1/query?where=ADD_LBL+IN+%28%27LAKE+WASHINGTON+RD%27%2C%27STEWART+RD%27%29&outFields=ADD_LBL&outSR=4326&returnGeometry=true&f=json",
+   "checked": "2026-11-03T15:10:00Z",
+   "note": "Lake Washington Rd x Stewart Rd"
+  }
  },
  {
   "road": "Babcock St",
@@ -319,15 +337,21 @@
   "status": "flooded",
   "fullClosure": false,
   "lanes": "Not stated",
-  "lat": 28.0795,
-  "lng": -80.6175,
+  "lat": 28.07879,
+  "lng": -80.62711,
   "approx": true,
   "source": "City of Melbourne (via Space Coast Daily)",
   "sourceUrl": "https://spacecoastdaily.com/2026/11/city-of-melbourne-reports-multiple-road-closures-urges-residents-to-shelter-in-place/",
   "reported": "2026-11-02T17:43:55Z",
   "note": "City reports severe flooding; not listed as closed. Pin approximate.",
   "id": "man-dr-martin-luther-king-jr-blvd-at-new-hav",
-  "updated": "2026-11-02T17:43:55Z"
+  "updated": "2026-11-02T17:43:55Z",
+  "locatedPer": {
+   "source": "Brevard County 911 road map",
+   "url": "https://gis.brevardfl.gov/gissrv/rest/services/Emergency_Management/9_1_1_Emergency_Response_Layers/MapServer/1/query?where=ADD_LBL+IN+%28%27DR+MARTIN+LUTHER+KING+JR+BLVD%27%2C%27W+NEW+HAVEN+AV%27%29&outFields=ADD_LBL&outSR=4326&returnGeometry=true&f=json",
+   "checked": "2026-11-03T15:10:00Z",
+   "note": "Dr Martin Luther King Jr Blvd x W NEw Haven Av"
+  }
  },
  {
   "road": "Dr. Martin Luther King Jr. Blvd",
@@ -337,15 +361,21 @@
   "status": "flooded",
   "fullClosure": false,
   "lanes": "Not stated",
-  "lat": 28.089,
-  "lng": -80.6175,
+  "lat": 28.0936,
+  "lng": -80.62645,
   "approx": true,
   "source": "City of Melbourne (via Space Coast Daily)",
   "sourceUrl": "https://spacecoastdaily.com/2026/11/city-of-melbourne-reports-multiple-road-closures-urges-residents-to-shelter-in-place/",
   "reported": "2026-11-02T17:43:55Z",
   "note": "City reports severe flooding; not listed as closed. Pin approximate.",
   "id": "man-dr-martin-luther-king-jr-blvd-at-nasa-bl",
-  "updated": "2026-11-02T17:43:55Z"
+  "updated": "2026-11-02T17:43:55Z",
+  "locatedPer": {
+   "source": "Brevard County 911 road map",
+   "url": "https://gis.brevardfl.gov/gissrv/rest/services/Emergency_Management/9_1_1_Emergency_Response_Layers/MapServer/1/query?where=ADD_LBL+IN+%28%27DR+MARTIN+LUTHER+KING+JR+BLVD%27%2C%27W+NASA+BLVD%27%29&outFields=ADD_LBL&outSR=4326&returnGeometry=true&f=json",
+   "checked": "2026-11-03T15:10:00Z",
+   "note": "Dr Martin Luther King Jr Blvd x W Nasa Blvd"
+  }
  },
  {
   "road": "Dairy Rd",
@@ -373,15 +403,21 @@
   "status": "flooded",
   "fullClosure": false,
   "lanes": "Not stated",
-  "lat": 28.068,
-  "lng": -80.61,
+  "lat": 28.06384,
+  "lng": -80.60477,
   "approx": true,
   "source": "City of Melbourne (via Space Coast Daily)",
   "sourceUrl": "https://spacecoastdaily.com/2026/11/city-of-melbourne-reports-multiple-road-closures-urges-residents-to-shelter-in-place/",
   "reported": "2026-11-02T17:43:55Z",
   "note": "City reports severe flooding; not listed as closed. Pin approximate.",
   "id": "man-university-blvd-at-lipscomb-st",
-  "updated": "2026-11-02T17:43:55Z"
+  "updated": "2026-11-02T17:43:55Z",
+  "locatedPer": {
+   "source": "Brevard County 911 road map",
+   "url": "https://gis.brevardfl.gov/gissrv/rest/services/Emergency_Management/9_1_1_Emergency_Response_Layers/MapServer/1/query?where=ADD_LBL+IN+%28%27E+UNIVERSITY+BLVD%27%2C%27LIPSCOMB+ST%27%29&outFields=ADD_LBL&outSR=4326&returnGeometry=true&f=json",
+   "checked": "2026-11-03T15:10:00Z",
+   "note": "E University Blvd x Lipscomb St"
+  }
  },
  {
   "road": "Babcock St",
@@ -487,15 +523,21 @@
   "status": "closed",
   "fullClosure": true,
   "lanes": "All lanes",
-  "lat": 28.068,
-  "lng": -80.6235,
+  "lat": 28.10532,
+  "lng": -80.62181,
   "approx": true,
   "source": "City of Melbourne (via Space Coast Daily)",
   "sourceUrl": "https://spacecoastdaily.com/2026/11/city-of-melbourne-reports-multiple-road-closures-urges-residents-to-shelter-in-place/",
   "reported": "2026-11-02T17:43:55Z",
   "note": "The City of Melbourne lists this intersection as closed because of flooding. The coordinates are approximate.",
   "id": "man-babcock-st-at-avenue-b",
-  "updated": "2026-11-02T17:43:55Z"
+  "updated": "2026-11-02T17:43:55Z",
+  "locatedPer": {
+   "source": "Brevard County 911 road map",
+   "url": "https://gis.brevardfl.gov/gissrv/rest/services/Emergency_Management/9_1_1_Emergency_Response_Layers/MapServer/1/query?where=ADD_LBL+IN+%28%27S+BABCOCK+ST%27%2C%27W+AVENUE+B%27%29&outFields=ADD_LBL&outSR=4326&returnGeometry=true&f=json",
+   "checked": "2026-11-03T15:10:00Z",
+   "note": "S Babcock St x W Avenue B"
+  }
  },
  {
   "road": "University Blvd",
@@ -505,15 +547,21 @@
   "status": "flooded",
   "fullClosure": false,
   "lanes": "Not stated",
-  "lat": 28.064,
-  "lng": -80.633,
+  "lat": 28.06379,
+  "lng": -80.59944,
   "approx": true,
   "source": "City of Melbourne (via Space Coast Daily)",
   "sourceUrl": "https://spacecoastdaily.com/2026/11/city-of-melbourne-reports-multiple-road-closures-urges-residents-to-shelter-in-place/",
   "reported": "2026-11-02T17:43:55Z",
   "note": "The city reported severe flooding here but did not list it as a closure. The coordinates are approximate.",
   "id": "man-university-blvd-at-main-st-briarwood-com",
-  "updated": "2026-11-02T17:43:55Z"
+  "updated": "2026-11-02T17:43:55Z",
+  "locatedPer": {
+   "source": "Brevard County 911 road map",
+   "url": "https://gis.brevardfl.gov/gissrv/rest/services/Emergency_Management/9_1_1_Emergency_Response_Layers/MapServer/1/query?where=ADD_LBL+IN+%28%27E+UNIVERSITY+BLVD%27%2C%27MAIN+ST%27%29&outFields=ADD_LBL&outSR=4326&returnGeometry=true&f=json",
+   "checked": "2026-11-03T15:10:00Z",
+   "note": "E University Blvd x Main St"
+  }
  },
  {
   "road": "Minton Rd",
@@ -523,15 +571,21 @@
   "status": "flooded",
   "fullClosure": true,
   "lanes": "all lanes",
-  "lat": 28.0565,
-  "lng": -80.6755,
+  "lat": 28.04364,
+  "lng": -80.67142,
   "approx": true,
   "source": "WESH 2 (via News Beep)",
   "sourceUrl": "https://www.newsbeep.com/795319/",
   "reported": "2026-11-02T16:00:00Z",
   "note": "On WESH's list of roads closed by flooding on Monday. The report time and travel direction are approximate.",
   "id": "man-minton-rd-at-norfolk-pkwy",
-  "updated": "2026-11-02T16:00:00Z"
+  "updated": "2026-11-02T16:00:00Z",
+  "locatedPer": {
+   "source": "Brevard County 911 road map",
+   "url": "https://gis.brevardfl.gov/gissrv/rest/services/Emergency_Management/9_1_1_Emergency_Response_Layers/MapServer/1/query?where=ADD_LBL+IN+%28%27MINTON+RD%27%2C%27NORFOLK+PKWY%27%29&outFields=ADD_LBL&outSR=4326&returnGeometry=true&f=json",
+   "checked": "2026-11-03T15:10:00Z",
+   "note": "Minton Rd x Norfolk Pkwy"
+  }
  },
  {
   "road": "Babcock St",
@@ -541,15 +595,21 @@
   "status": "flooded",
   "fullClosure": true,
   "lanes": "all lanes",
-  "lat": 28.0347,
-  "lng": -80.6153,
+  "lat": 28.03507,
+  "lng": -80.62169,
   "approx": true,
   "source": "WESH 2 (via News Beep)",
   "sourceUrl": "https://www.newsbeep.com/795319/",
   "reported": "2026-11-02T16:00:00Z",
   "note": "On WESH's list of roads closed by flooding on Monday. The report time is approximate.",
   "id": "man-babcock-st-at-palm-bay-rd",
-  "updated": "2026-11-02T16:00:00Z"
+  "updated": "2026-11-02T16:00:00Z",
+  "locatedPer": {
+   "source": "Brevard County 911 road map",
+   "url": "https://gis.brevardfl.gov/gissrv/rest/services/Emergency_Management/9_1_1_Emergency_Response_Layers/MapServer/1/query?where=ADD_LBL+IN+%28%27BABCOCK+ST+NE%27%2C%27PALM+BAY+RD+NE%27%29&outFields=ADD_LBL&outSR=4326&returnGeometry=true&f=json",
+   "checked": "2026-11-03T15:10:00Z",
+   "note": "Babcock St NE x Palm Bay Rd NE"
+  }
  },
  {
   "road": "US 192 (W New Haven Ave)",
@@ -595,15 +655,21 @@
   "status": "flooded",
   "fullClosure": true,
   "lanes": "all lanes (as listed)",
-  "lat": 28.115,
-  "lng": -80.628,
+  "lat": 28.13346,
+  "lng": -80.63229,
   "approx": true,
   "source": "WESH 2 (via News Beep) list of Brevard roads closed because of flooding",
   "sourceUrl": "https://www.newsbeep.com/795319/",
   "reported": "2026-11-02T20:00:00Z",
   "note": "Listed as 'Harbor City Boulevard at Law Street' among roads closed because of flooding. Coordinates are approximate: placed on US 1 in Melbourne, and the exact spot of the intersection was not confirmed.",
   "id": "man-harbor-city-blvd-us-1-at-law-st-melbourn",
-  "updated": "2026-11-02T20:00:00Z"
+  "updated": "2026-11-02T20:00:00Z",
+  "locatedPer": {
+   "source": "Brevard County 911 road map",
+   "url": "https://gis.brevardfl.gov/gissrv/rest/services/Emergency_Management/9_1_1_Emergency_Response_Layers/MapServer/1/query?where=ADD_LBL+IN+%28%27N+HARBOR+CITY+BLVD%27%2C%27LAW+ST%27%29&outFields=ADD_LBL&outSR=4326&returnGeometry=true&f=json",
+   "checked": "2026-11-03T15:10:00Z",
+   "note": "N Harbor City Blvd x Law St"
+  }
  },
  {
   "road": "US 192 (W New Haven Ave)",
@@ -631,15 +697,21 @@
   "status": "closed",
   "fullClosure": true,
   "lanes": "all",
-  "lat": 28.115,
-  "lng": -80.6345,
+  "lat": 28.04248,
+  "lng": -80.63799,
   "approx": true,
   "source": "City of Melbourne (via Space Coast Daily)",
   "sourceUrl": "https://spacecoastdaily.com/2026/11/city-of-melbourne-reports-multiple-road-closures-urges-residents-to-shelter-in-place/",
   "reported": "2026-11-02T18:00:00Z",
   "note": "The City of Melbourne lists the Dairy Road and Snicole Road intersection as closed by flooding. The report time is an estimate. Coordinates are approximate.",
   "id": "man-dairy-rd-at-snicole-rd",
-  "updated": "2026-11-02T18:00:00Z"
+  "updated": "2026-11-02T18:00:00Z",
+  "locatedPer": {
+   "source": "Brevard County 911 road map",
+   "url": "https://gis.brevardfl.gov/gissrv/rest/services/Emergency_Management/9_1_1_Emergency_Response_Layers/MapServer/1/query?where=ADD_LBL+IN+%28%27DAIRY+RD%27%2C%27SNICOLE+AV%27%29&outFields=ADD_LBL&outSR=4326&returnGeometry=true&f=json",
+   "checked": "2026-11-03T15:10:00Z",
+   "note": "Dairy Rd x Snicole Av"
+  }
  },
  {
   "road": "Dairy Rd",
@@ -649,15 +721,21 @@
   "status": "closed",
   "fullClosure": true,
   "lanes": "all",
-  "lat": 28.072,
-  "lng": -80.6345,
+  "lat": 28.0715,
+  "lng": -80.63795,
   "approx": true,
   "source": "City of Melbourne (via Space Coast Daily)",
   "sourceUrl": "https://spacecoastdaily.com/2026/11/city-of-melbourne-reports-multiple-road-closures-urges-residents-to-shelter-in-place/",
   "reported": "2026-11-02T18:00:00Z",
   "note": "The City of Melbourne lists the Dairy Road and Edgewood Drive intersection as closed by flooding. This was already in the Melbourne advisory text, and this adds it as a map point. The report time is an estimate. Coordinates are approximate.",
   "id": "man-dairy-rd-at-edgewood-dr",
-  "updated": "2026-11-02T18:00:00Z"
+  "updated": "2026-11-02T18:00:00Z",
+  "locatedPer": {
+   "source": "Brevard County 911 road map",
+   "url": "https://gis.brevardfl.gov/gissrv/rest/services/Emergency_Management/9_1_1_Emergency_Response_Layers/MapServer/1/query?where=ADD_LBL+IN+%28%27DAIRY+RD%27%2C%27EDGEWOOD+DR%27%29&outFields=ADD_LBL&outSR=4326&returnGeometry=true&f=json",
+   "checked": "2026-11-03T15:10:00Z",
+   "note": "Dairy Rd x Edgewood Dr"
+  }
  },
  {
   "id": "man-all-dairy-rd",

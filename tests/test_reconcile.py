@@ -159,7 +159,7 @@ only_orange = page.replace("BREVARD", "ORANGE")
 check("a complete table with no Brevard rows is a successful read with zero Brevard incidents",
       len(R.fhp_table(only_orange)) == 2 and R.fhp_rows(only_orange) == [])
 check("the updater calls FHP up from a complete table even with no Brevard rows",
-      'sources["fhp"] = "up" if table else "empty"' in upd)
+      'health("fhp", bool(table))' in upd and 'sources[src] = "up" if ok else "empty"' in upd)
 
 # Government verification (verify.issue): the page sentence must be about THIS road and impact; it only raises
 import verify as V  # noqa: E402
@@ -642,6 +642,40 @@ check("Mike (Nov 3): crashes are shown as 'Collision'; the stored MVC marker sti
       and "const cause=it=>it.crash?'mvc'" in tplm and "> Collisions</label>" in tplm)
 check("an FHP 'MVCMVC' title (from 'Hit and Run Crash') is a crash the crash-only rule can take off",
       E.fhp_clearable({"status": "mvc", "title": "MVCMVC at I-95 SB [MM183]"}))
+# A wrong manual pin is moved to the intersection its own words name, with a citation; status never changes
+pl = os.path.join(tmp, "located.jsonl")
+wrong = {"id": "man-dairy-snicole", "layer": "manual", "status": "closed", "fullClosure": True, "road": "Dairy Rd",
+         "where": "Dairy Rd at Snicole Rd", "title": "Dairy Rd at Snicole Rd closed", "lat": 28.115, "lng": -80.6345,
+         "approx": True, "reported": "2026-11-02T11:00:00Z", "line": [[28.115, -80.6345], [28.116, -80.6345]],
+         "from": "A", "to": "B", "length_m": 100}
+gis = {"source": "Brevard County 911 road map", "url": "https://gis.brevardfl.gov/q", "checked": "2026-11-02T12:30:00Z",
+       "note": "Dairy Rd x Snicole Av"}
+run(pl, {"sources": {"manual": "up"}, "items": [wrong]}, 0)
+right = dict(wrong, lat=28.04248, lng=-80.63799, locatedPer=gis, line=[[28.0425, -80.638], [28.043, -80.638]])
+w, _, recs = run(pl, {"sources": {"manual": "up"}, "items": [right]}, 1)
+r = recs["brevard:manual:dairy-snicole"]
+check("a cited correction moves the pin and keeps the old position",
+      [e["kind"] for e in w][:1] == ["located"] and (r["fields"]["lat"], r["fields"]["lng"]) == (28.04248, -80.63799)
+      and r["located"]["fromLat"] == 28.115 and r["located"]["note"] == gis["note"])
+check("the closed stretch is redrawn from the corrected pin, status unchanged",
+      r["fields"]["line"] == right["line"] and r["fields"]["status"] == "closed" and r["status"] == "active")
+w, _, _ = run(pl, {"sources": {"manual": "up"}, "items": [right]}, 2)
+check("the same correction again adds nothing", w == [])
+check("display and popup carry the correction", R.display(E.derive(E.load(pl)))[0][0]["located"]["note"] == gis["note"]
+      and "'<br>Pin corrected '+esc(when(it.located.at))" in tpl)
+for ev, why in (({"rid": "brevard:fl511:1", "src": "fl511", "fields": {"lat": 28.0, "lng": -80.6}, "locatedBy": gis},
+                 "on a feed record"),
+                ({"rid": "brevard:manual:dairy-snicole", "src": "manual", "fields": {"lat": 40.0, "lng": -80.6},
+                  "locatedBy": gis}, "outside Brevard"),
+                ({"rid": "brevard:manual:dairy-snicole", "src": "manual", "fields": {"lat": 28.0, "lng": -80.6,
+                  "status": "flooded"}, "locatedBy": gis}, "carrying a status"),
+                ({"rid": "brevard:manual:dairy-snicole", "src": "manual", "fields": {"lat": 28.0, "lng": -80.6},
+                  "locatedBy": dict(gis, url="http://x")}, "with a plain-http citation")):
+    try:
+        E.append([dict(ev, kind="located", actor="x", stime="2026-11-02T13:00:00Z")], pl); ok = False
+    except E.Refused:
+        ok = True
+    check(f"a pin correction is refused {why}", ok)
 
 # FHP ids are the same in separate processes (the old id used Python's per-process hash)
 code = ("import sys; sys.path.insert(0, sys.argv[1]); import reconcile as R; "
@@ -662,6 +696,38 @@ exec(compile(ast.Module(body=keep, type_ignores=[]), "update_flood_data.py", "ex
 check("FHP time in summer (EDT) converts with -4 h", ns["parse_fhp_time"]("07/04/2026 08:00:00") == "2026-07-04T12:00:00Z")
 check("FHP time in winter (EST) converts with -5 h", ns["parse_fhp_time"]("11/03/2026 08:00:00") == "2026-11-03T13:00:00Z")
 check("FL511 time converts with daylight saving", ns["parse_fl511_time"]("7/4/26, 8:00 AM") == "2026-07-04T12:00:00Z")
+
+# One unreadable FL511 row is skipped, the rest still come in, and the feed is "partial": nothing counts as gone
+keep2 = [n for n in tree.body if isinstance(n, (ast.Import, ast.ImportFrom))
+         or (isinstance(n, ast.Assign) and any(getattr(t, "id", "") in ("TZ", "bad_rows") for t in n.targets))
+         or (isinstance(n, ast.FunctionDef) and n.name in ("iso", "parse_fl511_time", "classify", "row", "health",
+                                                           "fl511", "fl511_item"))]
+ns2 = {"sources": {}, "errors": []}
+exec(compile(ast.Module(body=keep2, type_ignores=[]), "update_flood_data.py", "exec"), ns2)
+rowok = {"id": 1, "county": "Brevard", "description": "Closed: Ellis Rd, Both Directions at I-95. Last updated",
+         "roadwayName": "Ellis Rd", "startDate": "11/3/26, 8:00 AM", "lastUpdated": "11/3/26, 9:00 AM"}
+ns2["get"] = lambda url, **kw: json.dumps({"data": [rowok, {"county": "Brevard", "description": None},
+                                                     dict(rowok, id=2)]})
+got = ns2["fl511"]("Closures")
+ns2["health"]("fl511", bool(got))
+check("a bad FL511 row is skipped; the other rows still come in", [g["id"] for g in got] == ["fl511-1", "fl511-2"])
+check("the feed is marked partial and the page lists the skipped row",
+      ns2["sources"]["fl511"] == "partial" and "1 row(s) unreadable" in ns2["errors"][0])
+pp = os.path.join(tmp, "partial.jsonl")
+run(pp, {"sources": {"fl511": "up"}, "items": [item(1), item(2)]}, 0)
+w, _, recs = run(pp, {"sources": {"fl511": "partial"}, "items": [item(1)]}, 1)
+check("a partial feed marks nothing missing", not any(e["kind"] == "missing" for e in w)
+      and not recs["brevard:fl511:2"]["missingSince"] and any(e["kind"] == "source" for e in w))
+pf = os.path.join(tmp, "partialfhp.jsonl")
+fcrash = {"id": "fhp-1", "layer": "FHP", "status": "mvc", "fullClosure": False, "road": "I-95", "title": "MVC at I-95",
+          "where": "I-95 at MM 200", "reported": "2026-11-02T11:00:00Z"}
+for h in (0, 0.25, 0.5):
+    s6 = E.derive(E.load(pf), T0 + datetime.timedelta(hours=h))
+    new6, _ = R.plan({"sources": {"fhp": "partial" if h else "up"}, "items": [] if h else [fcrash]}, s6,
+                     E.iso(T0 + datetime.timedelta(hours=h)), fhp_clears=True)
+    E.append(new6, pf, now=T0 + datetime.timedelta(hours=h), clearance_enabled=True)
+check("an FHP crash missing from partial reads is never cleared",
+      E.derive(E.load(pf))["records"][R.rid_of(fcrash)]["status"] == "active")
 
 print("failures:", fails)
 sys.exit(1 if fails else 0)

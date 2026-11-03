@@ -218,6 +218,13 @@ def plan(obs: dict, state: dict, now: str, county: str = "brevard", fhp_clears: 
               "fields": fields_of(it)}
         if it.get("raisedPer") and ev["src"] == "manual":  # the cited list that raised a manual report to closed
             ev["supportedBy"] = {k: it["raisedPer"].get(k) for k in E.SUPPORT_FIELDS}
+        r = state["records"].get(rid)
+        if (it.get("locatedPer") and ev["src"] == "manual" and r and r["status"] == "active"
+                and (r["fields"].get("lat"), r["fields"].get("lng")) != (it.get("lat"), it.get("lng"))):
+            # a wrong pin corrected first, so this run's report (and its closed stretch) lands on the right place
+            new.append({"rid": rid, "kind": "located", "src": "manual", "actor": "reconcile", "stime": now,
+                        "fields": {k: it[k] for k in ("lat", "lng", "approx") if k in it},
+                        "locatedBy": {k: it["locatedPer"].get(k) for k in E.LOCATED_FIELDS}})
         new.append(ev)
     active_by_src = {}
     for r in state["records"].values():
@@ -272,6 +279,8 @@ def display(state: dict) -> tuple[list[dict], list[dict]]:
             it["raisedBy"] = r["raisedBy"]
         elif r.get("supportedBy"):
             it["supportedBy"] = r["supportedBy"]
+        if r.get("located"):
+            it["located"] = r["located"]
         if r["status"] == "active":
             it.update(awaitingOfficial=r["awaitingOfficial"], missingSince=r["missingSince"], recheck=r["recheck"])
             if r["missingSince"] and r["src"] in LISTED:

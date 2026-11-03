@@ -9,7 +9,7 @@ Sources (all public, no keys):
   - manual_closures.json: hand-curated reports from police/news/Facebook
 Run:  python3 update_flood_data.py   (writes flood_data.json next to it)
 """
-import json, re, html, os, sys, urllib.request, urllib.parse, datetime
+import contextlib, json, re, html, os, sys, urllib.request, urllib.parse, datetime
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
 from reconcile import fhp_classify, fhp_table, lsr_entries, lsr_item  # noqa: E402
@@ -47,6 +47,29 @@ def classify(text):
 errors = []
 items = []
 
+# ---- one unreadable row never takes a whole feed down --------------------
+# A skipped row would look like a report the source stopped listing, so a feed with any unreadable row is "partial":
+# its readable rows are added and updated, but nothing from it counts as gone this run (reconcile.plan).
+bad_rows = {}
+
+
+@contextlib.contextmanager
+def row(src, key):
+    try:
+        yield
+    except Exception as e:
+        bad_rows.setdefault(src, []).append(f"{key}: {type(e).__name__}: {e}")
+
+
+def health(src, ok):
+    if sources.get(src) == "down": return
+    if bad_rows.get(src):
+        sources[src] = "partial"
+        errors.append(f"{src}: {len(bad_rows[src])} row(s) unreadable and skipped; nothing from this source counts as gone this run ({bad_rows[src][0]})")
+    else:
+        sources[src] = "up" if ok else "empty"
+
+
 # ---- FL511 ------------------------------------------------------------
 def fl511(layer):
     q = urllib.parse.quote(json.dumps({"columns": [], "start": 0, "length": 500}))
@@ -54,27 +77,32 @@ def fl511(layer):
     out = []
     for r in d.get("data", []):
         if (r.get("county") or "").strip().lower() != "brevard": continue
-        desc = r.get("description") or ""
-        out.append({
-            "id": f"fl511-{r['id']}", "source": "FL511 (FDOT)", "sourceUrl": "https://fl511.com",
-            "road": r.get("roadwayName") or "", "title": desc.split(". Last updated")[0].replace(" in Brevard County", ""),
-            "status": "closed" if ("all lanes" in desc.lower() and "flood" not in desc.lower()) else classify(desc),
-            "fullClosure": bool(r.get("isFullClosure")) or "all lanes" in desc.lower(),
-            "reported": parse_fl511_time(r.get("startDate") or ""), "updated": parse_fl511_time(r.get("lastUpdated") or ""),
-            "lat": None, "lng": None, "layer": layer,
-            "dir": {"northbound":"NB","southbound":"SB","eastbound":"EB","westbound":"WB","both directions":"both directions"}.get((r.get("direction") or "").strip().lower(), ""),
-            "lanes": (r.get("laneDescription") or "").strip(),
-            "roadShort": (r.get("roadwayName") or "").split(" / ")[0].strip(),
-            "spot": m.group(1) if (m := re.search(r"(?:(?:North|South|East|West)(?:bound)?,|(?:Both|All) Directions)\s*((?:at|before|beyond|near|between)\s.+?)\.(?:\s|$)", desc, re.I)
-                                    or re.search(r"(?:North|South|East|West)(?:bound)?,\s*(.+?)\.(?:\s|$)", desc)) else "",
-        })
+        with row("fl511", r.get("id")):
+            out.append(fl511_item(r, layer))
     return out
+
+
+def fl511_item(r, layer):
+    desc = r.get("description") or ""
+    return {
+        "id": f"fl511-{r['id']}", "source": "FL511 (FDOT)", "sourceUrl": "https://fl511.com",
+        "road": r.get("roadwayName") or "", "title": desc.split(". Last updated")[0].replace(" in Brevard County", ""),
+        "status": "closed" if ("all lanes" in desc.lower() and "flood" not in desc.lower()) else classify(desc),
+        "fullClosure": bool(r.get("isFullClosure")) or "all lanes" in desc.lower(),
+        "reported": parse_fl511_time(r.get("startDate") or ""), "updated": parse_fl511_time(r.get("lastUpdated") or ""),
+        "lat": None, "lng": None, "layer": layer,
+        "dir": {"northbound":"NB","southbound":"SB","eastbound":"EB","westbound":"WB","both directions":"both directions"}.get((r.get("direction") or "").strip().lower(), ""),
+        "lanes": (r.get("laneDescription") or "").strip(),
+        "roadShort": (r.get("roadwayName") or "").split(" / ")[0].strip(),
+        "spot": m.group(1) if (m := re.search(r"(?:(?:North|South|East|West)(?:bound)?,|(?:Both|All) Directions)\s*((?:at|before|beyond|near|between)\s.+?)\.(?:\s|$)", desc, re.I)
+                                or re.search(r"(?:North|South|East|West)(?:bound)?,\s*(.+?)\.(?:\s|$)", desc)) else "",
+    }
 seen_ids = set()
 sources = {}  # per-source health for the closure history: up, down (fetch or parse failed) or empty
 for layer in ("Closures", "Incidents"):
     try: items += [it for it in fl511(layer) if not (it["id"] in seen_ids or seen_ids.add(it["id"]))]
     except Exception as e: errors.append(f"FL511 {layer}: {e}"); sources["fl511"] = "down"
-if sources.get("fl511") != "down": sources["fl511"] = "up" if any(it["layer"] != "FHP" for it in items) else "empty"
+health("fl511", any(it["layer"] != "FHP" for it in items))
 
 # FL511 list rows carry no coordinates; the map-icon endpoint does (by id). Cache them so a transient failure keeps pins.
 cache_path = os.path.join(HERE, "fl511_coords_cache.json")
@@ -132,23 +160,24 @@ try:
     s = get("https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx", accept="text/html")
     table = fhp_table(s)  # bound by header; Received/Dispatched/Arrived, no cleared column; a broken row raises
     for r in (r for r in table if r["County"].upper() == "BREVARD"):
-        typ, t_rep, loc, remark, lat, lng = (r["Incident Type"], r["Received"], r["Location"], r["Remarks"],
-                                             r["Latitude"], r["Longitude"])
-        if typ.upper() == "WEATHER WARNING": continue
-        try: lat, lng = float(lat), float(lng)
-        except Exception: lat = lng = None
-        status, full = fhp_classify(typ, remark)
-        items.append({
-            "id": f"fhp-{re.sub(r'[^0-9]', '', t_rep)}-{abs(hash(loc)) % 10000}", "source": "FHP live CAD", "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-            "road": loc.split(" x[")[0], "title": f"{typ.title()} at {loc}" + (f" ({remark.title()})" if remark else ""),
-            "status": status, "fullClosure": full,
-            "reported": parse_fhp_time(t_rep), "updated": parse_fhp_time(t_rep), "lat": lat, "lng": lng, "layer": "FHP",
-            "roadShort": " ".join(w if re.search(r"\d", w) else w.title() for w in loc.split(" x[")[0].split()), "dir": "",
-            "spot": ("at " + m.group(1).title()) if (m := re.search(r"x\[([^\]]+)\]", loc)) else "",
-            "lanes": remark.title() if remark else "",
-        })
+        with row("fhp", r.get("Received")):
+            typ, t_rep, loc, remark, lat, lng = (r["Incident Type"], r["Received"], r["Location"], r["Remarks"],
+                                                 r["Latitude"], r["Longitude"])
+            if typ.upper() == "WEATHER WARNING": continue  # inside the guard: skips this row only
+            try: lat, lng = float(lat), float(lng)
+            except Exception: lat = lng = None
+            status, full = fhp_classify(typ, remark)
+            items.append({
+                "id": f"fhp-{re.sub(r'[^0-9]', '', t_rep)}-{abs(hash(loc)) % 10000}", "source": "FHP live CAD", "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+                "road": loc.split(" x[")[0], "title": f"{typ.title()} at {loc}" + (f" ({remark.title()})" if remark else ""),
+                "status": status, "fullClosure": full,
+                "reported": parse_fhp_time(t_rep), "updated": parse_fhp_time(t_rep), "lat": lat, "lng": lng, "layer": "FHP",
+                "roadShort": " ".join(w if re.search(r"\d", w) else w.title() for w in loc.split(" x[")[0].split()), "dir": "",
+                "spot": ("at " + m.group(1).title()) if (m := re.search(r"x\[([^\]]+)\]", loc)) else "",
+                "lanes": remark.title() if remark else "",
+            })
     # a complete statewide table is a successful read even with no Brevard rows; an empty table is not
-    sources["fhp"] = "up" if table else "empty"
+    health("fhp", bool(table))
 except Exception as e: errors.append(f"FHP CAD: {e}"); sources["fhp"] = "down"
 
 # ---- NWS --------------------------------------------------------------
@@ -174,11 +203,12 @@ try:
         if datetime.datetime.fromisoformat(p["issuanceTime"]) < since: continue
         prod = json.loads(get(p["@id"], accept="application/ld+json"))
         for e in lsr_entries(prod.get("productText") or ""):
-            when = iso(datetime.datetime.strptime(e["time"], "%m/%d/%Y %I%M %p").replace(tzinfo=TZ))
-            it = lsr_item(e, when, "https://api.weather.gov/products/" + p["id"])
-            if it["id"] in seen: continue  # corrections and summaries repeat entries
-            seen.add(it["id"]); items.append(it)
-    sources["nws"] = "up" if any(it["layer"] == "NWS" for it in items) else "empty"
+            with row("nws", p["id"]):
+                when = iso(datetime.datetime.strptime(e["time"], "%m/%d/%Y %I%M %p").replace(tzinfo=TZ))
+                it = lsr_item(e, when, "https://api.weather.gov/products/" + p["id"])
+                if it["id"] not in seen:  # corrections and summaries repeat entries
+                    seen.add(it["id"]); items.append(it)
+    health("nws", any(it["layer"] == "NWS" for it in items))
 except Exception as e: errors.append(f"NWS storm reports: {e}"); sources["nws"] = "down"
 
 # ---- manual reports ---------------------------------------------------

@@ -17,9 +17,12 @@ Kinds:
              (Mike, Nov 3: "yes, adds only"). It only raises and is shown with its citation; the first report stays.
   missing    the source no longer lists it: flag only
   recheck    a reason to look again: flag only
-  source     per-source health (`state`: up, down, empty): no record changes
+  source     per-source health (`state`: up, down, empty, partial = some rows unreadable): no record changes
   verified   a government page confirms the report (`evidence`: host, url, agency, quote, publishedAt): a badge
              only, never a status change; the newest statement is shown
+  located    a manual report's pin was wrong; moved to the place its own words name (`fields`: lat, lng, approx;
+             `locatedBy`: source, url, checked, note), e.g. the county road map's intersection. Never changes status;
+             the old position is kept in the record and the closed stretch is redrawn from the new pin
   cleared    official reopening; written only by the verifier path (batch 3) while county clearance is enabled
 Status comes only from reported and cleared.
 """
@@ -34,7 +37,7 @@ import urllib.parse
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 EVENTS = os.path.join(HERE, "closure_events.jsonl")
-KINDS = ("reported", "relisted", "missing", "recheck", "source", "verified", "cleared")
+KINDS = ("reported", "relisted", "missing", "recheck", "source", "verified", "cleared", "located")
 GREEN_HOURS = 24
 RECHECK_AFTER_HOURS = 72
 # Display fields a record carries. Geometry and location (where, lat, lng, approx, line) are set by the first report.
@@ -113,7 +116,7 @@ def eid_of(ev: dict, prev: str = "") -> str:
     """Hash of the event's content chained to the previous event's eid: unique and tamper-evident. Retries are not
     caught by the eid but by append(), which writes nothing that would not change the derived state."""
     core = {k: ev.get(k) for k in ("rid", "kind", "src", "stime", "fields", "state", "reason", "evidence")}
-    for k in ("raisedBy", "supportedBy"):  # added later; only hashed where present so earlier eids are unchanged
+    for k in ("raisedBy", "supportedBy", "locatedBy"):  # added later; only hashed where present so earlier eids are unchanged
         if k in ev:
             core[k] = ev[k]
     return hashlib.sha256((prev + canon(core)).encode()).hexdigest()[:32]
@@ -189,6 +192,27 @@ def _check_support(ev: dict) -> None:
         raise Refused(f"seq {seq}: supportedBy needs a publish time not after the event")
 
 
+LOCATED_FIELDS = ("source", "url", "checked", "note")
+BREVARD_BOX = (27.8, 28.8, -81.1, -80.4)  # lat min/max, lng min/max
+
+
+def _check_located(ev: dict) -> None:
+    """A pin correction: manual reports only, a position inside Brevard, a cited https source checked before the event."""
+    v, f, seq = ev.get("locatedBy"), ev.get("fields"), ev["seq"]
+    if ev.get("src") != "manual" or ":manual:" not in ev.get("rid", ""):
+        raise Refused(f"seq {seq}: only manual reports are relocated")
+    if not isinstance(f, dict) or set(f) - {"lat", "lng", "approx"} or not all(
+            isinstance(f.get(k), (int, float)) and not isinstance(f.get(k), bool) for k in ("lat", "lng")):
+        raise Refused(f"seq {seq}: located needs fields lat, lng (and optional approx) only")
+    lo, hi, w, e = BREVARD_BOX
+    if not (lo <= f["lat"] <= hi and w <= f["lng"] <= e):
+        raise Refused(f"seq {seq}: located position is outside Brevard")
+    if not isinstance(v, dict) or set(v) != set(LOCATED_FIELDS) or not all(isinstance(v[k], str) and v[k] for k in v):
+        raise Refused(f"seq {seq}: locatedBy needs exactly {', '.join(LOCATED_FIELDS)}")
+    if urllib.parse.urlparse(v["url"]).scheme != "https" or not parse(v["checked"]) or v["checked"] > ev["at"]:
+        raise Refused(f"seq {seq}: locatedBy needs an https link and a check time not after the event")
+
+
 def _check_gov(seq, v: dict, at: str) -> None:
     """Evidence read from a government page by verify.py: every receipt field present and well formed, https on an exact
     host from the county's verify list (also after redirects), the configured agency for that host, a real page date
@@ -234,7 +258,7 @@ def validate(ev: dict, prev_seq: int, clearance_enabled: bool, prev_eid: str = "
             raise Refused(f"seq {ev['seq']}: {kind} needs fields with a known status")
         if not parse(ev.get("stime")):
             raise Refused(f"seq {ev['seq']}: {kind} needs a source time")
-    if kind == "source" and ev.get("state") not in ("up", "down", "empty"):
+    if kind == "source" and ev.get("state") not in ("up", "down", "empty", "partial"):
         raise Refused(f"seq {ev['seq']}: bad source state")
     if kind == "recheck" and not ev.get("reason"):
         raise Refused(f"seq {ev['seq']}: recheck needs a reason")
@@ -242,6 +266,8 @@ def validate(ev: dict, prev_seq: int, clearance_enabled: bool, prev_eid: str = "
         _check_gov(ev["seq"], ev["raisedBy"], ev["at"])
     if "supportedBy" in ev:
         _check_support(ev)
+    if kind == "located":
+        _check_located(ev)
     if kind == "verified":
         _check_gov(ev["seq"], ev.get("evidence") or {}, ev["at"])
     if kind == "cleared":
@@ -400,6 +426,13 @@ def apply(state: dict, ev: dict) -> None:
     elif kind == "missing":
         if r["status"] == "active" and not r["missingSince"]:
             r["missingSince"] = ev["at"]
+    elif kind == "located":
+        if r["status"] == "active":
+            old = {k: r["fields"].get(k) for k in ("lat", "lng")}
+            for k in EXTENT:
+                r["fields"].pop(k, None)  # the stretch drawn from the wrong pin goes; the next report redraws it
+            r["fields"].update(ev["fields"])
+            r["located"] = dict(ev["locatedBy"], at=ev["at"], fromLat=old["lat"], fromLng=old["lng"])
     elif kind == "recheck":
         if r["status"] == "active" and ev["reason"] not in r["recheck"]:
             r["recheck"].append(ev["reason"])
