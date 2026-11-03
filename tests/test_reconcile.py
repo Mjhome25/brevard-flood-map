@@ -651,6 +651,37 @@ for bad, why in ((dict(forged["evidence"], quote="Sarno Road is closed."), "a cl
     except E.Refused:
         ok = True
     check(f"an official reopening is refused with {why}", ok)
+check("the reopening is dated by the post's own 8:30 a.m. (13:30 UTC), not when we found it",
+      recs_o()[nws_rid]["reopenedAt"] == "2026-11-03T13:30:00Z"
+      and recs_o()[nws_rid]["evidence"]["sourceTime"] == "2026-11-03T13:30:00Z")
+# Codex #183: a closure reported AFTER the statement (9:45 a.m. the same day) is never cleared by it
+pc2 = os.path.join(tmp, "open-later.jsonl")
+run(pc2, {"sources": {"manual": "up"}, "items": [man("sarno2", road="Sarno Rd", where="Sarno Rd at Eau Gallie Blvd",
+     status="closed", reported="2026-11-03T14:45:00Z", updated="2026-11-03T14:45:00Z")]}, 0)
+def opened2(page, path=pc2, rid="brevard:manual:sarno2"):
+    try:
+        V.issue(rid, MEL, q, "open", page, MEL, NOWO, path)
+    except E.Refused as exc:
+        return str(exc)
+    return ""
+check("a closure reported at 9:45 a.m. is not cleared by the 8:30 a.m. statement",
+      "not newer" in opened2(OPAGE) and E.derive(E.load(pc2), NOWO)["records"]["brevard:manual:sarno2"]["status"] == "active")
+DPAGE = OPAGE.replace("<p>Nov. 3, 8:30 a.m. traffic update:</p>", "")
+check("a date-only post never clears a report from the same day", "not newer" in opened2(DPAGE))
+pc3 = os.path.join(tmp, "open-dateonly.jsonl")
+run(pc3, {"sources": {"manual": "up"}, "items": [man("sarno3", road="Sarno Rd", where="Sarno Rd at Eau Gallie Blvd",
+     status="closed")]}, 0)
+check("a date-only post clears a report from an earlier day, dated the start of its publish day (Eastern)",
+      not opened2(DPAGE, pc3, "brevard:manual:sarno3")
+      and E.derive(E.load(pc3), NOWO)["records"]["brevard:manual:sarno3"]["reopenedAt"] == "2026-11-03T05:00:00Z")
+late = [e for e in E.load(po) if e["kind"] == "cleared"][0]
+try:
+    E.append([{"rid": "brevard:manual:babb", "src": "manual", "kind": "cleared", "actor": "x",
+               "evidence": dict(late["evidence"], sourceTime="2026-11-04T13:30:00Z")}], po, clearance_enabled=True,
+             now=NOWO); ok = recs_o()["brevard:manual:babb"]["status"] == "active"
+except E.Refused:
+    ok = True
+check("an official reopening is refused with a source time off its publish day", ok)
 check("the page shows official reopenings apart, as Reopened with a check, never as cleared",
       'id="reopen-wrap"' in tplc_o and "REOPENED" in tplc_o and "official(c)?reopenIcon:okIcon" in tplc_o
       if (tplc_o := open(os.path.join(repo, "template.html")).read()) else False)

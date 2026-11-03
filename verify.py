@@ -111,6 +111,23 @@ def post_of(page: str, quote: str) -> tuple[str, str] | None:
     return None
 
 
+STATED = re.compile(r"\b(\d{1,2}):(\d{2})\s*([ap])\.?\s?m\.?", re.I)
+
+
+def stated_time(post: str, quote: str, published: str) -> str:
+    """The post's own update time ("Nov. 3, 8:30 a.m. traffic update"), the last one stated before the sentence, in
+    Eastern time on the publish day; "" when the post gives none."""
+    found = list(STATED.finditer(post[:post.index(quote)]))
+    if not found:
+        return ""
+    h, m, ap = int(found[-1].group(1)), int(found[-1].group(2)), found[-1].group(3).lower()
+    if not (1 <= h <= 12 and m < 60):
+        return ""
+    h = h % 12 + (12 if ap == "p" else 0)
+    day = datetime.datetime.strptime(published, "%Y-%m-%d")
+    return E.iso(day.replace(hour=h, minute=m, tzinfo=E.ET))
+
+
 class SameHost(urllib.request.HTTPRedirectHandler):
     """Follow a redirect only to https on the same host; refuse before requesting anything else."""
 
@@ -153,8 +170,13 @@ def issue(rid: str, url: str, quote: str, raise_to: str | None, page: str, final
         clearance = json.load(open(os.path.join(E.HERE, "county.json"))).get("clearance", {})
         if not (clearance.get("enabled") and "official" in clearance.get("kinds", [])):
             raise E.Refused("official reopenings are not enabled for this county")
+        stated = stated_time(post[1], quote, published)
+        if not E.official_after({"sourceTime": stated, "publishedDate": published}, rec["lastReported"]):
+            raise E.Refused(f"the statement ({stated or published + ', no time given'}) is not newer than this road's "
+                            f"latest report ({rec['lastReported']}); a same-day report with a date-only post stays")
         return E.append([{"rid": rid, "src": rec["src"], "kind": "cleared", "actor": VERSION,
-                          "evidence": dict(ev, kind="official", reopenedAt="")}], path, clearance_enabled=True, now=now)
+                          "evidence": dict(ev, kind="official", sourceTime=stated, reopenedAt="")}], path,
+                        clearance_enabled=True, now=now)
     new = []
     if raise_to:
         new.append({"rid": rid, "src": rec["src"], "kind": "relisted", "actor": VERSION, "stime": f"{published}T00:00:00Z",

@@ -42,6 +42,8 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 EVENTS = os.path.join(HERE, "closure_events.jsonl")
 KINDS = ("reported", "relisted", "missing", "recheck", "source", "verified", "cleared", "located")
 GREEN_HOURS = 24
+from zoneinfo import ZoneInfo  # noqa: E402
+ET = ZoneInfo("America/New_York")  # government posts state Eastern times
 RECHECK_AFTER_HOURS = 72
 # Display fields a record carries. Geometry and location (where, lat, lng, approx, line) are set by the first report.
 FIELDS = ("road", "roadShort", "dir", "spot", "where", "title", "city", "status", "fullClosure", "lanes", "lat", "lng",
@@ -338,13 +340,31 @@ def _check_fhp_drop(ev: dict) -> None:
         raise Refused(f"seq {ev['seq']}: the only clearance is an FHP incident the FHP page stopped listing")
 
 
+def official_time(v: dict) -> str:
+    """When the government says the road opened: the post's own stated time (sourceTime), else the start of its
+    publish day in Eastern time, so a date-only statement never looks later than it may be."""
+    if v.get("sourceTime"):
+        return v["sourceTime"]
+    try:
+        return iso(datetime.datetime.strptime(v["publishedDate"], "%Y-%m-%d").replace(tzinfo=ET))
+    except (KeyError, TypeError, ValueError):
+        return ""  # malformed evidence: validation refuses it
+
+
 def _check_official(ev: dict) -> None:
     """A government reopening: a full verifier receipt (as for a verified badge) whose quote is one supported open
-    sentence, published no later than the event; the clearance time is the time it is written."""
+    sentence, plus the post's own stated time when it gives one (sourceTime, on its publish day, not after the event).
+    The reopening time is that statement's time, never when we found it (Codex #183)."""
     v = dict(ev.get("evidence") or {})
-    if set(v) != {"kind", "reopenedAt", *GOV_FIELDS} or v.pop("kind") != "official" or v.pop("reopenedAt") != ev["at"]:
-        raise Refused(f"seq {ev['seq']}: an official reopening needs exactly a verifier receipt and its time")
+    if set(v) != {"kind", "reopenedAt", "sourceTime", *GOV_FIELDS} or v.pop("kind") != "official":
+        raise Refused(f"seq {ev['seq']}: an official reopening needs exactly a verifier receipt, its source time and reopening time")
+    st, ro = v.pop("sourceTime"), v.pop("reopenedAt")
+    if st and (not parse(st) or parse(st) > parse(ev["at"])
+               or parse(st).astimezone(ET).strftime("%Y-%m-%d") != v["publishedDate"]):
+        raise Refused(f"seq {ev['seq']}: the source time must be on the post's publish day and not after the event")
     _check_gov(ev["seq"], v, ev["at"], sentence=opening)
+    if ro != official_time({**v, "sourceTime": st}):
+        raise Refused(f"seq {ev['seq']}: an official reopening is dated by the statement, not when it was found")
 
 
 # ---- writing (the only writer) ---------------------------------------------------------------------------------
@@ -365,8 +385,9 @@ def append(new: list[dict], path: str = EVENTS, clearance_enabled: bool = False,
         if raw.get("kind") == "cleared" and (raw.get("evidence") or {}).get("kind") not in ("fhp-dropped", "official"):
             raise Refused("cleared events come only from the FHP drop rule or the verifier's --open path")
         ev = {k: v for k, v in raw.items() if k not in ("seq", "at", "eid")}
-        if ev["kind"] == "cleared":  # the clearance time is the time it is written
-            ev["evidence"] = dict(ev["evidence"], reopenedAt=at)
+        if ev["kind"] == "cleared":  # an FHP drop is dated when written; an official reopening by the statement
+            ev["evidence"] = dict(ev["evidence"], reopenedAt=official_time(ev["evidence"])
+                                  if ev["evidence"].get("kind") == "official" else at)
         ev["seq"], ev["at"], ev["eid"] = seq + 1, at, eid_of(ev, prev)
         ev = {k: ev[k] for k in ("seq", "at", "eid", *sorted(k for k in ev if k not in ("seq", "at", "eid")))}
         validate(ev, seq, clearance_enabled, prev)
@@ -495,10 +516,18 @@ def apply(state: dict, ev: dict) -> None:
                                                     and r["missingSince"] == v["missingSince"]
                                                     and fhp_clearable(r["fields"])):
             return  # only a still-missing FHP crash, gone since the time its evidence says (never a road closure)
-        if v.get("kind") == "official" and (r["status"] != "active" or v["publishedDate"] < _episode(r)
-                                            or opens(r["fields"], v["quote"])):
-            return  # an open statement must be about this road and no older than this report
+        if v.get("kind") == "official" and (r["status"] != "active" or opens(r["fields"], v["quote"])
+                                            or not official_after(v, r["lastReported"])):
+            return  # an open statement must be about this road and newer than its latest report
         r.update(status="reopened", reopenedAt=v["reopenedAt"], evidence=v)
+
+
+def official_after(v: dict, latest: str) -> bool:
+    """Is the open statement newer than the latest report of the restriction? With the post's stated time, compare
+    times; with only a date, the latest report must be from an earlier day (a same-day report is ambiguous: kept)."""
+    if v.get("sourceTime"):
+        return parse(v["sourceTime"]) > parse(latest)
+    return parse(latest).astimezone(ET).strftime("%Y-%m-%d") < v["publishedDate"]
 
 
 def _episode(r: dict) -> str:
