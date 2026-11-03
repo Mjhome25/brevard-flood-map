@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-03T17:25:01Z",
+ "generated": "2026-11-03T17:30:39Z",
  "errors": [],
  "items": [
   {
@@ -2312,8 +2312,8 @@
    "title": "Traffic lights not working on US-192 / Vine St / Bronson Hwy East, at S John Rodes Blvd",
    "where": "US-192 EB at S John Rodes Blvd",
    "id": "brevard:fl511:938257",
-   "updated": "2026-11-03T16:44:00Z",
-   "lastReported": "2026-11-03T16:44:00Z",
+   "updated": "2026-11-03T17:27:00Z",
+   "lastReported": "2026-11-03T17:27:00Z",
    "firstReported": "2026-11-03T03:18:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
