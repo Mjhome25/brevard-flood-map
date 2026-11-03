@@ -133,6 +133,7 @@ h1,h2,h3{margin:0;text-wrap:balance}
 .alert h3{font-size:var(--fs-2);font-weight:600;display:flex;gap:8px;align-items:center;flex-wrap:wrap}
 .alert h3 .tm{font-weight:400;color:var(--muted);font-size:var(--fs-1)}
 .alert p{margin:4px 0 0;color:var(--fg);font-size:var(--fs-1);line-height:1.5}
+.alert p.tm{color:var(--muted)}
 .alert button.link{padding:0;margin-left:8px;color:var(--accent);text-decoration:underline;font-size:inherit}
 .water-popup a{color:var(--accent)}
 .sec{padding:14px 16px 6px;font-size:var(--fs-0);font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
@@ -501,10 +502,10 @@ h1,h2,h3{margin:0;text-wrap:balance}
     const hit=cleared.filter(c=>matchQ(c,q)), ro=hit.filter(official), nl=hit.filter(c=>!official(c));
     reopenWrap.hidden=!ro.length;
     reopenEl.innerHTML=ro.map(c=>{ const pin=greenPin(c);
-      return `<div class="alert${pin?' go':''}"${pin?` data-cid="${esc(c.id)}" tabindex="0" role="button" aria-label="${esc(where(c))}, reopened per an official statement, show on map"`:''}><h3><span class="badge clr">Reopened</span>${esc(where(c)||c.road||'Report')}<span class="tm">${esc(c.title||'')}</span></h3><p>${clearedWhy(c)}${clearedLink(c)}${(c.stillReported||[]).length?` Another report at this place stays on the map: ${c.stillReported.map(a=>esc(a.source||'another source')).join('; ')}.`:''}</p></div>`; }).join('');
+      return `<div class="alert${pin?' go':''}"${pin?` data-cid="${esc(c.id)}" tabindex="0" role="button" aria-label="${esc(where(c))}, reopened per an official statement, show on map"`:''}><h3><span class="badge clr">Reopened</span>${esc(where(c)||c.road||'Report')}</h3>${c.title?`<p class="tm">Earlier report: ${esc(c.title)}</p>`:''}<p>${clearedWhy(c)}${clearedLink(c)}${(c.stillReported||[]).length?` Another report at this place stays on the map: ${c.stillReported.map(a=>esc(a.source||'another source')).join('; ')}.`:''}</p></div>`; }).join('');
     clearedWrap.hidden=!nl.length;
     clearedEl.innerHTML=nl.map(c=>{ const pin=greenPin(c);
-      return `<div class="alert${pin?' go':''}"${pin?` data-cid="${esc(c.id)}" tabindex="0" role="button" aria-label="${esc(where(c))}, no longer listed by FHP, show on map"`:''}><h3>${formerClosure(c)?'<span class="badge clr">Not listed</span>':''}${esc(where(c)||c.road||'Report')}<span class="tm">${esc(c.title||'')}</span></h3><p>${clearedWhy(c)}${clearedLink(c)}${formerClosure(c)&&(c.stillReported||[]).length?` Another report at this place stays on the map: ${c.stillReported.map(a=>esc(a.source||'another source')+(a.since?` (no longer listed by that feed since ${esc(when(a.since))}; kept until a cited source clears it)`:'')).join('; ')}.`:''}</p></div>`; }).join('');
+      return `<div class="alert${pin?' go':''}"${pin?` data-cid="${esc(c.id)}" tabindex="0" role="button" aria-label="${esc(where(c))}, no longer listed by FHP, show on map"`:''}><h3>${formerClosure(c)?'<span class="badge clr">Not listed</span>':''}${esc(where(c)||c.road||'Report')}</h3>${c.title?`<p class="tm">Earlier report: ${esc(c.title)}</p>`:''}<p>${clearedWhy(c)}${clearedLink(c)}${formerClosure(c)&&(c.stillReported||[]).length?` Another report at this place stays on the map: ${c.stillReported.map(a=>esc(a.source||'another source')+(a.since?` (no longer listed by that feed since ${esc(when(a.since))}; kept until a cited source clears it)`:'')).join('; ')}.`:''}</p></div>`; }).join('');
     return hit.length;
   }
   const byCid={};
