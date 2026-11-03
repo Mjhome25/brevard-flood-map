@@ -51,7 +51,7 @@ def cases(events: list[dict]) -> list[dict]:
                             cut=r["reopenedAt"], source=ev["evidence"].get("url")))
         elif ev["kind"] == "missing" and not was["missingSince"] and r["missingSince"]:
             out.append(dict(base, id="disappeared:" + ev["eid"], kind="disappeared", why="no longer listed",
-                            cut=ev["at"], source=None))
+                            cut=ev["at"], source=was["fields"].get("sourceUrl")))
     return out
 
 

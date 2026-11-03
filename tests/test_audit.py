@@ -22,7 +22,7 @@ def check(name, ok):
 
 tmp = tempfile.mkdtemp()
 NOW = datetime.datetime(2026, 11, 3, 16, 0, tzinfo=datetime.timezone.utc)
-CRASH = {"road": "US-1", "where": "US-1 at Viera Blvd", "title": "MVC", "status": "mvc", "fullClosure": False,
+CRASH = {"sourceUrl": E.FHP_URL, "road": "US-1", "where": "US-1 at Viera Blvd", "title": "MVC", "status": "mvc", "fullClosure": False,
          "lat": 28.2, "lng": -80.7}
 
 
@@ -75,7 +75,8 @@ check("a report at a different cross street is not evidence", V(rep(base + [far]
 closure = dict(CRASH, title="Road closure", status="closed")
 r = rep(drop("brevard:fhp:2", "2026-11-03T11:30:00Z", closure))
 check("an FHP road closure that disappeared but stayed on the map is a 'disappeared' case, not a removal",
-      V(r) == [] and V(r, "disappeared") == ["unknown"] and r["rows"][0]["status"] == "closed")
+      V(r) == [] and V(r, "disappeared") == ["unknown"] and r["rows"][0]["status"] == "closed"
+      and r["rows"][0]["source"] == E.FHP_URL)
 d1 = rep(base, water={})
 known = {k: v for k, v in d1["book"].items()}
 d2 = rep(base + [late], water={}, known=known, now=NOW + datetime.timedelta(days=1))
@@ -84,9 +85,11 @@ check("day 1 unknown -> day 2 contradicting evidence: the old case is re-judged,
       row["verdict"] == "later-report" and row["changed"] and not row["new"] and row["firstChecked"] == "2026-11-03"
       and [h["verdict"] for h in d2["book"][row["id"]]["verdicts"]] == ["unknown", "later-report"])
 off = [ev("reported", "brevard:manual:s", "2026-11-02T10:00:00Z", src="manual", stime="2026-11-02T10:00:00Z",
-          fields=dict(CRASH, title="Flooding", status="flooded")),
+          fields=dict(CRASH, road="Sarno Rd", where="Sarno Rd at Eau Gallie Blvd", title="Flooding", status="flooded")),
        ev("cleared", "brevard:manual:s", "2026-11-03T14:00:00Z", src="manual",
-          evidence={"kind": "official", "url": "https://www.melbourneflorida.org/x", "reopenedAt": "2026-11-03T13:30:00Z"})]
+          evidence={"kind": "official", "url": "https://www.melbourneflorida.org/x", "quote": "Sarno Road is open.",
+                    "publishedDate": "2026-11-03", "sourceTime": "2026-11-03T13:30:00Z",
+                    "reopenedAt": "2026-11-03T13:30:00Z"})]
 r = rep(off)
 check("an official reopening with nothing contradicting it is corroborated-open",
       V(r) == ["corroborated-open"] and r["rows"][0]["source"] == "https://www.melbourneflorida.org/x")
