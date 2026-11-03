@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-03T15:50:47Z",
+ "generated": "2026-11-03T15:57:23Z",
  "errors": [],
  "items": [
   {
@@ -1875,9 +1875,15 @@
     "kind": "feed",
     "publishedAt": "2026-11-02T23:15:00Z"
    },
-   "awaitingOfficial": false,
-   "missingSince": null,
-   "recheck": []
+   "awaitingOfficial": true,
+   "missingSince": "2026-11-03T15:58:16Z",
+   "recheck": [],
+   "noLongerListed": {
+    "agency": "FL511 (FDOT)",
+    "url": "https://fl511.com",
+    "since": "2026-11-03T15:58:16Z",
+    "wasClosed": true
+   }
   },
   {
    "dir": "EB",
@@ -2510,9 +2516,15 @@
     "kind": "feed",
     "publishedAt": "2026-11-03T14:30:00Z"
    },
-   "awaitingOfficial": false,
-   "missingSince": null,
-   "recheck": []
+   "awaitingOfficial": true,
+   "missingSince": "2026-11-03T15:58:16Z",
+   "recheck": [],
+   "noLongerListed": {
+    "agency": "FL511 (FDOT)",
+    "url": "https://fl511.com",
+    "since": "2026-11-03T15:58:16Z",
+    "wasClosed": true
+   }
   },
   {
    "approx": true,
@@ -2733,9 +2745,9 @@
    "city": "Melbourne",
    "fullClosure": true,
    "lanes": "All lanes",
-   "lat": 28.068,
+   "lat": 28.10532,
    "layer": "manual",
-   "lng": -80.6235,
+   "lng": -80.62181,
    "note": "The City of Melbourne lists this intersection as closed because of flooding. The coordinates are approximate.",
    "reported": "2026-11-02T17:43:55Z",
    "road": "Babcock St",
@@ -2744,11 +2756,36 @@
    "status": "closed",
    "title": "Babcock St closed at Avenue B because of flooding",
    "where": "Babcock St at Avenue B",
+   "line": [
+    [
+     28.105319,
+     -80.621811
+    ],
+    [
+     28.10532,
+     -80.621811
+    ],
+    [
+     28.106257,
+     -80.62184
+    ]
+   ],
+   "from": "W Avenue B",
+   "to": "E Avenue A",
    "id": "brevard:manual:babcock-st-at-avenue-b",
    "updated": "2026-11-02T17:43:55Z",
    "lastReported": "2026-11-02T17:43:55Z",
    "firstReported": "2026-11-02T17:43:55Z",
    "verified": null,
+   "located": {
+    "checked": "2026-11-03T15:10:00Z",
+    "note": "S Babcock St x W Avenue B",
+    "source": "Brevard County 911 road map",
+    "url": "https://gis.brevardfl.gov/gissrv/rest/services/Emergency_Management/9_1_1_Emergency_Response_Layers/MapServer/1/query?where=ADD_LBL+IN+%28%27S+BABCOCK+ST%27%2C%27W+AVENUE+B%27%29&outFields=ADD_LBL&outSR=4326&returnGeometry=true&f=json",
+    "at": "2026-11-03T15:58:16Z",
+    "fromLat": 28.068,
+    "fromLng": -80.6235
+   },
    "awaitingOfficial": false,
    "missingSince": null,
    "recheck": []
@@ -2783,9 +2820,9 @@
    "city": "Palm Bay",
    "fullClosure": true,
    "lanes": "all lanes",
-   "lat": 28.0347,
+   "lat": 28.03507,
    "layer": "manual",
-   "lng": -80.6153,
+   "lng": -80.62169,
    "note": "On WESH's list of roads closed by flooding on Monday. The report time is approximate.",
    "reported": "2026-11-02T16:00:00Z",
    "road": "Babcock St",
@@ -2794,11 +2831,40 @@
    "status": "flooded",
    "title": "Babcock St closed at Palm Bay Rd because of flooding",
    "where": "Babcock St at Palm Bay Rd",
+   "line": [
+    [
+     28.031551,
+     -80.621804
+    ],
+    [
+     28.033217,
+     -80.621773
+    ],
+    [
+     28.03507,
+     -80.621689
+    ],
+    [
+     28.035074,
+     -80.621689
+    ]
+   ],
+   "from": "Hunter Ave NE",
+   "to": "Palm Bay Rd NE",
    "id": "brevard:manual:babcock-st-at-palm-bay-rd",
    "updated": "2026-11-02T16:00:00Z",
    "lastReported": "2026-11-02T16:00:00Z",
    "firstReported": "2026-11-02T16:00:00Z",
    "verified": null,
+   "located": {
+    "checked": "2026-11-03T15:10:00Z",
+    "note": "Babcock St NE x Palm Bay Rd NE",
+    "source": "Brevard County 911 road map",
+    "url": "https://gis.brevardfl.gov/gissrv/rest/services/Emergency_Management/9_1_1_Emergency_Response_Layers/MapServer/1/query?where=ADD_LBL+IN+%28%27BABCOCK+ST+NE%27%2C%27PALM+BAY+RD+NE%27%29&outFields=ADD_LBL&outSR=4326&returnGeometry=true&f=json",
+    "at": "2026-11-03T15:58:16Z",
+    "fromLat": 28.0347,
+    "fromLng": -80.6153
+   },
    "awaitingOfficial": false,
    "missingSince": null,
    "recheck": []
@@ -2958,9 +3024,9 @@
    "city": "Melbourne",
    "fullClosure": true,
    "lanes": "all",
-   "lat": 28.072,
+   "lat": 28.0715,
    "layer": "manual",
-   "lng": -80.6345,
+   "lng": -80.63795,
    "note": "The City of Melbourne lists the Dairy Road and Edgewood Drive intersection as closed by flooding. This was already in the Melbourne advisory text, and this adds it as a map point. The report time is an estimate. Coordinates are approximate.",
    "reported": "2026-11-02T18:00:00Z",
    "road": "Dairy Rd",
@@ -2969,11 +3035,36 @@
    "status": "closed",
    "title": "Dairy Rd closed at Edgewood Dr due to flooding",
    "where": "Dairy Rd at Edgewood Dr",
+   "line": [
+    [
+     28.071497,
+     -80.637953
+    ],
+    [
+     28.0715,
+     -80.637953
+    ],
+    [
+     28.073307,
+     -80.637927
+    ]
+   ],
+   "from": "Edgewood Dr",
+   "to": "Kanawha St",
    "id": "brevard:manual:dairy-rd-at-edgewood-dr",
    "updated": "2026-11-02T18:00:00Z",
    "lastReported": "2026-11-02T18:00:00Z",
    "firstReported": "2026-11-02T18:00:00Z",
    "verified": null,
+   "located": {
+    "checked": "2026-11-03T15:10:00Z",
+    "note": "Dairy Rd x Edgewood Dr",
+    "source": "Brevard County 911 road map",
+    "url": "https://gis.brevardfl.gov/gissrv/rest/services/Emergency_Management/9_1_1_Emergency_Response_Layers/MapServer/1/query?where=ADD_LBL+IN+%28%27DAIRY+RD%27%2C%27EDGEWOOD+DR%27%29&outFields=ADD_LBL&outSR=4326&returnGeometry=true&f=json",
+    "at": "2026-11-03T15:58:16Z",
+    "fromLat": 28.072,
+    "fromLng": -80.6345
+   },
    "awaitingOfficial": false,
    "missingSince": null,
    "recheck": []
@@ -3008,9 +3099,9 @@
    "city": "Melbourne",
    "fullClosure": true,
    "lanes": "all",
-   "lat": 28.115,
+   "lat": 28.04248,
    "layer": "manual",
-   "lng": -80.6345,
+   "lng": -80.63799,
    "note": "The City of Melbourne lists the Dairy Road and Snicole Road intersection as closed by flooding. The report time is an estimate. Coordinates are approximate.",
    "reported": "2026-11-02T18:00:00Z",
    "road": "Dairy Rd",
@@ -3019,11 +3110,36 @@
    "status": "closed",
    "title": "Dairy Rd closed at Snicole Rd due to flooding",
    "where": "Dairy Rd at Snicole Rd",
+   "line": [
+    [
+     28.040664,
+     -80.63801
+    ],
+    [
+     28.04248,
+     -80.637995
+    ],
+    [
+     28.04248,
+     -80.637995
+    ]
+   ],
+   "from": "Polo Dr",
+   "to": "Range Dr",
    "id": "brevard:manual:dairy-rd-at-snicole-rd",
    "updated": "2026-11-02T18:00:00Z",
    "lastReported": "2026-11-02T18:00:00Z",
    "firstReported": "2026-11-02T18:00:00Z",
    "verified": null,
+   "located": {
+    "checked": "2026-11-03T15:10:00Z",
+    "note": "Dairy Rd x Snicole Av",
+    "source": "Brevard County 911 road map",
+    "url": "https://gis.brevardfl.gov/gissrv/rest/services/Emergency_Management/9_1_1_Emergency_Response_Layers/MapServer/1/query?where=ADD_LBL+IN+%28%27DAIRY+RD%27%2C%27SNICOLE+AV%27%29&outFields=ADD_LBL&outSR=4326&returnGeometry=true&f=json",
+    "at": "2026-11-03T15:58:16Z",
+    "fromLat": 28.115,
+    "fromLng": -80.6345
+   },
    "awaitingOfficial": false,
    "missingSince": null,
    "recheck": []
@@ -3033,9 +3149,9 @@
    "city": "Melbourne",
    "fullClosure": false,
    "lanes": "Not stated",
-   "lat": 28.089,
+   "lat": 28.0936,
    "layer": "manual",
-   "lng": -80.6175,
+   "lng": -80.62645,
    "note": "City reports severe flooding; not listed as closed. Pin approximate.",
    "reported": "2026-11-02T17:43:55Z",
    "road": "Dr. Martin Luther King Jr. Blvd",
@@ -3049,6 +3165,15 @@
    "lastReported": "2026-11-02T17:43:55Z",
    "firstReported": "2026-11-02T17:43:55Z",
    "verified": null,
+   "located": {
+    "checked": "2026-11-03T15:10:00Z",
+    "note": "Dr Martin Luther King Jr Blvd x W Nasa Blvd",
+    "source": "Brevard County 911 road map",
+    "url": "https://gis.brevardfl.gov/gissrv/rest/services/Emergency_Management/9_1_1_Emergency_Response_Layers/MapServer/1/query?where=ADD_LBL+IN+%28%27DR+MARTIN+LUTHER+KING+JR+BLVD%27%2C%27W+NASA+BLVD%27%29&outFields=ADD_LBL&outSR=4326&returnGeometry=true&f=json",
+    "at": "2026-11-03T15:58:16Z",
+    "fromLat": 28.089,
+    "fromLng": -80.6175
+   },
    "awaitingOfficial": false,
    "missingSince": null,
    "recheck": []
@@ -3058,9 +3183,9 @@
    "city": "Melbourne",
    "fullClosure": false,
    "lanes": "Not stated",
-   "lat": 28.0795,
+   "lat": 28.07879,
    "layer": "manual",
-   "lng": -80.6175,
+   "lng": -80.62711,
    "note": "City reports severe flooding; not listed as closed. Pin approximate.",
    "reported": "2026-11-02T17:43:55Z",
    "road": "Dr. Martin Luther King Jr. Blvd",
@@ -3074,6 +3199,15 @@
    "lastReported": "2026-11-02T17:43:55Z",
    "firstReported": "2026-11-02T17:43:55Z",
    "verified": null,
+   "located": {
+    "checked": "2026-11-03T15:10:00Z",
+    "note": "Dr Martin Luther King Jr Blvd x W NEw Haven Av",
+    "source": "Brevard County 911 road map",
+    "url": "https://gis.brevardfl.gov/gissrv/rest/services/Emergency_Management/9_1_1_Emergency_Response_Layers/MapServer/1/query?where=ADD_LBL+IN+%28%27DR+MARTIN+LUTHER+KING+JR+BLVD%27%2C%27W+NEW+HAVEN+AV%27%29&outFields=ADD_LBL&outSR=4326&returnGeometry=true&f=json",
+    "at": "2026-11-03T15:58:16Z",
+    "fromLat": 28.0795,
+    "fromLng": -80.6175
+   },
    "awaitingOfficial": false,
    "missingSince": null,
    "recheck": []
@@ -3250,9 +3384,9 @@
    "city": "Melbourne",
    "fullClosure": true,
    "lanes": "all lanes (as listed)",
-   "lat": 28.115,
+   "lat": 28.13346,
    "layer": "manual",
-   "lng": -80.628,
+   "lng": -80.63229,
    "note": "Listed as 'Harbor City Boulevard at Law Street' among roads closed because of flooding. Coordinates are approximate: placed on US 1 in Melbourne, and the exact spot of the intersection was not confirmed.",
    "reported": "2026-11-02T20:00:00Z",
    "road": "Harbor City Blvd (US 1)",
@@ -3266,6 +3400,15 @@
    "lastReported": "2026-11-02T20:00:00Z",
    "firstReported": "2026-11-02T20:00:00Z",
    "verified": null,
+   "located": {
+    "checked": "2026-11-03T15:10:00Z",
+    "note": "N Harbor City Blvd x Law St",
+    "source": "Brevard County 911 road map",
+    "url": "https://gis.brevardfl.gov/gissrv/rest/services/Emergency_Management/9_1_1_Emergency_Response_Layers/MapServer/1/query?where=ADD_LBL+IN+%28%27N+HARBOR+CITY+BLVD%27%2C%27LAW+ST%27%29&outFields=ADD_LBL&outSR=4326&returnGeometry=true&f=json",
+    "at": "2026-11-03T15:58:16Z",
+    "fromLat": 28.115,
+    "fromLng": -80.628
+   },
    "awaitingOfficial": false,
    "missingSince": null,
    "recheck": []
@@ -3363,9 +3506,9 @@
    "approx": true,
    "city": "Palm Bay",
    "fullClosure": false,
-   "lat": 28.012,
+   "lat": 28.02454,
    "layer": "manual",
-   "lng": -80.689,
+   "lng": -80.69633,
    "note": "Pin approximate.",
    "reported": "2026-11-02T11:00:00Z",
    "road": "Jupiter Blvd NW at Elmont St NW",
@@ -3381,6 +3524,15 @@
    "lastReported": "2026-11-02T11:43:00Z",
    "firstReported": "2026-11-02T11:43:00Z",
    "verified": null,
+   "located": {
+    "checked": "2026-11-03T15:10:00Z",
+    "note": "Jupiter Blvd NW x Elmont St NW",
+    "source": "Brevard County 911 road map",
+    "url": "https://gis.brevardfl.gov/gissrv/rest/services/Emergency_Management/9_1_1_Emergency_Response_Layers/MapServer/1/query?where=ADD_LBL+IN+%28%27JUPITER+BLVD+NW%27%2C%27ELMONT+ST+NW%27%29&outFields=ADD_LBL&outSR=4326&returnGeometry=true&f=json",
+    "at": "2026-11-03T15:58:16Z",
+    "fromLat": 28.012,
+    "fromLng": -80.689
+   },
    "awaitingOfficial": false,
    "missingSince": null,
    "recheck": []
@@ -3505,9 +3657,9 @@
    "city": "Melbourne",
    "fullClosure": true,
    "lanes": "All lanes at the intersection",
-   "lat": 28.15,
+   "lat": 28.14709,
    "layer": "manual",
-   "lng": -80.666,
+   "lng": -80.64696,
    "note": "The city also lists Stewart Rd as closed but gives no limits. Pin approximate.",
    "reported": "2026-11-02T17:43:55Z",
    "road": "Lake Washington Rd",
@@ -3516,11 +3668,72 @@
    "status": "closed",
    "title": "Lake Washington Rd closed at Stewart Rd because of flooding",
    "where": "Lake Washington Rd at Stewart Rd",
+   "line": [
+    [
+     28.146836,
+     -80.65514
+    ],
+    [
+     28.146836,
+     -80.654962
+    ],
+    [
+     28.146848,
+     -80.654589
+    ],
+    [
+     28.146879,
+     -80.654317
+    ],
+    [
+     28.146918,
+     -80.654138
+    ],
+    [
+     28.146975,
+     -80.653874
+    ],
+    [
+     28.146995,
+     -80.653635
+    ],
+    [
+     28.146997,
+     -80.653309
+    ],
+    [
+     28.147029,
+     -80.650855
+    ],
+    [
+     28.147086,
+     -80.64696
+    ],
+    [
+     28.147086,
+     -80.64696
+    ],
+    [
+     28.147089,
+     -80.64689
+    ]
+   ],
+   "from": "Croton Rd",
+   "to": "Stewart Rd",
    "id": "brevard:manual:lake-washington-rd-at-stewart-rd",
    "updated": "2026-11-02T17:43:55Z",
    "lastReported": "2026-11-02T17:43:55Z",
    "firstReported": "2026-11-02T17:43:55Z",
    "verified": null,
+   "located": {
+    "checked": "2026-11-03T15:10:00Z",
+    "note": "Lake Washington Rd x Stewart Rd",
+    "source": "Brevard County 911 road map",
+    "url": "https://gis.brevardfl.gov/gissrv/rest/services/Emergency_Management/9_1_1_Emergency_Response_Layers/MapServer/1/query?where=ADD_LBL+IN+%28%27LAKE+WASHINGTON+RD%27%2C%27STEWART+RD%27%29&outFields=ADD_LBL&outSR=4326&returnGeometry=true&f=json",
+    "at": "2026-11-03T15:58:16Z",
+    "fromLat": 28.15,
+    "fromLng": -80.666
+   },
    "awaitingOfficial": false,
    "missingSince": null,
    "recheck": []
@@ -3720,9 +3933,9 @@
    "city": "West Melbourne",
    "fullClosure": true,
    "lanes": "all lanes",
-   "lat": 28.0565,
+   "lat": 28.04364,
    "layer": "manual",
-   "lng": -80.6755,
+   "lng": -80.67142,
    "note": "On WESH's list of roads closed by flooding on Monday. The report time and travel direction are approximate.",
    "reported": "2026-11-02T16:00:00Z",
    "road": "Minton Rd",
@@ -3731,11 +3944,40 @@
    "status": "flooded",
    "title": "Minton Rd closed at Norfolk Pkwy because of flooding",
    "where": "Minton Rd at Norfolk Pkwy",
+   "line": [
+    [
+     28.04364,
+     -80.67142
+    ],
+    [
+     28.04364,
+     -80.67142
+    ],
+    [
+     28.045766,
+     -80.671393
+    ],
+    [
+     28.046135,
+     -80.671396
+    ]
+   ],
+   "from": "Norfolk Pkwy",
+   "to": "Carriage Gate Dr",
    "id": "brevard:manual:minton-rd-at-norfolk-pkwy",
    "updated": "2026-11-02T16:00:00Z",
    "lastReported": "2026-11-02T16:00:00Z",
    "firstReported": "2026-11-02T16:00:00Z",
    "verified": null,
+   "located": {
+    "checked": "2026-11-03T15:10:00Z",
+    "note": "Minton Rd x Norfolk Pkwy",
+    "source": "Brevard County 911 road map",
+    "url": "https://gis.brevardfl.gov/gissrv/rest/services/Emergency_Management/9_1_1_Emergency_Response_Layers/MapServer/1/query?where=ADD_LBL+IN+%28%27MINTON+RD%27%2C%27NORFOLK+PKWY%27%29&outFields=ADD_LBL&outSR=4326&returnGeometry=true&f=json",
+    "at": "2026-11-03T15:58:16Z",
+    "fromLat": 28.0565,
+    "fromLng": -80.6755
+   },
    "awaitingOfficial": false,
    "missingSince": null,
    "recheck": []
@@ -3959,9 +4201,9 @@
    "city": "Melbourne",
    "fullClosure": true,
    "lanes": "Southbound",
-   "lat": 28.129,
+   "lat": 28.13848,
    "layer": "manual",
-   "lng": -80.6255,
+   "lng": -80.59852,
    "note": "City of Melbourne road closure list, flooding. Pin approximate.",
    "reported": "2026-11-02T17:43:55Z",
    "road": "Riverside Dr",
@@ -3970,11 +4212,144 @@
    "status": "closed",
    "title": "Riverside Dr southbound closed at Eau Gallie Blvd because of flooding",
    "where": "Riverside Dr SB at Eau Gallie Blvd",
+   "line": [
+    [
+     28.133637,
+     -80.594187
+    ],
+    [
+     28.133761,
+     -80.594382
+    ],
+    [
+     28.133965,
+     -80.594727
+    ],
+    [
+     28.134111,
+     -80.594985
+    ],
+    [
+     28.134269,
+     -80.595317
+    ],
+    [
+     28.134488,
+     -80.595808
+    ],
+    [
+     28.134774,
+     -80.596403
+    ],
+    [
+     28.134861,
+     -80.596575
+    ],
+    [
+     28.134993,
+     -80.596804
+    ],
+    [
+     28.135151,
+     -80.597042
+    ],
+    [
+     28.135322,
+     -80.597269
+    ],
+    [
+     28.135523,
+     -80.597499
+    ],
+    [
+     28.13557,
+     -80.597547
+    ],
+    [
+     28.135655,
+     -80.597625
+    ],
+    [
+     28.135814,
+     -80.597759
+    ],
+    [
+     28.135942,
+     -80.597856
+    ],
+    [
+     28.136091,
+     -80.59797
+    ],
+    [
+     28.136229,
+     -80.598073
+    ],
+    [
+     28.136394,
+     -80.598176
+    ],
+    [
+     28.136557,
+     -80.59825
+    ],
+    [
+     28.136582,
+     -80.598262
+    ],
+    [
+     28.13675,
+     -80.59833
+    ],
+    [
+     28.136969,
+     -80.598398
+    ],
+    [
+     28.137133,
+     -80.59845
+    ],
+    [
+     28.137288,
+     -80.598473
+    ],
+    [
+     28.137459,
+     -80.598484
+    ],
+    [
+     28.137659,
+     -80.598511
+    ],
+    [
+     28.137987,
+     -80.59851
+    ],
+    [
+     28.13848,
+     -80.598524
+    ],
+    [
+     28.138482,
+     -80.598524
+    ]
+   ],
+   "from": "Oceanside Blvd",
+   "to": "E Eau Gallie Blvd",
    "id": "brevard:manual:riverside-dr-sb-at-eau-gallie-blvd",
    "updated": "2026-11-02T17:43:55Z",
    "lastReported": "2026-11-02T17:43:55Z",
    "firstReported": "2026-11-02T17:43:55Z",
    "verified": null,
+   "located": {
+    "checked": "2026-11-03T15:10:00Z",
+    "note": "N Riverside Dr x E Eau Gallie Blvd",
+    "source": "Brevard County 911 road map",
+    "url": "https://gis.brevardfl.gov/gissrv/rest/services/Emergency_Management/9_1_1_Emergency_Response_Layers/MapServer/1/query?where=ADD_LBL+IN+%28%27N+RIVERSIDE+DR%27%2C%27E+EAU+GALLIE+BLVD%27%29&outFields=ADD_LBL&outSR=4326&returnGeometry=true&f=json",
+    "at": "2026-11-03T15:58:16Z",
+    "fromLat": 28.129,
+    "fromLng": -80.6255
+   },
    "awaitingOfficial": false,
    "missingSince": null,
    "recheck": []
@@ -4118,9 +4493,9 @@
    "city": "Melbourne",
    "fullClosure": false,
    "lanes": "Not stated",
-   "lat": 28.068,
+   "lat": 28.06384,
    "layer": "manual",
-   "lng": -80.61,
+   "lng": -80.60477,
    "note": "City reports severe flooding; not listed as closed. Pin approximate.",
    "reported": "2026-11-02T17:43:55Z",
    "road": "University Blvd",
@@ -4134,6 +4509,15 @@
    "lastReported": "2026-11-02T17:43:55Z",
    "firstReported": "2026-11-02T17:43:55Z",
    "verified": null,
+   "located": {
+    "checked": "2026-11-03T15:10:00Z",
+    "note": "E University Blvd x Lipscomb St",
+    "source": "Brevard County 911 road map",
+    "url": "https://gis.brevardfl.gov/gissrv/rest/services/Emergency_Management/9_1_1_Emergency_Response_Layers/MapServer/1/query?where=ADD_LBL+IN+%28%27E+UNIVERSITY+BLVD%27%2C%27LIPSCOMB+ST%27%29&outFields=ADD_LBL&outSR=4326&returnGeometry=true&f=json",
+    "at": "2026-11-03T15:58:16Z",
+    "fromLat": 28.068,
+    "fromLng": -80.61
+   },
    "awaitingOfficial": false,
    "missingSince": null,
    "recheck": []
@@ -4143,9 +4527,9 @@
    "city": "Melbourne",
    "fullClosure": false,
    "lanes": "Not stated",
-   "lat": 28.064,
+   "lat": 28.06379,
    "layer": "manual",
-   "lng": -80.633,
+   "lng": -80.59944,
    "note": "The city reported severe flooding here but did not list it as a closure. The coordinates are approximate.",
    "reported": "2026-11-02T17:43:55Z",
    "road": "University Blvd",
@@ -4159,6 +4543,15 @@
    "lastReported": "2026-11-02T17:43:55Z",
    "firstReported": "2026-11-02T17:43:55Z",
    "verified": null,
+   "located": {
+    "checked": "2026-11-03T15:10:00Z",
+    "note": "E University Blvd x Main St",
+    "source": "Brevard County 911 road map",
+    "url": "https://gis.brevardfl.gov/gissrv/rest/services/Emergency_Management/9_1_1_Emergency_Response_Layers/MapServer/1/query?where=ADD_LBL+IN+%28%27E+UNIVERSITY+BLVD%27%2C%27MAIN+ST%27%29&outFields=ADD_LBL&outSR=4326&returnGeometry=true&f=json",
+    "at": "2026-11-03T15:58:16Z",
+    "fromLat": 28.064,
+    "fromLng": -80.633
+   },
    "awaitingOfficial": false,
    "missingSince": null,
    "recheck": []
