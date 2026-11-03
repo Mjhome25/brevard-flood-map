@@ -401,8 +401,21 @@ host = shownm["brevard:manual:minton-helen"]
 check("an NWS report at the same intersection (either road order) joins the existing pin, no second pin",
       R.rid_of(helen) not in shownm and len(host["nws"]) == 1 and host["nws"][0]["reporter"] == "Broadcast Media")
 check("the joined pin shows the more serious report (closed), saying which report set it, history unchanged",
-      host["status"] == "closed" and host["statusBy"] == "NWS storm report"
+      host["status"] == "closed" and host["statusBy"]["reporter"] == "Broadcast Media" and host["baseStatus"] == "flooded"
       and E.derive(E.load(pm))["records"]["brevard:manual:minton-helen"]["fields"]["status"] == "flooded")
+pw = os.path.join(tmp, "mergew.jsonl")
+flood_later = R.lsr_item(dict(ents[0], time="11/02/2026 0951 AM", remarks="Flooding near Helen St & Minton Rd."),
+                         "2026-11-02T14:51:00Z", "https://api.weather.gov/products/y")
+run(pw, {"sources": {"manual": "up", "nws": "up"}, "items": [
+    man("mh", road="", where="Minton Rd NB at Helen St"), helen, flood_later]}, 0)
+sw = {i["id"]: i for i in R.display(E.derive(E.load(pw)))[0]}
+check("a pin known only by its where label still absorbs NWS reports there (no duplicate)", len(sw) == 1)
+hw = next(iter(sw.values()))
+check("the closed status cites the closing NWS report, not the newer flood-only one",
+      hw["status"] == "closed" and hw["statusBy"]["url"].endswith("/x") and hw["nws"][0]["url"].endswith("/y"))
+tpl = open(os.path.join(repo, "template.html")).read()
+check("a raised pin's own government badge describes its own status, and the short label keeps NWS",
+      "status:it.baseStatus" in tpl and "n+`<span class=\"vbs ok\">✓ Government verified" in tpl)
 check("a different intersection on the same road is not merged", "nws" not in shownm["brevard:manual:minton-192"])
 check("an NWS report with no matching pin is its own pin, carrying its own report",
       shownm[R.rid_of(its[1])]["nws"][0]["reporter"] == "Trained Spotter")

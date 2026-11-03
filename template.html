@@ -409,11 +409,11 @@ h1,h2,h3{margin:0;text-wrap:balance}
   const byId={};
   const tier=it=>it.layer==='manual'?'Hand-entered report':it.layer==='NWS'?'NWS storm report (preliminary)':'Agency feed';  // verification is shown by the badge
   // Government verification badge (Mike, Nov 3): verification is shown, never used to clear anything.
-  function claimOf(it){ const k=cause(it); return isClosed(it)?'closure':k==='mvc'?'crash':k==='flood'?'flooding report':'report'; }
+  function claimOf(it){ const k=cause(it); if(it.statusBy) it=Object.assign({},it,{status:it.baseStatus}); return isClosed(it)?'closure':k==='mvc'?'crash':k==='flood'?'flooding report':'report'; }
   function vbadge(it){
     const v=it.verified, pending=it.noLongerListed||it.awaitingOfficial, n=it.nws&&it.nws[0];
     // NWS storm report: green with a check, labelled as such (Mike, Nov 3); listed before a city/county government badge (Mike: national/NWS first)
-    const nb=n?`<div class="vb ok" role="note"><span class="seal" aria-hidden="true">✓</span><div><b>NWS storm report</b><div class="d">Reported to the National Weather Service${n.reporter?' by '+esc(n.reporter.toLowerCase()):''} · ${esc(when(n.at))}${it.nws.length>1?` · ${it.nws.length} reports`:''} · <a href="${esc(n.url)}" target="_blank" rel="noopener">NWS Melbourne ↗</a>${it.statusBy?'<br>Shown '+esc(it.status)+' because of this report':''}</div></div></div>`:'';
+    const nb=n?`<div class="vb ok" role="note"><span class="seal" aria-hidden="true">✓</span><div><b>NWS storm report</b><div class="d">Reported to the National Weather Service${n.reporter?' by '+esc(n.reporter.toLowerCase()):''} · ${esc(when(n.at))}${it.nws.length>1?` · ${it.nws.length} reports`:''} · <a href="${esc(n.url)}" target="_blank" rel="noopener">NWS Melbourne ↗</a>${it.statusBy?`<br>Shown ${esc(it.status)} because of the NWS storm report of ${esc(when(it.statusBy.at))}${it.statusBy.reporter?' ('+esc(it.statusBy.reporter.toLowerCase())+')':''} · <a href="${esc(it.statusBy.url)}" target="_blank" rel="noopener">that report ↗</a>`:''}</div></div></div>`:'';
     if(v){
       const what=v.kind==='feed'?`${esc(v.agency)} listed this ${claimOf(it)} · ${esc(when(v.publishedAt))}`
         :`${esc(v.agency)}: “${esc(v.quote)}” · published ${esc(vday(v))}`;
@@ -423,7 +423,8 @@ h1,h2,h3{margin:0;text-wrap:balance}
     return `<div class="vb unv" role="note"><span class="seal" aria-hidden="true">!</span><div><b>Reported, not government verified</b><div class="d">Awaiting government confirmation${it.source?' · reported by '+esc(it.source):''}</div></div></div>`;
   }
   const vday=v=>v.publishedDate?new Date(v.publishedDate+'T12:00:00Z').toLocaleDateString('en-US',{month:'short',day:'numeric',timeZone:'UTC'}):when(v.publishedAt);
-  const vshort=it=>it.verified?`<span class="vbs ok">✓ Government verified · ${esc(it.verified.kind==='feed'?when(it.verified.publishedAt):vday(it.verified))}${it.awaitingOfficial||it.noLongerListed?' · awaiting confirmation':''}</span>`:it.nws&&it.nws[0]?`<span class="vbs ok">✓ NWS storm report · ${esc(when(it.nws[0].at))}</span>`:'<span class="vbs unv">! Not government verified</span>';
+  const vshort=it=>{ const n=it.nws&&it.nws[0]?`<span class="vbs ok">✓ NWS storm report · ${esc(when(it.nws[0].at))}</span>`:'';  // NWS first (Mike)
+    return it.verified?n+`<span class="vbs ok">✓ Government verified · ${esc(it.verified.kind==='feed'?when(it.verified.publishedAt):vday(it.verified))}${it.awaitingOfficial||it.noLongerListed?' · awaiting confirmation':''}</span>`:n||'<span class="vbs unv">! Not government verified</span>'; };
   function nll(it){ const n=it.noLongerListed; return n?`<div class="nll">No longer listed${n.wasClosed?' as closed':''} by <a href="${esc(n.url)}" target="_blank" rel="noopener">${esc(n.agency)}</a> since ${esc(when(n.since))}. Not an official reopening.</div>`:''; }
   const srcHost=it=>{ try{ return new URL(it.sourceUrl).hostname.replace(/^www\./,''); }catch(e){ return 'the source'; } };  // the site the link really opens
   function popupHtml(it){

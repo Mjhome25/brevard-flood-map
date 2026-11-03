@@ -267,8 +267,10 @@ def display(state: dict) -> tuple[list[dict], list[dict]]:
 def place(it: dict) -> frozenset | None:
     """The intersection a pin is at, as the two road names in either order ('Minton Rd at Helen St' is the same place
     as 'Helen St at Minton Rd'); None when there is no cross street to match on."""
-    road = E.road_words(re.split(r"\s*\(|/", it.get("roadShort") or it.get("road") or "")[0])
-    cross = re.sub(r"^(?:at|near|between)\s+", "", it.get("spot") or "", flags=re.I)
+    where_road, _, where_cross = (it.get("where") or "").partition(" at ")
+    road = E.road_words(re.split(r"\s*\(|/", it.get("roadShort") or it.get("road") or where_road)[0])
+    road = re.sub(r" (?:nb|sb|eb|wb)$", "", road)
+    cross = re.sub(r"^(?:at|near|between)\s+", "", it.get("spot") or where_cross, flags=re.I)
     cross = E.road_words(re.split(r"\s+(?:and|to)\s+|\s*\(", cross)[0])
     return frozenset((road, cross)) if road and cross and road != cross else None
 
@@ -293,7 +295,9 @@ def merge_nws(items: list[dict]) -> list[dict]:
         host.setdefault("nws", []).append(report)
         host["nws"].sort(key=lambda r: r["at"] or "", reverse=True)
         if E.SEVERITY.get(report["status"], 0) > E.SEVERITY.get(host.get("status"), 0):
-            host["status"], host["statusBy"] = report["status"], "NWS storm report"
+            # the pin's own source still only supports its own status; statusBy is the NWS report that raised it
+            host.setdefault("baseStatus", host.get("status"))
+            host["status"], host["statusBy"] = report["status"], report
     out.sort(key=lambda it: it["id"])
     return out
 
