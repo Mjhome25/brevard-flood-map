@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-03T16:09:30Z",
+ "generated": "2026-11-03T16:10:47Z",
  "errors": [],
  "items": [
   {
@@ -4392,76 +4392,6 @@
   },
   {
    "approx": true,
-   "city": "West Melbourne / Melbourne",
-   "from": "Washburn Rd",
-   "fullClosure": true,
-   "lanes": "All lanes closed",
-   "lat": 28.1213,
-   "layer": "manual",
-   "line": [
-    [
-     28.120956,
-     -80.686538
-    ],
-    [
-     28.121017,
-     -80.684986
-    ],
-    [
-     28.12123,
-     -80.679517
-    ],
-    [
-     28.121311,
-     -80.677528
-    ],
-    [
-     28.121386,
-     -80.675733
-    ]
-   ],
-   "lng": -80.685,
-   "note": "Reported closed 'between Eau Gallie Blvd and Sarno Rd'; exact limits unclear. Pin approximate.",
-   "reported": "2026-11-02T13:22:00Z",
-   "road": "Sarno Rd near Eau Gallie Blvd",
-   "roadShort": "Sarno Rd",
-   "source": "City of West Melbourne (via Spectrum News 13)",
-   "sourceUrl": "https://mynews13.com/fl/orlando/news/2026/11/02/brevard-school-officials-cancel-classes-due-to-weather-concerns",
-   "spot": "near Eau Gallie Blvd",
-   "status": "closed",
-   "title": "Sarno Rd closed near Eau Gallie Blvd, flooding",
-   "to": "Porcella Ave",
-   "where": "Sarno Rd between Eau Gallie Blvd and its west end (limits as reported unclear)",
-   "id": "brevard:manual:sarno-eaugallie",
-   "updated": "2026-11-02T13:22:00Z",
-   "lastReported": "2026-11-02T13:22:00Z",
-   "firstReported": "2026-11-02T13:22:00Z",
-   "verified": null,
-   "awaitingOfficial": false,
-   "missingSince": null,
-   "recheck": [],
-   "nws": [
-    {
-     "status": "closed",
-     "reporter": "Law Enforcement",
-     "at": "2026-11-02T11:46:00Z",
-     "url": "https://api.weather.gov/products/46636742-a8d6-483b-b93e-bac5fd232b59",
-     "note": "Melbourne PD has reported a road closure near Sarno Rd & Eau Gallie Blvd due to flooding.",
-     "gov": true
-    }
-   ],
-   "baseStatus": "flooded",
-   "statusBy": {
-    "status": "closed",
-    "reporter": "Law Enforcement",
-    "at": "2026-11-02T11:46:00Z",
-    "url": "https://api.weather.gov/products/46636742-a8d6-483b-b93e-bac5fd232b59",
-    "note": "Melbourne PD has reported a road closure near Sarno Rd & Eau Gallie Blvd due to flooding.",
-    "gov": true
-   }
-  },
-  {
-   "approx": true,
    "city": "Melbourne",
    "fullClosure": true,
    "lanes": "All lanes closed",
@@ -5369,6 +5299,127 @@
     "missingSince": "2026-11-03T12:46:41Z",
     "reopenedAt": "2026-11-03T14:30:37Z",
     "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
+   },
+   "stillReported": []
+  },
+  {
+   "approx": true,
+   "city": "West Melbourne / Melbourne",
+   "from": "Washburn Rd",
+   "fullClosure": true,
+   "lanes": "All lanes closed",
+   "lat": 28.1213,
+   "layer": "manual",
+   "line": [
+    [
+     28.120956,
+     -80.686538
+    ],
+    [
+     28.121017,
+     -80.684986
+    ],
+    [
+     28.12123,
+     -80.679517
+    ],
+    [
+     28.121311,
+     -80.677528
+    ],
+    [
+     28.121386,
+     -80.675733
+    ]
+   ],
+   "lng": -80.685,
+   "note": "Reported closed 'between Eau Gallie Blvd and Sarno Rd'; exact limits unclear. Pin approximate.",
+   "reported": "2026-11-02T13:22:00Z",
+   "road": "Sarno Rd near Eau Gallie Blvd",
+   "roadShort": "Sarno Rd",
+   "source": "City of West Melbourne (via Spectrum News 13)",
+   "sourceUrl": "https://mynews13.com/fl/orlando/news/2026/11/02/brevard-school-officials-cancel-classes-due-to-weather-concerns",
+   "spot": "near Eau Gallie Blvd",
+   "status": "flooded",
+   "title": "Sarno Rd closed near Eau Gallie Blvd, flooding",
+   "to": "Porcella Ave",
+   "where": "Sarno Rd between Eau Gallie Blvd and its west end (limits as reported unclear)",
+   "id": "brevard:manual:sarno-eaugallie",
+   "updated": "2026-11-02T13:22:00Z",
+   "lastReported": "2026-11-02T13:22:00Z",
+   "firstReported": "2026-11-02T13:22:00Z",
+   "verified": null,
+   "reopenedAt": "2026-11-03T13:30:00Z",
+   "evidence": {
+    "agency": "City of Melbourne",
+    "checkedAt": "2026-11-03T16:10:15Z",
+    "finalUrl": "https://www.melbourneflorida.org/Government/City-News/Traffic-Advisories/Road-Closures-0830",
+    "host": "www.melbourneflorida.org",
+    "kind": "official",
+    "pageSha256": "8dc7e66929b2a8a6d24268c1a4897b500b4e89da47d832348eced94d72ea8a33",
+    "postSha256": "4a1833d5e2e8b5bdf34b4b6f9dbefb4b08e19909594bccd361f642c42b21e3cf",
+    "publishedDate": "2026-11-03",
+    "quote": "Sarno Road is open, but there are some infrastructure issues on the shoulder.",
+    "reopenedAt": "2026-11-03T13:30:00Z",
+    "sourceTime": "2026-11-03T13:30:00Z",
+    "url": "https://www.melbourneflorida.org/Government/City-News/Traffic-Advisories/Road-Closures-0830",
+    "verifier": "verify.py/3"
+   },
+   "stillReported": []
+  },
+  {
+   "approx": true,
+   "city": "Melbourne Village",
+   "from": "Pepsi Cola Dr",
+   "fullClosure": false,
+   "lat": 28.12,
+   "layer": "NWS",
+   "line": [
+    [
+     28.120829,
+     -80.690976
+    ],
+    [
+     28.120853,
+     -80.690027
+    ],
+    [
+     28.120888,
+     -80.688607
+    ]
+   ],
+   "lng": -80.69,
+   "note": "Melbourne PD has reported a road closure near Sarno Rd & Eau Gallie Blvd due to flooding.",
+   "reported": "2026-11-02T11:46:00Z",
+   "road": "Sarno Rd",
+   "roadShort": "Sarno Rd",
+   "source": "NWS Melbourne storm report (Law Enforcement)",
+   "sourceUrl": "https://api.weather.gov/products/46636742-a8d6-483b-b93e-bac5fd232b59",
+   "spot": "at Eau Gallie Blvd",
+   "status": "closed",
+   "title": "Flood reported to NWS Melbourne (Law Enforcement)",
+   "to": "North Dr",
+   "where": "Sarno Rd at Eau Gallie Blvd",
+   "id": "brevard:nws:76ca13415a",
+   "updated": "2026-11-02T11:46:00Z",
+   "lastReported": "2026-11-02T11:46:00Z",
+   "firstReported": "2026-11-02T11:46:00Z",
+   "verified": null,
+   "reopenedAt": "2026-11-03T13:30:00Z",
+   "evidence": {
+    "agency": "City of Melbourne",
+    "checkedAt": "2026-11-03T16:10:15Z",
+    "finalUrl": "https://www.melbourneflorida.org/Government/City-News/Traffic-Advisories/Road-Closures-0830",
+    "host": "www.melbourneflorida.org",
+    "kind": "official",
+    "pageSha256": "8dc7e66929b2a8a6d24268c1a4897b500b4e89da47d832348eced94d72ea8a33",
+    "postSha256": "4a1833d5e2e8b5bdf34b4b6f9dbefb4b08e19909594bccd361f642c42b21e3cf",
+    "publishedDate": "2026-11-03",
+    "quote": "Sarno Road is open, but there are some infrastructure issues on the shoulder.",
+    "reopenedAt": "2026-11-03T13:30:00Z",
+    "sourceTime": "2026-11-03T13:30:00Z",
+    "url": "https://www.melbourneflorida.org/Government/City-News/Traffic-Advisories/Road-Closures-0830",
+    "verifier": "verify.py/3"
    },
    "stillReported": []
   }
