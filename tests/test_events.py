@@ -81,8 +81,10 @@ E.append([rep(A, 0, status="flooded", fullClosure=False, lanes="Water on road")]
 E.append([rep(A, 2, kind="relisted", status="closed", fullClosure=True, lanes="All lanes closed",
               where="somewhere else")], p, now=T0)
 s = state(p, 3)[A]
-check("a relisted with higher severity raises status, fullClosure and lanes",
-      s["fields"]["status"] == "closed" and s["fields"]["fullClosure"] and s["fields"]["lanes"] == "All lanes closed")
+check("a relisted with higher severity raises status and fullClosure",
+      s["fields"]["status"] == "closed" and s["fields"]["fullClosure"])
+check("but keeps the first lane wording and flags the changed description",
+      s["fields"]["lanes"] == "Water on road" and "source changed its lane description" in s["recheck"])
 check("a relisted never moves the record (where unchanged)", s["fields"]["where"] == "Babcock St at Palm Bay Rd")
 check("lastReported follows the newest source time", s["lastReported"] == at(2))
 E.append([rep(A, 1, kind="relisted", status="closed", fullClosure=True)], p, now=T0)
@@ -142,10 +144,60 @@ rc, err = run_check(before, edited)
 check("check_events fails on a duplicate eid", rc == 1 and "duplicate eid" in err)
 forged = {"rid": A, "kind": "cleared", "src": "manual", "actor": "someone", "stime": at(4),
           "evidence": {"reopenedAt": at(4), "url": "https://example.com"}, "seq": len(lines) + 1, "at": at(4)}
-forged["eid"] = E.eid_of(forged)
+forged["eid"] = E.eid_of(forged, json.loads(lines[-1])["eid"])
 open(edited, "w").write(open(p).read() + E.canon(forged) + "\n")
 rc, err = run_check(before, edited)
 check("check_events fails on a hand-written cleared event while clearance is disabled", rc == 1 and "disabled" in err)
+
+# 5b. Baseline handling --------------------------------------------------------------------------------------------
+rc, err = run_check(os.path.join(tmp, "no-such-file"), p)
+check("check_events fails when the named baseline is missing", rc == 1 and "missing" in err)
+r = subprocess.run([sys.executable, "-I", os.path.join(repo, "check_events.py"), "--before", "", "--events", p,
+                    "--county", county], capture_output=True, text=True)
+check("an empty baseline without --bootstrap fails", r.returncode == 1)
+r = subprocess.run([sys.executable, "-I", os.path.join(repo, "check_events.py"), "--before", "", "--bootstrap",
+                    "--events", p, "--county", county], capture_output=True, text=True)
+check("an explicit bootstrap of a valid first history passes", r.returncode == 0)
+check("a non-empty baseline with the history file gone fails", run_check(before, os.path.join(tmp, "gone.jsonl"))[0] == 1)
+
+# 5c. Repeated transitions are kept; retries and unchanged listings are not ------------------------------------
+p = fresh("g.jsonl")
+src = lambda state: {"kind": "source", "src": "fl511", "state": state, "actor": "test"}
+w = [len(E.append([src(x)], p, now=T0)) for x in ("down", "up", "down", "down")]
+check("source down, up, down is written 1,1,1 and a repeated down is not", w == [1, 1, 1, 0])
+check("the second outage is the current health", E.derive(E.load(p))["sources"]["fl511"]["state"] == "down")
+miss = {"rid": A, "kind": "missing", "src": "manual", "actor": "test", "stime": at(1)}
+E.append([rep(A, 0)], p, now=T0)
+w = [len(E.append([ev], p, now=T0 + datetime.timedelta(hours=h)))
+     for h, ev in ((1, miss), (2, rep(A, 0, kind="relisted")), (3, miss), (4, miss))]
+check("missing, relisted, missing is written 1,1,1 and a repeated missing is not", w == [1, 1, 1, 0])
+m = state(p, 5)[A]
+check("missingSince is the start of the current absence", m["missingSince"] == at(3))
+n = len(E.load(p))
+E.append([rep(A, 0, kind="relisted"), rep(A, 0, kind="relisted")], p, now=T0 + datetime.timedelta(hours=6))
+E.append([rep(A, 0, kind="relisted")], p, now=T0 + datetime.timedelta(hours=7))
+check("an unchanged listing after the relist writes nothing more", len(E.load(p)) == n + 1)
+
+# 5d. Narrower or softer wording never replaces the original scope -------------------------------------------
+p = fresh("h.jsonl")
+E.append([rep(A, 0, status="flooded", fullClosure=True, lanes="All lanes closed, both directions")], p, now=T0)
+E.append([rep(A, 1, kind="relisted", status="closed", fullClosure=False, lanes="One northbound lane closed",
+              title="Roadway open", note="Roadway open")], p, now=T0)
+s = state(p, 2)[A]
+check("higher category with narrower lanes: closed, still full closure, original lanes kept",
+      s["fields"]["status"] == "closed" and s["fields"]["fullClosure"]
+      and s["fields"]["lanes"] == "All lanes closed, both directions")
+check("and it is flagged for recheck", "source shows reduced impact" in s["recheck"]
+      and "source changed its lane description" in s["recheck"])
+check("a 'Roadway open' title or note never replaces the original description",
+      s["fields"].get("title") != "Roadway open" and s["fields"].get("note") != "Roadway open")
+
+p = fresh("i.jsonl")
+E.append([rep(A, 0, status="closed", fullClosure=True)], p, now=T0)
+E.append([rep(A, 1, kind="relisted", status="flooded", fullClosure=True)], p, now=T0)
+s = state(p, 2)[A]
+check("a lower category alone (fullClosure unchanged) keeps closed and is flagged",
+      s["fields"]["status"] == "closed" and "source shows reduced impact" in s["recheck"])
 
 # 6. Reducer behaviour for an accepted reopening (replay of a cleared event built directly, not via append) ------
 evs = E.load(fresh("f.jsonl")) + [dict(rep(A, 0), seq=1, at=at(0))]

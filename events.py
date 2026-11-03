@@ -59,10 +59,11 @@ def canon(obj) -> str:
     return json.dumps(obj, sort_keys=True, separators=(",", ":"), ensure_ascii=False)
 
 
-def eid_of(ev: dict) -> str:
-    """Same observation, same id: rid, kind, source, source time and meaningful content; never fetch time."""
+def eid_of(ev: dict, prev: str = "") -> str:
+    """Hash of the event's content chained to the previous event's eid: unique and tamper-evident. Retries are not
+    caught by the eid but by append(), which writes nothing that would not change the derived state."""
     core = {k: ev.get(k) for k in ("rid", "kind", "src", "stime", "fields", "state", "reason", "evidence")}
-    return hashlib.sha256(canon(core).encode()).hexdigest()[:32]
+    return hashlib.sha256((prev + canon(core)).encode()).hexdigest()[:32]
 
 
 def rank(f: dict) -> tuple:
@@ -83,7 +84,7 @@ def load(path: str = EVENTS) -> list[dict]:
     return out
 
 
-def validate(ev: dict, prev_seq: int, clearance_enabled: bool) -> None:
+def validate(ev: dict, prev_seq: int, clearance_enabled: bool, prev_eid: str = "") -> None:
     """Schema checks shared by append (issuance) and check_events (replay)."""
     if ev.get("kind") not in KINDS:
         raise Refused(f"unknown kind {ev.get('kind')!r}")
@@ -91,7 +92,7 @@ def validate(ev: dict, prev_seq: int, clearance_enabled: bool) -> None:
         raise Refused(f"seq {ev.get('seq')} after {prev_seq}")
     if not parse(ev.get("at")):
         raise Refused(f"seq {ev.get('seq')}: bad at")
-    if ev.get("eid") != eid_of(ev):
+    if ev.get("eid") != eid_of(ev, prev_eid):
         raise Refused(f"seq {ev.get('seq')}: eid does not match content")
     kind = ev["kind"]
     if kind != "source" and not str(ev.get("rid", "")).count(":") >= 2:
@@ -116,24 +117,28 @@ def validate(ev: dict, prev_seq: int, clearance_enabled: bool) -> None:
 
 def append(new: list[dict], path: str = EVENTS, clearance_enabled: bool = False, now: datetime.datetime | None = None
            ) -> list[dict]:
-    """Append events that are not already in the history. Returns the events actually written."""
+    """Append the events that change the derived state; an event that would change nothing (a retry, a repeated
+    outage report, an unchanged listing) is not written. Returns the events actually written."""
     history = load(path)
-    seen = {e["eid"] for e in history}
+    state = _empty()
+    for ev in history:
+        apply(state, ev)
     seq = history[-1]["seq"] if history else 0
+    prev = history[-1]["eid"] if history else ""
     at = iso(now or utcnow())
     written = []
     for raw in new:
         if raw.get("kind") == "cleared":
             raise Refused("cleared events come only from the verifier path")
         ev = {k: v for k, v in raw.items() if k not in ("seq", "at", "eid")}
-        ev["eid"] = eid_of(ev)
-        if ev["eid"] in seen:
-            continue
-        ev["seq"], ev["at"] = seq + 1, at
+        ev["seq"], ev["at"], ev["eid"] = seq + 1, at, eid_of(ev, prev)
         ev = {k: ev[k] for k in ("seq", "at", "eid", *sorted(k for k in ev if k not in ("seq", "at", "eid")))}
-        validate(ev, seq, clearance_enabled)
-        seq += 1
-        seen.add(ev["eid"])
+        validate(ev, seq, clearance_enabled, prev)
+        before = canon(_slice(state, ev))
+        apply(state, ev)
+        if canon(_slice(state, ev)) == before:
+            continue
+        seq, prev = ev["seq"], ev["eid"]
         written.append(ev)
     if written:
         with open(path, "a", encoding="utf-8") as fh:
@@ -144,69 +149,89 @@ def append(new: list[dict], path: str = EVENTS, clearance_enabled: bool = False,
 
 # ---- reducing --------------------------------------------------------------------------------------------------
 
-def _merge_up(cur: dict, new: dict) -> tuple[dict, bool]:
-    """Raise severity or scope only. Returns (merged fields, whether the source showed a lower impact)."""
-    merged = dict(cur)
-    lower = rank(new) < rank(cur)
-    if rank(new) > rank(cur):
-        merged["status"] = new.get("status", cur.get("status"))
-        merged["fullClosure"] = bool(cur.get("fullClosure")) or bool(new.get("fullClosure"))
-        if new.get("lanes"):
-            merged["lanes"] = new["lanes"]  # only with a strictly higher severity
-    elif new.get("fullClosure") and not cur.get("fullClosure"):
+def _merge_up(cur: dict, new: dict) -> tuple[dict, list[str]]:
+    """Category and fullClosure only rise, each on its own. Scope and description (where, lanes, title, note, source)
+    keep the first report's wording; a later different lane description is flagged, never written over the old one.
+    Returns (merged fields, recheck reasons)."""
+    merged, reasons = dict(cur), []
+    sev_new, sev_cur = SEVERITY.get(new.get("status"), 1), SEVERITY.get(cur.get("status"), 1)
+    if sev_new > sev_cur:
+        merged["status"] = new["status"]
+    elif sev_new < sev_cur:
+        reasons.append("source shows reduced impact")
+    if new.get("fullClosure") and not cur.get("fullClosure"):
         merged["fullClosure"] = True
-    if not cur.get("lanes") and new.get("lanes") and not lower:
+    elif cur.get("fullClosure") and "fullClosure" in new and not new.get("fullClosure"):
+        reasons.append("source shows reduced impact")
+    if new.get("lanes") and not cur.get("lanes"):
         merged["lanes"] = new["lanes"]
-    for k in ("title", "note", "source", "sourceUrl"):  # descriptive text; scope fields never change here
-        if new.get(k) and not lower:
-            merged[k] = new[k]
-    return merged, lower
+    elif new.get("lanes") and new["lanes"] != cur.get("lanes"):
+        reasons.append("source changed its lane description")
+    return merged, reasons
+
+
+def _empty() -> dict:
+    return {"records": {}, "sources": {}}
+
+
+def _slice(state: dict, ev: dict):
+    """The part of the state an event can touch."""
+    if ev["kind"] == "source":
+        return state["sources"].get(ev.get("src"))
+    return state["records"].get(ev.get("rid"))
+
+
+def apply(state: dict, ev: dict) -> None:
+    """Fold one event into the state (time-independent; derive() adds what depends on `now`)."""
+    kind, rid = ev["kind"], ev.get("rid")
+    recs = state["records"]
+    if kind == "source":
+        if state["sources"].get(ev["src"], {}).get("state") != ev["state"]:
+            state["sources"][ev["src"]] = {"state": ev["state"], "since": ev["at"]}
+        return
+    r = recs.get(rid)
+    st = parse(ev.get("stime"))
+    if kind in ("reported", "relisted"):
+        if r is None:
+            recs[rid] = {"rid": rid, "src": ev.get("src"), "status": "active", "fields": dict(ev["fields"]),
+                         "firstReported": ev["stime"], "lastReported": ev["stime"], "recheck": [], "missingSince": None,
+                         "reopenedAt": None, "evidence": None}
+            return
+        if r["status"] == "reopened":
+            if st and st > parse(r["reopenedAt"]):
+                r.update(status="active", fields=dict(ev["fields"]), lastReported=ev["stime"], recheck=[],
+                         missingSince=None, reopenedAt=None, evidence=None)
+            return
+        r["fields"], reasons = _merge_up(r["fields"], ev["fields"])
+        if st and st > parse(r["lastReported"]):
+            r["lastReported"] = ev["stime"]
+        r["missingSince"] = None
+        for reason in reasons:
+            if reason not in r["recheck"]:
+                r["recheck"].append(reason)
+    elif r is None:
+        return
+    elif kind == "missing":
+        if r["status"] == "active" and not r["missingSince"]:
+            r["missingSince"] = ev["at"]
+    elif kind == "recheck":
+        if r["status"] == "active" and ev["reason"] not in r["recheck"]:
+            r["recheck"].append(ev["reason"])
+    elif kind == "cleared":
+        r.update(status="reopened", reopenedAt=ev["evidence"]["reopenedAt"], evidence=ev["evidence"])
 
 
 def derive(events: list[dict], now: datetime.datetime | None = None) -> dict:
     """Road state at `now`: {"records": {rid: state}, "sources": {src: health}}."""
     now = now or utcnow()
-    recs: dict[str, dict] = {}
-    sources: dict[str, dict] = {}
+    state = _empty()
     for ev in events:
-        kind, rid = ev["kind"], ev.get("rid")
-        if kind == "source":
-            sources[ev["src"]] = {"state": ev["state"], "since": ev["at"]}
-            continue
-        r = recs.get(rid)
-        st = parse(ev.get("stime"))
-        if kind in ("reported", "relisted"):
-            if r is None:
-                recs[rid] = {"rid": rid, "src": ev.get("src"), "status": "active", "fields": dict(ev["fields"]),
-                             "firstReported": ev["stime"], "lastReported": ev["stime"], "recheck": [],
-                             "missingSince": None}
-                continue
-            if r["status"] == "reopened":
-                if st and st > parse(r["reopenedAt"]):
-                    r.update(status="active", fields=dict(ev["fields"]), lastReported=ev["stime"], recheck=[],
-                             missingSince=None, reopenedAt=None, evidence=None)
-                continue
-            r["fields"], lower = _merge_up(r["fields"], ev["fields"])
-            if st and st > parse(r["lastReported"]):
-                r["lastReported"] = ev["stime"]
-            r["missingSince"] = None
-            if lower and "source shows reduced impact" not in r["recheck"]:
-                r["recheck"].append("source shows reduced impact")
-        elif r is None:
-            continue
-        elif kind == "missing":
-            if r["status"] == "active" and not r["missingSince"]:
-                r["missingSince"] = ev["at"]
-        elif kind == "recheck":
-            if r["status"] == "active" and ev["reason"] not in r["recheck"]:
-                r["recheck"].append(ev["reason"])
-        elif kind == "cleared":
-            r.update(status="reopened", reopenedAt=ev["evidence"]["reopenedAt"], evidence=ev["evidence"])
-    for r in recs.values():
+        apply(state, ev)
+    for r in state["records"].values():
         if r["status"] == "reopened":
             r["show"] = "green" if now < parse(r["reopenedAt"]) + datetime.timedelta(hours=GREEN_HOURS) else "hidden"
         else:
             r["show"] = "active"
             old = now - parse(r["lastReported"]) > datetime.timedelta(hours=RECHECK_AFTER_HOURS)
             r["awaitingOfficial"] = bool(r["missingSince"] or r["recheck"] or old)
-    return {"records": recs, "sources": sources}
+    return state

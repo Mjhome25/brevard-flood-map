@@ -3,6 +3,7 @@
 
   python3 check_events.py --before <copy of the history at the start of the run> [--events closure_events.jsonl]
 
+The baseline must exist (a first history needs --before '' --bootstrap).
 Checks: the history only grew (the earlier bytes are unchanged), every line parses and passes the shared schema,
 seq runs 1, 2, 3 ..., eids are unique and match their content, cleared events obey the county's clearance setting,
 and no record that was active before the run stopped being active without a cleared event.
@@ -18,12 +19,20 @@ import events as E  # noqa: E402
 
 def main(argv=None) -> int:
     p = argparse.ArgumentParser()
-    p.add_argument("--before", required=True, help="the accepted history at the start of the run ('' if none)")
+    p.add_argument("--before", required=True, help="the accepted history at the start of the run")
+    p.add_argument("--bootstrap", action="store_true", help="first run only: there is no earlier history (--before '')")
     p.add_argument("--events", default=E.EVENTS)
     p.add_argument("--county", default=os.path.join(E.HERE, "county.json"))
     a = p.parse_args(argv)
     enabled = bool(json.load(open(a.county)).get("clearance", {}).get("enabled"))
-    before = open(a.before, "rb").read() if a.before and os.path.exists(a.before) else b""
+    if a.bootstrap != (a.before == ""):
+        print("check_events: FAILED: use --before '' together with --bootstrap, and only for the first history",
+              file=sys.stderr)
+        return 1
+    if a.before and not os.path.isfile(a.before):
+        print(f"check_events: FAILED: baseline {a.before} is missing", file=sys.stderr)
+        return 1
+    before = open(a.before, "rb").read() if a.before else b""
     after = open(a.events, "rb").read() if os.path.exists(a.events) else b""
     problems = []
     if not after.startswith(before):
@@ -34,16 +43,17 @@ def main(argv=None) -> int:
         evs = E.load(a.events)
     except (E.Refused, json.JSONDecodeError) as exc:
         evs, problems = [], problems + [f"unreadable history: {exc}"]
-    seq, eids = 0, set()
+    seq, eids, prev = 0, set(), ""
     for ev in evs:
         try:
-            E.validate(ev, seq, enabled)
+            E.validate(ev, seq, enabled, prev)
         except E.Refused as exc:
             problems.append(str(exc))
         if ev.get("eid") in eids:
             problems.append(f"seq {ev.get('seq')}: duplicate eid")
         eids.add(ev.get("eid"))
         seq = ev.get("seq") if isinstance(ev.get("seq"), int) else seq + 1
+        prev = ev.get("eid", "")
     if not problems and before:
         n_before = before.count(b"\n")
         was = E.derive(evs[:n_before])["records"]
