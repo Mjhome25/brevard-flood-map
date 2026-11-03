@@ -553,8 +553,13 @@ check("the page ends the 24-hour window itself: expired entries are filtered on 
       "let cleared=allCleared.filter(live)" in tplc and "Date.now()-new Date(c.reopenedAt)<DAY" in tplc
       and "cleared=allCleared.filter(live); draw(); expire();" in tplc)
 vis = __import__("re").sub(r"//[^\n]*|cleared(?:Wrap|El|N|Why|Link|Popup|-wrap)|renderCleared|goCleared|allCleared|let cleared|cleared\.|cleared=|'cleared'|id=\"cleared\"|clears it", "", tplc)
-check("Mike (Nov 3): the page never calls an FHP item cleared; it says no longer listed",
-      "cleared" not in vis.lower() and "No longer listed by FHP" in tplc and "NO LONGER LISTED" in tplc)
+# Mike (Nov 3, ~17:55Z) chose the faded style: a report its own feed dropped reads "Cleared by <agency>", always with the
+# words that it is not an official reopening; "cleared" appears nowhere else on the page
+allowed = r"cleared by (?:fhp/fl511|fhp\b|fl511\b|<a |\$\{esc\(it\.noLongerListed\.agency\)\}|'\+it\.noLongerListed\.agency)"
+check("Mike (Nov 3): 'Cleared by FHP/FL511' appears only beside 'not an official reopening' / 'not confirmed open'",
+      "cleared" not in __import__("re").sub(allowed, "", vis, flags=__import__("re").I).lower()
+      and "not confirmed open by an official source" in tplc and "Not an official reopening" in tplc
+      and "No longer listed by FHP" in tplc and "NO LONGER LISTED" in tplc)
 check("an active report at a cleared FHP closure's place notes FHP's drop and says it stays", "${fhpNote(it)}" in tplc
       and "stays until a cited source clears it" in tplc)
 check("check_events accepts the FHP-drop clearance with clearance enabled", subprocess.run(

@@ -35,6 +35,7 @@ jobs:
           python3 -I tests/test_water_notices.py
           python3 -I tests/test_audit.py "$PWD"
           python3 -I tests/test_coverage.py "$PWD"
+          python3 -I tests/test_drops.py "$PWD"
 
       - name: Snapshot the accepted closure history
         run: cp closure_events.jsonl "$RUNNER_TEMP/events.before"
@@ -67,6 +68,12 @@ jobs:
       - name: Official advisory coverage
         continue-on-error: true
         run: python3 -I coverage.py
+
+      # Every run: each FHP/FL511 drop is checked against every other report at that place (Mike's one-week drop trial,
+      # Nov 3 to Nov 10) in audit/drops.json. Read-only; a failure never stops the map.
+      - name: FHP/FL511 drop trial
+        continue-on-error: true
+        run: python3 -I drops.py
 
       - name: Daily removal audit
         continue-on-error: true
