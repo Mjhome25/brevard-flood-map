@@ -99,6 +99,58 @@ def fhp_normalize(it: dict) -> dict | None:
             "reason": f"parser correction: FHP type '{typ}' with remark '{it.get('lanes', '')}' reclassified"}
 
 
+LSR_FLOOD = ("FLOOD", "FLASH FLOOD", "COASTAL FLOOD")
+_LSR_HEAD = re.compile(r"^(\d{4}) ([AP]M) {2,}")
+_LSR_ROAD_CLOSED = re.compile(r"\broads?(?:way)?s?\s+(?:closure|closed)\b|\bclosed\s+roads?\b", re.I)
+_LSR_NOT = re.compile(r"\b(?:not|no longer|re-?opened|open)\b", re.I)
+_W = r"[A-Z0-9]\w*"  # a capitalised word; names stop at a lower-case word or a full stop
+_LSR_AT = re.compile(rf"\b(?:at|near|on)\s+(?:at\s+)?({_W}(?: {_W})*?)\s+(?:&|and|at)\s+({_W}(?: {_W})*)")
+_LSR_IS = re.compile(rf"^({_W}(?: {_W})* (?:St|Rd|Ave|Blvd|Dr|Ln|Pkwy|Hwy|Way|Ct|Pl|Cswy|Street|Road|Avenue)"
+                     rf"(?: [NS][EW])?) is flooded")
+
+
+def lsr_entries(text: str, county: str = "BREVARD", state: str = "FL") -> list[dict]:
+    """Flood entries from an NWS Local Storm Report product (fixed columns: time, event, city, lat/lon; then date,
+    magnitude, county, state, source; then indented remarks). Other counties and other event types are skipped."""
+    lines, out = text.splitlines(), []
+    for i, line in enumerate(lines[:-1]):
+        m, two = _LSR_HEAD.match(line), lines[i + 1]
+        ll = re.search(r"(\d+\.\d+)N\s+(\d+\.\d+)W\s*$", line)
+        if not m or not ll or not re.match(r"\d\d/\d\d/\d{4}", two):
+            continue
+        event, city = line[12:29].strip(), line[29:53].strip()
+        if event.upper() not in LSR_FLOOD or two[29:48].strip().upper() != county or two[48:50] != state:
+            continue
+        remarks = []
+        for r in lines[i + 3:]:
+            if not r.startswith("            ") or not r.strip():
+                break
+            remarks.append(r.strip())
+        out.append({"time": f"{two[:10]} {m.group(1)} {m.group(2)}", "event": event.title(), "city": city,
+                    "lat": float(ll.group(1)), "lng": -float(ll.group(2)), "source": two[53:].strip(),
+                    "remarks": " ".join(remarks)})
+    return out
+
+
+def lsr_item(e: dict, when: str, url: str) -> dict:
+    """An observation from one LSR flood entry. NWS publishes the report (with who reported it); a remark saying a
+    road is closed shows the road closed, otherwise flooded. The NWS point is rounded, so the spot comes from the
+    remark's intersection when it names one."""
+    rem = e["remarks"]
+    closed = bool(_LSR_ROAD_CLOSED.search(rem)) and not _LSR_NOT.search(rem)
+    m, near = _LSR_AT.search(rem), re.sub(r"^\d+ [NSEW]{1,3} ", "", e["city"])
+    if m:
+        road, spot = m.group(1), "at " + m.group(2)
+    else:
+        m = _LSR_IS.search(rem)
+        road, spot = (m.group(1), f"in {near}") if m else (f"{near} area", "")
+    key = f"{e['time']}|{e['lat']:.2f}|{e['lng']:.2f}"
+    return {"id": "nws-" + hashlib.sha1(key.encode()).hexdigest()[:10], "layer": "NWS", "status": "closed" if closed else "flooded",
+            "fullClosure": False, "road": road, "roadShort": road, "spot": spot, "lat": e["lat"], "lng": e["lng"],
+            "title": f"{e['event']} reported to NWS Melbourne ({e['source']})", "note": rem, "city": near, "approx": True,
+            "reported": when, "updated": when, "source": f"NWS Melbourne storm report ({e['source']})", "sourceUrl": url}
+
+
 def rid_of(it: dict, county: str = "brevard") -> str:
     """Stable record ids. FHP: reported time + hash of road and cross street (the old id used Python's per-process
     hash, which changes between runs)."""
@@ -108,11 +160,13 @@ def rid_of(it: dict, county: str = "brevard") -> str:
     if layer == "FHP":
         key = hashlib.sha1(f"{it.get('road', '')}|{it.get('spot', '')}".encode()).hexdigest()[:8]
         return f"{county}:fhp:" + re.sub(r"\D", "", it.get("reported") or "") + "-" + key
+    if layer == "NWS":
+        return f"{county}:nws:" + i.removeprefix("nws-")
     return f"{county}:fl511:" + i.removeprefix("fl511-")
 
 
 def src_of(it: dict) -> str:
-    return {"manual": "manual", "FHP": "fhp"}.get(it.get("layer"), "fl511")
+    return {"manual": "manual", "FHP": "fhp", "NWS": "nws"}.get(it.get("layer"), "fl511")
 
 
 def fields_of(it: dict) -> dict:
@@ -161,7 +215,9 @@ _OPEN_WORDS = re.compile(r"\b(?:ro\w*d(?:way)?\s+)?(?:open|clear(?:ed)?)\b", re.
 
 
 FEEDS = {"fl511": {"agency": "FL511 (FDOT)", "url": "https://fl511.com"},
-         "fhp": {"agency": "Florida Highway Patrol", "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"}}
+         "fhp": {"agency": "Florida Highway Patrol", "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"},
+         "nws": {"agency": "National Weather Service Melbourne", "url": "https://forecast.weather.gov/product.php?site=MLB&product=LSR&issuedby=MLB"}}
+LISTED = ("fl511", "fhp")  # live listings, where dropping off means something; NWS storm reports simply age off
 
 
 def verification(r: dict) -> dict | None:
@@ -185,7 +241,7 @@ def display(state: dict) -> tuple[list[dict], list[dict]]:
             it["raisedBy"] = r["raisedBy"]
         if r["status"] == "active":
             it.update(awaitingOfficial=r["awaitingOfficial"], missingSince=r["missingSince"], recheck=r["recheck"])
-            if r["missingSince"] and r["src"] in FEEDS:
+            if r["missingSince"] and r["src"] in LISTED:
                 # Mike: a feed dropping a closure is cited but stays a flag; it is not an official reopening.
                 f = r["fields"]
                 it["noLongerListed"] = dict(FEEDS[r["src"]], since=r["missingSince"],

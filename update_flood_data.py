@@ -5,13 +5,14 @@ Sources (all public, no keys):
   - FL511 list endpoints (Incidents, Closures) filtered to county == Brevard
   - FHP CAD live incident viewer (trafficincidents.flhsmv.gov), Brevard rows
   - NWS active alerts for Brevard County (FLC009) with warning polygons
+  - NWS Melbourne Local Storm Reports (flood entries in Brevard) from the last 7 days
   - manual_closures.json: hand-curated reports from police/news/Facebook
 Run:  python3 update_flood_data.py   (writes flood_data.json next to it)
 """
 import json, re, html, os, sys, urllib.request, urllib.parse, datetime
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
-from reconcile import fhp_classify, fhp_rows  # noqa: E402
+from reconcile import fhp_classify, fhp_rows, lsr_entries, lsr_item  # noqa: E402
 UA = "BrevardFloodMap/0.1 (+https://brevardemergency.com)"
 from zoneinfo import ZoneInfo
 TZ = ZoneInfo("America/New_York")  # FL511 and FHP times are Eastern, across daylight saving
@@ -160,6 +161,22 @@ try:
                        "areas": p.get("areaDesc"), "effective": p.get("effective"), "expires": p.get("expires"),
                        "description": (p.get("description") or "")[:1200], "geometry": f.get("geometry")})
 except Exception as e: errors.append(f"NWS: {e}")
+
+# ---- NWS Local Storm Reports (flooding reported to NWS Melbourne) ------
+try:
+    d = json.loads(get("https://api.weather.gov/products/types/LSR/locations/MLB", accept="application/geo+json"))
+    since = datetime.datetime.now(datetime.timezone.utc) - datetime.timedelta(days=7)
+    seen = set()
+    for p in d.get("@graph", []):
+        if datetime.datetime.fromisoformat(p["issuanceTime"]) < since: continue
+        prod = json.loads(get(p["@id"], accept="application/ld+json"))
+        for e in lsr_entries(prod.get("productText") or ""):
+            when = iso(datetime.datetime.strptime(e["time"], "%m/%d/%Y %I%M %p").replace(tzinfo=TZ))
+            it = lsr_item(e, when, "https://api.weather.gov/products/" + p["id"])
+            if it["id"] in seen: continue  # corrections and summaries repeat entries
+            seen.add(it["id"]); items.append(it)
+    sources["nws"] = "up" if any(it["layer"] == "NWS" for it in items) else "empty"
+except Exception as e: errors.append(f"NWS storm reports: {e}"); sources["nws"] = "down"
 
 # ---- manual reports ---------------------------------------------------
 manual = []

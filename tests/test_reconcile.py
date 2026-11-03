@@ -322,6 +322,61 @@ fv = [i for i in R.display(E.derive(E.load(pr)))[0] if i["id"] == "brevard:fl511
 check("a feed badge is dated by the observation that made it a closure, not the first caution",
       fv["verified"]["publishedAt"] == "2026-11-02T15:00:00Z")
 
+# NWS Melbourne Local Storm Reports: Brevard flood entries only, intersection from the remark, closure only when said
+LSR = """..TIME...   ...EVENT...      ...CITY LOCATION...     ...LAT.LON...
+..DATE...   ....MAG....      ..COUNTY LOCATION..ST.. ...SOURCE....
+            ..REMARKS..
+
+0851 AM     Flood            West Melbourne          28.08N 80.67W
+11/02/2026                   Brevard            FL   Broadcast Media
+
+            Media reports a road closure at at Helen St
+            & Minton Rd due to flooding.
+
+0706 AM     Flood            3 NE Palm Bay           28.01N 80.63W
+11/02/2026                   Brevard            FL   Trained Spotter
+
+            Trained spotter reported flooding near
+            Nebraska St NE & Rome Ave NE. Two vehicles
+            are stalled in the water.
+
+0400 AM     Flood            3 W West Melbourne      28.07N 80.71W
+11/02/2026                   Brevard            FL   NWS Employee
+
+            Horizon View Ave is flooded.
+
+1152 PM     Tstm Wnd Gst     3 SE Floridana Beach    27.90N 80.47W
+11/01/2026  M43 MPH          Brevard            FL   Mesonet
+
+1136 AM     Flash Flood      1 W Okeechobee          27.24N 80.85W
+11/01/2026                   Okeechobee         FL   Law Enforcement
+
+            Road is not passable.
+
+&&
+"""
+ents = R.lsr_entries(LSR)
+check("storm reports: only Brevard flood entries", [e["source"] for e in ents] == ["Broadcast Media", "Trained Spotter", "NWS Employee"])
+its = [R.lsr_item(e, "2026-11-02T13:51:00Z", "https://api.weather.gov/products/x") for e in ents]
+check("storm report: a reported road closure shows closed, at the remark's intersection",
+      (its[0]["status"], its[0]["road"], its[0]["spot"]) == ("closed", "Helen St", "at Minton Rd") and not its[0]["fullClosure"])
+check("storm report: flooding stays flooded; the cross street stops at the sentence end",
+      (its[1]["status"], its[1]["road"], its[1]["spot"]) == ("flooded", "Nebraska St NE", "at Rome Ave NE"))
+check("storm report: 'X is flooded' names the road; the point is approximate",
+      its[2]["road"] == "Horizon View Ave" and its[2]["city"] == "West Melbourne" and its[2]["approx"])
+check("storm report: a negated closure remark does not close the road",
+      R.lsr_item(dict(ents[0], remarks="Road closure at Helen St & Minton Rd is no longer in effect."), "x", "u")["status"] == "flooded")
+check("storm report ids are stable and separate", len({R.rid_of(i) for i in its}) == 3
+      and R.rid_of(its[0]).startswith("brevard:nws:") and R.src_of(its[0]) == "nws")
+pn = os.path.join(tmp, "nws.jsonl")
+run(pn, {"sources": {"nws": "up"}, "items": its}, 0)
+run(pn, {"sources": {"nws": "up"}, "items": its[:1]}, 1)
+shownn = {i["id"]: i for i in R.display(E.derive(E.load(pn)))[0]}
+check("a storm report that ages off the NWS list stays on the map with no 'no longer listed' note",
+      len(shownn) == 3 and all("noLongerListed" not in i for i in shownn.values()))
+check("a storm report is government reported by NWS Melbourne",
+      shownn[R.rid_of(its[1])]["verified"]["agency"] == "National Weather Service Melbourne")
+
 # FHP ids are the same in separate processes (the old id used Python's per-process hash)
 code = ("import sys; sys.path.insert(0, sys.argv[1]); import reconcile as R; "
         "print(R.rid_of({'layer': 'FHP', 'id': 'fhp-x', 'reported': '2026-11-02T14:14:28Z', "

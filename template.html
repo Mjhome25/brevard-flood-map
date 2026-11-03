@@ -237,12 +237,12 @@ h1,h2,h3{margin:0;text-wrap:balance}
 
 <div class="foot">
   <span><b>Not an official source.</b> Call 911 for emergencies. No patient information.</span>
-  <span>FL511 · FHP · NWS Melbourne · local agencies</span>
+  <span>FL511 · FHP · NWS Melbourne storm reports · local agencies</span>
   <button id="aboutbtn" aria-expanded="false" aria-controls="about">How this works</button>
 </div>
 <div class="about" id="about" hidden>
   <p><b>Refresh.</b> Road data is pulled about every 15 minutes while the feed on the office computer is running; NWS alerts refresh live every 5 minutes, and the page reloads itself when newer road data is posted. A red note under the map appears when road data is more than 30 minutes old.</p>
-  <p><b>Tiers.</b> FL511 (FDOT), Florida Highway Patrol live CAD and NWS items come from agency feeds. Items marked "unconfirmed" are hand-entered from police, county or news posts; each shows its post time and link. A hand-entered report stays on the map, with the time it was last reported, until an official source says the road has reopened. FL511 and FHP items show while those feeds list them.</p>
+  <p><b>Tiers.</b> FL511 (FDOT), Florida Highway Patrol live CAD and NWS items come from agency feeds. NWS Melbourne storm reports are flooding reported to the Weather Service (by police, emergency managers, spotters, media or the public, as each says); their map point is approximate. Items marked "unconfirmed" are hand-entered from police, county or news posts; each shows its post time and link. A hand-entered report stays on the map, with the time it was last reported, until an official source says the road has reopened. FL511 and FHP items show while those feeds list them.</p>
   <p><b>Privacy.</b> No patient information is ever shown here. Map data © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors.</p>
 </div>
 
@@ -457,7 +457,7 @@ h1,h2,h3{margin:0;text-wrap:balance}
   const listEl=document.getElementById('list');
   function rowHtml(it){
     const t=it.updated||it.reported; const old=t&&(Date.now()-new Date(t))>6*3600e3; const stale=isStale(it); const closed=isClosed(it)&&!stale;
-    const badge = it.layer==='manual' ? '' : `<span class="badge feed">${esc(it.layer==='FHP'?'FHP':'FL511')}</span>`;
+    const badge = it.layer==='manual' ? '' : `<span class="badge feed">${esc(it.layer==='FHP'?'FHP':it.layer==='NWS'?'NWS':'FL511')}</span>`;
     const isNew=t&&(Date.now()-new Date(t))<3600e3;
     return `<div class="row" data-id="${esc(it.id)}" tabindex="0" role="button" aria-label="${esc(where(it))}, show on map"><span class="ic">${svgFor(it,stale,.85).html}</span><div class="ttl">${isNew?'<span class="badge new">New</span>':''}${closed?'<span class="badge full">Closed</span>':''}${esc(closed&&span(it)?roadDir(it):where(it))}</div><span class="age ${old?'old':''}" title="${esc(when(t))}">${esc(ago(t))}</span><div class="imp ${closed?'closed':''}">${esc(closed&&span(it)?'Closed '+span(it):impact(it))}</div>${closed&&span(it)?`<div class="imp sub">Reported ${esc(it.spot||'')}${it.lanes&&!NOLANES.test(it.lanes.trim())?' · '+esc(it.lanes):''}</div>`:''}<div class="meta">${vshort(it)}${badge}${esc([it.title!==where(it)?it.title:'',it.city,it.source,t?'last reported '+when(t):'',it.awaitingOfficial?'awaiting official reopening':''].filter(Boolean).join(' · '))}${it.noLongerListed?' · no longer listed'+(it.noLongerListed.wasClosed?' as closed':'')+' by '+esc(it.noLongerListed.agency):''}${it.lat==null?' · no map location yet':''}</div></div>`;
   }
