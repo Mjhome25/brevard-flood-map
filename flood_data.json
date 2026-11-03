@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-03T04:30:30Z",
+ "generated": "2026-11-03T04:46:20Z",
  "errors": [],
  "items": [
   {
@@ -964,20 +964,49 @@
    "to": "Highway 1"
   },
   {
+   "id": "fl511-938139",
+   "source": "FL511 (FDOT)",
+   "sourceUrl": "https://fl511.com",
+   "road": "I-95",
+   "title": "Incident on I-95 South, before MM 169/Rest Area",
+   "status": "caution",
+   "fullClosure": false,
+   "reported": "2026-11-03T01:32:00Z",
+   "updated": "2026-11-03T03:02:00Z",
+   "lat": 27.946611,
+   "lng": -80.608056,
+   "layer": "Incidents",
+   "dir": "SB",
+   "lanes": "",
+   "roadShort": "I-95",
+   "spot": "before MM 169/Rest Area",
+   "line": [
+    [
+     27.94661,
+     -80.60808
+    ],
+    [
+     27.94599,
+     -80.60792
+    ]
+   ],
+   "where": "I-95 SB before MM 169/Rest Area"
+  },
+  {
    "id": "fl511-938170",
    "source": "FL511 (FDOT)",
    "sourceUrl": "https://fl511.com",
    "road": "I-95",
-   "title": "MVC on I-95 South, at MM 222. All lanes closed",
-   "status": "closed",
-   "fullClosure": true,
+   "title": "MVC on I-95 South, at MM 222. 2 Left lanes blocked",
+   "status": "caution",
+   "fullClosure": false,
    "reported": "2026-11-03T01:57:00Z",
-   "updated": "2026-11-03T04:23:00Z",
+   "updated": "2026-11-03T04:40:00Z",
    "lat": 28.645552,
    "lng": -80.861413,
-   "layer": "Closures",
+   "layer": "Incidents",
    "dir": "SB",
-   "lanes": "All lanes closed",
+   "lanes": "2 Left lanes blocked",
    "roadShort": "I-95",
    "spot": "at MM 222",
    "line": [
@@ -1015,35 +1044,6 @@
     ]
    ],
    "where": "I-95 SB at MM 222"
-  },
-  {
-   "id": "fl511-938139",
-   "source": "FL511 (FDOT)",
-   "sourceUrl": "https://fl511.com",
-   "road": "I-95",
-   "title": "Incident on I-95 South, before MM 169/Rest Area",
-   "status": "caution",
-   "fullClosure": false,
-   "reported": "2026-11-03T01:32:00Z",
-   "updated": "2026-11-03T03:02:00Z",
-   "lat": 27.946611,
-   "lng": -80.608056,
-   "layer": "Incidents",
-   "dir": "SB",
-   "lanes": "",
-   "roadShort": "I-95",
-   "spot": "before MM 169/Rest Area",
-   "line": [
-    [
-     27.94661,
-     -80.60808
-    ],
-    [
-     27.94599,
-     -80.60792
-    ]
-   ],
-   "where": "I-95 SB before MM 169/Rest Area"
   },
   {
    "id": "fl511-938257",
@@ -1116,7 +1116,7 @@
    "where": "I-95 NB at MM 200"
   },
   {
-   "id": "fhp-11022026043943-6654",
+   "id": "fhp-11022026043943-7085",
    "source": "FHP live CAD",
    "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
    "road": "US-1 [2 MILES SOF]",
@@ -1135,7 +1135,7 @@
    "where": "US-1 [2 Miles Sof] at Malabar Rd"
   },
   {
-   "id": "fhp-11022026112806-736",
+   "id": "fhp-11022026112806-7798",
    "source": "FHP live CAD",
    "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
    "road": "NORFOLK PKWY",
@@ -1382,7 +1382,7 @@
    ]
   },
   {
-   "id": "fhp-11022026112110-8079",
+   "id": "fhp-11022026112110-3586",
    "source": "FHP live CAD",
    "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
    "road": "PALM BAY RD NE [ENT RAMP TO]",
@@ -1401,7 +1401,7 @@
    "where": "Palm Bay Rd Ne [Ent Ramp To] at I-95 Nb"
   },
   {
-   "id": "fhp-11022026090844-6323",
+   "id": "fhp-11022026090844-519",
    "source": "FHP live CAD",
    "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
    "road": "US-1",
@@ -1452,7 +1452,7 @@
    ]
   },
   {
-   "id": "fhp-11022026065558-7265",
+   "id": "fhp-11022026065558-1452",
    "source": "FHP live CAD",
    "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
    "road": "W NEW HAVEN AVE",
@@ -1758,6 +1758,12 @@
    "time": "2026-11-03T00:11:00Z",
    "text": "Because of the historic flooding, some Election Day precinct polling locations are being moved temporarily for Tuesday's General Election. Voters should check where their precinct will vote before going.",
    "url": "https://www.clickorlando.com/election-2026/2026/11/03/record-flooding-forces-brevard-county-to-move-election-day-polling-locations/"
+  },
+  {
+   "agency": "Brevard County Emergency Management (via Spectrum News 13)",
+   "time": "2026-11-03T00:59:00Z",
+   "text": "Water on some roads has gone down since earlier in the day, but county officials still ask residents not to leave home unless they absolutely must or are under evacuation orders. The Red Cross has opened a shelter in Cocoa at Parker Memorial Missionary Baptist Church.",
+   "url": "https://mynews13.com/fl/orlando/news/2026/11/03/heavy-rain-floods-roads-strands-drivers-and-damages-homes-across-brevard-county"
   }
  ]
 }
