@@ -47,13 +47,19 @@ PAGES = {
         "Eber Road is no longer closed.",
         "All of Dairy Rd is closed.",
         "Babcock St- between East Ave B and Brevard Ave remains closed with barricades blocking the roadway.",
+        "Exercise scenario. All of Eber Road is closed.",
+        "Florida Ave/Dairy Rd- eastbound remains closed with barricades blocking the roadway.",
+        "Sarno Road is open, but there are some infrastructure issues on the shoulder.",
+        "Malabar Rd/Minton Rd- remains closed with barricades blocking the roadway.",
+        "Croton Rd/Post Rd- remains closed with barricades blocking the roadway.",
         "Please drive with extreme caution."]),
     IDX + "/R1020": post("10:20 a.m.", [
         "Babcock Street is clear from U.S. 1 to Palm Bay Road. However, the neighborhoods off of Babcock Street are "
         "still experiencing flooding issues.",
         "Eber Blvd/Babcock St- southbound and eastbound remains closed with barricades blocking the roadway."]),
     IDX + "/N2": post("", ["Lipscomb Street and University Boulevard", "Golfclub",
-                           "Dr. Martin Luther King, Jr. Boulevard and NASA Boulevard"], day="02",
+                           "Dr. Martin Luther King, Jr. Boulevard and NASA Boulevard", "Sarno Road",
+                           "Wickham Road"], day="02",
                       lead="<strong>The below roads/intersections are closed:</strong>"),
     IDX + "/Old": post("8:00 a.m.", ["Old Rd/Gone St- remains closed."], day="01"),
 }
@@ -64,12 +70,15 @@ def ev(rid, fields, src="manual"):
             "actor": "t", "eid": rid, "fields": dict({"lat": 28.0, "lng": -80.6}, **fields)}
 
 
-EVENTS = [ev("m:fl", {"road": "Babcock St", "where": "Babcock St at Florida Ave", "status": "closed"}),
+EVENTS = [ev("m:fl", {"road": "Babcock St", "where": "Babcock St at Florida Ave", "status": "closed", "dir": "WB"}),
           ev("m:sun", {"road": "Babcock St", "where": "Babcock St NB and Sun Lakes Rd EB at their intersection", "status": "closed"}),
           ev("m:eber", {"road": "Babcock St", "where": "Babcock St SB and Eber Blvd EB at their intersection", "status": "closed"}),
-          ev("m:aur", {"road": "Aurora Rd", "where": "Aurora Rd WB at Wickham Rd", "status": "closed"}),
-          ev("m:avb", {"road": "Babcock St", "where": "Babcock St at East Ave B", "status": "closed"}),
+          ev("m:aur", {"road": "Aurora Rd", "where": "Aurora Rd at Wickham Rd", "dir": "WB", "status": "closed"}),
+          ev("m:avb", {"road": "East Ave B", "where": "East Ave B between Babcock St and Brevard Ave", "status": "closed"}),
           ev("m:dfl", {"road": "Dairy Rd", "where": "Dairy Rd at Florida Ave", "status": "closed"}),
+          ev("m:dairy", {"road": "Dairy Rd", "where": "Dairy Rd", "status": "closed"}),
+          ev("m:mal", {"road": "Malabar Rd", "where": "Malabar Rd at Minton Rd", "status": "closed", "lat": None, "lng": None}),
+          ev("m:wick", {"road": "Wickham Rd", "where": "Wickham Rd", "status": "closed", "lat": None, "lng": None}),
           ev("m:dub", {"road": "Dubber Rd", "where": "Dubber Rd", "status": "flooded", "fullClosure": True}),
           ev("m:lip", {"road": "University Blvd", "where": "University Blvd at Lipscomb St", "status": "flooded"}),
           ev("m:golf", {"road": "Golfclub", "where": "Golfclub", "status": "closed"})]
@@ -91,29 +100,45 @@ def getter(pages):
 rep = C.run(NOW, None, getter(PAGES), path)
 src = rep["sources"][0]
 row = lambda key: next((r for r in src["rows"] if r["place"] == key), {})
-check("the newest update's directional closure with the same-direction pin is covered",
+check("a directional closure with a pin whose own dir field gives the same direction is covered",
       row("point|florida|babcock|WB")["verdict"] == "covered" and row("point|florida|babcock|WB")["inNewest"])
-check("reviewed alias: 'Sunlake Rd' is the pin's 'Sun Lakes Rd'", row("point|sun lakes road|babcock")["pins"] == ["m:sun"]
-      if "sun lakes road" in C.core("Sunlake Rd") else row("point|sun lakes|babcock")["pins"] == ["m:sun"])
-check("Codex repro: an EASTBOUND claim with only a WESTBOUND pin is a direction mismatch, not covered",
+check("a directional closure with a pin that states no direction is direction-unstated, not covered",
+      row("point|florida|dairy|EB")["verdict"] == "direction-unstated")
+check("reviewed alias: 'Sunlake Rd' is the pin's 'Sun Lakes Rd'", row("point|sun lakes|babcock")["pins"] == ["m:sun"])
+check("Codex repro: EASTBOUND claim, pin 'Aurora Rd at Wickham Rd' with dir=WB is a direction mismatch",
       row("point|aurora|wickham|EB")["verdict"] == "direction")
-check("Codex repro: a stretch between Ave B and Brevard Ave with only an Ave B pin is partial, not covered",
+check("long-form 'westbound' in a pin's wording is a direction, not part of the name",
+      C.pin_shape({"where": "Aurora Rd westbound at Wickham Rd"})["dirs"] == ["WB"]
+      and C.pin_shape({"where": "Aurora Rd westbound at Wickham Rd"})["road"] == "aurora")
+check("Codex repro: Babcock between East Ave B and Brevard Ave is not covered by East Ave B between Babcock and Brevard",
       row("segment|babcock|brevard|east avenue b")["verdict"] == "partial")
-check("Codex repro: 'All of Dairy Rd' with only a Dairy/Florida pin is partial, not covered", row("whole|dairy")["verdict"] == "partial")
-check("'Dubber Road closed because of flooding' is read, and a flooded full-closure pin counts as closed on the page",
-      row("whole|dubber")["verdict"] == "covered")
-check("a closure with no pin is missed", row("point|hibiscus|dairy")["verdict"] == "missed")
+check("Codex repro: 'All of Dairy Rd' is not covered by a pin that just names Dairy Rd", row("whole|dairy")["verdict"] == "partial")
+check("'Dubber Road closed because of flooding' is read as the road (extent not stated); a flooded full-closure pin that "
+      "also names only the road counts as closed", row("road|dubber")["verdict"] == "covered-road")
+check("Codex repro: a closed pin with no map location is unlocated, not covered",
+      row("point|malabar|minton")["verdict"] == "unlocated" and row("road|wickham")["verdict"] == "unlocated")
+check("a genuinely new closure with no pin is missed", row("point|croton|post")["verdict"] == "missed")
+check("Codex repro: a closure beside unread context in the same paragraph ('Exercise scenario.') is not a claim",
+      not any(r["road"] == "eber" and r["claim"] == "closure" and r["scope"] == "whole" for r in src["rows"]))
+check("a closure paragraph with an injury sentence is not a claim; the whole paragraph is a hash",
+      not any(r["road"] == "hibiscus" for r in src["rows"]))
 check("a 'clear from A to B' statement lists pins for review only, keeping its stretch",
       row("segment|eber|babcock|dairy")["verdict"] == "reopen-review" and row("segment|eber|babcock|dairy")["cross"] == ["babcock", "dairy"])
+check("an open statement with other sentences around it stays a review candidate, marked with its context",
+      row("segment|babcock|palm bay|u s 1").get("context") == "other sentences in the same paragraph")
 check("an earlier same-day closure the newest update no longer lists stays, marked not in the newest update",
-      row("point|eber|babcock|EB|SB")["verdict"] == "covered" and row("point|eber|babcock|EB|SB")["inNewest"] is False)
+      row("point|eber|babcock|EB|SB")["verdict"] == "covered" and row("point|eber|babcock|EB|SB")["inNewest"] is False
+      and src["summary"]["older-unresolved"] >= 1)
+check("Codex repro: Sarno, listed closed Nov 2 and said open by the city Nov 3, is resolved-by-city, not missed",
+      row("road|sarno")["verdict"] == "resolved-by-city" and "Sarno Road is open" in row("road|sarno")["resolvedBy"]["sentence"])
 check("a list under 'The below roads/intersections are closed:' is read item by item (Dr. ... Jr. kept whole)",
       row("point|lipscomb|university")["verdict"] == "weaker" and row("road|golfclub")["verdict"] == "covered-road"
       and row("point|drive martin luther king jr|nasa")["verdict"] == "missed")
 check("a negated closure ('no longer closed') is never a closure claim", not any("no longer" in r["sentence"] for r in src["rows"]))
 blob = json.dumps(rep)
-check("unvetted prose is never published: the injury sentence is a hash only, and the sidebar is not the post",
-      "injured" not in blob and "driver" not in blob and "Sidebar" not in blob and src["summary"]["needs-review"] >= 3)
+check("unvetted prose is never published: injury and exercise paragraphs are hashes only, and the sidebar is not the post",
+      "injured" not in blob and "driver" not in blob and "Exercise" not in blob and "Sidebar" not in blob
+      and src["summary"]["needs-review"] >= 3)
 check("posts before the episode are not read, and the index walk stops there",
       "Old Rd" not in blob and IDX + "/Older" not in calls and src["partial"] is False)
 check("fragment links (#main-content) are not posts", not any("#" in u for u in rep["posts"]))
@@ -123,12 +148,34 @@ check("it reads only the official host", all(c.startswith("https://www.melbourne
 calls.clear()
 NEXT = NOW + datetime.timedelta(days=1)
 C.REFETCH = 1
-rep2 = C.run(NEXT, rep, getter(PAGES), path)
-C.REFETCH = 3
+rep2 = C.run(NEXT - datetime.timedelta(hours=23, minutes=30), rep, getter(PAGES), path)
+check("older posts read recently are not fetched again; the newest is", IDX + "/N2" not in calls and IDX + "/R1045" in calls)
 check("next day: yesterday's unresolved city closures are still in the inventory and still judged",
-      any(r["place"] == "point|hibiscus|dairy" and r["verdict"] == "missed" for r in rep2["sources"][0]["rows"]))
-check("next day: older posts already read are not fetched again; the newest few are", IDX + "/N2" not in calls
-      and IDX + "/R1045" in calls)
+      any(r["place"] == "point|malabar|minton" for r in rep2["sources"][0]["rows"]))
+calls.clear()
+fixed = dict(PAGES, **{IDX + "/N2": post("", ["Golfclub"], day="02",
+                                          lead="<strong>The below roads/intersections are closed:</strong>")})
+rep2b = C.run(NEXT, rep2, getter(fixed), path)
+check("Codex repro: an old URL the city corrects in place is re-read within a day and its removed claim goes",
+      IDX + "/N2" in calls and not any(r["place"] == "point|lipscomb|university" for r in rep2b["sources"][0]["rows"]))
+rep2c = C.run(NEXT + datetime.timedelta(hours=13), rep2b, getter({IDX: PAGES[IDX], IDX + "/R1045": PAGES[IDX + "/R1045"]}), path)
+check("a re-check that fails keeps the page's last good claims and records the failure",
+      rep2c["posts"][IDX + "/N2"].get("lastError", {}).get("state") == "unreadable"
+      and any(r["place"] == "road|golfclub" for r in rep2c["sources"][0]["rows"]))
+C.REFETCH = 3
+# An accepted official reopening in our own history resolves an older city closure of that road
+hp = os.path.join(tmp, "h.jsonl")
+hist = [ev("m:sarno", {"road": "Sarno Rd", "where": "Sarno Rd at Eau Gallie Blvd", "status": "closed"}),
+        {"kind": "cleared", "rid": "m:sarno", "src": "manual", "at": "2026-11-03T14:00:00Z", "actor": "t", "eid": "c1",
+         "evidence": {"kind": "official", "url": "https://www.melbourneflorida.org/x", "quote": "Sarno Road is open.",
+                      "publishedDate": "2026-11-03", "sourceTime": "2026-11-03T13:30:00Z", "reopenedAt": "2026-11-03T13:30:00Z"}}]
+hist[0]["at"] = hist[0]["stime"] = "2026-11-02T10:00:00Z"
+open(hp, "w").write("".join(json.dumps(e) + "\n" for e in hist))
+only = {IDX: f'<a href="{IDX}/N2">c</a><a href="{IDX}/Old">d</a>', IDX + "/N2": post("", ["Sarno Road"], day="02",
+        lead="<strong>The below roads/intersections are closed:</strong>"), IDX + "/Old": PAGES[IDX + "/Old"]}
+r7 = C.run(NOW, None, getter(only), hp)["sources"][0]["rows"]
+check("an older city closure of a road our history reopened from an official statement is resolved-official, with receipt",
+      r7[0]["verdict"] == "resolved-official" and r7[0]["resolvedBy"]["quote"] == "Sarno Road is open.")
 # Failures are visible, never zero
 rep3 = C.run(NOW, None, getter({IDX: "<html><body>Service unavailable</body></html>"}), path)
 check("a 200 index with no post links is layout-unsupported, not zero closures",
