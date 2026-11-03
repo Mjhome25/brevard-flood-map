@@ -76,8 +76,8 @@ def fl511(layer):
     d = json.loads(get(f"https://fl511.com/List/GetData/{layer}?query={q}&lang=en-US"))
     out = []
     for r in d.get("data", []):
-        if (r.get("county") or "").strip().lower() != "brevard": continue
-        with row("fl511", r.get("id")):
+        with row("fl511", r.get("id") if isinstance(r, dict) else repr(r)[:40]):  # a malformed row of any county counts
+            if str(r.get("county") or "").strip().lower() != "brevard": continue
             out.append(fl511_item(r, layer))
     return out
 
