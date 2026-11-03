@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-03T18:14:26Z",
+ "generated": "2026-11-03T18:15:57Z",
  "errors": [],
  "items": [
   {
@@ -1194,39 +1194,6 @@
    "awaitingOfficial": false,
    "missingSince": null,
    "recheck": []
-  },
-  {
-   "fullClosure": false,
-   "lat": 28.3559845234958,
-   "layer": "FHP",
-   "lng": -80.7786444332018,
-   "reported": "2026-11-03T17:02:03Z",
-   "road": "3555 W KING ST [COCOA]",
-   "roadShort": "3555 W King St [Cocoa]",
-   "source": "FHP live CAD",
-   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-   "status": "caution",
-   "title": "MVC at 3555 W KING ST [COCOA]",
-   "where": "3555 W King St [Cocoa]",
-   "id": "brevard:fhp:20261103170203-3c7c2f94",
-   "updated": "2026-11-03T17:02:03Z",
-   "lastReported": "2026-11-03T17:02:03Z",
-   "firstReported": "2026-11-03T17:02:03Z",
-   "verified": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "kind": "feed",
-    "publishedAt": "2026-11-03T17:02:03Z"
-   },
-   "awaitingOfficial": true,
-   "missingSince": "2026-11-03T18:14:39Z",
-   "recheck": [],
-   "noLongerListed": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "since": "2026-11-03T18:14:39Z",
-    "wasClosed": false
-   }
   },
   {
    "fullClosure": false,
@@ -5681,6 +5648,39 @@
   }
  ],
  "reopened": [
+  {
+   "fullClosure": false,
+   "lat": 28.3559845234958,
+   "layer": "FHP",
+   "lng": -80.7786444332018,
+   "reported": "2026-11-03T17:02:03Z",
+   "road": "3555 W KING ST [COCOA]",
+   "roadShort": "3555 W King St [Cocoa]",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "status": "caution",
+   "title": "MVC at 3555 W KING ST [COCOA]",
+   "where": "3555 W King St [Cocoa]",
+   "id": "brevard:fhp:20261103170203-3c7c2f94",
+   "updated": "2026-11-03T17:02:03Z",
+   "lastReported": "2026-11-03T17:02:03Z",
+   "firstReported": "2026-11-03T17:02:03Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-03T17:02:03Z"
+   },
+   "reopenedAt": "2026-11-03T18:16:09Z",
+   "evidence": {
+    "agency": "Florida Highway Patrol",
+    "kind": "fhp-dropped",
+    "missingSince": "2026-11-03T18:14:39Z",
+    "reopenedAt": "2026-11-03T18:16:09Z",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
+   },
+   "stillReported": []
+  },
   {
    "fullClosure": false,
    "lanes": "No Roadblock",

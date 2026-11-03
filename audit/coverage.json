@@ -1,5 +1,5 @@
 {
- "checkedAt": "2026-11-03T18:14:39Z",
+ "checkedAt": "2026-11-03T18:16:09Z",
  "fresh": true,
  "pilot": "City of Melbourne",
  "pending": [
@@ -934,8 +934,8 @@
     }
    ],
    "needsReview": [],
-   "sha256": "14a3a874d8105b64e45e48f486ffd467620ee7365b22cd8c35b6606b99878b52",
-   "readAt": "2026-11-03T18:14:39Z"
+   "sha256": "e409a86e0f1169f378c7f43dfed4f1240e61c89fb355e91a4dba7c77233cc1ed",
+   "readAt": "2026-11-03T18:16:09Z"
   },
   "https://www.melbourneflorida.org/Government/City-News/Traffic-Advisories/Road-Closures-1020": {
    "agency": "City of Melbourne",
@@ -1032,8 +1032,8 @@
    "needsReview": [
     "d54071e726fa2354c58e08d89eb84b6797fc16d3ebe4259b1f257e4db1a39e2a"
    ],
-   "sha256": "f1b60aadd1f74569743d48bb16c73c431541c5a56458325e10ccee651a182b66",
-   "readAt": "2026-11-03T18:14:39Z"
+   "sha256": "db9a8d2c4271816a8730cd14477a57cf1f4cc8f88bf2aff87a94930989f65bad",
+   "readAt": "2026-11-03T18:16:09Z"
   },
   "https://www.melbourneflorida.org/Government/City-News/Traffic-Advisories/Road-Closures-0830": {
    "agency": "City of Melbourne",
@@ -1544,8 +1544,8 @@
    "needsReview": [
     "9e46547042046a48bf68a9c51e6e8dd4bae89001c507c957662f2239def46d47"
    ],
-   "sha256": "683fa05afbbfcf39cae585d6f3631bea6ad1705ceb28dad5850f16a5623dcaba",
-   "readAt": "2026-11-03T18:14:39Z"
+   "sha256": "2beaa6e9f53502a40ce8b4ec567ab5a2d4eff0e6e300c39818d86eeeb947f172",
+   "readAt": "2026-11-03T18:16:09Z"
   }
  }
 }
