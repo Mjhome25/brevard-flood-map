@@ -718,7 +718,13 @@ got = ns2["fl511"]("Closures")
 ns2["health"]("fl511", bool(got))
 check("a bad FL511 row is skipped; the other rows still come in", [g["id"] for g in got] == ["fl511-1", "fl511-2"])
 check("the feed is marked partial and the page lists the skipped row",
-      ns2["sources"]["fl511"] == "partial" and "2 row(s) unreadable" in ns2["errors"][0])  # None row + no description; county 7 is just not Brevard
+      ns2["sources"]["fl511"] == "partial" and "3 row(s) unreadable" in ns2["errors"][0])  # None row, no description, county 7 (Codex #189)
+ns3 = {"sources": {}, "errors": []}
+exec(compile(ast.Module(body=keep2, type_ignores=[]), "update_flood_data.py", "exec"), ns3)
+ns3["get"] = lambda url, **kw: json.dumps({"data": [rowok, {"id": 4, "description": "x"}, {"id": 5, "county": "Orange"}]})
+ns3["health"]("fl511", bool(ns3["fl511"]("Closures")))
+check("a row with no county name makes the feed partial; another county's row does not",
+      ns3["sources"]["fl511"] == "partial" and "1 row(s) unreadable" in ns3["errors"][0])
 pp = os.path.join(tmp, "partial.jsonl")
 run(pp, {"sources": {"fl511": "up"}, "items": [item(1), item(2)]}, 0)
 w, _, recs = run(pp, {"sources": {"fl511": "partial"}, "items": [item(1)]}, 1)

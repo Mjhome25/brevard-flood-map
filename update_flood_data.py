@@ -77,7 +77,10 @@ def fl511(layer):
     out = []
     for r in d.get("data", []):
         with row("fl511", r.get("id") if isinstance(r, dict) else repr(r)[:40]):  # a malformed row of any county counts
-            if str(r.get("county") or "").strip().lower() != "brevard": continue
+            county = r.get("county")
+            if not isinstance(county, str) or not county.strip():
+                raise ValueError(f"no county name ({county!r})")  # could be ours: the feed counts as partial
+            if county.strip().lower() != "brevard": continue
             out.append(fl511_item(r, layer))
     return out
 
