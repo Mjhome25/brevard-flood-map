@@ -1,11 +1,5 @@
 [
  {
-  "agency": "Space Coast Area Transit (via WFTV)",
-  "time": "2026-11-02T16:46:00Z",
-  "text": "Routes 20, 21, 22, 23, 24, 25, 27, 28 and 30 (Melbourne and Palm Bay area) suspended for Monday because of flooding. Routes 26 and 29 running with long delays; long delays on all other routes.",
-  "url": "https://www.wftv.com/news/local/flooding-shuts-down-nine-space-coast-transit-routes-melbourne-palm-bay/E75GXCEVONBVXM25BUGW7U6ZH4/"
- },
- {
   "agency": "City of Palm Bay (via Florida Today/Yahoo News)",
   "time": "2026-11-02T17:56:00Z",
   "text": "Water shut off to several neighborhoods near Malabar Rd and Port Malabar Blvd after a water main break on Port Malabar Blvd NE; flooding prevents repairs. Boil water notice will apply once service is restored.",
@@ -16,12 +10,6 @@
   "time": "2026-11-02T20:40:00Z",
   "text": "Fairhaven area of Palm Bay is inaccessible because of flooding; no specific roads named.",
   "url": "https://www.clickorlando.com/news/local/2026/11/02/brevard-county-schools-closed-amid-flash-flood-warning-heavy-rain/"
- },
- {
-  "agency": "City of Melbourne (via The Weather Channel)",
-  "time": "2026-11-02T17:00:00Z",
-  "text": "Melbourne City Hall is closed to the public because of flooding.",
-  "url": "https://weather.com/2026/11/02/news/weather/flash-floods-hit-floridas-space-coast-amid-heavy-rainfall"
  },
  {
   "agency": "City of Melbourne",
@@ -94,5 +82,17 @@
   "time": "2026-11-03T00:00:00Z",
   "text": "Too much water is flowing into the Cocoa Beach wastewater treatment plant and lift stations. Residents, especially in the south end and Snug Harbor, are asked to limit nonessential water use.",
   "url": "https://www.clickorlando.com/news/local/2026/11/02/brevard-county-schools-closed-amid-flash-flood-warning-heavy-rain/"
+ },
+ {
+  "agency": "City of West Melbourne (via WFTV)",
+  "time": "2026-11-03T13:00:00Z",
+  "text": "Several roads and intersections in West Melbourne are still closed by flooding as of 8 a.m. Tuesday. Drive slowly and carefully, especially near flooded neighborhoods, because wakes from passing vehicles can push water into homes. Officials are still checking whether flooded areas are safe to travel.",
+  "url": "https://www.wftv.com/news/local/flooding-closes-west-melbourne-roads-relocates-polling-places-election-day/AMIBMKZMW5EFVBRARJI5F545LQ/"
+ },
+ {
+  "agency": "City of Melbourne",
+  "time": "2026-11-03T13:17:00Z",
+  "text": "Several Melbourne roads are still fully closed because floodwater has not drained. Many abandoned vehicles are still blocking roads and slowing emergency response.",
+  "url": "https://www.melbourneflorida.org/Government/City-News/Traffic-Advisories"
  }
 ]

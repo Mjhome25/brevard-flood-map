@@ -1,6 +1,8 @@
 {
- "generated": "2026-11-03T17:00:39Z",
- "errors": [],
+ "generated": "2026-11-03T17:17:04Z",
+ "errors": [
+  "FL511 map locations: 1 report(s) without a pin"
+ ],
  "items": [
   {
    "fullClosure": true,
@@ -1161,6 +1163,33 @@
    "recheck": []
   },
   {
+   "fullClosure": false,
+   "lat": 28.3559845234958,
+   "layer": "FHP",
+   "lng": -80.7786444332018,
+   "reported": "2026-11-03T17:02:03Z",
+   "road": "3555 W KING ST [COCOA]",
+   "roadShort": "3555 W King St [Cocoa]",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "status": "caution",
+   "title": "MVC at 3555 W KING ST [COCOA]",
+   "where": "3555 W King St [Cocoa]",
+   "id": "brevard:fhp:20261103170203-3c7c2f94",
+   "updated": "2026-11-03T17:02:03Z",
+   "lastReported": "2026-11-03T17:02:03Z",
+   "firstReported": "2026-11-03T17:02:03Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-03T17:02:03Z"
+   },
+   "awaitingOfficial": false,
+   "missingSince": null,
+   "recheck": []
+  },
+  {
    "dir": "EB",
    "from": "Hickory St",
    "fullClosure": true,
@@ -1221,8 +1250,8 @@
    "to": "Pine St",
    "where": "US-192 EB at Minton Rd/S Wickham Rd",
    "id": "brevard:fl511:937010",
-   "updated": "2026-11-03T16:25:00Z",
-   "lastReported": "2026-11-03T16:25:00Z",
+   "updated": "2026-11-03T17:02:00Z",
+   "lastReported": "2026-11-03T17:02:00Z",
    "firstReported": "2026-11-02T19:54:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
@@ -1487,8 +1516,8 @@
    "to": "Circle Dr",
    "where": "US-192 EB beyond Coastal Ln",
    "id": "brevard:fl511:937141",
-   "updated": "2026-11-03T16:25:00Z",
-   "lastReported": "2026-11-03T16:25:00Z",
+   "updated": "2026-11-03T17:02:00Z",
+   "lastReported": "2026-11-03T17:02:00Z",
    "firstReported": "2026-11-02T19:54:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
@@ -1645,8 +1674,8 @@
    "to": "Coastal Ln",
    "where": "US-192 WB at S John Rodes Blvd",
    "id": "brevard:fl511:937222",
-   "updated": "2026-11-03T16:25:00Z",
-   "lastReported": "2026-11-03T16:25:00Z",
+   "updated": "2026-11-03T17:02:00Z",
+   "lastReported": "2026-11-03T17:02:00Z",
    "firstReported": "2026-11-02T19:54:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
@@ -1997,8 +2026,8 @@
    "to": "Highway 1",
    "where": "SR-514 EB at US-1",
    "id": "brevard:fl511:937844",
-   "updated": "2026-11-03T16:25:00Z",
-   "lastReported": "2026-11-03T16:25:00Z",
+   "updated": "2026-11-03T17:02:00Z",
+   "lastReported": "2026-11-03T17:02:00Z",
    "firstReported": "2026-11-02T23:15:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
@@ -2497,8 +2526,8 @@
    "to": "S John Rodes Blvd",
    "where": "Ellis Rd both directions at I-95 Northbound",
    "id": "brevard:fl511:938811",
-   "updated": "2026-11-03T13:43:00Z",
-   "lastReported": "2026-11-03T13:43:00Z",
+   "updated": "2026-11-03T17:14:00Z",
+   "lastReported": "2026-11-03T17:14:00Z",
    "firstReported": "2026-11-03T13:43:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
@@ -2537,8 +2566,8 @@
    "title": "MVC on SR-405 East, at Grissom Pkwy. Right shoulder blocked",
    "where": "SR-405 EB at Grissom Pkwy",
    "id": "brevard:fl511:938818",
-   "updated": "2026-11-03T16:43:00Z",
-   "lastReported": "2026-11-03T16:43:00Z",
+   "updated": "2026-11-03T17:14:00Z",
+   "lastReported": "2026-11-03T17:14:00Z",
    "firstReported": "2026-11-03T13:45:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
@@ -2604,6 +2633,72 @@
     "since": "2026-11-03T15:58:16Z",
     "wasClosed": true
    }
+  },
+  {
+   "dir": "both directions",
+   "from": "Norfolk Pkwy",
+   "fullClosure": true,
+   "lanes": "All lanes closed",
+   "lat": 28.0462085845524,
+   "layer": "Closures",
+   "line": [
+    [
+     28.04364,
+     -80.67142
+    ],
+    [
+     28.045766,
+     -80.671393
+    ],
+    [
+     28.046135,
+     -80.671396
+    ],
+    [
+     28.046209,
+     -80.671394
+    ],
+    [
+     28.048201,
+     -80.67135
+    ],
+    [
+     28.049031,
+     -80.671338
+    ],
+    [
+     28.050285,
+     -80.671318
+    ],
+    [
+     28.05149,
+     -80.671354
+    ]
+   ],
+   "lng": -80.6713891639941,
+   "reported": "2026-11-03T17:10:00Z",
+   "road": "CR-509",
+   "roadShort": "CR-509",
+   "source": "FL511 (FDOT)",
+   "sourceUrl": "https://fl511.com",
+   "spot": "Near Carriage Gate Dr",
+   "status": "flooded",
+   "title": "Flooding on CR-509 Both Directions Near Carriage Gate Dr. All lanes closed.",
+   "to": "Burdock Ave",
+   "where": "CR-509 both directions Near Carriage Gate Dr",
+   "id": "brevard:fl511:939149",
+   "updated": "2026-11-03T17:11:00Z",
+   "lastReported": "2026-11-03T17:11:00Z",
+   "firstReported": "2026-11-03T17:11:00Z",
+   "verified": {
+    "agency": "FL511 (FDOT)",
+    "url": "https://fl511.com",
+    "kind": "feed",
+    "publishedAt": "2026-11-03T17:11:00Z"
+   },
+   "awaitingOfficial": false,
+   "missingSince": null,
+   "recheck": []
   },
   {
    "approx": true,
@@ -4099,6 +4194,31 @@
   },
   {
    "approx": true,
+   "city": "West Melbourne",
+   "fullClosure": true,
+   "lanes": "Segment closed (directions not specified)",
+   "lat": 28.056,
+   "layer": "manual",
+   "lng": -80.6765,
+   "note": "Listed as closed by flooding in West Melbourne's 8 a.m. Tuesday update. The pin is placed near Calvary Chapel Melbourne. The Carriage Gate end of the segment is not confirmed. Pin approximate.",
+   "reported": "2026-11-03T13:00:00Z",
+   "road": "Minton Rd",
+   "source": "City of West Melbourne (via WFTV)",
+   "sourceUrl": "https://www.wftv.com/news/local/flooding-closes-west-melbourne-roads-relocates-polling-places-election-day/AMIBMKZMW5EFVBRARJI5F545LQ/",
+   "status": "closed",
+   "title": "Minton Rd closed from Calvary Chapel Melbourne to Carriage Gate due to flooding",
+   "where": "Minton Rd from Calvary Chapel Melbourne to Carriage Gate",
+   "id": "brevard:manual:minton-rd-from-calvary-chapel-melbourne-",
+   "updated": "2026-11-03T13:00:00Z",
+   "lastReported": "2026-11-03T13:00:00Z",
+   "firstReported": "2026-11-03T13:00:00Z",
+   "verified": null,
+   "awaitingOfficial": false,
+   "missingSince": null,
+   "recheck": []
+  },
+  {
+   "approx": true,
    "city": "Melbourne",
    "from": "Opportunity Dr",
    "fullClosure": true,
@@ -4465,6 +4585,31 @@
     "fromLat": 28.129,
     "fromLng": -80.6255
    },
+   "awaitingOfficial": false,
+   "missingSince": null,
+   "recheck": []
+  },
+  {
+   "approx": true,
+   "city": "West Melbourne",
+   "fullClosure": true,
+   "lanes": "Closed at intersection (directions not specified)",
+   "lat": 28.0955,
+   "layer": "manual",
+   "lng": -80.6735,
+   "note": "Listed as closed by flooding in West Melbourne's 8 a.m. Tuesday update. Coordinates are approximate.",
+   "reported": "2026-11-03T13:00:00Z",
+   "road": "Sheridan Rd",
+   "source": "City of West Melbourne (via WFTV)",
+   "sourceUrl": "https://www.wftv.com/news/local/flooding-closes-west-melbourne-roads-relocates-polling-places-election-day/AMIBMKZMW5EFVBRARJI5F545LQ/",
+   "status": "closed",
+   "title": "Sheridan Rd closed at John Rodes Blvd due to flooding",
+   "where": "Sheridan Rd at John Rodes Blvd",
+   "id": "brevard:manual:sheridan-rd-at-john-rodes-blvd",
+   "updated": "2026-11-03T13:00:00Z",
+   "lastReported": "2026-11-03T13:00:00Z",
+   "firstReported": "2026-11-03T13:00:00Z",
+   "verified": null,
    "awaitingOfficial": false,
    "missingSince": null,
    "recheck": []
@@ -5668,12 +5813,6 @@
  ],
  "advisories": [
   {
-   "agency": "Space Coast Area Transit (via WFTV)",
-   "time": "2026-11-02T16:46:00Z",
-   "text": "Routes 20, 21, 22, 23, 24, 25, 27, 28 and 30 (Melbourne and Palm Bay area) suspended for Monday because of flooding. Routes 26 and 29 running with long delays; long delays on all other routes.",
-   "url": "https://www.wftv.com/news/local/flooding-shuts-down-nine-space-coast-transit-routes-melbourne-palm-bay/E75GXCEVONBVXM25BUGW7U6ZH4/"
-  },
-  {
    "agency": "City of Palm Bay (via Florida Today/Yahoo News)",
    "time": "2026-11-02T17:56:00Z",
    "text": "Water shut off to several neighborhoods near Malabar Rd and Port Malabar Blvd after a water main break on Port Malabar Blvd NE; flooding prevents repairs. Boil water notice will apply once service is restored.",
@@ -5684,12 +5823,6 @@
    "time": "2026-11-02T20:40:00Z",
    "text": "Fairhaven area of Palm Bay is inaccessible because of flooding; no specific roads named.",
    "url": "https://www.clickorlando.com/news/local/2026/11/02/brevard-county-schools-closed-amid-flash-flood-warning-heavy-rain/"
-  },
-  {
-   "agency": "City of Melbourne (via The Weather Channel)",
-   "time": "2026-11-02T17:00:00Z",
-   "text": "Melbourne City Hall is closed to the public because of flooding.",
-   "url": "https://weather.com/2026/11/02/news/weather/flash-floods-hit-floridas-space-coast-amid-heavy-rainfall"
   },
   {
    "agency": "City of Melbourne",
@@ -5762,6 +5895,18 @@
    "time": "2026-11-03T00:00:00Z",
    "text": "Too much water is flowing into the Cocoa Beach wastewater treatment plant and lift stations. Residents, especially in the south end and Snug Harbor, are asked to limit nonessential water use.",
    "url": "https://www.clickorlando.com/news/local/2026/11/02/brevard-county-schools-closed-amid-flash-flood-warning-heavy-rain/"
+  },
+  {
+   "agency": "City of West Melbourne (via WFTV)",
+   "time": "2026-11-03T13:00:00Z",
+   "text": "Several roads and intersections in West Melbourne are still closed by flooding as of 8 a.m. Tuesday. Drive slowly and carefully, especially near flooded neighborhoods, because wakes from passing vehicles can push water into homes. Officials are still checking whether flooded areas are safe to travel.",
+   "url": "https://www.wftv.com/news/local/flooding-closes-west-melbourne-roads-relocates-polling-places-election-day/AMIBMKZMW5EFVBRARJI5F545LQ/"
+  },
+  {
+   "agency": "City of Melbourne",
+   "time": "2026-11-03T13:17:00Z",
+   "text": "Several Melbourne roads are still fully closed because floodwater has not drained. Many abandoned vehicles are still blocking roads and slowing emergency response.",
+   "url": "https://www.melbourneflorida.org/Government/City-News/Traffic-Advisories"
   }
  ]
 }

@@ -994,5 +994,41 @@
   "note": "Lanes can be driven, but the traffic light is out and the intersection works as a four-way stop. Pin approximate.",
   "id": "man-commodore-blvd-at-aurora-rd-intersection",
   "updated": "2026-11-03T13:17:00Z"
+ },
+ {
+  "road": "Sheridan Rd",
+  "where": "Sheridan Rd at John Rodes Blvd",
+  "title": "Sheridan Rd closed at John Rodes Blvd due to flooding",
+  "city": "West Melbourne",
+  "status": "closed",
+  "fullClosure": true,
+  "lanes": "Closed at intersection (directions not specified)",
+  "lat": 28.0955,
+  "lng": -80.6735,
+  "approx": true,
+  "source": "City of West Melbourne (via WFTV)",
+  "sourceUrl": "https://www.wftv.com/news/local/flooding-closes-west-melbourne-roads-relocates-polling-places-election-day/AMIBMKZMW5EFVBRARJI5F545LQ/",
+  "reported": "2026-11-03T13:00:00Z",
+  "note": "Listed as closed by flooding in West Melbourne's 8 a.m. Tuesday update. Coordinates are approximate.",
+  "id": "man-sheridan-rd-at-john-rodes-blvd",
+  "updated": "2026-11-03T13:00:00Z"
+ },
+ {
+  "road": "Minton Rd",
+  "where": "Minton Rd from Calvary Chapel Melbourne to Carriage Gate",
+  "title": "Minton Rd closed from Calvary Chapel Melbourne to Carriage Gate due to flooding",
+  "city": "West Melbourne",
+  "status": "closed",
+  "fullClosure": true,
+  "lanes": "Segment closed (directions not specified)",
+  "lat": 28.056,
+  "lng": -80.6765,
+  "approx": true,
+  "source": "City of West Melbourne (via WFTV)",
+  "sourceUrl": "https://www.wftv.com/news/local/flooding-closes-west-melbourne-roads-relocates-polling-places-election-day/AMIBMKZMW5EFVBRARJI5F545LQ/",
+  "reported": "2026-11-03T13:00:00Z",
+  "note": "Listed as closed by flooding in West Melbourne's 8 a.m. Tuesday update. The pin is placed near Calvary Chapel Melbourne. The Carriage Gate end of the segment is not confirmed. Pin approximate.",
+  "id": "man-minton-rd-from-calvary-chapel-melbourne-",
+  "updated": "2026-11-03T13:00:00Z"
  }
 ]
