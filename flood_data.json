@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-03T16:10:47Z",
+ "generated": "2026-11-03T16:15:22Z",
  "errors": [],
  "items": [
   {
@@ -1076,6 +1076,34 @@
     "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
     "kind": "feed",
     "publishedAt": "2026-11-03T15:42:09Z"
+   },
+   "awaitingOfficial": false,
+   "missingSince": null,
+   "recheck": []
+  },
+  {
+   "fullClosure": false,
+   "lat": 28.0494733509003,
+   "layer": "FHP",
+   "lng": -80.6214476497033,
+   "reported": "2026-11-03T16:11:17Z",
+   "road": "BABCOCK ST S",
+   "roadShort": "Babcock St S",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "spot": "at Eber Rd",
+   "status": "caution",
+   "title": "Travel Advisory at BABCOCK ST S x[EBER RD] [MELBOURNE]",
+   "where": "Babcock St S at Eber Rd",
+   "id": "brevard:fhp:20261103161117-8de2c55c",
+   "updated": "2026-11-03T16:11:17Z",
+   "lastReported": "2026-11-03T16:11:17Z",
+   "firstReported": "2026-11-03T16:11:17Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-03T16:11:17Z"
    },
    "awaitingOfficial": false,
    "missingSince": null,
@@ -2178,8 +2206,8 @@
    "title": "Traffic lights not working on US-192 / Vine St / Bronson Hwy East, at S John Rodes Blvd",
    "where": "US-192 EB at S John Rodes Blvd",
    "id": "brevard:fl511:938257",
-   "updated": "2026-11-03T15:39:00Z",
-   "lastReported": "2026-11-03T15:39:00Z",
+   "updated": "2026-11-03T16:10:00Z",
+   "lastReported": "2026-11-03T16:10:00Z",
    "firstReported": "2026-11-03T03:18:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
