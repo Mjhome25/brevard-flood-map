@@ -1,8 +1,6 @@
 {
- "generated": "2026-11-03T18:45:32Z",
- "errors": [
-  "FL511 map locations: 1 report(s) without a pin"
- ],
+ "generated": "2026-11-03T19:01:42Z",
+ "errors": [],
  "items": [
   {
    "fullClosure": true,
@@ -763,6 +761,91 @@
    "recheck": []
   },
   {
+   "fullClosure": false,
+   "lanes": "No Roadblock",
+   "lat": 28.2668358761528,
+   "layer": "FHP",
+   "lng": -80.7364321289582,
+   "reported": "2026-11-03T06:57:19Z",
+   "road": "VIERA BLVD",
+   "roadShort": "Viera Blvd",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "spot": "at Stadium Pkwy",
+   "status": "caution",
+   "title": "MVC at VIERA BLVD x[STADIUM PKWY] [MELBOURNE] (No Roadblock)",
+   "where": "Viera Blvd at Stadium Pkwy",
+   "id": "brevard:fhp:20261103065719-7313ae97",
+   "updated": "2026-11-03T06:57:19Z",
+   "lastReported": "2026-11-03T06:57:19Z",
+   "firstReported": "2026-11-03T06:57:19Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-03T06:57:19Z"
+   },
+   "awaitingOfficial": false,
+   "missingSince": null,
+   "recheck": []
+  },
+  {
+   "from": "Ellis Dr",
+   "fullClosure": true,
+   "lat": 28.0436127448397,
+   "layer": "FHP",
+   "line": [
+    [
+     28.042317,
+     -80.671436
+    ],
+    [
+     28.042972,
+     -80.671428
+    ],
+    [
+     28.043613,
+     -80.67142
+    ],
+    [
+     28.04364,
+     -80.67142
+    ],
+    [
+     28.045766,
+     -80.671393
+    ],
+    [
+     28.046135,
+     -80.671396
+    ]
+   ],
+   "lng": -80.671434817997,
+   "reported": "2026-11-03T07:00:29Z",
+   "road": "MINTON RD",
+   "roadShort": "Minton Rd",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "spot": "at Norfolk Pkwy",
+   "status": "flooded",
+   "title": "Road Closed Due To Water at MINTON RD x[NORFOLK PKWY] [WEST MELBOURNE]",
+   "to": "Carriage Gate Dr",
+   "where": "Minton Rd at Norfolk Pkwy",
+   "id": "brevard:fhp:20261103070029-5b7ef86b",
+   "updated": "2026-11-03T07:00:29Z",
+   "lastReported": "2026-11-03T07:00:29Z",
+   "firstReported": "2026-11-03T07:00:29Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-03T07:00:29Z"
+   },
+   "awaitingOfficial": false,
+   "missingSince": null,
+   "recheck": []
+  },
+  {
    "from": "Lakes Of Melbourne Dr",
    "fullClosure": true,
    "lanes": "Roadway Flooded -- Seek Alternate Route",
@@ -1286,9 +1369,15 @@
     "kind": "feed",
     "publishedAt": "2026-11-03T17:30:29Z"
    },
-   "awaitingOfficial": false,
-   "missingSince": null,
-   "recheck": []
+   "awaitingOfficial": true,
+   "missingSince": "2026-11-03T19:01:58Z",
+   "recheck": [],
+   "noLongerListed": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "since": "2026-11-03T19:01:58Z",
+    "wasClosed": false
+   }
   },
   {
    "fullClosure": true,
@@ -2449,8 +2538,8 @@
    "title": "Traffic lights not working on US-192 / Vine St / Bronson Hwy East, at S John Rodes Blvd",
    "where": "US-192 EB at S John Rodes Blvd",
    "id": "brevard:fl511:938257",
-   "updated": "2026-11-03T18:12:00Z",
-   "lastReported": "2026-11-03T18:12:00Z",
+   "updated": "2026-11-03T18:45:00Z",
+   "lastReported": "2026-11-03T18:45:00Z",
    "firstReported": "2026-11-03T03:18:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
