@@ -1030,5 +1030,23 @@
   "note": "Listed as closed by flooding in West Melbourne's 8 a.m. Tuesday update. The pin is placed near Calvary Chapel Melbourne. The Carriage Gate end of the segment is not confirmed. Pin approximate.",
   "id": "man-minton-rd-from-calvary-chapel-melbourne-",
   "updated": "2026-11-03T13:00:00Z"
+ },
+ {
+  "road": "Minton Rd",
+  "where": "Minton Rd NB at Henry Ave",
+  "title": "Minton Rd northbound closed at Henry Ave due to flooding",
+  "city": "West Melbourne",
+  "status": "flooded",
+  "fullClosure": true,
+  "lanes": "Northbound lanes closed",
+  "lat": 28.07,
+  "lng": -80.6735,
+  "approx": true,
+  "source": "City of West Melbourne (via WFTV)",
+  "sourceUrl": "https://www.wftv.com/news/local/flooding-closes-west-melbourne-roads-relocates-polling-places-election-day/AMIBMKZMW5EFVBRARJI5F545LQ/",
+  "reported": "2026-11-03T13:00:00Z",
+  "note": "The city's 8 a.m. Tuesday update lists this closure. The current list has Minton Rd NB at Helen St, so this is a different cross street. I couldn't confirm where Henry Ave meets Minton Rd, so the pin is only roughly placed on Minton Rd. Pin approximate.",
+  "id": "man-minton-rd-nb-at-henry-ave",
+  "updated": "2026-11-03T13:00:00Z"
  }
 ]

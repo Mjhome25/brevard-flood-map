@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-03T18:00:51Z",
+ "generated": "2026-11-03T18:14:26Z",
  "errors": [],
  "items": [
   {
@@ -1218,9 +1218,15 @@
     "kind": "feed",
     "publishedAt": "2026-11-03T17:02:03Z"
    },
-   "awaitingOfficial": false,
-   "missingSince": null,
-   "recheck": []
+   "awaitingOfficial": true,
+   "missingSince": "2026-11-03T18:14:39Z",
+   "recheck": [],
+   "noLongerListed": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "since": "2026-11-03T18:14:39Z",
+    "wasClosed": false
+   }
   },
   {
    "fullClosure": false,
@@ -1291,6 +1297,34 @@
    "layer": "FHP",
    "lng": -80.7056999932721,
    "reported": "2026-11-03T17:51:44Z",
+   "road": "ELLIS RD [I-95 NB SB EXIT 182] [WEST MELBOURNE]",
+   "roadShort": "Ellis Rd [I-95 Nb Sb Exit 182] [West Melbourne]",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "status": "flooded",
+   "title": "Road Closed Due To Water at ELLIS RD [I-95 NB SB EXIT 182] [WEST MELBOURNE] (Ramps To Eastbound Ellis Rd Are Closed At I-95)",
+   "where": "Ellis Rd [I-95 Nb Sb Exit 182] [West Melbourne]",
+   "id": "brevard:fhp:20261103175144-a927f7cd",
+   "updated": "2026-11-03T17:51:44Z",
+   "lastReported": "2026-11-03T17:51:44Z",
+   "firstReported": "2026-11-03T17:51:44Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-03T17:51:44Z"
+   },
+   "awaitingOfficial": false,
+   "missingSince": null,
+   "recheck": []
+  },
+  {
+   "fullClosure": true,
+   "lanes": "Ramps To Eastbound Ellis Rd Are Closed At I-95",
+   "lat": 28.0932872419851,
+   "layer": "FHP",
+   "lng": -80.7056999932721,
+   "reported": "2026-11-03T17:51:44Z",
    "road": "ELLIS RD [RP ELLIS RD/I-95 NB EXIT 182] [WEST MELBOURNE]",
    "roadShort": "Ellis Rd [Rp Ellis RD/I-95 Nb Exit 182] [West Melbourne]",
    "source": "FHP live CAD",
@@ -1308,9 +1342,15 @@
     "kind": "feed",
     "publishedAt": "2026-11-03T17:51:44Z"
    },
-   "awaitingOfficial": false,
-   "missingSince": null,
-   "recheck": []
+   "awaitingOfficial": true,
+   "missingSince": "2026-11-03T18:14:39Z",
+   "recheck": [],
+   "noLongerListed": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "since": "2026-11-03T18:14:39Z",
+    "wasClosed": true
+   }
   },
   {
    "dir": "EB",
@@ -1373,8 +1413,8 @@
    "to": "Pine St",
    "where": "US-192 EB at Minton Rd/S Wickham Rd",
    "id": "brevard:fl511:937010",
-   "updated": "2026-11-03T17:38:00Z",
-   "lastReported": "2026-11-03T17:38:00Z",
+   "updated": "2026-11-03T18:09:00Z",
+   "lastReported": "2026-11-03T18:09:00Z",
    "firstReported": "2026-11-02T19:54:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
@@ -1639,8 +1679,8 @@
    "to": "Circle Dr",
    "where": "US-192 EB beyond Coastal Ln",
    "id": "brevard:fl511:937141",
-   "updated": "2026-11-03T17:38:00Z",
-   "lastReported": "2026-11-03T17:38:00Z",
+   "updated": "2026-11-03T18:10:00Z",
+   "lastReported": "2026-11-03T18:10:00Z",
    "firstReported": "2026-11-02T19:54:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
@@ -1797,8 +1837,8 @@
    "to": "Coastal Ln",
    "where": "US-192 WB at S John Rodes Blvd",
    "id": "brevard:fl511:937222",
-   "updated": "2026-11-03T17:38:00Z",
-   "lastReported": "2026-11-03T17:38:00Z",
+   "updated": "2026-11-03T18:11:00Z",
+   "lastReported": "2026-11-03T18:11:00Z",
    "firstReported": "2026-11-02T19:54:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
@@ -2149,8 +2189,8 @@
    "to": "Highway 1",
    "where": "SR-514 EB at US-1",
    "id": "brevard:fl511:937844",
-   "updated": "2026-11-03T17:38:00Z",
-   "lastReported": "2026-11-03T17:38:00Z",
+   "updated": "2026-11-03T18:09:00Z",
+   "lastReported": "2026-11-03T18:09:00Z",
    "firstReported": "2026-11-02T23:15:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
@@ -2409,8 +2449,8 @@
    "title": "Traffic lights not working on US-192 / Vine St / Bronson Hwy East, at S John Rodes Blvd",
    "where": "US-192 EB at S John Rodes Blvd",
    "id": "brevard:fl511:938257",
-   "updated": "2026-11-03T17:27:00Z",
-   "lastReported": "2026-11-03T17:27:00Z",
+   "updated": "2026-11-03T18:12:00Z",
+   "lastReported": "2026-11-03T18:12:00Z",
    "firstReported": "2026-11-03T03:18:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
@@ -2704,9 +2744,15 @@
     "kind": "feed",
     "publishedAt": "2026-11-03T13:45:00Z"
    },
-   "awaitingOfficial": false,
-   "missingSince": null,
-   "recheck": []
+   "awaitingOfficial": true,
+   "missingSince": "2026-11-03T18:14:39Z",
+   "recheck": [],
+   "noLongerListed": {
+    "agency": "FL511 (FDOT)",
+    "url": "https://fl511.com",
+    "since": "2026-11-03T18:14:39Z",
+    "wasClosed": false
+   }
   },
   {
    "from": "Malabar Rd",
@@ -4749,6 +4795,31 @@
   },
   {
    "approx": true,
+   "city": "West Melbourne",
+   "fullClosure": true,
+   "lanes": "Northbound lanes closed",
+   "lat": 28.07,
+   "layer": "manual",
+   "lng": -80.6735,
+   "note": "The city's 8 a.m. Tuesday update lists this closure. The current list has Minton Rd NB at Helen St, so this is a different cross street. I couldn't confirm where Henry Ave meets Minton Rd, so the pin is only roughly placed on Minton Rd. Pin approximate.",
+   "reported": "2026-11-03T13:00:00Z",
+   "road": "Minton Rd",
+   "source": "City of West Melbourne (via WFTV)",
+   "sourceUrl": "https://www.wftv.com/news/local/flooding-closes-west-melbourne-roads-relocates-polling-places-election-day/AMIBMKZMW5EFVBRARJI5F545LQ/",
+   "status": "flooded",
+   "title": "Minton Rd northbound closed at Henry Ave due to flooding",
+   "where": "Minton Rd NB at Henry Ave",
+   "id": "brevard:manual:minton-rd-nb-at-henry-ave",
+   "updated": "2026-11-03T13:00:00Z",
+   "lastReported": "2026-11-03T13:00:00Z",
+   "firstReported": "2026-11-03T13:00:00Z",
+   "verified": null,
+   "awaitingOfficial": false,
+   "missingSince": null,
+   "recheck": []
+  },
+  {
+   "approx": true,
    "city": "Melbourne",
    "from": "Opportunity Dr",
    "fullClosure": true,
@@ -6343,22 +6414,10 @@
  ],
  "advisories": [
   {
-   "agency": "City of Palm Bay (via Florida Today/Yahoo News)",
-   "time": "2026-11-02T17:56:00Z",
-   "text": "Water shut off to several neighborhoods near Malabar Rd and Port Malabar Blvd after a water main break on Port Malabar Blvd NE; flooding prevents repairs. Boil water notice will apply once service is restored.",
-   "url": "https://www.yahoo.com/news/weather-news/articles/palm-bay-turns-off-water-175602262.html"
-  },
-  {
    "agency": "City of Palm Bay Mayor (via News 6)",
    "time": "2026-11-02T20:40:00Z",
    "text": "Fairhaven area of Palm Bay is inaccessible because of flooding; no specific roads named.",
    "url": "https://www.clickorlando.com/news/local/2026/11/02/brevard-county-schools-closed-amid-flash-flood-warning-heavy-rain/"
-  },
-  {
-   "agency": "City of Melbourne",
-   "time": "2026-11-02T17:43:55Z",
-   "text": "Stay off the roads and shelter in place. Multiple roads closed by flooding, including Dubber Rd, North Dr, Stewart Rd, Dairy Rd at Edgewood Dr, and Edgewood Rd at Ruffner Rd. Avoid affected areas.",
-   "url": "https://spacecoastdaily.com/2026/11/city-of-melbourne-reports-multiple-road-closures-urges-residents-to-shelter-in-place/"
   },
   {
    "agency": "State of Florida, Governor's Office (via WFTV)",
@@ -6389,12 +6448,6 @@
    "time": "2026-11-03T05:00:02Z",
    "text": "Sheriff Wayne Ivey says courts will be back in session Tuesday, Nov. 3, and many government offices are expected to reopen as flooding damage is assessed. Brevard Public Schools stay closed Tuesday so the district can inspect buildings. The full extent of flood damage is not yet known, so residents should stay off the roads unless they need to travel.",
    "url": "https://spacecoastdaily.com/2026/11/brevard-public-schools-to-remain-closed-tuesday-as-courts-and-government-offices-reopen/"
-  },
-  {
-   "agency": "Brevard County Emergency Management (via Above the Norm News)",
-   "time": "2026-11-02T18:00:00Z",
-   "text": "Parts of I-95 in Brevard County may have standing water. Drive with caution and avoid flooded sections.",
-   "url": "https://www.abovethenormnews.com/2026/11/03/florida-flooding-state-of-emergency/"
   },
   {
    "agency": "Eastern Florida State College (via Space Coast Daily)",
