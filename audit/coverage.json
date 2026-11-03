@@ -1,5 +1,5 @@
 {
- "checkedAt": "2026-11-03T19:45:40Z",
+ "checkedAt": "2026-11-03T20:02:18Z",
  "fresh": true,
  "pilot": "City of Melbourne",
  "pending": [
@@ -264,7 +264,7 @@
      "sha256": "2c9805ea3219402ec4ea7707669ed6991eb9f9a9961d2cb7d9ca6265573e6a78",
      "source": "https://www.melbourneflorida.org/Government/City-News/Traffic-Advisories/Road-Closures-1320",
      "sourceTime": "2026-11-03T18:20:00Z",
-     "inNewest": true,
+     "inNewest": false,
      "verdict": "covered",
      "pins": [
       "brevard:manual:john-rodes-sb-at-eau-gallie"
@@ -307,7 +307,7 @@
      "sha256": "fd088a0bad3a30b07513ba03827da4124b6ddbdc460cc5463a9e5ff91c74a6d1",
      "source": "https://www.melbourneflorida.org/Government/City-News/Traffic-Advisories/Road-Closures-1320",
      "sourceTime": "2026-11-03T18:20:00Z",
-     "inNewest": true,
+     "inNewest": false,
      "verdict": "covered",
      "pins": [
       "brevard:manual:babcock-eber"
@@ -368,7 +368,7 @@
      "sha256": "6a2ce68f2f27c8382552cb7bc4f7fb86a18dbfb0cb0811ad7edeea6d97b47c0d",
      "source": "https://www.melbourneflorida.org/Government/City-News/Traffic-Advisories/Road-Closures-1320",
      "sourceTime": "2026-11-03T18:20:00Z",
-     "inNewest": true,
+     "inNewest": false,
      "verdict": "direction-unstated",
      "pins": [
       "brevard:manual:dairy-rd-at-florida-ave"
@@ -446,7 +446,7 @@
      "sha256": "d5dfe1bf454eecbe65c642bcfc251e0391ff7284843830f0a841a81f2be17e73",
      "source": "https://www.melbourneflorida.org/Government/City-News/Traffic-Advisories/Road-Closures-1320",
      "sourceTime": "2026-11-03T18:20:00Z",
-     "inNewest": true,
+     "inNewest": false,
      "verdict": "covered",
      "pins": [
       "brevard:manual:babcock-sunlakes"
@@ -774,8 +774,8 @@
     "reopen-review": 3,
     "resolved-by-city": 1,
     "no-active-pin": 1,
-    "older-unresolved": 5,
-    "needs-review": 13
+    "older-unresolved": 6,
+    "needs-review": 16
    }
   }
  ],
@@ -1544,8 +1544,8 @@
    "needsReview": [
     "9e46547042046a48bf68a9c51e6e8dd4bae89001c507c957662f2239def46d47"
    ],
-   "sha256": "8433d30a8fae9c17e9bb74a1c8ed3c27e50630ec6452df771d4cd13270ee88db",
-   "readAt": "2026-11-03T19:45:40Z"
+   "sha256": "df2ea6ecb5f24a3684ea5f8e8d60de928abb0d0612304bfbc8db8a3a3a9d3482",
+   "readAt": "2026-11-03T20:02:18Z"
   },
   "https://www.melbourneflorida.org/Government/City-News/Traffic-Advisories/Road-Closures-1320": {
    "agency": "City of Melbourne",
@@ -1607,8 +1607,21 @@
    "needsReview": [
     "0034d78371196ede2a8228bda807ad82d45b4a1f24031814f0a540732938db51"
    ],
-   "sha256": "55ab96dda4a04747f4bc6e04339d3346c26098fa41fe314267e8ce3c95ea6a86",
-   "readAt": "2026-11-03T19:45:40Z"
+   "sha256": "29992db49f0a55fd86ae045ea2c2c5056d9e28cb574b8122b0543b681d2f3e68",
+   "readAt": "2026-11-03T20:02:18Z"
+  },
+  "https://www.melbourneflorida.org/Government/City-News/Traffic-Advisories/Road-Closures-1450": {
+   "agency": "City of Melbourne",
+   "date": "2026-11-03",
+   "time": "2026-11-03T19:50:00Z",
+   "claims": [],
+   "needsReview": [
+    "dc89de42d7d408458aa4b04670bcc7fa03daf03af353a945d434c166702c7138",
+    "679866428cf4406fd68d4376fb3934bf99e6e314857217c03f7ed8a888d60e4f",
+    "746cdc91f2e0b08cdb9dadc4c9f958c6d390971a96b2908eb8496905fb973e6f"
+   ],
+   "sha256": "24e7b79ff7df3b9b23442ce0fe3901f984effe87d308e4e14c3cc0cbc6ea9eed",
+   "readAt": "2026-11-03T20:02:18Z"
   }
  }
 }

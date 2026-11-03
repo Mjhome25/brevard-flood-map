@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-03T19:45:33Z",
+ "generated": "2026-11-03T20:02:10Z",
  "errors": [],
  "items": [
   {
@@ -756,9 +756,15 @@
     "kind": "feed",
     "publishedAt": "2026-11-03T06:57:19Z"
    },
-   "awaitingOfficial": false,
-   "missingSince": null,
-   "recheck": []
+   "awaitingOfficial": true,
+   "missingSince": "2026-11-03T20:02:18Z",
+   "recheck": [],
+   "noLongerListed": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "since": "2026-11-03T20:02:18Z",
+    "wasClosed": false
+   }
   },
   {
    "from": "Ellis Dr",
@@ -817,6 +823,34 @@
    "recheck": [
     "source changed its lane description"
    ]
+  },
+  {
+   "fullClosure": false,
+   "lat": 27.8874494202899,
+   "layer": "FHP",
+   "lng": -80.5927672793776,
+   "reported": "2026-11-03T07:49:28Z",
+   "road": "I-95 NB [MM165]",
+   "roadShort": "I-95 Nb [MM165]",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "spot": "at Mm165",
+   "status": "caution",
+   "title": "Disabled Vehicle In Roadway at I-95 NB [MM165] x[MM165] [SEBASTIAN]",
+   "where": "I-95 Nb [MM165] at Mm165",
+   "id": "brevard:fhp:20261103074928-2762dd35",
+   "updated": "2026-11-03T07:49:28Z",
+   "lastReported": "2026-11-03T07:49:28Z",
+   "firstReported": "2026-11-03T07:49:28Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-03T07:49:28Z"
+   },
+   "awaitingOfficial": false,
+   "missingSince": null,
+   "recheck": []
   },
   {
    "from": "Lakes Of Melbourne Dr",
@@ -1447,8 +1481,8 @@
    "to": "Pine St",
    "where": "US-192 EB at Minton Rd/S Wickham Rd",
    "id": "brevard:fl511:937010",
-   "updated": "2026-11-03T19:17:00Z",
-   "lastReported": "2026-11-03T19:17:00Z",
+   "updated": "2026-11-03T19:49:00Z",
+   "lastReported": "2026-11-03T19:49:00Z",
    "firstReported": "2026-11-02T19:54:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
@@ -1713,8 +1747,8 @@
    "to": "Circle Dr",
    "where": "US-192 EB beyond Coastal Ln",
    "id": "brevard:fl511:937141",
-   "updated": "2026-11-03T19:17:00Z",
-   "lastReported": "2026-11-03T19:17:00Z",
+   "updated": "2026-11-03T19:50:00Z",
+   "lastReported": "2026-11-03T19:50:00Z",
    "firstReported": "2026-11-02T19:54:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
@@ -1880,9 +1914,15 @@
     "kind": "feed",
     "publishedAt": "2026-11-02T19:54:00Z"
    },
-   "awaitingOfficial": false,
-   "missingSince": null,
-   "recheck": []
+   "awaitingOfficial": true,
+   "missingSince": "2026-11-03T20:02:18Z",
+   "recheck": [],
+   "noLongerListed": {
+    "agency": "FL511 (FDOT)",
+    "url": "https://fl511.com",
+    "since": "2026-11-03T20:02:18Z",
+    "wasClosed": true
+   }
   },
   {
    "dir": "NB",
@@ -2223,8 +2263,8 @@
    "to": "Highway 1",
    "where": "SR-514 EB at US-1",
    "id": "brevard:fl511:937844",
-   "updated": "2026-11-03T19:13:00Z",
-   "lastReported": "2026-11-03T19:13:00Z",
+   "updated": "2026-11-03T19:49:00Z",
+   "lastReported": "2026-11-03T19:49:00Z",
    "firstReported": "2026-11-02T23:15:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
@@ -2941,8 +2981,8 @@
    "title": "Incident on I-95 North, before MM 182/Ellis Rd",
    "where": "I-95 NB before MM 182/Ellis Rd",
    "id": "brevard:fl511:939164",
-   "updated": "2026-11-03T18:19:00Z",
-   "lastReported": "2026-11-03T18:19:00Z",
+   "updated": "2026-11-03T19:58:00Z",
+   "lastReported": "2026-11-03T19:58:00Z",
    "firstReported": "2026-11-03T18:19:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
@@ -6699,12 +6739,6 @@
    "time": "2026-11-02T22:00:00Z",
    "text": "Eastern Florida State College stays closed Tuesday, Nov. 3, because of flooding.",
    "url": "https://spacecoastdaily.com/2026/11/city-of-melbourne-reports-multiple-road-closures-urges-residents-to-shelter-in-place/"
-  },
-  {
-   "agency": "City of Palm Bay (via News 6 WKMG)",
-   "time": "2026-11-02T20:00:00Z",
-   "text": "Boil water notice now in effect: after the water main break, some Palm Bay customers have no water while others do. Everyone in the expanded affected area must boil water for drinking, cooking and brushing teeth until the city lifts the notice. Flooded, unsafe conditions may delay repairs and getting water back.",
-   "url": "https://www.clickorlando.com/news/local/2026/11/02/brevard-county-schools-closed-amid-flash-flood-warning-heavy-rain/"
   },
   {
    "agency": "City of West Melbourne",
