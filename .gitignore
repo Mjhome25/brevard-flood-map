@@ -8,3 +8,6 @@ routine-settings.json
 codex-review/
 DESIGN_REVIEW_BRIEF.md
 __pycache__/
+peerline/bus.db*
+peerline/.wait-*.lock
+peerline/__pycache__/

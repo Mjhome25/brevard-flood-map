@@ -212,7 +212,7 @@ h1,h2,h3{margin:0;text-wrap:balance}
         <label><input type="checkbox" id="f-nws" checked> Warning areas</label>
       </div>
       <div class="list" id="list"></div>
-      <div class="note">Hollow pin = approximate location. Grey = hand-entered report not re-confirmed for 10 hours. Tap a row to jump to it.</div>
+      <div class="note">Hollow pin = approximate location. Reports stay on the map until an official source says the road reopened. Tap a row to jump to it.</div>
     </div>
     <div class="pane" id="pane-alerts" role="tabpanel" aria-hidden="true">
       <div class="sec">National Weather Service</div>
@@ -234,7 +234,7 @@ h1,h2,h3{margin:0;text-wrap:balance}
 </div>
 <div class="about" id="about" hidden>
   <p><b>Refresh.</b> Road data is pulled about every 15 minutes while the feed on the office computer is running; NWS alerts refresh live every 5 minutes, and the page reloads itself when newer road data is posted. A red note under the map appears when road data is more than 30 minutes old.</p>
-  <p><b>Tiers.</b> FL511 (FDOT), Florida Highway Patrol live CAD and NWS items come from agency feeds. Items marked "unconfirmed" are hand-entered from police, county or news posts; each shows its post time and link, and turns grey after 10 hours without re-confirmation.</p>
+  <p><b>Tiers.</b> FL511 (FDOT), Florida Highway Patrol live CAD and NWS items come from agency feeds. Items marked "unconfirmed" are hand-entered from police, county or news posts; each shows its post time and link. A report stays on the map, with the time it was last reported, until an official source says the road has reopened.</p>
   <p><b>Privacy.</b> No patient information is ever shown here. Map data © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors.</p>
 </div>
 
@@ -387,7 +387,7 @@ h1,h2,h3{margin:0;text-wrap:balance}
     return {sz, html:`<svg width="${sz}" height="${sz}" viewBox="${-base/2} ${-base/2} ${base} ${base}" style="opacity:${(it.approx||st)?.6:1}" aria-hidden="true">${ring?`<circle r="15" fill="none" stroke="${col('closed')}" stroke-width="3"/>`:''}${glyph(k,c)}</svg>`};
   }
   function mkIcon(it,st){ const g=svgFor(it,st,1.3); return L.divIcon({className:'mk',html:g.html,iconSize:[g.sz,g.sz],iconAnchor:[g.sz/2,g.sz/2],popupAnchor:[0,-g.sz/2],tooltipAnchor:[g.sz/2,0]}); }
-  const isStale=it=>it.layer==='manual' && (Date.now()-new Date(it.updated||it.reported||0))>10*3600e3;
+  const isStale=it=>false;  // Closures never fade (Mike, November 3, 2026): a road stays reported closed until an official all-clear.
   const sevSort=(a,b)=>(ORDER[cause(a)]-ORDER[cause(b)])||((isClosed(b)|0)-(isClosed(a)|0))||(new Date(b.updated||0)-new Date(a.updated||0));
   const items=(DATA.items||[]).slice().sort(sevSort);
   const where=it=>it.where||it.road||it.title;
@@ -434,7 +434,7 @@ h1,h2,h3{margin:0;text-wrap:balance}
     const t=it.updated||it.reported; const old=t&&(Date.now()-new Date(t))>6*3600e3; const stale=isStale(it); const closed=isClosed(it)&&!stale;
     const badge = it.layer==='manual' ? `<span class="badge unc">${stale?'unverified':'unconfirmed'}</span>` : `<span class="badge feed">${esc(it.layer==='FHP'?'FHP':'FL511')}</span>`;
     const isNew=t&&(Date.now()-new Date(t))<3600e3;
-    return `<div class="row" data-id="${esc(it.id)}" tabindex="0" role="button" aria-label="${esc(where(it))}, show on map"><span class="ic">${svgFor(it,stale,.85).html}</span><div class="ttl">${isNew?'<span class="badge new">New</span>':''}${closed?'<span class="badge full">Closed</span>':''}${esc(closed&&span(it)?roadDir(it):where(it))}</div><span class="age ${old?'old':''}" title="${esc(when(t))}">${esc(ago(t))}</span><div class="imp ${closed?'closed':''}">${esc(closed&&span(it)?'Closed '+span(it):impact(it))}</div>${closed&&span(it)?`<div class="imp sub">Reported ${esc(it.spot||'')}${it.lanes?' · '+esc(it.lanes):''}</div>`:''}<div class="meta">${badge}${esc([it.title!==where(it)?it.title:'',it.city,it.source,when(t)].filter(Boolean).join(' · '))}${it.lat==null?' · no map location yet':''}</div></div>`;
+    return `<div class="row" data-id="${esc(it.id)}" tabindex="0" role="button" aria-label="${esc(where(it))}, show on map"><span class="ic">${svgFor(it,stale,.85).html}</span><div class="ttl">${isNew?'<span class="badge new">New</span>':''}${closed?'<span class="badge full">Closed</span>':''}${esc(closed&&span(it)?roadDir(it):where(it))}</div><span class="age ${old?'old':''}" title="${esc(when(t))}">${esc(ago(t))}</span><div class="imp ${closed?'closed':''}">${esc(closed&&span(it)?'Closed '+span(it):impact(it))}</div>${closed&&span(it)?`<div class="imp sub">Reported ${esc(it.spot||'')}${it.lanes?' · '+esc(it.lanes):''}</div>`:''}<div class="meta">${badge}${esc([it.title!==where(it)?it.title:'',it.city,it.source,t?'last reported '+when(t):''].filter(Boolean).join(' · '))}${it.lat==null?' · no map location yet':''}</div></div>`;
   }
   function renderList(arr, byNew){
     document.getElementById('count').textContent=arr.length;

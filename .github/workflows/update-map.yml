@@ -54,6 +54,6 @@ jobs:
         run: |
           git config user.name "brevard-map-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          for f in flood_data.json manual_closures.json advisories.json news_state.json *_cache.json; do [ -f "$f" ] && git add "$f"; done
+          for f in flood_data.json manual_closures.json advisories.json news_state.json reopen_proposals.json *_cache.json; do [ -f "$f" ] && git add "$f"; done
           git diff --cached --quiet || git commit -m "Map data $(date -u +%Y-%m-%dT%H:%MZ)"
           git push || (git pull --rebase && git push)

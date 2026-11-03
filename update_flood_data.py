@@ -191,7 +191,7 @@ for it in manual + items:
 try:
     import sys; sys.path.insert(0, HERE)
     from closure_extent import add_extents
-    stale = lambda it: it.get("layer") == "manual" and (datetime.datetime.now(datetime.timezone.utc) - datetime.datetime.fromisoformat((it.get("updated") or it.get("reported") or "2000-01-01T00:00:00Z").replace("Z", "+00:00"))).total_seconds() > 10 * 3600
+    stale = lambda it: False  # closures never fade (Mike, November 3, 2026)
     ext_errs = add_extents(manual + items, HERE, lambda it: (it.get("fullClosure") or it.get("status") == "closed") and not stale(it))
     if ext_errs: print("note (closure extents):", ext_errs[:3])
 except Exception as e: print("note (closure extents skipped):", e)
