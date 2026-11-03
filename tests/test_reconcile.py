@@ -870,5 +870,28 @@ for h in (0, 0.25, 0.5):
 check("an FHP crash missing from partial reads is never cleared",
       E.derive(E.load(pf))["records"][R.rid_of(fcrash)]["status"] == "active")
 
+# Codex #252: only the dropped feed's part of a pin fades; independent evidence joined into it stays active
+NLL = {"agency": "Florida Highway Patrol", "url": E.FHP_URL, "since": "2026-11-03T12:00:00Z", "wasClosed": False}
+def host(**kw):
+    return dict({"id": "brevard:fhp:h", "road": "Dairy Rd", "where": "Dairy Rd at Florida Ave", "status": "flooded",
+                 "fullClosure": True, "reported": "2026-11-03T10:00:00Z", "noLongerListed": NLL,
+                 "verified": {"kind": "feed"}}, **kw)
+def nws(status):
+    return {"id": "brevard:nws:n", "road": "Dairy Rd", "where": "Dairy Rd at Florida Ave", "status": status,
+            "source": "NWS Melbourne storm report (Law Enforcement)", "reported": "2026-11-03T13:00:00Z", "sourceUrl": "https://n"}
+got = R.keep_independent(R.merge_nws([host(), nws("closed")]))
+check("an NWS closure joined into a pin whose FHP part was dropped keeps the pin closed, active, named in keptBy",
+      len(got) == 1 and got[0]["status"] == "closed" and got[0]["keptBy"][0]["kind"] == "nws" and got[0]["statusBy"]["status"] == "closed")
+got = R.keep_independent(R.merge_nws([host(), nws("flooded")]))
+check("an equal-status NWS flooding report keeps a flooding warning, without the dropped feed's full closure",
+      got[0]["status"] == "flooded" and got[0]["fullClosure"] is False and got[0]["keptBy"])
+got = R.keep_independent([host(status="closed", raisedBy={"agency": "City of Melbourne", "url": "https://m", "quote": "q"})])
+check("a government page that raised the pin keeps it closed and active after the feed drop",
+      got[0]["status"] == "closed" and got[0]["keptBy"][0] == {"kind": "page", "source": "City of Melbourne", "url": "https://m"})
+got = R.keep_independent([host()])
+check("a pin with only the dropped feed's report has no keptBy (it fades)", "keptBy" not in got[0])
+check("the page fades only a dropped report with no independent evidence",
+      "const isStale=it=>!!it.noLongerListed&&!(it.keptBy||[]).length;" in tplc)
+
 print("failures:", fails)
 sys.exit(1 if fails else 0)

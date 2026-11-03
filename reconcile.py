@@ -297,7 +297,7 @@ def display(state: dict) -> tuple[list[dict], list[dict]]:
             reopened.append(it)
     reopened.sort(key=lambda it: it["reopenedAt"], reverse=True)
     items.sort(key=lambda it: it["id"])
-    items = merge_nws(items)
+    items = keep_independent(merge_nws(items))
     for c in reopened:
         # Another source's report at the same place is never cleared by FHP's drop; it stays on the map (how the two
         # should look together is Mike's open choice). Named here, with whether its own feed still lists it.
@@ -381,6 +381,30 @@ def merge_nws(items: list[dict]) -> list[dict]:
             host["status"], host["statusBy"] = report["status"], report
     out.sort(key=lambda it: it["id"])
     return out
+
+
+def keep_independent(items: list[dict]) -> list[dict]:
+    """Mike (Nov 3): a report its own feed dropped is shown faded as "Cleared by FHP/FL511". Only that feed's part fades:
+    a pin that also carries independent evidence (a government page that raised or confirmed it, or an NWS storm report
+    joined into it) stays active, showing what that evidence still says, and names it in keptBy (Codex #252)."""
+    for it in items:
+        if not it.get("noLongerListed"):
+            continue
+        page = it.get("raisedBy") or it.get("supportedBy") or ((it.get("verified") or {}).get("kind") == "page" and it["verified"])
+        kept = []
+        if page:  # the page's own words set or confirmed this impact; it stands without the feed
+            kept.append({"kind": "page", "source": page.get("agency") or page.get("source"), "url": page.get("url")})
+        nws = it.get("nws") or []
+        if nws:
+            kept += [{"kind": "nws", "source": "NWS storm report", "reporter": r.get("reporter"), "url": r.get("url"),
+                      "status": r.get("status")} for r in nws]
+            if not page:  # what remains is only the NWS reports: their most serious status, never the feed's full closure
+                top = max(nws, key=lambda r: E.SEVERITY.get(r.get("status"), 0))
+                it.setdefault("baseStatus", it.get("status"))
+                it.update(status=top.get("status"), statusBy=top, fullClosure=False)
+        if kept:
+            it["keptBy"] = kept
+    return items
 
 
 def main() -> int:

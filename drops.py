@@ -20,13 +20,19 @@ A counterpart counts when it shows at least the dropped report's impact on the p
 a full closure, whatever its category); lesser ones are listed apart. An episode with no counterpart is "nothing found":
 that is the absence of contrary evidence, never proof the road reopened.
 
-Findings Mike has not reviewed are flagged new or changed when they first appear or change, so they are brought to him
-in chat once (the only notice he authorised), not repeated every run. His decisions go in audit/drop_review.json
-({episode id: {"decision": ..., "at": ..., "note": ...}}).
+Every case with counterparts carries a fingerprint of its evidence (each counterpart's relation, status, full closure,
+source, last report and listing state). forMike is the standing queue: cases with counterparts whose current fingerprint
+Mike has not reviewed. A review (audit/drop_review.json, {id: {"decision", "fingerprint", "at"}}) covers only the
+evidence it saw; changed evidence puts the case back in the queue. Relaying is manual: Claude brings the queue to Mike in
+chat while in session (the only notice he authorised; not an automatic 24x7 alert) and records what was relayed in
+audit/drop_relayed.json ({id: fingerprint}); newForMike = queued cases whose fingerprint was not yet relayed, so a missed
+run never loses one. Drops are only observed on a successful feed read (a missing event needs one), so every episode is a
+real observation; a counterpart whose own feed is not reading normally now is "listing unconfirmed".
 """
 from __future__ import annotations
 
 import datetime
+import hashlib
 import json
 import os
 import re
@@ -42,6 +48,12 @@ FEEDS = ("fhp", "fl511")
 START = "2026-11-03T17:36:43Z"  # Mike's decision message
 END = "2026-11-10T17:36:43Z"  # seven days
 STATE_ROAD = re.compile(r"\b(?:I-?\s?\d+|US-?\s?\d+|U\.S\.\s?\d+|SR-?\s?\d+|State Road \d+|A1A|Beachline|Turnpike)\b", re.I)
+# reviewed Brevard state routes known by street name (FDOT roads); any other named road is a local street
+STATE_NAMES = re.compile(r"\b(?:New Haven Ave|Strawbridge Ave|Dixie Hwy|Harbor City Blvd|Eau Gallie Blvd|Eau Gallie Cswy|"
+                         r"Malabar Rd|Pineda Cswy|NASA Blvd|King St|Merritt Island Cswy|Cocoa Beach Cswy|Courtenay Pkwy|"
+                         r"Cheney Hwy|Garden St|Max Brewer|Fiske Blvd|Clearlake Rd|S Patrick Dr|South Patrick Dr|"
+                         r"Melbourne Cswy|Atlantic Ave|Ocean Blvd)\b", re.I)
+GROUPS = ["crash, state road", "crash, local street", "flooding/hazard, state road", "flooding/hazard, local street"]
 
 
 def level(f: dict) -> int:
@@ -54,8 +66,10 @@ def level(f: dict) -> int:
 def group(f: dict) -> str:
     """crash or flooding/hazard, on a state road or a local street (Mike's question: does a drop mean the same for each)."""
     kind = "crash" if re.search(r"\bMVC|crash|collision\b", f.get("title") or "", re.I) else "flooding/hazard"
-    road = f.get("road") or f.get("where") or ""
-    return f"{kind}, {'state road' if STATE_ROAD.search(road) else 'local street'}"
+    road = " ".join(x for x in (f.get("road"), f.get("roadShort"), f.get("where")) if x)
+    if not road.strip():
+        return f"{kind}, road unknown"
+    return f"{kind}, {'state road' if STATE_ROAD.search(road) or STATE_NAMES.search(road) else 'local street'}"
 
 
 def episodes(events: list[dict]) -> list[dict]:
@@ -69,7 +83,7 @@ def episodes(events: list[dict]) -> list[dict]:
         if (ev["kind"] == "missing" and ev.get("src") in FEEDS and was and r and was["status"] == "active"
                 and not was["missingSince"] and r["missingSince"]):
             out.append({"id": "drop:" + ev["eid"], "rid": ev["rid"], "src": ev["src"], "missingSince": r["missingSince"],
-                        "seenGoneAt": ev["at"], "lastListed": was["lastReported"], "firstReported": was["firstReported"],
+                        "seenGoneAt": ev["at"], "sourceLastReported": was["lastReported"], "firstReported": was["firstReported"],
                         "fields": dict(was["fields"])})
     return out
 
@@ -95,7 +109,9 @@ def counterparts(ep: dict, events: list[dict], final: dict) -> tuple[list[dict],
         if not rel:
             continue
         f = r["fields"]
+        up = final["sources"].get(r["src"], {}).get("state") == "up"
         listing = ("no longer listed by its feed" if r["src"] in FEEDS and r.get("missingSince")
+                   else "listing unconfirmed (its feed is not reading normally)" if r["src"] in FEEDS and not up
                    else "still listed by its feed" if r["src"] in FEEDS
                    else "not a live feed (cannot tell if its source still lists it)")
         row = {"relation": rel, "rid": rid, "src": r["src"], "source": f.get("source"), "url": f.get("sourceUrl"),
@@ -106,42 +122,53 @@ def counterparts(ep: dict, events: list[dict], final: dict) -> tuple[list[dict],
     return found, lesser
 
 
+def fingerprint(found: list[dict]) -> str:
+    keys = ("relation", "rid", "status", "fullClosure", "source", "lastReported", "reportedAt", "listing", "onMap")
+    return hashlib.sha256(json.dumps(sorted([{k: c.get(k) for k in keys} for c in found], key=json.dumps),
+                                     sort_keys=True).encode()).hexdigest()[:16]
+
+
 def report(now: datetime.datetime, events_path: str = E.EVENTS, prev: dict | None = None,
-           review: dict | None = None) -> dict:
-    prev, review = prev or {}, review or {}
+           review: dict | None = None, relayed: dict | None = None) -> dict:
+    prev, review, relayed = prev or {}, review or {}, relayed or {}
     events = E.load(events_path)
     final = E.derive(events, now)
-    old = {c["id"]: c for c in prev.get("cases", [])}
+    old = {c["id"]: c for c in (prev.get("cases") or []) if isinstance(c, dict) and "id" in c}
     cases = []
     for ep in episodes(events):
         found, lesser = counterparts(ep, events, final)
         f = ep["fields"]
-        key = sorted((c["relation"], c["rid"]) for c in found)
-        before = old.get(ep["id"])
+        fp = fingerprint(found) if found else None
+        rv = review.get(ep["id"]) or {}
         c = {"id": ep["id"], "rid": ep["rid"], "src": ep["src"], "where": f.get("where") or f.get("road") or "",
              "status": f.get("status"), "fullClosure": bool(f.get("fullClosure")), "group": group(f),
-             "url": f.get("sourceUrl"), "firstReported": ep["firstReported"], "lastListed": ep["lastListed"],
+             "url": f.get("sourceUrl"), "firstReported": ep["firstReported"], "sourceLastReported": ep["sourceLastReported"],
              "missingSince": ep["missingSince"], "seenGoneAt": ep["seenGoneAt"],
              "cohort": "trial" if START <= ep["missingSince"] < END else "baseline" if ep["missingSince"] < START else "after",
              "finding": ("contrary evidence" if any(x["relation"] in ("source-relisted", "reported-after-drop", "later-report")
                                                     for x in found) else "possibly stale entry" if found else "nothing found"),
-             "counterparts": found, "lesser": lesser, "review": review.get(ep["id"], {}).get("decision", "unreviewed"),
-             "firstFound": (before or {}).get("firstFound") or (E.iso(now) if found else None), "checkedAt": E.iso(now)}
-        c["new"] = bool(found) and not before
-        c["changed"] = bool(before) and sorted((x["relation"], x["rid"]) for x in before.get("counterparts", [])) != key
+             "counterparts": found, "lesser": lesser, "fingerprint": fp,
+             "review": (rv.get("decision") if rv.get("decision") and rv.get("fingerprint") == fp
+                        else "unreviewed (evidence changed since review)" if rv.get("decision") else "unreviewed"),
+             "firstFound": (old.get(ep["id"]) or {}).get("firstFound") or (E.iso(now) if found else None),
+             "checkedAt": E.iso(now)}
         cases.append(c)
     trial = [c for c in cases if c["cohort"] == "trial"]
     tally = lambda cs: {"episodes": len(cs), "incidents": len({c["rid"] for c in cs}),
                         "bySource": {s: sum(c["src"] == s for c in cs) for s in FEEDS},
                         **{k: sum(c["finding"] == k for c in cs) for k in ("contrary evidence", "possibly stale entry",
                                                                              "nothing found")}}
-    groups = sorted({c["group"] for c in trial})
-    return {"checkedAt": E.iso(now), "trial": {"from": START, "to": END, "complete": E.iso(now) >= END, **tally(trial),
-                                                "byGroup": {g: tally([c for c in trial if c["group"] == g]) for g in groups}},
+    groups = GROUPS + sorted({c["group"] for c in trial} - set(GROUPS))  # all four always, even with no drops yet
+    queue = [c["id"] for c in cases if c["counterparts"] and c["review"].startswith("unreviewed")]
+    return {"checkedAt": E.iso(now), "fresh": True,
+            "trial": {"from": START, "to": END, "windowElapsed": E.iso(now) >= END, **tally(trial),
+                      "byGroup": {g: tally([c for c in trial if c["group"] == g]) for g in groups},
+                      "limits": "a group with few or no drops shows nothing either way; nothing found is not proof the "
+                                "road reopened; state road means a route number or a reviewed state-route street name"},
             "baseline": tally([c for c in cases if c["cohort"] == "baseline"]),
             "sourcesNotUp": sorted(s for s, h in final["sources"].items() if s in FEEDS and h.get("state") != "up"),
-            "forMike": [c["id"] for c in cases if c["counterparts"] and c["review"] == "unreviewed"],
-            "newForMike": [c["id"] for c in cases if (c["new"] or c["changed"]) and c["review"] == "unreviewed"],
+            "forMike": queue,
+            "newForMike": [i for i in queue if relayed.get(i) != next(c["fingerprint"] for c in cases if c["id"] == i)],
             "note": "nothing found means no contrary report on our map, not proof the road reopened",
             "cases": cases}
 
@@ -155,17 +182,27 @@ def line(rep: dict) -> str:
             + (f" Feeds not up: {', '.join(rep['sourcesNotUp'])}." if rep["sourcesNotUp"] else ""))
 
 
+def _load(p: str) -> dict:
+    try:
+        d = json.load(open(p))
+        return d if isinstance(d, dict) else {}
+    except (OSError, ValueError):
+        return {}  # missing or corrupt: start clean rather than stop refreshing
+
+
 def main() -> int:
     path = os.path.join(AUDIT, "drops.json")
-    load = lambda p: json.load(open(p)) if os.path.exists(p) else {}
-    try:
-        rep = report(E.utcnow(), prev=load(path), review=load(os.path.join(AUDIT, "drop_review.json")))
-    except Exception as exc:  # never stops the map; the last good report stays
-        print(f"drops: failed ({type(exc).__name__}); last report kept")
-        return 0
     os.makedirs(AUDIT, exist_ok=True)
-    open(path + ".tmp", "w").write(json.dumps(rep, indent=1) + "\n")
-    os.replace(path + ".tmp", path)
+    prev = _load(path)
+    write = lambda obj: (open(path + ".tmp", "w").write(json.dumps(obj, indent=1) + "\n"), os.replace(path + ".tmp", path))
+    try:
+        rep = report(E.utcnow(), prev=prev, review=_load(os.path.join(AUDIT, "drop_review.json")),
+                     relayed=_load(os.path.join(AUDIT, "drop_relayed.json")))
+    except Exception as exc:  # never stops the map; the last good report stays, marked not fresh
+        write(dict(prev, fresh=False, lastFailure={"at": E.iso(E.utcnow()), "error": type(exc).__name__}))
+        print(f"drops: failed ({type(exc).__name__}); last good report kept, marked not fresh")
+        return 0
+    write(rep)
     print("drops:", line(rep), f"New for Mike: {len(rep['newForMike'])}.")
     return 0
 

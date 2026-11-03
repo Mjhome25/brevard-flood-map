@@ -477,7 +477,7 @@ h1,h2,h3{margin:0;text-wrap:balance}
   }
   const canHover=matchMedia('(hover: hover) and (pointer: fine)').matches;  // touch: tap opens the popup instead
   function mkIcon(it,st){ const g=svgFor(it,st,1.3); return L.divIcon({className:'mk',html:g.html,iconSize:[g.sz,g.sz],iconAnchor:[g.sz/2,g.sz/2],popupAnchor:[0,-g.sz/2],tooltipAnchor:[g.sz/2,0]}); }
-  const isStale=it=>!!it.noLongerListed;  // Mike, Nov 3: a report FHP or FL511 itself dropped shows faded as cleared by that agency (not removed, not an official reopening); everything else never fades.
+  const isStale=it=>!!it.noLongerListed&&!(it.keptBy||[]).length;  // Mike, Nov 3: a report FHP or FL511 itself dropped shows faded as cleared by that agency (not removed, not an official reopening); everything else never fades.
   const sevSort=(a,b)=>(ORDER[cause(a)]-ORDER[cause(b)])||((isClosed(b)|0)-(isClosed(a)|0))||(new Date(b.updated||0)-new Date(a.updated||0));
   const items=(DATA.items||[]).slice().sort(sevSort);
   const where=it=>it.where||it.road||it.title;
@@ -538,7 +538,7 @@ h1,h2,h3{margin:0;text-wrap:balance}
   const vday=v=>v.publishedDate?new Date(v.publishedDate+'T12:00:00Z').toLocaleDateString('en-US',{month:'short',day:'numeric',timeZone:'UTC'}):when(v.publishedAt);
   const vshort=it=>{ const g=it.nws&&it.nws.find(r=>r.gov), n=it.nws&&it.nws[0]?`<span class="vbs ok">${g?'✓ Government verified '+(g.status==='closed'?'road closure':'flooding')+' · ':''}NWS storm report · ${esc(when((g||it.nws[0]).at))}</span>`:'';  // NWS first (Mike)
     return it.verified?n+`<span class="vbs ok">✓ Government verified · ${esc(it.verified.kind==='feed'?when(it.verified.publishedAt):vday(it.verified))}${it.awaitingOfficial||it.noLongerListed?' · awaiting confirmation':''}</span>`:n||'<span class="vbs unv">! Not government verified</span>'; };
-  function nll(it){ const n=it.noLongerListed; return n?`<div class="nll">Cleared by <a href="${esc(n.url)}" target="_blank" rel="noopener">${esc(n.agency)}</a>: no longer listed${n.wasClosed?' as closed':''} since ${esc(when(n.since))}, so shown faded. Not an official reopening; other reports here stay as they are.</div>`:''; }
+  function nll(it){ const n=it.noLongerListed; if(n&&(it.keptBy||[]).length) return `<div class="nll">${esc(n.agency)} no longer lists its own report here (since ${esc(when(n.since))}); this pin stays for ${esc([...new Set(it.keptBy.map(k=>k.kind==='nws'?'the NWS storm report':(k.source||'a government page')))].join(' and '))}, which still reports it.</div>`; return n?`<div class="nll">Cleared by <a href="${esc(n.url)}" target="_blank" rel="noopener">${esc(n.agency)}</a>: no longer listed${n.wasClosed?' as closed':''} since ${esc(when(n.since))}, so shown faded. Not an official reopening; other reports here stay as they are.</div>`:''; }
   const srcHost=it=>{ try{ return new URL(it.sourceUrl).hostname.replace(/^www\./,''); }catch(e){ return 'the source'; } };  // the site the link really opens
   function fhpNote(it){ const c=cleared.find(x=>formerClosure(x)&&(x.stillReported||[]).some(a=>a.id===it.id)); const v=c&&c.evidence;
     return c?`<div class="nll">${esc(v.agency)} no longer lists its road closure here (since ${esc(when(v.missingSince))}). This report is from another source and stays until a cited source clears it. <a href="${esc(v.url)}" target="_blank" rel="noopener">${esc(v.agency)} ↗</a></div>`:''; }

@@ -40,11 +40,11 @@ def gone(rid, at, src="fl511"):
     return ev("missing", rid, at, src)
 
 
-def rep(events, prev=None, review=None, now=NOW):
+def rep(events, prev=None, review=None, now=NOW, relayed=None):
     p = os.path.join(tmp, "e.jsonl")
     open(p, "w").write("".join(json.dumps(dict(e, eid=f"e{i}")) + "\n" for i, e in enumerate(events)))
     before = open(p).read()
-    out = D.report(now, p, prev, review)
+    out = D.report(now, p, prev, review, relayed)
     assert open(p).read() == before, "the drop trial wrote the closure history"
     return out
 
@@ -99,23 +99,59 @@ check("a lesser report (a caution where the drop was a closure) is listed apart,
 far = dict(stale, where="Wickham Rd at Eau Gallie Blvd")
 check("a report at a different cross street is not a counterpart",
       rep([ev("reported", "brevard:manual:f", "2026-11-03T16:00:00Z", "manual", fields=far)] + base)["cases"][0]["counterparts"] == [])
-first = rep([ev("reported", "brevard:manual:s", "2026-11-03T16:00:00Z", "manual", fields=stale)] + base)
-again = rep([ev("reported", "brevard:manual:s", "2026-11-03T16:00:00Z", "manual", fields=stale)] + base, prev=first)
-check("a finding is new for Mike once; the next run with the same evidence does not repeat it",
-      first["newForMike"] == [first["cases"][0]["id"]] and again["newForMike"] == [] and again["forMike"] == first["forMike"]
-      and again["cases"][0]["firstFound"] == first["cases"][0]["firstFound"])
-more = rep([ev("reported", "brevard:manual:s", "2026-11-03T16:00:00Z", "manual", fields=stale)] + base
-           + [ev("reported", "brevard:manual:n", "2026-11-04T15:00:00Z", "manual", fields=stale)], prev=again)
-check("new evidence for a finding already shown makes it changed and brings it back", more["newForMike"] == [more["cases"][0]["id"]])
-done = rep([ev("reported", "brevard:manual:s", "2026-11-03T16:00:00Z", "manual", fields=stale)] + base,
-           review={first["cases"][0]["id"]: {"decision": "stale entry, ok"}})
-check("a finding Mike has reviewed is not brought to him again", done["forMike"] == [] and done["cases"][0]["review"] == "stale entry, ok")
+S = [ev("reported", "brevard:manual:s", "2026-11-03T16:00:00Z", "manual", fields=stale)] + base
+first = rep(S)
+cid, fp = first["cases"][0]["id"], first["cases"][0]["fingerprint"]
+check("a finding stays new for Mike until it is relayed in chat (a missed run never loses it)",
+      first["newForMike"] == [cid] and rep(S, prev=first)["newForMike"] == [cid])
+told = rep(S, prev=first, relayed={cid: fp})
+check("once relayed, the same evidence is not brought again but stays in the standing queue until reviewed",
+      told["newForMike"] == [] and told["forMike"] == [cid] and told["cases"][0]["firstFound"] == first["cases"][0]["firstFound"])
+more = S + [ev("reported", "brevard:manual:n", "2026-11-04T15:00:00Z", "manual", fields=dict(stale, source="City of Melbourne"))]
+check("new evidence for a relayed finding brings it back", rep(more, relayed={cid: fp})["newForMike"] == [cid])
+done = rep(S, review={cid: {"decision": "stale entry, ok", "fingerprint": fp}})
+check("a finding Mike reviewed (for that evidence) leaves the queue", done["forMike"] == [] and done["cases"][0]["review"] == "stale entry, ok")
+again = rep(more, review={cid: {"decision": "stale entry, ok", "fingerprint": fp}})
+check("Codex repro: reviewed as stale, then a NEW city closure after the drop -> contrary evidence, back in the queue",
+      again["cases"][0]["finding"] == "contrary evidence" and again["forMike"] == [cid]
+      and again["cases"][0]["review"] == "unreviewed (evidence changed since review)")
+cp = first["cases"][0]["counterparts"]
+check("a material change to the same counterpart (closed -> flooded, a newer report, listing) changes the fingerprint",
+      all(D.fingerprint([dict(cp[0], **chg)]) != fp for chg in ({"status": "flooded"}, {"fullClosure": False},
+                                                                {"lastReported": "2026-11-04T09:00:00Z"},
+                                                                {"listing": "no longer listed by its feed"})))
+fl = dict(FL, source="FL511 (FDOT)")
+down = S[:1] + [ev("reported", "brevard:fl511:9", "2026-11-03T16:00:00Z", fields=fl)] + base \
+    + [{"kind": "source", "rid": None, "src": "fl511", "at": "2026-11-04T15:00:00Z", "actor": "t", "state": "down"}]
+try:
+    lst = [c["listing"] for c in rep(down)["cases"][0]["counterparts"] if c["rid"] == "brevard:fl511:9"]
+except Exception as exc:  # the source-health event shape is owned by events.py
+    lst = [type(exc).__name__]
+check("a counterpart whose feed is not reading normally is 'listing unconfirmed', not 'still listed'",
+      len(lst) == 1 and lst[0].startswith("listing unconfirmed"))
 check("the ledger line says nothing found is not proof", "nothing found (not proof)" in D.line(rep(base)))
 r = rep(base + [seen("brevard:fl511:3", "2026-11-04T10:00:00Z", dict(FL, road="Minton Rd", where="Minton Rd at Norfolk Pkwy",
                                                                       status="flooded", fullClosure=False)),
                 gone("brevard:fl511:3", "2026-11-04T12:00:00Z")])
-check("the trial is split by crash or flooding/hazard and state road or local street",
-      set(r["trial"]["byGroup"]) == {"flooding/hazard, local street"} and r["trial"]["byGroup"]["flooding/hazard, local street"]["episodes"] == 2)
+check("all four agreed groups are always reported, even with no drops in them",
+      list(r["trial"]["byGroup"])[:4] == D.GROUPS and r["trial"]["byGroup"]["flooding/hazard, local street"]["episodes"] == 1
+      and r["trial"]["byGroup"]["flooding/hazard, state road"]["episodes"] == 1
+      and r["trial"]["byGroup"]["crash, state road"]["episodes"] == 0 and "not proof" in r["trial"]["limits"])
+check("Codex repro: W New Haven Ave (US-192) is a state road; Minton Rd is a local street; no road is unknown",
+      D.group({"title": "Flooding", "road": "W New Haven Ave"}) == "flooding/hazard, state road"
+      and D.group({"title": "MVC", "road": "Minton Rd"}) == "crash, local street" and D.group({"title": "MVC"}) == "crash, road unknown")
+D.AUDIT = os.path.join(tmp, "audit"); os.makedirs(D.AUDIT, exist_ok=True)
+open(os.path.join(D.AUDIT, "drops.json"), "w").write("{not json")
+real = E.EVENTS
+D.main()
+check("a corrupt drops.json does not stop the report from refreshing", json.load(open(os.path.join(D.AUDIT, "drops.json"))).get("fresh") is True)
+real_report = D.report
+D.report = lambda *a, **k: 1 / 0
+D.main()
+D.report = real_report
+bad = json.load(open(os.path.join(D.AUDIT, "drops.json")))
+check("a failed check keeps the last good report, marked not fresh with the failure", bad["fresh"] is False and bad["lastFailure"]
+      and "cases" in bad)
 
 print("failures:", fails)
 sys.exit(1 if fails else 0)
