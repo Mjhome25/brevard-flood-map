@@ -65,7 +65,8 @@ def fl511(layer):
             "dir": {"northbound":"NB","southbound":"SB","eastbound":"EB","westbound":"WB","both directions":"both directions"}.get((r.get("direction") or "").strip().lower(), ""),
             "lanes": (r.get("laneDescription") or "").strip(),
             "roadShort": (r.get("roadwayName") or "").split(" / ")[0].strip(),
-            "spot": (re.search(r"(?:North|South|East|West)(?:bound)?,\s*(.+?)\.(?:\s|$)", desc) or re.search(r"$^", "")) and re.search(r"(?:North|South|East|West)(?:bound)?,\s*(.+?)\.(?:\s|$)", desc).group(1) or "",
+            "spot": m.group(1) if (m := re.search(r"(?:(?:North|South|East|West)(?:bound)?,|(?:Both|All) Directions)\s*((?:at|before|beyond|near|between)\s.+?)\.(?:\s|$)", desc, re.I)
+                                    or re.search(r"(?:North|South|East|West)(?:bound)?,\s*(.+?)\.(?:\s|$)", desc)) else "",
         })
     return out
 seen_ids = set()
