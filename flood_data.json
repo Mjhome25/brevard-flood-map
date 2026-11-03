@@ -1,6 +1,8 @@
 {
- "generated": "2026-11-03T01:30:30Z",
- "errors": [],
+ "generated": "2026-11-03T01:47:35Z",
+ "errors": [
+  "FL511 map locations: 1 report(s) without a pin"
+ ],
  "items": [
   {
    "id": "man-minton-192",
@@ -301,6 +303,272 @@
    ]
   },
   {
+   "road": "Riverside Dr",
+   "where": "Riverside Dr SB at Eau Gallie Blvd",
+   "title": "Riverside Dr southbound closed at Eau Gallie Blvd because of flooding",
+   "city": "Melbourne",
+   "status": "closed",
+   "fullClosure": true,
+   "lanes": "Southbound",
+   "lat": 28.129,
+   "lng": -80.6255,
+   "approx": true,
+   "source": "City of Melbourne (via Space Coast Daily)",
+   "sourceUrl": "https://spacecoastdaily.com/2026/11/city-of-melbourne-reports-multiple-road-closures-urges-residents-to-shelter-in-place/",
+   "reported": "2026-11-02T17:43:55Z",
+   "note": "City of Melbourne road closure list, flooding. Pin approximate.",
+   "id": "man-riverside-dr-sb-at-eau-gallie-blvd",
+   "updated": "2026-11-02T17:43:55Z",
+   "layer": "manual"
+  },
+  {
+   "road": "Lake Washington Rd",
+   "where": "Lake Washington Rd at Stewart Rd",
+   "title": "Lake Washington Rd closed at Stewart Rd because of flooding",
+   "city": "Melbourne",
+   "status": "closed",
+   "fullClosure": true,
+   "lanes": "All lanes at the intersection",
+   "lat": 28.15,
+   "lng": -80.666,
+   "approx": true,
+   "source": "City of Melbourne (via Space Coast Daily)",
+   "sourceUrl": "https://spacecoastdaily.com/2026/11/city-of-melbourne-reports-multiple-road-closures-urges-residents-to-shelter-in-place/",
+   "reported": "2026-11-02T17:43:55Z",
+   "note": "The city also lists Stewart Rd as closed but gives no limits. Pin approximate.",
+   "id": "man-lake-washington-rd-at-stewart-rd",
+   "updated": "2026-11-02T17:43:55Z",
+   "layer": "manual"
+  },
+  {
+   "road": "Babcock St",
+   "where": "Babcock St at University Blvd",
+   "title": "Babcock St closed at University Blvd because of flooding",
+   "city": "Melbourne",
+   "status": "closed",
+   "fullClosure": true,
+   "lanes": "All lanes at the intersection",
+   "lat": 28.068,
+   "lng": -80.623,
+   "approx": true,
+   "source": "City of Melbourne (via Space Coast Daily)",
+   "sourceUrl": "https://spacecoastdaily.com/2026/11/city-of-melbourne-reports-multiple-road-closures-urges-residents-to-shelter-in-place/",
+   "reported": "2026-11-02T17:43:55Z",
+   "note": "City of Melbourne road closure list, flooding. Pin approximate.",
+   "id": "man-babcock-st-at-university-blvd",
+   "updated": "2026-11-02T17:43:55Z",
+   "layer": "manual"
+  },
+  {
+   "road": "Babcock St",
+   "where": "Babcock St at Florida Ave",
+   "title": "Babcock St closed at Florida Ave because of flooding",
+   "city": "Melbourne",
+   "status": "closed",
+   "fullClosure": true,
+   "lanes": "All lanes at the intersection",
+   "lat": 28.079,
+   "lng": -80.623,
+   "approx": true,
+   "source": "City of Melbourne (via Space Coast Daily)",
+   "sourceUrl": "https://spacecoastdaily.com/2026/11/city-of-melbourne-reports-multiple-road-closures-urges-residents-to-shelter-in-place/",
+   "reported": "2026-11-02T17:43:55Z",
+   "note": "City of Melbourne road closure list, flooding. The city also lists Babcock St at Avenue B as closed (not mapped). Pin approximate.",
+   "id": "man-babcock-st-at-florida-ave",
+   "updated": "2026-11-02T17:43:55Z",
+   "layer": "manual"
+  },
+  {
+   "road": "Eau Gallie Blvd",
+   "where": "Eau Gallie Blvd at Commodore Blvd",
+   "title": "Severe flooding on Eau Gallie Blvd at Commodore Blvd",
+   "city": "Melbourne",
+   "status": "flooded",
+   "fullClosure": false,
+   "lanes": "Not stated",
+   "lat": 28.129,
+   "lng": -80.651,
+   "approx": true,
+   "source": "City of Melbourne (via Space Coast Daily)",
+   "sourceUrl": "https://spacecoastdaily.com/2026/11/city-of-melbourne-reports-multiple-road-closures-urges-residents-to-shelter-in-place/",
+   "reported": "2026-11-02T17:43:55Z",
+   "note": "City reports severe flooding; not listed as closed. Pin approximate.",
+   "id": "man-eau-gallie-blvd-at-commodore-blvd",
+   "updated": "2026-11-02T17:43:55Z",
+   "layer": "manual"
+  },
+  {
+   "road": "Dr. Martin Luther King Jr. Blvd",
+   "where": "Dr. Martin Luther King Jr. Blvd at New Haven Ave",
+   "title": "Severe flooding on MLK Jr. Blvd at New Haven Ave",
+   "city": "Melbourne",
+   "status": "flooded",
+   "fullClosure": false,
+   "lanes": "Not stated",
+   "lat": 28.0795,
+   "lng": -80.6175,
+   "approx": true,
+   "source": "City of Melbourne (via Space Coast Daily)",
+   "sourceUrl": "https://spacecoastdaily.com/2026/11/city-of-melbourne-reports-multiple-road-closures-urges-residents-to-shelter-in-place/",
+   "reported": "2026-11-02T17:43:55Z",
+   "note": "City reports severe flooding; not listed as closed. Pin approximate.",
+   "id": "man-dr-martin-luther-king-jr-blvd-at-new-hav",
+   "updated": "2026-11-02T17:43:55Z",
+   "layer": "manual"
+  },
+  {
+   "road": "Dr. Martin Luther King Jr. Blvd",
+   "where": "Dr. Martin Luther King Jr. Blvd at NASA Blvd",
+   "title": "Severe flooding on MLK Jr. Blvd at NASA Blvd",
+   "city": "Melbourne",
+   "status": "flooded",
+   "fullClosure": false,
+   "lanes": "Not stated",
+   "lat": 28.089,
+   "lng": -80.6175,
+   "approx": true,
+   "source": "City of Melbourne (via Space Coast Daily)",
+   "sourceUrl": "https://spacecoastdaily.com/2026/11/city-of-melbourne-reports-multiple-road-closures-urges-residents-to-shelter-in-place/",
+   "reported": "2026-11-02T17:43:55Z",
+   "note": "City reports severe flooding; not listed as closed. Pin approximate.",
+   "id": "man-dr-martin-luther-king-jr-blvd-at-nasa-bl",
+   "updated": "2026-11-02T17:43:55Z",
+   "layer": "manual"
+  },
+  {
+   "road": "Dairy Rd",
+   "where": "Dairy Rd at Florida Ave",
+   "title": "Severe flooding on Dairy Rd at Florida Ave",
+   "city": "Melbourne",
+   "status": "flooded",
+   "fullClosure": false,
+   "lanes": "Not stated",
+   "lat": 28.08,
+   "lng": -80.637,
+   "approx": true,
+   "source": "City of Melbourne (via Space Coast Daily)",
+   "sourceUrl": "https://spacecoastdaily.com/2026/11/city-of-melbourne-reports-multiple-road-closures-urges-residents-to-shelter-in-place/",
+   "reported": "2026-11-02T17:43:55Z",
+   "note": "City reports severe flooding; not listed as closed. Pin approximate.",
+   "id": "man-dairy-rd-at-florida-ave",
+   "updated": "2026-11-02T17:43:55Z",
+   "layer": "manual"
+  },
+  {
+   "road": "University Blvd",
+   "where": "University Blvd at Lipscomb St",
+   "title": "Severe flooding on University Blvd at Lipscomb St",
+   "city": "Melbourne",
+   "status": "flooded",
+   "fullClosure": false,
+   "lanes": "Not stated",
+   "lat": 28.068,
+   "lng": -80.61,
+   "approx": true,
+   "source": "City of Melbourne (via Space Coast Daily)",
+   "sourceUrl": "https://spacecoastdaily.com/2026/11/city-of-melbourne-reports-multiple-road-closures-urges-residents-to-shelter-in-place/",
+   "reported": "2026-11-02T17:43:55Z",
+   "note": "City reports severe flooding; not listed as closed. Pin approximate.",
+   "id": "man-university-blvd-at-lipscomb-st",
+   "updated": "2026-11-02T17:43:55Z",
+   "layer": "manual"
+  },
+  {
+   "road": "Babcock St",
+   "where": "Babcock St at Southgate Blvd",
+   "title": "Severe flooding on Babcock St at Southgate Blvd",
+   "city": "Melbourne",
+   "status": "flooded",
+   "fullClosure": false,
+   "lanes": "Not stated",
+   "lat": 28.059,
+   "lng": -80.623,
+   "approx": true,
+   "source": "City of Melbourne (via Space Coast Daily)",
+   "sourceUrl": "https://spacecoastdaily.com/2026/11/city-of-melbourne-reports-multiple-road-closures-urges-residents-to-shelter-in-place/",
+   "reported": "2026-11-02T17:43:55Z",
+   "note": "City reports severe flooding; not listed as closed. Pin approximate.",
+   "id": "man-babcock-st-at-southgate-blvd",
+   "updated": "2026-11-02T17:43:55Z",
+   "layer": "manual"
+  },
+  {
+   "road": "US 192 (New Haven Ave)",
+   "where": "US 192 at Country Club Rd",
+   "title": "Severe flooding on US 192 at Country Club Rd",
+   "city": "Melbourne",
+   "status": "flooded",
+   "fullClosure": false,
+   "lanes": "Not stated",
+   "lat": 28.0785,
+   "lng": -80.627,
+   "approx": true,
+   "source": "City of Melbourne (via Space Coast Daily)",
+   "sourceUrl": "https://spacecoastdaily.com/2026/11/city-of-melbourne-reports-multiple-road-closures-urges-residents-to-shelter-in-place/",
+   "reported": "2026-11-02T17:43:55Z",
+   "note": "City reports severe flooding; not listed as closed. Pin approximate.",
+   "id": "man-us-192-at-country-club-rd",
+   "updated": "2026-11-02T17:43:55Z",
+   "layer": "manual"
+  },
+  {
+   "road": "Palm Bay Rd",
+   "where": "Palm Bay Rd at Hollywood Blvd",
+   "title": "Flooding at Palm Bay Rd and Hollywood Blvd; vehicles stranded",
+   "city": "West Melbourne",
+   "status": "flooded",
+   "fullClosure": false,
+   "lanes": "Not stated",
+   "lat": 28.0335,
+   "lng": -80.664,
+   "approx": true,
+   "source": "Police (via Spectrum News 13)",
+   "sourceUrl": "https://mynews13.com/fl/orlando/news/2026/11/03/heavy-rain-floods-roads-strands-drivers-and-damages-homes-across-brevard-county",
+   "reported": "2026-11-03T00:00:00Z",
+   "note": "Several vehicles stranded in high water at the intersection. Pin approximate.",
+   "id": "man-palm-bay-rd-at-hollywood-blvd",
+   "updated": "2026-11-03T00:00:00Z",
+   "layer": "manual"
+  },
+  {
+   "road": "I-95",
+   "where": "I-95 on-ramp from Palm Bay Rd (Exit 176)",
+   "title": "I-95 on-ramp from Palm Bay Rd flooded and impassable",
+   "city": "Palm Bay",
+   "status": "closed",
+   "fullClosure": true,
+   "lanes": "On-ramp",
+   "lat": 28.031,
+   "lng": -80.683,
+   "approx": true,
+   "source": "Police (via Spectrum News 13)",
+   "sourceUrl": "https://mynews13.com/fl/orlando/news/2026/11/03/heavy-rain-floods-roads-strands-drivers-and-damages-homes-across-brevard-county",
+   "reported": "2026-11-03T00:00:00Z",
+   "note": "Ramp reported flooded and impassable; it is not clear which direction's ramp. Pin approximate.",
+   "id": "man-i-95-on-ramp-from-palm-bay-rd-exit-176",
+   "updated": "2026-11-03T00:00:00Z",
+   "layer": "manual"
+  },
+  {
+   "road": "US 192",
+   "where": "US 192 at I-95 interchange (Exit 180)",
+   "title": "Flooding at US 192 / I-95 interchange; vehicles stranded",
+   "city": "West Melbourne",
+   "status": "flooded",
+   "fullClosure": false,
+   "lanes": "Not stated",
+   "lat": 28.08,
+   "lng": -80.683,
+   "approx": true,
+   "source": "Police (via Spectrum News 13)",
+   "sourceUrl": "https://mynews13.com/fl/orlando/news/2026/11/03/heavy-rain-floods-roads-strands-drivers-and-damages-homes-across-brevard-county",
+   "reported": "2026-11-03T00:00:00Z",
+   "note": "Flooding reported at the exit with more vehicles stranded. Pin approximate.",
+   "id": "man-us-192-at-i-95-interchange-exit-180",
+   "updated": "2026-11-03T00:00:00Z",
+   "layer": "manual"
+  },
+  {
    "id": "fl511-937010",
    "source": "FL511 (FDOT)",
    "sourceUrl": "https://fl511.com",
@@ -411,7 +679,7 @@
    "status": "flooded",
    "fullClosure": true,
    "reported": "2026-11-02T13:35:00Z",
-   "updated": "2026-11-03T00:02:00Z",
+   "updated": "2026-11-03T01:42:00Z",
    "lat": 28.078862,
    "lng": -80.703539,
    "layer": "Closures",
@@ -514,7 +782,7 @@
    "status": "flooded",
    "fullClosure": true,
    "reported": "2026-11-02T13:12:00Z",
-   "updated": "2026-11-03T00:11:00Z",
+   "updated": "2026-11-03T01:42:00Z",
    "lat": 28.064037,
    "lng": -80.621372,
    "layer": "Closures",
@@ -569,7 +837,7 @@
    "status": "flooded",
    "fullClosure": true,
    "reported": "2026-11-02T14:29:00Z",
-   "updated": "2026-11-03T00:02:00Z",
+   "updated": "2026-11-03T01:41:00Z",
    "lat": 28.078871,
    "lng": -80.700181,
    "layer": "Closures",
@@ -644,7 +912,7 @@
    "status": "flooded",
    "fullClosure": true,
    "reported": "2026-11-02T21:42:00Z",
-   "updated": "2026-11-03T00:00:00Z",
+   "updated": "2026-11-03T01:38:00Z",
    "lat": 28.004405,
    "lng": -80.563736,
    "layer": "Closures",
@@ -673,7 +941,7 @@
    "status": "flooded",
    "fullClosure": true,
    "reported": "2026-11-02T21:51:00Z",
-   "updated": "2026-11-03T00:00:00Z",
+   "updated": "2026-11-03T01:38:00Z",
    "lat": 28.004412,
    "lng": -80.56374,
    "layer": "Closures",
@@ -700,130 +968,36 @@
    "to": "Highway 1"
   },
   {
-   "id": "fl511-938041",
+   "id": "fl511-938139",
    "source": "FL511 (FDOT)",
    "sourceUrl": "https://fl511.com",
    "road": "I-95",
-   "title": "MVC on I-95 North, at MM 184. Right shoulder blocked",
+   "title": "Incident on I-95 South, before MM 169/Rest Area",
    "status": "caution",
    "fullClosure": false,
-   "reported": "2026-11-02T23:57:00Z",
-   "updated": "2026-11-03T01:29:00Z",
-   "lat": 28.130089,
-   "lng": -80.705866,
+   "reported": "2026-11-03T01:32:00Z",
+   "updated": "2026-11-03T01:38:00Z",
+   "lat": 27.946611,
+   "lng": -80.608056,
    "layer": "Incidents",
-   "dir": "NB",
-   "lanes": "Right shoulder blocked",
+   "dir": "SB",
+   "lanes": "",
    "roadShort": "I-95",
-   "spot": "at MM 184",
+   "spot": "before MM 169/Rest Area",
    "line": [
     [
-     28.12741,
-     -80.70583
+     27.94661,
+     -80.60808
     ],
     [
-     28.12967,
-     -80.70583
-    ],
-    [
-     28.13009,
-     -80.70583
+     27.94599,
+     -80.60792
     ]
    ],
-   "where": "I-95 NB at MM 184"
+   "where": "I-95 SB before MM 169/Rest Area"
   },
   {
-   "id": "fhp-11022026082754-3452",
-   "source": "FHP live CAD",
-   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-   "road": "SR-528 WB [MM52]",
-   "title": "MVC at SR-528 WB [MM52] x[MM52] [MERRITT ISLAND]",
-   "status": "caution",
-   "fullClosure": false,
-   "reported": "2026-11-02T13:27:54Z",
-   "updated": "2026-11-02T13:27:54Z",
-   "lat": 28.405322345191,
-   "lng": -80.6528467666249,
-   "layer": "FHP",
-   "roadShort": "SR-528 Wb [MM52]",
-   "dir": "",
-   "spot": "at Mm52",
-   "lanes": "",
-   "where": "SR-528 Wb [MM52] at Mm52"
-  },
-  {
-   "id": "fhp-11022026081213-5381",
-   "source": "FHP live CAD",
-   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-   "road": "N WICKHAM RD",
-   "title": "MVC W/Roadblock at N WICKHAM RD x[PINEDA CSWY] [MELBOURNE] (Roadblock)",
-   "status": "closed",
-   "fullClosure": true,
-   "reported": "2026-11-02T13:12:13Z",
-   "updated": "2026-11-02T13:17:10Z",
-   "lat": 28.2009644971454,
-   "lng": -80.6721034952351,
-   "layer": "FHP",
-   "roadShort": "N Wickham Rd",
-   "dir": "",
-   "spot": "at Pineda Cswy",
-   "lanes": "Roadblock",
-   "where": "N Wickham Rd at Pineda Cswy",
-   "from": "Deer Lakes Dr",
-   "to": "Windsor Estates Dr",
-   "line": [
-    [
-     28.197341,
-     -80.67205
-    ],
-    [
-     28.198774,
-     -80.672049
-    ],
-    [
-     28.200463,
-     -80.672042
-    ],
-    [
-     28.200621,
-     -80.672066
-    ],
-    [
-     28.200845,
-     -80.67204
-    ],
-    [
-     28.200954,
-     -80.672023
-    ],
-    [
-     28.200972,
-     -80.67202
-    ],
-    [
-     28.201174,
-     -80.672068
-    ],
-    [
-     28.202222,
-     -80.672066
-    ],
-    [
-     28.202275,
-     -80.672066
-    ],
-    [
-     28.203104,
-     -80.672093
-    ],
-    [
-     28.203247,
-     -80.672098
-    ]
-   ]
-  },
-  {
-   "id": "fhp-11022026060625-6225",
+   "id": "fhp-11022026060625-8340",
    "source": "FHP live CAD",
    "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
    "road": "I-95 SB [MM205]",
@@ -842,7 +1016,7 @@
    "where": "I-95 Sb [MM205] at Mm205"
   },
   {
-   "id": "fhp-11022026043943-9895",
+   "id": "fhp-11022026043943-692",
    "source": "FHP live CAD",
    "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
    "road": "US-1 [2 MILES SOF]",
@@ -861,7 +1035,7 @@
    "where": "US-1 [2 Miles Sof] at Malabar Rd"
   },
   {
-   "id": "fhp-11022026112806-3148",
+   "id": "fhp-11022026112806-7085",
    "source": "FHP live CAD",
    "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
    "road": "NORFOLK PKWY",
@@ -1108,7 +1282,7 @@
    ]
   },
   {
-   "id": "fhp-11022026112110-6286",
+   "id": "fhp-11022026112110-1652",
    "source": "FHP live CAD",
    "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
    "road": "PALM BAY RD NE [ENT RAMP TO]",
@@ -1127,7 +1301,7 @@
    "where": "Palm Bay Rd Ne [Ent Ramp To] at I-95 Nb"
   },
   {
-   "id": "fhp-11022026090844-7786",
+   "id": "fhp-11022026090844-5468",
    "source": "FHP live CAD",
    "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
    "road": "US-1",
@@ -1178,7 +1352,7 @@
    ]
   },
   {
-   "id": "fhp-11022026065558-1554",
+   "id": "fhp-11022026065558-961",
    "source": "FHP live CAD",
    "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
    "road": "W NEW HAVEN AVE",
@@ -1214,6 +1388,43 @@
   }
  ],
  "alerts": [
+  {
+   "id": "urn:oid:2.49.0.1.840.0.72a0e8919d39028d187b8c049a71412bddbfceb7.001.1",
+   "event": "Flood Warning",
+   "severity": "Severe",
+   "headline": "Flood Warning issued November 2 at 8:38PM EST by NWS Melbourne FL",
+   "areas": "Brevard, FL",
+   "effective": "2026-11-02T20:38:00-05:00",
+   "expires": "2026-11-03T11:45:00-05:00",
+   "description": "...The Flood Warning continues for the following rivers in Florida...\n\nSt Johns River Near Cocoa 9w affecting Brevard County.\n\n.Heavy rainfall has caused the St. Johns River near Cocoa to rise\ninto Minor Flood Stage. The river is forecast to rise through Minor\nflood stage and into Moderate flood stage mid to late week.\n\nFor the St. Johns River...including Cocoa...Moderate flooding is\nforecast.\n\n* WHAT...Minor flooding is occurring and moderate flooding is\nforecast.\n\n* WHERE...St Johns River near Cocoa 9w.\n\n* WHEN...Until further notice.\n\n* IMPACTS...At 16.7 feet, Water covers yards, encroaches on homes and\nmay enter low lying homes along the St Johns River in the Lake\nPoinsett area.\n\n* ADDITIONAL DETAILS...\n- At 8:15 PM EST Monday the stage was 16.1 feet.\n- Bankfull stage is 15.8 feet.\n- Recent Activity...The maximum river stage in the 24 hours ending\nat 8:15 PM EST Monday was 16.1 feet.\n- Forecast...The river is expected to rise to 16.8 feet Thursday\nevening. Additional rises are possible thereafter.\n- Flood stage is 16.0 feet.\n- http://www.weather.gov/safety/flood",
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -80.99,
+       28.54
+      ],
+      [
+       -80.9,
+       28.55
+      ],
+      [
+       -80.8,
+       28.35
+      ],
+      [
+       -80.72,
+       28.05
+      ],
+      [
+       -80.99,
+       28.54
+      ]
+     ]
+    ]
+   }
+  },
   {
    "id": "urn:oid:2.49.0.1.840.0.f95c1aeb61031d2eb1086bce7e5bb23926a5849c.001.1",
    "event": "Flood Warning",
@@ -1315,43 +1526,6 @@
       [
        -80.85,
        28.11
-      ]
-     ]
-    ]
-   }
-  },
-  {
-   "id": "urn:oid:2.49.0.1.840.0.46fe17c50ca3866332ebe19381a45115c766a171.001.1",
-   "event": "Flood Warning",
-   "severity": "Severe",
-   "headline": "Flood Warning issued November 2 at 2:15PM EST by NWS Melbourne FL",
-   "areas": "Brevard, FL",
-   "effective": "2026-11-02T14:15:00-05:00",
-   "expires": "2026-11-02T23:30:00-05:00",
-   "description": "...The Flood Warning is extended for the following rivers in\nFlorida...\n\nSt Johns River Near Cocoa 9w affecting Brevard County.\n\n.Heavy rainfall has caused the St. Johns River near Cocoa to rise\ninto Minor Flood Stage. The river is forecast to rise through Minor\nflood stage and into Moderate flood stage mid to late week.\n\nFor the St. Johns River...including Cocoa 9w...Moderate flooding is\nforecast.\n\n* WHAT...Minor flooding is occurring and moderate flooding is\nforecast.\n\n* WHERE...St Johns River near Cocoa 9w.\n\n* WHEN...From this afternoon until further notice.\n\n* IMPACTS...At 16.7 feet, Water covers yards, encroaches on homes and\nmay enter low lying homes along the St Johns River in the Lake\nPoinsett area.\n\n* ADDITIONAL DETAILS...\n- At 1:15 PM EST Monday the stage was 16.0 feet.\n- Bankfull stage is 15.8 feet.\n- Recent Activity...The maximum river stage in the 24 hours ending\nat 1:15 PM EST Monday was 16.0 feet.\n- Forecast...The river is expected to rise to 16.8 feet early\nThursday afternoon. Additional rises are possible thereafter.\n- Flood stage is 16.0 feet.\n- http://www.weather.gov/safety/flood",
-   "geometry": {
-    "type": "Polygon",
-    "coordinates": [
-     [
-      [
-       -80.99,
-       28.54
-      ],
-      [
-       -80.9,
-       28.55
-      ],
-      [
-       -80.8,
-       28.35
-      ],
-      [
-       -80.72,
-       28.05
-      ],
-      [
-       -80.99,
-       28.54
       ]
      ]
     ]
@@ -1481,6 +1655,18 @@
    "time": "2026-11-02T17:00:00Z",
    "text": "Melbourne City Hall is closed to the public because of flooding.",
    "url": "https://weather.com/2026/11/02/news/weather/flash-floods-hit-floridas-space-coast-amid-heavy-rainfall"
+  },
+  {
+   "agency": "City of Melbourne",
+   "time": "2026-11-02T17:43:55Z",
+   "text": "Stay off the roads and shelter in place. Multiple roads closed by flooding, including Dubber Rd, North Dr, Stewart Rd, Dairy Rd at Edgewood Dr, and Edgewood Rd at Ruffner Rd. Avoid affected areas.",
+   "url": "https://spacecoastdaily.com/2026/11/city-of-melbourne-reports-multiple-road-closures-urges-residents-to-shelter-in-place/"
+  },
+  {
+   "agency": "State of Florida, Governor's Office (via WFTV)",
+   "time": "2026-11-02T22:00:00Z",
+   "text": "State of emergency declared for Brevard and six other counties (Executive Order 26-227) because of flooding. Effective immediately for 60 days; includes price-gouging protections.",
+   "url": "https://www.wftv.com/news/local/desantis-declares-state-emergency-7-florida-counties-after-severe-flooding/PXEG7FBYZZCWDKNC4PUQMTZ7P4/"
   }
  ]
 }
