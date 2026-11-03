@@ -199,6 +199,14 @@ s = state(p, 2)[A]
 check("a lower category alone (fullClosure unchanged) keeps closed and is flagged",
       s["fields"]["status"] == "closed" and "source shows reduced impact" in s["recheck"])
 
+for lanes in ("Roadway open", "One lane closed"):
+    p = fresh("j.jsonl")
+    E.append([rep(A, 0, lanes="")], p, now=T0)
+    E.append([rep(A, 1, kind="relisted", lanes=lanes)], p, now=T0)
+    s = state(p, 2)[A]
+    check(f"an empty lane field is not filled by a relisted '{lanes}', and it is flagged",
+          not s["fields"].get("lanes") and "source changed its lane description" in s["recheck"])
+
 # 6. Reducer behaviour for an accepted reopening (replay of a cleared event built directly, not via append) ------
 evs = E.load(fresh("f.jsonl")) + [dict(rep(A, 0), seq=1, at=at(0))]
 evs.append({"seq": 2, "at": at(10), "rid": A, "kind": "cleared", "src": "manual", "stime": at(10),

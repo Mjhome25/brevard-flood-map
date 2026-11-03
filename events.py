@@ -151,7 +151,8 @@ def append(new: list[dict], path: str = EVENTS, clearance_enabled: bool = False,
 
 def _merge_up(cur: dict, new: dict) -> tuple[dict, list[str]]:
     """Category and fullClosure only rise, each on its own. Scope and description (where, lanes, title, note, source)
-    keep the first report's wording; a later different lane description is flagged, never written over the old one.
+    keep the first report's wording; a later lane description (even where the first had none) is flagged, never
+    written.
     Returns (merged fields, recheck reasons)."""
     merged, reasons = dict(cur), []
     sev_new, sev_cur = SEVERITY.get(new.get("status"), 1), SEVERITY.get(cur.get("status"), 1)
@@ -163,9 +164,7 @@ def _merge_up(cur: dict, new: dict) -> tuple[dict, list[str]]:
         merged["fullClosure"] = True
     elif cur.get("fullClosure") and "fullClosure" in new and not new.get("fullClosure"):
         reasons.append("source shows reduced impact")
-    if new.get("lanes") and not cur.get("lanes"):
-        merged["lanes"] = new["lanes"]
-    elif new.get("lanes") and new["lanes"] != cur.get("lanes"):
+    if new.get("lanes") and new["lanes"] != cur.get("lanes"):  # never written, even into an empty field
         reasons.append("source changed its lane description")
     return merged, reasons
 
