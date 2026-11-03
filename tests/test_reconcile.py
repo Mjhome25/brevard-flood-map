@@ -529,6 +529,9 @@ check("the road search filters the cleared list and the green pins",
 check("the page ends the 24-hour window itself: expired entries are filtered on load and removed at their deadline",
       "let cleared=allCleared.filter(live)" in tplc and "Date.now()-new Date(c.reopenedAt)<DAY" in tplc
       and "cleared=allCleared.filter(live); draw(); expire();" in tplc)
+vis = __import__("re").sub(r"//[^\n]*|cleared(?:Wrap|El|N|Why|Link|Popup|-wrap)|renderCleared|goCleared|allCleared|let cleared|cleared\.|cleared=|'cleared'|id=\"cleared\"|clears it", "", tplc)
+check("Mike (Nov 3): the page never calls an FHP item cleared; it says no longer listed",
+      "cleared" not in vis.lower() and "No longer listed by FHP" in tplc and "NO LONGER LISTED" in tplc)
 check("an active report at a cleared FHP closure's place notes FHP's drop and says it stays", "${fhpNote(it)}" in tplc
       and "stays until a cited source clears it" in tplc)
 check("check_events accepts the FHP-drop clearance with clearance enabled", subprocess.run(
