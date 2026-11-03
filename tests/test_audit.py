@@ -30,13 +30,17 @@ def ev(kind, rid, at, src="fhp", **kw):
     return dict(kind=kind, rid=rid, src=src, at=at, actor="test", **kw)
 
 
-def rep(events, since="", water=None):
+def rep(events, water=None, known=None, now=NOW):
     p = os.path.join(tmp, "e.jsonl")
-    open(p, "w").write("".join(json.dumps(e) + "\n" for e in events))
+    open(p, "w").write("".join(json.dumps(dict(e, eid=f"e{i}")) + "\n" for i, e in enumerate(events)))
     w = os.path.join(tmp, "w.json")
-    json.dump(water or {}, open(w, "w"))
+    if water is None:
+        if os.path.exists(w):
+            os.remove(w)
+    else:
+        json.dump(water, open(w, "w"))
     before = open(p).read()
-    out = A.run(NOW, since, p, w)
+    out = A.run(now, p, w, known)
     assert open(p).read() == before, "the audit wrote the closure history"
     return out
 
@@ -48,45 +52,55 @@ def drop(rid, at, fields=CRASH):
                                              "reopenedAt": at})]
 
 
+V = lambda r, kind="removed": [x["verdict"] for x in r["rows"] if x["kind"] == kind]
 base = drop("brevard:fhp:1", "2026-11-03T11:30:00Z")
-r = rep(base)
-check("a dropped FHP crash with nothing else at that place is 'unknown', never open",
-      r["removed"] == 1 and r["rows"][0]["verdict"] == "unknown" and r["rows"][0]["where"] == "US-1 at Viera Blvd")
+r = rep(base, water={})
+check("a dropped FHP crash with nothing else at that place is 'unknown', never open (and its disappearance is a case)",
+      V(r) == ["unknown"] and V(r, "disappeared") == ["unknown"] and r["rows"][0]["where"] == "US-1 at Viera Blvd")
 r = rep(base + [ev("relisted", "brevard:fhp:1", "2026-11-03T12:00:00Z", stime="2026-11-03T10:00:00Z", fields=CRASH)])
-check("FHP listing the same crash again after the drop is a conflict", r["conflict"] == 1)
+check("FHP listing the same incident again after dropping it is source-relisted", V(r) == ["source-relisted"])
 other = dict(CRASH, title="Closure", status="closed")
-r = rep(base + [ev("reported", "brevard:fl511:9", "2026-11-03T12:00:00Z", src="fl511", stime="2026-11-03T12:00:00Z",
-                   fields=other)])
-check("another source reporting the same place after the drop is a conflict",
-      r["conflict"] == 1 and "fl511" in r["rows"][0]["seen"][0])
-r = rep([ev("reported", "brevard:fl511:9", "2026-11-03T09:00:00Z", src="fl511", stime="2026-11-03T09:00:00Z",
-            fields=other)] + base)
-check("another source's report at the same place still active at the drop is a conflict", r["conflict"] == 1)
-far = dict(other, where="US-1 at Suntree Blvd")
-r = rep(base + [ev("reported", "brevard:fl511:9", "2026-11-03T12:00:00Z", src="fl511", stime="2026-11-03T12:00:00Z",
-                   fields=far)])
-check("a report at a different cross street is not a conflict", r["conflict"] == 0)
+early = ev("reported", "brevard:fl511:9", "2026-11-03T09:00:00Z", src="fl511", stime="2026-11-03T09:00:00Z", fields=other)
+again = ev("relisted", "brevard:fl511:9", "2026-11-03T12:00:00Z", src="fl511", stime="2026-11-03T12:00:00Z", fields=other)
+check("another source's closure that began before the drop and was reported again after it is still-blocked",
+      V(rep([early] + base + [again])) == ["still-blocked"])
+check("another source's closure active at the drop but not reported since is stale-unresolved",
+      V(rep([early] + base)) == ["stale-unresolved"])
+late = ev("reported", "brevard:fl511:9", "2026-11-03T15:00:00Z", src="fl511", stime="2026-11-03T15:00:00Z", fields=other)
+check("a report that began after the drop is a later-report (a recurrence or proof), not proof", V(rep(base + [late])) == ["later-report"])
+weak = dict(late, fields=dict(other, status="caution", title="Shoulder blocked"))
+check("a weaker impact (shoulder caution) at the same place is not evidence against a crash removal", V(rep(base + [weak])) == ["unknown"])
+far = dict(late, fields=dict(other, where="US-1 at Suntree Blvd"))
+check("a report at a different cross street is not evidence", V(rep(base + [far])) == ["unknown"])
 closure = dict(CRASH, title="Road closure", status="closed")
 r = rep(drop("brevard:fhp:2", "2026-11-03T11:30:00Z", closure))
-check("a cleared event the history ignores (an FHP road closure) is not counted as a removal", r["removed"] == 0)
-r = rep(base, since="2026-11-03T11:30:00Z")
-check("removals already audited are not counted again", r["removed"] == 0)
+check("an FHP road closure that disappeared but stayed on the map is a 'disappeared' case, not a removal",
+      V(r) == [] and V(r, "disappeared") == ["unknown"] and r["rows"][0]["status"] == "closed")
+d1 = rep(base, water={})
+known = {k: v for k, v in d1["book"].items()}
+d2 = rep(base + [late], water={}, known=known, now=NOW + datetime.timedelta(days=1))
+row = [x for x in d2["rows"] if x["kind"] == "removed"][0]
+check("day 1 unknown -> day 2 contradicting evidence: the old case is re-judged, marked changed, history kept",
+      row["verdict"] == "later-report" and row["changed"] and not row["new"] and row["firstChecked"] == "2026-11-03"
+      and [h["verdict"] for h in d2["book"][row["id"]]["verdicts"]] == ["unknown", "later-report"])
 off = [ev("reported", "brevard:manual:s", "2026-11-02T10:00:00Z", src="manual", stime="2026-11-02T10:00:00Z",
           fields=dict(CRASH, title="Flooding", status="flooded")),
        ev("cleared", "brevard:manual:s", "2026-11-03T14:00:00Z", src="manual",
           evidence={"kind": "official", "url": "https://www.melbourneflorida.org/x", "reopenedAt": "2026-11-03T13:30:00Z"})]
 r = rep(off)
 check("an official reopening with nothing contradicting it is corroborated-open",
-      r["corroboratedOpen"] == 1 and r["rows"][0]["source"] == "https://www.melbourneflorida.org/x")
+      V(r) == ["corroborated-open"] and r["rows"][0]["source"] == "https://www.melbourneflorida.org/x")
 hist = [{"id": "melbourne-water-system", "from": "active", "to": "rescinded", "detectedAt": "2026-11-03T15:00:00Z",
          "sourceUrl": "https://www.melbourneflorida.org/r", "publishedDate": "2026-11-03"}]
 r = rep([], water={"history": hist})
-check("a boil-water rescission is audited", r["removed"] == 1 and r["rows"][0]["verdict"] == "corroborated-open")
+check("a boil-water rescission is audited", V(r, "water") == ["corroborated-open"] and r["complete"])
 r = rep([], water={"history": hist + [dict(hist[0], **{"from": "rescinded", "to": "active",
                                                           "detectedAt": "2026-11-03T15:30:00Z"})]})
-check("a rescinded notice that comes back active is a conflict", r["conflict"] == 1)
-r = rep([], water=["not", "a", "dict"])
-check("an unreadable water file never stops the audit", r["removed"] == 0)
+check("a rescinded notice that comes back active is flagged", V(r, "water") == ["source-relisted"])
+for bad, why in ((None, "missing"), (["not", "a", "dict"], "corrupt")):
+    r = rep(base, water=bad)
+    check(f"a {why} water file is reported unavailable, never as zero rescissions",
+          not r["complete"] and r["unavailable"] == ["water_notices.json"] and V(r) == ["unknown"])
 
 # --due runs once a day, from 7 AM Eastern, until Dec 3; it writes only under audit/
 A.AUDIT = os.path.join(tmp, "audit")
@@ -98,7 +112,18 @@ E.utcnow = lambda: datetime.datetime(2026, 11, 3, 12, 5, tzinfo=datetime.timezon
 A.main(["--due"]); A.main(["--due"])
 led = open(os.path.join(A.AUDIT, "ledger.md")).read()
 check("due once at 12:00 UTC; a second run that day writes nothing", led.count("- 2026-11-03:") == 1
-      and os.path.exists(os.path.join(A.AUDIT, "2026-11-03.json")))
+      and os.path.exists(os.path.join(A.AUDIT, "2026-11-03.json")) and os.path.exists(os.path.join(A.AUDIT, "cases.json")))
+E.utcnow = lambda: datetime.datetime(2026, 11, 4, 12, 5, tzinfo=datetime.timezone.utc)
+real_run = A.run
+A.run = lambda *a, **k: 1 / 0
+A.main(["--due"]); A.main(["--due"])
+A.run = real_run
+led = open(os.path.join(A.AUDIT, "ledger.md")).read()
+check("a failed audit leaves one durable failure line a day and does not mark the day done",
+      led.count("2026-11-04: AUDIT FAILED") == 1 and json.load(open(os.path.join(A.AUDIT, "last.json")))["date"] == "2026-11-03")
+A.main(["--due"])
+check("the next run after a failure retries and writes the day's report",
+      os.path.exists(os.path.join(A.AUDIT, "2026-11-04.json")))
 E.utcnow = lambda: datetime.datetime(2026, 12, 4, 13, 0, tzinfo=datetime.timezone.utc)
 A.main(["--due"])
 check("stops after Dec 3", "2026-12-04" not in open(os.path.join(A.AUDIT, "ledger.md")).read())
