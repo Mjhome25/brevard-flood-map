@@ -9,7 +9,12 @@ safe = lambda s: s.replace("</", "<\\/")  # keep JSON from closing the script ta
 page = rd("template.html")
 data = json.loads(rd("flood_data.json"))
 water_path = os.path.join(HERE, "water_notices.json")
-water = json.load(open(water_path)) if os.path.isfile(water_path) else {"notices": [], "errors": ["Water notice data is unavailable."]}
+try:
+    water = json.load(open(water_path))
+    if not isinstance(water, dict) or not isinstance(water.get("notices"), list) or any(not isinstance(n, dict) for n in water["notices"]):
+        raise ValueError("unsupported water snapshot")
+except (OSError, ValueError):
+    water = {"schema": 1, "notices": [], "errors": ["Water notice data is unavailable."]}
 data["waterNotices"] = water
 page = page.replace("__LEAFLET_CSS__", rd("leaflet.css").replace("</", "<\\/"))
 page = page.replace("__DATA_JSON__", safe(json.dumps(data, separators=(",", ":"))))
@@ -35,6 +40,6 @@ site = ('<!doctype html><html lang="en"><head><meta charset="utf-8">'
 os.makedirs(os.path.join(HERE, "site"), exist_ok=True)
 open(os.path.join(HERE, "site", "index.html"), "w", encoding="utf-8").write(site)
 # Small file the live page polls every 5 minutes to learn when newer road data exists.
-json.dump(data, open(os.path.join(HERE, "site", "data.json"), "w"), separators=(",", ":"))
+json.dump({k:v for k,v in data.items() if k != "waterNotices"}, open(os.path.join(HERE, "site", "data.json"), "w"), separators=(",", ":"))
 json.dump(water, open(os.path.join(HERE, "site", "water.json"), "w"), separators=(",", ":"))
 print("wrote", out, len(page.encode()) // 1024, "KB; site/index.html", len(site.encode()) // 1024, "KB")

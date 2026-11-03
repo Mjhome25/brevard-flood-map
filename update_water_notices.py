@@ -38,6 +38,7 @@ ACTIVE = re.compile(r"(?:A|The) precautionary boil water notice has been issued 
 LIFTED = re.compile(r"The precautionary boil water notice (?:for " + SCOPE
                     + r" (?:has been|is)(?: hereby)? (?:rescinded|lifted)|has been (?:rescinded|lifted) for "
                     + SCOPE + r")\.", re.I)
+UPDATE_HEADING = re.compile(r"([A-Za-z]+)\.? (\d{1,2}),? (\d{4}),? (\d{1,2}):(\d{2}) ?([ap])\.?\s?m\.? UPDATE", re.I)
 
 
 def iso(t):
@@ -69,8 +70,17 @@ class Links(html.parser.HTMLParser):
                 self.urls.append(url)
 
 
-def statements(page, url, today, pending=None):
-    parser = Posts()
+class WaterPosts(Posts):
+    """Keep the reviewed post scope while also collecting whole update headings."""
+    def handle_starttag(self, tag, attrs):
+        super().handle_starttag("p" if tag in ("h1", "h2", "h3", "h4") else tag, attrs)
+
+    def handle_endtag(self, tag):
+        super().handle_endtag("p" if tag in ("h1", "h2", "h3", "h4") else tag)
+
+
+def statements(page, url, today, pending=None, now=None):
+    parser = WaterPosts()
     parser.feed(re.sub(r"<script.*?</script>|<style.*?</style>", " ", page, flags=re.S | re.I))
     flat = lambda parts: re.sub(r"\s+", " ", " ".join(parts).replace("\xa0", " ")).strip()
     found = []
@@ -83,14 +93,32 @@ def statements(page, url, today, pending=None):
         day = dt.datetime.strptime(" ".join(dates[0].groups()), "%B %d %Y").date().isoformat()
         if not START <= day <= today:
             continue
-        # A source's explicit update time is distinct from our check time. Date-only posts stay date-only.
-        tm = re.search(r"\b(\d{1,2}):(\d{2})\s*([ap])\.?m\.?", text, re.I)
+        # Only an entire dated update heading is an update time. A scheduled next update or an old
+        # timestamp inside prose is not evidence of when this notice took effect.
+        stamps = set()
+        future = False
+        for post, unit in parser.units:
+            tm = UPDATE_HEADING.fullmatch(flat(unit)) if post == i else None
+            if not tm:
+                continue
+            try:
+                date = dt.datetime.strptime(f"{tm[1][:3]} {tm[2]} {tm[3]}", "%b %d %Y")
+                if date.date().isoformat() != day or not (1 <= int(tm[4]) <= 12 and int(tm[5]) < 60):
+                    continue
+                hour = int(tm[4]) % 12 + (12 if tm[6].lower() == "p" else 0)
+                stamp = date.replace(hour=hour, minute=int(tm[5]), tzinfo=ZoneInfo("America/New_York"))
+                if now and stamp > now:
+                    future = True
+                stamps.add(iso(stamp))
+            except ValueError:
+                continue
+        if future:
+            if pending is not None:
+                pending.append(url)
+            continue
         updated = None
-        if tm:
-            hour = int(tm[1]) % 12 + (12 if tm[3].lower() == "p" else 0)
-            if int(tm[1]) in range(1, 13) and int(tm[2]) < 60:
-                updated = iso(dt.datetime.fromisoformat(day).replace(hour=hour, minute=int(tm[2]),
-                                                                   tzinfo=ZoneInfo("America/New_York")))
+        if len(stamps) == 1:
+            updated = next(iter(stamps))
         for post, unit in parser.units:
             quote = flat(unit)
             if post != i or text.index(quote) < dates[0].end():
@@ -101,6 +129,12 @@ def statements(page, url, today, pending=None):
             if status:
                 found.append({"status": status, "publishedDate": day, "updatedAt": updated, "sourceUrl": url,
                               "statement": quote, "sourceSha256": hashlib.sha256(text.encode()).hexdigest()})
+        if len({s["status"] for s in found[count_before:]}) > 1:
+            # Long update pages can repeat an old issue beneath a new rescission (or the reverse).
+            # Without separate dated statement sections, their order is not proof of the current state.
+            del found[count_before:]
+            if pending is not None:
+                pending.append(url)
         if (pending is not None and len(found) == count_before and re.search(SCOPE, text, re.I)
                 and re.search(r"\b(?:rescission|rescinded|lifted)\b", text, re.I)):
             pending.append(url)
@@ -163,7 +197,7 @@ def refresh(previous, get=fetch, now=None):
     for order, url in enumerate(urls):
         try:
             pending = []
-            candidates += [dict(s, order=order) for s in statements(get(url), url, iso(now)[:10], pending)]
+            candidates += [dict(s, order=order) for s in statements(get(url), url, iso(now)[:10], pending, now)]
             if pending:
                 result["errors"].append("A full-system utility update needs review; the last verified notice is retained.")
         except Exception:
@@ -200,13 +234,23 @@ def refresh(previous, get=fetch, now=None):
     return result
 
 
-def main():
-    previous = json.loads(FILE.read_text()) if FILE.exists() else {}
-    data = refresh(previous)
-    temp = FILE.with_suffix(".tmp")
-    temp.write_text(json.dumps(data, ensure_ascii=True, separators=(",", ":")) + "\n")
-    temp.replace(FILE)
-    print("water notices:", [(n["id"], n["status"]) for n in data["notices"]], "; source checks:", "partial" if data["errors"] else "ok")
+def main(path=None, get=fetch, now=None):
+    path = pathlib.Path(path) if path is not None else FILE
+    try:
+        previous = json.loads(path.read_text()) if path.exists() else {}
+        if not isinstance(previous, dict) or not isinstance(previous.get("notices", []), list) or any(
+                not isinstance(n, dict) for n in previous.get("notices", [])):
+            raise ValueError("unsupported water snapshot")
+        data = refresh(previous, get, now)
+        temp = path.with_suffix(".tmp")
+        temp.write_text(json.dumps(data, ensure_ascii=True, separators=(",", ":")) + "\n")
+        temp.replace(path)
+        print("water notices:", [(n["id"], n["status"]) for n in data["notices"]], "; source checks:", "partial" if data["errors"] else "ok")
+    except Exception:
+        # Do not overwrite a prior snapshot or stop road reconciliation/publishing. Details stay out of
+        # public data; the workflow log explicitly records this source failure.
+        print("water notice refresh failed; prior file retained; road update continues", file=sys.stderr)
+    return 0
 
 
 if __name__ == "__main__":

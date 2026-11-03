@@ -4,7 +4,10 @@ import copy
 import datetime as dt
 import json
 import pathlib
+import shutil
+import subprocess
 import sys
+import tempfile
 import unittest
 
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parents[1]))
@@ -99,6 +102,44 @@ class WaterTests(unittest.TestCase):
     def test_future_rescission_context_is_not_current_clearance(self):
         body = page("This change is effective tomorrow.</p><p>"+LIFT)
         self.assertFalse(W.statements(body, W.UPDATE, "2026-11-03"))
+
+    def test_only_current_whole_update_heading_supplies_time(self):
+        body = page('Nov. 3, 2026, 8:45 a.m. UPDATE</p><p>Next update scheduled for 10:30 a.m.</p><p>'+ISSUE)
+        got = W.statements(body, W.UPDATE, "2026-11-03", now=NOW)
+        self.assertEqual(got[0]["updatedAt"], "2026-11-03T13:45:00Z")
+        only_scheduled = page('The next update is at 10:30 a.m.</p><p>'+ISSUE)
+        self.assertIsNone(W.statements(only_scheduled, W.UPDATE, "2026-11-03", now=NOW)[0]["updatedAt"])
+        future = page('Nov. 3, 2026, 11:45 a.m. UPDATE</p><p>'+LIFT)
+        self.assertFalse(W.statements(future, W.UPDATE, "2026-11-03", now=NOW))
+
+    def test_corrupt_or_legacy_snapshot_does_not_fail_or_overwrite(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            p = pathlib.Path(tmp)/"water_notices.json"
+            for raw in ('{broken', '[]', '{"notices":[null]}'):
+                p.write_text(raw)
+                self.assertEqual(W.main(p, self.get(), NOW), 0)
+                self.assertEqual(p.read_text(), raw)
+
+    def test_bad_water_file_never_blocks_road_build_or_pollutes_road_poll(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            p = pathlib.Path(tmp)
+            shutil.copy(W.HERE/"build_page.py", p/"build_page.py")
+            for name, data in {"template.html":"<script>const DATA=__DATA_JSON__;</script>", "leaflet.css":"", "tiles.json":"{}",
+                               "flood_data.json":'{"generated":"test","items":[{"id":"road"}]}', "water_notices.json":'{broken'}.items():
+                (p/name).write_text(data)
+            done = subprocess.run([sys.executable, "-I", str(p/"build_page.py")], capture_output=True)
+            self.assertEqual(done.returncode, 0, done.stderr)
+            roads = json.loads((p/"site/data.json").read_text())
+            self.assertEqual(roads["items"], [{"id":"road"}])
+            self.assertNotIn("waterNotices", roads)
+            self.assertTrue(json.loads((p/"site/water.json").read_text())["errors"])
+            self.assertIn('"waterNotices"', (p/"site/index.html").read_text())
+
+    def test_mixed_historical_issue_and_rescission_need_review(self):
+        for first, last in ((ISSUE, LIFT), (LIFT, ISSUE)):
+            pending = []
+            self.assertFalse(W.statements(page(first+'</p><p>'+last), W.UPDATE, "2026-11-03", pending, NOW))
+            self.assertTrue(pending)
 
 
 if __name__ == "__main__":

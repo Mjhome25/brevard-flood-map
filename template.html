@@ -413,6 +413,7 @@ h1,h2,h3{margin:0;text-wrap:balance}
   // Utility boundaries have their own pane and toggle; roads and flood warning areas stay independent.
   map.createPane('water').style.zIndex=320;
   const waterLayer=L.layerGroup().addTo(map);
+  let waterPopup=null, waterPopupId=null;
   const waterEl=document.getElementById('water-alerts');
   const waterDate=n=>n.updatedAt?when(n.updatedAt):n.publishedDate?new Date(n.publishedDate+'T12:00:00Z').toLocaleDateString('en-US',{month:'short',day:'numeric',timeZone:'UTC'}):'date unavailable';
   const waterLink=(url,label)=>{try{const u=new URL(url);return u.protocol==='https:'?`<a href="${esc(u.href)}" target="_blank" rel="noopener">${esc(label)} ↗</a>`:'';}catch(e){return '';}};
@@ -422,6 +423,10 @@ h1,h2,h3{margin:0;text-wrap:balance}
   function drawWater(){
     waterLayer.clearLayers();
     const active=waterActive();
+    if(waterPopup){
+      const shown=active.find(n=>n.id===waterPopupId);
+      if(shown) waterPopup.setContent(waterDetails(shown)); else map.closePopup(waterPopup);
+    }
     document.getElementById('water-key').hidden=!active.some(n=>n.geometry);
     active.filter(n=>n.geometry).forEach(n=>{
       L.geoJSON(n.geometry,{pane:'water',className:'water-area',style:{color:col('water'),weight:2,opacity:.9,fillColor:col('water-fill'),fillOpacity:.16}})
@@ -438,7 +443,8 @@ h1,h2,h3{margin:0;text-wrap:balance}
     document.getElementById('f-water').checked=true; waterLayer.addTo(map);
     const bounds=L.geoJSON(n.geometry).getBounds(); map.fitBounds(bounds,{padding:[24,24]});
     if(window.innerWidth<=900) document.getElementById('map').scrollIntoView({block:'start',behavior:'smooth'});
-    L.popup({maxWidth:330,className:'water-popup'}).setLatLng(bounds.getCenter()).setContent(waterDetails(n)).openOn(map);
+    waterPopupId=n.id;
+    waterPopup=L.popup({maxWidth:330,className:'water-popup'}).setLatLng(bounds.getCenter()).setContent(waterDetails(n)).openOn(map);
   });
   document.getElementById('f-water').addEventListener('change',e=>e.target.checked?waterLayer.addTo(map):map.removeLayer(waterLayer));
   drawWater();
