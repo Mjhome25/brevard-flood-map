@@ -130,8 +130,8 @@ check("a 'Roadway Open' remark on an active record reads as an unverified dated 
 
 # FHP CAD table: columns bound by header text; an incident with an Arrived time is still active
 H = "".join(f"<th>{c}&nbsp;</th>" for c in R.FHP_COLUMNS)
-row = lambda *c: "<tr>" + "".join(f"<td>{x}</td>" for x in c) + "</tr>"
-page = (f"<table><tr>{H}</tr>" + row("MVC", "11/03/2026 06:00:00", "11/03/2026 06:02:00", "11/03/2026 06:10:00",
+row = lambda *c: '<tr class="dxgvDataRow">' + "".join(f"<td>{x}</td>" for x in c) + "</tr>"
+page = (f"<table><tr>{H}</tr><tr><td>layout</td></tr>" + row("MVC", "11/03/2026 06:00:00", "11/03/2026 06:02:00", "11/03/2026 06:10:00",
                                      "BREVARD", "SR-520 x[SAMPLE RD] [COCOA]", "Right lane blocked", "28.3", "-80.7")
         + row("MVC", "11/03/2026 06:05:00", "", "", "ORANGE", "SR-50 x[X] [ORLANDO]", "", "28.5", "-81.3") + "</table>")
 rows = R.fhp_rows(page)
@@ -145,7 +145,19 @@ except ValueError:
     ok = True
 check("a changed header set is a source failure, not shifted columns", ok)
 upd = open(os.path.join(repo, "update_flood_data.py")).read()
-check("the updater no longer drops incidents by a third time column", "t_clr" not in upd and "fhp_rows(s)" in upd)
+check("the updater no longer drops incidents by a third time column", "t_clr" not in upd and "fhp_table(s)" in upd)
+for broken, why in ((page.replace('<td>-80.7</td>', '', 1), "a Brevard row missing its last cell"),
+                    (page.replace("SR-520 x[SAMPLE RD] [COCOA]", "", 1), "a row with no location")):
+    try:
+        R.fhp_table(broken); ok = False
+    except ValueError:
+        ok = True
+    check(f"a broken incident row makes the whole FHP snapshot a source failure: {why}", ok)
+only_orange = page.replace("BREVARD", "ORANGE")
+check("a complete table with no Brevard rows is a successful read with zero Brevard incidents",
+      len(R.fhp_table(only_orange)) == 2 and R.fhp_rows(only_orange) == [])
+check("the updater calls FHP up from a complete table even with no Brevard rows",
+      'sources["fhp"] = "up" if table else "empty"' in upd)
 
 # Government verification (verify.issue): the page sentence must be about THIS road and impact; it only raises
 import verify as V  # noqa: E402
@@ -480,6 +492,18 @@ check("check_events accepts the FHP-drop clearance with clearance enabled", subp
     capture_output=True).returncode == 0)
 s4 = runc(pc, {"sources": {"fhp": "up", "fl511": "up"}, "items": [crash, other]}, 1)
 check("the same FHP crash listed again after clearing is active again", s4["records"][crid]["status"] == "active")
+county_off = os.path.join(tmp, "county_off.json")
+cj = json.load(open(os.path.join(repo, "county.json"))); cj["clearance"]["enabled"] = False
+json.dump(cj, open(county_off, "w"))
+check("switching the rule off keeps the accepted history (with its clearances) valid", subprocess.run(
+    [sys.executable, "-I", os.path.join(repo, "check_events.py"), "--before", pc, "--events", pc, "--county", county_off],
+    capture_output=True).returncode == 0)
+check("reconcile only proposes FHP clears when clearance is enabled AND the kind is listed",
+      'bool(clearance.get("enabled")) and "fhp-dropped" in clearance.get("kinds", [])'
+      in open(os.path.join(repo, "reconcile.py")).read())
+s5 = runc(pc, {"sources": {"fhp": "up", "fl511": "up"}, "items": [crash, other]}, 1.25)
+new5, _ = R.plan({"sources": {"fhp": "up"}, "items": [other]}, s5, E.iso(T0 + datetime.timedelta(hours=1.5)))
+check("with clearing off, a dropped FHP incident is only flagged", all(e["kind"] != "cleared" for e in new5))
 for bad, why in (({"kind": "fhp-dropped", "agency": "Florida Highway Patrol", "url": E.FHP_URL,
                    "missingSince": "2026-11-02T12:00:00Z", "reopenedAt": ""}, "an FL511 record"),
                  ({"kind": "official", "url": "https://example.com", "reopenedAt": ""}, "another clearance kind")):

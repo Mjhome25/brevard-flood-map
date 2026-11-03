@@ -61,26 +61,34 @@ FHP_COLUMNS = ("Incident Type", "Received", "Dispatched", "Arrived", "County", "
                "Longitude")
 
 
-def fhp_rows(page: str, county: str = "BREVARD") -> list[dict]:
-    """The FHP live CAD table as dicts keyed by its own header names. The columns are bound by header text, never by
-    position: the page has Received, Dispatched and Arrived times and NO cleared time (an incident leaves the page
-    when it is over). Raises ValueError when the expected headers are not all present, so a changed page is a
-    source failure, not silently shifted columns."""
+def fhp_table(page: str) -> list[dict]:
+    """Every incident row of the FHP live CAD table (all counties), as dicts keyed by the table's own header names.
+    The columns are bound by header text, never by position: the page has Received, Dispatched and Arrived times and
+    NO cleared time (an incident leaves the page when it is over). Raises ValueError when the expected headers are
+    missing, or when any incident row in that table is short or lacks its type, time, county or location: a broken
+    row must make the whole snapshot a source failure, never look like an incident that has gone (Codex #105)."""
     import html as _html
     clean = lambda c: re.sub(r"\s+", " ", _html.unescape(re.sub(r"<[^>]+>", " ", c))).replace("\xa0", " ").strip()
-    heads = [clean(h) for h in re.findall(r"<th[^>]*>(.*?)</th>", page, flags=re.S | re.I)]
+    heads = list(dict.fromkeys(clean(h) for h in re.findall(r"<th[^>]*>(.*?)</th>", page, flags=re.S | re.I)))
     if not all(c in heads for c in FHP_COLUMNS):
         raise ValueError(f"FHP CAD headers changed: {heads[:12]}")
     idx = {c: heads.index(c) for c in FHP_COLUMNS}
     out = []
-    for row in re.findall(r"<tr[^>]*>(.*?)</tr>", page, flags=re.S | re.I):
+    # incident rows are the grid's data rows (class dxgvDataRow); layout rows elsewhere on the page are not
+    for row in re.findall(r"<tr[^>]*class=\"[^\"]*\bdxgvDataRow\b[^\"]*\"[^>]*>(.*?)</tr>", page, flags=re.S | re.I):
         cells = [clean(c) for c in re.findall(r"<td[^>]*>(.*?)</td>", row, flags=re.S | re.I)]
-        if len(cells) < len(heads[:len(FHP_COLUMNS)]) or max(idx.values()) >= len(cells):
-            continue
+        if len(cells) != len(FHP_COLUMNS) or max(idx.values()) >= len(cells):
+            raise ValueError(f"FHP CAD incident row has {len(cells)} cells, expected {len(FHP_COLUMNS)}")
         r = {c: cells[i] for c, i in idx.items()}
-        if r["County"].upper() == county:
-            out.append(r)
+        if not all(r[c] for c in ("Incident Type", "Received", "County", "Location")):
+            raise ValueError("FHP CAD incident row is missing its type, time, county or location")
+        out.append(r)
     return out
+
+
+def fhp_rows(page: str, county: str = "BREVARD") -> list[dict]:
+    """The county's rows of the FHP live CAD table (see fhp_table; raises ValueError on a changed or broken table)."""
+    return [r for r in fhp_table(page) if r["County"].upper() == county]
 
 
 def fhp_normalize(it: dict) -> dict | None:
@@ -217,7 +225,7 @@ def plan(obs: dict, state: dict, now: str, county: str = "brevard", fhp_clears: 
             if r["rid"] not in observed and not r["missingSince"]:
                 new.append({"rid": r["rid"], "kind": "missing", "src": src, "actor": "reconcile", "stime": now})
             elif r["rid"] not in observed and src == "fhp" and fhp_clears and health == "up":
-                # Mike (Nov 3), for now: an FHP crash still gone on the next successful fetch is cleared, citing FHP
+                # Mike (Nov 3), for now: an FHP incident still gone on the next successful fetch is cleared, citing FHP
                 new.append({"rid": r["rid"], "kind": "cleared", "src": src, "actor": "reconcile", "stime": now,
                             "evidence": {"kind": "fhp-dropped", "agency": FEEDS["fhp"]["agency"], "url": E.FHP_URL,
                                          "missingSince": r["missingSince"], "reopenedAt": ""}})
@@ -331,7 +339,8 @@ def main() -> int:
     now = E.utcnow()
     state = E.derive(E.load(), now)
     clearance = county.get("clearance", {})
-    new, notes = plan(obs, state, E.iso(now), county["id"], fhp_clears="fhp-dropped" in clearance.get("kinds", []))
+    fhp_clears = bool(clearance.get("enabled")) and "fhp-dropped" in clearance.get("kinds", [])
+    new, notes = plan(obs, state, E.iso(now), county["id"], fhp_clears=fhp_clears)
     written = E.append(new, clearance_enabled=bool(clearance.get("enabled")), now=now)
     state = E.derive(E.load(), now)
     items, reopened = display(state)

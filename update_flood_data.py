@@ -12,7 +12,7 @@ Run:  python3 update_flood_data.py   (writes flood_data.json next to it)
 import json, re, html, os, sys, urllib.request, urllib.parse, datetime
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
-from reconcile import fhp_classify, fhp_rows, lsr_entries, lsr_item  # noqa: E402
+from reconcile import fhp_classify, fhp_table, lsr_entries, lsr_item  # noqa: E402
 UA = "BrevardFloodMap/0.1 (+https://brevardemergency.com)"
 from zoneinfo import ZoneInfo
 TZ = ZoneInfo("America/New_York")  # FL511 and FHP times are Eastern, across daylight saving
@@ -129,7 +129,8 @@ json.dump({k: v for k, v in dcache.items() if k in live}, open(dcache_path, "w")
 # ---- FHP CAD ----------------------------------------------------------
 try:
     s = get("https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx", accept="text/html")
-    for r in fhp_rows(s):  # bound by header; Received/Dispatched/Arrived, no cleared column
+    table = fhp_table(s)  # bound by header; Received/Dispatched/Arrived, no cleared column; a broken row raises
+    for r in (r for r in table if r["County"].upper() == "BREVARD"):
         typ, t_rep, loc, remark, lat, lng = (r["Incident Type"], r["Received"], r["Location"], r["Remarks"],
                                              r["Latitude"], r["Longitude"])
         if typ.upper() == "WEATHER WARNING": continue
@@ -145,7 +146,8 @@ try:
             "spot": ("at " + m.group(1).title()) if (m := re.search(r"x\[([^\]]+)\]", loc)) else "",
             "lanes": remark.title() if remark else "",
         })
-    sources["fhp"] = "up" if any(it["layer"] == "FHP" for it in items) else "empty"
+    # a complete statewide table is a successful read even with no Brevard rows; an empty table is not
+    sources["fhp"] = "up" if table else "empty"
 except Exception as e: errors.append(f"FHP CAD: {e}"); sources["fhp"] = "down"
 
 # ---- NWS --------------------------------------------------------------

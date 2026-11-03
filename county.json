@@ -25,7 +25,7 @@
     "kinds": [
       "fhp-dropped"
     ],
-    "note": "Mike, Nov 3 2026: 'ok if FHP drops it, lets clear it for now.' Only an FHP crash the FHP live CAD page stops listing (gone on two successful fetches) is cleared, citing the FHP page. Temporary; to be revisited. Every other clearance still needs a cited official reopening (not installed).",
+    "note": "Mike, Nov 3 2026: 'ok if FHP drops it, lets clear it for now.' Only an FHP incident (crash, water closure, debris) the FHP live CAD page stops listing (gone on two successful fetches) is cleared, citing the FHP page. Temporary; to be revisited. Every other clearance still needs a cited official reopening (not installed).",
     "hosts": {}
   },
   "verify": {

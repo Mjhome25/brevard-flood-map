@@ -44,9 +44,10 @@ def main(argv=None) -> int:
     except (E.Refused, json.JSONDecodeError) as exc:
         evs, problems = [], problems + [f"unreadable history: {exc}"]
     seq, eids, prev = 0, set(), ""
-    for ev in evs:
+    accepted = before.count(b"\n")  # lines already accepted: checked for schema, not against today's permission
+    for n, ev in enumerate(evs):
         try:
-            E.validate(ev, seq, enabled, prev)
+            E.validate(ev, seq, enabled or n < accepted, prev)
         except E.Refused as exc:
             problems.append(str(exc))
         if ev.get("eid") in eids:
