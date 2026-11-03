@@ -4,6 +4,7 @@ successfully; a failed or suspiciously empty source changes nothing. Also: stabl
   python3 -I tests/test_reconcile.py <repo>
 """
 import ast
+import json
 import datetime
 import os
 import subprocess
@@ -145,6 +146,52 @@ except ValueError:
 check("a changed header set is a source failure, not shifted columns", ok)
 upd = open(os.path.join(repo, "update_flood_data.py")).read()
 check("the updater no longer drops incidents by a third time column", "t_clr" not in upd and "fhp_rows(s)" in upd)
+
+# Government verification: a badge only, from an exact government host, never a status change
+pv = os.path.join(tmp, "v.jsonl")
+man = lambda **kw: dict({"id": "man-x", "layer": "manual", "status": "flooded", "road": "Dairy Rd", "where": "Dairy Rd at A",
+                         "reported": "2026-11-02T12:00:00Z", "updated": "2026-11-02T12:00:00Z",
+                         "source": "City of Melbourne (via Space Coast Daily)",
+                         "sourceUrl": "https://www.melbourneflorida.org/"}, **kw)
+run(pv, {"sources": {"manual": "up"}, "items": [man()]}, 0)
+rec = lambda: E.derive(E.load(pv))["records"]["brevard:manual:x"]
+it0 = [i for i in R.display(E.derive(E.load(pv)))[0] if i["id"] == "brevard:manual:x"][0]
+check("a report whose link is a government homepage is still not government verified", it0["verified"] is None)
+ev = lambda host, url, pub="2026-11-02T00:00:00Z", quote="All of Dairy Road is closed.": {
+    "rid": "brevard:manual:x", "src": "manual", "kind": "verified", "actor": "test",
+    "evidence": {"host": host, "url": url, "agency": "City of Melbourne", "quote": quote, "publishedAt": pub}}
+for bad, why in ((ev("www.spacecoastdaily.com", "https://www.spacecoastdaily.com/a"), "a news host"),
+                 (ev("www.melbourneflorida.org", "https://evil.example/a"), "a URL on another host")):
+    try:
+        E.append([bad], pv); ok = False
+    except E.Refused:
+        ok = True
+    check(f"verification from {why} is refused", ok)
+before = json.dumps(rec()["fields"], sort_keys=True), rec()["status"]
+E.append([ev("www.melbourneflorida.org", "https://www.melbourneflorida.org/a")], pv)
+r = rec()
+check("a government statement verifies the report without changing its status or fields",
+      r["verified"]["agency"] == "City of Melbourne" and (json.dumps(r["fields"], sort_keys=True), r["status"]) == before)
+E.append([ev("www.melbourneflorida.org", "https://www.melbourneflorida.org/b", "2026-11-03T00:00:00Z", "Dairy Road remains closed.")], pv)
+E.append([ev("www.melbourneflorida.org", "https://www.melbourneflorida.org/c", "2026-11-01T00:00:00Z", "Older.")], pv)
+check("the newest official statement is shown; an older one does not replace it",
+      rec()["verified"]["quote"] == "Dairy Road remains closed." and rec()["status"] == "active")
+check("check_events accepts the verified history", subprocess.run(
+    [sys.executable, "-I", os.path.join(repo, "check_events.py"), "--before", "", "--bootstrap", "--events", pv],
+    capture_output=True).returncode == 0)
+st = E.derive(E.load(p))  # FL511 feed records from the first block
+feed = [i for i in R.display(st)[0] if i["id"] == "brevard:fl511:3"][0]
+check("a record from the FL511 feed is government verified as listed by FL511",
+      feed["verified"]["kind"] == "feed" and feed["verified"]["agency"] == "FL511 (FDOT)")
+gone = R.display(E.derive(E.load(p2)))[0][0]
+check("an FL511 record the feed dropped says no longer listed as closed, still active, cited",
+      gone["noLongerListed"]["wasClosed"] and gone["noLongerListed"]["url"] == "https://fl511.com" and gone["awaitingOfficial"])
+check("a listed record has no no-longer-listed note", "noLongerListed" not in feed)
+out = subprocess.run([sys.executable, "-I", os.path.join(repo, "verify.py"), "brevard:manual:x",
+                      "https://www.spacecoastdaily.com/a", "All of Dairy Road is closed.", "2026-11-02"],
+                     capture_output=True, text=True)
+check("verify.py refuses a non-government host before fetching anything",
+      out.returncode != 0 and "not on the county's government verify list" in out.stderr)
 
 # FHP ids are the same in separate processes (the old id used Python's per-process hash)
 code = ("import sys; sys.path.insert(0, sys.argv[1]); import reconcile as R; "
