@@ -134,7 +134,8 @@ def load(path: str = EVENTS) -> list[dict]:
     return out
 
 
-GOV_FIELDS = ("host", "url", "finalUrl", "agency", "quote", "publishedDate", "checkedAt", "pageSha256", "verifier")
+GOV_FIELDS = ("host", "url", "finalUrl", "agency", "quote", "publishedDate", "checkedAt", "pageSha256", "postSha256",
+              "verifier")
 
 
 def supports(fields: dict, quote: str, raise_to: str | None = None) -> str | None:
@@ -153,11 +154,11 @@ def supports(fields: dict, quote: str, raise_to: str | None = None) -> str | Non
         return f"the sentence is about {n['cross']!r}, not this report's cross street ({cross or 'none recorded'})"
     if raise_to == "full" and not n["whole"]:
         return "a full closure needs a sentence covering all of the road"
-    status = "closed" if raise_to else fields.get("status")
-    if n["impact"] == "closed" and status != "closed":
+    closed = bool(raise_to) or fields.get("status") == "closed" or bool(fields.get("fullClosure"))  # the page's test
+    if n["impact"] == "closed" and not closed:
         return "the sentence says closed but the report is not a closure (use --closed to raise it)"
-    if n["impact"] == "flooded" and (raise_to or status != "flooded"):
-        return "a flooding sentence supports a flood report only, never a closure"
+    if n["impact"] == "flooded" and (closed or fields.get("status") != "flooded"):
+        return "a flooding sentence supports a flood report only, never one shown closed"
     return None
 
 
@@ -182,7 +183,8 @@ def _check_gov(seq, v: dict, at: str) -> None:
     checked = parse(v["checkedAt"])
     if not real or v["publishedDate"] > at[:10] or not checked or checked > parse(at):
         raise Refused(f"seq {seq}: evidence dates are malformed or in the future")
-    if v["verifier"] not in VERIFIERS or not SHA.match(v["pageSha256"]) or not notice(v["quote"]):
+    if (v["verifier"] not in VERIFIERS or not SHA.match(v["pageSha256"]) or not SHA.match(v["postSha256"])
+            or not notice(v["quote"])):
         raise Refused(f"seq {seq}: evidence is not a supported verifier receipt with one supported road sentence")
 
 

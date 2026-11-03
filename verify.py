@@ -10,7 +10,7 @@ report's road as its subject:
   "<road> at <cross street> is flooded."   "Flooding on <road> at <cross street>."
 Anything else (other wording, extra clauses, names, hedges) is refused and stays unverified, so only road wording is
 ever stored. A closure sentence verifies a closure; a flooding sentence only a flood report. The date is the
-"Published on <Month D, YYYY>" of the post holding the sentence, never a date typed here, and it must not be older
+"Published on <Month D, YYYY>" of the <article> post holding the sentence, never a date typed here, and it must not be older
 than this report (an old post is another event).
 
 --closed / --full-closure: the sentence says the road is closed (all of it, for --full-closure), so the report is
@@ -42,14 +42,18 @@ def page_text(page: str) -> str:
                                                      flags=re.S | re.I))).strip()
 
 
-def post_date(text: str, at: int) -> str | None:
-    """The date of the post holding the sentence: the nearest 'Published on' before it, not one elsewhere."""
-    m = None
-    for m in PUBLISHED.finditer(text, 0, at):
-        pass
-    if not m:
-        return None
-    return datetime.datetime.strptime(" ".join(m.groups()), "%B %d %Y").strftime("%Y-%m-%d")
+def post_of(page: str, quote: str) -> tuple[str, str] | None:
+    """(date, post text) of the one <article> holding the sentence, with its own 'Published on' before it. A page
+    without articles, a sentence outside one, or an article with no date or several dates is not supported."""
+    for inner in re.findall(r"<article\b[^>]*>(.*?)</article>", page, flags=re.S | re.I):
+        text = page_text(inner)
+        if quote not in text:
+            continue
+        dates = list(PUBLISHED.finditer(text))
+        if len(dates) != 1 or dates[0].start() > text.index(quote):
+            return None
+        return datetime.datetime.strptime(" ".join(dates[0].groups()), "%B %d %Y").strftime("%Y-%m-%d"), text
+    return None
 
 
 class SameHost(urllib.request.HTTPRedirectHandler):
@@ -77,9 +81,10 @@ def issue(rid: str, url: str, quote: str, raise_to: str | None, page: str, final
     text = page_text(page)
     if quote not in text:
         raise E.Refused("the sentence is not on the page")
-    published = post_date(text, text.index(quote))
-    if not published or published > E.iso(now)[:10]:
-        raise E.Refused("the sentence's post has no usable 'Published on' date")
+    post = post_of(page, quote)
+    if not post or post[0] > E.iso(now)[:10]:
+        raise E.Refused("the sentence is not inside one dated post (<article> with its own 'Published on' before it)")
+    published = post[0]
     if published < E._episode(rec):
         raise E.Refused(f"the post ({published}) is older than this report ({E._episode(rec)}), so it is another event")
     why = E.supports(rec["fields"], quote, raise_to)
@@ -87,6 +92,7 @@ def issue(rid: str, url: str, quote: str, raise_to: str | None, page: str, final
         raise E.Refused(why)
     ev = {"host": p.hostname, "url": url, "finalUrl": final_url, "agency": hosts[p.hostname], "quote": quote,
           "publishedDate": published, "checkedAt": E.iso(now), "pageSha256": hashlib.sha256(text.encode()).hexdigest(),
+          "postSha256": hashlib.sha256(post[1].encode()).hexdigest(),
           "verifier": VERSION}
     new = []
     if raise_to:

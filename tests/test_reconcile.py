@@ -151,10 +151,10 @@ check("the updater no longer drops incidents by a third time column", "t_clr" no
 import verify as V  # noqa: E402
 NOWV = datetime.datetime(2026, 11, 3, 12, 0, tzinfo=datetime.timezone.utc)
 MEL = "https://www.melbourneflorida.org/Government/City-News/Traffic-Advisories/Road-Closures"
-PAGE = ("<html><body><h1>Road Closures</h1><p>Published on November 02, 2026</p><p>All of Dairy Road is closed. "
+PAGE = ("<html><body><h1>Road Closures</h1><article><p>Published on November 02, 2026</p><p>All of Dairy Road is closed. "
         "Babcock Street at University Boulevard is closed. Flooding on Minton Road at Norfolk Parkway. "
         "City Hall is open Monday through Friday. Hollywood Boulevard is not closed. Sarno Road will be closed. "
-        "A driver was injured on Eber Road at Dairy Road and Eber Road is closed.</p></body></html>")
+        "A driver was injured on Eber Road at Dairy Road and Eber Road is closed.</p></article></body></html>")
 pv = os.path.join(tmp, "v.jsonl")
 man = lambda rid, **kw: dict({"id": "man-" + rid, "layer": "manual", "status": "flooded", "reported": "2026-11-02T12:00:00Z",
                               "updated": "2026-11-02T12:00:00Z", "source": "City of Melbourne (via Space Coast Daily)",
@@ -261,10 +261,25 @@ check("refused: a sentence carrying a person's name is never stored",
 OLD = PAGE.replace("Published on November 02, 2026", "Published on January 1, 2020")
 check("refused: a 2020 post is another event, not this November report",
       refusedq("dairy", "All of Dairy Road is closed.", "full", OLD) and recq("dairy")["verified"] is None)
-SIDE = ("<html><body><aside>Published on November 02, 2026</aside><h2>Archive</h2><p>Published on January 1, 2020</p>"
-        "<p>All of Dairy Road is closed.</p></body></html>")
-check("refused: the date comes from the sentence's own post, not a newer item elsewhere on the page",
+SIDE = ("<html><body><article><p>Published on November 3, 2026</p><p>New unrelated city update.</p></article>"
+        "<aside><h2>Historical notices</h2><p>All of Dairy Road is closed.</p></aside></body></html>")
+check("refused: a sidebar notice does not borrow a separate article's date",
       refusedq("dairy", "All of Dairy Road is closed.", "full", SIDE))
+SIB = ("<html><body><article><p>Published on November 3, 2026</p><p>Pool hours.</p></article>"
+       "<article><p>All of Dairy Road is closed.</p></article></body></html>")
+check("refused: an undated article does not borrow its sibling's date", refusedq("dairy", "All of Dairy Road is closed.", "full", SIB))
+BEFORE = "<html><body><article><p>All of Dairy Road is closed.</p><p>Published on November 2, 2026</p></article></body></html>"
+check("refused: a statement before its post's date line", refusedq("dairy", "All of Dairy Road is closed.", "full", BEFORE))
+check("refused: a page with no article structure",
+      refusedq("dairy", "All of Dairy Road is closed.", "full", PAGE.replace("<article>", "<div>").replace("</article>", "</div>")))
+run(pq, {"sources": {"manual": "up"}, "items": [
+    man("dairy", road="Dairy Rd", spot="at Florida Ave", where="Dairy Rd at Florida Ave"),
+    man("dfull", road="Dairy Rd", spot="at Babcock St", status="closed", fullClosure=True),
+    man("fwet", road="Dairy Rd", spot="at Babcock St", status="flooded", fullClosure=True)]}, 1)
+check("refused: a flooding sentence cannot badge a flooded report shown as a full closure",
+      refusedq("fwet", "All of Dairy Road is flooded.", None, P2) and recq("fwet")["verified"] is None)
+check("a flooding sentence badges a flooded report that is not shown closed",
+      not refusedq("dairy", "All of Dairy Road is flooded.", None, P2) and recq("dairy")["verified"]["quote"].endswith("flooded."))
 check("a same-post, same-episode closure sentence raises and verifies (positive control)",
       not refusedq("dfull", "All of Dairy Road is closed.") and recq("dfull")["verified"]["publishedDate"] == "2026-11-02")
 fake = dict(good["evidence"], quote="All of Hollywood Boulevard is closed.")
