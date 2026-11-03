@@ -147,78 +147,104 @@ check("a changed header set is a source failure, not shifted columns", ok)
 upd = open(os.path.join(repo, "update_flood_data.py")).read()
 check("the updater no longer drops incidents by a third time column", "t_clr" not in upd and "fhp_rows(s)" in upd)
 
-# Government verification: a badge only, from an exact government host, never a status change
+# Government verification (verify.issue): the page sentence must be about THIS road and impact; it only raises
+import verify as V  # noqa: E402
+NOWV = datetime.datetime(2026, 11, 3, 12, 0, tzinfo=datetime.timezone.utc)
+MEL = "https://www.melbourneflorida.org/Government/City-News/Traffic-Advisories/Road-Closures"
+PAGE = ("<html><body><h1>Road Closures</h1><p>Published on November 02, 2026</p><p>All of Dairy Road is closed. "
+        "Babcock Street at University Boulevard is closed. Flooding on Minton Road at Norfolk Parkway. "
+        "City Hall is open Monday through Friday. Hollywood Boulevard is not closed. Sarno Road will be closed. "
+        "A driver was injured on Eber Road at Dairy Road and Eber Road is closed.</p></body></html>")
 pv = os.path.join(tmp, "v.jsonl")
-man = lambda **kw: dict({"id": "man-x", "layer": "manual", "status": "flooded", "road": "Dairy Rd", "where": "Dairy Rd at A",
-                         "reported": "2026-11-02T12:00:00Z", "updated": "2026-11-02T12:00:00Z",
-                         "source": "City of Melbourne (via Space Coast Daily)",
-                         "sourceUrl": "https://www.melbourneflorida.org/"}, **kw)
-run(pv, {"sources": {"manual": "up"}, "items": [man()]}, 0)
-rec = lambda: E.derive(E.load(pv))["records"]["brevard:manual:x"]
-it0 = [i for i in R.display(E.derive(E.load(pv)))[0] if i["id"] == "brevard:manual:x"][0]
-check("a report whose link is a government homepage is still not government verified", it0["verified"] is None)
-ev = lambda host, url, pub="2026-11-02T00:00:00Z", quote="All of Dairy Road is closed.": {
-    "rid": "brevard:manual:x", "src": "manual", "kind": "verified", "actor": "test",
-    "evidence": {"host": host, "url": url, "agency": "City of Melbourne", "quote": quote, "publishedAt": pub}}
-for bad, why in ((ev("www.spacecoastdaily.com", "https://www.spacecoastdaily.com/a"), "a news host"),
-                 (ev("www.melbourneflorida.org", "https://evil.example/a"), "a URL on another host")):
+man = lambda rid, **kw: dict({"id": "man-" + rid, "layer": "manual", "status": "flooded", "reported": "2026-11-02T12:00:00Z",
+                              "updated": "2026-11-02T12:00:00Z", "source": "City of Melbourne (via Space Coast Daily)",
+                              "sourceUrl": "https://www.melbourneflorida.org/"}, **kw)
+run(pv, {"sources": {"manual": "up"}, "items": [
+    man("dairy", road="Dairy Rd", spot="at Florida Ave", where="Dairy Rd at Florida Ave"),
+    man("babcock", road="Babcock St", spot="at University Blvd", status="closed", fullClosure=True),
+    man("babsouth", road="Babcock St", where="Babcock St at Southgate Blvd"),
+    man("nocross", road="Babcock St", where="Babcock St"),
+    man("minton", road="Minton Rd", spot="at Norfolk Pkwy"),
+    man("eber", road="Eber Rd", spot="at Dairy Rd"),
+    man("holly", road="Hollywood Blvd", spot="at Palm Bay Rd")]}, 0)
+recv = lambda r: E.derive(E.load(pv), NOWV)["records"]["brevard:manual:" + r]
+def refused(rid, quote, raise_to=None, page=PAGE, url=MEL, final=None):
     try:
-        E.append([bad], pv); ok = False
-    except E.Refused:
-        ok = True
-    check(f"verification from {why} is refused", ok)
-before = json.dumps(rec()["fields"], sort_keys=True), rec()["status"]
-E.append([ev("www.melbourneflorida.org", "https://www.melbourneflorida.org/a")], pv)
-r = rec()
-check("a government statement verifies the report without changing its status or fields",
-      r["verified"]["agency"] == "City of Melbourne" and (json.dumps(r["fields"], sort_keys=True), r["status"]) == before)
-E.append([ev("www.melbourneflorida.org", "https://www.melbourneflorida.org/b", "2026-11-03T00:00:00Z", "Dairy Road remains closed.")], pv)
-E.append([ev("www.melbourneflorida.org", "https://www.melbourneflorida.org/c", "2026-11-01T00:00:00Z", "Older.")], pv)
-check("the newest official statement is shown; an older one does not replace it",
-      rec()["verified"]["quote"] == "Dairy Road remains closed." and rec()["status"] == "active")
+        V.issue("brevard:manual:" + rid, url, quote, raise_to, page, final or url, NOWV, pv)
+    except E.Refused as exc:
+        return str(exc)
+    return ""
+dairy0 = [i for i in R.display(E.derive(E.load(pv), NOWV))[0] if i["id"] == "brevard:manual:dairy"][0]
+check("a report whose link is a government homepage is still not government verified", dairy0["verified"] is None)
+cases = [("minton", "City Hall is open Monday through Friday.", None, "an unrelated sentence"),
+         ("dairy", "Eber Road is closed.", "closed", "a plain closure of a different road"),
+         ("babsouth", "Babcock Street at University Boulevard is closed.", "closed", "same road, different cross street"),
+         ("nocross", "Babcock Street at University Boulevard is closed.", "closed", "a report with no cross street"),
+         ("holly", "Hollywood Boulevard is not closed.", None, "a negated sentence"),
+         ("dairy", "Sarno Road will be closed.", None, "another road, future"),
+         ("eber", "A driver was injured on Eber Road at Dairy Road and Eber Road is closed.", "closed", "personal detail"),
+         ("dairy", "All of Dairy Road is closed.", None, "a closure sentence on a flood report without --closed"),
+         ("dairy", "All of Dairy Road is closed. Not on page", None, "a sentence not on the page")]
+for rid, q, rt, why in cases:
+    check(f"verification refused: {why}", bool(refused(rid, q, rt)) and recv(rid).get("verified") is None)
+check("verification refused: a plain-http URL", bool(refused("babcock", "Babcock Street at University Boulevard is closed.",
+                                                     url=MEL.replace("https", "http"))))
+check("verification refused: a redirect to another host", bool(refused(
+    "babcock", "Babcock Street at University Boulevard is closed.", final="https://untrusted.example/x")))
+check("verification refused: a page with no Published date", bool(refused(
+    "babcock", "Babcock Street at University Boulevard is closed.", page=PAGE.replace("Published on", "Posted"))))
+check("verification refused: a page dated in the future", bool(refused(
+    "babcock", "Babcock Street at University Boulevard is closed.", page=PAGE.replace("2026", "2099"))))
+check("a matching closure sentence verifies a closure report, dated by the page",
+      not refused("babcock", "Babcock Street at University Boulevard is closed.")
+      and recv("babcock")["verified"]["publishedDate"] == "2026-11-02" and recv("babcock")["status"] == "active")
+check("a flooding sentence verifies a flood report without changing it",
+      not refused("minton", "Flooding on Minton Road at Norfolk Parkway.")
+      and recv("minton")["fields"]["status"] == "flooded" and recv("minton")["verified"])
+check("a whole-road closure sentence raises a flood report to a full closure, cited (Mike, Nov 3)",
+      not refused("dairy", "All of Dairy Road is closed.", "full")
+      and recv("dairy")["fields"]["status"] == "closed" and recv("dairy")["fields"]["fullClosure"]
+      and recv("dairy")["raisedBy"]["host"] == "www.melbourneflorida.org" and recv("dairy")["verified"])
+run(pv, {"sources": {"manual": "up"}, "items": [man("dairy", road="Dairy Rd", spot="at Florida Ave",
+                                                    where="Dairy Rd at Florida Ave")]}, 1)
+check("the hand-entered report repeating 'flooding' after a cited raise is not flagged as reduced impact",
+      recv("dairy")["fields"]["status"] == "closed" and not recv("dairy")["recheck"])
+shown = [i for i in R.display(E.derive(E.load(pv), NOWV))[0] if i["id"] == "brevard:manual:dairy"][0]
+check("the page shows the raised closure with its citation and page-dated badge",
+      shown["raisedBy"]["agency"] == "City of Melbourne" and shown["verified"]["kind"] == "page")
 check("check_events accepts the verified history", subprocess.run(
     [sys.executable, "-I", os.path.join(repo, "check_events.py"), "--before", "", "--bootstrap", "--events", pv],
     capture_output=True).returncode == 0)
-st = E.derive(E.load(p))  # FL511 feed records from the first block
+good = [e for e in E.load(pv) if e["kind"] == "verified"][-1]
+for bad, why in ((dict(good["evidence"], quote="Any unrelated statement about a driver"), "a personal quote"),
+                 (dict(good["evidence"], publishedDate="not-a-date"), "a malformed date"),
+                 (dict(good["evidence"], agency="Anything"), "an agency that does not match the host"),
+                 ({k: v for k, v in good["evidence"].items() if k != "pageSha256"}, "a missing page hash")):
+    try:
+        E.append([{"rid": "brevard:manual:holly", "src": "manual", "kind": "verified", "actor": "x", "evidence": bad}], pv)
+        ok = False
+    except E.Refused:
+        ok = True
+    check(f"a raw verified event is refused for {why}", ok)
+up = {"rid": "brevard:manual:dairy", "src": "manual", "kind": "relisted", "actor": "x", "stime": "2026-11-02T00:00:00Z",
+      "fields": dict(recv("dairy")["fields"], status="caution", fullClosure=False), "raisedBy": good["evidence"]}
+E.append([up], pv, now=NOWV)
+check("a cited event cannot lower a closure (flagged instead)",
+      recv("dairy")["fields"]["status"] == "closed" and recv("dairy")["recheck"])
+st = E.derive(E.load(p))
 feed = [i for i in R.display(st)[0] if i["id"] == "brevard:fl511:3"][0]
-check("a record from the FL511 feed is government verified as listed by FL511",
+check("an FL511 feed record is government verified as listed by FL511",
       feed["verified"]["kind"] == "feed" and feed["verified"]["agency"] == "FL511 (FDOT)")
 gone = R.display(E.derive(E.load(p2)))[0][0]
 check("an FL511 record the feed dropped says no longer listed as closed, still active, cited",
       gone["noLongerListed"]["wasClosed"] and gone["noLongerListed"]["url"] == "https://fl511.com" and gone["awaitingOfficial"])
 check("a listed record has no no-longer-listed note", "noLongerListed" not in feed)
-out = subprocess.run([sys.executable, "-I", os.path.join(repo, "verify.py"), "brevard:manual:x",
-                      "https://www.spacecoastdaily.com/a", "All of Dairy Road is closed.", "2026-11-02"],
-                     capture_output=True, text=True)
-check("verify.py refuses a non-government host before fetching anything",
-      out.returncode != 0 and "not on the county's government verify list" in out.stderr)
-
-# A government page saying a road is closed raises the report to closed, cited (Mike, Nov 3); it never lowers
-cite = lambda host, url: {"host": host, "url": url, "agency": "City of Melbourne", "quote": "All of Dairy Road is closed."}
-up = lambda c, **f: {"rid": "brevard:manual:x", "src": "manual", "kind": "relisted", "actor": "test",
-                     "stime": "2026-11-02T00:00:00Z", "fields": dict(rec()["fields"], **f), "raisedBy": c}
-try:
-    E.append([up(cite("www.spacecoastdaily.com", "https://www.spacecoastdaily.com/a"), status="closed", fullClosure=True)], pv)
-    ok = False
-except E.Refused:
-    ok = True
-check("a news site cannot raise a report to closed", ok and rec()["fields"]["status"] == "flooded")
-E.append([up(cite("www.melbourneflorida.org", "https://www.melbourneflorida.org/a"), status="closed", fullClosure=True)], pv)
-check("a government closure statement raises the report to closed and keeps the citation",
-      rec()["fields"]["status"] == "closed" and rec()["fields"]["fullClosure"]
-      and rec()["raisedBy"]["host"] == "www.melbourneflorida.org" and rec()["status"] == "active")
-E.append([up(cite("www.melbourneflorida.org", "https://www.melbourneflorida.org/z"), status="caution", fullClosure=False)], pv)
-check("a cited event cannot lower a closure (flagged instead)",
-      rec()["fields"]["status"] == "closed" and rec()["raisedBy"]["url"].endswith("/a") and rec()["recheck"])
-shown = [i for i in R.display(E.derive(E.load(pv)))[0] if i["id"] == "brevard:manual:x"][0]
-check("the page gets the citation for the raised closure", shown["raisedBy"]["agency"] == "City of Melbourne")
-check("check_events accepts the raised history", subprocess.run(
-    [sys.executable, "-I", os.path.join(repo, "check_events.py"), "--before", "", "--bootstrap", "--events", pv],
-    capture_output=True).returncode == 0)
-for q in ("Dairy Road is not closed.", "Dairy Road has reopened.", "The right lane is closed.", "Dairy Road will be closed."):
-    out = subprocess.run([sys.executable, "-I", os.path.join(repo, "verify.py"), "brevard:manual:x",
-                          "https://www.melbourneflorida.org/a", q, "2026-11-02", "--closed"], capture_output=True, text=True)
-    check(f"verify.py will not raise from {q!r}", out.returncode != 0 and "does not plainly say" in out.stderr)
+pr = os.path.join(tmp, "raise.jsonl")
+run(pr, {"sources": {"fl511": "up"}, "items": [item(9, status="caution", fullClosure=False, updated="2026-11-02T11:00:00Z")]}, 0)
+run(pr, {"sources": {"fl511": "up"}, "items": [item(9, updated="2026-11-02T15:00:00Z")]}, 1)
+fv = [i for i in R.display(E.derive(E.load(pr)))[0] if i["id"] == "brevard:fl511:9"][0]
+check("a feed badge is dated by the observation that made it a closure, not the first caution",
+      fv["verified"]["publishedAt"] == "2026-11-02T15:00:00Z")
 
 # FHP ids are the same in separate processes (the old id used Python's per-process hash)
 code = ("import sys; sys.path.insert(0, sys.argv[1]); import reconcile as R; "

@@ -414,18 +414,18 @@ h1,h2,h3{margin:0;text-wrap:balance}
     const v=it.verified, pending=it.noLongerListed||it.awaitingOfficial;
     if(v){
       const what=v.kind==='feed'?`${esc(v.agency)} listed this ${claimOf(it)} · ${esc(when(v.publishedAt))}`
-        :`${esc(v.agency)}: “${esc(v.quote)}” · published ${esc(new Date(v.publishedAt).toLocaleDateString('en-US',{month:'short',day:'numeric',timeZone:'UTC'}))}`;
+        :`${esc(v.agency)}: “${esc(v.quote)}” · published ${esc(vday(v))}`;
       return `<div class="vb ok" role="note"><span class="seal" aria-hidden="true">✓</span><div><b>Government verified</b><div class="d">${what} · <a href="${esc(v.url)}" target="_blank" rel="noopener">${esc(v.agency)} ↗</a>${pending?'<br>Current status: awaiting official confirmation':''}</div></div></div>`;
     }
     return `<div class="vb unv" role="note"><span class="seal" aria-hidden="true">!</span><div><b>Reported, not government verified</b><div class="d">Awaiting government confirmation${it.source?' · reported by '+esc(it.source):''}</div></div></div>`;
   }
-  const vshort=it=>it.verified?'<span class="vbs ok">✓ Government verified</span>':'<span class="vbs unv">! Not government verified</span>';
+  const vday=v=>v.publishedDate?new Date(v.publishedDate+'T12:00:00Z').toLocaleDateString('en-US',{month:'short',day:'numeric',timeZone:'UTC'}):when(v.publishedAt);
+  const vshort=it=>it.verified?`<span class="vbs ok">✓ Government verified · ${esc(it.verified.kind==='feed'?when(it.verified.publishedAt):vday(it.verified))}${it.awaitingOfficial||it.noLongerListed?' · awaiting confirmation':''}</span>`:'<span class="vbs unv">! Not government verified</span>';
   function nll(it){ const n=it.noLongerListed; return n?`<div class="nll">No longer listed${n.wasClosed?' as closed':''} by <a href="${esc(n.url)}" target="_blank" rel="noopener">${esc(n.agency)}</a> since ${esc(when(n.since))}. Not an official reopening.</div>`:''; }
-  // name the site the link actually opens: "City of Melbourne (via Space Coast Daily)" links to Space Coast Daily
-  const srcName=it=>{ const v=/\(via ([^)]+)\)/.exec(it.source||''); if(v) return v[1].trim(); try{ return it.source||new URL(it.sourceUrl).hostname.replace(/^www\./,''); }catch(e){ return 'the source'; } };
+  const srcHost=it=>{ try{ return new URL(it.sourceUrl).hostname.replace(/^www\./,''); }catch(e){ return 'the source'; } };  // the site the link really opens
   function popupHtml(it){
     const c=isClosed(it)&&!isStale(it);
-    return `<b>${c?'<span style="color:'+col('closed')+'">CLOSED</span> · ':''}${esc(c?closedWhere(it):where(it))}</b>${vbadge(it)}${it.raisedBy?`<div class="raised">Marked closed because ${esc(it.raisedBy.agency)} says so${it.verified&&it.verified.quote===it.raisedBy.quote?' (quoted above)':`: “${esc(it.raisedBy.quote)}” <a href="${esc(it.raisedBy.url)}" target="_blank" rel="noopener">${esc(it.raisedBy.agency)} ↗</a>`}</div>`:''}${esc(impact(it))}${nll(it)}${c&&span(it)?`<br><span class="src">Reported ${esc(it.spot||'')}. The stretch shown runs to the nearest cross street on each side.</span>`:''}<div class="src">${esc(it.title)}${it.city?' · '+esc(it.city):''}<br>${tier(it)} · ${esc(it.source)} · ${esc(when(it.updated||it.reported))}${it.approx?' · approximate location':''}${it.note?'<br>'+(it.raisedBy?'Earlier report: ':'')+esc(it.note):''}${it.sourceUrl?'<br><a href="'+esc(it.sourceUrl)+'" target="_blank" rel="noopener">Read the report at '+esc(srcName(it))+' ↗</a>':''}</div>`;
+    return `<b>${c?'<span style="color:'+col('closed')+'">CLOSED</span> · ':''}${esc(c?closedWhere(it):where(it))}</b>${vbadge(it)}${it.raisedBy?`<div class="raised">Marked closed because ${esc(it.raisedBy.agency)} says so${it.verified&&it.verified.quote===it.raisedBy.quote?' (quoted above)':`: “${esc(it.raisedBy.quote)}” <a href="${esc(it.raisedBy.url)}" target="_blank" rel="noopener">${esc(it.raisedBy.agency)} ↗</a>`}</div>`:''}${esc(impact(it))}${nll(it)}${c&&span(it)?`<br><span class="src">Reported ${esc(it.spot||'')}. The stretch shown runs to the nearest cross street on each side.</span>`:''}<div class="src">${esc(it.title)}${it.city?' · '+esc(it.city):''}<br>${tier(it)} · ${esc(it.source)} · ${esc(when(it.updated||it.reported))}${it.approx?' · approximate location':''}${it.note?'<br>'+(it.raisedBy?'Earlier report: ':'')+esc(it.note):''}${it.sourceUrl?'<br><a href="'+esc(it.sourceUrl)+'" target="_blank" rel="noopener">Read the report at '+esc(srcHost(it))+' ↗</a>':''}</div>`;
   }
   const FILT={flood:'f-flood',mvc:'f-mvc',closure:'f-closure',hazard:'f-caution'};
   const shown=k=>document.getElementById(FILT[k]).checked;

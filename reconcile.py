@@ -167,8 +167,8 @@ FEEDS = {"fl511": {"agency": "FL511 (FDOT)", "url": "https://fl511.com"},
 def verification(r: dict) -> dict | None:
     """Government verified: the report came from a government feed itself, or a government page confirmed it
     (a `verified` event). Otherwise None: shown as reported, not government verified."""
-    if r["src"] in FEEDS:
-        return dict(FEEDS[r["src"]], kind="feed", publishedAt=r["firstReported"])
+    if r["src"] in FEEDS and not r.get("raisedBy"):  # dated by the feed observation that set the current impact
+        return dict(FEEDS[r["src"]], kind="feed", publishedAt=r.get("statusAt") or r["firstReported"])
     if r.get("verified"):
         return dict(r["verified"], kind="page")
     return None

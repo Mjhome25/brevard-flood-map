@@ -201,8 +201,7 @@ except Exception as e: print("note (closure extents skipped):", e)
 # Wrecks are shown only as "MVC" with the road impact. No fatality, injury or
 # personal details from any source ever reach the page.
 import re
-_CRASH = re.compile(r"\b(?:(?:fatal(?:ity)?|serious|injury|traffic|vehicle|motor vehicle|multi-vehicle|vehicle fire\W+)?\s*(?:crash(?:es)?|collisions?|accidents?|wrecks?)|hit\s*(?:and|&)\s*run|fatal(?:ity|ities)?|pedestrian\s+(?:struck|crash|accident))\b", re.I)
-_SENSITIVE = re.compile(r"\b(?:with\s+)?(?:fatal(?:ity|ities)?|(?<!or-)deaths?|dead|died|dies|killed|deceased|injur(?:y|ies|ed)|entrap\w*|trapped|ejected|victims?|bod(?:y|ies)|trauma(?:\s+alert)?|airlift\w*|life\s*flight|transported|hospitali[sz]ed|critical(?:ly)?\s+(?:condition|injured)|drivers?|passengers?|occupants?|pedestrians?|juveniles?|man|woman|child(?:ren)?|teen(?:ager)?s?|person|people|(?:\d+|one|two|three)\s+(?:people|persons|vehicles?\s+occupants))\b", re.I)
+from events import CRASH as _CRASH, SENSITIVE as _SENSITIVE  # noqa: E402  (shared with evidence checks)
 def scrub(t):
     if not t: return t
     t = _CRASH.sub("MVC", t)

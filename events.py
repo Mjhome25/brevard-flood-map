@@ -27,6 +27,7 @@ import datetime
 import hashlib
 import json
 import os
+import re
 import urllib.parse
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -40,6 +41,13 @@ FIELDS = ("road", "roadShort", "dir", "spot", "where", "title", "city", "status"
 # The closed stretch travels as one set: filled once when the record had none, never moved or narrowed afterwards.
 EXTENT = ("line", "from", "to", "length_m")
 SEVERITY = {"caution": 0, "hazard": 1, "mvc": 1, "flooded": 1, "closed": 2}
+
+
+# Privacy (Mike, Nov 2): no fatality, injury or personal detail reaches the page from any source.
+CRASH = re.compile(r"\b(?:(?:fatal(?:ity)?|serious|injury|traffic|vehicle|motor vehicle|multi-vehicle|vehicle fire\W+)?\s*(?:crash(?:es)?|collisions?|accidents?|wrecks?)|hit\s*(?:and|&)\s*run|fatal(?:ity|ities)?|pedestrian\s+(?:struck|crash|accident))\b", re.I)
+SENSITIVE = re.compile(r"\b(?:with\s+)?(?:fatal(?:ity|ities)?|(?<!or-)deaths?|dead|died|dies|killed|deceased|injur(?:y|ies|ed)|entrap\w*|trapped|ejected|victims?|bod(?:y|ies)|trauma(?:\s+alert)?|airlift\w*|life\s*flight|transported|hospitali[sz]ed|critical(?:ly)?\s+(?:condition|injured)|drivers?|passengers?|occupants?|pedestrians?|juveniles?|man|woman|child(?:ren)?|teen(?:ager)?s?|person|people|(?:\d+|one|two|three)\s+(?:people|persons|vehicles?\s+occupants))\b", re.I)
+DATE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
+SHA = re.compile(r"^[0-9a-f]{64}$")
 
 
 def verify_hosts(county_path: str = os.path.join(HERE, "county.json")) -> dict:
@@ -100,12 +108,26 @@ def load(path: str = EVENTS) -> list[dict]:
     return out
 
 
-def _check_gov(seq, v: dict, need: tuple) -> None:
-    """Evidence from a government page: required fields, an exact host on the county's verify list, URL on that host."""
-    if not all(v.get(k) for k in need):
-        raise Refused(f"seq {seq}: government evidence needs {', '.join(need)}")
-    if v["host"] not in verify_hosts() or urllib.parse.urlparse(v["url"]).hostname != v["host"]:
+GOV_FIELDS = ("host", "url", "finalUrl", "agency", "quote", "publishedDate", "checkedAt", "pageSha256", "verifier")
+
+
+def _check_gov(seq, v: dict, at: str) -> None:
+    """Evidence read from a government page by verify.py: every receipt field present and well formed, https on an exact
+    host from the county's verify list (also after redirects), the configured agency for that host, a page date that is
+    not after the event, and a short road-only quote with no personal detail."""
+    if not isinstance(v, dict) or not all(v.get(k) for k in GOV_FIELDS):
+        raise Refused(f"seq {seq}: government evidence needs {', '.join(GOV_FIELDS)}")
+    hosts = verify_hosts()
+    for u in (v["url"], v["finalUrl"]):
+        p = urllib.parse.urlparse(u)
+        if p.scheme != "https" or p.hostname != v["host"]:
+            raise Refused(f"seq {seq}: evidence URL {u!r} is not https on {v['host']!r}")
+    if v["host"] not in hosts or hosts[v["host"]] != v["agency"]:
         raise Refused(f"seq {seq}: {v.get('host')!r} is not a government host on the county's verify list")
+    if not DATE.match(v["publishedDate"]) or v["publishedDate"] > at[:10] or not parse(v["checkedAt"]):
+        raise Refused(f"seq {seq}: evidence dates are malformed or in the future")
+    if not SHA.match(v["pageSha256"]) or len(v["quote"]) > 200 or SENSITIVE.search(v["quote"]):
+        raise Refused(f"seq {seq}: evidence quote or page hash is not acceptable")
 
 
 def validate(ev: dict, prev_seq: int, clearance_enabled: bool, prev_eid: str = "") -> None:
@@ -132,9 +154,9 @@ def validate(ev: dict, prev_seq: int, clearance_enabled: bool, prev_eid: str = "
     if kind == "recheck" and not ev.get("reason"):
         raise Refused(f"seq {ev['seq']}: recheck needs a reason")
     if kind == "relisted" and "raisedBy" in ev:
-        _check_gov(ev["seq"], ev["raisedBy"], ("host", "url", "agency", "quote"))
+        _check_gov(ev["seq"], ev["raisedBy"], ev["at"])
     if kind == "verified":
-        _check_gov(ev["seq"], ev.get("evidence") or {}, ("host", "url", "agency", "quote", "publishedAt"))
+        _check_gov(ev["seq"], ev.get("evidence") or {}, ev["at"])
     if kind == "cleared":
         if not clearance_enabled:
             raise Refused(f"seq {ev['seq']}: clearance is disabled for this county")
@@ -229,17 +251,24 @@ def apply(state: dict, ev: dict) -> None:
         if r is None:
             recs[rid] = {"rid": rid, "src": ev.get("src"), "status": "active", "fields": dict(ev["fields"]),
                          "firstReported": ev["stime"], "lastReported": ev["stime"], "recheck": [], "missingSince": None,
-                         "reopenedAt": None, "evidence": None, "verified": None}
+                         "reopenedAt": None, "evidence": None, "verified": None, "raisedBy": None,
+                         "statusAt": ev["stime"]}
             return
         if r["status"] == "reopened":
             if st and st > parse(r["reopenedAt"]):
                 r.update(status="active", fields=dict(ev["fields"]), lastReported=ev["stime"], recheck=[],
-                         missingSince=None, reopenedAt=None, evidence=None)
+                         missingSince=None, reopenedAt=None, evidence=None, verified=None, raisedBy=None,
+                         statusAt=ev["stime"])  # a new incarnation never inherits the old one's badge
             return
         was = rank(r["fields"])
         r["fields"], reasons = _merge_up(r["fields"], ev["fields"])
-        if ev.get("raisedBy") and rank(r["fields"]) > was:
-            r["raisedBy"] = ev["raisedBy"]
+        if rank(r["fields"]) > was:  # remember which observation supports the current impact
+            r["statusAt"], r["raisedBy"] = ev["stime"], ev.get("raisedBy")
+            if ev.get("raisedBy"):
+                r["belowRaise"] = was
+        if r.get("raisedBy") and not ev.get("raisedBy") and rank(ev["fields"]) >= tuple(r.get("belowRaise") or ()):
+            # the original report repeating its own weaker wording is not new reduced impact
+            reasons = [x for x in reasons if x != "source shows reduced impact"]
         if st and st > parse(r["lastReported"]):
             r["lastReported"] = ev["stime"]
         r["missingSince"] = None
@@ -255,7 +284,7 @@ def apply(state: dict, ev: dict) -> None:
         if r["status"] == "active" and ev["reason"] not in r["recheck"]:
             r["recheck"].append(ev["reason"])
     elif kind == "verified":  # the newest official statement wins; earlier ones stay in the history
-        if not r.get("verified") or ev["evidence"]["publishedAt"] >= r["verified"]["publishedAt"]:
+        if not r.get("verified") or ev["evidence"]["publishedDate"] >= r["verified"]["publishedDate"]:
             r["verified"] = ev["evidence"]
     elif kind == "cleared":
         r.update(status="reopened", reopenedAt=ev["evidence"]["reopenedAt"], evidence=ev["evidence"])
