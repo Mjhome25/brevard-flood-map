@@ -10,7 +10,8 @@ report's road as its subject:
   "<road> at <cross street> is flooded."   "Flooding on <road> at <cross street>."
 Anything else (other wording, extra clauses, names, hedges) is refused and stays unverified, so only road wording is
 ever stored. A closure sentence verifies a closure; a flooding sentence only a flood report. The date is the
-"Published on <Month D, YYYY>" of the <article> post holding the sentence, never a date typed here, and it must not be older
+"Published on <Month D, YYYY>" of the post block holding the sentence (an <article>, or the City of Melbourne
+notice column), never a date typed here, and it must not be older
 than this report (an old post is another event).
 
 --closed / --full-closure: the sentence says the road is closed (all of it, for --full-closure), so the report is
@@ -22,6 +23,7 @@ from __future__ import annotations
 import datetime
 import hashlib
 import html
+import html.parser
 import os
 import re
 import sys
@@ -42,11 +44,47 @@ def page_text(page: str) -> str:
                                                      flags=re.S | re.I))).strip()
 
 
+VOID = {"area", "base", "br", "col", "embed", "hr", "img", "input", "link", "meta", "source", "track", "wbr"}
+
+
+class Posts(html.parser.HTMLParser):
+    """Text of each supported post block: an <article>, or the City of Melbourne (OpenCities) notice column, a
+    div.col-m-8 inside #main-content. Sibling columns, sidebars and navigation are separate blocks or none."""
+
+    def __init__(self):
+        super().__init__(convert_charrefs=True)
+        self.stack, self.posts = [], []  # stack of (tag, inside #main-content, index of the post it opens or None)
+
+    def handle_starttag(self, tag, attrs):
+        if tag in VOID:
+            return
+        a = dict(attrs)
+        main = (self.stack and self.stack[-1][1]) or a.get("id") == "main-content"
+        opens = tag == "article" or (tag == "div" and main and "col-m-8" in (a.get("class") or "").split())
+        if opens:
+            self.posts.append([])
+        self.stack.append((tag, main, len(self.posts) - 1 if opens else None))
+
+    def handle_endtag(self, tag):
+        if tag in VOID or tag not in (s[0] for s in self.stack):
+            return  # <img/> and stray closing tags close nothing
+        while self.stack:
+            if self.stack.pop()[0] == tag:
+                break
+
+    def handle_data(self, data):
+        for _, _, i in self.stack:
+            if i is not None:
+                self.posts[i].append(data)
+
+
 def post_of(page: str, quote: str) -> tuple[str, str] | None:
-    """(date, post text) of the one <article> holding the sentence, with its own 'Published on' before it. A page
-    without articles, a sentence outside one, or an article with no date or several dates is not supported."""
-    for inner in re.findall(r"<article\b[^>]*>(.*?)</article>", page, flags=re.S | re.I):
-        text = page_text(inner)
+    """(date, post text) of the one supported post block holding the sentence, with its own 'Published on' before it.
+    A sentence outside a supported block, or a block with no date or several dates, is not supported."""
+    parser = Posts()
+    parser.feed(re.sub(r"<script.*?</script>|<style.*?</style>", " ", page, flags=re.S | re.I))
+    for parts in parser.posts:
+        text = re.sub(r"\s+", " ", " ".join(parts)).strip()
         if quote not in text:
             continue
         dates = list(PUBLISHED.finditer(text))
@@ -83,7 +121,7 @@ def issue(rid: str, url: str, quote: str, raise_to: str | None, page: str, final
         raise E.Refused("the sentence is not on the page")
     post = post_of(page, quote)
     if not post or post[0] > E.iso(now)[:10]:
-        raise E.Refused("the sentence is not inside one dated post (<article> with its own 'Published on' before it)")
+        raise E.Refused("the sentence is not inside one dated post (an article or the city's notice column, with its own 'Published on' before it)")
     published = post[0]
     if published < E._episode(rec):
         raise E.Refused(f"the post ({published}) is older than this report ({E._episode(rec)}), so it is another event")

@@ -282,6 +282,22 @@ check("a flooding sentence badges a flooded report that is not shown closed",
       not refusedq("dairy", "All of Dairy Road is flooded.", None, P2) and recq("dairy")["verified"]["quote"].endswith("flooded."))
 check("a same-post, same-episode closure sentence raises and verifies (positive control)",
       not refusedq("dfull", "All of Dairy Road is closed.") and recq("dfull")["verified"]["publishedDate"] == "2026-11-02")
+# The real City of Melbourne notice layout (structural fixture of the Nov 2 notice: #main-content > .col-m-8)
+REAL = open(os.path.join(repo, "tests", "fixtures", "melbourne_notice_2026-11-02.html")).read()
+for q in ("All of Dairy Road is closed.", "All of Lake Washington Road is closed.",
+          "Babcock Street at University Boulevard is closed."):
+    check(f"the real notice column dates its own sentence: {q}", (V.post_of(REAL, q) or [None])[0] == "2026-11-02")
+check("the real notice's sidebar column is not the notice", V.post_of(REAL, "Sarno Road at Croton Road is closed.") is None)
+check("a dated block outside #main-content (footer) is not a notice",
+      V.post_of(REAL, "Minton Road at Norfolk Parkway is closed.") is None)
+run(pq, {"sources": {"manual": "up"}, "items": [
+    man("dairy", road="Dairy Rd", spot="at Florida Ave", where="Dairy Rd at Florida Ave"),
+    man("dfull", road="Dairy Rd", spot="at Babcock St", status="closed", fullClosure=True),
+    man("fwet", road="Dairy Rd", spot="at Babcock St", status="flooded", fullClosure=True),
+    man("bab", road="Babcock St", spot="at University Blvd", status="closed")]}, 2)
+check("the real notice verifies the matching Babcock closure, dated Nov 2",
+      not refusedq("bab", "Babcock Street at University Boulevard is closed.", None, REAL)
+      and recq("bab")["verified"]["publishedDate"] == "2026-11-02")
 fake = dict(good["evidence"], quote="All of Hollywood Boulevard is closed.")
 E.append([{"rid": "brevard:manual:dfull", "src": "manual", "kind": "verified", "actor": "x", "evidence": fake}], pq, now=NOWV)
 check("a well-formed raw receipt about another road does not badge this record",
