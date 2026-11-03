@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-03T02:46:25Z",
+ "generated": "2026-11-03T03:00:28Z",
  "errors": [],
  "items": [
   {
@@ -258,47 +258,7 @@
    "updated": "2026-11-02T17:00:00Z",
    "note": "Blocked to traffic by Melbourne Fire Dept; segment not specified. Pin approximate.",
    "lanes": "All lanes blocked",
-   "layer": "manual",
-   "from": "Mark Twain Ln NE",
-   "to": "Isom Ln NE",
-   "line": [
-    [
-     28.020664,
-     -80.614909
-    ],
-    [
-     28.022014,
-     -80.614877
-    ],
-    [
-     28.022133,
-     -80.614913
-    ],
-    [
-     28.022182,
-     -80.615038
-    ],
-    [
-     28.022198,
-     -80.615227
-    ],
-    [
-     28.022184,
-     -80.615713
-    ],
-    [
-     28.022232,
-     -80.61583
-    ],
-    [
-     28.023196,
-     -80.61584
-    ],
-    [
-     28.023502,
-     -80.615843
-    ]
-   ]
+   "layer": "manual"
   },
   {
    "road": "Riverside Dr",
@@ -575,7 +535,7 @@
    "status": "flooded",
    "fullClosure": true,
    "reported": "2026-11-02T09:24:00Z",
-   "updated": "2026-11-03T01:00:00Z",
+   "updated": "2026-11-03T02:48:00Z",
    "lat": 28.07888,
    "lng": -80.672522,
    "layer": "Closures",
@@ -638,7 +598,7 @@
    "status": "closed",
    "fullClosure": true,
    "reported": "2026-11-02T13:10:00Z",
-   "updated": "2026-11-03T00:15:00Z",
+   "updated": "2026-11-03T02:48:00Z",
    "lat": 28.076526,
    "lng": -80.621403,
    "layer": "Closures",
@@ -677,7 +637,7 @@
    "status": "flooded",
    "fullClosure": true,
    "reported": "2026-11-02T13:35:00Z",
-   "updated": "2026-11-03T02:14:00Z",
+   "updated": "2026-11-03T02:53:00Z",
    "lat": 28.078862,
    "lng": -80.703539,
    "layer": "Closures",
@@ -780,7 +740,7 @@
    "status": "flooded",
    "fullClosure": true,
    "reported": "2026-11-02T13:12:00Z",
-   "updated": "2026-11-03T02:14:00Z",
+   "updated": "2026-11-03T02:53:00Z",
    "lat": 28.064037,
    "lng": -80.621372,
    "layer": "Closures",
@@ -835,7 +795,7 @@
    "status": "flooded",
    "fullClosure": true,
    "reported": "2026-11-02T14:29:00Z",
-   "updated": "2026-11-03T02:14:00Z",
+   "updated": "2026-11-03T02:53:00Z",
    "lat": 28.078871,
    "lng": -80.700181,
    "layer": "Closures",
@@ -910,7 +870,7 @@
    "status": "flooded",
    "fullClosure": true,
    "reported": "2026-11-02T21:42:00Z",
-   "updated": "2026-11-03T02:14:00Z",
+   "updated": "2026-11-03T02:53:00Z",
    "lat": 28.004405,
    "lng": -80.563736,
    "layer": "Closures",
@@ -939,7 +899,7 @@
    "status": "flooded",
    "fullClosure": true,
    "reported": "2026-11-02T21:51:00Z",
-   "updated": "2026-11-03T02:14:00Z",
+   "updated": "2026-11-03T02:53:00Z",
    "lat": 28.004412,
    "lng": -80.56374,
    "layer": "Closures",
@@ -1077,7 +1037,7 @@
    "where": "I-95 SB at MM 222"
   },
   {
-   "id": "fhp-11022026043943-1465",
+   "id": "fhp-11022026043943-331",
    "source": "FHP live CAD",
    "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
    "road": "US-1 [2 MILES SOF]",
@@ -1096,7 +1056,7 @@
    "where": "US-1 [2 Miles Sof] at Malabar Rd"
   },
   {
-   "id": "fhp-11022026112806-5484",
+   "id": "fhp-11022026112806-8163",
    "source": "FHP live CAD",
    "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
    "road": "NORFOLK PKWY",
@@ -1343,7 +1303,7 @@
    ]
   },
   {
-   "id": "fhp-11022026112110-7359",
+   "id": "fhp-11022026112110-1748",
    "source": "FHP live CAD",
    "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
    "road": "PALM BAY RD NE [ENT RAMP TO]",
@@ -1362,7 +1322,7 @@
    "where": "Palm Bay Rd Ne [Ent Ramp To] at I-95 Nb"
   },
   {
-   "id": "fhp-11022026090844-5663",
+   "id": "fhp-11022026090844-1822",
    "source": "FHP live CAD",
    "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
    "road": "US-1",
@@ -1413,7 +1373,7 @@
    ]
   },
   {
-   "id": "fhp-11022026065558-2246",
+   "id": "fhp-11022026065558-1635",
    "source": "FHP live CAD",
    "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
    "road": "W NEW HAVEN AVE",
