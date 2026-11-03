@@ -15,7 +15,8 @@ Verdicts, from our own later data at the same place, same direction, with at lea
   stale-unresolved  - another report was active at the drop but has not been reported again since
   corroborated-open - an official statement was the reason, and nothing above applies
   unknown           - nothing else either way (never read as open)
-This is the removal ledger only. Coverage (official advisory pages vs our pins) is a separate step, not yet built.
+Coverage of official advisory pages is coverage.py (every run, audit/coverage.json); its latest counts are added to
+the daily ledger line.
 """
 from __future__ import annotations
 
@@ -130,10 +131,20 @@ def run(now: datetime.datetime, events_path: str = E.EVENTS, water_path: str = o
     tally = lambda rs: {v: sum(1 for r in rs if r["verdict"] == v) for v in sorted({r["verdict"] for r in rs})}
     by_kind = {k: tally([r for r in rows if r["kind"] == k]) for k in ("removed", "disappeared", "water")}
     down = sorted(s for s, h in final["sources"].items() if h.get("state") != "up")
-    return {"date": today, "through": E.iso(now), "scope": "removal ledger only; coverage of official pages is not part "
-            "of this audit", "complete": water_ok, "unavailable": [] if water_ok else ["water_notices.json"],
+    return {"date": today, "through": E.iso(now), "scope": "removal ledger; official-page coverage is in audit/coverage.json", "complete": water_ok, "unavailable": [] if water_ok else ["water_notices.json"],
             "sourcesNotUp": down, "cases": len(rows), "new": sum(r["new"] for r in rows),
             "changed": sum(r["changed"] for r in rows), "byKind": by_kind, "rows": rows, "book": book}
+
+
+def coverage_line(path: str = os.path.join(AUDIT, "coverage.json")) -> str:
+    """The latest official advisory coverage counts (coverage.py), or that they are unavailable."""
+    try:
+        cov = json.load(open(path))
+        parts = [f"{s['agency']} {', '.join(f'{v} {k}' for k, v in s['summary'].items())}" for s in cov["sources"]]
+        parts += [f"unavailable {u['url']}" for u in cov.get("unavailable", [])]
+        return f"Coverage ({cov['checkedAt']}): {'; '.join(parts) or 'no sources read'}."
+    except (OSError, ValueError, KeyError, TypeError):
+        return "Coverage: unavailable."
 
 
 def main(argv: list[str]) -> int:
@@ -162,7 +173,7 @@ def main(argv: list[str]) -> int:
                           for k, v in rep["byKind"].items())
         line = (f"- {today}: {rep['cases']} cases, {rep['new']} new, {rep['changed']} changed verdict. {kinds}. "
                 f"Sources not up: {', '.join(rep['sourcesNotUp']) or 'none'}. "
-                f"Unavailable: {', '.join(rep['unavailable']) or 'none'}.\n")
+                f"Unavailable: {', '.join(rep['unavailable']) or 'none'}. {coverage_line()}\n")
     except Exception as exc:  # a failed audit leaves a durable record and never stops the map
         line = f"- {today}: AUDIT FAILED ({type(exc).__name__}); no report written, will retry next run.\n"
         rep = None

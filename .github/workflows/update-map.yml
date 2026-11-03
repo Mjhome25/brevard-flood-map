@@ -34,6 +34,7 @@ jobs:
           python3 -I tests/test_reconcile.py "$PWD"
           python3 -I tests/test_water_notices.py
           python3 -I tests/test_audit.py "$PWD"
+          python3 -I tests/test_coverage.py "$PWD"
 
       - name: Snapshot the accepted closure history
         run: cp closure_events.jsonl "$RUNNER_TEMP/events.before"
@@ -61,6 +62,12 @@ jobs:
 
       # Once a day (first run after 7 AM Eastern, until Dec 3): every report taken off the map, from any source, gets a
       # verdict in audit/ (a quiet ledger, no alerts). It only reads the history; a failure here never stops the map.
+      # Every run: each line of the newest official city traffic update is matched against the pins (covered / weaker /
+      # missed / reopening candidates / dropped) in audit/coverage.json. Read-only; a failure never stops the map.
+      - name: Official advisory coverage
+        continue-on-error: true
+        run: python3 -I coverage.py
+
       - name: Daily removal audit
         continue-on-error: true
         run: python3 -I audit.py --due
