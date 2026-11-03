@@ -367,10 +367,15 @@ check("storm report: 'X is flooded' names the road; the point is approximate",
 check("storm report: a negated closure remark does not close the road",
       R.lsr_item(dict(ents[0], remarks="Road closure at Helen St & Minton Rd is no longer in effect."), "x", "u")["status"] == "flooded")
 for neg in ("No road closed at Helen St & Minton Rd.", "A road closure is possible at Helen St & Minton Rd.",
-            "Road closure at Helen St & Minton Rd has ended.", "Road closure at Helen St & Minton Rd is no longer in effect."):
+            "Road closure at Helen St & Minton Rd has ended.", "Road closure at Helen St & Minton Rd is no longer in effect.",
+            "Police deny a road closure at Helen St & Minton Rd.", "Road closure at Helen St & Minton Rd is canceled."):
     check(f"storm report: not closed for '{neg}'", R.lsr_item(dict(ents[0], remarks=neg), "x", "u")["status"] == "flooded")
 multi = R.lsr_item(dict(ents[0], remarks="Flooding near Palm Bay Rd & Babcock St. Police report a road closure at "
                                          "Helen St & Minton Rd due to flooding."), "x", "u")
+mixed = R.lsr_item(dict(ents[0], remarks="Flooding near Palm Bay Rd & Babcock St, with a road closure at Helen St & "
+                                         "Minton Rd."), "x", "u")
+check("storm report: a closure clause inside a flooding sentence does not close the flooded intersection",
+      mixed["status"] == "flooded" and mixed["road"] == "Palm Bay Rd")
 check("storm report: in a multi-location remark the closure binds to its own intersection",
       (multi["status"], multi["road"], multi["spot"]) == ("closed", "Helen St", "at Minton Rd"))
 check("storm report ids are stable and separate", len({R.rid_of(i) for i in its}) == 3

@@ -101,11 +101,13 @@ def fhp_normalize(it: dict) -> dict | None:
 
 LSR_FLOOD = ("FLOOD", "FLASH FLOOD", "COASTAL FLOOD")
 _LSR_HEAD = re.compile(r"^(\d{4}) ([AP]M) {2,}")
-_LSR_ROAD_CLOSED = re.compile(r"\broads?(?:way)?s?\s+(?:closure|closed)\b|\bclosed\s+roads?\b", re.I)
-_LSR_DOUBT = re.compile(r"\b(?:no|not|never|no longer|possible|possibly|may|might|could|expected|potential|ended|over|"
-                        r"lifted|cleared|re-?opened|open|until|will|earlier|previously|was|were)\b", re.I)
 _W = r"[A-Z0-9]\w*"  # a capitalised word; names stop at a lower-case word or a full stop
 _LSR_AT = re.compile(rf"\b(?:at|near|on)\s+(?:at\s+)?({_W}(?: {_W})*?)\s+(?:&|and|at)\s+({_W}(?: {_W})*)")
+# The only remark sentences read as a closure: a whole sentence whose closure clause carries its own intersection.
+# "Media reports a road closure at Helen St & Minton Rd due to flooding." / "Road closure at X & Y."
+_LSR_CLOSED = re.compile(rf"^(?:(?:{_W}(?: {_W})*|Media|Police|Law enforcement) (?:reports?|reported|has reported) a "
+                         rf"|)[Rr]oad closure (?:at|near) (?:at )?({_W}(?: {_W})*?) (?:&|and) ({_W}(?: {_W})*)"
+                         rf"(?: due to flooding)?\.?$")
 _LSR_IS = re.compile(rf"^({_W}(?: {_W})* (?:St|Rd|Ave|Blvd|Dr|Ln|Pkwy|Hwy|Way|Ct|Pl|Cswy|Street|Road|Avenue)"
                      rf"(?: [NS][EW])?) is flooded")
 
@@ -138,11 +140,10 @@ def lsr_item(e: dict, when: str, url: str) -> dict:
     road is closed shows the road closed, otherwise flooded. The NWS point is rounded, so the spot comes from the
     remark's intersection when it names one."""
     rem, near = e["remarks"], re.sub(r"^\d+ [NSEW]{1,3} ", "", e["city"])
-    # closed only from one sentence that says, without hedging, that a road is closed at the intersection it names
-    sent = next((s for s in re.split(r"(?<=\.)\s+", rem) if _LSR_ROAD_CLOSED.search(s) and not _LSR_DOUBT.search(s)
-                 and _LSR_AT.search(s)), None)
-    closed = sent is not None
-    m = _LSR_AT.search(sent or rem)
+    # closed only from a whole supported closure sentence; its own intersection is the spot. Anything else stays flooded.
+    c = next(filter(None, (_LSR_CLOSED.match(s) for s in re.split(r"(?<=\.)\s+", rem))), None)
+    closed = c is not None
+    m = c or _LSR_AT.search(rem)
     if m:
         road, spot = m.group(1), "at " + m.group(2)
     else:
