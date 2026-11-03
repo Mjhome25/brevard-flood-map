@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-03T11:30:30Z",
+ "generated": "2026-11-03T11:46:26Z",
  "errors": [],
  "items": [
   {
@@ -738,6 +738,155 @@
    "updated": "2026-11-02T16:28:06Z",
    "lastReported": "2026-11-02T16:28:06Z",
    "firstReported": "2026-11-02T16:28:06Z",
+   "awaitingOfficial": true,
+   "missingSince": "2026-11-03T11:46:30Z",
+   "recheck": []
+  },
+  {
+   "from": "Carriage Gate Dr",
+   "fullClosure": true,
+   "lanes": "Roadway Flooded - Seek Alternate Route",
+   "lat": 28.0513306060606,
+   "layer": "FHP",
+   "line": [
+    [
+     28.046135,
+     -80.671396
+    ],
+    [
+     28.048201,
+     -80.67135
+    ],
+    [
+     28.049031,
+     -80.671338
+    ],
+    [
+     28.050285,
+     -80.671318
+    ],
+    [
+     28.05133,
+     -80.671349
+    ],
+    [
+     28.05149,
+     -80.671354
+    ]
+   ],
+   "lng": -80.6713037669008,
+   "reported": "2026-11-02T16:28:06Z",
+   "road": "MINTON RD",
+   "roadShort": "Minton Rd",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "spot": "at Eber Blvd",
+   "status": "flooded",
+   "title": "Road Closed Due To Water at MINTON RD x[EBER BLVD] [WEST MELBOURNE] (Roadway Flooded - Seek Alternate Route)",
+   "to": "Burdock Ave",
+   "where": "Minton Rd at Eber Blvd",
+   "id": "brevard:fhp:20261102162806-a1e1d51b",
+   "updated": "2026-11-02T16:28:06Z",
+   "lastReported": "2026-11-02T16:28:06Z",
+   "firstReported": "2026-11-02T16:28:06Z",
+   "awaitingOfficial": false,
+   "missingSince": null,
+   "recheck": []
+  },
+  {
+   "from": "Lakes Of Melbourne Dr",
+   "fullClosure": true,
+   "lanes": "Roadway Flooded -- Seek Alternate Route",
+   "lat": 28.0499227316645,
+   "layer": "FHP",
+   "line": [
+    [
+     28.049837,
+     -80.656631
+    ],
+    [
+     28.049822,
+     -80.654279
+    ],
+    [
+     28.049819,
+     -80.6541
+    ],
+    [
+     28.049717,
+     -80.648737
+    ]
+   ],
+   "lng": -80.6540976494886,
+   "reported": "2026-11-03T11:35:54Z",
+   "road": "EBER BLVD",
+   "roadShort": "Eber Blvd",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "spot": "at Hollywood Blvd",
+   "status": "flooded",
+   "title": "Road Closed Due To Water at EBER BLVD x[HOLLYWOOD BLVD] [MELBOURNE] (Roadway Flooded -- Seek Alternate Route)",
+   "to": "Alaqua Way",
+   "where": "Eber Blvd at Hollywood Blvd",
+   "id": "brevard:fhp:20261103113554-f45b9b31",
+   "updated": "2026-11-03T11:35:54Z",
+   "lastReported": "2026-11-03T11:35:54Z",
+   "firstReported": "2026-11-03T11:35:54Z",
+   "awaitingOfficial": false,
+   "missingSince": null,
+   "recheck": []
+  },
+  {
+   "from": "Hoover Ln",
+   "fullClosure": true,
+   "lanes": "Roadway Flooded -- Seek Alternate Route",
+   "lat": 28.0718878612209,
+   "layer": "FHP",
+   "line": [
+    [
+     28.072148,
+     -80.672187
+    ],
+    [
+     28.07213,
+     -80.671063
+    ],
+    [
+     28.072118,
+     -80.670822
+    ],
+    [
+     28.072117,
+     -80.670809
+    ],
+    [
+     28.072112,
+     -80.670683
+    ],
+    [
+     28.072107,
+     -80.67052
+    ],
+    [
+     28.072039,
+     -80.66812
+    ]
+   ],
+   "lng": -80.6708368750671,
+   "reported": "2026-11-03T11:36:15Z",
+   "road": "HENRY AVE",
+   "roadShort": "Henry Ave",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "spot": "at Minton Rd",
+   "status": "flooded",
+   "title": "Road Closed Due To Water at HENRY AVE x[MINTON RD] [WEST MELBOURNE] (Roadway Flooded -- Seek Alternate Route)",
+   "to": "Antrim Gardens Ct",
+   "where": "Henry Ave at Minton Rd",
+   "id": "brevard:fhp:20261103113615-4814a673",
+   "updated": "2026-11-03T11:36:15Z",
+   "lastReported": "2026-11-03T11:36:15Z",
+   "firstReported": "2026-11-03T11:36:15Z",
    "awaitingOfficial": false,
    "missingSince": null,
    "recheck": []
@@ -2988,22 +3137,10 @@
    "url": "https://www.facebook.com/BrevardEOC/"
   },
   {
-   "agency": "Brevard Public Schools",
-   "time": "2026-11-02T11:45:00Z",
-   "text": "All schools closed today due to flooding.",
-   "url": "https://www.facebook.com/BrevardPublicSchools/"
-  },
-  {
    "agency": "Space Launch Delta 45 (Patrick SFB / Cape Canaveral SFS)",
    "time": "2026-11-02T14:07:00Z",
    "text": "Non-mission-essential personnel should not report today because of hazardous roads and local flooding on base.",
    "url": "https://www.floridatoday.com/story/weather/2026/11/02/florida-flood-watch-rain-updates-monday--live/92560023007/"
-  },
-  {
-   "agency": "City of Titusville",
-   "time": "2026-11-02T11:30:00Z",
-   "text": "Wastewater system at capacity after overnight rain; controlled release of treated reclaimed water into the Indian River Lagoon began about 6:30 a.m. at the Osprey facility. Residents asked to cut nonessential water use (laundry, dishwashers, long showers) until further notice. Some Titusville streets impassable.",
-   "url": "https://www.wftv.com/news/local/titusville-begins-emergency-release-treated-water-into-indian-river-lagoon/NRBSPUPMXRDOHNBDRXZ4X2G55I/"
   },
   {
    "agency": "Space Coast Area Transit (via WFTV)",
