@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Pull live Brevard County road/flood data and write flood_data.json.
+"""Pull live Brevard County road/flood data and write observations.json (reconcile.py then writes flood_data.json).
 
 Sources (all public, no keys):
   - FL511 list endpoints (Incidents, Closures) filtered to county == Brevard
@@ -11,7 +11,8 @@ Run:  python3 update_flood_data.py   (writes flood_data.json next to it)
 import json, re, html, os, sys, urllib.request, urllib.parse, datetime
 HERE = os.path.dirname(os.path.abspath(__file__))
 UA = "BrevardFloodMap/0.1 (+https://brevardemergency.com)"
-TZ = datetime.timezone(datetime.timedelta(hours=-5), "EST")
+from zoneinfo import ZoneInfo
+TZ = ZoneInfo("America/New_York")  # FL511 and FHP times are Eastern, across daylight saving
 
 def get(url, timeout=40, accept="application/json", retries=2):
     import time
@@ -65,9 +66,11 @@ def fl511(layer):
         })
     return out
 seen_ids = set()
+sources = {}  # per-source health for the closure history: up, down (fetch or parse failed) or empty
 for layer in ("Closures", "Incidents"):
     try: items += [it for it in fl511(layer) if not (it["id"] in seen_ids or seen_ids.add(it["id"]))]
-    except Exception as e: errors.append(f"FL511 {layer}: {e}")
+    except Exception as e: errors.append(f"FL511 {layer}: {e}"); sources["fl511"] = "down"
+if sources.get("fl511") != "down": sources["fl511"] = "up" if any(it["layer"] != "FHP" for it in items) else "empty"
 
 # FL511 list rows carry no coordinates; the map-icon endpoint does (by id). Cache them so a transient failure keeps pins.
 cache_path = os.path.join(HERE, "fl511_coords_cache.json")
@@ -145,7 +148,8 @@ try:
             "spot": ("at " + m.group(1).title()) if (m := re.search(r"x\[([^\]]+)\]", loc)) else "",
             "lanes": remark.title() if remark else "",
         })
-except Exception as e: errors.append(f"FHP CAD: {e}")
+    sources["fhp"] = "up" if any(it["layer"] == "FHP" for it in items) else "empty"
+except Exception as e: errors.append(f"FHP CAD: {e}"); sources["fhp"] = "down"
 
 # ---- NWS --------------------------------------------------------------
 alerts = []
@@ -166,13 +170,14 @@ manual = []
 try:
     manual = json.load(open(os.path.join(HERE, "manual_closures.json")))
     for m in manual: m.setdefault("layer", "manual")
-except Exception as e: errors.append(f"manual_closures.json: {e}")
+    sources["manual"] = "up" if manual else "empty"
+except Exception as e: errors.append(f"manual_closures.json: {e}"); sources["manual"] = "down"
 
 advisories = []
 try: advisories = json.load(open(os.path.join(HERE, "advisories.json")))
 except Exception as e: errors.append(f"advisories.json: {e}")
 data = {"generated": iso(datetime.datetime.now(datetime.timezone.utc)), "errors": errors,
-        "items": manual + items, "alerts": alerts, "advisories": advisories}
+        "items": manual + items, "alerts": alerts, "advisories": advisories, "sources": sources}
 # ---- "where" label: road, direction and the exact spot -----------------
 DIRW = {"northbound": "NB", "southbound": "SB", "eastbound": "EB", "westbound": "WB"}
 for it in manual:  # hand-entered reports: split "Minton Rd southbound at US 192" into road / direction / spot
@@ -228,5 +233,6 @@ for it in data["items"]:
 for a in data["advisories"]:
     if a.get("text"): a["text"] = scrub_prose(a["text"])
 
-json.dump(data, open(os.path.join(HERE, "flood_data.json"), "w"), indent=1)
+# reconcile.py turns these observations into closure history and writes flood_data.json from it.
+json.dump(data, open(os.path.join(HERE, "observations.json"), "w"), indent=1)
 print(f"items={len(data['items'])} (manual {len(manual)}) alerts={len(alerts)} errors={errors}")
