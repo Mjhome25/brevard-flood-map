@@ -670,12 +670,18 @@ for ev, why in (({"rid": "brevard:fl511:1", "src": "fl511", "fields": {"lat": 28
                 ({"rid": "brevard:manual:dairy-snicole", "src": "manual", "fields": {"lat": 28.0, "lng": -80.6,
                   "status": "flooded"}, "locatedBy": gis}, "carrying a status"),
                 ({"rid": "brevard:manual:dairy-snicole", "src": "manual", "fields": {"lat": 28.0, "lng": -80.6},
-                  "locatedBy": dict(gis, url="http://x")}, "with a plain-http citation")):
+                  "locatedBy": dict(gis, url="http://x")}, "with a plain-http citation"),
+                ({"rid": "brevard:manual:dairy-snicole", "src": "manual", "fields": {"lat": 28.0, "lng": -80.6},
+                  "locatedBy": dict(gis, note="where the victims were found")}, "with personal detail")):
     try:
         E.append([dict(ev, kind="located", actor="x", stime="2026-11-02T13:00:00Z")], pl); ok = False
     except E.Refused:
         ok = True
     check(f"a pin correction is refused {why}", ok)
+
+ns_src = open(os.path.join(repo, "news_sweep.py")).read()
+check("the news sweep drops model-supplied raise and pin citations",
+      'for k in ("raisedPer", "locatedPer"):' in ns_src and "c.pop(k, None)" in ns_src)
 
 # FHP ids are the same in separate processes (the old id used Python's per-process hash)
 code = ("import sys; sys.path.insert(0, sys.argv[1]); import reconcile as R; "

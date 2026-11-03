@@ -207,10 +207,9 @@ def _check_located(ev: dict) -> None:
     lo, hi, w, e = BREVARD_BOX
     if not (lo <= f["lat"] <= hi and w <= f["lng"] <= e):
         raise Refused(f"seq {seq}: located position is outside Brevard")
-    if not isinstance(v, dict) or set(v) != set(LOCATED_FIELDS) or not all(isinstance(v[k], str) and v[k] for k in v):
-        raise Refused(f"seq {seq}: locatedBy needs exactly {', '.join(LOCATED_FIELDS)}")
-    if urllib.parse.urlparse(v["url"]).scheme != "https" or not parse(v["checked"]) or v["checked"] > ev["at"]:
-        raise Refused(f"seq {seq}: locatedBy needs an https link and a check time not after the event")
+    _plain_citation(seq, v, LOCATED_FIELDS, "locatedBy")
+    if not parse(v["checked"]) or v["checked"] > ev["at"]:
+        raise Refused(f"seq {seq}: locatedBy needs a check time not after the event")
 
 
 def _check_gov(seq, v: dict, at: str) -> None:
