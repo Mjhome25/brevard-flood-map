@@ -1,6 +1,8 @@
 {
- "generated": "2026-11-03T18:15:57Z",
- "errors": [],
+ "generated": "2026-11-03T18:30:36Z",
+ "errors": [
+  "FL511 map locations: 1 report(s) without a pin"
+ ],
  "items": [
   {
    "fullClosure": true,
@@ -732,6 +734,35 @@
    "recheck": []
   },
   {
+   "fullClosure": false,
+   "lanes": "No Roadblock",
+   "lat": 28.1720886209925,
+   "layer": "FHP",
+   "lng": -80.6719020463109,
+   "reported": "2026-11-03T06:22:38Z",
+   "road": "N WICKHAM RD",
+   "roadShort": "N Wickham Rd",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "spot": "at Post Rd",
+   "status": "caution",
+   "title": "MVC at N WICKHAM RD x[POST RD] [MELBOURNE] (No Roadblock)",
+   "where": "N Wickham Rd at Post Rd",
+   "id": "brevard:fhp:20261103062238-88d5c6e2",
+   "updated": "2026-11-03T06:22:38Z",
+   "lastReported": "2026-11-03T06:22:38Z",
+   "firstReported": "2026-11-03T06:22:38Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-03T06:22:38Z"
+   },
+   "awaitingOfficial": false,
+   "missingSince": null,
+   "recheck": []
+  },
+  {
    "from": "Lakes Of Melbourne Dr",
    "fullClosure": true,
    "lanes": "Roadway Flooded -- Seek Alternate Route",
@@ -1178,7 +1209,7 @@
    "source": "FHP live CAD",
    "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
    "spot": "at Eber Rd",
-   "status": "caution",
+   "status": "flooded",
    "title": "Travel Advisory at BABCOCK ST S x[EBER RD] [MELBOURNE]",
    "where": "Babcock St S at Eber Rd",
    "id": "brevard:fhp:20261103161117-8de2c55c",
@@ -1191,9 +1222,11 @@
     "kind": "feed",
     "publishedAt": "2026-11-03T16:11:17Z"
    },
-   "awaitingOfficial": false,
+   "awaitingOfficial": true,
    "missingSince": null,
-   "recheck": []
+   "recheck": [
+    "source changed its lane description"
+   ]
   },
   {
    "fullClosure": false,
@@ -2849,6 +2882,45 @@
    }
   },
   {
+   "dir": "NB",
+   "fullClosure": false,
+   "lat": 28.097417,
+   "layer": "Incidents",
+   "line": [
+    [
+     28.09726,
+     -80.70587
+    ],
+    [
+     28.09742,
+     -80.70586
+    ]
+   ],
+   "lng": -80.705861,
+   "reported": "2026-11-03T17:14:00Z",
+   "road": "I-95",
+   "roadShort": "I-95",
+   "source": "FL511 (FDOT)",
+   "sourceUrl": "https://fl511.com",
+   "spot": "before MM 182/Ellis Rd",
+   "status": "caution",
+   "title": "Incident on I-95 North, before MM 182/Ellis Rd",
+   "where": "I-95 NB before MM 182/Ellis Rd",
+   "id": "brevard:fl511:939164",
+   "updated": "2026-11-03T18:19:00Z",
+   "lastReported": "2026-11-03T18:19:00Z",
+   "firstReported": "2026-11-03T18:19:00Z",
+   "verified": {
+    "agency": "FL511 (FDOT)",
+    "url": "https://fl511.com",
+    "kind": "feed",
+    "publishedAt": "2026-11-03T18:19:00Z"
+   },
+   "awaitingOfficial": false,
+   "missingSince": null,
+   "recheck": []
+  },
+  {
    "dir": "SB",
    "from": "W Eau Gallie Blvd",
    "fullClosure": true,
@@ -3238,6 +3310,76 @@
     "url": "https://fl511.com",
     "kind": "feed",
     "publishedAt": "2026-11-03T17:58:00Z"
+   },
+   "awaitingOfficial": false,
+   "missingSince": null,
+   "recheck": []
+  },
+  {
+   "dir": "both directions",
+   "from": "S Babcock St",
+   "fullClosure": true,
+   "lanes": "All lanes closed",
+   "lat": 28.05697,
+   "layer": "Closures",
+   "line": [
+    [
+     28.057005,
+     -80.621387
+    ],
+    [
+     28.057005,
+     -80.621386
+    ],
+    [
+     28.056969,
+     -80.620977
+    ],
+    [
+     28.056962,
+     -80.620777
+    ],
+    [
+     28.056908,
+     -80.620392
+    ],
+    [
+     28.056807,
+     -80.617222
+    ],
+    [
+     28.056802,
+     -80.615642
+    ],
+    [
+     28.056743,
+     -80.612302
+    ],
+    [
+     28.056716,
+     -80.610462
+    ]
+   ],
+   "lng": -80.62139,
+   "reported": "2026-11-03T18:22:00Z",
+   "road": "Florida Ave",
+   "roadShort": "Florida Ave",
+   "source": "FL511 (FDOT)",
+   "sourceUrl": "https://fl511.com",
+   "spot": "at Babcock St S",
+   "status": "flooded",
+   "title": "Flooding on Florida Ave Both Directions at Babcock St S. All lanes closed.",
+   "to": "Helio Way",
+   "where": "Florida Ave both directions at Babcock St S",
+   "id": "brevard:fl511:939287",
+   "updated": "2026-11-03T18:23:00Z",
+   "lastReported": "2026-11-03T18:23:00Z",
+   "firstReported": "2026-11-03T18:23:00Z",
+   "verified": {
+    "agency": "FL511 (FDOT)",
+    "url": "https://fl511.com",
+    "kind": "feed",
+    "publishedAt": "2026-11-03T18:23:00Z"
    },
    "awaitingOfficial": false,
    "missingSince": null,
