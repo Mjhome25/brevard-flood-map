@@ -1,8 +1,6 @@
 {
- "generated": "2026-11-03T17:45:36Z",
- "errors": [
-  "FL511 map locations: 3 report(s) without a pin"
- ],
+ "generated": "2026-11-03T18:00:51Z",
+ "errors": [],
  "items": [
   {
    "fullClosure": true,
@@ -1281,6 +1279,34 @@
     "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
     "kind": "feed",
     "publishedAt": "2026-11-03T17:30:29Z"
+   },
+   "awaitingOfficial": false,
+   "missingSince": null,
+   "recheck": []
+  },
+  {
+   "fullClosure": true,
+   "lanes": "Ramps To Eastbound Ellis Rd Are Closed At I-95",
+   "lat": 28.0932872419851,
+   "layer": "FHP",
+   "lng": -80.7056999932721,
+   "reported": "2026-11-03T17:51:44Z",
+   "road": "ELLIS RD [RP ELLIS RD/I-95 NB EXIT 182] [WEST MELBOURNE]",
+   "roadShort": "Ellis Rd [Rp Ellis RD/I-95 Nb Exit 182] [West Melbourne]",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "status": "flooded",
+   "title": "Road Closed Due To Water at ELLIS RD [RP ELLIS RD/I-95 NB EXIT 182] [WEST MELBOURNE] (Ramps To Eastbound Ellis Rd Are Closed At I-95)",
+   "where": "Ellis Rd [Rp Ellis RD/I-95 Nb Exit 182] [West Melbourne]",
+   "id": "brevard:fhp:20261103175144-bd316fa8",
+   "updated": "2026-11-03T17:51:44Z",
+   "lastReported": "2026-11-03T17:51:44Z",
+   "firstReported": "2026-11-03T17:51:44Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-03T17:51:44Z"
    },
    "awaitingOfficial": false,
    "missingSince": null,
@@ -2632,9 +2658,15 @@
     "kind": "feed",
     "publishedAt": "2026-11-03T13:43:00Z"
    },
-   "awaitingOfficial": false,
-   "missingSince": null,
-   "recheck": []
+   "awaitingOfficial": true,
+   "missingSince": "2026-11-03T18:01:02Z",
+   "recheck": [],
+   "noLongerListed": {
+    "agency": "FL511 (FDOT)",
+    "url": "https://fl511.com",
+    "since": "2026-11-03T18:01:02Z",
+    "wasClosed": true
+   }
   },
   {
    "dir": "EB",
@@ -2793,9 +2825,15 @@
     "kind": "feed",
     "publishedAt": "2026-11-03T17:11:00Z"
    },
-   "awaitingOfficial": false,
-   "missingSince": null,
-   "recheck": []
+   "awaitingOfficial": true,
+   "missingSince": "2026-11-03T18:01:02Z",
+   "recheck": [],
+   "noLongerListed": {
+    "agency": "FL511 (FDOT)",
+    "url": "https://fl511.com",
+    "since": "2026-11-03T18:01:02Z",
+    "wasClosed": true
+   }
   },
   {
    "dir": "SB",
@@ -2846,9 +2884,15 @@
     "kind": "feed",
     "publishedAt": "2026-11-03T17:33:00Z"
    },
-   "awaitingOfficial": false,
-   "missingSince": null,
-   "recheck": []
+   "awaitingOfficial": true,
+   "missingSince": "2026-11-03T18:01:02Z",
+   "recheck": [],
+   "noLongerListed": {
+    "agency": "FL511 (FDOT)",
+    "url": "https://fl511.com",
+    "since": "2026-11-03T18:01:02Z",
+    "wasClosed": true
+   }
   },
   {
    "dir": "NB",
@@ -2895,9 +2939,15 @@
     "kind": "feed",
     "publishedAt": "2026-11-03T17:34:00Z"
    },
-   "awaitingOfficial": false,
-   "missingSince": null,
-   "recheck": []
+   "awaitingOfficial": true,
+   "missingSince": "2026-11-03T18:01:02Z",
+   "recheck": [],
+   "noLongerListed": {
+    "agency": "FL511 (FDOT)",
+    "url": "https://fl511.com",
+    "since": "2026-11-03T18:01:02Z",
+    "wasClosed": true
+   }
   },
   {
    "dir": "both directions",
@@ -2976,6 +3026,205 @@
     "url": "https://fl511.com",
     "kind": "feed",
     "publishedAt": "2026-11-03T17:41:00Z"
+   },
+   "awaitingOfficial": true,
+   "missingSince": "2026-11-03T18:01:02Z",
+   "recheck": [],
+   "noLongerListed": {
+    "agency": "FL511 (FDOT)",
+    "url": "https://fl511.com",
+    "since": "2026-11-03T18:01:02Z",
+    "wasClosed": true
+   }
+  },
+  {
+   "dir": "both directions",
+   "from": "Carriage Gate Dr",
+   "fullClosure": true,
+   "lanes": "All lanes closed",
+   "lat": 28.0461888289782,
+   "layer": "Closures",
+   "line": [
+    [
+     28.046135,
+     -80.671396
+    ],
+    [
+     28.046189,
+     -80.671395
+    ],
+    [
+     28.048201,
+     -80.67135
+    ],
+    [
+     28.049031,
+     -80.671338
+    ],
+    [
+     28.050285,
+     -80.671318
+    ],
+    [
+     28.05149,
+     -80.671354
+    ]
+   ],
+   "lng": -80.6713893741598,
+   "reported": "2026-11-03T17:50:00Z",
+   "road": "CR-509",
+   "roadShort": "CR-509",
+   "source": "FL511 (FDOT)",
+   "sourceUrl": "https://fl511.com",
+   "status": "flooded",
+   "title": "Flooding on CR-509 Both Directions from Carriage Gate Dr to CR-516 Westbound. All lanes closed.",
+   "to": "Burdock Ave",
+   "where": "CR-509 both directions",
+   "id": "brevard:fl511:939236",
+   "updated": "2026-11-03T17:58:00Z",
+   "lastReported": "2026-11-03T17:58:00Z",
+   "firstReported": "2026-11-03T17:58:00Z",
+   "verified": {
+    "agency": "FL511 (FDOT)",
+    "url": "https://fl511.com",
+    "kind": "feed",
+    "publishedAt": "2026-11-03T17:58:00Z"
+   },
+   "awaitingOfficial": false,
+   "missingSince": null,
+   "recheck": []
+  },
+  {
+   "dir": "both directions",
+   "fullClosure": true,
+   "lanes": "All lanes closed",
+   "lat": 28.04231,
+   "layer": "Closures",
+   "lng": -80.6214301233189,
+   "reported": "2026-11-03T17:57:00Z",
+   "road": "Sunlake Rd",
+   "roadShort": "Sunlake Rd",
+   "source": "FL511 (FDOT)",
+   "sourceUrl": "https://fl511.com",
+   "spot": "At SR-507 Northbound",
+   "status": "flooded",
+   "title": "Flooding on Sunlake Rd Both Directions At SR-507 Northbound. All lanes closed.",
+   "where": "Sunlake Rd both directions At SR-507 Northbound",
+   "id": "brevard:fl511:939237",
+   "updated": "2026-11-03T17:58:00Z",
+   "lastReported": "2026-11-03T17:58:00Z",
+   "firstReported": "2026-11-03T17:58:00Z",
+   "verified": {
+    "agency": "FL511 (FDOT)",
+    "url": "https://fl511.com",
+    "kind": "feed",
+    "publishedAt": "2026-11-03T17:58:00Z"
+   },
+   "awaitingOfficial": false,
+   "missingSince": null,
+   "recheck": []
+  },
+  {
+   "dir": "both directions",
+   "from": "I 95 Hwy",
+   "fullClosure": true,
+   "lanes": "All lanes closed",
+   "lat": 28.0984880907557,
+   "layer": "Closures",
+   "line": [
+    [
+     28.098492,
+     -80.704218
+    ],
+    [
+     28.098508,
+     -80.704014
+    ],
+    [
+     28.098542,
+     -80.703567
+    ],
+    [
+     28.098731,
+     -80.702184
+    ],
+    [
+     28.098962,
+     -80.700669
+    ],
+    [
+     28.098938,
+     -80.700211
+    ]
+   ],
+   "lng": -80.7040124571529,
+   "reported": "2026-11-03T17:55:00Z",
+   "road": "Ellis Rd",
+   "roadShort": "Ellis Rd",
+   "source": "FL511 (FDOT)",
+   "sourceUrl": "https://fl511.com",
+   "status": "flooded",
+   "title": "Flooding on Ellis Rd Both Directions from I-95 Northbound to 477 Yards Beyond Stan Dr. All lanes closed.",
+   "to": "S John Rodes Blvd",
+   "where": "Ellis Rd both directions",
+   "id": "brevard:fl511:939238",
+   "updated": "2026-11-03T17:58:00Z",
+   "lastReported": "2026-11-03T17:58:00Z",
+   "firstReported": "2026-11-03T17:58:00Z",
+   "verified": {
+    "agency": "FL511 (FDOT)",
+    "url": "https://fl511.com",
+    "kind": "feed",
+    "publishedAt": "2026-11-03T17:58:00Z"
+   },
+   "awaitingOfficial": false,
+   "missingSince": null,
+   "recheck": []
+  },
+  {
+   "dir": "both directions",
+   "from": "W New Haven Ave",
+   "fullClosure": true,
+   "lanes": "All lanes closed",
+   "lat": 28.0790884154272,
+   "layer": "Closures",
+   "line": [
+    [
+     28.078975,
+     -80.70019
+    ],
+    [
+     28.079048,
+     -80.700166
+    ],
+    [
+     28.079088,
+     -80.700165
+    ],
+    [
+     28.080695,
+     -80.700132
+    ]
+   ],
+   "lng": -80.70018,
+   "reported": "2026-11-03T17:47:00Z",
+   "road": "CR-511",
+   "roadShort": "CR-511",
+   "source": "FL511 (FDOT)",
+   "sourceUrl": "https://fl511.com",
+   "status": "flooded",
+   "title": "Flooding on CR-511 Both Directions from US-192 Westbound to SR-518 Eastbound. All lanes closed.",
+   "to": "Rogers Pl",
+   "where": "CR-511 both directions",
+   "id": "brevard:fl511:939239",
+   "updated": "2026-11-03T17:58:00Z",
+   "lastReported": "2026-11-03T17:58:00Z",
+   "firstReported": "2026-11-03T17:58:00Z",
+   "verified": {
+    "agency": "FL511 (FDOT)",
+    "url": "https://fl511.com",
+    "kind": "feed",
+    "publishedAt": "2026-11-03T17:58:00Z"
    },
    "awaitingOfficial": false,
    "missingSince": null,
