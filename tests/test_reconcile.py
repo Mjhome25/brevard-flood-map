@@ -424,8 +424,12 @@ check("a raised pin's own government badge describes its own status, and the sho
 check("a different intersection on the same road is not merged", "nws" not in shownm["brevard:manual:minton-192"])
 check("an NWS report with no matching pin is its own pin, carrying its own report",
       shownm[R.rid_of(its[1])]["nws"][0]["reporter"] == "Trained Spotter")
-check("the page labels NWS reports green 'NWS storm report', never 'Government verified'",
-      "<b>NWS storm report</b>" in open(os.path.join(repo, "template.html")).read())
+check("NWS reports from the media or a spotter are not marked government; police and emergency managers are",
+      not host["nws"][0]["gov"] and not shownm[R.rid_of(its[1])]["nws"][0]["gov"]
+      and R.merge_nws([dict(R.lsr_item(dict(ents[0], source="Law Enforcement"), "x", "u"), id="brevard:nws:z")])[0]["nws"][0]["gov"])
+tpl = open(os.path.join(repo, "template.html")).read()
+check("the page gives NWS reports a check and 'Government verified' only for a government reporter",
+      "n.gov?'✓':'i'" in tpl and "n.gov?'Government verified · NWS storm report':'NWS storm report'" in tpl)
 
 # FHP ids are the same in separate processes (the old id used Python's per-process hash)
 code = ("import sys; sys.path.insert(0, sys.argv[1]); import reconcile as R; "

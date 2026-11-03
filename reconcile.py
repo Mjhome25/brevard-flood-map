@@ -276,6 +276,13 @@ def place(it: dict) -> frozenset | None:
     return frozenset((road, cross)) if road and cross and road != cross else None
 
 
+# NWS storm report sources that are government agencies (Mike, Nov 3): only these get the check and "Government
+# verified". Public, media, spotters, amateur radio and social media stay green "NWS storm report" with no check.
+NWS_GOV = {"law enforcement", "emergency mngr", "emergency manager", "fire dept/rescue", "nws employee",
+           "official nws obs", "dept of highways", "local official", "county official", "state official",
+           "other federal agency", "coast guard", "park/forest srvc"}
+
+
 def merge_nws(items: list[dict]) -> list[dict]:
     """Mike (Nov 3): one pin per place. An NWS storm report at the same intersection as another pin joins that pin
     (listed first in it, as an NWS storm report) instead of adding a second pin. The pin shows the more serious status
@@ -285,6 +292,8 @@ def merge_nws(items: list[dict]) -> list[dict]:
         nws = it["id"].split(":")[1] == "nws"
         report = {"status": it.get("status"), "reporter": it.get("source", "").partition("(")[2].rstrip(")"),
                   "at": it.get("reported"), "url": it.get("sourceUrl"), "note": it.get("note")} if nws else None
+        if report:
+            report["gov"] = report["reporter"].strip().lower() in NWS_GOV
         host = hosts.get(place(it)) if nws and place(it) else None
         if host is None:
             if nws:
