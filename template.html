@@ -525,7 +525,7 @@ h1,h2,h3{margin:0;text-wrap:balance}
     }).join('');
   }
   listEl.addEventListener('click',e=>{if(e.target.closest('a')) return; const r=e.target.closest('.row'); if(r) select(r.dataset.id,true);});
-  listEl.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){const r=e.target.closest('.row'); if(r){e.preventDefault(); select(r.dataset.id,true);}}});
+  listEl.addEventListener('keydown',e=>{if(e.target.closest('a')) return; if(e.key==='Enter'||e.key===' '){const r=e.target.closest('.row'); if(r){e.preventDefault(); select(r.dataset.id,true);}}});
   function select(id,fly){
     listEl.querySelectorAll('.row.active').forEach(r=>r.classList.remove('active'));
     const r=listEl.querySelector(`.row[data-id="${CSS.escape(id)}"]`); if(r){r.classList.add('active'); if(fly||window.innerWidth>900) r.scrollIntoView({block:'nearest'});}  // a map tap on a phone stays on the map
