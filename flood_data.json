@@ -1,6 +1,8 @@
 {
- "generated": "2026-11-03T12:46:36Z",
- "errors": [],
+ "generated": "2026-11-03T13:00:44Z",
+ "errors": [
+  "FL511 map locations: 1 report(s) without a pin"
+ ],
  "items": [
   {
    "fullClosure": false,
@@ -1178,8 +1180,8 @@
    "to": "Pine St",
    "where": "US-192 EB at Minton Rd/S Wickham Rd",
    "id": "brevard:fl511:937010",
-   "updated": "2026-11-03T12:26:00Z",
-   "lastReported": "2026-11-03T12:26:00Z",
+   "updated": "2026-11-03T12:58:00Z",
+   "lastReported": "2026-11-03T12:58:00Z",
    "firstReported": "2026-11-02T19:54:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
@@ -1444,8 +1446,8 @@
    "to": "Circle Dr",
    "where": "US-192 EB beyond Coastal Ln",
    "id": "brevard:fl511:937141",
-   "updated": "2026-11-03T12:26:00Z",
-   "lastReported": "2026-11-03T12:26:00Z",
+   "updated": "2026-11-03T12:58:00Z",
+   "lastReported": "2026-11-03T12:58:00Z",
    "firstReported": "2026-11-02T19:54:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
@@ -1602,8 +1604,8 @@
    "to": "Coastal Ln",
    "where": "US-192 WB at S John Rodes Blvd",
    "id": "brevard:fl511:937222",
-   "updated": "2026-11-03T12:27:00Z",
-   "lastReported": "2026-11-03T12:27:00Z",
+   "updated": "2026-11-03T12:58:00Z",
+   "lastReported": "2026-11-03T12:58:00Z",
    "firstReported": "2026-11-02T19:54:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
@@ -1902,8 +1904,8 @@
    "title": "Flooding on US-1 South, before SR-514. All lanes closed",
    "where": "US-1 SB before SR-514",
    "id": "brevard:fl511:937842",
-   "updated": "2026-11-03T12:27:00Z",
-   "lastReported": "2026-11-03T12:27:00Z",
+   "updated": "2026-11-03T12:58:00Z",
+   "lastReported": "2026-11-03T12:58:00Z",
    "firstReported": "2026-11-02T23:15:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
@@ -1948,8 +1950,8 @@
    "to": "Highway 1",
    "where": "SR-514 EB at US-1",
    "id": "brevard:fl511:937844",
-   "updated": "2026-11-03T12:26:00Z",
-   "lastReported": "2026-11-03T12:26:00Z",
+   "updated": "2026-11-03T12:57:00Z",
+   "lastReported": "2026-11-03T12:57:00Z",
    "firstReported": "2026-11-02T23:15:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
@@ -2208,8 +2210,8 @@
    "title": "Traffic lights not working on US-192 / Vine St / Bronson Hwy East, at S John Rodes Blvd",
    "where": "US-192 EB at S John Rodes Blvd",
    "id": "brevard:fl511:938257",
-   "updated": "2026-11-03T12:21:00Z",
-   "lastReported": "2026-11-03T12:21:00Z",
+   "updated": "2026-11-03T12:57:00Z",
+   "lastReported": "2026-11-03T12:57:00Z",
    "firstReported": "2026-11-03T03:18:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
@@ -2352,6 +2354,50 @@
     "since": "2026-11-03T12:15:30Z",
     "wasClosed": true
    }
+  },
+  {
+   "dir": "SB",
+   "fullClosure": false,
+   "lanes": "Right shoulder blocked",
+   "lat": 28.169745,
+   "layer": "Incidents",
+   "line": [
+    [
+     28.16975,
+     -80.70601
+    ],
+    [
+     28.16773,
+     -80.70601
+    ],
+    [
+     28.16722,
+     -80.70601
+    ]
+   ],
+   "lng": -80.705995,
+   "reported": "2026-11-03T12:48:00Z",
+   "road": "I-95",
+   "roadShort": "I-95",
+   "source": "FL511 (FDOT)",
+   "sourceUrl": "https://fl511.com",
+   "spot": "beyond MM 187",
+   "status": "caution",
+   "title": "Abandoned vehicle on I-95 South, beyond MM 187. Right shoulder blocked",
+   "where": "I-95 SB beyond MM 187",
+   "id": "brevard:fl511:938725",
+   "updated": "2026-11-03T12:51:00Z",
+   "lastReported": "2026-11-03T12:51:00Z",
+   "firstReported": "2026-11-03T12:51:00Z",
+   "verified": {
+    "agency": "FL511 (FDOT)",
+    "url": "https://fl511.com",
+    "kind": "feed",
+    "publishedAt": "2026-11-03T12:51:00Z"
+   },
+   "awaitingOfficial": false,
+   "missingSince": null,
+   "recheck": []
   },
   {
    "approx": true,
@@ -3023,7 +3069,8 @@
      "reporter": "Broadcast Media",
      "at": "2026-11-02T13:51:00Z",
      "url": "https://api.weather.gov/products/8d9f0e98-572a-4b55-b0cf-96d6c98a6b8b",
-     "note": "Media reports a road closure at at Helen St & Minton Rd due to flooding."
+     "note": "Media reports a road closure at at Helen St & Minton Rd due to flooding.",
+     "gov": false
     }
    ],
    "baseStatus": "flooded",
@@ -3032,7 +3079,8 @@
     "reporter": "Broadcast Media",
     "at": "2026-11-02T13:51:00Z",
     "url": "https://api.weather.gov/products/8d9f0e98-572a-4b55-b0cf-96d6c98a6b8b",
-    "note": "Media reports a road closure at at Helen St & Minton Rd due to flooding."
+    "note": "Media reports a road closure at at Helen St & Minton Rd due to flooding.",
+    "gov": false
    }
   },
   {
@@ -3241,7 +3289,8 @@
      "reporter": "Law Enforcement",
      "at": "2026-11-02T11:46:00Z",
      "url": "https://api.weather.gov/products/46636742-a8d6-483b-b93e-bac5fd232b59",
-     "note": "Melbourne PD has reported a road closure near Sarno Rd & Eau Gallie Blvd due to flooding."
+     "note": "Melbourne PD has reported a road closure near Sarno Rd & Eau Gallie Blvd due to flooding.",
+     "gov": true
     }
    ],
    "baseStatus": "flooded",
@@ -3250,7 +3299,8 @@
     "reporter": "Law Enforcement",
     "at": "2026-11-02T11:46:00Z",
     "url": "https://api.weather.gov/products/46636742-a8d6-483b-b93e-bac5fd232b59",
-    "note": "Melbourne PD has reported a road closure near Sarno Rd & Eau Gallie Blvd due to flooding."
+    "note": "Melbourne PD has reported a road closure near Sarno Rd & Eau Gallie Blvd due to flooding.",
+    "gov": true
    }
   },
   {
@@ -3461,7 +3511,8 @@
      "reporter": "Public",
      "at": "2026-11-02T09:56:00Z",
      "url": "https://api.weather.gov/products/b5fc51bd-7cf2-4690-9ddf-3f20cdc7799a",
-     "note": "Photo on social media shows approximately 6-8\" of standing water on a road near Emerson Dr NW and Jupiter Blvd NW in Palm Bay."
+     "note": "Photo on social media shows approximately 6-8\" of standing water on a road near Emerson Dr NW and Jupiter Blvd NW in Palm Bay.",
+     "gov": false
     }
    ]
   },
@@ -3496,7 +3547,8 @@
      "reporter": "Emergency Manager",
      "at": "2026-11-02T08:33:00Z",
      "url": "https://api.weather.gov/products/17902eed-e53a-4d2a-a5ee-cd3e14304bfa",
-     "note": "Standing water on roads near August St SE & Emerson Dr SE in Palm Bay."
+     "note": "Standing water on roads near August St SE & Emerson Dr SE in Palm Bay.",
+     "gov": true
     }
    ]
   },
@@ -3531,7 +3583,8 @@
      "reporter": "NWS Employee",
      "at": "2026-11-02T09:00:00Z",
      "url": "https://api.weather.gov/products/79a67d9f-9f78-443d-bc85-93f2f726536e",
-     "note": "Horizon View Ave is flooded. Water depth is nearly halfway up car tires."
+     "note": "Horizon View Ave is flooded. Water depth is nearly halfway up car tires.",
+     "gov": true
     }
    ]
   },
@@ -3566,7 +3619,8 @@
      "reporter": "Law Enforcement",
      "at": "2026-11-02T09:16:00Z",
      "url": "https://api.weather.gov/products/a2df1cb3-4706-47cd-8cb5-f6289d90e3fd",
-     "note": "Palm Bay PD reports flooding at Jupiter and White in Palm Bay. Also reports flooding at Garbelmann and Gawain as well as multiple intersections along Emerson."
+     "note": "Palm Bay PD reports flooding at Jupiter and White in Palm Bay. Also reports flooding at Garbelmann and Gawain as well as multiple intersections along Emerson.",
+     "gov": true
     }
    ]
   },
@@ -3601,7 +3655,8 @@
      "reporter": "Trained Spotter",
      "at": "2026-11-02T12:06:00Z",
      "url": "https://api.weather.gov/products/adf353ce-a15a-496b-b033-071579af8ef0",
-     "note": "Trained spotter reported flooding near Nebraska St NE & Rome Ave NE. Two vehicles are stalled in the water."
+     "note": "Trained spotter reported flooding near Nebraska St NE & Rome Ave NE. Two vehicles are stalled in the water.",
+     "gov": false
     }
    ]
   }
