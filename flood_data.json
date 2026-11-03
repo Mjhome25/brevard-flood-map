@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-03T20:02:10Z",
+ "generated": "2026-11-03T20:15:37Z",
  "errors": [],
  "items": [
   {
@@ -732,41 +732,6 @@
    "recheck": []
   },
   {
-   "fullClosure": false,
-   "lanes": "No Roadblock",
-   "lat": 28.2668358761528,
-   "layer": "FHP",
-   "lng": -80.7364321289582,
-   "reported": "2026-11-03T06:57:19Z",
-   "road": "VIERA BLVD",
-   "roadShort": "Viera Blvd",
-   "source": "FHP live CAD",
-   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-   "spot": "at Stadium Pkwy",
-   "status": "caution",
-   "title": "MVC at VIERA BLVD x[STADIUM PKWY] [MELBOURNE] (No Roadblock)",
-   "where": "Viera Blvd at Stadium Pkwy",
-   "id": "brevard:fhp:20261103065719-7313ae97",
-   "updated": "2026-11-03T06:57:19Z",
-   "lastReported": "2026-11-03T06:57:19Z",
-   "firstReported": "2026-11-03T06:57:19Z",
-   "verified": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "kind": "feed",
-    "publishedAt": "2026-11-03T06:57:19Z"
-   },
-   "awaitingOfficial": true,
-   "missingSince": "2026-11-03T20:02:18Z",
-   "recheck": [],
-   "noLongerListed": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "since": "2026-11-03T20:02:18Z",
-    "wasClosed": false
-   }
-  },
-  {
    "from": "Ellis Dr",
    "fullClosure": true,
    "lat": 28.0436127448397,
@@ -848,9 +813,15 @@
     "kind": "feed",
     "publishedAt": "2026-11-03T07:49:28Z"
    },
-   "awaitingOfficial": false,
-   "missingSince": null,
-   "recheck": []
+   "awaitingOfficial": true,
+   "missingSince": "2026-11-03T20:15:53Z",
+   "recheck": [],
+   "noLongerListed": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "since": "2026-11-03T20:15:53Z",
+    "wasClosed": false
+   }
   },
   {
    "from": "Lakes Of Melbourne Dr",
@@ -5864,6 +5835,41 @@
   }
  ],
  "reopened": [
+  {
+   "fullClosure": false,
+   "lanes": "No Roadblock",
+   "lat": 28.2668358761528,
+   "layer": "FHP",
+   "lng": -80.7364321289582,
+   "reported": "2026-11-03T06:57:19Z",
+   "road": "VIERA BLVD",
+   "roadShort": "Viera Blvd",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "spot": "at Stadium Pkwy",
+   "status": "caution",
+   "title": "MVC at VIERA BLVD x[STADIUM PKWY] [MELBOURNE] (No Roadblock)",
+   "where": "Viera Blvd at Stadium Pkwy",
+   "id": "brevard:fhp:20261103065719-7313ae97",
+   "updated": "2026-11-03T06:57:19Z",
+   "lastReported": "2026-11-03T06:57:19Z",
+   "firstReported": "2026-11-03T06:57:19Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-03T06:57:19Z"
+   },
+   "reopenedAt": "2026-11-03T20:15:53Z",
+   "evidence": {
+    "agency": "Florida Highway Patrol",
+    "kind": "fhp-dropped",
+    "missingSince": "2026-11-03T20:02:18Z",
+    "reopenedAt": "2026-11-03T20:15:53Z",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
+   },
+   "stillReported": []
+  },
   {
    "fullClosure": false,
    "lanes": "No Roadblock",
