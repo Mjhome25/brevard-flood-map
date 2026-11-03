@@ -227,7 +227,8 @@ def scrub(t):
     t = _CRASH.sub("MVC", t)
     t = re.sub(r"\([^)]*\)", lambda m: "" if _SENSITIVE.search(m.group(0)) else m.group(0), t)
     t = _SENSITIVE.sub("", t)
-    t = re.sub(r"\bMVC(?:\W+MVC)+\b", "MVC", t)
+    t = re.sub(r"\bMVC(?:\W*MVC)+\b", "MVC", t)  # "Hit and Run Crash" became "MVCMVC"
+    t = re.sub(r"\s+w/\s*(?=at\b|\)|$)", " ", t, flags=re.I)  # "w/injuries" with the detail removed
     t = re.sub(r"\s*\(MVC\)", "", t)
     t = re.sub(r"\s+([.,;:])", r"\1", re.sub(r"\s{2,}", " ", t)).strip(" -,;")
     return t

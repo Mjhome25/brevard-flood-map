@@ -194,7 +194,7 @@ h1,h2,h3{margin:0;text-wrap:balance}
     <div id="map" role="application" aria-label="Map of Brevard County road closures and flooding"></div>
     <div class="legend" aria-label="Legend">
       <span><svg viewBox="-13 -13 26 26" aria-hidden="true"><circle r="11" fill="var(--flooded)" stroke="#fff" stroke-width="2.5"/><path d="M-7-2q1.75-3 3.5 0t3.5 0 3.5 0 3.5 0M-7 4q1.75-3 3.5 0t3.5 0 3.5 0 3.5 0" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>Flooding</span>
-      <span><svg viewBox="-13 -13 26 26" aria-hidden="true"><path d="M0-12L12 10H-12Z" fill="var(--mvc)" stroke="#fff" stroke-width="2.5" stroke-linejoin="round"/><path d="M0-4V3" stroke="#fff" stroke-width="3" stroke-linecap="round"/><circle cy="7" r="1.7" fill="#fff"/></svg>MVC</span>
+      <span><svg viewBox="-13 -13 26 26" aria-hidden="true"><path d="M0-12L12 10H-12Z" fill="var(--mvc)" stroke="#fff" stroke-width="2.5" stroke-linejoin="round"/><path d="M0-4V3" stroke="#fff" stroke-width="3" stroke-linecap="round"/><circle cy="7" r="1.7" fill="#fff"/></svg>Collision</span>
       <span><svg viewBox="-13 -13 26 26" aria-hidden="true"><circle r="11" fill="var(--closed)" stroke="#fff" stroke-width="2.5"/><rect x="-6" y="-2" width="12" height="4" rx="1" fill="#fff"/></svg>Other closure</span>
       <span class="opt"><svg viewBox="-13 -13 26 26" aria-hidden="true"><circle r="7.5" fill="var(--caution)" stroke="#fff" stroke-width="2"/><path d="M0-3.5V1" stroke="#1a1a1a" stroke-width="2" stroke-linecap="round"/><circle cy="3.6" r="1.2" fill="#1a1a1a"/></svg>Hazard</span>
       <span><svg viewBox="-16 -16 32 32" aria-hidden="true"><circle r="13" fill="none" stroke="var(--closed)" stroke-width="3.5"/><path d="M-12 0H12" stroke="var(--edge)" stroke-width="9" stroke-linecap="round"/><path d="M-12 0H12" stroke="var(--closed)" stroke-width="4.5" stroke-linecap="round"/></svg>Closed stretch (cross street to cross street)</span>
@@ -217,7 +217,7 @@ h1,h2,h3{margin:0;text-wrap:balance}
       <button type="button" class="summary" id="summary"></button>
       <div class="tools">
         <label><input type="checkbox" id="f-flood" checked> Flooding</label>
-        <label><input type="checkbox" id="f-mvc" checked> MVCs</label>
+        <label><input type="checkbox" id="f-mvc" checked> Collisions</label>
         <label><input type="checkbox" id="f-closure" checked> Other closures</label>
         <label><input type="checkbox" id="f-caution" checked> Minor hazards</label>
         <label><input type="checkbox" id="f-nws" checked> Warning areas</label>
@@ -256,6 +256,12 @@ h1,h2,h3{margin:0;text-wrap:balance}
 <script>
 (function(){
   const DATA = JSON.parse(document.getElementById('flood-data').textContent);
+  // Crashes are stored as "MVC" (the privacy filter's one word for any crash); shown spelled out (Mike, Nov 3).
+  const CRASHW=/\b(?:MVC)+(s?)\b/g;
+  [...(DATA.items||[]),...(DATA.reopened||[])].forEach(it=>{
+    it.crash=/\bMVC/.test(it.title||'');
+    ['title','note','lanes','where','spot'].forEach(k=>{ if(typeof it[k]==='string') it[k]=it[k].replace(CRASHW,(m,pl)=>'Collision'+pl).replace(/\s+W\/\s+(?=at\b)/gi,' '); });
+  });
   const TILES = JSON.parse(document.getElementById('tile-data').textContent);
   const ROUTES = [
     {name:'SR 520 causeway (Cocoa – Merritt Island – Cocoa Beach)', pts:[[28.3587,-80.72],[28.3592,-80.69],[28.3596,-80.66],[28.3596,-80.63]]},
@@ -393,10 +399,10 @@ h1,h2,h3{margin:0;text-wrap:balance}
 
   // ---------- reports ----------
   // Cause decides the marker shape and colour; "closed" is shown separately as a red ring, red stretch and label.
-  const cause=it=>/\bMVC\b/.test(it.title||'')?'mvc':it.status==='flooded'?'flood':it.status==='closed'?'closure':'hazard';
+  const cause=it=>it.crash?'mvc':it.status==='flooded'?'flood':it.status==='closed'?'closure':'hazard';
   const isClosed=it=>!!(it.fullClosure||it.status==='closed');
   const ORDER={flood:0,mvc:1,closure:2,hazard:3};
-  const SEC={flood:'Flooding',mvc:'MVCs',closure:'Other closures',hazard:'Minor hazards'};
+  const SEC={flood:'Flooding',mvc:'Collisions',closure:'Other closures',hazard:'Minor hazards'};
   const COLOR={flood:'flooded',mvc:'mvc',closure:'closed',hazard:'caution'};
   const SZ={flood:24,mvc:28,closure:26,hazard:18};
   function glyph(k,c){
@@ -420,7 +426,7 @@ h1,h2,h3{margin:0;text-wrap:balance}
   const span=it=>(it.from&&it.to)?`from ${it.from} to ${it.to}`:'';
   const closedWhere=it=>span(it)?`${roadDir(it)} ${span(it)}`:where(it);
   const NOLANES=/^(not stated|unknown|n\/?a|none)$/i;  // the source did not say which lanes are affected
-  const impact=it=>{ if(isStale(it)) return 'Not re-confirmed'; const l0=(it.lanes||'').trim(), l=NOLANES.test(l0)?'':l0; if(isClosed(it)) return /all lanes|closed|blocked/i.test(l)?l.replace(/^Road Flooded - Seek Alt Route$/i,'Closed, seek another route'):'Closed at this spot'; const base={flood:'Water on road',mvc:'MVC',hazard:'Use caution',closure:''}[cause(it)]; return l||[base,'lane impact not reported'].filter(Boolean).join(' · ').replace(/^l/,'L'); };
+  const impact=it=>{ if(isStale(it)) return 'Not re-confirmed'; const l0=(it.lanes||'').trim(), l=NOLANES.test(l0)?'':l0; if(isClosed(it)) return /all lanes|closed|blocked/i.test(l)?l.replace(/^Road Flooded - Seek Alt Route$/i,'Closed, seek another route'):'Closed at this spot'; const base={flood:'Water on road',mvc:'Collision',hazard:'Use caution',closure:''}[cause(it)]; return l||[base,'lane impact not reported'].filter(Boolean).join(' · ').replace(/^l/,'L'); };
   const markers=L.layerGroup().addTo(map);
   // Mike (Nov 3): when FHP no longer lists a road closure, a small green pin for the next 24 hours (an 'i', never 'cleared'),
   // with no water or closure icon. Only former closures get one (a crash FHP drops was never a road closure). Another
@@ -501,7 +507,7 @@ h1,h2,h3{margin:0;text-wrap:balance}
         }
       }
       const m=L.marker([it.lat,it.lng],{icon:mkIcon(it,st),zIndexOffset:(st?0:(closed?800:0)+(4-ORDER[k])*100),title:where(it),keyboard:false}).bindPopup(popupHtml(it));
-      if(!st&&canHover) m.bindTooltip(`${closed?'<b>CLOSED</b> · ':(k==='mvc'?'<b>MVC</b> · ':'')}${esc(closed?closedWhere(it):where(it))}<br>${vshort(it)}`,{direction:'right',offset:[2,0],className:'lbl '+(closed?'closed':'minor')+' k-'+k,opacity:1});
+      if(!st&&canHover) m.bindTooltip(`${closed?'<b>CLOSED</b> · ':(k==='mvc'?'<b>COLLISION</b> · ':'')}${esc(closed?closedWhere(it):where(it))}<br>${vshort(it)}`,{direction:'right',offset:[2,0],className:'lbl '+(closed?'closed':'minor')+' k-'+k,opacity:1});
       m.on('click',()=>select(it.id,false)); m.addTo(markers); byId[it.id]=m;
     });
     renderList(vis, byNew);
@@ -552,7 +558,7 @@ h1,h2,h3{margin:0;text-wrap:balance}
     const hits=items.filter(it=>cause(it)!=='hazard'&&!isStale(it)&&near(it));
     const cau=items.filter(it=>cause(it)==='hazard'&&near(it));
     if(hits.length){hitRoutes++; hits.forEach(h=>hitIds.add(h.id));}
-    const s=hits.length?`<span class="hit">${hits.length} closure, MVC or flood report${hits.length>1?'s':''} nearby</span>`:cau.length?`<span class="cau">${cau.length} hazard${cau.length>1?'s':''} nearby</span>`:'<span class="ok">No nearby reports</span>';
+    const s=hits.length?`<span class="hit">${hits.length} closure, collision or flood report${hits.length>1?'s':''} nearby</span>`:cau.length?`<span class="cau">${cau.length} hazard${cau.length>1?'s':''} nearby</span>`:'<span class="ok">No nearby reports</span>';
     return `<tr><td>${esc(r.name)}</td><td>${s}</td></tr>`;
   }).join('');
   const sumEl=document.getElementById('summary');

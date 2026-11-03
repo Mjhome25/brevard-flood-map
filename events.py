@@ -259,7 +259,7 @@ def fhp_clearable(fields: dict) -> bool:
     closure can come off the map when FHP drops it; a water closure, a roadblock, debris or anything closed stays until
     a cited source says the road is open. Applied when history is read, so an earlier drop of a closure never counts."""
     closed = fields.get("status") == "closed" or bool(fields.get("fullClosure"))
-    return not closed and bool(re.search(r"\bMVC\b", fields.get("title") or ""))
+    return not closed and bool(re.search(r"\b(?:MVC)+\b", fields.get("title") or ""))  # older titles read "MVCMVC"
 
 
 def _check_fhp_drop(ev: dict) -> None:

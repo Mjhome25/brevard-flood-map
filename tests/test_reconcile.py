@@ -636,6 +636,13 @@ ns_src = open(os.path.join(repo, "news_sweep.py")).read()
 check("the news sweep drops model-supplied raise and pin citations",
       'for k in ("raisedPer", "locatedPer"):' in ns_src and "c.pop(k, None)" in ns_src)
 
+tplm = open(os.path.join(repo, "template.html")).read()
+check("Mike (Nov 3): crashes are shown as 'Collision'; the stored MVC marker still picks the crash icon",
+      "'Collision'+pl" in tplm and "it.crash=/\\bMVC/.test(it.title||'')" in tplm
+      and "const cause=it=>it.crash?'mvc'" in tplm and "> Collisions</label>" in tplm)
+check("an FHP 'MVCMVC' title (from 'Hit and Run Crash') is a crash the crash-only rule can take off",
+      E.fhp_clearable({"status": "mvc", "title": "MVCMVC at I-95 SB [MM183]"}))
+
 # FHP ids are the same in separate processes (the old id used Python's per-process hash)
 code = ("import sys; sys.path.insert(0, sys.argv[1]); import reconcile as R; "
         "print(R.rid_of({'layer': 'FHP', 'id': 'fhp-x', 'reported': '2026-11-02T14:14:28Z', "
