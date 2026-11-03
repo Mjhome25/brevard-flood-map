@@ -610,5 +610,41 @@
   "note": "Source wording: 'US 192 in West Melbourne is closed in both directions because of the flooding... closed from Coastal Lane to Wickham Road/Minton Road.' This is a longer stretch than the existing pins at Minton Rd, Wickham Rd, Country Club Rd and I-95. The pin is set near the Wickham/Minton end because the exact spot of Coastal Ln was not confirmed. The posting time is estimated from a live blog with no timestamp; it appears in the same update as the Tuesday school closure news. Pin approximate.",
   "id": "man-us-192-w-new-haven-ave-both-directions-f",
   "updated": "2026-11-02T20:00:00Z"
+ },
+ {
+  "road": "Dairy Rd",
+  "where": "Dairy Rd at Snicole Rd",
+  "title": "Dairy Rd closed at Snicole Rd due to flooding",
+  "city": "Melbourne",
+  "status": "closed",
+  "fullClosure": true,
+  "lanes": "all",
+  "lat": 28.115,
+  "lng": -80.6345,
+  "approx": true,
+  "source": "City of Melbourne (via Space Coast Daily)",
+  "sourceUrl": "https://spacecoastdaily.com/2026/11/city-of-melbourne-reports-multiple-road-closures-urges-residents-to-shelter-in-place/",
+  "reported": "2026-11-02T18:00:00Z",
+  "note": "The City of Melbourne lists the Dairy Road and Snicole Road intersection as closed by flooding. The report time is an estimate. Coordinates are approximate.",
+  "id": "man-dairy-rd-at-snicole-rd",
+  "updated": "2026-11-02T18:00:00Z"
+ },
+ {
+  "road": "Dairy Rd",
+  "where": "Dairy Rd at Edgewood Dr",
+  "title": "Dairy Rd closed at Edgewood Dr due to flooding",
+  "city": "Melbourne",
+  "status": "closed",
+  "fullClosure": true,
+  "lanes": "all",
+  "lat": 28.072,
+  "lng": -80.6345,
+  "approx": true,
+  "source": "City of Melbourne (via Space Coast Daily)",
+  "sourceUrl": "https://spacecoastdaily.com/2026/11/city-of-melbourne-reports-multiple-road-closures-urges-residents-to-shelter-in-place/",
+  "reported": "2026-11-02T18:00:00Z",
+  "note": "The City of Melbourne lists the Dairy Road and Edgewood Drive intersection as closed by flooding. This was already in the Melbourne advisory text, and this adds it as a map point. The report time is an estimate. Coordinates are approximate.",
+  "id": "man-dairy-rd-at-edgewood-dr",
+  "updated": "2026-11-02T18:00:00Z"
  }
 ]
