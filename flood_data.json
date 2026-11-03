@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-03T20:15:37Z",
+ "generated": "2026-11-03T20:30:45Z",
  "errors": [],
  "items": [
   {
@@ -2494,8 +2494,8 @@
    "title": "Traffic lights not working on US-192 / Vine St / Bronson Hwy East, at S John Rodes Blvd",
    "where": "US-192 EB at S John Rodes Blvd",
    "id": "brevard:fl511:938257",
-   "updated": "2026-11-03T19:18:00Z",
-   "lastReported": "2026-11-03T19:18:00Z",
+   "updated": "2026-11-03T20:21:00Z",
+   "lastReported": "2026-11-03T20:21:00Z",
    "firstReported": "2026-11-03T03:18:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
@@ -2952,8 +2952,8 @@
    "title": "Incident on I-95 North, before MM 182/Ellis Rd",
    "where": "I-95 NB before MM 182/Ellis Rd",
    "id": "brevard:fl511:939164",
-   "updated": "2026-11-03T19:58:00Z",
-   "lastReported": "2026-11-03T19:58:00Z",
+   "updated": "2026-11-03T20:29:00Z",
+   "lastReported": "2026-11-03T20:29:00Z",
    "firstReported": "2026-11-03T18:19:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
