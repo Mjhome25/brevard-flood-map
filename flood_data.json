@@ -1,8 +1,6 @@
 {
- "generated": "2026-11-03T03:46:27Z",
- "errors": [
-  "FL511 map locations: 2 report(s) without a pin"
- ],
+ "generated": "2026-11-03T04:00:30Z",
+ "errors": [],
  "items": [
   {
    "id": "man-minton-192",
@@ -1003,7 +1001,7 @@
    "status": "caution",
    "fullClosure": false,
    "reported": "2026-11-03T01:57:00Z",
-   "updated": "2026-11-03T03:06:00Z",
+   "updated": "2026-11-03T03:47:00Z",
    "lat": 28.645552,
    "lng": -80.861413,
    "layer": "Incidents",
@@ -1118,7 +1116,7 @@
    "where": "I-95 NB at MM 200"
   },
   {
-   "id": "fhp-11022026043943-2049",
+   "id": "fhp-11022026043943-1571",
    "source": "FHP live CAD",
    "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
    "road": "US-1 [2 MILES SOF]",
@@ -1137,7 +1135,7 @@
    "where": "US-1 [2 Miles Sof] at Malabar Rd"
   },
   {
-   "id": "fhp-11022026112806-6690",
+   "id": "fhp-11022026112806-9587",
    "source": "FHP live CAD",
    "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
    "road": "NORFOLK PKWY",
@@ -1384,7 +1382,7 @@
    ]
   },
   {
-   "id": "fhp-11022026112110-6267",
+   "id": "fhp-11022026112110-8730",
    "source": "FHP live CAD",
    "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
    "road": "PALM BAY RD NE [ENT RAMP TO]",
@@ -1403,7 +1401,7 @@
    "where": "Palm Bay Rd Ne [Ent Ramp To] at I-95 Nb"
   },
   {
-   "id": "fhp-11022026090844-423",
+   "id": "fhp-11022026090844-8008",
    "source": "FHP live CAD",
    "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
    "road": "US-1",
@@ -1454,7 +1452,7 @@
    ]
   },
   {
-   "id": "fhp-11022026065558-5422",
+   "id": "fhp-11022026065558-7899",
    "source": "FHP live CAD",
    "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
    "road": "W NEW HAVEN AVE",
@@ -1490,47 +1488,6 @@
   }
  ],
  "alerts": [
-  {
-   "id": "urn:oid:2.49.0.1.840.0.e8f67f261867497930b1db2808e2a44df03ab934.001.1",
-   "event": "Flash Flood Warning",
-   "severity": "Severe",
-   "headline": "Flash Flood Warning issued November 2 at 9:29PM EST until November 2 at 11:00PM EST by NWS Melbourne FL",
-   "areas": "Brevard, FL; Indian River, FL",
-   "effective": "2026-11-02T21:29:00-05:00",
-   "expires": "2026-11-02T23:00:00-05:00",
-   "description": "FFWMLB\n\nThe National Weather Service in Melbourne has issued a\n\n* Flash Flood Warning for...\nSoutheastern Brevard County in east central Florida...\nNorth Central Indian River County in east central Florida...\n\n* Until 1100 PM EST.\n\n* At 929 PM EST, Doppler radar indicated thunderstorms producing\nheavy rain across the warned area. Between 14 and 22 inches of rain\nhave fallen. Additional rainfall amounts of 1 to 3 inches are\npossible in the warned area. Flash flooding is ongoing or expected\nto begin shortly.\n\nHAZARD...Flash flooding caused by thunderstorms.\n\nSOURCE...Radar indicated.\n\nIMPACT...Flash flooding of small creeks and streams, urban areas,\nhighways, streets and underpasses as well as other poor\ndrainage and low-lying areas.\n\n* Some locations that will experience flash flooding include...\nPalm Bay, Sebastian, Malabar, Barefoot Bay, Roseland, Sebastian\nInlet, Grant-Valkaria, Micco, Sebastian Inlet State Park, Melbourne\nShores, Floridana Beach and North Beach.",
-   "geometry": {
-    "type": "Polygon",
-    "coordinates": [
-     [
-      [
-       -80.56,
-       27.78
-      ],
-      [
-       -80.75,
-       27.96
-      ],
-      [
-       -80.74,
-       28.06
-      ],
-      [
-       -80.48,
-       27.98
-      ],
-      [
-       -80.41,
-       27.84
-      ],
-      [
-       -80.56,
-       27.78
-      ]
-     ]
-    ]
-   }
-  },
   {
    "id": "urn:oid:2.49.0.1.840.0.d5ec6e3e784e6ff98f3e5e84286ac912f718d375.001.1",
    "event": "Flood Warning",
