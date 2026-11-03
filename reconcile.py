@@ -10,6 +10,7 @@ is disabled until the verifier and the reopened display qualify (Phase 1 batches
 from __future__ import annotations
 
 import datetime
+import math
 import hashlib
 import json
 import os
@@ -277,12 +278,26 @@ def display(state: dict) -> tuple[list[dict], list[dict]]:
                 # An old source remark such as "Roadway Open" is not a verified reopening; show it as a dated note.
                 it["lanes"] = f"Source said \"{it['lanes']}\" ({r['firstReported'][:16].replace('T', ' ')} UTC); not a verified reopening"
             items.append(it)
-        elif r["show"] == "green":  # cleared in the last day: listed with its citation, not drawn on the map
+        elif r["show"] == "green":  # cleared in the last day: listed with its citation (a former closure also gets a green pin)
             it.update(reopenedAt=r["reopenedAt"], evidence=r["evidence"])
             reopened.append(it)
     reopened.sort(key=lambda it: it["reopenedAt"], reverse=True)
     items.sort(key=lambda it: it["id"])
+    for c in reopened:  # Mike (Nov 3): a cleared spot that another source still reports keeps that warning, no green pin
+        c["stillReported"] = [{"id": a["id"], "where": a.get("where") or a.get("road") or a.get("title"),
+                               "source": a.get("source")} for a in items if same_spot(c, a)]
     return merge_nws(items), reopened
+
+
+def same_spot(a: dict, b: dict) -> bool:
+    """Two reports at one place: the same intersection by name (either order), or map points within 300 m."""
+    if place(a) and place(a) == place(b):
+        return True
+    if None in (a.get("lat"), a.get("lng"), b.get("lat"), b.get("lng")):
+        return False
+    la, lb = math.radians(a["lat"]), math.radians(b["lat"])
+    h = math.sin((lb - la) / 2) ** 2 + math.cos(la) * math.cos(lb) * math.sin(math.radians(b["lng"] - a["lng"]) / 2) ** 2
+    return 2 * 6371 * math.asin(math.sqrt(h)) < 0.3
 
 
 def place(it: dict) -> frozenset | None:

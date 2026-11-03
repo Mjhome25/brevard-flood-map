@@ -489,6 +489,39 @@ check("FL511 dropping a closure never clears it", s3["records"]["brevard:fl511:7
 items3, cleared3 = R.display(s3)
 check("a cleared FHP crash leaves the map and is listed as cleared, with its evidence",
       crid not in {i["id"] for i in items3} and cleared3 and cleared3[0]["evidence"]["kind"] == "fhp-dropped")
+check("a cleared crash with no other report at its place is not marked still reported",
+      cleared3[0]["stillReported"] == [])
+road = lambda **k: dict({"title": "x", "status": "closed"}, **k)
+check("same spot by name, either order and with suffixes spelled differently",
+      R.same_spot(road(where="Norfolk Pkwy at Minton Rd", road="NORFOLK PKWY", lat=28.0434, lng=-80.6715),
+                  road(where="Minton Rd at Norfolk Pkwy", road="Minton Rd", lat=28.05, lng=-80.686)))
+check("same spot by map point within 300 m when the names differ",
+      R.same_spot(road(where="N Wickham Rd at Pineda Cswy", lat=28.20096, lng=-80.67210),
+                  road(where="Wickham Rd SB at Pineda Causeway", lat=28.2010, lng=-80.6722)))
+check("not the same spot: different intersection 1 km away",
+      not R.same_spot(road(where="US-1 at Suntree Blvd", lat=28.2293, lng=-80.6733),
+                      road(where="US-1 at Viera Blvd", lat=28.2615, lng=-80.6880)))
+check("not the same spot without a point or a cross street", not R.same_spot(road(road="US-1"), road(road="US-1")))
+fhp_closed = dict(crash, id="fhp-9", status="closed", road="Minton Rd", spot="at Norfolk Pkwy",
+                  reported="2026-11-02T13:05:00Z", lat=28.0434, lng=-80.6715)
+manual = {"id": "m-1", "layer": "manual", "status": "closed", "road": "Norfolk Pkwy", "where": "Norfolk Pkwy at Minton Rd",
+          "reported": "2026-11-02T13:10:00Z", "updated": "2026-11-02T13:10:00Z", "title": "Norfolk closed", "source": "WESH 2",
+          "lat": 28.05, "lng": -80.686}
+pk = os.path.join(tmp, "keep.jsonl")
+runc(pk, {"sources": {"fhp": "up", "manual": "up"}, "items": [fhp_closed, manual]}, 0)
+runc(pk, {"sources": {"fhp": "up", "manual": "up"}, "items": [manual]}, 0.25)
+sk = runc(pk, {"sources": {"fhp": "up", "manual": "up"}, "items": [manual]}, 0.5)
+ik, ck = R.display(sk)
+check("FHP clears its own closure, but another source's report at that place stays active and is named on the cleared record",
+      [i["id"] for i in ik] == [R.rid_of(manual)] and ck[0]["id"] == R.rid_of(fhp_closed)
+      and [a["id"] for a in ck[0]["stillReported"]] == [R.rid_of(manual)] and ck[0]["stillReported"][0]["source"] == "WESH 2")
+tplc = open(os.path.join(repo, "template.html")).read()
+check("the page draws a green pin only for a cleared former closure that nothing else still reports",
+      "const greenPin=c=>formerClosure(c)&&c.lat!=null&&!(c.stillReported||[]).length" in tplc
+      and "isClosed(c)" in tplc and "no longer lists this as a road closure" in tplc)
+check("the road search filters the cleared list and the green pins",
+      "cleared.filter(c=>greenPin(c)&&matchQ(c,q))" in tplc and "const hit=cleared.filter(c=>matchQ(c,q))" in tplc
+      and "No active reports match that search." in tplc)
 check("check_events accepts the FHP-drop clearance with clearance enabled", subprocess.run(
     [sys.executable, "-I", os.path.join(repo, "check_events.py"), "--before", "", "--bootstrap", "--events", pc],
     capture_output=True).returncode == 0)

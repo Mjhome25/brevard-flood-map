@@ -119,6 +119,9 @@ h1,h2,h3{margin:0;text-wrap:balance}
 .row .age.old{color:var(--caution)}
 .badge{display:inline-block;font-size:11px;font-weight:600;letter-spacing:.03em;text-transform:uppercase;padding:1px 6px;border-radius:4px;margin-right:6px;vertical-align:1px}
 .badge.full{background:var(--closed);color:#fff}
+.badge.clr{background:var(--ok-bg);color:var(--ok-fg);outline:1px solid var(--ok)}
+.alert.go{cursor:pointer}.alert.go:hover,.alert.go:focus-visible{outline:2px solid var(--ok);outline-offset:-2px}
+.leaflet-tooltip.lbl.k-clr b{color:var(--ok)}
 .badge.feed{background:var(--hover);color:var(--muted)}
 .badge.unc{color:var(--muted);border:1px solid var(--line)}
 .empty{padding:32px 16px;color:var(--muted);text-align:center}
@@ -243,7 +246,7 @@ h1,h2,h3{margin:0;text-wrap:balance}
 </div>
 <div class="about" id="about" hidden>
   <p><b>Refresh.</b> Road data is pulled about every 15 minutes while the feed on the office computer is running; NWS alerts refresh live every 5 minutes, and the page reloads itself when newer road data is posted. A red note under the map appears when road data is more than 30 minutes old.</p>
-  <p><b>Tiers.</b> FL511 (FDOT), Florida Highway Patrol live CAD and NWS items come from agency feeds. NWS Melbourne storm reports are preliminary: flooding reported to the Weather Service by police, emergency managers, spotters, media or the public (each pin names who). They show green as "NWS storm report", always linked to the NWS report; only reports from a government agency (police, emergency managers, NWS staff, public officials) get the check, naming what that agency reported and "Government verified". When one is at the same intersection as another pin it joins that pin instead of adding a second one. Their map point is approximate. Items marked "unconfirmed" are hand-entered from police, county or news posts; each shows its post time and link. A hand-entered report stays on the map, with the time it was last reported, until an official source says the road has reopened. FL511 items show while that feed lists them; when FL511 drops one it stays on the map, marked no longer listed. An FHP incident (crash, water closure or debris) that the FHP page stops listing (gone on two checks in a row) is cleared for now and moves to "Cleared in the last 24 hours" with a link to FHP.</p>
+  <p><b>Tiers.</b> FL511 (FDOT), Florida Highway Patrol live CAD and NWS items come from agency feeds. NWS Melbourne storm reports are preliminary: flooding reported to the Weather Service by police, emergency managers, spotters, media or the public (each pin names who). They show green as "NWS storm report", always linked to the NWS report; only reports from a government agency (police, emergency managers, NWS staff, public officials) get the check, naming what that agency reported and "Government verified". When one is at the same intersection as another pin it joins that pin instead of adding a second one. Their map point is approximate. Items marked "unconfirmed" are hand-entered from police, county or news posts; each shows its post time and link. A hand-entered report stays on the map, with the time it was last reported, until an official source says the road has reopened. FL511 items show while that feed lists them; when FL511 drops one it stays on the map, marked no longer listed. An FHP incident (crash, water closure or debris) that the FHP page stops listing (gone on two checks in a row) is cleared for now and moves to "Cleared in the last 24 hours" with a link to FHP. A cleared former road closure shows as a small green CLEARED pin for 24 hours, unless another source still reports that spot, in which case that warning stays.</p>
   <p><b>Privacy.</b> No patient information is ever shown here. Map data © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors.</p>
 </div>
 
@@ -325,14 +328,12 @@ h1,h2,h3{margin:0;text-wrap:balance}
   advEl.innerHTML = advs.length ? advs.map(a=>`<div class="alert"><h3>${esc(a.agency)}<span class="tm">${esc(when(a.time))}</span></h3><p>${esc(a.text)}${a.url?' <a href="'+esc(a.url)+'" target="_blank" rel="noopener">post</a>':''}</p></div>`).join('') : '<div class="empty">No agency statements recorded.</div>';
 
   // Cleared reports (Mike, Nov 3: an FHP incident the FHP page stops listing is cleared, for now). Listed with the
-  // reason and a link to the source; they are not drawn on the map.
+  // reason and a link to the source, filtered by the road search; former road closures also get a small green pin.
   const cleared=DATA.reopened||[];
-  if(cleared.length){
-    document.getElementById('cleared-wrap').hidden=false;
-    document.getElementById('cleared').innerHTML=cleared.map(c=>{ const v=c.evidence||{};
-      const why=v.kind==='fhp-dropped'?`No longer listed by ${esc(v.agency)} since ${esc(when(v.missingSince))}; cleared ${esc(when(v.reopenedAt))}. Not an official reopening statement.`:'Cleared';
-      return `<div class="alert"><h3>${esc(c.where||c.road||c.title||'Report')}<span class="tm">${esc(c.title||'')}</span></h3><p>${why} <a href="${esc(v.url)}" target="_blank" rel="noopener">${esc(v.agency||'source')} ↗</a></p></div>`; }).join('');
-  }
+  const clearedWhy=c=>{ const v=c.evidence||{}; return v.kind==='fhp-dropped'
+    ?`${formerClosure(c)?esc(v.agency)+' no longer lists this as a road closure':'No longer listed by '+esc(v.agency)} since ${esc(when(v.missingSince))}; cleared ${esc(when(v.reopenedAt))}. Not an official reopening statement.`:'Cleared'; };
+  const clearedLink=c=>{ const v=c.evidence||{}; return v.url?` <a href="${esc(v.url)}" target="_blank" rel="noopener">${esc(v.agency||'source')} ↗</a>`:''; };
+  const matchQ=(it,q)=>!q||[it.title,it.road,it.where,it.city].join(' ').toLowerCase().includes(q);
 
   // ---------- map ----------
   const map = L.map('map',{zoomControl:true,minZoom:10,maxZoom:18,attributionControl:true}).setView([28.22,-80.68],10);
@@ -417,6 +418,25 @@ h1,h2,h3{margin:0;text-wrap:balance}
   const NOLANES=/^(not stated|unknown|n\/?a|none)$/i;  // the source did not say which lanes are affected
   const impact=it=>{ if(isStale(it)) return 'Not re-confirmed'; const l0=(it.lanes||'').trim(), l=NOLANES.test(l0)?'':l0; if(isClosed(it)) return /all lanes|closed|blocked/i.test(l)?l.replace(/^Road Flooded - Seek Alt Route$/i,'Closed, seek another route'):'Closed at this spot'; const base={flood:'Water on road',mvc:'MVC',hazard:'Use caution',closure:''}[cause(it)]; return l||[base,'lane impact not reported'].filter(Boolean).join(' · ').replace(/^l/,'L'); };
   const markers=L.layerGroup().addTo(map);
+  // Mike (Nov 3): when FHP no longer lists a road closure, a small green pin for the next 24 hours that reads as cleared,
+  // with no water or closure icon. Only former closures get one (a cleared crash was never a road closure). If another
+  // source still reports that same spot, its active pin stays and no green pin is drawn beside it (one pin per place).
+  function formerClosure(c){ return (c.evidence||{}).kind==='fhp-dropped'&&isClosed(c); }
+  const greenPin=c=>formerClosure(c)&&c.lat!=null&&!(c.stillReported||[]).length;  // stillReported: same place, from reconcile
+  const okIcon=L.divIcon({className:'mk',html:`<svg width="20" height="20" viewBox="-10 -10 20 20" aria-hidden="true"><circle r="8.5" fill="${col('ok')}" stroke="#fff" stroke-width="2"/><path d="M-4 0l2.8 2.8L4.2-3" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>`,iconSize:[20,20],iconAnchor:[10,10],popupAnchor:[0,-10],tooltipAnchor:[10,0]});
+  const clearedPopup=c=>`<b><span style="color:${col('ok')}">CLEARED</span> · ${esc(where(c))}</b><div class="vb ok" role="note"><span class="seal" aria-hidden="true">✓</span><div><b>${esc((c.evidence||{}).agency||'FHP')} no longer lists this as a road closure</b><div class="d">Gone from the FHP live incident page since ${esc(when((c.evidence||{}).missingSince))}; cleared ${esc(when((c.evidence||{}).reopenedAt))}. Not an official reopening statement.${clearedLink(c)}</div></div></div><div class="src">Earlier report: ${esc(c.title)}${c.city?' · '+esc(c.city):''}</div>`;
+  const clearedEl=document.getElementById('cleared'), clearedWrap=document.getElementById('cleared-wrap');
+  function renderCleared(q){
+    const hit=cleared.filter(c=>matchQ(c,q));
+    clearedWrap.hidden=!hit.length;
+    clearedEl.innerHTML=hit.map(c=>{ const pin=greenPin(c);
+      return `<div class="alert${pin?' go':''}"${pin?` data-cid="${esc(c.id)}" tabindex="0" role="button" aria-label="${esc(where(c))}, cleared, show on map"`:''}><h3>${formerClosure(c)?'<span class="badge clr">Cleared</span>':''}${esc(where(c)||c.road||'Report')}<span class="tm">${esc(c.title||'')}</span></h3><p>${clearedWhy(c)}${clearedLink(c)}${formerClosure(c)&&(c.stillReported||[]).length?` Still reported here by ${esc([...new Set(c.stillReported.map(a=>a.source||'another source'))].join(', '))}, so that warning stays on the map.`:''}</p></div>`; }).join('');
+    return hit.length;
+  }
+  const byCid={};
+  function goCleared(id){ const m=byCid[id]; if(!m) return; if(window.innerWidth<=900) document.getElementById('map').scrollIntoView({block:'start',behavior:'smooth'}); map.flyTo(m.getLatLng(),Math.max(map.getZoom(),14),{duration:.6}); setTimeout(()=>m.openPopup(),650); }
+  clearedEl.addEventListener('click',e=>{ if(e.target.closest('a')) return; const r=e.target.closest('[data-cid]'); if(r) goCleared(r.dataset.cid); });
+  clearedEl.addEventListener('keydown',e=>{ if(e.target.closest('a')) return; if(e.key==='Enter'||e.key===' '){const r=e.target.closest('[data-cid]'); if(r){e.preventDefault(); goCleared(r.dataset.cid);}}});
   const byId={};
   const tier=it=>it.layer==='manual'?'Hand-entered report':it.layer==='NWS'?'NWS storm report (preliminary)':'Agency feed';  // verification is shown by the badge
   // Government verification badge (Mike, Nov 3): verification is shown, never used to clear anything.
@@ -453,7 +473,13 @@ h1,h2,h3{margin:0;text-wrap:balance}
     const q=document.getElementById('q').value.trim().toLowerCase();
     const byNew=document.getElementById('sort').value==='new';
     let vis=items.filter(it=>shown(cause(it)));
-    if(q) vis=vis.filter(it=>[it.title,it.road,it.where,it.city].join(' ').toLowerCase().includes(q));
+    if(q) vis=vis.filter(it=>matchQ(it,q));
+    cleared.filter(c=>greenPin(c)&&matchQ(c,q)).forEach(c=>{
+      const m=L.marker([c.lat,c.lng],{icon:okIcon,zIndexOffset:-200,title:'Cleared: '+where(c),keyboard:false}).bindPopup(clearedPopup(c));
+      if(canHover) m.bindTooltip(`<b>CLEARED</b> · ${esc(where(c))}`,{direction:'right',offset:[2,0],className:'lbl minor k-clr',opacity:1});
+      m.addTo(markers); byCid[c.id]=m;
+    });
+    clearedN=renderCleared(q);
     if(byNew) vis=vis.slice().sort((a,b)=>new Date(b.updated||b.reported||0)-new Date(a.updated||a.reported||0));
     vis.filter(it=>it.lat!=null).forEach(it=>{
       const st=isStale(it), closed=isClosed(it)&&!st, k=cause(it);
@@ -480,9 +506,10 @@ h1,h2,h3{margin:0;text-wrap:balance}
     const isNew=t&&(Date.now()-new Date(t))<3600e3;
     return `<div class="row" data-id="${esc(it.id)}" tabindex="0" role="button" aria-label="${esc(where(it))}, show on map"><span class="ic">${svgFor(it,stale,.85).html}</span><div class="ttl">${isNew?'<span class="badge new">New</span>':''}${closed?'<span class="badge full">Closed</span>':''}${esc(closed&&span(it)?roadDir(it):where(it))}</div><span class="age ${old?'old':''}" title="${esc(when(t))}">${esc(ago(t))}</span><div class="imp ${closed?'closed':''}">${esc(closed&&span(it)?'Closed '+span(it):impact(it))}</div>${closed&&span(it)?`<div class="imp sub">Reported ${esc(it.spot||'')}${it.lanes&&!NOLANES.test(it.lanes.trim())?' · '+esc(it.lanes):''}</div>`:''}<div class="meta">${vshort(it)}${badge}${esc([it.title!==where(it)?it.title:'',it.city,it.source,t?'last reported '+when(t):'',it.awaitingOfficial?'awaiting official reopening':''].filter(Boolean).join(' · '))}${it.noLongerListed?' · no longer listed'+(it.noLongerListed.wasClosed?' as closed':'')+' by '+esc(it.noLongerListed.agency):''}${it.lat==null?' · no map location yet':''}</div></div>`;
   }
+  let clearedN=0;
   function renderList(arr, byNew){
     document.getElementById('count').textContent=arr.length;
-    if(!arr.length){listEl.innerHTML='<div class="empty">'+(document.getElementById('q').value.trim()?'No reports match that search.':'No road reports at the last pull.')+'</div>';return;}
+    if(!arr.length){listEl.innerHTML='<div class="empty">'+(document.getElementById('q').value.trim()?(clearedN?'No active reports match that search. '+clearedN+' cleared below.':'No reports match that search.'):'No road reports at the last pull.')+'</div>';return;}
     if(byNew){ listEl.innerHTML=arr.map(rowHtml).join(''); return; }
     listEl.innerHTML=['flood','mvc','closure','hazard'].map(k=>{
       const g=arr.filter(it=>cause(it)===k); if(!g.length) return '';
