@@ -149,7 +149,8 @@ def lsr_item(e: dict, when: str, url: str) -> dict:
     else:
         m = _LSR_IS.search(rem)
         road, spot = (m.group(1), f"in {near}") if m else (f"{near} area", "")
-    key = f"{e['time']}|{e['lat']:.2f}|{e['lng']:.2f}"
+    # same minute and rounded point can hold two places; the named place keeps them apart, exact repeats still match
+    key = f"{e['time']}|{e['lat']:.2f}|{e['lng']:.2f}|{E.road_words(road)}|{E.road_words(spot)}"
     return {"id": "nws-" + hashlib.sha1(key.encode()).hexdigest()[:10], "layer": "NWS", "status": "closed" if closed else "flooded",
             "fullClosure": False, "road": road, "roadShort": road, "spot": spot, "where": f"{road} {spot}".strip(),
             "lat": e["lat"], "lng": e["lng"],

@@ -378,6 +378,11 @@ check("storm report: a closure clause inside a flooding sentence does not close 
       mixed["status"] == "flooded" and mixed["road"] == "Palm Bay Rd")
 check("storm report: in a multi-location remark the closure binds to its own intersection",
       (multi["status"], multi["road"], multi["spot"]) == ("closed", "Helen St", "at Minton Rd"))
+henry = R.lsr_item(dict(ents[0], remarks="Media reports a road closure at Henry Ave & Minton Rd due to flooding."), "x", "u")
+check("two places reported in the same minute at the same rounded point keep separate ids",
+      henry["id"] != R.lsr_item(ents[0], "x", "u")["id"])
+check("an identical repeat (correction or summary) keeps the same id",
+      R.lsr_item(dict(ents[0]), "x", "u")["id"] == R.lsr_item(ents[0], "y", "v")["id"])
 check("storm report ids are stable and separate", len({R.rid_of(i) for i in its}) == 3
       and R.rid_of(its[0]).startswith("brevard:nws:") and R.src_of(its[0]) == "nws")
 pn = os.path.join(tmp, "nws.jsonl")
