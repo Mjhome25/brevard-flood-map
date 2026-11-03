@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-03T22:01:47Z",
+ "generated": "2026-11-03T22:15:33Z",
  "errors": [
   "FL511 map locations: 1 report(s) without a pin"
  ],
@@ -2781,8 +2781,8 @@
    "title": "Traffic lights not working on US-192 / Vine St / Bronson Hwy East, at S John Rodes Blvd",
    "where": "US-192 EB at S John Rodes Blvd",
    "id": "brevard:fl511:938257",
-   "updated": "2026-11-03T20:21:00Z",
-   "lastReported": "2026-11-03T20:21:00Z",
+   "updated": "2026-11-03T22:03:00Z",
+   "lastReported": "2026-11-03T22:03:00Z",
    "firstReported": "2026-11-03T03:18:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
@@ -3504,8 +3504,8 @@
    "to": "Burdock Ave",
    "where": "CR-509 both directions",
    "id": "brevard:fl511:939236",
-   "updated": "2026-11-03T20:57:00Z",
-   "lastReported": "2026-11-03T20:57:00Z",
+   "updated": "2026-11-03T22:11:00Z",
+   "lastReported": "2026-11-03T22:11:00Z",
    "firstReported": "2026-11-03T17:58:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
@@ -3591,8 +3591,8 @@
    "to": "S John Rodes Blvd",
    "where": "Ellis Rd both directions",
    "id": "brevard:fl511:939238",
-   "updated": "2026-11-03T20:55:00Z",
-   "lastReported": "2026-11-03T20:55:00Z",
+   "updated": "2026-11-03T22:11:00Z",
+   "lastReported": "2026-11-03T22:11:00Z",
    "firstReported": "2026-11-03T17:58:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
@@ -3640,8 +3640,8 @@
    "to": "Rogers Pl",
    "where": "CR-511 both directions",
    "id": "brevard:fl511:939239",
-   "updated": "2026-11-03T20:57:00Z",
-   "lastReported": "2026-11-03T20:57:00Z",
+   "updated": "2026-11-03T22:11:00Z",
+   "lastReported": "2026-11-03T22:11:00Z",
    "firstReported": "2026-11-03T17:58:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
@@ -3710,8 +3710,8 @@
    "to": "Helio Way",
    "where": "Florida Ave both directions at Babcock St S",
    "id": "brevard:fl511:939287",
-   "updated": "2026-11-03T20:55:00Z",
-   "lastReported": "2026-11-03T20:55:00Z",
+   "updated": "2026-11-03T22:11:00Z",
+   "lastReported": "2026-11-03T22:11:00Z",
    "firstReported": "2026-11-03T18:23:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
@@ -3816,8 +3816,8 @@
    "title": "MVC on SR-3 North, at Smith Rd/Grant Rd. Left lane blocked",
    "where": "SR-3 NB at Smith Rd/Grant Rd",
    "id": "brevard:fl511:939527",
-   "updated": "2026-11-03T20:50:00Z",
-   "lastReported": "2026-11-03T20:50:00Z",
+   "updated": "2026-11-03T22:09:00Z",
+   "lastReported": "2026-11-03T22:09:00Z",
    "firstReported": "2026-11-03T20:50:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
