@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-03T16:30:44Z",
+ "generated": "2026-11-03T16:45:36Z",
  "errors": [],
  "items": [
   {
@@ -807,6 +807,79 @@
    "recheck": []
   },
   {
+   "from": "I 95 Hwy",
+   "fullClosure": true,
+   "lanes": "Ellis Rd Closed At John Rodes Blvd Due To Flooding",
+   "lat": 28.0987615854194,
+   "layer": "FHP",
+   "line": [
+    [
+     28.098492,
+     -80.704218
+    ],
+    [
+     28.098542,
+     -80.703567
+    ],
+    [
+     28.098731,
+     -80.702184
+    ],
+    [
+     28.098962,
+     -80.700669
+    ],
+    [
+     28.098938,
+     -80.700211
+    ],
+    [
+     28.098939,
+     -80.700091
+    ],
+    [
+     28.098952,
+     -80.698804
+    ],
+    [
+     28.098979,
+     -80.696029
+    ],
+    [
+     28.098981,
+     -80.695337
+    ],
+    [
+     28.098993,
+     -80.692497
+    ]
+   ],
+   "lng": -80.700088949939,
+   "reported": "2026-11-03T13:16:50Z",
+   "road": "ELLIS RD",
+   "roadShort": "Ellis Rd",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "spot": "at S John Rodes Blvd",
+   "status": "flooded",
+   "title": "Road Closed Due To Water at ELLIS RD x[S JOHN RODES BLVD] [MELBOURNE] (Ellis Rd Closed At John Rodes Blvd Due To Flooding)",
+   "to": "Stan Dr",
+   "where": "Ellis Rd at S John Rodes Blvd",
+   "id": "brevard:fhp:20261103131650-92bc021a",
+   "updated": "2026-11-03T13:16:50Z",
+   "lastReported": "2026-11-03T13:16:50Z",
+   "firstReported": "2026-11-03T13:16:50Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-03T13:16:50Z"
+   },
+   "awaitingOfficial": false,
+   "missingSince": null,
+   "recheck": []
+  },
+  {
    "fullClosure": true,
    "lanes": "Ellis Rd Closed At John Rodes Blvd Due To Flooding",
    "lat": 28.0987615854194,
@@ -831,9 +904,15 @@
     "kind": "feed",
     "publishedAt": "2026-11-03T13:16:50Z"
    },
-   "awaitingOfficial": false,
-   "missingSince": null,
-   "recheck": []
+   "awaitingOfficial": true,
+   "missingSince": "2026-11-03T16:45:43Z",
+   "recheck": [],
+   "noLongerListed": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "since": "2026-11-03T16:45:43Z",
+    "wasClosed": true
+   }
   },
   {
    "fullClosure": false,
@@ -1077,9 +1156,15 @@
     "kind": "feed",
     "publishedAt": "2026-11-03T15:42:09Z"
    },
-   "awaitingOfficial": false,
-   "missingSince": null,
-   "recheck": []
+   "awaitingOfficial": true,
+   "missingSince": "2026-11-03T16:45:43Z",
+   "recheck": [],
+   "noLongerListed": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "since": "2026-11-03T16:45:43Z",
+    "wasClosed": false
+   }
   },
   {
    "fullClosure": false,
@@ -2206,8 +2291,8 @@
    "title": "Traffic lights not working on US-192 / Vine St / Bronson Hwy East, at S John Rodes Blvd",
    "where": "US-192 EB at S John Rodes Blvd",
    "id": "brevard:fl511:938257",
-   "updated": "2026-11-03T16:10:00Z",
-   "lastReported": "2026-11-03T16:10:00Z",
+   "updated": "2026-11-03T16:44:00Z",
+   "lastReported": "2026-11-03T16:44:00Z",
    "firstReported": "2026-11-03T03:18:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
@@ -2486,8 +2571,8 @@
    "title": "MVC on SR-405 East, at Grissom Pkwy. Right shoulder blocked",
    "where": "SR-405 EB at Grissom Pkwy",
    "id": "brevard:fl511:938818",
-   "updated": "2026-11-03T16:07:00Z",
-   "lastReported": "2026-11-03T16:07:00Z",
+   "updated": "2026-11-03T16:43:00Z",
+   "lastReported": "2026-11-03T16:43:00Z",
    "firstReported": "2026-11-03T13:45:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
