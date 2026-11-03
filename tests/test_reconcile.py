@@ -495,12 +495,16 @@ road = lambda **k: dict({"title": "x", "status": "closed"}, **k)
 check("same spot by name, either order and with suffixes spelled differently",
       R.same_spot(road(where="Norfolk Pkwy at Minton Rd", road="NORFOLK PKWY", lat=28.0434, lng=-80.6715),
                   road(where="Minton Rd at Norfolk Pkwy", road="Minton Rd", lat=28.05, lng=-80.686)))
-check("same spot by map point within 300 m when the names differ",
-      R.same_spot(road(where="N Wickham Rd at Pineda Cswy", lat=28.20096, lng=-80.67210),
-                  road(where="Wickham Rd SB at Pineda Causeway", lat=28.2010, lng=-80.6722)))
-check("not the same spot: different intersection 1 km away",
-      not R.same_spot(road(where="US-1 at Suntree Blvd", lat=28.2293, lng=-80.6733),
-                      road(where="US-1 at Viera Blvd", lat=28.2615, lng=-80.6880)))
+check("same spot by name with direction and mile-marker tags written differently",
+      R.same_spot(road(where="N Wickham Rd at Pineda Cswy", road="N WICKHAM RD"),
+                  road(where="Wickham Rd SB at Pineda Causeway", road="Wickham Rd", spot="at Pineda Causeway"))
+      and R.same_spot(road(where="I-95 Sb [MM222] at Mm222", road="I-95 SB [MM222]"),
+                      road(where="I-95 SB at MM 222", road="I-95", spot="at MM 222")))
+check("nearness alone never makes two differently named intersections one place",
+      not R.same_spot(road(where="First Rd at Second St", lat=28.10, lng=-80.67),
+                      road(where="Other Rd at Fourth St", lat=28.101, lng=-80.67)))
+check("opposite directions at the same mile marker are different places",
+      not R.same_spot(road(where="I-95 NB at MM 222", road="I-95 NB"), road(where="I-95 SB [MM222] at Mm222", road="I-95 SB [MM222]")))
 check("not the same spot without a point or a cross street", not R.same_spot(road(road="US-1"), road(road="US-1")))
 fhp_closed = dict(crash, id="fhp-9", status="closed", road="Minton Rd", spot="at Norfolk Pkwy",
                   reported="2026-11-02T13:05:00Z", lat=28.0434, lng=-80.6715)
@@ -522,6 +526,11 @@ check("the page draws a green pin only for a cleared former closure that nothing
 check("the road search filters the cleared list and the green pins",
       "cleared.filter(c=>greenPin(c)&&matchQ(c,q))" in tplc and "const hit=cleared.filter(c=>matchQ(c,q))" in tplc
       and "No active reports match that search." in tplc)
+check("the page ends the 24-hour window itself: expired entries are filtered on load and removed at their deadline",
+      "let cleared=allCleared.filter(live)" in tplc and "Date.now()-new Date(c.reopenedAt)<DAY" in tplc
+      and "cleared=allCleared.filter(live); draw(); expire();" in tplc)
+check("an active report at a cleared FHP closure's place notes FHP's drop and says it stays", "${fhpNote(it)}" in tplc
+      and "stays until a cited source clears it" in tplc)
 check("check_events accepts the FHP-drop clearance with clearance enabled", subprocess.run(
     [sys.executable, "-I", os.path.join(repo, "check_events.py"), "--before", "", "--bootstrap", "--events", pc],
     capture_output=True).returncode == 0)

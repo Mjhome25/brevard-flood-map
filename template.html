@@ -329,7 +329,10 @@ h1,h2,h3{margin:0;text-wrap:balance}
 
   // Cleared reports (Mike, Nov 3: an FHP incident the FHP page stops listing is cleared, for now). Listed with the
   // reason and a link to the source, filtered by the road search; former road closures also get a small green pin.
-  const cleared=DATA.reopened||[];
+  // The 24-hour window also ends in the browser, so a page left open or cached while updates stop drops it on time.
+  const DAY=24*3600e3, allCleared=DATA.reopened||[];
+  const live=c=>Date.now()-new Date(c.reopenedAt)<DAY;
+  let cleared=allCleared.filter(live);
   const clearedWhy=c=>{ const v=c.evidence||{}; return v.kind==='fhp-dropped'
     ?`${formerClosure(c)?esc(v.agency)+' no longer lists this as a road closure':'No longer listed by '+esc(v.agency)} since ${esc(when(v.missingSince))}; cleared ${esc(when(v.reopenedAt))}. Not an official reopening statement.`:'Cleared'; };
   const clearedLink=c=>{ const v=c.evidence||{}; return v.url?` <a href="${esc(v.url)}" target="_blank" rel="noopener">${esc(v.agency||'source')} ↗</a>`:''; };
@@ -419,8 +422,9 @@ h1,h2,h3{margin:0;text-wrap:balance}
   const impact=it=>{ if(isStale(it)) return 'Not re-confirmed'; const l0=(it.lanes||'').trim(), l=NOLANES.test(l0)?'':l0; if(isClosed(it)) return /all lanes|closed|blocked/i.test(l)?l.replace(/^Road Flooded - Seek Alt Route$/i,'Closed, seek another route'):'Closed at this spot'; const base={flood:'Water on road',mvc:'MVC',hazard:'Use caution',closure:''}[cause(it)]; return l||[base,'lane impact not reported'].filter(Boolean).join(' · ').replace(/^l/,'L'); };
   const markers=L.layerGroup().addTo(map);
   // Mike (Nov 3): when FHP no longer lists a road closure, a small green pin for the next 24 hours that reads as cleared,
-  // with no water or closure icon. Only former closures get one (a cleared crash was never a road closure). If another
-  // source still reports that same spot, its active pin stays and no green pin is drawn beside it (one pin per place).
+  // with no water or closure icon. Only former closures get one (a cleared crash was never a road closure). Another
+  // source's report at the same place is never cleared by this; it keeps its pin, which notes FHP's drop, and no green
+  // pin is drawn beside it until Mike chooses how the two should look together.
   function formerClosure(c){ return (c.evidence||{}).kind==='fhp-dropped'&&isClosed(c); }
   const greenPin=c=>formerClosure(c)&&c.lat!=null&&!(c.stillReported||[]).length;  // stillReported: same place, from reconcile
   const okIcon=L.divIcon({className:'mk',html:`<svg width="20" height="20" viewBox="-10 -10 20 20" aria-hidden="true"><circle r="8.5" fill="${col('ok')}" stroke="#fff" stroke-width="2"/><path d="M-4 0l2.8 2.8L4.2-3" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>`,iconSize:[20,20],iconAnchor:[10,10],popupAnchor:[0,-10],tooltipAnchor:[10,0]});
@@ -430,7 +434,7 @@ h1,h2,h3{margin:0;text-wrap:balance}
     const hit=cleared.filter(c=>matchQ(c,q));
     clearedWrap.hidden=!hit.length;
     clearedEl.innerHTML=hit.map(c=>{ const pin=greenPin(c);
-      return `<div class="alert${pin?' go':''}"${pin?` data-cid="${esc(c.id)}" tabindex="0" role="button" aria-label="${esc(where(c))}, cleared, show on map"`:''}><h3>${formerClosure(c)?'<span class="badge clr">Cleared</span>':''}${esc(where(c)||c.road||'Report')}<span class="tm">${esc(c.title||'')}</span></h3><p>${clearedWhy(c)}${clearedLink(c)}${formerClosure(c)&&(c.stillReported||[]).length?` Still reported here by ${esc([...new Set(c.stillReported.map(a=>a.source||'another source'))].join(', '))}, so that warning stays on the map.`:''}</p></div>`; }).join('');
+      return `<div class="alert${pin?' go':''}"${pin?` data-cid="${esc(c.id)}" tabindex="0" role="button" aria-label="${esc(where(c))}, cleared, show on map"`:''}><h3>${formerClosure(c)?'<span class="badge clr">Cleared</span>':''}${esc(where(c)||c.road||'Report')}<span class="tm">${esc(c.title||'')}</span></h3><p>${clearedWhy(c)}${clearedLink(c)}${formerClosure(c)&&(c.stillReported||[]).length?` Another report at this place stays on the map: ${c.stillReported.map(a=>esc(a.source||'another source')+(a.since?` (no longer listed by that feed since ${esc(when(a.since))}; kept until a cited source clears it)`:'')).join('; ')}.`:''}</p></div>`; }).join('');
     return hit.length;
   }
   const byCid={};
@@ -462,14 +466,16 @@ h1,h2,h3{margin:0;text-wrap:balance}
     return it.verified?n+`<span class="vbs ok">✓ Government verified · ${esc(it.verified.kind==='feed'?when(it.verified.publishedAt):vday(it.verified))}${it.awaitingOfficial||it.noLongerListed?' · awaiting confirmation':''}</span>`:n||'<span class="vbs unv">! Not government verified</span>'; };
   function nll(it){ const n=it.noLongerListed; return n?`<div class="nll">No longer listed${n.wasClosed?' as closed':''} by <a href="${esc(n.url)}" target="_blank" rel="noopener">${esc(n.agency)}</a> since ${esc(when(n.since))}. Not an official reopening.</div>`:''; }
   const srcHost=it=>{ try{ return new URL(it.sourceUrl).hostname.replace(/^www\./,''); }catch(e){ return 'the source'; } };  // the site the link really opens
+  function fhpNote(it){ const c=cleared.find(x=>formerClosure(x)&&(x.stillReported||[]).some(a=>a.id===it.id)); const v=c&&c.evidence;
+    return c?`<div class="nll">${esc(v.agency)} no longer lists its road closure here (since ${esc(when(v.missingSince))}). This report is from another source and stays until a cited source clears it. <a href="${esc(v.url)}" target="_blank" rel="noopener">${esc(v.agency)} ↗</a></div>`:''; }
   function popupHtml(it){
     const c=isClosed(it)&&!isStale(it);
-    return `<b>${c?'<span style="color:'+col('closed')+'">CLOSED</span> · ':''}${esc(c?closedWhere(it):where(it))}</b>${vbadge(it)}${it.raisedBy?`<div class="raised">Marked closed because ${esc(it.raisedBy.agency)} says so${it.verified&&it.verified.quote===it.raisedBy.quote?' (quoted above)':`: “${esc(it.raisedBy.quote)}” <a href="${esc(it.raisedBy.url)}" target="_blank" rel="noopener">${esc(it.raisedBy.agency)} ↗</a>`}</div>`:''}${esc(impact(it))}${nll(it)}${c&&span(it)?`<br><span class="src">Reported ${esc(it.spot||'')}. The stretch shown runs to the nearest cross street on each side.</span>`:''}<div class="src">${esc(it.title)}${it.city?' · '+esc(it.city):''}<br>${tier(it)} · ${esc(it.source)} · ${esc(when(it.updated||it.reported))}${it.approx?' · approximate location':''}${it.note?'<br>'+(it.raisedBy?'Earlier report: ':'')+esc(it.note):''}${it.sourceUrl?'<br><a href="'+esc(it.sourceUrl)+'" target="_blank" rel="noopener">Read the report at '+esc(srcHost(it))+' ↗</a>':''}</div>`;
+    return `<b>${c?'<span style="color:'+col('closed')+'">CLOSED</span> · ':''}${esc(c?closedWhere(it):where(it))}</b>${vbadge(it)}${it.raisedBy?`<div class="raised">Marked closed because ${esc(it.raisedBy.agency)} says so${it.verified&&it.verified.quote===it.raisedBy.quote?' (quoted above)':`: “${esc(it.raisedBy.quote)}” <a href="${esc(it.raisedBy.url)}" target="_blank" rel="noopener">${esc(it.raisedBy.agency)} ↗</a>`}</div>`:''}${esc(impact(it))}${nll(it)}${fhpNote(it)}${c&&span(it)?`<br><span class="src">Reported ${esc(it.spot||'')}. The stretch shown runs to the nearest cross street on each side.</span>`:''}<div class="src">${esc(it.title)}${it.city?' · '+esc(it.city):''}<br>${tier(it)} · ${esc(it.source)} · ${esc(when(it.updated||it.reported))}${it.approx?' · approximate location':''}${it.note?'<br>'+(it.raisedBy?'Earlier report: ':'')+esc(it.note):''}${it.sourceUrl?'<br><a href="'+esc(it.sourceUrl)+'" target="_blank" rel="noopener">Read the report at '+esc(srcHost(it))+' ↗</a>':''}</div>`;
   }
   const FILT={flood:'f-flood',mvc:'f-mvc',closure:'f-closure',hazard:'f-caution'};
   const shown=k=>document.getElementById(FILT[k]).checked;
   function draw(){
-    markers.clearLayers();
+    markers.clearLayers(); for(const k in byCid) delete byCid[k];
     const q=document.getElementById('q').value.trim().toLowerCase();
     const byNew=document.getElementById('sort').value==='new';
     let vis=items.filter(it=>shown(cause(it)));
@@ -532,6 +538,11 @@ h1,h2,h3{margin:0;text-wrap:balance}
   const zc=()=>{ const z=map.getZoom(), el=map.getContainer(); el.classList.toggle('z-lo',z<11); el.classList.toggle('z-mid',z>=11&&z<13); };
   map.on('zoomend',zc); zc();
   draw();
+  (function expire(){  // at each clearance's 24-hour mark, take its pin and list entry away
+    const next=Math.min(...cleared.map(c=>new Date(c.reopenedAt).getTime()+DAY));
+    if(!isFinite(next)) return;
+    setTimeout(()=>{ cleared=allCleared.filter(live); draw(); expire(); },Math.max(1000,next-Date.now()+1000));
+  })();
 
   // ---------- corridors ----------
   const hitIds=new Set(); let hitRoutes=0;

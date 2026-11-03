@@ -10,7 +10,6 @@ is disabled until the verifier and the reopened display qualify (Phase 1 batches
 from __future__ import annotations
 
 import datetime
-import math
 import hashlib
 import json
 import os
@@ -283,21 +282,37 @@ def display(state: dict) -> tuple[list[dict], list[dict]]:
             reopened.append(it)
     reopened.sort(key=lambda it: it["reopenedAt"], reverse=True)
     items.sort(key=lambda it: it["id"])
-    for c in reopened:  # Mike (Nov 3): a cleared spot that another source still reports keeps that warning, no green pin
+    items = merge_nws(items)
+    for c in reopened:
+        # Another source's report at the same place is never cleared by FHP's drop; it stays on the map (how the two
+        # should look together is Mike's open choice). Named here, with whether its own feed still lists it.
         c["stillReported"] = [{"id": a["id"], "where": a.get("where") or a.get("road") or a.get("title"),
-                               "source": a.get("source")} for a in items if same_spot(c, a)]
-    return merge_nws(items), reopened
+                               "source": a.get("source"), "since": (a.get("noLongerListed") or {}).get("since")}
+                              for a in items if same_spot(c, a)]
+    return items, reopened
+
+
+def spot_key(it: dict) -> tuple | None:
+    """place() with the road's direction and mile-marker tags taken out ('I-95 SB [MM222] at Mm222' and 'I-95 SB at
+    MM 222' are one place; 'N Wickham Rd' and 'Wickham Rd SB' are one road), plus the direction when one is given."""
+    where_road, _, where_cross = (it.get("where") or "").partition(" at ")
+    raw = re.split(r"\s*\(|/", it.get("roadShort") or it.get("road") or where_road)[0]
+    d = re.search(r"\b(NB|SB|EB|WB)\b", raw + " " + where_road + " " + (it.get("dir") or ""), re.I)
+    norm = lambda x: re.sub(r"\bmm (\d+)\b", r"mm\1", re.sub(r"^(?:n|s|e|w|north|south|east|west) | (?:nb|sb|eb|wb)$", "",
+                            E.road_words(re.sub(r"\[[^\]]*\]", " ", x))))
+    road = norm(raw)
+    cross = re.sub(r"^(?:at|near|between)\s+", "", it.get("spot") or where_cross, flags=re.I)
+    cross = norm(re.split(r"\s+(?:and|to)\s+|\s*\(", cross)[0])
+    if not road or not cross or road == cross:
+        return None
+    return frozenset((road, cross)), d.group(1).upper() if d else None
 
 
 def same_spot(a: dict, b: dict) -> bool:
-    """Two reports at one place: the same intersection by name (either order), or map points within 300 m."""
-    if place(a) and place(a) == place(b):
-        return True
-    if None in (a.get("lat"), a.get("lng"), b.get("lat"), b.get("lng")):
-        return False
-    la, lb = math.radians(a["lat"]), math.radians(b["lat"])
-    h = math.sin((lb - la) / 2) ** 2 + math.cos(la) * math.cos(lb) * math.sin(math.radians(b["lng"] - a["lng"]) / 2) ** 2
-    return 2 * 6371 * math.asin(math.sqrt(h)) < 0.3
+    """Two reports at one place: the same intersection or mile marker by name (either order), and not opposite
+    directions. Nearness alone never makes two differently named places one."""
+    ka, kb = spot_key(a), spot_key(b)
+    return bool(ka and kb and ka[0] == kb[0] and (not ka[1] or not kb[1] or ka[1] == kb[1]))
 
 
 def place(it: dict) -> frozenset | None:
