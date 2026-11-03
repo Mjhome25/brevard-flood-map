@@ -1,8 +1,7 @@
 name: Update map
 
+# Started every 15 minutes by the Cloudflare Worker in timer/ (GitHub's own schedule never fired).
 on:
-  schedule:
-    - cron: "*/15 * * * *"
   workflow_dispatch:
     inputs:
       force_news:
