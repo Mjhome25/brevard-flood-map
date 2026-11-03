@@ -1,0 +1,1479 @@
+{
+ "checkedAt": "2026-11-03T17:25:08Z",
+ "fresh": true,
+ "pilot": "City of Melbourne",
+ "pending": [
+  "Space Coast Daily City of Melbourne closure list (14 closed, 8 flooded)",
+  "WESH 2 closed-roads list",
+  "Palm Bay",
+  "West Melbourne",
+  "Brevard County",
+  "Cocoa",
+  "Rockledge",
+  "Titusville"
+ ],
+ "sources": [
+  {
+   "agency": "City of Melbourne",
+   "index": "https://www.melbourneflorida.org/Government/City-News/Traffic-Advisories",
+   "partial": false,
+   "rows": [
+    {
+     "place": "area|aurora|stewart",
+     "claim": "closure",
+     "scope": "area",
+     "road": "aurora",
+     "cross": [
+      "stewart"
+     ],
+     "dirs": [],
+     "sentence": "Aurora Road is closed in the area of Stewart Road.",
+     "sha256": "c47bf1baf1dea6992c054a2b1ab3fcf0eb6edf8c50243fc8ea20074682ce8797",
+     "source": "https://www.melbourneflorida.org/Government/City-News/Traffic-Advisories/Road-Closures-Aurora-and-Sarno",
+     "sourceTime": "2026-11-02",
+     "inNewest": false,
+     "verdict": "covered",
+     "pins": [
+      "brevard:manual:aurora-stewart"
+     ]
+    },
+    {
+     "place": "point|babcock|avenue b",
+     "claim": "closure",
+     "scope": "point",
+     "road": "babcock",
+     "cross": [
+      "avenue b"
+     ],
+     "dirs": [],
+     "sentence": "Babcock Street and Avenue B",
+     "sha256": "d605ff29d6f4d2801a2f5c79ebc39abd04693b40863ecabfc5064aec586bed14",
+     "source": "https://www.melbourneflorida.org/Government/City-News/Traffic-Advisories/Traffic-Advisory-November-2",
+     "sourceTime": "2026-11-02",
+     "inNewest": false,
+     "verdict": "covered",
+     "pins": [
+      "brevard:manual:babcock-st-at-avenue-b"
+     ]
+    },
+    {
+     "place": "point|babcock|florida",
+     "claim": "closure",
+     "scope": "point",
+     "road": "babcock",
+     "cross": [
+      "florida"
+     ],
+     "dirs": [],
+     "sentence": "Babcock Street and Florida Avenue",
+     "sha256": "15527065b338409aeb9cdffe6b290c4743ef2b8208d4beed8fe884f95f0d392d",
+     "source": "https://www.melbourneflorida.org/Government/City-News/Traffic-Advisories/Traffic-Advisory-November-2",
+     "sourceTime": "2026-11-02",
+     "inNewest": false,
+     "verdict": "covered",
+     "pins": [
+      "brevard:manual:babcock-st-at-florida-ave"
+     ]
+    },
+    {
+     "place": "point|babcock|southgate",
+     "claim": "flooding",
+     "scope": "point",
+     "road": "babcock",
+     "cross": [
+      "southgate"
+     ],
+     "dirs": [],
+     "sentence": "Babcock Street and Southgate Boulevard",
+     "sha256": "271d24893e8ca9b16fc4d19d444221567120d6b14e54b7ebc1bf91e72726cd69",
+     "source": "https://www.melbourneflorida.org/Government/City-News/Traffic-Advisories/Traffic-Advisory-November-2",
+     "sourceTime": "2026-11-02",
+     "inNewest": false,
+     "verdict": "covered",
+     "pins": [
+      "brevard:manual:babcock-st-at-southgate-blvd"
+     ]
+    },
+    {
+     "place": "point|babcock|sun lakes|EB|NB",
+     "claim": "closure",
+     "scope": "point",
+     "road": "babcock",
+     "cross": [
+      "sun lakes"
+     ],
+     "dirs": [
+      "EB",
+      "NB"
+     ],
+     "sentence": "Babcock St/Sunlake Rd- northbound and eastbound remains closed with barricades blocking the roadway.",
+     "sha256": "b644a542392b45085b771aec539b621af5a865220d9a900590e53cccfe9d6609",
+     "source": "https://www.melbourneflorida.org/Government/City-News/Traffic-Advisories/Road-Closures-0830",
+     "sourceTime": "2026-11-03T13:30:00Z",
+     "inNewest": false,
+     "verdict": "covered",
+     "pins": [
+      "brevard:manual:babcock-sunlakes"
+     ]
+    },
+    {
+     "place": "point|babcock|university",
+     "claim": "closure",
+     "scope": "point",
+     "road": "babcock",
+     "cross": [
+      "university"
+     ],
+     "dirs": [],
+     "sentence": "Babcock Street at University Boulevard is closed.",
+     "sha256": "78247257aa868978bf27f41bed5624b469ebf395cbe15d3afc58652f685ae015",
+     "source": "https://www.melbourneflorida.org/Government/City-News/Traffic-Advisories/Road-Closures-Dairy-Babcock-Lake-Washington",
+     "sourceTime": "2026-11-02",
+     "inNewest": false,
+     "verdict": "covered",
+     "pins": [
+      "brevard:manual:babcock-st-at-university-blvd"
+     ]
+    },
+    {
+     "place": "point|dairy|edgewood",
+     "claim": "closure",
+     "scope": "point",
+     "road": "dairy",
+     "cross": [
+      "edgewood"
+     ],
+     "dirs": [],
+     "sentence": "Dairy Road and Edgewood Drive",
+     "sha256": "312819502e383eb5a20b3e4a58fa3ec425e234e87f713c8cb7d4d411b5d98e8d",
+     "source": "https://www.melbourneflorida.org/Government/City-News/Traffic-Advisories/Traffic-Advisory-November-2",
+     "sourceTime": "2026-11-02",
+     "inNewest": false,
+     "verdict": "covered",
+     "pins": [
+      "brevard:manual:dairy-rd-at-edgewood-dr"
+     ]
+    },
+    {
+     "place": "point|dairy|florida",
+     "claim": "flooding",
+     "scope": "point",
+     "road": "dairy",
+     "cross": [
+      "florida"
+     ],
+     "dirs": [],
+     "sentence": "Dairy Road and Florida Avenue",
+     "sha256": "6903b03ac01f353e3af2142c93790dc0e50fafee83caa6935b38bdec91ab65ef",
+     "source": "https://www.melbourneflorida.org/Government/City-News/Traffic-Advisories/Traffic-Advisory-November-2",
+     "sourceTime": "2026-11-02",
+     "inNewest": false,
+     "verdict": "covered",
+     "pins": [
+      "brevard:manual:dairy-rd-at-florida-ave"
+     ]
+    },
+    {
+     "place": "point|dairy|snicole",
+     "claim": "closure",
+     "scope": "point",
+     "road": "dairy",
+     "cross": [
+      "snicole"
+     ],
+     "dirs": [],
+     "sentence": "Dairy Road and Snicole Road",
+     "sha256": "d6b2fb68fd504ef8123424300f0558c192cbc21a3fa77c5240be7c79581d7b3f",
+     "source": "https://www.melbourneflorida.org/Government/City-News/Traffic-Advisories/Traffic-Advisory-November-2",
+     "sourceTime": "2026-11-02",
+     "inNewest": false,
+     "verdict": "covered",
+     "pins": [
+      "brevard:manual:dairy-rd-at-snicole-rd"
+     ]
+    },
+    {
+     "place": "point|drive martin luther king jr|nasa",
+     "claim": "flooding",
+     "scope": "point",
+     "road": "drive martin luther king jr",
+     "cross": [
+      "nasa"
+     ],
+     "dirs": [],
+     "sentence": "Dr. Martin Luther King, Jr. Boulevard and NASA Boulevard",
+     "sha256": "75dcfd1fde964ffa039163ec70ee8f73e642f6d6d7935c5a25d6b57f78ec29a9",
+     "source": "https://www.melbourneflorida.org/Government/City-News/Traffic-Advisories/Traffic-Advisory-November-2",
+     "sourceTime": "2026-11-02",
+     "inNewest": false,
+     "verdict": "covered",
+     "pins": [
+      "brevard:manual:dr-martin-luther-king-jr-blvd-at-nasa-bl"
+     ]
+    },
+    {
+     "place": "point|drive martin luther king jr|new haven",
+     "claim": "flooding",
+     "scope": "point",
+     "road": "drive martin luther king jr",
+     "cross": [
+      "new haven"
+     ],
+     "dirs": [],
+     "sentence": "Dr. Martin Luther King, Jr. Boulevard and New Haven Avenue",
+     "sha256": "bbf72e91f6e2a32db4e124cde47b6085891833135062e1cf2b54095c23b9b5ba",
+     "source": "https://www.melbourneflorida.org/Government/City-News/Traffic-Advisories/Traffic-Advisory-November-2",
+     "sourceTime": "2026-11-02",
+     "inNewest": false,
+     "verdict": "covered",
+     "pins": [
+      "brevard:manual:dr-martin-luther-king-jr-blvd-at-new-hav"
+     ]
+    },
+    {
+     "place": "point|eau gallie|commodore",
+     "claim": "flooding",
+     "scope": "point",
+     "road": "eau gallie",
+     "cross": [
+      "commodore"
+     ],
+     "dirs": [],
+     "sentence": "Eau Gallie Boulevard and Commodore Boulevard",
+     "sha256": "2a2b46126c0abda60f306ab81d76ee3e49a9b9672f6c47340f5298ac3cfbd36e",
+     "source": "https://www.melbourneflorida.org/Government/City-News/Traffic-Advisories/Traffic-Advisory-November-2",
+     "sourceTime": "2026-11-02",
+     "inNewest": false,
+     "verdict": "covered",
+     "pins": [
+      "brevard:manual:eau-gallie-blvd-at-commodore-blvd"
+     ]
+    },
+    {
+     "place": "point|eau gallie|john rodes|SB",
+     "claim": "closure",
+     "scope": "point",
+     "road": "eau gallie",
+     "cross": [
+      "john rodes"
+     ],
+     "dirs": [
+      "SB"
+     ],
+     "sentence": "Eau Gallie Blvd/ John Rodes Blvd- southbound remains closed with barricades blocking the roadway.",
+     "sha256": "2c9805ea3219402ec4ea7707669ed6991eb9f9a9961d2cb7d9ca6265573e6a78",
+     "source": "https://www.melbourneflorida.org/Government/City-News/Traffic-Advisories/Copy-of-Road-Closures-1150",
+     "sourceTime": "2026-11-03T16:50:00Z",
+     "inNewest": true,
+     "verdict": "covered",
+     "pins": [
+      "brevard:manual:john-rodes-sb-at-eau-gallie"
+     ]
+    },
+    {
+     "place": "point|eau gallie|sarno",
+     "claim": "closure",
+     "scope": "point",
+     "road": "eau gallie",
+     "cross": [
+      "sarno"
+     ],
+     "dirs": [],
+     "sentence": "Eau Gallie Boulevard and Sarno Road",
+     "sha256": "3907d83eada4009ff5e04579cd39c5faa2f25f9d301cacfb45f90393ddfaeb2c",
+     "source": "https://www.melbourneflorida.org/Government/City-News/Traffic-Advisories/Traffic-Advisory-November-2",
+     "sourceTime": "2026-11-02",
+     "inNewest": false,
+     "verdict": "partial",
+     "pins": [
+      "brevard:manual:riverside-dr-sb-at-eau-gallie-blvd",
+      "brevard:manual:eau-gallie-blvd-at-commodore-blvd",
+      "brevard:manual:john-rodes-sb-at-eau-gallie"
+     ]
+    },
+    {
+     "place": "point|eber|babcock|EB|SB",
+     "claim": "closure",
+     "scope": "point",
+     "road": "eber",
+     "cross": [
+      "babcock"
+     ],
+     "dirs": [
+      "EB",
+      "SB"
+     ],
+     "sentence": "Eber Blvd/Babcock St- southbound and eastbound remains closed with barricades blocking the roadway.",
+     "sha256": "fd088a0bad3a30b07513ba03827da4124b6ddbdc460cc5463a9e5ff91c74a6d1",
+     "source": "https://www.melbourneflorida.org/Government/City-News/Traffic-Advisories/Copy-of-Road-Closures-1150",
+     "sourceTime": "2026-11-03T16:50:00Z",
+     "inNewest": true,
+     "verdict": "covered",
+     "pins": [
+      "brevard:manual:babcock-eber"
+     ]
+    },
+    {
+     "place": "point|edgewood|ruffner",
+     "claim": "closure",
+     "scope": "point",
+     "road": "edgewood",
+     "cross": [
+      "ruffner"
+     ],
+     "dirs": [],
+     "sentence": "Edgewood Road and Ruffner Road",
+     "sha256": "e091a3ab75b6e1039194122ce44fb7a2d8c8236f32fa4344b02e62957cd4c61b",
+     "source": "https://www.melbourneflorida.org/Government/City-News/Traffic-Advisories/Traffic-Advisory-November-2",
+     "sourceTime": "2026-11-02",
+     "inNewest": false,
+     "verdict": "covered",
+     "pins": [
+      "brevard:manual:edgewood-ruffner"
+     ]
+    },
+    {
+     "place": "point|florida|babcock|WB",
+     "claim": "closure",
+     "scope": "point",
+     "road": "florida",
+     "cross": [
+      "babcock"
+     ],
+     "dirs": [
+      "WB"
+     ],
+     "sentence": "Florida Ave/Babcock St- westbound remains closed with barricades blocking the roadway.",
+     "sha256": "b8c4f014cc421a324f2984a77abd8911d2f3b09a777d1c5717441969e4f8eefc",
+     "source": "https://www.melbourneflorida.org/Government/City-News/Traffic-Advisories/Road-Closures-1045",
+     "sourceTime": "2026-11-03T15:45:00Z",
+     "inNewest": false,
+     "verdict": "direction-unstated",
+     "pins": [
+      "brevard:manual:babcock-st-at-florida-ave"
+     ]
+    },
+    {
+     "place": "point|florida|dairy|EB",
+     "claim": "closure",
+     "scope": "point",
+     "road": "florida",
+     "cross": [
+      "dairy"
+     ],
+     "dirs": [
+      "EB"
+     ],
+     "sentence": "Florida Ave/Dairy Rd- eastbound remains closed with barricades blocking the roadway.",
+     "sha256": "6a2ce68f2f27c8382552cb7bc4f7fb86a18dbfb0cb0811ad7edeea6d97b47c0d",
+     "source": "https://www.melbourneflorida.org/Government/City-News/Traffic-Advisories/Copy-of-Road-Closures-1150",
+     "sourceTime": "2026-11-03T16:50:00Z",
+     "inNewest": true,
+     "verdict": "direction-unstated",
+     "pins": [
+      "brevard:manual:dairy-rd-at-florida-ave"
+     ]
+    },
+    {
+     "place": "point|lake washington|stewart",
+     "claim": "closure",
+     "scope": "point",
+     "road": "lake washington",
+     "cross": [
+      "stewart"
+     ],
+     "dirs": [],
+     "sentence": "Lake Washington Road and Stewart Road",
+     "sha256": "506afd6f18032f251c5793be7c13dabd133e628fe4f855e4c28c02e44f23da51",
+     "source": "https://www.melbourneflorida.org/Government/City-News/Traffic-Advisories/Traffic-Advisory-November-2",
+     "sourceTime": "2026-11-02",
+     "inNewest": false,
+     "verdict": "covered",
+     "pins": [
+      "brevard:manual:lake-washington-rd-at-stewart-rd"
+     ]
+    },
+    {
+     "place": "point|lipscomb|university",
+     "claim": "flooding",
+     "scope": "point",
+     "road": "lipscomb",
+     "cross": [
+      "university"
+     ],
+     "dirs": [],
+     "sentence": "Lipscomb Street and University Boulevard",
+     "sha256": "fd1279ea36ae2bda387ce08842146f1e47edd69b7a2b4b853aa1013433245d4c",
+     "source": "https://www.melbourneflorida.org/Government/City-News/Traffic-Advisories/Traffic-Advisory-November-2",
+     "sourceTime": "2026-11-02",
+     "inNewest": false,
+     "verdict": "covered",
+     "pins": [
+      "brevard:manual:university-blvd-at-lipscomb-st"
+     ]
+    },
+    {
+     "place": "point|riverside|eau gallie|SB",
+     "claim": "closure",
+     "scope": "point",
+     "road": "riverside",
+     "cross": [
+      "eau gallie"
+     ],
+     "dirs": [
+      "SB"
+     ],
+     "sentence": "Riverside Drive (Southbound) is closed at Eau Gallie Boulevard",
+     "sha256": "a5c64931ba54dc7f09e6d300f26885cc0412709c44662ce5c2c357b8b6f67d40",
+     "source": "https://www.melbourneflorida.org/Government/City-News/Traffic-Advisories/Traffic-Advisory-November-2",
+     "sourceTime": "2026-11-02",
+     "inNewest": false,
+     "verdict": "covered",
+     "pins": [
+      "brevard:manual:riverside-dr-sb-at-eau-gallie-blvd"
+     ]
+    },
+    {
+     "place": "point|sun lakes|babcock",
+     "claim": "closure",
+     "scope": "point",
+     "road": "sun lakes",
+     "cross": [
+      "babcock"
+     ],
+     "dirs": [],
+     "sentence": "Sunlake Rd/Babcock St- remains closed with barricades blocking the roadway.",
+     "sha256": "d5dfe1bf454eecbe65c642bcfc251e0391ff7284843830f0a841a81f2be17e73",
+     "source": "https://www.melbourneflorida.org/Government/City-News/Traffic-Advisories/Copy-of-Road-Closures-1150",
+     "sourceTime": "2026-11-03T16:50:00Z",
+     "inNewest": true,
+     "verdict": "covered",
+     "pins": [
+      "brevard:manual:babcock-sunlakes"
+     ]
+    },
+    {
+     "place": "point|university|babcock",
+     "claim": "closure",
+     "scope": "point",
+     "road": "university",
+     "cross": [
+      "babcock"
+     ],
+     "dirs": [],
+     "sentence": "University Boulevard and Babcock Street",
+     "sha256": "f815aa2b656e56b3593b2a050802b474f3b2e559a549ca80069f73af363e0c56",
+     "source": "https://www.melbourneflorida.org/Government/City-News/Traffic-Advisories/Traffic-Advisory-November-2",
+     "sourceTime": "2026-11-02",
+     "inNewest": false,
+     "verdict": "covered",
+     "pins": [
+      "brevard:manual:babcock-st-at-university-blvd"
+     ]
+    },
+    {
+     "place": "point|university|main",
+     "claim": "flooding",
+     "scope": "point",
+     "road": "university",
+     "cross": [
+      "main"
+     ],
+     "dirs": [],
+     "sentence": "University Boulevard and Main Street (Briarwood Community)",
+     "sha256": "c036283a6f596d5ab680b0956d020cc15a11c2c62d3c6be9d331cefa3578cdbc",
+     "source": "https://www.melbourneflorida.org/Government/City-News/Traffic-Advisories/Traffic-Advisory-November-2",
+     "sourceTime": "2026-11-02",
+     "inNewest": false,
+     "verdict": "covered",
+     "pins": [
+      "brevard:manual:university-blvd-at-main-st-briarwood-com"
+     ]
+    },
+    {
+     "place": "point|us 192|country club",
+     "claim": "flooding",
+     "scope": "point",
+     "road": "us 192",
+     "cross": [
+      "country club"
+     ],
+     "dirs": [],
+     "sentence": "US-192 and Country Club Road",
+     "sha256": "6ad0643ae9ecd66dadeb87f5ce219b1ae8efe2e89000d2ca2d2ff756ba955fa0",
+     "source": "https://www.melbourneflorida.org/Government/City-News/Traffic-Advisories/Traffic-Advisory-November-2",
+     "sourceTime": "2026-11-02",
+     "inNewest": false,
+     "verdict": "covered",
+     "pins": [
+      "brevard:manual:us-192-at-country-club-rd"
+     ]
+    },
+    {
+     "place": "road|dubber",
+     "claim": "closure",
+     "scope": "road",
+     "road": "dubber",
+     "cross": [],
+     "dirs": [],
+     "sentence": "Dubber Road",
+     "sha256": "3f329251662afd4e1e49d01041b048fd5e845f62abd815654d45be86bc839dd4",
+     "source": "https://www.melbourneflorida.org/Government/City-News/Traffic-Advisories/Traffic-Advisory-November-2",
+     "sourceTime": "2026-11-02",
+     "inNewest": false,
+     "verdict": "covered-road",
+     "pins": [
+      "brevard:manual:dubber-rd"
+     ]
+    },
+    {
+     "place": "road|golfclub",
+     "claim": "closure",
+     "scope": "road",
+     "road": "golfclub",
+     "cross": [],
+     "dirs": [],
+     "sentence": "Golfclub",
+     "sha256": "8fca7a945d3a4d65925062d947ec682f2eba7f178fe9f49f6bd1f874f314076c",
+     "source": "https://www.melbourneflorida.org/Government/City-News/Traffic-Advisories/Traffic-Advisory-November-2",
+     "sourceTime": "2026-11-02",
+     "inNewest": false,
+     "verdict": "unlocated",
+     "pins": [
+      "brevard:manual:golfclub"
+     ]
+    },
+    {
+     "place": "road|north",
+     "claim": "closure",
+     "scope": "road",
+     "road": "north",
+     "cross": [],
+     "dirs": [],
+     "sentence": "North Drive",
+     "sha256": "0f204ecf6aa0ccfa7771dfbd53f002bc96be094b14f661281f93c001f5d09afd",
+     "source": "https://www.melbourneflorida.org/Government/City-News/Traffic-Advisories/Traffic-Advisory-November-2",
+     "sourceTime": "2026-11-02",
+     "inNewest": false,
+     "verdict": "covered-road",
+     "pins": [
+      "brevard:manual:north-dr"
+     ]
+    },
+    {
+     "place": "road|snicole",
+     "claim": "closure",
+     "scope": "road",
+     "road": "snicole",
+     "cross": [],
+     "dirs": [],
+     "sentence": "Snicole Road",
+     "sha256": "158035a707a871cb425265bf4a545dfd9c720dd638e07d1e4ef8c989b35e8c15",
+     "source": "https://www.melbourneflorida.org/Government/City-News/Traffic-Advisories/Traffic-Advisory-November-2",
+     "sourceTime": "2026-11-02",
+     "inNewest": false,
+     "verdict": "unlocated",
+     "pins": [
+      "brevard:manual:snicole-rd"
+     ]
+    },
+    {
+     "place": "road|stewart",
+     "claim": "closure",
+     "scope": "road",
+     "road": "stewart",
+     "cross": [],
+     "dirs": [],
+     "sentence": "Stewart Road",
+     "sha256": "e6ce73eeee674306f340597c1d20d8c32dc7d92a7f15bd270054d3612c315cf6",
+     "source": "https://www.melbourneflorida.org/Government/City-News/Traffic-Advisories/Traffic-Advisory-November-2",
+     "sourceTime": "2026-11-02",
+     "inNewest": false,
+     "verdict": "covered-road",
+     "pins": [
+      "brevard:manual:stewart-rd"
+     ]
+    },
+    {
+     "place": "segment|babcock|brevard|east avenue b",
+     "claim": "closure",
+     "scope": "segment",
+     "road": "babcock",
+     "cross": [
+      "east avenue b",
+      "brevard"
+     ],
+     "dirs": [],
+     "sentence": "Babcock St- between East Ave B and Brevard Ave remains closed with barricades blocking the roadway.",
+     "sha256": "dd519cbb88acb68195c702c5bfda847a6c335dd9df9e351790dfeafc20a27e70",
+     "source": "https://www.melbourneflorida.org/Government/City-News/Traffic-Advisories/Road-Closures-0830",
+     "sourceTime": "2026-11-03T13:30:00Z",
+     "inNewest": false,
+     "verdict": "partial",
+     "pins": [
+      "brevard:manual:babcock-st-at-university-blvd",
+      "brevard:manual:babcock-st-at-florida-ave",
+      "brevard:manual:babcock-st-at-southgate-blvd",
+      "brevard:manual:babcock-st-at-avenue-b",
+      "brevard:manual:babcock-st-at-palm-bay-rd",
+      "brevard:manual:babcock-eber",
+      "brevard:manual:babcock-sunlakes"
+     ]
+    },
+    {
+     "place": "segment|babcock|palm bay|u s 1",
+     "claim": "open",
+     "scope": "segment",
+     "road": "babcock",
+     "cross": [
+      "u s 1",
+      "palm bay"
+     ],
+     "dirs": [],
+     "sentence": "Babcock Street is clear from U.S. 1 to Palm Bay Road.",
+     "sha256": "8627af72032f9602231249dc488f14f71d95e69ac4579a7cb1df5c60c4b7c32f",
+     "source": "https://www.melbourneflorida.org/Government/City-News/Traffic-Advisories/Road-Closures-1020",
+     "sourceTime": "2026-11-03T15:20:00Z",
+     "inNewest": false,
+     "verdict": "reopen-review",
+     "pins": [
+      "brevard:manual:babcock-st-at-university-blvd",
+      "brevard:manual:babcock-st-at-florida-ave",
+      "brevard:manual:babcock-st-at-southgate-blvd",
+      "brevard:manual:babcock-st-at-avenue-b",
+      "brevard:manual:babcock-st-at-palm-bay-rd",
+      "brevard:manual:babcock-eber",
+      "brevard:manual:babcock-sunlakes"
+     ],
+     "context": "other sentences in the same paragraph"
+    },
+    {
+     "place": "segment|eber|babcock|dairy",
+     "claim": "open",
+     "scope": "segment",
+     "road": "eber",
+     "cross": [
+      "babcock",
+      "dairy"
+     ],
+     "dirs": [],
+     "sentence": "Eber Road is clear from Babcock Street to Dairy Road.",
+     "sha256": "ac778c391eb6f4658cfaa229a8f4d851957a431748bdd75ce233ae1240974b92",
+     "source": "https://www.melbourneflorida.org/Government/City-News/Traffic-Advisories/Road-Closures-1045",
+     "sourceTime": "2026-11-03T15:45:00Z",
+     "inNewest": false,
+     "verdict": "reopen-review",
+     "pins": [
+      "brevard:fhp:20261103113554-f45b9b31",
+      "brevard:fhp:20261102162806-a1e1d51b",
+      "brevard:manual:babcock-eber",
+      "brevard:manual:eber-blvd-at-stack-blvd-all-directions",
+      "brevard:fhp:20261103161117-8de2c55c"
+     ]
+    },
+    {
+     "place": "segment|sarno|eau gallie|sarno",
+     "claim": "closure",
+     "scope": "segment",
+     "road": "sarno",
+     "cross": [
+      "eau gallie",
+      "sarno"
+     ],
+     "dirs": [],
+     "sentence": "Sarno Road is closed between Eau Gallie Boulevard and Sarno Road.",
+     "sha256": "e6835f84556cc9ac8fcd910b799dbc383b6ccee70b1842b36f726bff7105ca63",
+     "source": "https://www.melbourneflorida.org/Government/City-News/Traffic-Advisories/Road-Closures-Aurora-and-Sarno",
+     "sourceTime": "2026-11-02",
+     "inNewest": false,
+     "verdict": "resolved-by-city",
+     "pins": [],
+     "resolvedBy": {
+      "source": "https://www.melbourneflorida.org/Government/City-News/Traffic-Advisories/Copy-of-Road-Closures-1150",
+      "sentence": "Sarno Road is open, but there are some infrastructure issues on the shoulder.",
+      "sourceTime": "2026-11-03T16:50:00Z"
+     }
+    },
+    {
+     "place": "segment|stack|eber|palm bay",
+     "claim": "open",
+     "scope": "segment",
+     "road": "stack",
+     "cross": [
+      "eber",
+      "palm bay"
+     ],
+     "dirs": [],
+     "sentence": "Stack Boulevard is clear from Eber Road to Palm Bay road.",
+     "sha256": "5a84f3b7f95e244f207f901bc7bcff0ec38499de8e8c2ce8c79d8e9426f1f138",
+     "source": "https://www.melbourneflorida.org/Government/City-News/Traffic-Advisories/Road-Closures-1045",
+     "sourceTime": "2026-11-03T15:45:00Z",
+     "inNewest": false,
+     "verdict": "reopen-review",
+     "pins": [
+      "brevard:manual:palm-bay-rd-nb-at-stack-blvd",
+      "brevard:manual:eber-blvd-at-stack-blvd-all-directions"
+     ]
+    },
+    {
+     "place": "whole|dairy",
+     "claim": "closure",
+     "scope": "whole",
+     "road": "dairy",
+     "cross": [],
+     "dirs": [],
+     "sentence": "All of Dairy Road is closed.",
+     "sha256": "b1aec61ddb543a59933d68513faf079c6473525638f426cbc1ce359e3fabd6d0",
+     "source": "https://www.melbourneflorida.org/Government/City-News/Traffic-Advisories/Road-Closures-Dairy-Babcock-Lake-Washington",
+     "sourceTime": "2026-11-02",
+     "inNewest": false,
+     "verdict": "covered",
+     "pins": [
+      "brevard:manual:all-dairy-rd"
+     ]
+    },
+    {
+     "place": "whole|lake washington",
+     "claim": "closure",
+     "scope": "whole",
+     "road": "lake washington",
+     "cross": [],
+     "dirs": [],
+     "sentence": "All of Lake Washington Road is closed.",
+     "sha256": "68f8c9d16296fe90d61312dfd288cabe1c772b5f52b1ad27063b150e22cbb479",
+     "source": "https://www.melbourneflorida.org/Government/City-News/Traffic-Advisories/Road-Closures-Dairy-Babcock-Lake-Washington",
+     "sourceTime": "2026-11-02",
+     "inNewest": false,
+     "verdict": "covered",
+     "pins": [
+      "brevard:manual:all-lake-washington-rd"
+     ]
+    },
+    {
+     "place": "whole|sarno",
+     "claim": "open",
+     "scope": "whole",
+     "road": "sarno",
+     "cross": [],
+     "dirs": [],
+     "sentence": "Sarno Road is open, but there are some infrastructure issues on the shoulder.",
+     "sha256": "5070f04e5804846f6538408c391579793d19758a2a93b38de8c54bbd6c090861",
+     "source": "https://www.melbourneflorida.org/Government/City-News/Traffic-Advisories/Copy-of-Road-Closures-1150",
+     "sourceTime": "2026-11-03T16:50:00Z",
+     "inNewest": true,
+     "verdict": "no-active-pin",
+     "pins": []
+    }
+   ],
+   "summary": {
+    "covered": 24,
+    "partial": 2,
+    "direction-unstated": 2,
+    "covered-road": 3,
+    "unlocated": 2,
+    "reopen-review": 3,
+    "resolved-by-city": 1,
+    "no-active-pin": 1,
+    "older-unresolved": 5,
+    "needs-review": 11
+   }
+  }
+ ],
+ "unavailable": [],
+ "posts": {
+  "https://www.melbourneflorida.org/Government/City-News/Traffic-Advisories/Copy-of-Road-Closures-1150": {
+   "agency": "City of Melbourne",
+   "date": "2026-11-03",
+   "time": "2026-11-03T16:50:00Z",
+   "claims": [
+    {
+     "claim": "closure",
+     "scope": "point",
+     "road": "eau gallie",
+     "cross": [
+      "john rodes"
+     ],
+     "dirs": [
+      "SB"
+     ],
+     "sentence": "Eau Gallie Blvd/ John Rodes Blvd- southbound remains closed with barricades blocking the roadway.",
+     "sha256": "2c9805ea3219402ec4ea7707669ed6991eb9f9a9961d2cb7d9ca6265573e6a78"
+    },
+    {
+     "claim": "open",
+     "scope": "whole",
+     "road": "sarno",
+     "cross": [],
+     "dirs": [],
+     "sentence": "Sarno Road is open, but there are some infrastructure issues on the shoulder.",
+     "sha256": "5070f04e5804846f6538408c391579793d19758a2a93b38de8c54bbd6c090861"
+    },
+    {
+     "claim": "closure",
+     "scope": "point",
+     "road": "eber",
+     "cross": [
+      "babcock"
+     ],
+     "dirs": [
+      "EB",
+      "SB"
+     ],
+     "sentence": "Eber Blvd/Babcock St- southbound and eastbound remains closed with barricades blocking the roadway.",
+     "sha256": "fd088a0bad3a30b07513ba03827da4124b6ddbdc460cc5463a9e5ff91c74a6d1"
+    },
+    {
+     "claim": "closure",
+     "scope": "point",
+     "road": "florida",
+     "cross": [
+      "dairy"
+     ],
+     "dirs": [
+      "EB"
+     ],
+     "sentence": "Florida Ave/Dairy Rd- eastbound remains closed with barricades blocking the roadway.",
+     "sha256": "6a2ce68f2f27c8382552cb7bc4f7fb86a18dbfb0cb0811ad7edeea6d97b47c0d"
+    },
+    {
+     "claim": "closure",
+     "scope": "point",
+     "road": "sun lakes",
+     "cross": [
+      "babcock"
+     ],
+     "dirs": [],
+     "sentence": "Sunlake Rd/Babcock St- remains closed with barricades blocking the roadway.",
+     "sha256": "d5dfe1bf454eecbe65c642bcfc251e0391ff7284843830f0a841a81f2be17e73"
+    }
+   ],
+   "needsReview": [
+    "9e46547042046a48bf68a9c51e6e8dd4bae89001c507c957662f2239def46d47"
+   ],
+   "sha256": "9d88715dea7c94bde3f9bcaad5526c0ac6714fc23131909baac67648b3d56d5f",
+   "readAt": "2026-11-03T17:25:08Z"
+  },
+  "https://www.melbourneflorida.org/Government/City-News/Traffic-Advisories/Road-Closures-1045": {
+   "agency": "City of Melbourne",
+   "date": "2026-11-03",
+   "time": "2026-11-03T15:45:00Z",
+   "claims": [
+    {
+     "claim": "open",
+     "scope": "segment",
+     "road": "eber",
+     "cross": [
+      "babcock",
+      "dairy"
+     ],
+     "dirs": [],
+     "sentence": "Eber Road is clear from Babcock Street to Dairy Road.",
+     "sha256": "ac778c391eb6f4658cfaa229a8f4d851957a431748bdd75ce233ae1240974b92"
+    },
+    {
+     "claim": "open",
+     "scope": "segment",
+     "road": "stack",
+     "cross": [
+      "eber",
+      "palm bay"
+     ],
+     "dirs": [],
+     "sentence": "Stack Boulevard is clear from Eber Road to Palm Bay road.",
+     "sha256": "5a84f3b7f95e244f207f901bc7bcff0ec38499de8e8c2ce8c79d8e9426f1f138"
+    },
+    {
+     "claim": "closure",
+     "scope": "point",
+     "road": "eau gallie",
+     "cross": [
+      "john rodes"
+     ],
+     "dirs": [
+      "SB"
+     ],
+     "sentence": "Eau Gallie Blvd/ John Rodes Blvd- southbound remains closed with barricades blocking the roadway.",
+     "sha256": "2c9805ea3219402ec4ea7707669ed6991eb9f9a9961d2cb7d9ca6265573e6a78"
+    },
+    {
+     "claim": "closure",
+     "scope": "point",
+     "road": "florida",
+     "cross": [
+      "babcock"
+     ],
+     "dirs": [
+      "WB"
+     ],
+     "sentence": "Florida Ave/Babcock St- westbound remains closed with barricades blocking the roadway.",
+     "sha256": "b8c4f014cc421a324f2984a77abd8911d2f3b09a777d1c5717441969e4f8eefc"
+    },
+    {
+     "claim": "closure",
+     "scope": "point",
+     "road": "florida",
+     "cross": [
+      "dairy"
+     ],
+     "dirs": [
+      "EB"
+     ],
+     "sentence": "Florida Ave/Dairy Rd- eastbound remains closed with barricades blocking the roadway.",
+     "sha256": "6a2ce68f2f27c8382552cb7bc4f7fb86a18dbfb0cb0811ad7edeea6d97b47c0d"
+    },
+    {
+     "claim": "closure",
+     "scope": "point",
+     "road": "sun lakes",
+     "cross": [
+      "babcock"
+     ],
+     "dirs": [],
+     "sentence": "Sunlake Rd/Babcock St- remains closed with barricades blocking the roadway.",
+     "sha256": "d5dfe1bf454eecbe65c642bcfc251e0391ff7284843830f0a841a81f2be17e73"
+    }
+   ],
+   "needsReview": [],
+   "sha256": "f28a5deec961533d18c3aee7e37e08058c3ca0f07ea25b0bad3a14c43db1d993",
+   "readAt": "2026-11-03T17:25:08Z"
+  },
+  "https://www.melbourneflorida.org/Government/City-News/Traffic-Advisories/Road-Closures-1020": {
+   "agency": "City of Melbourne",
+   "date": "2026-11-03",
+   "time": "2026-11-03T15:20:00Z",
+   "claims": [
+    {
+     "claim": "open",
+     "scope": "segment",
+     "road": "babcock",
+     "cross": [
+      "u s 1",
+      "palm bay"
+     ],
+     "dirs": [],
+     "context": "other sentences in the same paragraph",
+     "sentence": "Babcock Street is clear from U.S. 1 to Palm Bay Road.",
+     "sha256": "8627af72032f9602231249dc488f14f71d95e69ac4579a7cb1df5c60c4b7c32f"
+    },
+    {
+     "claim": "closure",
+     "scope": "point",
+     "road": "eau gallie",
+     "cross": [
+      "john rodes"
+     ],
+     "dirs": [
+      "SB"
+     ],
+     "sentence": "Eau Gallie Blvd/ John Rodes Blvd- southbound remains closed with barricades blocking the roadway.",
+     "sha256": "2c9805ea3219402ec4ea7707669ed6991eb9f9a9961d2cb7d9ca6265573e6a78"
+    },
+    {
+     "claim": "open",
+     "scope": "whole",
+     "road": "sarno",
+     "cross": [],
+     "dirs": [],
+     "sentence": "Sarno Road is open, but there are some infrastructure issues on the shoulder.",
+     "sha256": "5070f04e5804846f6538408c391579793d19758a2a93b38de8c54bbd6c090861"
+    },
+    {
+     "claim": "closure",
+     "scope": "point",
+     "road": "florida",
+     "cross": [
+      "babcock"
+     ],
+     "dirs": [
+      "WB"
+     ],
+     "sentence": "Florida Ave/Babcock St- westbound remains closed with barricades blocking the roadway.",
+     "sha256": "b8c4f014cc421a324f2984a77abd8911d2f3b09a777d1c5717441969e4f8eefc"
+    },
+    {
+     "claim": "closure",
+     "scope": "point",
+     "road": "eber",
+     "cross": [
+      "babcock"
+     ],
+     "dirs": [
+      "EB",
+      "SB"
+     ],
+     "sentence": "Eber Blvd/Babcock St- southbound and eastbound remains closed with barricades blocking the roadway.",
+     "sha256": "fd088a0bad3a30b07513ba03827da4124b6ddbdc460cc5463a9e5ff91c74a6d1"
+    },
+    {
+     "claim": "closure",
+     "scope": "point",
+     "road": "florida",
+     "cross": [
+      "dairy"
+     ],
+     "dirs": [
+      "EB"
+     ],
+     "sentence": "Florida Ave/Dairy Rd- eastbound remains closed with barricades blocking the roadway.",
+     "sha256": "6a2ce68f2f27c8382552cb7bc4f7fb86a18dbfb0cb0811ad7edeea6d97b47c0d"
+    },
+    {
+     "claim": "closure",
+     "scope": "point",
+     "road": "sun lakes",
+     "cross": [
+      "babcock"
+     ],
+     "dirs": [],
+     "sentence": "Sunlake Rd/Babcock St- remains closed with barricades blocking the roadway.",
+     "sha256": "d5dfe1bf454eecbe65c642bcfc251e0391ff7284843830f0a841a81f2be17e73"
+    }
+   ],
+   "needsReview": [
+    "d54071e726fa2354c58e08d89eb84b6797fc16d3ebe4259b1f257e4db1a39e2a"
+   ],
+   "sha256": "c1577641f8c8bdf2f54419c3992c4999ff96e8c4c1d6fa4b8bc71f6c5538f3ef",
+   "readAt": "2026-11-03T17:25:08Z"
+  },
+  "https://www.melbourneflorida.org/Government/City-News/Traffic-Advisories/Road-Closures-0830": {
+   "agency": "City of Melbourne",
+   "date": "2026-11-03",
+   "time": "2026-11-03T13:30:00Z",
+   "claims": [
+    {
+     "claim": "closure",
+     "scope": "point",
+     "road": "eau gallie",
+     "cross": [
+      "john rodes"
+     ],
+     "dirs": [
+      "SB"
+     ],
+     "sentence": "Eau Gallie Blvd/ John Rodes Blvd- southbound remains closed with barricades blocking the roadway.",
+     "sha256": "2c9805ea3219402ec4ea7707669ed6991eb9f9a9961d2cb7d9ca6265573e6a78"
+    },
+    {
+     "claim": "open",
+     "scope": "whole",
+     "road": "sarno",
+     "cross": [],
+     "dirs": [],
+     "sentence": "Sarno Road is open, but there are some infrastructure issues on the shoulder.",
+     "sha256": "5070f04e5804846f6538408c391579793d19758a2a93b38de8c54bbd6c090861"
+    },
+    {
+     "claim": "closure",
+     "scope": "segment",
+     "road": "babcock",
+     "cross": [
+      "east avenue b",
+      "brevard"
+     ],
+     "dirs": [],
+     "sentence": "Babcock St- between East Ave B and Brevard Ave remains closed with barricades blocking the roadway.",
+     "sha256": "dd519cbb88acb68195c702c5bfda847a6c335dd9df9e351790dfeafc20a27e70"
+    },
+    {
+     "claim": "closure",
+     "scope": "point",
+     "road": "florida",
+     "cross": [
+      "babcock"
+     ],
+     "dirs": [
+      "WB"
+     ],
+     "sentence": "Florida Ave/Babcock St- westbound remains closed with barricades blocking the roadway.",
+     "sha256": "b8c4f014cc421a324f2984a77abd8911d2f3b09a777d1c5717441969e4f8eefc"
+    },
+    {
+     "claim": "closure",
+     "scope": "point",
+     "road": "eber",
+     "cross": [
+      "babcock"
+     ],
+     "dirs": [
+      "EB",
+      "SB"
+     ],
+     "sentence": "Eber Blvd/Babcock St- southbound and eastbound remains closed with barricades blocking the roadway.",
+     "sha256": "fd088a0bad3a30b07513ba03827da4124b6ddbdc460cc5463a9e5ff91c74a6d1"
+    },
+    {
+     "claim": "closure",
+     "scope": "point",
+     "road": "florida",
+     "cross": [
+      "dairy"
+     ],
+     "dirs": [
+      "EB"
+     ],
+     "sentence": "Florida Ave/Dairy Rd- eastbound remains closed with barricades blocking the roadway.",
+     "sha256": "6a2ce68f2f27c8382552cb7bc4f7fb86a18dbfb0cb0811ad7edeea6d97b47c0d"
+    },
+    {
+     "claim": "closure",
+     "scope": "point",
+     "road": "babcock",
+     "cross": [
+      "sun lakes"
+     ],
+     "dirs": [
+      "EB",
+      "NB"
+     ],
+     "sentence": "Babcock St/Sunlake Rd- northbound and eastbound remains closed with barricades blocking the roadway.",
+     "sha256": "b644a542392b45085b771aec539b621af5a865220d9a900590e53cccfe9d6609"
+    }
+   ],
+   "needsReview": [],
+   "sha256": "f9fe883b3fb53f255e68875ede134e236bec216902e859ca3a48273034d3cfd9",
+   "readAt": "2026-11-03T17:25:08Z"
+  },
+  "https://www.melbourneflorida.org/Government/City-News/Traffic-Advisories/Flooding-and-Road-Closure-Update": {
+   "agency": "City of Melbourne",
+   "date": "2026-11-02",
+   "time": "",
+   "claims": [],
+   "needsReview": [
+    "b24fa15556d203dfb912ea24007072cfbaea66866804efb8c52cb2200764a01f",
+    "879c25186ab99593b3ac52959c5057eefd6c2f496462cd700768108c1aa3c85c",
+    "7d5bfffb727fe78a7553d8bcf7c0ff679ac3db99bd2eaa14c1ab6d8acd8dd375",
+    "d630afd5122c842c391a0f0fcefaa9fefef7204fec3a7491c55399517eb0c18e",
+    "0ed52bd71f24962e1bf611bde4b84010235ca4aca093c421c93094fc059a9786",
+    "ed33a4be2c0026687f4902dd76e3294576ae908b1a9416a0cb06e1a64ed1721a"
+   ],
+   "sha256": "d11597e86d3cad636e6cf45ee07a9f07c8f75e6b3c496b78ef72d42b635dd8a8",
+   "readAt": "2026-11-03T17:25:08Z"
+  },
+  "https://www.melbourneflorida.org/Government/City-News/Traffic-Advisories/Traffic-Advisory-November-2": {
+   "agency": "City of Melbourne",
+   "date": "2026-11-02",
+   "time": "",
+   "claims": [
+    {
+     "claim": "closure",
+     "scope": "point",
+     "road": "babcock",
+     "cross": [
+      "avenue b"
+     ],
+     "dirs": [],
+     "sentence": "Babcock Street and Avenue B",
+     "sha256": "d605ff29d6f4d2801a2f5c79ebc39abd04693b40863ecabfc5064aec586bed14"
+    },
+    {
+     "claim": "closure",
+     "scope": "point",
+     "road": "babcock",
+     "cross": [
+      "florida"
+     ],
+     "dirs": [],
+     "sentence": "Babcock Street and Florida Avenue",
+     "sha256": "15527065b338409aeb9cdffe6b290c4743ef2b8208d4beed8fe884f95f0d392d"
+    },
+    {
+     "claim": "closure",
+     "scope": "point",
+     "road": "dairy",
+     "cross": [
+      "snicole"
+     ],
+     "dirs": [],
+     "sentence": "Dairy Road and Snicole Road",
+     "sha256": "d6b2fb68fd504ef8123424300f0558c192cbc21a3fa77c5240be7c79581d7b3f"
+    },
+    {
+     "claim": "closure",
+     "scope": "point",
+     "road": "dairy",
+     "cross": [
+      "edgewood"
+     ],
+     "dirs": [],
+     "sentence": "Dairy Road and Edgewood Drive",
+     "sha256": "312819502e383eb5a20b3e4a58fa3ec425e234e87f713c8cb7d4d411b5d98e8d"
+    },
+    {
+     "claim": "closure",
+     "scope": "road",
+     "road": "dubber",
+     "cross": [],
+     "dirs": [],
+     "sentence": "Dubber Road",
+     "sha256": "3f329251662afd4e1e49d01041b048fd5e845f62abd815654d45be86bc839dd4"
+    },
+    {
+     "claim": "closure",
+     "scope": "point",
+     "road": "eau gallie",
+     "cross": [
+      "sarno"
+     ],
+     "dirs": [],
+     "sentence": "Eau Gallie Boulevard and Sarno Road",
+     "sha256": "3907d83eada4009ff5e04579cd39c5faa2f25f9d301cacfb45f90393ddfaeb2c"
+    },
+    {
+     "claim": "closure",
+     "scope": "point",
+     "road": "riverside",
+     "cross": [
+      "eau gallie"
+     ],
+     "dirs": [
+      "SB"
+     ],
+     "sentence": "Riverside Drive (Southbound) is closed at Eau Gallie Boulevard",
+     "sha256": "a5c64931ba54dc7f09e6d300f26885cc0412709c44662ce5c2c357b8b6f67d40"
+    },
+    {
+     "claim": "closure",
+     "scope": "point",
+     "road": "edgewood",
+     "cross": [
+      "ruffner"
+     ],
+     "dirs": [],
+     "sentence": "Edgewood Road and Ruffner Road",
+     "sha256": "e091a3ab75b6e1039194122ce44fb7a2d8c8236f32fa4344b02e62957cd4c61b"
+    },
+    {
+     "claim": "closure",
+     "scope": "road",
+     "road": "golfclub",
+     "cross": [],
+     "dirs": [],
+     "sentence": "Golfclub",
+     "sha256": "8fca7a945d3a4d65925062d947ec682f2eba7f178fe9f49f6bd1f874f314076c"
+    },
+    {
+     "claim": "closure",
+     "scope": "point",
+     "road": "lake washington",
+     "cross": [
+      "stewart"
+     ],
+     "dirs": [],
+     "sentence": "Lake Washington Road and Stewart Road",
+     "sha256": "506afd6f18032f251c5793be7c13dabd133e628fe4f855e4c28c02e44f23da51"
+    },
+    {
+     "claim": "closure",
+     "scope": "road",
+     "road": "north",
+     "cross": [],
+     "dirs": [],
+     "sentence": "North Drive",
+     "sha256": "0f204ecf6aa0ccfa7771dfbd53f002bc96be094b14f661281f93c001f5d09afd"
+    },
+    {
+     "claim": "closure",
+     "scope": "road",
+     "road": "snicole",
+     "cross": [],
+     "dirs": [],
+     "sentence": "Snicole Road",
+     "sha256": "158035a707a871cb425265bf4a545dfd9c720dd638e07d1e4ef8c989b35e8c15"
+    },
+    {
+     "claim": "closure",
+     "scope": "road",
+     "road": "stewart",
+     "cross": [],
+     "dirs": [],
+     "sentence": "Stewart Road",
+     "sha256": "e6ce73eeee674306f340597c1d20d8c32dc7d92a7f15bd270054d3612c315cf6"
+    },
+    {
+     "claim": "closure",
+     "scope": "point",
+     "road": "university",
+     "cross": [
+      "babcock"
+     ],
+     "dirs": [],
+     "sentence": "University Boulevard and Babcock Street",
+     "sha256": "f815aa2b656e56b3593b2a050802b474f3b2e559a549ca80069f73af363e0c56"
+    },
+    {
+     "claim": "flooding",
+     "scope": "point",
+     "road": "eau gallie",
+     "cross": [
+      "commodore"
+     ],
+     "dirs": [],
+     "sentence": "Eau Gallie Boulevard and Commodore Boulevard",
+     "sha256": "2a2b46126c0abda60f306ab81d76ee3e49a9b9672f6c47340f5298ac3cfbd36e"
+    },
+    {
+     "claim": "flooding",
+     "scope": "point",
+     "road": "drive martin luther king jr",
+     "cross": [
+      "new haven"
+     ],
+     "dirs": [],
+     "sentence": "Dr. Martin Luther King, Jr. Boulevard and New Haven Avenue",
+     "sha256": "bbf72e91f6e2a32db4e124cde47b6085891833135062e1cf2b54095c23b9b5ba"
+    },
+    {
+     "claim": "flooding",
+     "scope": "point",
+     "road": "drive martin luther king jr",
+     "cross": [
+      "nasa"
+     ],
+     "dirs": [],
+     "sentence": "Dr. Martin Luther King, Jr. Boulevard and NASA Boulevard",
+     "sha256": "75dcfd1fde964ffa039163ec70ee8f73e642f6d6d7935c5a25d6b57f78ec29a9"
+    },
+    {
+     "claim": "flooding",
+     "scope": "point",
+     "road": "university",
+     "cross": [
+      "main"
+     ],
+     "dirs": [],
+     "sentence": "University Boulevard and Main Street (Briarwood Community)",
+     "sha256": "c036283a6f596d5ab680b0956d020cc15a11c2c62d3c6be9d331cefa3578cdbc"
+    },
+    {
+     "claim": "flooding",
+     "scope": "point",
+     "road": "dairy",
+     "cross": [
+      "florida"
+     ],
+     "dirs": [],
+     "sentence": "Dairy Road and Florida Avenue",
+     "sha256": "6903b03ac01f353e3af2142c93790dc0e50fafee83caa6935b38bdec91ab65ef"
+    },
+    {
+     "claim": "flooding",
+     "scope": "point",
+     "road": "lipscomb",
+     "cross": [
+      "university"
+     ],
+     "dirs": [],
+     "sentence": "Lipscomb Street and University Boulevard",
+     "sha256": "fd1279ea36ae2bda387ce08842146f1e47edd69b7a2b4b853aa1013433245d4c"
+    },
+    {
+     "claim": "flooding",
+     "scope": "point",
+     "road": "babcock",
+     "cross": [
+      "southgate"
+     ],
+     "dirs": [],
+     "sentence": "Babcock Street and Southgate Boulevard",
+     "sha256": "271d24893e8ca9b16fc4d19d444221567120d6b14e54b7ebc1bf91e72726cd69"
+    },
+    {
+     "claim": "flooding",
+     "scope": "point",
+     "road": "us 192",
+     "cross": [
+      "country club"
+     ],
+     "dirs": [],
+     "sentence": "US-192 and Country Club Road",
+     "sha256": "6ad0643ae9ecd66dadeb87f5ce219b1ae8efe2e89000d2ca2d2ff756ba955fa0"
+    }
+   ],
+   "needsReview": [
+    "a8f22b7b18e6b8639032514b2783060f56a8f836ba444642c4555d6fcbba5c2c"
+   ],
+   "sha256": "13ebc3756cd4a34d1976155d8c4601db3f959c3106a7c72460358c60df5bc681",
+   "readAt": "2026-11-03T17:25:08Z"
+  },
+  "https://www.melbourneflorida.org/Government/City-News/Traffic-Advisories/Road-Closures-Dairy-Babcock-Lake-Washington": {
+   "agency": "City of Melbourne",
+   "date": "2026-11-02",
+   "time": "",
+   "claims": [
+    {
+     "claim": "closure",
+     "scope": "whole",
+     "road": "dairy",
+     "cross": [],
+     "dirs": [],
+     "sentence": "All of Dairy Road is closed.",
+     "sha256": "b1aec61ddb543a59933d68513faf079c6473525638f426cbc1ce359e3fabd6d0"
+    },
+    {
+     "claim": "closure",
+     "scope": "whole",
+     "road": "lake washington",
+     "cross": [],
+     "dirs": [],
+     "sentence": "All of Lake Washington Road is closed.",
+     "sha256": "68f8c9d16296fe90d61312dfd288cabe1c772b5f52b1ad27063b150e22cbb479"
+    },
+    {
+     "claim": "closure",
+     "scope": "point",
+     "road": "babcock",
+     "cross": [
+      "university"
+     ],
+     "dirs": [],
+     "sentence": "Babcock Street at University Boulevard is closed.",
+     "sha256": "78247257aa868978bf27f41bed5624b469ebf395cbe15d3afc58652f685ae015"
+    }
+   ],
+   "needsReview": [
+    "a4f9dd6cbe26b7abd47c669b44544a430cd20c0aa5a27f2cdf0d5b5138ba3cf3"
+   ],
+   "sha256": "8903dc1d4deeb38823c641f983019e15ff1dbcb73ecd98c1db9e59fc61a261b3",
+   "readAt": "2026-11-03T17:25:08Z"
+  },
+  "https://www.melbourneflorida.org/Government/City-News/Traffic-Advisories/Road-Closures-Aurora-and-Sarno": {
+   "agency": "City of Melbourne",
+   "date": "2026-11-02",
+   "time": "",
+   "claims": [
+    {
+     "claim": "closure",
+     "scope": "area",
+     "road": "aurora",
+     "cross": [
+      "stewart"
+     ],
+     "dirs": [],
+     "sentence": "Aurora Road is closed in the area of Stewart Road.",
+     "sha256": "c47bf1baf1dea6992c054a2b1ab3fcf0eb6edf8c50243fc8ea20074682ce8797"
+    },
+    {
+     "claim": "closure",
+     "scope": "segment",
+     "road": "sarno",
+     "cross": [
+      "eau gallie",
+      "sarno"
+     ],
+     "dirs": [],
+     "sentence": "Sarno Road is closed between Eau Gallie Boulevard and Sarno Road.",
+     "sha256": "e6835f84556cc9ac8fcd910b799dbc383b6ccee70b1842b36f726bff7105ca63"
+    }
+   ],
+   "needsReview": [
+    "8fcfaa7bdaad35615ae63383039dd306452727190be5382513c8eaf056ec1e5e"
+   ],
+   "sha256": "8c651cd2b46eb786b30388ec0e9d0f0c23f33a3f1d73aa0bccebca85d1568019",
+   "readAt": "2026-11-03T17:25:08Z"
+  },
+  "https://www.melbourneflorida.org/Government/City-News/Traffic-Advisories/Lane-Closure-Country-Club-Road": {
+   "date": "2026-10-27",
+   "outside": true
+  }
+ }
+}

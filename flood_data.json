@@ -1,8 +1,6 @@
 {
- "generated": "2026-11-03T17:17:04Z",
- "errors": [
-  "FL511 map locations: 1 report(s) without a pin"
- ],
+ "generated": "2026-11-03T17:25:01Z",
+ "errors": [],
  "items": [
   {
    "fullClosure": true,
@@ -1184,6 +1182,34 @@
     "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
     "kind": "feed",
     "publishedAt": "2026-11-03T17:02:03Z"
+   },
+   "awaitingOfficial": false,
+   "missingSince": null,
+   "recheck": []
+  },
+  {
+   "fullClosure": false,
+   "lat": 28.3195233509003,
+   "layer": "FHP",
+   "lng": -80.7682362584086,
+   "reported": "2026-11-03T17:16:20Z",
+   "road": "I-95 SB [MM198]",
+   "roadShort": "I-95 Sb [MM198]",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "spot": "at Mm198",
+   "status": "caution",
+   "title": "Roadway Debris/Object at I-95 SB [MM198] x[MM198] [ROCKLEDGE]",
+   "where": "I-95 Sb [MM198] at Mm198",
+   "id": "brevard:fhp:20261103171620-e16a9960",
+   "updated": "2026-11-03T17:16:20Z",
+   "lastReported": "2026-11-03T17:16:20Z",
+   "firstReported": "2026-11-03T17:16:20Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-03T17:16:20Z"
    },
    "awaitingOfficial": false,
    "missingSince": null,
