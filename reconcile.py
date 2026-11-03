@@ -402,6 +402,10 @@ def keep_independent(items: list[dict]) -> list[dict]:
                 top = max(nws, key=lambda r: E.SEVERITY.get(r.get("status"), 0))
                 it.setdefault("baseStatus", it.get("status"))
                 it.update(status=top.get("status"), statusBy=top, fullClosure=False)
+                # the dropped feed's lane and stretch wording no longer describes the road; kept only as its earlier report
+                gone = {k: it.pop(k) for k in ("lanes", "line", "from", "to", "length_m") if k in it}
+                if gone.get("lanes"):
+                    it["earlierReport"] = f"{it['noLongerListed']['agency']} earlier: {gone['lanes']}"
         if kept:
             it["keptBy"] = kept
     return items

@@ -882,9 +882,11 @@ def nws(status):
 got = R.keep_independent(R.merge_nws([host(), nws("closed")]))
 check("an NWS closure joined into a pin whose FHP part was dropped keeps the pin closed, active, named in keptBy",
       len(got) == 1 and got[0]["status"] == "closed" and got[0]["keptBy"][0]["kind"] == "nws" and got[0]["statusBy"]["status"] == "closed")
-got = R.keep_independent(R.merge_nws([host(), nws("flooded")]))
-check("an equal-status NWS flooding report keeps a flooding warning, without the dropped feed's full closure",
-      got[0]["status"] == "flooded" and got[0]["fullClosure"] is False and got[0]["keptBy"])
+got = R.keep_independent(R.merge_nws([host(lanes="ALL LANES CLOSED", line=[[28.1, -80.6], [28.2, -80.6]], **{"from": "A", "to": "B"}),
+                                       nws("flooded")]))
+check("an equal-status NWS flooding report keeps a flooding warning, without the dropped feed's full closure, lanes or stretch",
+      got[0]["status"] == "flooded" and got[0]["fullClosure"] is False and got[0]["keptBy"] and "lanes" not in got[0]
+      and "line" not in got[0] and "from" not in got[0] and got[0]["earlierReport"] == "Florida Highway Patrol earlier: ALL LANES CLOSED")
 got = R.keep_independent([host(status="closed", raisedBy={"agency": "City of Melbourne", "url": "https://m", "quote": "q"})])
 check("a government page that raised the pin keeps it closed and active after the feed drop",
       got[0]["status"] == "closed" and got[0]["keptBy"][0] == {"kind": "page", "source": "City of Melbourne", "url": "https://m"})

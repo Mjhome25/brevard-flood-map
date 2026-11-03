@@ -48,11 +48,13 @@ FEEDS = ("fhp", "fl511")
 START = "2026-11-03T17:36:43Z"  # Mike's decision message
 END = "2026-11-10T17:36:43Z"  # seven days
 STATE_ROAD = re.compile(r"\b(?:I-?\s?\d+|US-?\s?\d+|U\.S\.\s?\d+|SR-?\s?\d+|State Road \d+|A1A|Beachline|Turnpike)\b", re.I)
-# reviewed Brevard state routes known by street name (FDOT roads); any other named road is a local street
-STATE_NAMES = re.compile(r"\b(?:New Haven Ave|Strawbridge Ave|Dixie Hwy|Harbor City Blvd|Eau Gallie Blvd|Eau Gallie Cswy|"
-                         r"Malabar Rd|Pineda Cswy|NASA Blvd|King St|Merritt Island Cswy|Cocoa Beach Cswy|Courtenay Pkwy|"
-                         r"Cheney Hwy|Garden St|Max Brewer|Fiske Blvd|Clearlake Rd|S Patrick Dr|South Patrick Dr|"
-                         r"Melbourne Cswy|Atlantic Ave|Ocean Blvd)\b", re.I)
+# reviewed Brevard state routes known by street name for their whole Brevard length (FDOT roads); names that are a
+# state route only for part of their length are PARTIAL and give "road class unknown"; any other named road is local
+STATE_NAMES = re.compile(r"\b(?:New Haven Ave|Strawbridge Ave|Dixie Hwy|Harbor City Blvd|Pineda Cswy|NASA Blvd|"
+                         r"Merritt Island Cswy|Cocoa Beach Cswy|Courtenay Pkwy|Cheney Hwy|Max Brewer|Melbourne Cswy|"
+                         r"Eau Gallie Cswy)\b", re.I)
+PARTIAL = re.compile(r"\b(?:Malabar Rd|Eau Gallie Blvd|King St|Garden St|Fiske Blvd|Clearlake Rd|S Patrick Dr|"
+                     r"South Patrick Dr|Atlantic Ave|Ocean Blvd)\b", re.I)
 GROUPS = ["crash, state road", "crash, local street", "flooding/hazard, state road", "flooding/hazard, local street"]
 
 
@@ -69,7 +71,9 @@ def group(f: dict) -> str:
     road = " ".join(x for x in (f.get("road"), f.get("roadShort"), f.get("where")) if x)
     if not road.strip():
         return f"{kind}, road unknown"
-    return f"{kind}, {'state road' if STATE_ROAD.search(road) or STATE_NAMES.search(road) else 'local street'}"
+    if STATE_ROAD.search(road) or STATE_NAMES.search(road):
+        return f"{kind}, state road"
+    return f"{kind}, {'road class unknown' if PARTIAL.search(road) else 'local street'}"
 
 
 def episodes(events: list[dict]) -> list[dict]:
