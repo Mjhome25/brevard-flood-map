@@ -574,5 +574,23 @@
   "note": "On WESH's list of roads closed by flooding on Monday. The report time and travel direction are approximate.",
   "id": "man-us-1-at-suntree-blvd",
   "updated": "2026-11-02T16:00:00Z"
+ },
+ {
+  "road": "Harbor City Blvd (US 1)",
+  "where": "Harbor City Blvd (US 1) at Law St, Melbourne",
+  "title": "Harbor City Blvd closed at Law St by flooding",
+  "city": "Melbourne",
+  "status": "flooded",
+  "fullClosure": true,
+  "lanes": "all lanes (as listed)",
+  "lat": 28.115,
+  "lng": -80.628,
+  "approx": true,
+  "source": "WESH 2 (via News Beep) list of Brevard roads closed because of flooding",
+  "sourceUrl": "https://www.newsbeep.com/795319/",
+  "reported": "2026-11-02T20:00:00Z",
+  "note": "Listed as 'Harbor City Boulevard at Law Street' among roads closed because of flooding. Coordinates are approximate: placed on US 1 in Melbourne, and the exact spot of the intersection was not confirmed.",
+  "id": "man-harbor-city-blvd-us-1-at-law-st-melbourn",
+  "updated": "2026-11-02T20:00:00Z"
  }
 ]
