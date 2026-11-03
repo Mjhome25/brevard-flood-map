@@ -75,18 +75,34 @@ d = R.display(E.derive(E.load(p)))[0]
 check("display keeps every active record in the page schema", len(d) == 4 and all("where" in it and it["id"] for it in d))
 
 # FHP roadblock wording (the old parser read 'ROADBLOCK' inside 'NO ROADBLOCK' as a full closure)
-cases = [("MVC", "No Roadblock", False), ("MVC", "No Road Block", False), ("MVC W/O ROADBLOCK", "", False),
-         ("MVC WITHOUT ROADBLOCK", "", False), ("MVC", "Partial Roadblock - Use Caution", False),
-         ("MVC", "Roadblock", True), ("MVC", "Road Blocked", True), ("MVC", "All Lanes Blocked", True),
-         ("ROAD CLOSED", "", True), ("MVC", "Roadway Open", False), ("MVC", "Right lane blocked", False),
-         ("MVC W/Roadblock", "Partial Roadblock - Use Caution", True), ("MVC W/O Roadblock", "No Roadblock", False)]
-bad = [(t_, r_) for t_, r_, want in cases if R.fhp_full_closure(t_, r_) != want]
-check(f"FHP full-closure wording: no/w-o/without/partial roadblock are not full closures ({bad})", not bad)
-fix = R.fhp_normalize({"layer": "FHP", "title": "Mvc at BEACHLINE EXPY WB [MM52] (No Roadblock)", "lanes": "No Roadblock",
-                       "fullClosure": True})
-check("migration normalizes the old misreading with an audit note", fix and fix["now"] is False and "parser correction" in fix["reason"])
-check("a correct FHP flag is left alone", R.fhp_normalize({"layer": "FHP", "title": "Mvc at X", "lanes": "Roadblock",
-                                                          "fullClosure": True}) is None)
+page_closed = lambda st, full: bool(full or st == "closed")  # template.html isClosed
+tpl = open(os.path.join(repo, "template.html")).read()
+check("the page's closed test is still fullClosure OR status closed",
+      "const isClosed=it=>!!(it.fullClosure||it.status==='closed');" in tpl)
+# (type, remark) -> (status, fullClosure, page shows closed); the updater uses fhp_classify for BOTH fields
+cases = [("MVC", "No Roadblock", "caution", False, False), ("MVC", "No Road Block", "caution", False, False),
+         ("MVC W/O ROADBLOCK", "", "caution", False, False), ("MVC WITHOUT ROADBLOCK", "", "caution", False, False),
+         ("MVC", "Partial Roadblock - Use Caution", "caution", False, False),
+         ("MVC W/Roadblock", "Partial Roadblock - Use Caution", "caution", False, False),
+         ("MVC W/O Roadblock", "No Roadblock", "caution", False, False),
+         ("MVC W/ROADBLOCK", "", "closed", False, True), ("MVC", "Roadblock", "closed", False, True),
+         ("MVC", "Road Blocked", "closed", True, True), ("MVC", "All Lanes Blocked", "closed", True, True),
+         ("ROAD CLOSED", "", "closed", True, True), ("MVC", "Roadway Open", "caution", False, False),
+         ("MVC W/Roadblock", "Roadway Open", "caution", False, False), ("MVC", "Right lane blocked", "caution", False, False),
+         ("MVC", "Water over roadway", "flooded", False, False)]
+bad = [c for c in cases if (*R.fhp_classify(c[0], c[1]), page_closed(*R.fhp_classify(c[0], c[1]))) != c[2:]]
+check(f"FHP rows: negated/partial roadblock is never closed on the page; full closure needs explicit wording ({bad})",
+      not bad)
+src = open(os.path.join(repo, "update_flood_data.py")).read()
+check("the updater takes both FHP status and fullClosure from fhp_classify",
+      "status, full = fhp_classify(typ, remark)" in src and '"status": status, "fullClosure": full' in src)
+fix = R.fhp_normalize({"layer": "FHP", "title": "Mvc W/Roadblock at FAY BLVD (Partial Roadblock - Use Caution)",
+                       "lanes": "Partial Roadblock - Use Caution", "status": "closed", "fullClosure": True})
+check("migration normalizes an old misreading in both fields with an audit note",
+      fix and fix["now"] == {"status": "caution", "fullClosure": False}
+      and fix["was"] == {"status": "closed", "fullClosure": True} and "parser correction" in fix["reason"])
+check("a correct FHP row is left alone", R.fhp_normalize({"layer": "FHP", "title": "Mvc at X", "lanes": "Road Blocked",
+                                                          "status": "closed", "fullClosure": True}) is None)
 p3 = os.path.join(tmp, "c.jsonl")
 fhp = lambda **kw: dict({"id": "fhp-1", "layer": "FHP", "status": "caution", "road": "SR-528", "spot": "at MM52",
                          "reported": "2026-11-02T11:00:00Z", "updated": "2026-11-02T11:00:00Z", "title": "Mvc at SR-528"}, **kw)

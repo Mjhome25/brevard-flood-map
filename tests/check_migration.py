@@ -20,7 +20,7 @@ strongest = {}
 for _, _, items in snaps:
     for it in items:
         fix = fhp_normalize(it)  # a proven old-parser misreading counts at its corrected strength
-        it = dict(it, fullClosure=fix["now"]) if fix else it
+        it = dict(it, **fix["now"]) if fix else it
         r = rid_of(it); strongest[r] = max(strongest.get(r, (-1, False)), E.rank(it))
 check(f"all {len(strongest)} published records migrated and active",
       set(strongest) == set(recs) and all(x["status"] == "active" for x in recs.values()))

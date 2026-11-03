@@ -23,33 +23,44 @@ OUT = os.path.join(E.HERE, "flood_data.json")
 ANOMALY_MIN = 3  # an empty feed while we hold at least this many of its records is treated as a fault, not news
 
 
-_FHP_NOT_FULL = re.compile(r"\b(?:NO|W/?O|WITHOUT|PARTIAL)\s+ROAD\s*BLOCK", re.I)
-_FHP_FULL = re.compile(r"\bROAD\s*BLOCK(?:ED)?\b|\bROAD(?:WAY)?\s+CLOSED\b|\bALL\s+LANES\s+(?:CLOSED|BLOCKED)\b", re.I)
+_FHP_NOT_FULL = re.compile(r"\b(?:NO|W/?O|WITHOUT|PARTIAL)\s+ROAD\s*BLOCK(?:ED)?", re.I)
+_FHP_FULL = re.compile(r"\bCLOSED\b|\bROAD\s+BLOCKED\b|\bALL\s+LANES\s+(?:CLOSED|BLOCKED)\b", re.I)
+_FHP_BLOCK = re.compile(r"\bROAD\s*BLOCK(?:ED)?\b", re.I)
+_FHP_OPEN = re.compile(r"\bROA?I?D(?:WAY)?\s+(?:OPEN|CLEAR)\b", re.I)
 
 
-def fhp_full_closure(typ: str, remark: str) -> bool:
-    """FHP CAD row: is the road fully blocked? Type and remark are both read; 'NO ROADBLOCK', 'W/O ROADBLOCK' and
-    'PARTIAL ROADBLOCK' are not, but a type 'W/ROADBLOCK' stays a full closure even beside a 'partial' remark: only an
-    explicit negation lowers it."""
-    if re.search(r"CLOSED", typ or "", re.I):
-        return True
+def fhp_classify(typ: str, remark: str) -> tuple[str, bool]:
+    """FHP CAD row -> (status, fullClosure), the one classification the updater and the migration use.
+    Full closure needs explicit wording (CLOSED, ROAD BLOCKED, ALL LANES CLOSED/BLOCKED). A generic ROADBLOCK makes
+    the row closed but not proof that every lane is shut. An explicit NO / W/O / WITHOUT / PARTIAL ROADBLOCK anywhere
+    in the row is the source's own meaning: it overrides a generic ROADBLOCK, so the row stays a visible caution
+    with the source's wording, never a closure. 'Roadway open' wording is a caution too (never an all-clear)."""
     text = f"{typ or ''} {remark or ''}"
-    return bool(_FHP_FULL.search(_FHP_NOT_FULL.sub(" ", text)))
+    negated = bool(_FHP_NOT_FULL.search(text))
+    rest = _FHP_NOT_FULL.sub(" ", text)
+    if re.search(r"flood|water", text, re.I):
+        status = "flooded"
+    elif _FHP_FULL.search(rest) or (_FHP_BLOCK.search(rest) and not negated and not _FHP_OPEN.search(text)):
+        status = "closed"
+    else:
+        status = "caution"
+    return status, bool(_FHP_FULL.search(rest))
 
 
 def fhp_normalize(it: dict) -> dict | None:
     """For an FHP item recorded by the old parser (which read 'ROADBLOCK' inside 'NO ROADBLOCK' or 'PARTIAL
-    ROADBLOCK' as a full closure): the corrected fullClosure with an audit note, or None when nothing changes.
+    ROADBLOCK' as a closure): the corrected status and fullClosure with an audit note, or None when nothing changes.
     The CAD type is the title before ' at ', and the remark is the lanes text."""
     if it.get("layer") != "FHP":
         return None
     typ = (it.get("title") or "").split(" at ")[0]
-    fixed = fhp_full_closure(typ, it.get("lanes") or "")
-    if bool(it.get("fullClosure")) == fixed:
+    status, full = fhp_classify(typ, it.get("lanes") or "")
+    was = {"status": it.get("status"), "fullClosure": bool(it.get("fullClosure"))}
+    now = {"status": status, "fullClosure": full}
+    if was == now:
         return None
-    return {"field": "fullClosure", "was": bool(it.get("fullClosure")), "now": fixed,
-            "reason": f"parser correction: FHP remark '{it.get('lanes', '')}' with type '{typ}' is not a full closure"
-            if not fixed else f"parser correction: FHP type '{typ}' / remark '{it.get('lanes', '')}' is a full closure"}
+    return {"was": was, "now": now,
+            "reason": f"parser correction: FHP type '{typ}' with remark '{it.get('lanes', '')}' reclassified"}
 
 
 def rid_of(it: dict, county: str = "brevard") -> str:

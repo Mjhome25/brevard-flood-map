@@ -59,7 +59,7 @@ def build(cutoff: str):
             r = rid_of(it)
             fix = fhp_normalize(it)
             if fix:  # the old FHP parser's proven misreadings are corrected, with an audit note on the event
-                it = dict(it, fullClosure=fix["now"])
+                it = dict(it, **fix["now"])
             f, st = fields_of(it), stime_of(it, "")
             if not E.parse(st):
                 groups["unlocatable (no usable source time)"].append(r)
