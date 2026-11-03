@@ -543,8 +543,8 @@ check("a past FHP-drop clearance of a road closure in the history is ignored: th
 check("E.fhp_clearable: crash yes; water closure, roadblock, debris no",
       E.fhp_clearable(crash) and not E.fhp_clearable(water) and not E.fhp_clearable(roadblock) and not E.fhp_clearable(debris))
 tplc = open(os.path.join(repo, "template.html")).read()
-check("the page draws a green pin only for a cleared former closure that nothing else still reports",
-      "const greenPin=c=>formerClosure(c)&&c.lat!=null&&!(c.stillReported||[]).length" in tplc
+check("the page draws a green pin only for a former FHP closure or an official reopening that nothing else still reports",
+      "const greenPin=c=>(formerClosure(c)||official(c))&&c.lat!=null&&!(c.stillReported||[]).length" in tplc
       and "isClosed(c)" in tplc and "no longer lists this as a road closure" in tplc)
 check("the road search filters the cleared list and the green pins",
       "cleared.filter(c=>greenPin(c)&&matchQ(c,q))" in tplc and "const hit=cleared.filter(c=>matchQ(c,q))" in tplc
@@ -584,6 +584,76 @@ for bad, why in (({"kind": "fhp-dropped", "agency": "Florida Highway Patrol", "u
     except E.Refused:
         ok = True
     check(f"no clearance for {why}", ok)
+
+# Official reopening (verify.py --open): a government open sentence about THIS road takes it off the active map, cited
+po = os.path.join(tmp, "open.jsonl")
+OPAGE = ("<html><body><article><p>Published on November 03, 2026</p><p>Nov. 3, 8:30 a.m. traffic update:</p><ul>"
+         "<li>Sarno Road is open, but there are some infrastructure issues on the shoulder.</li>"
+         "<li>Babcock St- between East Ave B and Brevard Ave remains closed with barricades blocking the roadway.</li>"
+         "<li>Eber Road is open after a driver was injured.</li><li>Dairy Road at Florida Avenue is open.</li>"
+         "<li>Sarno Road is open, but drivers report flooding nearby.</li></ul></article></body></html>")
+run(po, {"sources": {"manual": "up", "nws": "up"}, "items": [
+    man("sarno", road="Sarno Rd", where="Sarno Rd between Eau Gallie Blvd and its west end", status="closed"),
+    {"id": "nws-sarno", "layer": "NWS", "status": "flooded", "road": "Sarno Rd", "where": "Sarno Rd at Eau Gallie Blvd",
+     "reported": "2026-11-02T13:00:00Z", "source": "NWS storm report (Public)"},
+    man("babb", road="Babcock St", where="Babcock St at Avenue B", status="closed"),
+    man("dfl", road="Dairy Rd", where="Dairy Rd at Eber Blvd")]}, 0)
+NOWO = datetime.datetime(2026, 11, 3, 15, 0, tzinfo=datetime.timezone.utc)
+def opened(rid, quote, page=OPAGE):
+    try:
+        V.issue(rid, MEL, quote, "open", page, MEL, NOWO, po)
+    except E.Refused as exc:
+        return str(exc)
+    return ""
+recs_o = lambda: E.derive(E.load(po), NOWO)["records"]
+q = "Sarno Road is open, but there are some infrastructure issues on the shoulder."
+check("the city's 'Sarno Road is open, but ... on the shoulder' reopens the Sarno report, citing the page",
+      not opened("brevard:manual:sarno", q) and recs_o()["brevard:manual:sarno"]["status"] == "reopened"
+      and recs_o()["brevard:manual:sarno"]["evidence"]["kind"] == "official"
+      and recs_o()["brevard:manual:sarno"]["evidence"]["host"] == "www.melbourneflorida.org")
+nws_rid = [r for r in recs_o() if ":nws:" in r][0]
+check("the same whole-road statement also reopens an NWS report on that road",
+      not opened(nws_rid, q) and recs_o()[nws_rid]["status"] == "reopened")
+check("open refused: a closure sentence", "road-open forms" in opened(
+    "brevard:manual:babb", "Babcock St- between East Ave B and Brevard Ave remains closed with barricades blocking the roadway."))
+check("open refused: personal detail in the sentence", bool(opened("brevard:manual:sarno",
+      "Eber Road is open after a driver was injured.")))
+check("open refused: an intersection sentence for another cross street",
+      "cross street" in opened("brevard:manual:dfl", "Dairy Road at Florida Avenue is open."))
+check("open refused: a caveat that is not about the shoulder",
+      "road-open forms" in opened("brevard:manual:babb", "Sarno Road is open, but drivers report flooding nearby."))
+check("open refused: a sentence that is not on the page", bool(opened("brevard:manual:babb", "Babcock Street is open.")))
+check("open refused: another road", "not this road" in opened("brevard:manual:babb", q))
+check("only the reopened records left the active list", recs_o()["brevard:manual:babb"]["status"] == "active"
+      and recs_o()["brevard:manual:dfl"]["status"] == "active")
+items_o, reo = R.display(E.derive(E.load(po), NOWO))
+check("the page lists the reopening with its quote for 24 hours",
+      {c["id"] for c in reo} >= {"brevard:manual:sarno", nws_rid} and reo[0]["evidence"]["quote"] == q)
+w, _, recs = run(po, {"sources": {"manual": "up"}, "items": [
+    man("sarno", road="Sarno Rd", where="Sarno Rd between Eau Gallie Blvd and its west end", status="closed")]}, 3.5)
+check("the old report listed again does not undo the official reopening",
+      E.derive(E.load(po), NOWO)["records"]["brevard:manual:sarno"]["status"] == "reopened")
+run(po, {"sources": {"manual": "up"}, "items": [man("sarno", road="Sarno Rd", status="flooded",
+    where="Sarno Rd between Eau Gallie Blvd and its west end", reported="2026-11-03T16:00:00Z",
+    updated="2026-11-03T16:00:00Z")]}, 4.5)
+check("a newer flooding report after the reopening puts it back (most recent report wins)",
+      E.derive(E.load(po), NOWO + datetime.timedelta(hours=2))["records"]["brevard:manual:sarno"]["status"] == "active")
+check("check_events accepts the official reopening history", subprocess.run(
+    [sys.executable, "-I", os.path.join(repo, "check_events.py"), "--before", "", "--bootstrap", "--events", po],
+    capture_output=True).returncode == 0)
+forged = [e for e in E.load(po) if e["kind"] == "cleared"][0]
+for bad, why in ((dict(forged["evidence"], quote="Sarno Road is closed."), "a closure quote"),
+                 (dict(forged["evidence"], host="evil.example"), "a non-government host"),
+                 ({k: v for k, v in forged["evidence"].items() if k != "pageSha256"}, "a missing receipt field")):
+    try:
+        E.append([{"rid": "brevard:manual:babb", "src": "manual", "kind": "cleared", "actor": "x", "evidence": bad}],
+                 po, clearance_enabled=True, now=NOWO); ok = recs_o()["brevard:manual:babb"]["status"] == "active"
+    except E.Refused:
+        ok = True
+    check(f"an official reopening is refused with {why}", ok)
+check("the page shows official reopenings apart, as Reopened with a check, never as cleared",
+      'id="reopen-wrap"' in tplc_o and "REOPENED" in tplc_o and "official(c)?reopenIcon:okIcon" in tplc_o
+      if (tplc_o := open(os.path.join(repo, "template.html")).read()) else False)
 
 # A manual report raised to closed by a cited non-government list keeps its first report and shows the dated citation
 pm = os.path.join(tmp, "support.jsonl")

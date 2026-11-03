@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
-"""Mark a report Government verified from a government web page (a badge; never clears anything).
+"""Mark a report Government verified from a government web page, or reopened when the page says the road is open.
 
-  python3 verify.py <rid> <https url> "<exact sentence from the page>" [--closed | --full-closure]
+  python3 verify.py <rid> <https url> "<exact sentence from the page>" [--closed | --full-closure | --open]
 
 The page is fetched here with an honest User-Agent; the request and any redirect must stay on one exact https host
 from the county's verify list. The sentence must appear on the page and be exactly one of the supported forms, with this
@@ -17,6 +17,11 @@ than this report (an old post is another event).
 --closed / --full-closure: the sentence says the road is closed (all of it, for --full-closure), so the report is
 first raised to closed, citing the page (Mike, Nov 3: "if the government page says a road is closed, we should go by
 what the government page says and cite it"). It only raises.
+
+--open: the sentence says the road is open, as one of "<road> is open." (optionally ", but there are <...> on the
+shoulder"), "All of <road> is open.", "<road> has reopened.", "<road> at <cross street> is open." The record comes
+off the active map and shows green for a day, citing the page (Mike, Nov 3: a road may be shown reopened only when an
+official statement on a credible website says so). Needs "official" in the county's clearance kinds.
 """
 from __future__ import annotations
 
@@ -24,6 +29,7 @@ import datetime
 import hashlib
 import html
 import html.parser
+import json
 import os
 import re
 import sys
@@ -136,13 +142,19 @@ def issue(rid: str, url: str, quote: str, raise_to: str | None, page: str, final
     published = post[0]
     if published < E._episode(rec):
         raise E.Refused(f"the post ({published}) is older than this report ({E._episode(rec)}), so it is another event")
-    why = E.supports(rec["fields"], quote, raise_to)
+    why = E.opens(rec["fields"], quote) if raise_to == "open" else E.supports(rec["fields"], quote, raise_to)
     if why:
         raise E.Refused(why)
     ev = {"host": p.hostname, "url": url, "finalUrl": final_url, "agency": hosts[p.hostname], "quote": quote,
           "publishedDate": published, "checkedAt": E.iso(now), "pageSha256": hashlib.sha256(text.encode()).hexdigest(),
           "postSha256": hashlib.sha256(post[1].encode()).hexdigest(),
           "verifier": VERSION}
+    if raise_to == "open":
+        clearance = json.load(open(os.path.join(E.HERE, "county.json"))).get("clearance", {})
+        if not (clearance.get("enabled") and "official" in clearance.get("kinds", [])):
+            raise E.Refused("official reopenings are not enabled for this county")
+        return E.append([{"rid": rid, "src": rec["src"], "kind": "cleared", "actor": VERSION,
+                          "evidence": dict(ev, kind="official", reopenedAt="")}], path, clearance_enabled=True, now=now)
     new = []
     if raise_to:
         new.append({"rid": rid, "src": rec["src"], "kind": "relisted", "actor": VERSION, "stime": f"{published}T00:00:00Z",
@@ -155,7 +167,8 @@ def issue(rid: str, url: str, quote: str, raise_to: str | None, page: str, final
 def main(argv) -> int:
     flags = [a for a in argv if a.startswith("--")]
     rid, url, quote = [a for a in argv if not a.startswith("--")]
-    raise_to = "full" if "--full-closure" in flags else "closed" if "--closed" in flags else None
+    raise_to = ("open" if "--open" in flags else "full" if "--full-closure" in flags
+                else "closed" if "--closed" in flags else None)
     host = urllib.parse.urlparse(url).hostname
     if urllib.parse.urlparse(url).scheme != "https" or host not in E.verify_hosts():
         sys.exit(f"verify: {url} is not https on the county's government verify list")

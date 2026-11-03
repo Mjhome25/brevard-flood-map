@@ -23,7 +23,10 @@ Kinds:
   located    a manual report's pin was wrong; moved to the place its own words name (`fields`: lat, lng, approx;
              `locatedBy`: source, url, checked, note), e.g. the county road map's intersection. Never changes status;
              the old position is kept in the record and the closed stretch is redrawn from the new pin
-  cleared    official reopening; written only by the verifier path (batch 3) while county clearance is enabled
+  cleared    the record comes off the active map, for one of the county's enabled clearance kinds: "fhp-dropped" (a plain
+             FHP crash FHP stopped listing) or "official" (a government page on the verify list says the road is open,
+             as one supported sentence, written by verify.py --open; Mike, Nov 3: only an official statement on a
+             credible website may show a road reopened)
 Status comes only from reported and cleared.
 """
 from __future__ import annotations
@@ -60,6 +63,12 @@ _X = r"(?P<cross>[A-Z][A-Za-z0-9.' ]{1,40}?)"
 NOTICE = [(re.compile(rf"^All of {_R} is (?P<impact>closed|flooded)\.?$"), True),
           (re.compile(rf"^{_R} at {_X} is (?P<impact>closed|flooded)\.?$"), False),
           (re.compile(rf"^(?P<impact>Flooding) on {_R} at {_X}\.?$"), False)]
+# The only sentence shapes accepted as a government statement that a road is open. A trailing shoulder caveat (the
+# City of Melbourne's "..., but there are some infrastructure issues on the shoulder") is allowed and quoted on the
+# page; nothing else may follow.
+OPEN = [(re.compile(rf"^{_R} at {_X} is (?:now )?open\.?$"), False),  # first, so "X at Y" is never read as one road
+        (re.compile(rf"^(?:All of )?{_R} is (?:now )?open(?:, but there (?:is|are) (?:some )?[a-z ]{{3,60}} on the shoulder)?\.?$"), True),
+        (re.compile(rf"^{_R} has reopened\.?$"), True)]
 SUFFIX = {"st": "street", "rd": "road", "ave": "avenue", "blvd": "boulevard", "dr": "drive", "pkwy": "parkway",
           "ln": "lane", "hwy": "highway", "ct": "court", "pl": "place", "cswy": "causeway"}
 
@@ -78,6 +87,33 @@ def notice(sentence: str) -> dict | None:
             return {"road": road_words(g["road"]), "cross": road_words(g.get("cross") or ""), "whole": whole,
                     "impact": "flooded" if g["impact"].lower() in ("flooded", "flooding") else "closed"}
     return None
+
+
+def opening(sentence: str) -> dict | None:
+    """Parse one supported government open sentence: {road, cross, whole} or None."""
+    for rx, whole in OPEN:
+        m = rx.match(sentence.strip())
+        if m:
+            g = m.groupdict()
+            return {"road": road_words(g["road"]), "cross": road_words(g.get("cross") or ""), "whole": whole}
+    return None
+
+
+def opens(fields: dict, quote: str) -> str | None:
+    """None when the open sentence is about THIS report's road (and its cross street, unless it covers the whole road)."""
+    n = opening(quote)
+    if not n:
+        return "the sentence is not one of the supported road-open forms"
+    road = road_words(re.split(r"\s*\(|/", fields.get("roadShort") or fields.get("road") or "")[0])
+    if not road or n["road"] != road:
+        return f"the sentence is about {n['road']!r}, not this road ({road or 'unknown'})"
+    spot = fields.get("spot") or (fields.get("where") or "").partition(" at ")[2]
+    cross = road_words(re.sub(r"^(?:at|near|from)\s+", "", spot, flags=re.I).split(" to ")[0])
+    if not n["whole"] and (not cross or n["cross"] != cross):
+        return f"the sentence is about {n['cross']!r}, not this report's cross street ({cross or 'none recorded'})"
+    return None
+
+
 SHA = re.compile(r"^[0-9a-f]{64}$")
 
 
@@ -212,7 +248,7 @@ def _check_located(ev: dict) -> None:
         raise Refused(f"seq {seq}: locatedBy needs a check time not after the event")
 
 
-def _check_gov(seq, v: dict, at: str) -> None:
+def _check_gov(seq, v: dict, at: str, sentence=None) -> None:
     """Evidence read from a government page by verify.py: every receipt field present and well formed, https on an exact
     host from the county's verify list (also after redirects), the configured agency for that host, a real page date
     not after the event, a check time not after the event, a supported verifier, and a quote that is exactly one
@@ -234,7 +270,7 @@ def _check_gov(seq, v: dict, at: str) -> None:
     if not real or v["publishedDate"] > at[:10] or not checked or checked > parse(at):
         raise Refused(f"seq {seq}: evidence dates are malformed or in the future")
     if (v["verifier"] not in VERIFIERS or not SHA.match(v["pageSha256"]) or not SHA.match(v["postSha256"])
-            or not notice(v["quote"])):
+            or not (sentence or notice)(v["quote"])):
         raise Refused(f"seq {seq}: evidence is not a supported verifier receipt with one supported road sentence")
 
 
@@ -272,7 +308,10 @@ def validate(ev: dict, prev_seq: int, clearance_enabled: bool, prev_eid: str = "
     if kind == "cleared":
         if not clearance_enabled:
             raise Refused(f"seq {ev['seq']}: clearance is disabled for this county")
-        _check_fhp_drop(ev)
+        if (ev.get("evidence") or {}).get("kind") == "official":
+            _check_official(ev)
+        else:
+            _check_fhp_drop(ev)
 
 
 FHP_URL = "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
@@ -299,6 +338,15 @@ def _check_fhp_drop(ev: dict) -> None:
         raise Refused(f"seq {ev['seq']}: the only clearance is an FHP incident the FHP page stopped listing")
 
 
+def _check_official(ev: dict) -> None:
+    """A government reopening: a full verifier receipt (as for a verified badge) whose quote is one supported open
+    sentence, published no later than the event; the clearance time is the time it is written."""
+    v = dict(ev.get("evidence") or {})
+    if set(v) != {"kind", "reopenedAt", *GOV_FIELDS} or v.pop("kind") != "official" or v.pop("reopenedAt") != ev["at"]:
+        raise Refused(f"seq {ev['seq']}: an official reopening needs exactly a verifier receipt and its time")
+    _check_gov(ev["seq"], v, ev["at"], sentence=opening)
+
+
 # ---- writing (the only writer) ---------------------------------------------------------------------------------
 
 def append(new: list[dict], path: str = EVENTS, clearance_enabled: bool = False, now: datetime.datetime | None = None
@@ -314,8 +362,8 @@ def append(new: list[dict], path: str = EVENTS, clearance_enabled: bool = False,
     at = iso(now or utcnow())
     written = []
     for raw in new:
-        if raw.get("kind") == "cleared" and (raw.get("evidence") or {}).get("kind") != "fhp-dropped":
-            raise Refused("cleared events come only from the verifier path")
+        if raw.get("kind") == "cleared" and (raw.get("evidence") or {}).get("kind") not in ("fhp-dropped", "official"):
+            raise Refused("cleared events come only from the FHP drop rule or the verifier's --open path")
         ev = {k: v for k, v in raw.items() if k not in ("seq", "at", "eid")}
         if ev["kind"] == "cleared":  # the clearance time is the time it is written
             ev["evidence"] = dict(ev["evidence"], reopenedAt=at)
@@ -447,6 +495,9 @@ def apply(state: dict, ev: dict) -> None:
                                                     and r["missingSince"] == v["missingSince"]
                                                     and fhp_clearable(r["fields"])):
             return  # only a still-missing FHP crash, gone since the time its evidence says (never a road closure)
+        if v.get("kind") == "official" and (r["status"] != "active" or v["publishedDate"] < _episode(r)
+                                            or opens(r["fields"], v["quote"])):
+            return  # an open statement must be about this road and no older than this report
         r.update(status="reopened", reopenedAt=v["reopenedAt"], evidence=v)
 
 
