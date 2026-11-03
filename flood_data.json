@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-03T14:00:50Z",
+ "generated": "2026-11-03T14:15:37Z",
  "errors": [
   "FL511 Closures: 'NoneType' object has no attribute 'group'"
  ],
@@ -1294,9 +1294,15 @@
     "kind": "feed",
     "publishedAt": "2026-11-03T13:34:49Z"
    },
-   "awaitingOfficial": false,
-   "missingSince": null,
-   "recheck": []
+   "awaitingOfficial": true,
+   "missingSince": "2026-11-03T14:15:41Z",
+   "recheck": [],
+   "noLongerListed": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "since": "2026-11-03T14:15:41Z",
+    "wasClosed": true
+   }
   },
   {
    "fullClosure": true,
@@ -1348,6 +1354,34 @@
     "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
     "kind": "feed",
     "publishedAt": "2026-11-03T13:56:33Z"
+   },
+   "awaitingOfficial": false,
+   "missingSince": null,
+   "recheck": []
+  },
+  {
+   "fullClosure": false,
+   "lat": 28.0990168555116,
+   "layer": "FHP",
+   "lng": -80.7000330806801,
+   "reported": "2026-11-03T14:09:43Z",
+   "road": "ELLIS RD",
+   "roadShort": "Ellis Rd",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "spot": "at S John Rodes Blvd",
+   "status": "caution",
+   "title": "MVC W/ at ELLIS RD x[S JOHN RODES BLVD] [MELBOURNE]",
+   "where": "Ellis Rd at S John Rodes Blvd",
+   "id": "brevard:fhp:20261103140943-92bc021a",
+   "updated": "2026-11-03T14:09:43Z",
+   "lastReported": "2026-11-03T14:09:43Z",
+   "firstReported": "2026-11-03T14:09:43Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-03T14:09:43Z"
    },
    "awaitingOfficial": false,
    "missingSince": null,
@@ -2444,8 +2478,8 @@
    "title": "Traffic lights not working on US-192 / Vine St / Bronson Hwy East, at S John Rodes Blvd",
    "where": "US-192 EB at S John Rodes Blvd",
    "id": "brevard:fl511:938257",
-   "updated": "2026-11-03T13:28:00Z",
-   "lastReported": "2026-11-03T13:28:00Z",
+   "updated": "2026-11-03T14:00:00Z",
+   "lastReported": "2026-11-03T14:00:00Z",
    "firstReported": "2026-11-03T03:18:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
