@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-03T18:30:36Z",
+ "generated": "2026-11-03T18:45:32Z",
  "errors": [
   "FL511 map locations: 1 report(s) without a pin"
  ],
@@ -1413,8 +1413,8 @@
    "to": "Pine St",
    "where": "US-192 EB at Minton Rd/S Wickham Rd",
    "id": "brevard:fl511:937010",
-   "updated": "2026-11-03T18:09:00Z",
-   "lastReported": "2026-11-03T18:09:00Z",
+   "updated": "2026-11-03T18:42:00Z",
+   "lastReported": "2026-11-03T18:42:00Z",
    "firstReported": "2026-11-02T19:54:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
@@ -1679,8 +1679,8 @@
    "to": "Circle Dr",
    "where": "US-192 EB beyond Coastal Ln",
    "id": "brevard:fl511:937141",
-   "updated": "2026-11-03T18:10:00Z",
-   "lastReported": "2026-11-03T18:10:00Z",
+   "updated": "2026-11-03T18:43:00Z",
+   "lastReported": "2026-11-03T18:43:00Z",
    "firstReported": "2026-11-02T19:54:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
@@ -1837,8 +1837,8 @@
    "to": "Coastal Ln",
    "where": "US-192 WB at S John Rodes Blvd",
    "id": "brevard:fl511:937222",
-   "updated": "2026-11-03T18:11:00Z",
-   "lastReported": "2026-11-03T18:11:00Z",
+   "updated": "2026-11-03T18:44:00Z",
+   "lastReported": "2026-11-03T18:44:00Z",
    "firstReported": "2026-11-02T19:54:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
@@ -2189,8 +2189,8 @@
    "to": "Highway 1",
    "where": "SR-514 EB at US-1",
    "id": "brevard:fl511:937844",
-   "updated": "2026-11-03T18:09:00Z",
-   "lastReported": "2026-11-03T18:09:00Z",
+   "updated": "2026-11-03T18:41:00Z",
+   "lastReported": "2026-11-03T18:41:00Z",
    "firstReported": "2026-11-02T23:15:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
