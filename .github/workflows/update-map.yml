@@ -28,7 +28,9 @@ jobs:
           python-version: "3.12"
 
       - name: No-fade safety tests
-        run: python3 -I tests/test_no_fade.py "$PWD"
+        run: |
+          python3 -I tests/test_no_fade.py "$PWD"
+          python3 -I tests/test_events.py "$PWD"
 
       - name: Install Claude SDK
         run: pip install --quiet anthropic
