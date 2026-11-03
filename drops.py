@@ -68,7 +68,9 @@ def level(f: dict) -> int:
 def group(f: dict) -> str:
     """crash or flooding/hazard, on a state road or a local street (Mike's question: does a drop mean the same for each)."""
     kind = "crash" if re.search(r"\bMVC|crash|collision\b", f.get("title") or "", re.I) else "flooding/hazard"
-    road = " ".join(x for x in (f.get("road"), f.get("roadShort"), f.get("where")) if x)
+    # the main road only: a cross street (Minton Rd at US-192) says nothing about the road that was affected
+    road = f.get("roadShort") or f.get("road") or re.split(r"\s+(?:at|near|between)\s+", f.get("where") or "")[0]
+    road = re.split(r"\s+(?:at|near|between)\s+|\s*/\s*", road or "")[0]
     if not road.strip():
         return f"{kind}, road unknown"
     if STATE_ROAD.search(road) or STATE_NAMES.search(road):

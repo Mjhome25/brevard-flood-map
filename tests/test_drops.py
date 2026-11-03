@@ -140,7 +140,10 @@ check("all four agreed groups are always reported, even with no drops in them",
 check("Codex repro: W New Haven Ave (US-192) is a state road; Minton Rd is a local street; no road is unknown",
       D.group({"title": "Flooding", "road": "W New Haven Ave"}) == "flooding/hazard, state road"
       and D.group({"title": "MVC", "road": "Minton Rd"}) == "crash, local street"
-      and D.group({"title": "Flooding", "road": "Malabar Rd", "where": "Malabar Rd at Minton Rd"}) == "flooding/hazard, road class unknown" and D.group({"title": "MVC"}) == "crash, road unknown")
+      and D.group({"title": "Flooding", "road": "Malabar Rd", "where": "Malabar Rd at Minton Rd"}) == "flooding/hazard, road class unknown"
+      and D.group({"title": "MVC", "road": "Minton Rd", "where": "Minton Rd at US-192"}) == "crash, local street"
+      and D.group({"title": "MVC", "where": "Hibiscus Blvd at Malabar Rd"}) == "crash, local street"
+      and D.group({"title": "MVC", "where": "US-1 at Suntree Blvd"}) == "crash, state road" and D.group({"title": "MVC"}) == "crash, road unknown")
 D.AUDIT = os.path.join(tmp, "audit"); os.makedirs(D.AUDIT, exist_ok=True)
 open(os.path.join(D.AUDIT, "drops.json"), "w").write("{not json")
 real = E.EVENTS
