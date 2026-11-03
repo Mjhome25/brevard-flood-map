@@ -147,7 +147,9 @@ check("a changed header set is a source failure, not shifted columns", ok)
 upd = open(os.path.join(repo, "update_flood_data.py")).read()
 check("the updater no longer drops incidents by a third time column", "t_clr" not in upd and "fhp_table(s)" in upd)
 for broken, why in ((page.replace('<td>-80.7</td>', '', 1), "a Brevard row missing its last cell"),
-                    (page.replace("SR-520 x[SAMPLE RD] [COCOA]", "", 1), "a row with no location")):
+                    (page.replace("SR-520 x[SAMPLE RD] [COCOA]", "", 1), "a row with no location"),
+                    (page.replace("11/03/2026 06:00:00", "not-a-time", 1), "a row with an unreadable Received time"),
+                    (page.replace("11/03/2026 06:00:00", "13/45/2026 06:00:00", 1), "a row with an impossible date")):
     try:
         R.fhp_table(broken); ok = False
     except ValueError:

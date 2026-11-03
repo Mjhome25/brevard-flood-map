@@ -9,6 +9,7 @@ is disabled until the verifier and the reopened display qualify (Phase 1 batches
 """
 from __future__ import annotations
 
+import datetime
 import hashlib
 import json
 import os
@@ -82,6 +83,10 @@ def fhp_table(page: str) -> list[dict]:
         r = {c: cells[i] for c, i in idx.items()}
         if not all(r[c] for c in ("Incident Type", "Received", "County", "Location")):
             raise ValueError("FHP CAD incident row is missing its type, time, county or location")
+        try:  # the Received time is the incident's identity; an unreadable one fails the snapshot (Codex #107)
+            datetime.datetime.strptime(r["Received"], "%m/%d/%Y %H:%M:%S")
+        except ValueError:
+            raise ValueError(f"FHP CAD incident row has an unreadable Received time {r['Received']!r}") from None
         out.append(r)
     return out
 
