@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-03T12:30:40Z",
+ "generated": "2026-11-03T12:46:36Z",
  "errors": [],
  "items": [
   {
@@ -1107,9 +1107,15 @@
     "kind": "feed",
     "publishedAt": "2026-11-03T12:29:16Z"
    },
-   "awaitingOfficial": false,
-   "missingSince": null,
-   "recheck": []
+   "awaitingOfficial": true,
+   "missingSince": "2026-11-03T12:46:41Z",
+   "recheck": [],
+   "noLongerListed": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "since": "2026-11-03T12:46:41Z",
+    "wasClosed": false
+   }
   },
   {
    "dir": "EB",
@@ -3766,12 +3772,6 @@
   }
  ],
  "advisories": [
-  {
-   "agency": "Brevard County Sheriff's Office",
-   "time": "2026-11-02T12:25:00Z",
-   "text": "Stay home and off the roadways unless necessary to travel to and from work or to escape high flooding. US 192 in Melbourne has flooded out. Expect significant delays.",
-   "url": "https://www.facebook.com/BrevardCountySheriff/"
-  },
   {
    "agency": "West Melbourne Police",
    "time": "2026-11-02T12:50:00Z",
