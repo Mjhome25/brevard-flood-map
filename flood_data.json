@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-03T08:30:36Z",
+ "generated": "2026-11-03T08:46:39Z",
  "errors": [],
  "items": [
   {
@@ -565,6 +565,82 @@
    "layer": "manual"
   },
   {
+   "road": "Minton Rd",
+   "where": "Minton Rd at Norfolk Pkwy",
+   "title": "Minton Rd closed at Norfolk Pkwy because of flooding",
+   "city": "West Melbourne",
+   "status": "flooded",
+   "fullClosure": true,
+   "lanes": "all lanes",
+   "lat": 28.0565,
+   "lng": -80.6755,
+   "approx": true,
+   "source": "WESH 2 (via News Beep)",
+   "sourceUrl": "https://www.newsbeep.com/795319/",
+   "reported": "2026-11-02T16:00:00Z",
+   "note": "On WESH's list of roads closed by flooding on Monday. The report time and travel direction are approximate.",
+   "id": "man-minton-rd-at-norfolk-pkwy",
+   "updated": "2026-11-02T16:00:00Z",
+   "layer": "manual"
+  },
+  {
+   "road": "Babcock St",
+   "where": "Babcock St at Palm Bay Rd",
+   "title": "Babcock St closed at Palm Bay Rd because of flooding",
+   "city": "Palm Bay",
+   "status": "flooded",
+   "fullClosure": true,
+   "lanes": "all lanes",
+   "lat": 28.0347,
+   "lng": -80.6153,
+   "approx": true,
+   "source": "WESH 2 (via News Beep)",
+   "sourceUrl": "https://www.newsbeep.com/795319/",
+   "reported": "2026-11-02T16:00:00Z",
+   "note": "On WESH's list of roads closed by flooding on Monday. The report time is approximate.",
+   "id": "man-babcock-st-at-palm-bay-rd",
+   "updated": "2026-11-02T16:00:00Z",
+   "layer": "manual"
+  },
+  {
+   "road": "US 192 (W New Haven Ave)",
+   "where": "W New Haven Ave at S Wickham Rd",
+   "title": "W New Haven Ave closed at S Wickham Rd because of flooding",
+   "city": "Melbourne",
+   "status": "flooded",
+   "fullClosure": true,
+   "lanes": "all lanes",
+   "lat": 28.0775,
+   "lng": -80.656,
+   "approx": true,
+   "source": "WESH 2 (via News Beep)",
+   "sourceUrl": "https://www.newsbeep.com/795319/",
+   "reported": "2026-11-02T16:00:00Z",
+   "note": "On WESH's list of roads closed by flooding on Monday. The report time and travel direction are approximate.",
+   "id": "man-w-new-haven-ave-at-s-wickham-rd",
+   "updated": "2026-11-02T16:00:00Z",
+   "layer": "manual"
+  },
+  {
+   "road": "US 1",
+   "where": "US 1 at Suntree Blvd",
+   "title": "US 1 closed at Suntree Blvd because of flooding",
+   "city": "Suntree",
+   "status": "flooded",
+   "fullClosure": true,
+   "lanes": "all lanes",
+   "lat": 28.226,
+   "lng": -80.685,
+   "approx": true,
+   "source": "WESH 2 (via News Beep)",
+   "sourceUrl": "https://www.newsbeep.com/795319/",
+   "reported": "2026-11-02T16:00:00Z",
+   "note": "On WESH's list of roads closed by flooding on Monday. The report time and travel direction are approximate.",
+   "id": "man-us-1-at-suntree-blvd",
+   "updated": "2026-11-02T16:00:00Z",
+   "layer": "manual"
+  },
+  {
    "id": "fl511-937010",
    "source": "FL511 (FDOT)",
    "sourceUrl": "https://fl511.com",
@@ -1009,7 +1085,7 @@
    "where": "US-192 EB at S John Rodes Blvd"
   },
   {
-   "id": "fhp-11022026043943-8664",
+   "id": "fhp-11022026043943-2837",
    "source": "FHP live CAD",
    "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
    "road": "US-1 [2 MILES SOF]",
@@ -1028,7 +1104,7 @@
    "where": "US-1 [2 Miles Sof] at Malabar Rd"
   },
   {
-   "id": "fhp-11022026112806-7074",
+   "id": "fhp-11022026112806-6684",
    "source": "FHP live CAD",
    "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
    "road": "NORFOLK PKWY",
@@ -1275,7 +1351,7 @@
    ]
   },
   {
-   "id": "fhp-11022026112110-2818",
+   "id": "fhp-11022026112110-5360",
    "source": "FHP live CAD",
    "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
    "road": "PALM BAY RD NE [ENT RAMP TO]",
@@ -1294,7 +1370,7 @@
    "where": "Palm Bay Rd Ne [Ent Ramp To] at I-95 Nb"
   },
   {
-   "id": "fhp-11022026090844-623",
+   "id": "fhp-11022026090844-4413",
    "source": "FHP live CAD",
    "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
    "road": "US-1",
@@ -1345,7 +1421,7 @@
    ]
   },
   {
-   "id": "fhp-11022026065558-7099",
+   "id": "fhp-11022026065558-5327",
    "source": "FHP live CAD",
    "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
    "road": "W NEW HAVEN AVE",
@@ -1658,6 +1734,12 @@
    "time": "2026-11-03T05:00:02Z",
    "text": "Sheriff Wayne Ivey says courts will be back in session Tuesday, Nov. 3, and many government offices are expected to reopen as flooding damage is assessed. Brevard Public Schools stay closed Tuesday so the district can inspect buildings. The full extent of flood damage is not yet known, so residents should stay off the roads unless they need to travel.",
    "url": "https://spacecoastdaily.com/2026/11/brevard-public-schools-to-remain-closed-tuesday-as-courts-and-government-offices-reopen/"
+  },
+  {
+   "agency": "City of Melbourne (via WESH 2/News Beep)",
+   "time": "2026-11-02T16:00:00Z",
+   "text": "Melbourne is under a boil water notice.",
+   "url": "https://www.newsbeep.com/795319/"
   }
  ]
 }
