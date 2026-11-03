@@ -269,6 +269,10 @@ check("a flooding claim is covered by a flooded pin (never called closed, never 
 other = C.read_post(NOV2.replace("experiencing severe flooding:", "under a detour:"), NOW)
 check("an unrecognised list heading ends the closed list; its items are not read as closures",
       not any(c for u, c in other["items"] if u in FLOOD22))
+both = C.read_post(NOV2.replace("<li><div role=\"presentation\">Golfclub</div></li>",
+                                 "<li><div role=\"presentation\">Dairy Road and Florida Avenue</div></li>"), NOW)
+check("Codex repro: the same entry in both lists is one closure and one flooding claim (bound by position, not text)",
+      sorted(c["claim"] for u, c in both["items"] if c and u == "Dairy Road and Florida Avenue") == ["closure", "flooding"])
 
 print("failures:", fails)
 sys.exit(1 if fails else 0)

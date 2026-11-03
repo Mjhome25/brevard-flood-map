@@ -229,19 +229,18 @@ def read_post(page: str, now: datetime.datetime) -> dict:
     # each list item belongs to the section heading above it: closed, severe flooding, or another (unread) kind
     heads = [(m.start(), "closure" if LEAD.fullmatch(m.group(0)) else "flooding" if FLOODLEAD.fullmatch(m.group(0)) else None)
              for m in SECTION.finditer(text)]
-    listed, at = {}, 0
+    kinds, at = [], 0  # by position, so the same text in two lists keeps each list's meaning
     for u in body:
         pos = text.find(u, at)
         at = pos + len(u) if pos >= 0 else at
         kind = [k for h, k in heads if h < pos]
-        if kind and kind[-1]:
-            listed[u] = kind[-1]
+        kinds.append(kind[-1] if kind and pos >= 0 else None)
     time = V.stated_time(units, body[-1], date) if body else ""
     if (time or date) > (E.iso(now) if time else now.astimezone(E.ET).strftime("%Y-%m-%d")):
         return {"error": "future-time", "date": date}
     items = []  # (text, claim or None); a paragraph or list item is the unit whose whole meaning must be read
-    for u in body:
-        c = list_item(u, listed[u]) if u in listed else None
+    for u, kind in zip(body, kinds):
+        c = list_item(u, kind) if kind else None
         if c:
             items.append((u, c))
             continue
