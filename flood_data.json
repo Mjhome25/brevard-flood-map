@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-03T22:30:36Z",
+ "generated": "2026-11-03T22:45:29Z",
  "errors": [
   "FL511 map locations: 1 report(s) without a pin"
  ],
@@ -1053,9 +1053,15 @@
     "kind": "feed",
     "publishedAt": "2026-11-03T09:31:55Z"
    },
-   "awaitingOfficial": false,
-   "missingSince": null,
-   "recheck": []
+   "awaitingOfficial": true,
+   "missingSince": "2026-11-03T22:45:37Z",
+   "recheck": [],
+   "noLongerListed": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "since": "2026-11-03T22:45:37Z",
+    "wasClosed": false
+   }
   },
   {
    "from": "Ruthann Cir",
@@ -1745,8 +1751,8 @@
    "to": "Pine St",
    "where": "US-192 EB at Minton Rd/S Wickham Rd",
    "id": "brevard:fl511:937010",
-   "updated": "2026-11-03T21:53:00Z",
-   "lastReported": "2026-11-03T21:53:00Z",
+   "updated": "2026-11-03T22:36:00Z",
+   "lastReported": "2026-11-03T22:36:00Z",
    "firstReported": "2026-11-02T19:54:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
@@ -2011,8 +2017,8 @@
    "to": "Circle Dr",
    "where": "US-192 EB beyond Coastal Ln",
    "id": "brevard:fl511:937141",
-   "updated": "2026-11-03T21:53:00Z",
-   "lastReported": "2026-11-03T21:53:00Z",
+   "updated": "2026-11-03T22:36:00Z",
+   "lastReported": "2026-11-03T22:36:00Z",
    "firstReported": "2026-11-02T19:54:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
@@ -2169,8 +2175,8 @@
    "to": "Coastal Ln",
    "where": "US-192 WB at S John Rodes Blvd",
    "id": "brevard:fl511:937222",
-   "updated": "2026-11-03T21:54:00Z",
-   "lastReported": "2026-11-03T21:54:00Z",
+   "updated": "2026-11-03T22:37:00Z",
+   "lastReported": "2026-11-03T22:37:00Z",
    "firstReported": "2026-11-02T19:54:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
@@ -2521,8 +2527,8 @@
    "to": "Highway 1",
    "where": "SR-514 EB at US-1",
    "id": "brevard:fl511:937844",
-   "updated": "2026-11-03T21:53:00Z",
-   "lastReported": "2026-11-03T21:53:00Z",
+   "updated": "2026-11-03T22:36:00Z",
+   "lastReported": "2026-11-03T22:36:00Z",
    "firstReported": "2026-11-02T23:15:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
@@ -3534,8 +3540,8 @@
    "title": "Flooding on Sunlake Rd Both Directions At SR-507 Northbound. All lanes closed.",
    "where": "Sunlake Rd both directions At SR-507 Northbound",
    "id": "brevard:fl511:939237",
-   "updated": "2026-11-03T19:41:00Z",
-   "lastReported": "2026-11-03T19:41:00Z",
+   "updated": "2026-11-03T22:30:00Z",
+   "lastReported": "2026-11-03T22:30:00Z",
    "firstReported": "2026-11-03T17:58:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
@@ -3591,8 +3597,8 @@
    "to": "S John Rodes Blvd",
    "where": "Ellis Rd both directions",
    "id": "brevard:fl511:939238",
-   "updated": "2026-11-03T22:11:00Z",
-   "lastReported": "2026-11-03T22:11:00Z",
+   "updated": "2026-11-03T22:30:00Z",
+   "lastReported": "2026-11-03T22:30:00Z",
    "firstReported": "2026-11-03T17:58:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
