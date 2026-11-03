@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-03T06:30:29Z",
+ "generated": "2026-11-03T06:46:27Z",
  "errors": [],
  "items": [
   {
@@ -628,45 +628,6 @@
    "to": "Pine St"
   },
   {
-   "id": "fl511-937082",
-   "source": "FL511 (FDOT)",
-   "sourceUrl": "https://fl511.com",
-   "road": "SR-507",
-   "title": "Emergency vehicles on SR-507 North, at Melbourne Ave. All lanes closed",
-   "status": "closed",
-   "fullClosure": true,
-   "reported": "2026-11-02T13:10:00Z",
-   "updated": "2026-11-03T05:32:00Z",
-   "lat": 28.076526,
-   "lng": -80.621403,
-   "layer": "Closures",
-   "dir": "NB",
-   "lanes": "All lanes closed",
-   "roadShort": "SR-507",
-   "spot": "at Melbourne Ave",
-   "line": [
-    [
-     28.074977,
-     -80.621358
-    ],
-    [
-     28.076498,
-     -80.621415
-    ],
-    [
-     28.076526,
-     -80.621415
-    ],
-    [
-     28.078038,
-     -80.621439
-    ]
-   ],
-   "where": "SR-507 NB at Melbourne Ave",
-   "from": "Devonshire Dr",
-   "to": "Harding Blvd"
-  },
-  {
    "id": "fl511-937141",
    "source": "FL511 (FDOT)",
    "sourceUrl": "https://fl511.com",
@@ -964,35 +925,6 @@
    "to": "Highway 1"
   },
   {
-   "id": "fl511-938139",
-   "source": "FL511 (FDOT)",
-   "sourceUrl": "https://fl511.com",
-   "road": "I-95",
-   "title": "Incident on I-95 South, before MM 169/Rest Area",
-   "status": "caution",
-   "fullClosure": false,
-   "reported": "2026-11-03T01:32:00Z",
-   "updated": "2026-11-03T03:02:00Z",
-   "lat": 27.946611,
-   "lng": -80.608056,
-   "layer": "Incidents",
-   "dir": "SB",
-   "lanes": "",
-   "roadShort": "I-95",
-   "spot": "before MM 169/Rest Area",
-   "line": [
-    [
-     27.94661,
-     -80.60808
-    ],
-    [
-     27.94599,
-     -80.60792
-    ]
-   ],
-   "where": "I-95 SB before MM 169/Rest Area"
-  },
-  {
    "id": "fl511-938257",
    "source": "FL511 (FDOT)",
    "sourceUrl": "https://fl511.com",
@@ -1022,7 +954,7 @@
    "where": "US-192 EB at S John Rodes Blvd"
   },
   {
-   "id": "fhp-11022026043943-3557",
+   "id": "fhp-11022026043943-7349",
    "source": "FHP live CAD",
    "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
    "road": "US-1 [2 MILES SOF]",
@@ -1041,7 +973,7 @@
    "where": "US-1 [2 Miles Sof] at Malabar Rd"
   },
   {
-   "id": "fhp-11022026112806-2415",
+   "id": "fhp-11022026112806-6989",
    "source": "FHP live CAD",
    "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
    "road": "NORFOLK PKWY",
@@ -1288,7 +1220,7 @@
    ]
   },
   {
-   "id": "fhp-11022026112110-3212",
+   "id": "fhp-11022026112110-2422",
    "source": "FHP live CAD",
    "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
    "road": "PALM BAY RD NE [ENT RAMP TO]",
@@ -1307,7 +1239,7 @@
    "where": "Palm Bay Rd Ne [Ent Ramp To] at I-95 Nb"
   },
   {
-   "id": "fhp-11022026090844-7711",
+   "id": "fhp-11022026090844-9150",
    "source": "FHP live CAD",
    "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
    "road": "US-1",
@@ -1358,7 +1290,7 @@
    ]
   },
   {
-   "id": "fhp-11022026065558-3505",
+   "id": "fhp-11022026065558-6743",
    "source": "FHP live CAD",
    "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
    "road": "W NEW HAVEN AVE",
@@ -1665,6 +1597,12 @@
    "time": "2026-11-02T16:02:00Z",
    "text": "Because of flooding, the Supervisor of Elections offices in Titusville, Melbourne and Palm Bay are closed to the public until further notice. The Viera office at 2725 Judge Fran Jamieson Way is open, and its secure ballot intake station is taking completed mail ballots.",
    "url": "https://www.yahoo.com/news/weather-news/articles/brevard-voting-sites-expected-open-160252636.html"
+  },
+  {
+   "agency": "Brevard County Sheriff's Office (via Space Coast Daily)",
+   "time": "2026-11-03T05:00:02Z",
+   "text": "Sheriff Wayne Ivey says courts will be back in session Tuesday, Nov. 3, and many government offices are expected to reopen as flooding damage is assessed. Brevard Public Schools stay closed Tuesday so the district can inspect buildings. The full extent of flood damage is not yet known, so residents should stay off the roads unless they need to travel.",
+   "url": "https://spacecoastdaily.com/2026/11/brevard-public-schools-to-remain-closed-tuesday-as-courts-and-government-offices-reopen/"
   }
  ]
 }
