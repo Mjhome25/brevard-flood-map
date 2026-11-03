@@ -242,7 +242,7 @@ h1,h2,h3{margin:0;text-wrap:balance}
 </div>
 <div class="about" id="about" hidden>
   <p><b>Refresh.</b> Road data is pulled about every 15 minutes while the feed on the office computer is running; NWS alerts refresh live every 5 minutes, and the page reloads itself when newer road data is posted. A red note under the map appears when road data is more than 30 minutes old.</p>
-  <p><b>Tiers.</b> FL511 (FDOT), Florida Highway Patrol live CAD and NWS items come from agency feeds. NWS Melbourne storm reports are flooding reported to the Weather Service (by police, emergency managers, spotters, media or the public, as each says); their map point is approximate. Items marked "unconfirmed" are hand-entered from police, county or news posts; each shows its post time and link. A hand-entered report stays on the map, with the time it was last reported, until an official source says the road has reopened. FL511 and FHP items show while those feeds list them.</p>
+  <p><b>Tiers.</b> FL511 (FDOT), Florida Highway Patrol live CAD and NWS items come from agency feeds. NWS Melbourne storm reports are preliminary: flooding reported to the Weather Service by police, emergency managers, spotters, media or the public (each pin names who). They show as not government verified, and their map point is approximate. Items marked "unconfirmed" are hand-entered from police, county or news posts; each shows its post time and link. A hand-entered report stays on the map, with the time it was last reported, until an official source says the road has reopened. FL511 and FHP items show while those feeds list them.</p>
   <p><b>Privacy.</b> No patient information is ever shown here. Map data © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors.</p>
 </div>
 
@@ -407,7 +407,7 @@ h1,h2,h3{margin:0;text-wrap:balance}
   const impact=it=>{ if(isStale(it)) return 'Not re-confirmed'; const l0=(it.lanes||'').trim(), l=NOLANES.test(l0)?'':l0; if(isClosed(it)) return /all lanes|closed|blocked/i.test(l)?l.replace(/^Road Flooded - Seek Alt Route$/i,'Closed, seek another route'):'Closed at this spot'; const base={flood:'Water on road',mvc:'MVC',hazard:'Use caution',closure:''}[cause(it)]; return l||[base,'lane impact not reported'].filter(Boolean).join(' · ').replace(/^l/,'L'); };
   const markers=L.layerGroup().addTo(map);
   const byId={};
-  const tier=it=>it.layer==='manual'?'Hand-entered report':'Agency feed';  // verification is shown by the badge
+  const tier=it=>it.layer==='manual'?'Hand-entered report':it.layer==='NWS'?'NWS storm report (preliminary)':'Agency feed';  // verification is shown by the badge
   // Government verification badge (Mike, Nov 3): verification is shown, never used to clear anything.
   function claimOf(it){ const k=cause(it); return isClosed(it)?'closure':k==='mvc'?'crash':k==='flood'?'flooding report':'report'; }
   function vbadge(it){

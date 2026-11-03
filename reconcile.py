@@ -102,7 +102,8 @@ def fhp_normalize(it: dict) -> dict | None:
 LSR_FLOOD = ("FLOOD", "FLASH FLOOD", "COASTAL FLOOD")
 _LSR_HEAD = re.compile(r"^(\d{4}) ([AP]M) {2,}")
 _LSR_ROAD_CLOSED = re.compile(r"\broads?(?:way)?s?\s+(?:closure|closed)\b|\bclosed\s+roads?\b", re.I)
-_LSR_NOT = re.compile(r"\b(?:not|no longer|re-?opened|open)\b", re.I)
+_LSR_DOUBT = re.compile(r"\b(?:no|not|never|no longer|possible|possibly|may|might|could|expected|potential|ended|over|"
+                        r"lifted|cleared|re-?opened|open|until|will|earlier|previously|was|were)\b", re.I)
 _W = r"[A-Z0-9]\w*"  # a capitalised word; names stop at a lower-case word or a full stop
 _LSR_AT = re.compile(rf"\b(?:at|near|on)\s+(?:at\s+)?({_W}(?: {_W})*?)\s+(?:&|and|at)\s+({_W}(?: {_W})*)")
 _LSR_IS = re.compile(rf"^({_W}(?: {_W})* (?:St|Rd|Ave|Blvd|Dr|Ln|Pkwy|Hwy|Way|Ct|Pl|Cswy|Street|Road|Avenue)"
@@ -136,9 +137,12 @@ def lsr_item(e: dict, when: str, url: str) -> dict:
     """An observation from one LSR flood entry. NWS publishes the report (with who reported it); a remark saying a
     road is closed shows the road closed, otherwise flooded. The NWS point is rounded, so the spot comes from the
     remark's intersection when it names one."""
-    rem = e["remarks"]
-    closed = bool(_LSR_ROAD_CLOSED.search(rem)) and not _LSR_NOT.search(rem)
-    m, near = _LSR_AT.search(rem), re.sub(r"^\d+ [NSEW]{1,3} ", "", e["city"])
+    rem, near = e["remarks"], re.sub(r"^\d+ [NSEW]{1,3} ", "", e["city"])
+    # closed only from one sentence that says, without hedging, that a road is closed at the intersection it names
+    sent = next((s for s in re.split(r"(?<=\.)\s+", rem) if _LSR_ROAD_CLOSED.search(s) and not _LSR_DOUBT.search(s)
+                 and _LSR_AT.search(s)), None)
+    closed = sent is not None
+    m = _LSR_AT.search(sent or rem)
     if m:
         road, spot = m.group(1), "at " + m.group(2)
     else:
@@ -215,9 +219,10 @@ _OPEN_WORDS = re.compile(r"\b(?:ro\w*d(?:way)?\s+)?(?:open|clear(?:ed)?)\b", re.
 
 
 FEEDS = {"fl511": {"agency": "FL511 (FDOT)", "url": "https://fl511.com"},
-         "fhp": {"agency": "Florida Highway Patrol", "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"},
-         "nws": {"agency": "National Weather Service Melbourne", "url": "https://forecast.weather.gov/product.php?site=MLB&product=LSR&issuedby=MLB"}}
+         "fhp": {"agency": "Florida Highway Patrol", "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"}}
 LISTED = ("fl511", "fhp")  # live listings, where dropping off means something; NWS storm reports simply age off
+# NWS storm reports are preliminary and relay reports from media, spotters, the public and officials, so they show as
+# "Reported, not government verified" with the original reporter named; they are not in FEEDS (Codex #73).
 
 
 def verification(r: dict) -> dict | None:

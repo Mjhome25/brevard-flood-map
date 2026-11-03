@@ -366,6 +366,13 @@ check("storm report: 'X is flooded' names the road; the point is approximate",
       its[2]["road"] == "Horizon View Ave" and its[2]["city"] == "West Melbourne" and its[2]["approx"])
 check("storm report: a negated closure remark does not close the road",
       R.lsr_item(dict(ents[0], remarks="Road closure at Helen St & Minton Rd is no longer in effect."), "x", "u")["status"] == "flooded")
+for neg in ("No road closed at Helen St & Minton Rd.", "A road closure is possible at Helen St & Minton Rd.",
+            "Road closure at Helen St & Minton Rd has ended.", "Road closure at Helen St & Minton Rd is no longer in effect."):
+    check(f"storm report: not closed for '{neg}'", R.lsr_item(dict(ents[0], remarks=neg), "x", "u")["status"] == "flooded")
+multi = R.lsr_item(dict(ents[0], remarks="Flooding near Palm Bay Rd & Babcock St. Police report a road closure at "
+                                         "Helen St & Minton Rd due to flooding."), "x", "u")
+check("storm report: in a multi-location remark the closure binds to its own intersection",
+      (multi["status"], multi["road"], multi["spot"]) == ("closed", "Helen St", "at Minton Rd"))
 check("storm report ids are stable and separate", len({R.rid_of(i) for i in its}) == 3
       and R.rid_of(its[0]).startswith("brevard:nws:") and R.src_of(its[0]) == "nws")
 pn = os.path.join(tmp, "nws.jsonl")
@@ -374,8 +381,8 @@ run(pn, {"sources": {"nws": "up"}, "items": its[:1]}, 1)
 shownn = {i["id"]: i for i in R.display(E.derive(E.load(pn)))[0]}
 check("a storm report that ages off the NWS list stays on the map with no 'no longer listed' note",
       len(shownn) == 3 and all("noLongerListed" not in i for i in shownn.values()))
-check("a storm report is government reported by NWS Melbourne",
-      shownn[R.rid_of(its[1])]["verified"]["agency"] == "National Weather Service Melbourne")
+check("a storm report is shown as reported (not government verified), naming who reported it",
+      shownn[R.rid_of(its[1])]["verified"] is None and "Trained Spotter" in shownn[R.rid_of(its[1])]["source"])
 
 # FHP ids are the same in separate processes (the old id used Python's per-process hash)
 code = ("import sys; sys.path.insert(0, sys.argv[1]); import reconcile as R; "
