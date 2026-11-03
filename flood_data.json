@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-03T07:30:32Z",
+ "generated": "2026-11-03T07:46:40Z",
  "errors": [],
  "items": [
   {
@@ -1009,7 +1009,7 @@
    "where": "US-192 EB at S John Rodes Blvd"
   },
   {
-   "id": "fhp-11022026043943-9478",
+   "id": "fhp-11022026043943-9828",
    "source": "FHP live CAD",
    "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
    "road": "US-1 [2 MILES SOF]",
@@ -1028,7 +1028,7 @@
    "where": "US-1 [2 Miles Sof] at Malabar Rd"
   },
   {
-   "id": "fhp-11022026112806-3287",
+   "id": "fhp-11022026112806-2324",
    "source": "FHP live CAD",
    "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
    "road": "NORFOLK PKWY",
@@ -1275,7 +1275,7 @@
    ]
   },
   {
-   "id": "fhp-11022026112110-4980",
+   "id": "fhp-11022026112110-6918",
    "source": "FHP live CAD",
    "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
    "road": "PALM BAY RD NE [ENT RAMP TO]",
@@ -1294,7 +1294,7 @@
    "where": "Palm Bay Rd Ne [Ent Ramp To] at I-95 Nb"
   },
   {
-   "id": "fhp-11022026090844-1298",
+   "id": "fhp-11022026090844-2363",
    "source": "FHP live CAD",
    "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
    "road": "US-1",
@@ -1345,7 +1345,7 @@
    ]
   },
   {
-   "id": "fhp-11022026065558-227",
+   "id": "fhp-11022026065558-8569",
    "source": "FHP live CAD",
    "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
    "road": "W NEW HAVEN AVE",
