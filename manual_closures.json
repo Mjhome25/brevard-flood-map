@@ -592,5 +592,23 @@
   "note": "Listed as 'Harbor City Boulevard at Law Street' among roads closed because of flooding. Coordinates are approximate: placed on US 1 in Melbourne, and the exact spot of the intersection was not confirmed.",
   "id": "man-harbor-city-blvd-us-1-at-law-st-melbourn",
   "updated": "2026-11-02T20:00:00Z"
+ },
+ {
+  "road": "US 192 (W New Haven Ave)",
+  "where": "US 192 (W New Haven Ave), both directions, from Coastal Ln to Wickham Rd/Minton Rd, West Melbourne",
+  "title": "US 192 closed both directions in West Melbourne because of flooding",
+  "city": "West Melbourne",
+  "status": "closed",
+  "fullClosure": true,
+  "lanes": "All lanes, both directions",
+  "lat": 28.0717,
+  "lng": -80.6705,
+  "approx": true,
+  "source": "News 6 WKMG (ClickOrlando) live coverage of West Melbourne flooding",
+  "sourceUrl": "https://www.clickorlando.com/news/local/2026/11/02/brevard-county-schools-closed-amid-flash-flood-warning-heavy-rain/",
+  "reported": "2026-11-02T20:00:00Z",
+  "note": "Source wording: 'US 192 in West Melbourne is closed in both directions because of the flooding... closed from Coastal Lane to Wickham Road/Minton Road.' This is a longer stretch than the existing pins at Minton Rd, Wickham Rd, Country Club Rd and I-95. The pin is set near the Wickham/Minton end because the exact spot of Coastal Ln was not confirmed. The posting time is estimated from a live blog with no timestamp; it appears in the same update as the Tuesday school closure news. Pin approximate.",
+  "id": "man-us-192-w-new-haven-ave-both-directions-f",
+  "updated": "2026-11-02T20:00:00Z"
  }
 ]
