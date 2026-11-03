@@ -12,7 +12,9 @@ Kinds:
   reported   a record first appears (carries `fields`); reactivates a cleared record only if newer than its reopening
   relisted   the source still lists it; may raise severity or scope, never lower it (a lower reading flags recheck).
              With `raisedBy` (host, url, agency, quote) it is a government page's own closure statement (Mike, Nov 3:
-             "go by what the government page says and cite it"); it can only raise
+             "go by what the government page says and cite it"); it can only raise. A manual report may carry
+             `supportedBy` (source, url, published, quote): the dated, cited list or article that raised it to closed
+             (Mike, Nov 3: "yes, adds only"). It only raises and is shown with its citation; the first report stays.
   missing    the source no longer lists it: flag only
   recheck    a reason to look again: flag only
   source     per-source health (`state`: up, down, empty): no record changes
@@ -111,8 +113,9 @@ def eid_of(ev: dict, prev: str = "") -> str:
     """Hash of the event's content chained to the previous event's eid: unique and tamper-evident. Retries are not
     caught by the eid but by append(), which writes nothing that would not change the derived state."""
     core = {k: ev.get(k) for k in ("rid", "kind", "src", "stime", "fields", "state", "reason", "evidence")}
-    if "raisedBy" in ev:  # added later; only hashed where present so earlier eids are unchanged
-        core["raisedBy"] = ev["raisedBy"]
+    for k in ("raisedBy", "supportedBy"):  # added later; only hashed where present so earlier eids are unchanged
+        if k in ev:
+            core[k] = ev[k]
     return hashlib.sha256((prev + canon(core)).encode()).hexdigest()[:32]
 
 
@@ -160,6 +163,20 @@ def supports(fields: dict, quote: str, raise_to: str | None = None) -> str | Non
     if n["impact"] == "flooded" and (closed or fields.get("status") != "flooded"):
         return "a flooding sentence supports a flood report only, never one shown closed"
     return None
+
+
+SUPPORT_FIELDS = ("source", "url", "published", "quote")
+
+
+def _check_support(ev: dict) -> None:
+    """A cited raise of a manual report: every field present, a plain https link, a publish time not after the event."""
+    v, seq = ev["supportedBy"], ev["seq"]
+    if ev["kind"] not in ("reported", "relisted") or ev.get("src") != "manual":
+        raise Refused(f"seq {seq}: supportedBy is only for manual reports")
+    if not isinstance(v, dict) or set(v) != set(SUPPORT_FIELDS) or not all(isinstance(v[k], str) and v[k] for k in v):
+        raise Refused(f"seq {seq}: supportedBy needs exactly {', '.join(SUPPORT_FIELDS)}")
+    if urllib.parse.urlparse(v["url"]).scheme != "https" or not parse(v["published"]) or v["published"] > ev["at"]:
+        raise Refused(f"seq {seq}: supportedBy needs an https link and a publish time not after the event")
 
 
 def _check_gov(seq, v: dict, at: str) -> None:
@@ -213,6 +230,8 @@ def validate(ev: dict, prev_seq: int, clearance_enabled: bool, prev_eid: str = "
         raise Refused(f"seq {ev['seq']}: recheck needs a reason")
     if kind == "relisted" and "raisedBy" in ev:
         _check_gov(ev["seq"], ev["raisedBy"], ev["at"])
+    if "supportedBy" in ev:
+        _check_support(ev)
     if kind == "verified":
         _check_gov(ev["seq"], ev.get("evidence") or {}, ev["at"])
     if kind == "cleared":
@@ -336,7 +355,7 @@ def apply(state: dict, ev: dict) -> None:
             recs[rid] = {"rid": rid, "src": ev.get("src"), "status": "active", "fields": dict(ev["fields"]),
                          "firstReported": ev["stime"], "lastReported": ev["stime"], "recheck": [], "missingSince": None,
                          "reopenedAt": None, "evidence": None, "verified": None, "raisedBy": None,
-                         "statusAt": ev["stime"], "episodeStart": ev["stime"]}
+                         "supportedBy": ev.get("supportedBy"), "statusAt": ev["stime"], "episodeStart": ev["stime"]}
             return
         if r["status"] == "reopened":
             # an FHP incident listed again after it dropped off is active again (its source time is the old Received time)
@@ -344,7 +363,7 @@ def apply(state: dict, ev: dict) -> None:
             if again or (st and st > parse(r["reopenedAt"])):
                 r.update(status="active", fields=dict(ev["fields"]), lastReported=ev["stime"], recheck=[],
                          missingSince=None, reopenedAt=None, evidence=None, verified=None, raisedBy=None,
-                         statusAt=ev["stime"], episodeStart=ev["stime"])  # a new incarnation never inherits the old one's badge
+                         supportedBy=ev.get("supportedBy"), statusAt=ev["stime"], episodeStart=ev["stime"])  # a new incarnation never inherits the old one's badge
             return
         gov = ev.get("raisedBy")
         if gov and (gov["publishedDate"] < _episode(r) or supports(r["fields"], gov["quote"], _raise_of(ev["fields"]))):
@@ -355,6 +374,7 @@ def apply(state: dict, ev: dict) -> None:
             r["statusAt"], r["raisedBy"] = ev["stime"], ev.get("raisedBy")
             if ev.get("raisedBy"):
                 r["belowRaise"], r["raiseBase"] = was, r["lastReported"]
+            r["supportedBy"] = ev.get("supportedBy")  # the citation for the raise, or none
         if (r.get("raisedBy") and not ev.get("raisedBy") and rank(ev["fields"]) >= tuple(r.get("belowRaise") or ())
                 and st and st <= parse(r.get("raiseBase"))):
             # the original report repeating its own weaker wording is not new reduced impact

@@ -183,7 +183,7 @@
   "id": "man-portmalabar-turkeycreek",
   "road": "Port Malabar Blvd at Turkey Creek",
   "where": "Port Malabar Blvd NE at the Turkey Creek crossing (near Turkey Creek Sanctuary)",
-  "title": "Port Malabar Blvd closed: washed out at Turkey Creek",
+  "title": "Port Malabar Blvd partly washed out, Turkey Creek overflowing",
   "city": "Palm Bay",
   "status": "closed",
   "fullClosure": true,
@@ -194,8 +194,14 @@
   "sourceUrl": "https://mynews13.com/fl/orlando/news/2026/11/02/brevard-school-officials-cancel-classes-due-to-weather-concerns",
   "reported": "2026-11-02T16:26:00Z",
   "updated": "2026-11-03T07:12:24Z",
-  "note": "Spectrum News 13 (Nov 2): parts of the road washed out when Turkey Creek overflowed. The WESH 2 list headed 'Below is a list of roads closed because of flooding' (published Nov 3 7:12 UTC) includes 'Port Malabar Boulevard is washed out': https://www.newsbeep.com/795319/ . Exact limits not given. Pin approximate.",
-  "lanes": "Closed (road washed out)"
+  "note": "Parts of road washed out; exact segment and closure status not stated, agency not named. Pin approximate.",
+  "lanes": "Unknown; washout reported",
+  "raisedPer": {
+   "source": "WESH 2 list of roads closed because of flooding",
+   "url": "https://www.newsbeep.com/795319/",
+   "published": "2026-11-03T07:12:24Z",
+   "quote": "Port Malabar Boulevard is washed out"
+  }
  },
  {
   "id": "man-knecht-ne",
@@ -420,16 +426,22 @@
   "city": "West Melbourne",
   "status": "closed",
   "fullClosure": true,
-  "lanes": "Closed",
+  "lanes": "Not stated",
   "lat": 28.0335,
   "lng": -80.664,
   "approx": true,
   "source": "Police (via Spectrum News 13)",
   "sourceUrl": "https://mynews13.com/fl/orlando/news/2026/11/03/heavy-rain-floods-roads-strands-drivers-and-damages-homes-across-brevard-county",
   "reported": "2026-11-03T00:00:00Z",
-  "note": "Several vehicles stranded in high water at the intersection. Pin approximate. Listed as closed ('Palm Bay Road at Hollywood Boulevard') in the WESH 2 list of roads closed because of flooding, published Nov 3 7:12 UTC: https://www.newsbeep.com/795319/",
+  "note": "Several vehicles stranded in high water at the intersection. Pin approximate.",
   "id": "man-palm-bay-rd-at-hollywood-blvd",
-  "updated": "2026-11-03T07:12:24Z"
+  "updated": "2026-11-03T07:12:24Z",
+  "raisedPer": {
+   "source": "WESH 2 list of roads closed because of flooding",
+   "url": "https://www.newsbeep.com/795319/",
+   "published": "2026-11-03T07:12:24Z",
+   "quote": "Palm Bay Road at Hollywood Boulevard"
+  }
  },
  {
   "road": "I-95",

@@ -214,8 +214,11 @@ def plan(obs: dict, state: dict, now: str, county: str = "brevard", fhp_clears: 
         rid = rid_of(it, county)
         observed.add(rid)
         kind = "relisted" if rid in state["records"] else "reported"
-        new.append({"rid": rid, "kind": kind, "src": src_of(it), "actor": "reconcile", "stime": stime_of(it, now),
-                    "fields": fields_of(it)})
+        ev = {"rid": rid, "kind": kind, "src": src_of(it), "actor": "reconcile", "stime": stime_of(it, now),
+              "fields": fields_of(it)}
+        if it.get("raisedPer") and ev["src"] == "manual":  # the cited list that raised a manual report to closed
+            ev["supportedBy"] = {k: it["raisedPer"].get(k) for k in E.SUPPORT_FIELDS}
+        new.append(ev)
     active_by_src = {}
     for r in state["records"].values():
         if r["status"] == "active":
@@ -267,6 +270,8 @@ def display(state: dict) -> tuple[list[dict], list[dict]]:
         it["verified"] = verification(r)
         if r.get("raisedBy"):
             it["raisedBy"] = r["raisedBy"]
+        elif r.get("supportedBy"):
+            it["supportedBy"] = r["supportedBy"]
         if r["status"] == "active":
             it.update(awaitingOfficial=r["awaitingOfficial"], missingSince=r["missingSince"], recheck=r["recheck"])
             if r["missingSince"] and r["src"] in LISTED:

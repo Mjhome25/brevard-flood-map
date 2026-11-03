@@ -585,6 +585,49 @@ for bad, why in (({"kind": "fhp-dropped", "agency": "Florida Highway Patrol", "u
         ok = True
     check(f"no clearance for {why}", ok)
 
+# A manual report raised to closed by a cited non-government list keeps its first report and shows the dated citation
+pm = os.path.join(tmp, "support.jsonl")
+flood = {"id": "man-pm", "layer": "manual", "status": "flooded", "fullClosure": False, "road": "Port Malabar Blvd",
+         "where": "Port Malabar Blvd at Turkey Creek", "title": "Port Malabar Blvd partly washed out",
+         "note": "closure status not stated", "lat": 28.0, "lng": -80.6, "reported": "2026-11-02T11:00:00Z"}
+cite = {"source": "WESH 2 list of roads closed because of flooding", "url": "https://www.newsbeep.com/795319/",
+        "published": "2026-11-02T12:30:00Z", "quote": "Port Malabar Boulevard is washed out"}
+run(pm, {"sources": {"manual": "up"}, "items": [flood]}, 0)
+raised = dict(flood, status="closed", fullClosure=True, title="changed", note="changed", raisedPer=cite,
+              updated="2026-11-02T12:30:00Z")
+w, _, recs = run(pm, {"sources": {"manual": "up"}, "items": [raised]}, 1)
+r = recs["brevard:manual:pm"]
+check("cited list raises a manual report to closed and records the citation",
+      r["fields"]["status"] == "closed" and r["supportedBy"] == cite and w and w[0].get("supportedBy") == cite)
+check("the first report's title and note are kept", r["fields"]["title"] == flood["title"]
+      and r["fields"]["note"] == flood["note"])
+shown = R.display(E.derive(E.load(pm)))[0][0]
+check("display carries the citation for the popup", shown["supportedBy"] == cite and "raisedBy" not in shown)
+w, _, _ = run(pm, {"sources": {"manual": "up"}, "items": [raised]}, 2)
+check("the same cited raise again adds nothing", w == [])
+check("popup labels the first report 'Earlier report' and shows the dated citation",
+      "it.supportedBy?`<div class=\"raised\">Marked closed: ${esc(it.supportedBy.source)} (${esc(when(it.supportedBy.published))})" in tpl
+      and "(it.raisedBy||it.supportedBy?'Earlier report: ':'')" in tpl)
+for bad, why in ((dict(cite, url="http://x.example/"), "a plain-http link"),
+                 (dict(cite, published="2027-01-01T00:00:00Z"), "a publish time in the future"),
+                 ({k: v for k, v in cite.items() if k != "quote"}, "a missing quote")):
+    try:
+        E.append([{"rid": "brevard:manual:pm2", "src": "manual", "kind": "reported", "actor": "x",
+                   "stime": "2026-11-02T11:00:00Z", "fields": dict(R.fields_of(raised)), "supportedBy": bad}], pm)
+        ok = False
+    except E.Refused:
+        ok = True
+    check(f"supportedBy refused with {why}", ok)
+try:
+    E.append([{"rid": "brevard:fl511:9", "src": "fl511", "kind": "reported", "actor": "x",
+               "stime": "2026-11-02T11:00:00Z", "fields": {"status": "closed"}, "supportedBy": cite}], pm)
+    ok = False
+except E.Refused:
+    ok = True
+check("supportedBy refused on a feed record", ok)
+new_fl, _ = R.plan({"sources": {"fl511": "up"}, "items": [item(9, raisedPer=cite)]}, E.derive([]), E.iso(T0))
+check("plan never attaches a citation to a feed record", all("supportedBy" not in e for e in new_fl))
+
 # FHP ids are the same in separate processes (the old id used Python's per-process hash)
 code = ("import sys; sys.path.insert(0, sys.argv[1]); import reconcile as R; "
         "print(R.rid_of({'layer': 'FHP', 'id': 'fhp-x', 'reported': '2026-11-02T14:14:28Z', "
