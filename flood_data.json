@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-03T06:46:27Z",
+ "generated": "2026-11-03T07:00:25Z",
  "errors": [],
  "items": [
   {
@@ -925,6 +925,61 @@
    "to": "Highway 1"
   },
   {
+   "id": "fl511-938439",
+   "source": "FL511 (FDOT)",
+   "sourceUrl": "https://fl511.com",
+   "road": "SR-507",
+   "title": "Flooding on SR-507 North, at Florida Ave. All lanes closed",
+   "status": "flooded",
+   "fullClosure": true,
+   "reported": "2026-11-03T06:49:00Z",
+   "updated": "2026-11-03T06:50:00Z",
+   "lat": 28.057,
+   "lng": -80.621458,
+   "layer": "Closures",
+   "dir": "NB",
+   "lanes": "All lanes closed",
+   "roadShort": "SR-507",
+   "spot": "at Florida Ave",
+   "line": [
+    [
+     28.05402,
+     -80.621569
+    ],
+    [
+     28.055526,
+     -80.62154
+    ],
+    [
+     28.056818,
+     -80.621513
+    ],
+    [
+     28.057001,
+     -80.62151
+    ],
+    [
+     28.057016,
+     -80.62151
+    ],
+    [
+     28.057073,
+     -80.621512
+    ],
+    [
+     28.059811,
+     -80.621478
+    ],
+    [
+     28.060234,
+     -80.621465
+    ]
+   ],
+   "where": "SR-507 NB at Florida Ave",
+   "from": "Misty Oak Dr",
+   "to": "Engineering St"
+  },
+  {
    "id": "fl511-938257",
    "source": "FL511 (FDOT)",
    "sourceUrl": "https://fl511.com",
@@ -954,7 +1009,7 @@
    "where": "US-192 EB at S John Rodes Blvd"
   },
   {
-   "id": "fhp-11022026043943-7349",
+   "id": "fhp-11022026043943-80",
    "source": "FHP live CAD",
    "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
    "road": "US-1 [2 MILES SOF]",
@@ -973,7 +1028,7 @@
    "where": "US-1 [2 Miles Sof] at Malabar Rd"
   },
   {
-   "id": "fhp-11022026112806-6989",
+   "id": "fhp-11022026112806-6548",
    "source": "FHP live CAD",
    "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
    "road": "NORFOLK PKWY",
@@ -1220,7 +1275,7 @@
    ]
   },
   {
-   "id": "fhp-11022026112110-2422",
+   "id": "fhp-11022026112110-5787",
    "source": "FHP live CAD",
    "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
    "road": "PALM BAY RD NE [ENT RAMP TO]",
@@ -1239,7 +1294,7 @@
    "where": "Palm Bay Rd Ne [Ent Ramp To] at I-95 Nb"
   },
   {
-   "id": "fhp-11022026090844-9150",
+   "id": "fhp-11022026090844-7156",
    "source": "FHP live CAD",
    "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
    "road": "US-1",
@@ -1290,7 +1345,7 @@
    ]
   },
   {
-   "id": "fhp-11022026065558-6743",
+   "id": "fhp-11022026065558-8746",
    "source": "FHP live CAD",
    "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
    "road": "W NEW HAVEN AVE",
