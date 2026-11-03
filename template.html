@@ -8,7 +8,7 @@
   --accent:#1d4e89; --accent-fg:#ffffff;
   --closed:#c62828; --flooded:#1565c0; --caution:#c99700; --mvc:#ef6c00; --zone:#7b1fa2; --edge:#3d0a6b; --ok:#1b7f4b;
   --alert-bg:#fbe9e7; --alert-fg:#8e1b1b; --watch-bg:#fff3df; --watch-fg:#6f4400; --ok-bg:#e6f4ec; --ok-fg:#14532d;
-  --map-bg:#e4e9ee;
+  --map-bg:#e4e9ee; --water:#a85b00; --water-fill:#e6a132;
   --font:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
   --fs-0:12px; --fs-1:13px; --fs-2:15px; --fs-3:17px; --fs-4:20px;
 }
@@ -17,13 +17,13 @@
   --accent:#78b0e6; --accent-fg:#0e1419;
   --closed:#ff6f6f; --flooded:#64aeff; --caution:#ffd54a; --mvc:#ff9a3c; --zone:#d58cff; --edge:#2a0650; --ok:#4fd08a;
   --alert-bg:#3b1b1b; --alert-fg:#ffb8b8; --watch-bg:#3a2a10; --watch-fg:#ffd08a; --ok-bg:#15301f; --ok-fg:#9fe3b9;
-  --map-bg:#1a222a; color-scheme:dark}}
+  --map-bg:#1a222a; --water:#ffc266; --water-fill:#e6a132; color-scheme:dark}}
 :root[data-theme="dark"]{
   --bg:#0e1419; --panel:#161d24; --fg:#e7ecf1; --muted:#9aa8b5; --line:#2a343e; --line-soft:#202a33; --hover:#1c252e;
   --accent:#78b0e6; --accent-fg:#0e1419;
   --closed:#ff6f6f; --flooded:#64aeff; --caution:#ffd54a; --mvc:#ff9a3c; --zone:#d58cff; --edge:#2a0650; --ok:#4fd08a;
   --alert-bg:#3b1b1b; --alert-fg:#ffb8b8; --watch-bg:#3a2a10; --watch-fg:#ffd08a; --ok-bg:#15301f; --ok-fg:#9fe3b9;
-  --map-bg:#1a222a; color-scheme:dark}
+  --map-bg:#1a222a; --water:#ffc266; --water-fill:#e6a132; color-scheme:dark}
 __LEAFLET_CSS__
 *{box-sizing:border-box}
 html,body{height:100%}
@@ -133,6 +133,8 @@ h1,h2,h3{margin:0;text-wrap:balance}
 .alert h3{font-size:var(--fs-2);font-weight:600;display:flex;gap:8px;align-items:center;flex-wrap:wrap}
 .alert h3 .tm{font-weight:400;color:var(--muted);font-size:var(--fs-1)}
 .alert p{margin:4px 0 0;color:var(--fg);font-size:var(--fs-1);line-height:1.5}
+.alert button.link{padding:0;margin-left:8px;color:var(--accent);text-decoration:underline;font-size:inherit}
+.water-popup a{color:var(--accent)}
 .sec{padding:14px 16px 6px;font-size:var(--fs-0);font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
 
 /* corridors pane */
@@ -191,7 +193,7 @@ h1,h2,h3{margin:0;text-wrap:balance}
 <div class="main">
   <div class="mapwrap">
    <div class="mapbox">
-    <div id="map" role="application" aria-label="Map of Brevard County road closures and flooding"></div>
+    <div id="map" role="application" aria-label="Map of Brevard County road closures, flooding and boil-water notices"></div>
     <div class="legend" aria-label="Legend">
       <span><svg viewBox="-13 -13 26 26" aria-hidden="true"><circle r="11" fill="var(--flooded)" stroke="#fff" stroke-width="2.5"/><path d="M-7-2q1.75-3 3.5 0t3.5 0 3.5 0 3.5 0M-7 4q1.75-3 3.5 0t3.5 0 3.5 0 3.5 0" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>Flooding</span>
       <span><svg viewBox="-13 -13 26 26" aria-hidden="true"><path d="M0-12L12 10H-12Z" fill="var(--mvc)" stroke="#fff" stroke-width="2.5" stroke-linejoin="round"/><path d="M0-4V3" stroke="#fff" stroke-width="3" stroke-linecap="round"/><circle cy="7" r="1.7" fill="#fff"/></svg>Collision</span>
@@ -199,6 +201,7 @@ h1,h2,h3{margin:0;text-wrap:balance}
       <span class="opt"><svg viewBox="-13 -13 26 26" aria-hidden="true"><circle r="7.5" fill="var(--caution)" stroke="#fff" stroke-width="2"/><path d="M0-3.5V1" stroke="#1a1a1a" stroke-width="2" stroke-linecap="round"/><circle cy="3.6" r="1.2" fill="#1a1a1a"/></svg>Hazard</span>
       <span><svg viewBox="-16 -16 32 32" aria-hidden="true"><circle r="13" fill="none" stroke="var(--closed)" stroke-width="3.5"/><path d="M-12 0H12" stroke="var(--edge)" stroke-width="9" stroke-linecap="round"/><path d="M-12 0H12" stroke="var(--closed)" stroke-width="4.5" stroke-linecap="round"/></svg>Closed stretch (cross street to cross street)</span>
       <span><i class="zone"></i>Flood warning area</span>
+      <span id="water-key"><i style="display:inline-block;width:16px;height:11px;border-radius:0;border:2px solid var(--water);background:color-mix(in srgb,var(--water-fill) 25%,transparent)"></i>Boil-water service area</span>
     </div>
    </div>
    <p class="stalenote" id="stale" role="status" hidden></p>
@@ -221,6 +224,7 @@ h1,h2,h3{margin:0;text-wrap:balance}
         <label><input type="checkbox" id="f-closure" checked> Other closures</label>
         <label><input type="checkbox" id="f-caution" checked> Minor hazards</label>
         <label><input type="checkbox" id="f-nws" checked> Warning areas</label>
+        <label><input type="checkbox" id="f-water" checked style="accent-color:var(--water)"> Boil water</label>
       </div>
       <div class="list" id="list"></div>
       <div class="note">Hollow pin = approximate location. Hand-entered reports stay on the map until an official source says the road reopened. Tap a row to jump to it.</div>
@@ -228,6 +232,8 @@ h1,h2,h3{margin:0;text-wrap:balance}
       <div id="cleared-wrap" hidden><div class="sec">No longer listed by FHP · last 24 hours</div><div class="alist" id="cleared"></div></div>
     </div>
     <div class="pane" id="pane-alerts" role="tabpanel" aria-hidden="true">
+      <div class="sec">Boil water notices</div>
+      <div class="alist" id="water-alerts"></div>
       <div class="sec">National Weather Service</div>
       <div class="alist" id="alerts"></div>
       <div class="sec">Agency statements</div>
@@ -249,6 +255,7 @@ h1,h2,h3{margin:0;text-wrap:balance}
   <p><b>Refresh.</b> Road data is pulled about every 15 minutes while the feed on the office computer is running; NWS alerts refresh live every 5 minutes, and the page reloads itself when newer road data is posted. A red note under the map appears when road data is more than 30 minutes old.</p>
   <p><b>Tiers.</b> FL511 (FDOT), Florida Highway Patrol live CAD and NWS items come from agency feeds. NWS Melbourne storm reports are preliminary: flooding reported to the Weather Service by police, emergency managers, spotters, media or the public (each pin names who). They show green as "NWS storm report", always linked to the NWS report; only reports from a government agency (police, emergency managers, NWS staff, public officials) get the check, naming what that agency reported and "Government verified". When one is at the same intersection as another pin it joins that pin instead of adding a second one. Their map point is approximate. Items marked "unconfirmed" are hand-entered from police, county or news posts; each shows its post time and link. A hand-entered report stays on the map, with the time it was last reported, until an official source says the road has reopened. FL511 items show while that feed lists them; when FL511 drops one it stays on the map, marked no longer listed. An FHP crash (never a road closure, water closure, roadblock or debris) that the FHP page stops listing (gone on two checks in a row) is taken off the active list for now and shown under "No longer listed by FHP" for 24 hours, with a link to FHP. FHP only stops listing an incident; it never says the road is clear, and neither does this map. Road closures, roadblocks, water closures and debris that FHP stops listing stay on the map until a cited source says the road is open. When a government page on our list says in plain words that a road is open, that report comes off the active map and shows green for 24 hours under "Reopened", quoting and linking the page; other reports at the same place stay until their own source or another official statement says otherwise.</p>
   <p><b>Privacy.</b> No patient information is ever shown here. Map data © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors.</p>
+  <p><b>Boil water.</b> Amber shading follows the county's Melbourne water-service boundary. It applies to Melbourne water customers, including West Melbourne wholesale customers; the boundary does not identify individual customers or private wells. The utility's notice and its update time are linked under Alerts and on the area. The last verified notice stays visible if a source check fails. Only an explicit full-system official rescission removes it.</p>
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
@@ -309,6 +316,9 @@ h1,h2,h3{margin:0;text-wrap:balance}
 
   // ---------- alerts ----------
   const alertsEl=document.getElementById('alerts'), pillEl=document.getElementById('alertpill'), acount=document.getElementById('acount');
+  let waterSnapshot=DATA.waterNotices||{notices:[],errors:[]}, weatherGroupCount=0;
+  const waterActive=()=> (waterSnapshot.notices||[]).filter(n=>n.status==='active');
+  const paintAlertCount=()=>{acount.textContent=weatherGroupCount+(DATA.advisories||[]).length+waterActive().length;};
   let activeAlerts=[];
   function paintAlerts(list,live){
     const now=Date.now();
@@ -319,7 +329,7 @@ h1,h2,h3{margin:0;text-wrap:balance}
     const top=groups[0];
     pillEl.innerHTML = top ? `<span class="pill ${/Warning/.test(top.event)?'warn':'watch'}"><button type="button" id="gotoalerts">${esc(top.event)} until ${esc(when(top.expires))}${groups.length>1?' · +'+(groups.length-1)+' more':''}</button></span>` : `<span class="pill quiet">No NWS alerts${live?'':' at last pull'}</span>`;
     const g=document.getElementById('gotoalerts'); if(g) g.addEventListener('click',()=>{showTab('tab-alerts'); document.querySelector('.side').scrollIntoView({block:'nearest'});});
-    acount.textContent=groups.length+(DATA.advisories||[]).length;
+    weatherGroupCount=groups.length; paintAlertCount();
     alertsEl.innerHTML = groups.length ? groups.map(a=>{
       const n=activeAlerts.filter(x=>x.event===a.event).length;
       const d=(a.description||'').replace(/\s+/g,' ');
@@ -399,6 +409,43 @@ h1,h2,h3{margin:0;text-wrap:balance}
     }catch(e){}
   }
   liveNws(); setInterval(liveNws,5*60000);
+
+  // Utility boundaries have their own pane and toggle; roads and flood warning areas stay independent.
+  map.createPane('water').style.zIndex=320;
+  const waterLayer=L.layerGroup().addTo(map);
+  const waterEl=document.getElementById('water-alerts');
+  const waterDate=n=>n.updatedAt?when(n.updatedAt):n.publishedDate?new Date(n.publishedDate+'T12:00:00Z').toLocaleDateString('en-US',{month:'short',day:'numeric',timeZone:'UTC'}):'date unavailable';
+  const waterLink=(url,label)=>{try{const u=new URL(url);return u.protocol==='https:'?`<a href="${esc(u.href)}" target="_blank" rel="noopener">${esc(label)} ↗</a>`:'';}catch(e){return '';}};
+  function waterDetails(n){
+    return `<b style="color:${col('water')}">Precautionary boil water notice</b><p>${esc(n.scope||'Applies to Melbourne water customers.')}</p><div class="src">${esc(n.agency)} · official update ${esc(waterDate(n))}${n.checkedAt?' · checked '+esc(when(n.checkedAt)):''}<br>${waterLink(n.sourceUrl,'Read the official notice')} · ${waterLink(n.geometrySourceUrl,'County service-area map')}</div>`;
+  }
+  function drawWater(){
+    waterLayer.clearLayers();
+    const active=waterActive();
+    document.getElementById('water-key').hidden=!active.some(n=>n.geometry);
+    active.filter(n=>n.geometry).forEach(n=>{
+      L.geoJSON(n.geometry,{pane:'water',className:'water-area',style:{color:col('water'),weight:2,opacity:.9,fillColor:col('water-fill'),fillOpacity:.16}})
+        .bindPopup(waterDetails(n),{maxWidth:330,className:'water-popup'}).addTo(waterLayer);
+    });
+    const problem=(waterSnapshot.errors||[]).length?'<p class="nll">A utility update could not be verified. The last verified notice is retained. '+waterLink('https://www.melbourneflorida.org/Government/Departments/Public-Works-Utilities/Precautionary-Boil-Water-Notices','Check the latest utility updates')+'</p>':'';
+    waterEl.innerHTML=active.length?active.map(n=>`<div class="alert"><h3>${esc(n.agency)}<span class="tm">${esc(waterDate(n))}</span></h3><p>${esc(n.area)} · precautionary boil water notice</p><p>${esc(n.scope)}</p>${problem}<p>${waterLink(n.sourceUrl,'Read the official notice')} <button type="button" class="link" data-water="${esc(n.id)}">Show area</button></p></div>`).join(''):
+      `<div class="empty">${(waterSnapshot.errors||[]).length?'Melbourne water-notice status could not be verified. Check the utility’s official notices.':'No active Melbourne water-system notice in this feed.'} ${waterLink('https://www.melbourneflorida.org/Government/Departments/Public-Works-Utilities/Precautionary-Boil-Water-Notices','Utility notices')}</div>`;
+    paintAlertCount();
+  }
+  waterEl.addEventListener('click',e=>{
+    const b=e.target.closest('[data-water]'); if(!b) return;
+    const n=waterActive().find(n=>n.id===b.dataset.water); if(!n||!n.geometry) return;
+    document.getElementById('f-water').checked=true; waterLayer.addTo(map);
+    const bounds=L.geoJSON(n.geometry).getBounds(); map.fitBounds(bounds,{padding:[24,24]});
+    if(window.innerWidth<=900) document.getElementById('map').scrollIntoView({block:'start',behavior:'smooth'});
+    L.popup({maxWidth:330,className:'water-popup'}).setLatLng(bounds.getCenter()).setContent(waterDetails(n)).openOn(map);
+  });
+  document.getElementById('f-water').addEventListener('change',e=>e.target.checked?waterLayer.addTo(map):map.removeLayer(waterLayer));
+  drawWater();
+  async function liveWater(){
+    try{const r=await fetch('/water.json?t='+Date.now(),{cache:'no-store'});if(!r.ok)return;const j=await r.json();if(j.schema!==1||!Array.isArray(j.notices))return;waterSnapshot=j;drawWater();}catch(e){}
+  }
+  if(location.protocol.startsWith('http')&&!/claudeusercontent|claude\.ai/.test(location.host)){setInterval(liveWater,5*60000);}
 
 
   // ---------- reports ----------

@@ -7,8 +7,12 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 rd = lambda n: open(os.path.join(HERE, n), encoding="utf-8").read()
 safe = lambda s: s.replace("</", "<\\/")  # keep JSON from closing the script tag
 page = rd("template.html")
+data = json.loads(rd("flood_data.json"))
+water_path = os.path.join(HERE, "water_notices.json")
+water = json.load(open(water_path)) if os.path.isfile(water_path) else {"notices": [], "errors": ["Water notice data is unavailable."]}
+data["waterNotices"] = water
 page = page.replace("__LEAFLET_CSS__", rd("leaflet.css").replace("</", "<\\/"))
-page = page.replace("__DATA_JSON__", safe(json.dumps(json.load(open(os.path.join(HERE, "flood_data.json"))), separators=(",", ":"))))
+page = page.replace("__DATA_JSON__", safe(json.dumps(data, separators=(",", ":"))))
 page = page.replace("__TILES_JSON__", safe(json.dumps(json.load(open(os.path.join(HERE, "tiles.json"))), separators=(",", ":"))))
 out = os.path.join(HERE, "brevard-flood-map.html")
 open(out, "w", encoding="utf-8").write(page)  # artifact body (the Artifact tool adds the document skeleton)
@@ -31,5 +35,6 @@ site = ('<!doctype html><html lang="en"><head><meta charset="utf-8">'
 os.makedirs(os.path.join(HERE, "site"), exist_ok=True)
 open(os.path.join(HERE, "site", "index.html"), "w", encoding="utf-8").write(site)
 # Small file the live page polls every 5 minutes to learn when newer road data exists.
-json.dump(json.load(open(os.path.join(HERE, "flood_data.json"))), open(os.path.join(HERE, "site", "data.json"), "w"), separators=(",", ":"))
+json.dump(data, open(os.path.join(HERE, "site", "data.json"), "w"), separators=(",", ":"))
+json.dump(water, open(os.path.join(HERE, "site", "water.json"), "w"), separators=(",", ":"))
 print("wrote", out, len(page.encode()) // 1024, "KB; site/index.html", len(site.encode()) // 1024, "KB")
