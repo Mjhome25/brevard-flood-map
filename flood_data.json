@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-03T01:00:30Z",
+ "generated": "2026-11-03T01:15:28Z",
  "errors": [],
  "items": [
   {
@@ -309,7 +309,7 @@
    "status": "flooded",
    "fullClosure": true,
    "reported": "2026-11-02T09:24:00Z",
-   "updated": "2026-11-03T00:07:00Z",
+   "updated": "2026-11-03T01:00:00Z",
    "lat": 28.07888,
    "lng": -80.672522,
    "layer": "Closures",
@@ -733,7 +733,78 @@
    "where": "I-95 NB at MM 184"
   },
   {
-   "id": "fhp-11022026060625-5003",
+   "id": "fhp-11022026081213-4399",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "road": "N WICKHAM RD",
+   "title": "MVC W/Roadblock at N WICKHAM RD x[PINEDA CSWY] [MELBOURNE] (Roadblock)",
+   "status": "closed",
+   "fullClosure": true,
+   "reported": "2026-11-02T13:12:13Z",
+   "updated": "2026-11-02T13:12:13Z",
+   "lat": 28.2009644971454,
+   "lng": -80.6721034952351,
+   "layer": "FHP",
+   "roadShort": "N Wickham Rd",
+   "dir": "",
+   "spot": "at Pineda Cswy",
+   "lanes": "Roadblock",
+   "where": "N Wickham Rd at Pineda Cswy",
+   "from": "Deer Lakes Dr",
+   "to": "Windsor Estates Dr",
+   "line": [
+    [
+     28.197341,
+     -80.67205
+    ],
+    [
+     28.198774,
+     -80.672049
+    ],
+    [
+     28.200463,
+     -80.672042
+    ],
+    [
+     28.200621,
+     -80.672066
+    ],
+    [
+     28.200845,
+     -80.67204
+    ],
+    [
+     28.200954,
+     -80.672023
+    ],
+    [
+     28.200972,
+     -80.67202
+    ],
+    [
+     28.201174,
+     -80.672068
+    ],
+    [
+     28.202222,
+     -80.672066
+    ],
+    [
+     28.202275,
+     -80.672066
+    ],
+    [
+     28.203104,
+     -80.672093
+    ],
+    [
+     28.203247,
+     -80.672098
+    ]
+   ]
+  },
+  {
+   "id": "fhp-11022026060625-1773",
    "source": "FHP live CAD",
    "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
    "road": "I-95 SB [MM205]",
@@ -752,7 +823,7 @@
    "where": "I-95 Sb [MM205] at Mm205"
   },
   {
-   "id": "fhp-11022026043943-2232",
+   "id": "fhp-11022026043943-7270",
    "source": "FHP live CAD",
    "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
    "road": "US-1 [2 MILES SOF]",
@@ -771,7 +842,7 @@
    "where": "US-1 [2 Miles Sof] at Malabar Rd"
   },
   {
-   "id": "fhp-11022026112806-6752",
+   "id": "fhp-11022026112806-8671",
    "source": "FHP live CAD",
    "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
    "road": "NORFOLK PKWY",
@@ -1018,7 +1089,7 @@
    ]
   },
   {
-   "id": "fhp-11022026112110-1872",
+   "id": "fhp-11022026112110-938",
    "source": "FHP live CAD",
    "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
    "road": "PALM BAY RD NE [ENT RAMP TO]",
@@ -1037,7 +1108,7 @@
    "where": "Palm Bay Rd Ne [Ent Ramp To] at I-95 Nb"
   },
   {
-   "id": "fhp-11022026090844-8907",
+   "id": "fhp-11022026090844-2654",
    "source": "FHP live CAD",
    "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
    "road": "US-1",
@@ -1088,7 +1159,7 @@
    ]
   },
   {
-   "id": "fhp-11022026065558-2258",
+   "id": "fhp-11022026065558-738",
    "source": "FHP live CAD",
    "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
    "road": "W NEW HAVEN AVE",
