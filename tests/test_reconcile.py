@@ -469,7 +469,7 @@ def runc(path, obs, hours):
     E.append(new, path, clearance_enabled=True, now=now)
     return E.derive(E.load(path), now)
 crash = {"id": "fhp-1", "layer": "FHP", "status": "mvc", "road": "I-95", "spot": "at Palm Bay Rd",
-         "reported": "2026-11-02T13:00:00Z", "updated": "2026-11-02T13:00:00Z", "title": "Crash at I-95"}
+         "reported": "2026-11-02T13:00:00Z", "updated": "2026-11-02T13:00:00Z", "title": "MVC at I-95"}
 other = dict(crash, id="fhp-2", spot="at Malabar Rd", road="I-95")
 fl = item(7)
 crid = R.rid_of(crash)
@@ -516,9 +516,32 @@ runc(pk, {"sources": {"fhp": "up", "manual": "up"}, "items": [fhp_closed, manual
 runc(pk, {"sources": {"fhp": "up", "manual": "up"}, "items": [manual]}, 0.25)
 sk = runc(pk, {"sources": {"fhp": "up", "manual": "up"}, "items": [manual]}, 0.5)
 ik, ck = R.display(sk)
-check("FHP clears its own closure, but another source's report at that place stays active and is named on the cleared record",
-      [i["id"] for i in ik] == [R.rid_of(manual)] and ck[0]["id"] == R.rid_of(fhp_closed)
-      and [a["id"] for a in ck[0]["stillReported"]] == [R.rid_of(manual)] and ck[0]["stillReported"][0]["source"] == "WESH 2")
+check("Mike (Nov 3): an FHP road closure FHP stops listing is NOT cleared; it stays on the map next to the other report",
+      sorted(i["id"] for i in ik) == sorted([R.rid_of(manual), R.rid_of(fhp_closed)]) and ck == []
+      and sk["records"][R.rid_of(fhp_closed)]["status"] == "active")
+water = dict(crash, id="fhp-w", status="flooded", fullClosure=True, road="US-1", spot="at Suntree Blvd",
+             title="Road Closed Due To Water at US-1", reported="2026-11-02T13:20:00Z")
+debris = dict(crash, id="fhp-d", status="caution", road="I-95 SB", spot="at MM205",
+              title="Roadway Debris/Object at I-95 SB", reported="2026-11-02T13:25:00Z")
+roadblock = dict(crash, id="fhp-r", status="closed", road="I-95 SB", spot="at MM222",
+                 title="MVC W/Roadblock at I-95 SB", reported="2026-11-02T13:30:00Z")
+pw = os.path.join(tmp, "water.jsonl")
+runc(pw, {"sources": {"fhp": "up"}, "items": [water, debris, roadblock, crash]}, 0)
+runc(pw, {"sources": {"fhp": "up"}, "items": []}, 0.25)
+sw = runc(pw, {"sources": {"fhp": "up"}, "items": []}, 0.5)
+check("only the plain crash comes off; a water closure, debris and a crash with a roadblock stay active",
+      {r: sw["records"][R.rid_of(x)]["status"] for r, x in (("w", water), ("d", debris), ("r", roadblock), ("c", crash))}
+      == {"w": "active", "d": "active", "r": "active", "c": "reopened"})
+# an older history that already cleared a closure (the first release did) is read back with that closure active
+hist = E.load(pw)
+legacy = [{"rid": R.rid_of(water), "kind": "cleared", "src": "fhp", "actor": "reconcile",
+           "evidence": {"kind": "fhp-dropped", "agency": "Florida Highway Patrol", "url": E.FHP_URL,
+                        "missingSince": sw["records"][R.rid_of(water)]["missingSince"], "reopenedAt": ""}}]
+E.append(legacy, pw, clearance_enabled=True, now=T0 + datetime.timedelta(hours=0.75))
+check("a past FHP-drop clearance of a road closure in the history is ignored: the closure is active again",
+      len(E.load(pw)) == len(hist) and E.derive(E.load(pw))["records"][R.rid_of(water)]["status"] == "active")
+check("E.fhp_clearable: crash yes; water closure, roadblock, debris no",
+      E.fhp_clearable(crash) and not E.fhp_clearable(water) and not E.fhp_clearable(roadblock) and not E.fhp_clearable(debris))
 tplc = open(os.path.join(repo, "template.html")).read()
 check("the page draws a green pin only for a cleared former closure that nothing else still reports",
       "const greenPin=c=>formerClosure(c)&&c.lat!=null&&!(c.stillReported||[]).length" in tplc

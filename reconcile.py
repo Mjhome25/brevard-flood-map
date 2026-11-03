@@ -229,8 +229,9 @@ def plan(obs: dict, state: dict, now: str, county: str = "brevard", fhp_clears: 
         for r in recs:
             if r["rid"] not in observed and not r["missingSince"]:
                 new.append({"rid": r["rid"], "kind": "missing", "src": src, "actor": "reconcile", "stime": now})
-            elif r["rid"] not in observed and src == "fhp" and fhp_clears and health == "up":
-                # Mike (Nov 3), for now: an FHP incident still gone on the next successful fetch is cleared, citing FHP
+            elif (r["rid"] not in observed and src == "fhp" and fhp_clears and health == "up"
+                  and E.fhp_clearable(r["fields"])):
+                # Mike (Nov 3), for now: an FHP crash (never a closure) still gone on the next successful fetch is cleared, citing FHP
                 new.append({"rid": r["rid"], "kind": "cleared", "src": src, "actor": "reconcile", "stime": now,
                             "evidence": {"kind": "fhp-dropped", "agency": FEEDS["fhp"]["agency"], "url": E.FHP_URL,
                                          "missingSince": r["missingSince"], "reopenedAt": ""}})

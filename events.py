@@ -224,9 +224,18 @@ def validate(ev: dict, prev_seq: int, clearance_enabled: bool, prev_eid: str = "
 FHP_URL = "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
 
 
+def fhp_clearable(fields: dict) -> bool:
+    """Mike (Nov 3): "we can clear crashes when they come off the FHP website, just not road closures" and "make sure
+    that there is never a 'no longer listed' that is still actually closed". Only an FHP crash (MVC) that was never a
+    closure can come off the map when FHP drops it; a water closure, a roadblock, debris or anything closed stays until
+    a cited source says the road is open. Applied when history is read, so an earlier drop of a closure never counts."""
+    closed = fields.get("status") == "closed" or bool(fields.get("fullClosure"))
+    return not closed and bool(re.search(r"\bMVC\b", fields.get("title") or ""))
+
+
 def _check_fhp_drop(ev: dict) -> None:
-    """The only clearance installed (Mike, Nov 3, "ok if FHP drops it, lets clear it for now"): an FHP incident the
-    FHP live CAD page no longer lists (crash, water closure, debris), seen gone on two successful fetches. Its evidence names the FHP page, when the
+    """The only clearance installed (Mike, Nov 3, "ok if FHP drops it, lets clear it for now", then narrowed to crashes
+    only): an FHP crash the FHP live CAD page no longer lists, seen gone on two successful fetches. Its evidence names the FHP page, when the
     crash was first missing, and when it was confirmed gone (the clearance time). Nothing else can be cleared."""
     v = ev.get("evidence") or {}
     keys = {"kind", "agency", "url", "missingSince", "reopenedAt"}
@@ -373,8 +382,9 @@ def apply(state: dict, ev: dict) -> None:
     elif kind == "cleared":
         v = ev["evidence"]
         if v.get("kind") == "fhp-dropped" and not (r["status"] == "active" and r["src"] == "fhp"
-                                                    and r["missingSince"] == v["missingSince"]):
-            return  # only a still-missing FHP record, gone since the time its evidence says
+                                                    and r["missingSince"] == v["missingSince"]
+                                                    and fhp_clearable(r["fields"])):
+            return  # only a still-missing FHP crash, gone since the time its evidence says (never a road closure)
         r.update(status="reopened", reopenedAt=v["reopenedAt"], evidence=v)
 
 
