@@ -466,5 +466,41 @@
   "note": "Flooding reported at the exit with more vehicles stranded. Pin approximate.",
   "id": "man-us-192-at-i-95-interchange-exit-180",
   "updated": "2026-11-03T00:00:00Z"
+ },
+ {
+  "road": "Babcock St",
+  "where": "Babcock St at Avenue B",
+  "title": "Babcock St closed at Avenue B because of flooding",
+  "city": "Melbourne",
+  "status": "closed",
+  "fullClosure": true,
+  "lanes": "All lanes",
+  "lat": 28.068,
+  "lng": -80.6235,
+  "approx": true,
+  "source": "City of Melbourne (via Space Coast Daily)",
+  "sourceUrl": "https://spacecoastdaily.com/2026/11/city-of-melbourne-reports-multiple-road-closures-urges-residents-to-shelter-in-place/",
+  "reported": "2026-11-02T17:43:55Z",
+  "note": "The City of Melbourne lists this intersection as closed because of flooding. The coordinates are approximate.",
+  "id": "man-babcock-st-at-avenue-b",
+  "updated": "2026-11-02T17:43:55Z"
+ },
+ {
+  "road": "University Blvd",
+  "where": "University Blvd at Main St (Briarwood community)",
+  "title": "Severe flooding at University Blvd and Main St in Briarwood",
+  "city": "Melbourne",
+  "status": "flooded",
+  "fullClosure": false,
+  "lanes": "Not stated",
+  "lat": 28.064,
+  "lng": -80.633,
+  "approx": true,
+  "source": "City of Melbourne (via Space Coast Daily)",
+  "sourceUrl": "https://spacecoastdaily.com/2026/11/city-of-melbourne-reports-multiple-road-closures-urges-residents-to-shelter-in-place/",
+  "reported": "2026-11-02T17:43:55Z",
+  "note": "The city reported severe flooding here but did not list it as a closure. The coordinates are approximate.",
+  "id": "man-university-blvd-at-main-st-briarwood-com",
+  "updated": "2026-11-02T17:43:55Z"
  }
 ]

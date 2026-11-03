@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-03T03:30:37Z",
+ "generated": "2026-11-03T03:46:27Z",
  "errors": [
   "FL511 map locations: 2 report(s) without a pin"
  ],
@@ -529,6 +529,44 @@
    "layer": "manual"
   },
   {
+   "road": "Babcock St",
+   "where": "Babcock St at Avenue B",
+   "title": "Babcock St closed at Avenue B because of flooding",
+   "city": "Melbourne",
+   "status": "closed",
+   "fullClosure": true,
+   "lanes": "All lanes",
+   "lat": 28.068,
+   "lng": -80.6235,
+   "approx": true,
+   "source": "City of Melbourne (via Space Coast Daily)",
+   "sourceUrl": "https://spacecoastdaily.com/2026/11/city-of-melbourne-reports-multiple-road-closures-urges-residents-to-shelter-in-place/",
+   "reported": "2026-11-02T17:43:55Z",
+   "note": "The City of Melbourne lists this intersection as closed because of flooding. The coordinates are approximate.",
+   "id": "man-babcock-st-at-avenue-b",
+   "updated": "2026-11-02T17:43:55Z",
+   "layer": "manual"
+  },
+  {
+   "road": "University Blvd",
+   "where": "University Blvd at Main St (Briarwood community)",
+   "title": "Severe flooding at University Blvd and Main St in Briarwood",
+   "city": "Melbourne",
+   "status": "flooded",
+   "fullClosure": false,
+   "lanes": "Not stated",
+   "lat": 28.064,
+   "lng": -80.633,
+   "approx": true,
+   "source": "City of Melbourne (via Space Coast Daily)",
+   "sourceUrl": "https://spacecoastdaily.com/2026/11/city-of-melbourne-reports-multiple-road-closures-urges-residents-to-shelter-in-place/",
+   "reported": "2026-11-02T17:43:55Z",
+   "note": "The city reported severe flooding here but did not list it as a closure. The coordinates are approximate.",
+   "id": "man-university-blvd-at-main-st-briarwood-com",
+   "updated": "2026-11-02T17:43:55Z",
+   "layer": "manual"
+  },
+  {
    "id": "fl511-937010",
    "source": "FL511 (FDOT)",
    "sourceUrl": "https://fl511.com",
@@ -537,7 +575,7 @@
    "status": "flooded",
    "fullClosure": true,
    "reported": "2026-11-02T09:24:00Z",
-   "updated": "2026-11-03T02:48:00Z",
+   "updated": "2026-11-03T03:30:00Z",
    "lat": 28.07888,
    "lng": -80.672522,
    "layer": "Closures",
@@ -600,7 +638,7 @@
    "status": "closed",
    "fullClosure": true,
    "reported": "2026-11-02T13:10:00Z",
-   "updated": "2026-11-03T02:48:00Z",
+   "updated": "2026-11-03T03:34:00Z",
    "lat": 28.076526,
    "lng": -80.621403,
    "layer": "Closures",
@@ -639,7 +677,7 @@
    "status": "flooded",
    "fullClosure": true,
    "reported": "2026-11-02T13:35:00Z",
-   "updated": "2026-11-03T02:53:00Z",
+   "updated": "2026-11-03T03:30:00Z",
    "lat": 28.078862,
    "lng": -80.703539,
    "layer": "Closures",
@@ -797,7 +835,7 @@
    "status": "flooded",
    "fullClosure": true,
    "reported": "2026-11-02T14:29:00Z",
-   "updated": "2026-11-03T02:53:00Z",
+   "updated": "2026-11-03T03:30:00Z",
    "lat": 28.078871,
    "lng": -80.700181,
    "layer": "Closures",
@@ -872,7 +910,7 @@
    "status": "flooded",
    "fullClosure": true,
    "reported": "2026-11-02T21:42:00Z",
-   "updated": "2026-11-03T02:53:00Z",
+   "updated": "2026-11-03T03:29:00Z",
    "lat": 28.004405,
    "lng": -80.563736,
    "layer": "Closures",
@@ -901,7 +939,7 @@
    "status": "flooded",
    "fullClosure": true,
    "reported": "2026-11-02T21:51:00Z",
-   "updated": "2026-11-03T02:53:00Z",
+   "updated": "2026-11-03T03:29:00Z",
    "lat": 28.004412,
    "lng": -80.56374,
    "layer": "Closures",
@@ -1047,7 +1085,7 @@
    "status": "caution",
    "fullClosure": false,
    "reported": "2026-11-03T03:18:00Z",
-   "updated": "2026-11-03T03:21:00Z",
+   "updated": "2026-11-03T03:38:00Z",
    "lat": 28.344764,
    "lng": -80.78468,
    "layer": "Incidents",
@@ -1080,7 +1118,7 @@
    "where": "I-95 NB at MM 200"
   },
   {
-   "id": "fhp-11022026043943-4356",
+   "id": "fhp-11022026043943-2049",
    "source": "FHP live CAD",
    "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
    "road": "US-1 [2 MILES SOF]",
@@ -1099,7 +1137,7 @@
    "where": "US-1 [2 Miles Sof] at Malabar Rd"
   },
   {
-   "id": "fhp-11022026112806-2471",
+   "id": "fhp-11022026112806-6690",
    "source": "FHP live CAD",
    "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
    "road": "NORFOLK PKWY",
@@ -1346,7 +1384,7 @@
    ]
   },
   {
-   "id": "fhp-11022026112110-1785",
+   "id": "fhp-11022026112110-6267",
    "source": "FHP live CAD",
    "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
    "road": "PALM BAY RD NE [ENT RAMP TO]",
@@ -1365,7 +1403,7 @@
    "where": "Palm Bay Rd Ne [Ent Ramp To] at I-95 Nb"
   },
   {
-   "id": "fhp-11022026090844-560",
+   "id": "fhp-11022026090844-423",
    "source": "FHP live CAD",
    "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
    "road": "US-1",
@@ -1416,7 +1454,7 @@
    ]
   },
   {
-   "id": "fhp-11022026065558-1937",
+   "id": "fhp-11022026065558-5422",
    "source": "FHP live CAD",
    "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
    "road": "W NEW HAVEN AVE",
