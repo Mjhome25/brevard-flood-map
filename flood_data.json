@@ -1,6 +1,8 @@
 {
- "generated": "2026-11-03T20:45:33Z",
- "errors": [],
+ "generated": "2026-11-03T21:02:12Z",
+ "errors": [
+  "FL511 map locations: 1 report(s) without a pin"
+ ],
  "items": [
   {
    "fullClosure": true,
@@ -876,6 +878,151 @@
     "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
     "kind": "feed",
     "publishedAt": "2026-11-03T08:43:25Z"
+   },
+   "awaitingOfficial": false,
+   "missingSince": null,
+   "recheck": []
+  },
+  {
+   "from": "Leghorn Rd",
+   "fullClosure": true,
+   "lat": 27.9539266622749,
+   "layer": "FHP",
+   "line": [
+    [
+     27.953586,
+     -80.574151
+    ],
+    [
+     27.953607,
+     -80.573756
+    ],
+    [
+     27.95361,
+     -80.573523
+    ],
+    [
+     27.953625,
+     -80.573281
+    ],
+    [
+     27.953636,
+     -80.573145
+    ],
+    [
+     27.953672,
+     -80.572962
+    ],
+    [
+     27.953706,
+     -80.572776
+    ],
+    [
+     27.953746,
+     -80.572629
+    ],
+    [
+     27.953879,
+     -80.572283
+    ],
+    [
+     27.953935,
+     -80.572111
+    ],
+    [
+     27.953938,
+     -80.572101
+    ],
+    [
+     27.954004,
+     -80.571947
+    ],
+    [
+     27.95407,
+     -80.57184
+    ],
+    [
+     27.954133,
+     -80.571729
+    ],
+    [
+     27.954249,
+     -80.571554
+    ],
+    [
+     27.954381,
+     -80.571388
+    ],
+    [
+     27.954518,
+     -80.571229
+    ],
+    [
+     27.954658,
+     -80.571078
+    ],
+    [
+     27.954819,
+     -80.570943
+    ],
+    [
+     27.955015,
+     -80.570808
+    ],
+    [
+     27.95616,
+     -80.570041
+    ]
+   ],
+   "lng": -80.5721074152912,
+   "reported": "2026-11-03T08:44:46Z",
+   "road": "VALKARIA RD",
+   "roadShort": "Valkaria Rd",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "spot": "at Hideaway Ln",
+   "status": "flooded",
+   "title": "Road Closed Due To Water at VALKARIA RD x[HIDEAWAY LN] [GRANT-VALKARIA]",
+   "to": "Pomello Rd",
+   "where": "Valkaria Rd at Hideaway Ln",
+   "id": "brevard:fhp:20261103084446-69173bfb",
+   "updated": "2026-11-03T08:44:46Z",
+   "lastReported": "2026-11-03T08:44:46Z",
+   "firstReported": "2026-11-03T08:44:46Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-03T08:44:46Z"
+   },
+   "awaitingOfficial": false,
+   "missingSince": null,
+   "recheck": []
+  },
+  {
+   "fullClosure": false,
+   "lanes": "Dberis In The Center Lane - Use Caution",
+   "lat": 28.6455768686869,
+   "layer": "FHP",
+   "lng": -80.8613010351272,
+   "reported": "2026-11-03T08:52:18Z",
+   "road": "I-95 NB [MM222]",
+   "roadShort": "I-95 Nb [MM222]",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "spot": "at Mm222",
+   "status": "caution",
+   "title": "Roadway Debris/Object at I-95 NB [MM222] x[MM222] [TITUSVILLE] (Dberis In The Center Lane - Use Caution)",
+   "where": "I-95 Nb [MM222] at Mm222",
+   "id": "brevard:fhp:20261103085218-0ab20761",
+   "updated": "2026-11-03T08:52:18Z",
+   "lastReported": "2026-11-03T08:52:18Z",
+   "firstReported": "2026-11-03T08:52:18Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-03T08:52:18Z"
    },
    "awaitingOfficial": false,
    "missingSince": null,
@@ -1934,8 +2081,8 @@
    "to": "Coastal Ln",
    "where": "US-192 WB at S John Rodes Blvd",
    "id": "brevard:fl511:937222",
-   "updated": "2026-11-03T19:18:00Z",
-   "lastReported": "2026-11-03T19:18:00Z",
+   "updated": "2026-11-03T21:01:00Z",
+   "lastReported": "2026-11-03T21:01:00Z",
    "firstReported": "2026-11-02T19:54:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
@@ -1943,15 +2090,9 @@
     "kind": "feed",
     "publishedAt": "2026-11-02T19:54:00Z"
    },
-   "awaitingOfficial": true,
-   "missingSince": "2026-11-03T20:02:18Z",
-   "recheck": [],
-   "noLongerListed": {
-    "agency": "FL511 (FDOT)",
-    "url": "https://fl511.com",
-    "since": "2026-11-03T20:02:18Z",
-    "wasClosed": true
-   }
+   "awaitingOfficial": false,
+   "missingSince": null,
+   "recheck": []
   },
   {
    "dir": "NB",
@@ -3269,8 +3410,8 @@
    "to": "Burdock Ave",
    "where": "CR-509 both directions",
    "id": "brevard:fl511:939236",
-   "updated": "2026-11-03T17:58:00Z",
-   "lastReported": "2026-11-03T17:58:00Z",
+   "updated": "2026-11-03T20:57:00Z",
+   "lastReported": "2026-11-03T20:57:00Z",
    "firstReported": "2026-11-03T17:58:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
@@ -3356,8 +3497,8 @@
    "to": "S John Rodes Blvd",
    "where": "Ellis Rd both directions",
    "id": "brevard:fl511:939238",
-   "updated": "2026-11-03T17:58:00Z",
-   "lastReported": "2026-11-03T17:58:00Z",
+   "updated": "2026-11-03T20:55:00Z",
+   "lastReported": "2026-11-03T20:55:00Z",
    "firstReported": "2026-11-03T17:58:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
@@ -3405,8 +3546,8 @@
    "to": "Rogers Pl",
    "where": "CR-511 both directions",
    "id": "brevard:fl511:939239",
-   "updated": "2026-11-03T17:58:00Z",
-   "lastReported": "2026-11-03T17:58:00Z",
+   "updated": "2026-11-03T20:57:00Z",
+   "lastReported": "2026-11-03T20:57:00Z",
    "firstReported": "2026-11-03T17:58:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
@@ -3475,14 +3616,212 @@
    "to": "Helio Way",
    "where": "Florida Ave both directions at Babcock St S",
    "id": "brevard:fl511:939287",
-   "updated": "2026-11-03T18:23:00Z",
-   "lastReported": "2026-11-03T18:23:00Z",
+   "updated": "2026-11-03T20:55:00Z",
+   "lastReported": "2026-11-03T20:55:00Z",
    "firstReported": "2026-11-03T18:23:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
     "url": "https://fl511.com",
     "kind": "feed",
     "publishedAt": "2026-11-03T18:23:00Z"
+   },
+   "awaitingOfficial": false,
+   "missingSince": null,
+   "recheck": []
+  },
+  {
+   "dir": "SB",
+   "fullClosure": false,
+   "lanes": "Left lane blocked",
+   "lat": 27.998569,
+   "layer": "Incidents",
+   "line": [
+    [
+     27.99858,
+     -80.63068
+    ],
+    [
+     27.99858,
+     -80.63068
+    ],
+    [
+     27.99844,
+     -80.63059
+    ],
+    [
+     27.99841,
+     -80.63057
+    ],
+    [
+     27.9974,
+     -80.62986
+    ],
+    [
+     27.99633,
+     -80.6291
+    ],
+    [
+     27.99353,
+     -80.62713
+    ]
+   ],
+   "lng": -80.6307,
+   "reported": "2026-11-03T20:41:00Z",
+   "road": "I-95",
+   "roadShort": "I-95",
+   "source": "FL511 (FDOT)",
+   "sourceUrl": "https://fl511.com",
+   "spot": "before MM 173/SR-514",
+   "status": "caution",
+   "title": "Object on roadway on I-95 South, before MM 173/SR-514. Left lane blocked",
+   "where": "I-95 SB before MM 173/SR-514",
+   "id": "brevard:fl511:939519",
+   "updated": "2026-11-03T20:45:00Z",
+   "lastReported": "2026-11-03T20:45:00Z",
+   "firstReported": "2026-11-03T20:45:00Z",
+   "verified": {
+    "agency": "FL511 (FDOT)",
+    "url": "https://fl511.com",
+    "kind": "feed",
+    "publishedAt": "2026-11-03T20:45:00Z"
+   },
+   "awaitingOfficial": false,
+   "missingSince": null,
+   "recheck": []
+  },
+  {
+   "dir": "NB",
+   "fullClosure": false,
+   "lanes": "Left lane blocked",
+   "lat": 28.412701,
+   "layer": "Incidents",
+   "line": [
+    [
+     28.4127,
+     -80.70628
+    ],
+    [
+     28.41271,
+     -80.70628
+    ]
+   ],
+   "lng": -80.706344,
+   "reported": "2026-11-03T20:44:00Z",
+   "road": "SR-3",
+   "roadShort": "SR-3",
+   "source": "FL511 (FDOT)",
+   "sourceUrl": "https://fl511.com",
+   "spot": "at Smith Rd/Grant Rd",
+   "status": "caution",
+   "title": "MVC on SR-3 North, at Smith Rd/Grant Rd. Left lane blocked",
+   "where": "SR-3 NB at Smith Rd/Grant Rd",
+   "id": "brevard:fl511:939527",
+   "updated": "2026-11-03T20:50:00Z",
+   "lastReported": "2026-11-03T20:50:00Z",
+   "firstReported": "2026-11-03T20:50:00Z",
+   "verified": {
+    "agency": "FL511 (FDOT)",
+    "url": "https://fl511.com",
+    "kind": "feed",
+    "publishedAt": "2026-11-03T20:50:00Z"
+   },
+   "awaitingOfficial": false,
+   "missingSince": null,
+   "recheck": []
+  },
+  {
+   "dir": "SB",
+   "from": "Loymer Cir",
+   "fullClosure": true,
+   "lanes": "All lanes blocked",
+   "lat": 28.412701,
+   "layer": "Closures",
+   "line": [
+    [
+     28.419973,
+     -80.70691
+    ],
+    [
+     28.417674,
+     -80.706716
+    ],
+    [
+     28.416467,
+     -80.706608
+    ],
+    [
+     28.416199,
+     -80.706584
+    ],
+    [
+     28.414576,
+     -80.70644
+    ],
+    [
+     28.413369,
+     -80.706332
+    ],
+    [
+     28.412705,
+     -80.706297
+    ],
+    [
+     28.412705,
+     -80.706297
+    ],
+    [
+     28.411167,
+     -80.706132
+    ],
+    [
+     28.41082,
+     -80.706105
+    ],
+    [
+     28.409115,
+     -80.705959
+    ],
+    [
+     28.40837,
+     -80.705906
+    ],
+    [
+     28.407649,
+     -80.705834
+    ],
+    [
+     28.407354,
+     -80.705805
+    ],
+    [
+     28.406766,
+     -80.705773
+    ],
+    [
+     28.406311,
+     -80.705749
+    ]
+   ],
+   "lng": -80.706344,
+   "reported": "2026-11-03T20:50:00Z",
+   "road": "SR-3",
+   "roadShort": "SR-3",
+   "source": "FL511 (FDOT)",
+   "sourceUrl": "https://fl511.com",
+   "spot": "at Smith Rd/Grant Rd",
+   "status": "closed",
+   "title": "Emergency vehicles on SR-3 South, at Smith Rd/Grant Rd. All lanes blocked",
+   "to": "Sea Ray Dr",
+   "where": "SR-3 SB at Smith Rd/Grant Rd",
+   "id": "brevard:fl511:939529",
+   "updated": "2026-11-03T20:51:00Z",
+   "lastReported": "2026-11-03T20:51:00Z",
+   "firstReported": "2026-11-03T20:51:00Z",
+   "verified": {
+    "agency": "FL511 (FDOT)",
+    "url": "https://fl511.com",
+    "kind": "feed",
+    "publishedAt": "2026-11-03T20:51:00Z"
    },
    "awaitingOfficial": false,
    "missingSince": null,
@@ -4407,6 +4746,56 @@
     "fromLat": 28.115,
     "fromLng": -80.628
    },
+   "awaitingOfficial": false,
+   "missingSince": null,
+   "recheck": []
+  },
+  {
+   "approx": true,
+   "city": "West Melbourne",
+   "fullClosure": true,
+   "lanes": "Closed at the intersection (directions not stated)",
+   "lat": 28.079,
+   "layer": "manual",
+   "lng": -80.688,
+   "note": "On West Melbourne's 8 a.m. Tuesday closure list. I could not confirm where Morris Ct is, so the pin is only a rough spot near US 192 in West Melbourne and needs checking. Pin approximate.",
+   "reported": "2026-11-03T13:00:00Z",
+   "road": "Haven Dr",
+   "source": "City of West Melbourne (via WFTV)",
+   "sourceUrl": "https://www.wftv.com/news/local/flooding-closes-west-melbourne-roads-relocates-polling-places-election-day/AMIBMKZMW5EFVBRARJI5F545LQ/",
+   "status": "closed",
+   "title": "Haven Dr closed at Morris Ct because of flooding",
+   "where": "Haven Dr at Morris Ct, West Melbourne",
+   "id": "brevard:manual:haven-dr-at-morris-ct-west-melbourne",
+   "updated": "2026-11-03T13:00:00Z",
+   "lastReported": "2026-11-03T13:00:00Z",
+   "firstReported": "2026-11-03T13:00:00Z",
+   "verified": null,
+   "awaitingOfficial": false,
+   "missingSince": null,
+   "recheck": []
+  },
+  {
+   "approx": true,
+   "city": "West Melbourne",
+   "fullClosure": true,
+   "lanes": "Closed at the intersection (directions not stated)",
+   "lat": 28.0775,
+   "layer": "manual",
+   "lng": -80.688,
+   "note": "On West Melbourne's 8 a.m. Tuesday closure list. I could not confirm where Haven Dr meets US 192, so the pin is only a rough spot on the West Melbourne stretch of US 192 and needs checking. Pin approximate.",
+   "reported": "2026-11-03T13:00:00Z",
+   "road": "Haven Dr",
+   "source": "City of West Melbourne (via WFTV)",
+   "sourceUrl": "https://www.wftv.com/news/local/flooding-closes-west-melbourne-roads-relocates-polling-places-election-day/AMIBMKZMW5EFVBRARJI5F545LQ/",
+   "status": "closed",
+   "title": "Haven Dr closed at US 192 because of flooding",
+   "where": "Haven Dr at US 192 (W New Haven Ave), West Melbourne",
+   "id": "brevard:manual:haven-dr-at-us-192-w-new-haven-ave-west-",
+   "updated": "2026-11-03T13:00:00Z",
+   "lastReported": "2026-11-03T13:00:00Z",
+   "firstReported": "2026-11-03T13:00:00Z",
+   "verified": null,
    "awaitingOfficial": false,
    "missingSince": null,
    "recheck": []
@@ -6763,12 +7152,6 @@
  ],
  "advisories": [
   {
-   "agency": "City of Palm Bay Mayor (via News 6)",
-   "time": "2026-11-02T20:40:00Z",
-   "text": "Fairhaven area of Palm Bay is inaccessible because of flooding; no specific roads named.",
-   "url": "https://www.clickorlando.com/news/local/2026/11/02/brevard-county-schools-closed-amid-flash-flood-warning-heavy-rain/"
-  },
-  {
    "agency": "State of Florida, Governor's Office (via WFTV)",
    "time": "2026-11-02T22:00:00Z",
    "text": "State of emergency declared for Brevard and six other counties (Executive Order 26-227) because of flooding. Effective immediately for 60 days; includes price-gouging protections.",
@@ -6803,12 +7186,6 @@
    "time": "2026-11-02T22:00:00Z",
    "text": "Eastern Florida State College stays closed Tuesday, Nov. 3, because of flooding.",
    "url": "https://spacecoastdaily.com/2026/11/city-of-melbourne-reports-multiple-road-closures-urges-residents-to-shelter-in-place/"
-  },
-  {
-   "agency": "City of West Melbourne",
-   "time": "2026-11-02T21:00:00Z",
-   "text": "The boil water notice now covers all West Melbourne water customers. It replaces the earlier notice, which covered only the area south of US 192 and east of Hollywood Blvd. The City of Melbourne, which supplies West Melbourne's water, reported a water main break whose exact location is not yet known. Boil all water for drinking, cooking, making ice, brushing teeth and washing dishes, or use bottled water, until the city says the water is safe.",
-   "url": "https://westmelbourne.gov/905/Emergency-Information"
   },
   {
    "agency": "City of Melbourne (via News 6 WKMG)",

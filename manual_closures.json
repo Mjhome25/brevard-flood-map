@@ -1048,5 +1048,41 @@
   "note": "The city's 8 a.m. Tuesday update lists this closure. The current list has Minton Rd NB at Helen St, so this is a different cross street. I couldn't confirm where Henry Ave meets Minton Rd, so the pin is only roughly placed on Minton Rd. Pin approximate.",
   "id": "man-minton-rd-nb-at-henry-ave",
   "updated": "2026-11-03T13:00:00Z"
+ },
+ {
+  "road": "Haven Dr",
+  "where": "Haven Dr at US 192 (W New Haven Ave), West Melbourne",
+  "title": "Haven Dr closed at US 192 because of flooding",
+  "city": "West Melbourne",
+  "status": "closed",
+  "fullClosure": true,
+  "lanes": "Closed at the intersection (directions not stated)",
+  "lat": 28.0775,
+  "lng": -80.688,
+  "approx": true,
+  "source": "City of West Melbourne (via WFTV)",
+  "sourceUrl": "https://www.wftv.com/news/local/flooding-closes-west-melbourne-roads-relocates-polling-places-election-day/AMIBMKZMW5EFVBRARJI5F545LQ/",
+  "reported": "2026-11-03T13:00:00Z",
+  "note": "On West Melbourne's 8 a.m. Tuesday closure list. I could not confirm where Haven Dr meets US 192, so the pin is only a rough spot on the West Melbourne stretch of US 192 and needs checking. Pin approximate.",
+  "id": "man-haven-dr-at-us-192-w-new-haven-ave-west-",
+  "updated": "2026-11-03T13:00:00Z"
+ },
+ {
+  "road": "Haven Dr",
+  "where": "Haven Dr at Morris Ct, West Melbourne",
+  "title": "Haven Dr closed at Morris Ct because of flooding",
+  "city": "West Melbourne",
+  "status": "closed",
+  "fullClosure": true,
+  "lanes": "Closed at the intersection (directions not stated)",
+  "lat": 28.079,
+  "lng": -80.688,
+  "approx": true,
+  "source": "City of West Melbourne (via WFTV)",
+  "sourceUrl": "https://www.wftv.com/news/local/flooding-closes-west-melbourne-roads-relocates-polling-places-election-day/AMIBMKZMW5EFVBRARJI5F545LQ/",
+  "reported": "2026-11-03T13:00:00Z",
+  "note": "On West Melbourne's 8 a.m. Tuesday closure list. I could not confirm where Morris Ct is, so the pin is only a rough spot near US 192 in West Melbourne and needs checking. Pin approximate.",
+  "id": "man-haven-dr-at-morris-ct-west-melbourne",
+  "updated": "2026-11-03T13:00:00Z"
  }
 ]
