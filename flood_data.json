@@ -1,82 +1,9 @@
 {
- "generated": "2026-11-03T14:15:37Z",
+ "generated": "2026-11-03T14:30:33Z",
  "errors": [
   "FL511 Closures: 'NoneType' object has no attribute 'group'"
  ],
  "items": [
-  {
-   "fullClosure": false,
-   "lat": 28.6181386341678,
-   "layer": "FHP",
-   "lng": -80.8511167860298,
-   "reported": "2026-11-02T08:01:32Z",
-   "road": "I-95 NB [MM220]",
-   "roadShort": "I-95 Nb [MM220]",
-   "source": "FHP live CAD",
-   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-   "spot": "at Mm220",
-   "status": "caution",
-   "title": "MVC at I-95 NB [MM220] x[MM220] [TITUSVILLE]",
-   "where": "I-95 Nb [MM220] at Mm220",
-   "id": "brevard:fhp:20261102080132-f45d9103",
-   "updated": "2026-11-02T08:03:14Z",
-   "lastReported": "2026-11-02T08:03:14Z",
-   "firstReported": "2026-11-02T08:03:14Z",
-   "verified": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "kind": "feed",
-    "publishedAt": "2026-11-02T08:03:14Z"
-   },
-   "awaitingOfficial": true,
-   "missingSince": "2026-11-03T10:40:48Z",
-   "recheck": [
-    "recovered from history: no longer listed after 2026-11-02T15:33; no official reopening found"
-   ],
-   "noLongerListed": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "since": "2026-11-03T10:40:48Z",
-    "wasClosed": false
-   }
-  },
-  {
-   "fullClosure": false,
-   "lanes": "Source said \"Roiad Open\" (2026-11-02 09:15 UTC); not a verified reopening",
-   "lat": 28.2614668686869,
-   "layer": "FHP",
-   "lng": -80.6879587657643,
-   "reported": "2026-11-02T09:15:36Z",
-   "road": "US-1",
-   "roadShort": "US-1",
-   "source": "FHP live CAD",
-   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-   "spot": "at Viera Blvd",
-   "status": "caution",
-   "title": "MVC at US-1 x[VIERA BLVD] [ROCKLEDGE] (Roiad Open)",
-   "where": "US-1 at Viera Blvd",
-   "id": "brevard:fhp:20261102091536-448b751d",
-   "updated": "2026-11-02T09:22:07Z",
-   "lastReported": "2026-11-02T09:22:07Z",
-   "firstReported": "2026-11-02T09:15:36Z",
-   "verified": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "kind": "feed",
-    "publishedAt": "2026-11-02T09:15:36Z"
-   },
-   "awaitingOfficial": true,
-   "missingSince": "2026-11-03T10:40:48Z",
-   "recheck": [
-    "recovered from history: no longer listed after 2026-11-02T21:34; no official reopening found"
-   ],
-   "noLongerListed": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "since": "2026-11-03T10:40:48Z",
-    "wasClosed": false
-   }
-  },
   {
    "fullClosure": true,
    "lanes": "Southbound Lanes Under Water Use Caution",
@@ -105,178 +32,6 @@
    "awaitingOfficial": false,
    "missingSince": null,
    "recheck": []
-  },
-  {
-   "fullClosure": false,
-   "lanes": "Debris In The Roadway Use Caution",
-   "lat": 28.4095070750988,
-   "layer": "FHP",
-   "lng": -80.8206074357304,
-   "reported": "2026-11-02T11:06:25Z",
-   "road": "I-95 SB [MM205]",
-   "roadShort": "I-95 Sb [MM205]",
-   "source": "FHP live CAD",
-   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-   "spot": "at Mm205",
-   "status": "caution",
-   "title": "Roadway Debris/Object at I-95 SB [MM205] x[MM205] [COCOA] (Debris In The Roadway Use Caution)",
-   "where": "I-95 Sb [MM205] at Mm205",
-   "id": "brevard:fhp:20261102110625-42190621",
-   "updated": "2026-11-02T11:06:25Z",
-   "lastReported": "2026-11-02T11:06:25Z",
-   "firstReported": "2026-11-02T11:06:25Z",
-   "verified": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "kind": "feed",
-    "publishedAt": "2026-11-02T11:06:25Z"
-   },
-   "awaitingOfficial": true,
-   "missingSince": "2026-11-03T10:40:48Z",
-   "recheck": [
-    "recovered from history: no longer listed after 2026-11-03T02:00; no official reopening found"
-   ],
-   "noLongerListed": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "since": "2026-11-03T10:40:48Z",
-    "wasClosed": false
-   }
-  },
-  {
-   "from": "Haverhill Rd",
-   "fullClosure": false,
-   "lanes": "Partial Roadblock - Use Caution",
-   "lat": 28.4777264822134,
-   "layer": "FHP",
-   "line": [
-    [
-     28.477453,
-     -80.770267
-    ],
-    [
-     28.477743,
-     -80.769525
-    ],
-    [
-     28.477826,
-     -80.769275
-    ],
-    [
-     28.477868,
-     -80.769237
-    ],
-    [
-     28.477904,
-     -80.769204
-    ]
-   ],
-   "lng": -80.76903786308,
-   "reported": "2026-11-02T11:41:29Z",
-   "road": "FAY BLVD",
-   "roadShort": "Fay Blvd",
-   "source": "FHP live CAD",
-   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-   "spot": "at N Cocoa Blvd",
-   "status": "caution",
-   "title": "MVC W/Roadblock at FAY BLVD x[N COCOA BLVD] [COCOA] (Partial Roadblock - Use Caution)",
-   "to": "N Highway 1",
-   "where": "Fay Blvd at N Cocoa Blvd",
-   "id": "brevard:fhp:20261102114129-3a98442e",
-   "updated": "2026-11-02T11:42:17Z",
-   "lastReported": "2026-11-02T11:42:17Z",
-   "firstReported": "2026-11-02T11:42:17Z",
-   "verified": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "kind": "feed",
-    "publishedAt": "2026-11-02T11:42:17Z"
-   },
-   "awaitingOfficial": true,
-   "missingSince": "2026-11-03T10:40:48Z",
-   "recheck": [
-    "recovered from history: no longer listed after 2026-11-02T23:57; no official reopening found"
-   ],
-   "noLongerListed": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "since": "2026-11-03T10:40:48Z",
-    "wasClosed": false
-   }
-  },
-  {
-   "fullClosure": false,
-   "lanes": "Source said \"Roadway Open\" (2026-11-02 11:53 UTC); not a verified reopening",
-   "lat": 28.1304866490997,
-   "layer": "FHP",
-   "lng": -80.7059541902203,
-   "reported": "2026-11-02T11:53:10Z",
-   "road": "I-95 NB [MM184]",
-   "roadShort": "I-95 Nb [MM184]",
-   "source": "FHP live CAD",
-   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-   "spot": "at Mm184",
-   "status": "caution",
-   "title": "MVC at I-95 NB [MM184] x[MM184] [MELBOURNE] (Roadway Open)",
-   "where": "I-95 Nb [MM184] at Mm184",
-   "id": "brevard:fhp:20261102115310-c358cd09",
-   "updated": "2026-11-02T11:53:10Z",
-   "lastReported": "2026-11-02T11:53:10Z",
-   "firstReported": "2026-11-02T11:53:10Z",
-   "verified": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "kind": "feed",
-    "publishedAt": "2026-11-02T11:53:10Z"
-   },
-   "awaitingOfficial": true,
-   "missingSince": "2026-11-03T10:40:48Z",
-   "recheck": [
-    "recovered from history: no longer listed after 2026-11-02T23:57; no official reopening found"
-   ],
-   "noLongerListed": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "since": "2026-11-03T10:40:48Z",
-    "wasClosed": false
-   }
-  },
-  {
-   "fullClosure": false,
-   "lanes": "No Roadblock",
-   "lat": 28.4051549099693,
-   "layer": "FHP",
-   "lng": -80.6525199250313,
-   "reported": "2026-11-02T11:55:10Z",
-   "road": "BEACHLINE EXPY WB (SR-528 WB) [MM52]",
-   "roadShort": "Beachline Expy Wb (SR-528 Wb) [MM52]",
-   "source": "FHP live CAD",
-   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-   "spot": "at Mm52",
-   "status": "caution",
-   "title": "MVC at BEACHLINE EXPY WB (SR-528 WB) [MM52] x[MM52] [MERRITT ISLAND] (No Roadblock)",
-   "where": "Beachline Expy Wb (SR-528 Wb) [MM52] at Mm52",
-   "id": "brevard:fhp:20261102115510-efe389ca",
-   "updated": "2026-11-02T11:55:10Z",
-   "lastReported": "2026-11-02T11:55:10Z",
-   "firstReported": "2026-11-02T11:55:10Z",
-   "verified": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "kind": "feed",
-    "publishedAt": "2026-11-02T11:55:10Z"
-   },
-   "awaitingOfficial": true,
-   "missingSince": "2026-11-03T10:40:48Z",
-   "recheck": [
-    "recovered from history: no longer listed after 2026-11-02T23:57; no official reopening found"
-   ],
-   "noLongerListed": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "since": "2026-11-03T10:40:48Z",
-    "wasClosed": false
-   }
   },
   {
    "from": "Stacia Strife Way",
@@ -322,607 +77,6 @@
    "awaitingOfficial": false,
    "missingSince": null,
    "recheck": []
-  },
-  {
-   "from": "Deer Lakes Dr",
-   "fullClosure": false,
-   "lanes": "Roadblock",
-   "lat": 28.2009644971454,
-   "layer": "FHP",
-   "line": [
-    [
-     28.197341,
-     -80.67205
-    ],
-    [
-     28.198774,
-     -80.672049
-    ],
-    [
-     28.200463,
-     -80.672042
-    ],
-    [
-     28.200621,
-     -80.672066
-    ],
-    [
-     28.200845,
-     -80.67204
-    ],
-    [
-     28.200954,
-     -80.672023
-    ],
-    [
-     28.200972,
-     -80.67202
-    ],
-    [
-     28.201174,
-     -80.672068
-    ],
-    [
-     28.202222,
-     -80.672066
-    ],
-    [
-     28.202275,
-     -80.672066
-    ],
-    [
-     28.203104,
-     -80.672093
-    ],
-    [
-     28.203247,
-     -80.672098
-    ]
-   ],
-   "lng": -80.6721034952351,
-   "reported": "2026-11-02T13:12:13Z",
-   "road": "N WICKHAM RD",
-   "roadShort": "N Wickham Rd",
-   "source": "FHP live CAD",
-   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-   "spot": "at Pineda Cswy",
-   "status": "closed",
-   "title": "MVC W/Roadblock at N WICKHAM RD x[PINEDA CSWY] [MELBOURNE] (Roadblock)",
-   "to": "Windsor Estates Dr",
-   "where": "N Wickham Rd at Pineda Cswy",
-   "id": "brevard:fhp:20261102131213-1bc440e2",
-   "updated": "2026-11-02T13:17:10Z",
-   "lastReported": "2026-11-02T13:17:10Z",
-   "firstReported": "2026-11-02T13:12:13Z",
-   "verified": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "kind": "feed",
-    "publishedAt": "2026-11-02T13:12:13Z"
-   },
-   "awaitingOfficial": true,
-   "missingSince": "2026-11-03T10:40:48Z",
-   "recheck": [
-    "recovered from history: no longer listed after 2026-11-03T01:30; no official reopening found"
-   ],
-   "noLongerListed": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "since": "2026-11-03T10:40:48Z",
-    "wasClosed": true
-   }
-  },
-  {
-   "fullClosure": false,
-   "lat": 28.405322345191,
-   "layer": "FHP",
-   "lng": -80.6528467666249,
-   "reported": "2026-11-02T13:27:54Z",
-   "road": "SR-528 WB [MM52]",
-   "roadShort": "SR-528 Wb [MM52]",
-   "source": "FHP live CAD",
-   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-   "spot": "at Mm52",
-   "status": "caution",
-   "title": "MVC at SR-528 WB [MM52] x[MM52] [MERRITT ISLAND]",
-   "where": "SR-528 Wb [MM52] at Mm52",
-   "id": "brevard:fhp:20261102132754-e78cedd2",
-   "updated": "2026-11-02T13:27:54Z",
-   "lastReported": "2026-11-02T13:27:54Z",
-   "firstReported": "2026-11-02T13:27:54Z",
-   "verified": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "kind": "feed",
-    "publishedAt": "2026-11-02T13:27:54Z"
-   },
-   "awaitingOfficial": true,
-   "missingSince": "2026-11-03T10:40:48Z",
-   "recheck": [
-    "recovered from history: no longer listed after 2026-11-03T01:30; no official reopening found"
-   ],
-   "noLongerListed": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "since": "2026-11-03T10:40:48Z",
-    "wasClosed": false
-   }
-  },
-  {
-   "fullClosure": false,
-   "lanes": "Roadblock",
-   "lat": 28.6455809793588,
-   "layer": "FHP",
-   "lng": -80.8615091958664,
-   "reported": "2026-11-02T13:57:23Z",
-   "road": "I-95 SB [MM222]",
-   "roadShort": "I-95 Sb [MM222]",
-   "source": "FHP live CAD",
-   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-   "spot": "at Mm222",
-   "status": "closed",
-   "title": "MVC W/Roadblock at I-95 SB [MM222] x[MM222] [TITUSVILLE] (Roadblock)",
-   "where": "I-95 Sb [MM222] at Mm222",
-   "id": "brevard:fhp:20261102135723-7b4b61d0",
-   "updated": "2026-11-02T13:57:23Z",
-   "lastReported": "2026-11-02T13:57:23Z",
-   "firstReported": "2026-11-02T13:57:23Z",
-   "verified": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "kind": "feed",
-    "publishedAt": "2026-11-02T13:57:23Z"
-   },
-   "awaitingOfficial": true,
-   "missingSince": "2026-11-03T10:40:48Z",
-   "recheck": [
-    "recovered from history: no longer listed after 2026-11-03T02:00; no official reopening found"
-   ],
-   "noLongerListed": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "since": "2026-11-03T10:40:48Z",
-    "wasClosed": true
-   }
-  },
-  {
-   "fullClosure": false,
-   "lanes": "No Road Block",
-   "lat": 28.6588670750988,
-   "layer": "FHP",
-   "lng": -80.8667062405654,
-   "reported": "2026-11-02T13:57:23Z",
-   "road": "I-95 NB [MM223]",
-   "roadShort": "I-95 Nb [MM223]",
-   "source": "FHP live CAD",
-   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-   "spot": "at Mm223",
-   "status": "caution",
-   "title": "MVC at I-95 NB [MM223] x[MM223] [MIMS] (No Road Block)",
-   "where": "I-95 Nb [MM223] at Mm223",
-   "id": "brevard:fhp:20261102135723-fe328670",
-   "updated": "2026-11-02T13:57:23Z",
-   "lastReported": "2026-11-02T13:57:23Z",
-   "firstReported": "2026-11-02T13:57:23Z",
-   "verified": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "kind": "feed",
-    "publishedAt": "2026-11-02T13:57:23Z"
-   },
-   "awaitingOfficial": true,
-   "missingSince": "2026-11-03T10:40:48Z",
-   "recheck": [
-    "recovered from history: no longer listed after 2026-11-03T02:00; no official reopening found"
-   ],
-   "noLongerListed": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "since": "2026-11-03T10:40:48Z",
-    "wasClosed": false
-   }
-  },
-  {
-   "from": "Aspinwall Ave",
-   "fullClosure": true,
-   "lanes": "Road Flooded - Seek Alt Route",
-   "lat": 28.2293062889767,
-   "layer": "FHP",
-   "line": [
-    [
-     28.228212,
-     -80.672586
-    ],
-    [
-     28.229381,
-     -80.673081
-    ],
-    [
-     28.229447,
-     -80.673109
-    ],
-    [
-     28.229555,
-     -80.673158
-    ],
-    [
-     28.230691,
-     -80.67363
-    ],
-    [
-     28.233289,
-     -80.674709
-    ],
-    [
-     28.234491,
-     -80.675209
-    ]
-   ],
-   "lng": -80.6733064581332,
-   "reported": "2026-11-02T14:08:44Z",
-   "road": "US-1",
-   "roadShort": "US-1",
-   "source": "FHP live CAD",
-   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-   "spot": "at Suntree Blvd",
-   "status": "flooded",
-   "title": "Road Closed Due To Water at US-1 x[SUNTREE BLVD] [ROCKLEDGE] (Road Flooded - Seek Alt Route)",
-   "to": "Ernest Sands Rd",
-   "where": "US-1 at Suntree Blvd",
-   "id": "brevard:fhp:20261102140844-7f3eaeca",
-   "updated": "2026-11-02T14:08:44Z",
-   "lastReported": "2026-11-02T14:08:44Z",
-   "firstReported": "2026-11-02T14:08:44Z",
-   "verified": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "kind": "feed",
-    "publishedAt": "2026-11-02T14:08:44Z"
-   },
-   "awaitingOfficial": true,
-   "missingSince": "2026-11-03T10:49:24Z",
-   "recheck": [],
-   "noLongerListed": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "since": "2026-11-03T10:49:24Z",
-    "wasClosed": true
-   }
-  },
-  {
-   "fullClosure": false,
-   "lanes": "Source said \"Roadway Clear\" (2026-11-02 14:14 UTC); not a verified reopening",
-   "lat": 28.3557158761528,
-   "layer": "FHP",
-   "lng": -80.7551646812108,
-   "reported": "2026-11-02T14:14:28Z",
-   "road": "W KING ST",
-   "roadShort": "W King St",
-   "source": "FHP live CAD",
-   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-   "spot": "at Clearlake Rd",
-   "status": "caution",
-   "title": "MVC at W KING ST x[CLEARLAKE RD] [COCOA] (Roadway Clear)",
-   "where": "W King St at Clearlake Rd",
-   "id": "brevard:fhp:20261102141428-7174b51b",
-   "updated": "2026-11-02T14:14:28Z",
-   "lastReported": "2026-11-02T14:14:28Z",
-   "firstReported": "2026-11-02T14:14:28Z",
-   "verified": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "kind": "feed",
-    "publishedAt": "2026-11-02T14:14:28Z"
-   },
-   "awaitingOfficial": true,
-   "missingSince": "2026-11-03T10:40:48Z",
-   "recheck": [
-    "recovered from history: no longer listed after 2026-11-03T02:30; no official reopening found"
-   ],
-   "noLongerListed": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "since": "2026-11-03T10:40:48Z",
-    "wasClosed": false
-   }
-  },
-  {
-   "fullClosure": true,
-   "lanes": "Roadway Under Water At Entrance Ramp - Seek Alternate Route",
-   "lat": 28.0392217654809,
-   "layer": "FHP",
-   "lng": -80.6590090171911,
-   "reported": "2026-11-02T16:21:10Z",
-   "road": "PALM BAY RD NE [ENT RAMP TO]",
-   "roadShort": "Palm Bay Rd Ne [Ent Ramp To]",
-   "source": "FHP live CAD",
-   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-   "spot": "at I-95 Nb",
-   "status": "flooded",
-   "title": "Road Closed Due To Water at PALM BAY RD NE [ENT RAMP TO] x[I-95 NB] [WEST MELBOURNE] (Roadway Under Water At Entrance Ramp - Seek Alternate Route)",
-   "where": "Palm Bay Rd Ne [Ent Ramp To] at I-95 Nb",
-   "id": "brevard:fhp:20261102162110-aec17014",
-   "updated": "2026-11-02T16:21:10Z",
-   "lastReported": "2026-11-02T16:21:10Z",
-   "firstReported": "2026-11-02T16:21:10Z",
-   "verified": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "kind": "feed",
-    "publishedAt": "2026-11-02T16:21:10Z"
-   },
-   "awaitingOfficial": true,
-   "missingSince": "2026-11-03T13:46:49Z",
-   "recheck": [],
-   "noLongerListed": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "since": "2026-11-03T13:46:49Z",
-    "wasClosed": true
-   }
-  },
-  {
-   "from": "Shallow Creek Blvd",
-   "fullClosure": true,
-   "lanes": "Roadway Flooded - Seek Alternate Route",
-   "lat": 28.0434206060606,
-   "layer": "FHP",
-   "line": [
-    [
-     28.043502,
-     -80.686209
-    ],
-    [
-     28.043525,
-     -80.684216
-    ],
-    [
-     28.043618,
-     -80.679677
-    ],
-    [
-     28.043607,
-     -80.678954
-    ],
-    [
-     28.04347,
-     -80.677991
-    ],
-    [
-     28.043493,
-     -80.677327
-    ],
-    [
-     28.043492,
-     -80.676684
-    ],
-    [
-     28.043514,
-     -80.67553
-    ],
-    [
-     28.043529,
-     -80.675005
-    ],
-    [
-     28.043584,
-     -80.674202
-    ],
-    [
-     28.043618,
-     -80.67337
-    ],
-    [
-     28.043591,
-     -80.672348
-    ],
-    [
-     28.043635,
-     -80.671508
-    ],
-    [
-     28.04364,
-     -80.67142
-    ],
-    [
-     28.043636,
-     -80.671284
-    ],
-    [
-     28.043636,
-     -80.670485
-    ],
-    [
-     28.043658,
-     -80.66955
-    ],
-    [
-     28.043644,
-     -80.668682
-    ],
-    [
-     28.043617,
-     -80.667615
-    ],
-    [
-     28.043607,
-     -80.667155
-    ],
-    [
-     28.043505,
-     -80.66664
-    ],
-    [
-     28.043354,
-     -80.6662
-    ],
-    [
-     28.043171,
-     -80.665871
-    ],
-    [
-     28.042935,
-     -80.665552
-    ],
-    [
-     28.042599,
-     -80.665258
-    ],
-    [
-     28.042373,
-     -80.665073
-    ],
-    [
-     28.042107,
-     -80.664936
-    ],
-    [
-     28.041513,
-     -80.664745
-    ],
-    [
-     28.040171,
-     -80.664327
-    ],
-    [
-     28.040044,
-     -80.664288
-    ],
-    [
-     28.039813,
-     -80.66421
-    ],
-    [
-     28.039601,
-     -80.664136
-    ],
-    [
-     28.039332,
-     -80.66405
-    ],
-    [
-     28.039141,
-     -80.663966
-    ],
-    [
-     28.038931,
-     -80.663815
-    ],
-    [
-     28.038722,
-     -80.663676
-    ],
-    [
-     28.038544,
-     -80.663484
-    ],
-    [
-     28.038352,
-     -80.66326
-    ],
-    [
-     28.0382,
-     -80.66305
-    ],
-    [
-     28.038105,
-     -80.662947
-    ],
-    [
-     28.038037,
-     -80.662889
-    ],
-    [
-     28.037949,
-     -80.662817
-    ],
-    [
-     28.037877,
-     -80.662763
-    ],
-    [
-     28.037757,
-     -80.662674
-    ],
-    [
-     28.037646,
-     -80.662611
-    ],
-    [
-     28.03753,
-     -80.662567
-    ],
-    [
-     28.037426,
-     -80.662527
-    ],
-    [
-     28.037311,
-     -80.662473
-    ],
-    [
-     28.037267,
-     -80.66246
-    ],
-    [
-     28.037063,
-     -80.66242
-    ],
-    [
-     28.03692,
-     -80.662398
-    ],
-    [
-     28.036741,
-     -80.662399
-    ],
-    [
-     28.036541,
-     -80.662399
-    ],
-    [
-     28.036338,
-     -80.662395
-    ],
-    [
-     28.035852,
-     -80.662392
-    ],
-    [
-     28.035514,
-     -80.662409
-    ]
-   ],
-   "lng": -80.6714937607397,
-   "reported": "2026-11-02T16:28:06Z",
-   "road": "NORFOLK PKWY",
-   "roadShort": "Norfolk Pkwy",
-   "source": "FHP live CAD",
-   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-   "spot": "at Minton Rd",
-   "status": "flooded",
-   "title": "Road Closed Due To Water at NORFOLK PKWY x[MINTON RD] [WEST MELBOURNE] (Roadway Flooded - Seek Alternate Route)",
-   "to": "Culver Dr NE",
-   "where": "Norfolk Pkwy at Minton Rd",
-   "id": "brevard:fhp:20261102162806-33077554",
-   "updated": "2026-11-02T16:28:06Z",
-   "lastReported": "2026-11-02T16:28:06Z",
-   "firstReported": "2026-11-02T16:28:06Z",
-   "verified": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "kind": "feed",
-    "publishedAt": "2026-11-02T16:28:06Z"
-   },
-   "awaitingOfficial": true,
-   "missingSince": "2026-11-03T11:46:30Z",
-   "recheck": [],
-   "noLongerListed": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "since": "2026-11-03T11:46:30Z",
-    "wasClosed": true
-   }
   },
   {
    "from": "Carriage Gate Dr",
@@ -1093,40 +247,6 @@
   },
   {
    "fullClosure": false,
-   "lat": 28.3572401800615,
-   "layer": "FHP",
-   "lng": -80.6999319863702,
-   "reported": "2026-11-03T12:29:16Z",
-   "road": "N COURTENAY PKWY",
-   "roadShort": "N Courtenay Pkwy",
-   "source": "FHP live CAD",
-   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-   "spot": "at Merritt Island Cswy E",
-   "status": "caution",
-   "title": "MVC at N COURTENAY PKWY x[MERRITT ISLAND CSWY E] [MERRITT ISLAND]",
-   "where": "N Courtenay Pkwy at Merritt Island Cswy E",
-   "id": "brevard:fhp:20261103122916-8e730753",
-   "updated": "2026-11-03T12:29:16Z",
-   "lastReported": "2026-11-03T12:29:16Z",
-   "firstReported": "2026-11-03T12:29:16Z",
-   "verified": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "kind": "feed",
-    "publishedAt": "2026-11-03T12:29:16Z"
-   },
-   "awaitingOfficial": true,
-   "missingSince": "2026-11-03T12:46:41Z",
-   "recheck": [],
-   "noLongerListed": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "since": "2026-11-03T12:46:41Z",
-    "wasClosed": false
-   }
-  },
-  {
-   "fullClosure": false,
    "lanes": "No Roadblock",
    "lat": 28.3598662626263,
    "layer": "FHP",
@@ -1236,73 +356,6 @@
    "awaitingOfficial": false,
    "missingSince": null,
    "recheck": []
-  },
-  {
-   "from": "S Sail Dr",
-   "fullClosure": false,
-   "lanes": "Roadblock In The Intersection -- Use Caution",
-   "lat": 28.1403992270531,
-   "layer": "FHP",
-   "line": [
-    [
-     28.140548,
-     -80.587437
-    ],
-    [
-     28.140549,
-     -80.5874
-    ],
-    [
-     28.14056,
-     -80.586841
-    ],
-    [
-     28.140557,
-     -80.586781
-    ],
-    [
-     28.140546,
-     -80.586721
-    ],
-    [
-     28.140528,
-     -80.586681
-    ],
-    [
-     28.140499,
-     -80.586638
-    ]
-   ],
-   "lng": -80.5873962101033,
-   "reported": "2026-11-03T13:34:49Z",
-   "road": "ROYAL PALM AVE",
-   "roadShort": "Royal Palm Ave",
-   "source": "FHP live CAD",
-   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-   "spot": "at Bay View Dr",
-   "status": "closed",
-   "title": "Disabled Vehicle In Roadway at ROYAL PALM AVE x[BAY VIEW DR] [INDIAN HARBOUR BEA] (Roadblock In The Intersection -- Use Caution)",
-   "to": "Bel Aire Dr",
-   "where": "Royal Palm Ave at Bay View Dr",
-   "id": "brevard:fhp:20261103133449-db91abb0",
-   "updated": "2026-11-03T13:34:49Z",
-   "lastReported": "2026-11-03T13:34:49Z",
-   "firstReported": "2026-11-03T13:34:49Z",
-   "verified": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "kind": "feed",
-    "publishedAt": "2026-11-03T13:34:49Z"
-   },
-   "awaitingOfficial": true,
-   "missingSince": "2026-11-03T14:15:41Z",
-   "recheck": [],
-   "noLongerListed": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "since": "2026-11-03T14:15:41Z",
-    "wasClosed": true
-   }
   },
   {
    "fullClosure": true,
@@ -2700,8 +1753,8 @@
    "title": "MVC on SR-405 East, at Grissom Pkwy. Right shoulder blocked",
    "where": "SR-405 EB at Grissom Pkwy",
    "id": "brevard:fl511:938818",
-   "updated": "2026-11-03T13:45:00Z",
-   "lastReported": "2026-11-03T13:45:00Z",
+   "updated": "2026-11-03T14:29:00Z",
+   "lastReported": "2026-11-03T14:29:00Z",
    "firstReported": "2026-11-03T13:45:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
@@ -4000,7 +3053,968 @@
    ]
   }
  ],
- "reopened": [],
+ "reopened": [
+  {
+   "fullClosure": false,
+   "lat": 28.6181386341678,
+   "layer": "FHP",
+   "lng": -80.8511167860298,
+   "reported": "2026-11-02T08:01:32Z",
+   "road": "I-95 NB [MM220]",
+   "roadShort": "I-95 Nb [MM220]",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "spot": "at Mm220",
+   "status": "caution",
+   "title": "MVC at I-95 NB [MM220] x[MM220] [TITUSVILLE]",
+   "where": "I-95 Nb [MM220] at Mm220",
+   "id": "brevard:fhp:20261102080132-f45d9103",
+   "updated": "2026-11-02T08:03:14Z",
+   "lastReported": "2026-11-02T08:03:14Z",
+   "firstReported": "2026-11-02T08:03:14Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-02T08:03:14Z"
+   },
+   "reopenedAt": "2026-11-03T14:30:37Z",
+   "evidence": {
+    "agency": "Florida Highway Patrol",
+    "kind": "fhp-dropped",
+    "missingSince": "2026-11-03T10:40:48Z",
+    "reopenedAt": "2026-11-03T14:30:37Z",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
+   },
+   "stillReported": []
+  },
+  {
+   "from": "Shallow Creek Blvd",
+   "fullClosure": true,
+   "lanes": "Roadway Flooded - Seek Alternate Route",
+   "lat": 28.0434206060606,
+   "layer": "FHP",
+   "line": [
+    [
+     28.043502,
+     -80.686209
+    ],
+    [
+     28.043525,
+     -80.684216
+    ],
+    [
+     28.043618,
+     -80.679677
+    ],
+    [
+     28.043607,
+     -80.678954
+    ],
+    [
+     28.04347,
+     -80.677991
+    ],
+    [
+     28.043493,
+     -80.677327
+    ],
+    [
+     28.043492,
+     -80.676684
+    ],
+    [
+     28.043514,
+     -80.67553
+    ],
+    [
+     28.043529,
+     -80.675005
+    ],
+    [
+     28.043584,
+     -80.674202
+    ],
+    [
+     28.043618,
+     -80.67337
+    ],
+    [
+     28.043591,
+     -80.672348
+    ],
+    [
+     28.043635,
+     -80.671508
+    ],
+    [
+     28.04364,
+     -80.67142
+    ],
+    [
+     28.043636,
+     -80.671284
+    ],
+    [
+     28.043636,
+     -80.670485
+    ],
+    [
+     28.043658,
+     -80.66955
+    ],
+    [
+     28.043644,
+     -80.668682
+    ],
+    [
+     28.043617,
+     -80.667615
+    ],
+    [
+     28.043607,
+     -80.667155
+    ],
+    [
+     28.043505,
+     -80.66664
+    ],
+    [
+     28.043354,
+     -80.6662
+    ],
+    [
+     28.043171,
+     -80.665871
+    ],
+    [
+     28.042935,
+     -80.665552
+    ],
+    [
+     28.042599,
+     -80.665258
+    ],
+    [
+     28.042373,
+     -80.665073
+    ],
+    [
+     28.042107,
+     -80.664936
+    ],
+    [
+     28.041513,
+     -80.664745
+    ],
+    [
+     28.040171,
+     -80.664327
+    ],
+    [
+     28.040044,
+     -80.664288
+    ],
+    [
+     28.039813,
+     -80.66421
+    ],
+    [
+     28.039601,
+     -80.664136
+    ],
+    [
+     28.039332,
+     -80.66405
+    ],
+    [
+     28.039141,
+     -80.663966
+    ],
+    [
+     28.038931,
+     -80.663815
+    ],
+    [
+     28.038722,
+     -80.663676
+    ],
+    [
+     28.038544,
+     -80.663484
+    ],
+    [
+     28.038352,
+     -80.66326
+    ],
+    [
+     28.0382,
+     -80.66305
+    ],
+    [
+     28.038105,
+     -80.662947
+    ],
+    [
+     28.038037,
+     -80.662889
+    ],
+    [
+     28.037949,
+     -80.662817
+    ],
+    [
+     28.037877,
+     -80.662763
+    ],
+    [
+     28.037757,
+     -80.662674
+    ],
+    [
+     28.037646,
+     -80.662611
+    ],
+    [
+     28.03753,
+     -80.662567
+    ],
+    [
+     28.037426,
+     -80.662527
+    ],
+    [
+     28.037311,
+     -80.662473
+    ],
+    [
+     28.037267,
+     -80.66246
+    ],
+    [
+     28.037063,
+     -80.66242
+    ],
+    [
+     28.03692,
+     -80.662398
+    ],
+    [
+     28.036741,
+     -80.662399
+    ],
+    [
+     28.036541,
+     -80.662399
+    ],
+    [
+     28.036338,
+     -80.662395
+    ],
+    [
+     28.035852,
+     -80.662392
+    ],
+    [
+     28.035514,
+     -80.662409
+    ]
+   ],
+   "lng": -80.6714937607397,
+   "reported": "2026-11-02T16:28:06Z",
+   "road": "NORFOLK PKWY",
+   "roadShort": "Norfolk Pkwy",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "spot": "at Minton Rd",
+   "status": "flooded",
+   "title": "Road Closed Due To Water at NORFOLK PKWY x[MINTON RD] [WEST MELBOURNE] (Roadway Flooded - Seek Alternate Route)",
+   "to": "Culver Dr NE",
+   "where": "Norfolk Pkwy at Minton Rd",
+   "id": "brevard:fhp:20261102162806-33077554",
+   "updated": "2026-11-02T16:28:06Z",
+   "lastReported": "2026-11-02T16:28:06Z",
+   "firstReported": "2026-11-02T16:28:06Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-02T16:28:06Z"
+   },
+   "reopenedAt": "2026-11-03T14:30:37Z",
+   "evidence": {
+    "agency": "Florida Highway Patrol",
+    "kind": "fhp-dropped",
+    "missingSince": "2026-11-03T11:46:30Z",
+    "reopenedAt": "2026-11-03T14:30:37Z",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
+   },
+   "stillReported": [
+    {
+     "id": "brevard:manual:minton-rd-at-norfolk-pkwy",
+     "where": "Minton Rd at Norfolk Pkwy",
+     "source": "WESH 2 (via News Beep)",
+     "since": null
+    }
+   ]
+  },
+  {
+   "fullClosure": true,
+   "lanes": "Roadway Under Water At Entrance Ramp - Seek Alternate Route",
+   "lat": 28.0392217654809,
+   "layer": "FHP",
+   "lng": -80.6590090171911,
+   "reported": "2026-11-02T16:21:10Z",
+   "road": "PALM BAY RD NE [ENT RAMP TO]",
+   "roadShort": "Palm Bay Rd Ne [Ent Ramp To]",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "spot": "at I-95 Nb",
+   "status": "flooded",
+   "title": "Road Closed Due To Water at PALM BAY RD NE [ENT RAMP TO] x[I-95 NB] [WEST MELBOURNE] (Roadway Under Water At Entrance Ramp - Seek Alternate Route)",
+   "where": "Palm Bay Rd Ne [Ent Ramp To] at I-95 Nb",
+   "id": "brevard:fhp:20261102162110-aec17014",
+   "updated": "2026-11-02T16:21:10Z",
+   "lastReported": "2026-11-02T16:21:10Z",
+   "firstReported": "2026-11-02T16:21:10Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-02T16:21:10Z"
+   },
+   "reopenedAt": "2026-11-03T14:30:37Z",
+   "evidence": {
+    "agency": "Florida Highway Patrol",
+    "kind": "fhp-dropped",
+    "missingSince": "2026-11-03T13:46:49Z",
+    "reopenedAt": "2026-11-03T14:30:37Z",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
+   },
+   "stillReported": []
+  },
+  {
+   "from": "Aspinwall Ave",
+   "fullClosure": true,
+   "lanes": "Road Flooded - Seek Alt Route",
+   "lat": 28.2293062889767,
+   "layer": "FHP",
+   "line": [
+    [
+     28.228212,
+     -80.672586
+    ],
+    [
+     28.229381,
+     -80.673081
+    ],
+    [
+     28.229447,
+     -80.673109
+    ],
+    [
+     28.229555,
+     -80.673158
+    ],
+    [
+     28.230691,
+     -80.67363
+    ],
+    [
+     28.233289,
+     -80.674709
+    ],
+    [
+     28.234491,
+     -80.675209
+    ]
+   ],
+   "lng": -80.6733064581332,
+   "reported": "2026-11-02T14:08:44Z",
+   "road": "US-1",
+   "roadShort": "US-1",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "spot": "at Suntree Blvd",
+   "status": "flooded",
+   "title": "Road Closed Due To Water at US-1 x[SUNTREE BLVD] [ROCKLEDGE] (Road Flooded - Seek Alt Route)",
+   "to": "Ernest Sands Rd",
+   "where": "US-1 at Suntree Blvd",
+   "id": "brevard:fhp:20261102140844-7f3eaeca",
+   "updated": "2026-11-02T14:08:44Z",
+   "lastReported": "2026-11-02T14:08:44Z",
+   "firstReported": "2026-11-02T14:08:44Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-02T14:08:44Z"
+   },
+   "reopenedAt": "2026-11-03T14:30:37Z",
+   "evidence": {
+    "agency": "Florida Highway Patrol",
+    "kind": "fhp-dropped",
+    "missingSince": "2026-11-03T10:49:24Z",
+    "reopenedAt": "2026-11-03T14:30:37Z",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
+   },
+   "stillReported": [
+    {
+     "id": "brevard:manual:us-1-at-suntree-blvd",
+     "where": "US 1 at Suntree Blvd",
+     "source": "WESH 2 (via News Beep)",
+     "since": null
+    }
+   ]
+  },
+  {
+   "fullClosure": false,
+   "lanes": "Roiad Open",
+   "lat": 28.2614668686869,
+   "layer": "FHP",
+   "lng": -80.6879587657643,
+   "reported": "2026-11-02T09:15:36Z",
+   "road": "US-1",
+   "roadShort": "US-1",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "spot": "at Viera Blvd",
+   "status": "caution",
+   "title": "MVC at US-1 x[VIERA BLVD] [ROCKLEDGE] (Roiad Open)",
+   "where": "US-1 at Viera Blvd",
+   "id": "brevard:fhp:20261102091536-448b751d",
+   "updated": "2026-11-02T09:22:07Z",
+   "lastReported": "2026-11-02T09:22:07Z",
+   "firstReported": "2026-11-02T09:15:36Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-02T09:15:36Z"
+   },
+   "reopenedAt": "2026-11-03T14:30:37Z",
+   "evidence": {
+    "agency": "Florida Highway Patrol",
+    "kind": "fhp-dropped",
+    "missingSince": "2026-11-03T10:40:48Z",
+    "reopenedAt": "2026-11-03T14:30:37Z",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
+   },
+   "stillReported": []
+  },
+  {
+   "fullClosure": false,
+   "lanes": "No Roadblock",
+   "lat": 28.4051549099693,
+   "layer": "FHP",
+   "lng": -80.6525199250313,
+   "reported": "2026-11-02T11:55:10Z",
+   "road": "BEACHLINE EXPY WB (SR-528 WB) [MM52]",
+   "roadShort": "Beachline Expy Wb (SR-528 Wb) [MM52]",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "spot": "at Mm52",
+   "status": "caution",
+   "title": "MVC at BEACHLINE EXPY WB (SR-528 WB) [MM52] x[MM52] [MERRITT ISLAND] (No Roadblock)",
+   "where": "Beachline Expy Wb (SR-528 Wb) [MM52] at Mm52",
+   "id": "brevard:fhp:20261102115510-efe389ca",
+   "updated": "2026-11-02T11:55:10Z",
+   "lastReported": "2026-11-02T11:55:10Z",
+   "firstReported": "2026-11-02T11:55:10Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-02T11:55:10Z"
+   },
+   "reopenedAt": "2026-11-03T14:30:37Z",
+   "evidence": {
+    "agency": "Florida Highway Patrol",
+    "kind": "fhp-dropped",
+    "missingSince": "2026-11-03T10:40:48Z",
+    "reopenedAt": "2026-11-03T14:30:37Z",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
+   },
+   "stillReported": []
+  },
+  {
+   "fullClosure": false,
+   "lanes": "Roadway Open",
+   "lat": 28.1304866490997,
+   "layer": "FHP",
+   "lng": -80.7059541902203,
+   "reported": "2026-11-02T11:53:10Z",
+   "road": "I-95 NB [MM184]",
+   "roadShort": "I-95 Nb [MM184]",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "spot": "at Mm184",
+   "status": "caution",
+   "title": "MVC at I-95 NB [MM184] x[MM184] [MELBOURNE] (Roadway Open)",
+   "where": "I-95 Nb [MM184] at Mm184",
+   "id": "brevard:fhp:20261102115310-c358cd09",
+   "updated": "2026-11-02T11:53:10Z",
+   "lastReported": "2026-11-02T11:53:10Z",
+   "firstReported": "2026-11-02T11:53:10Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-02T11:53:10Z"
+   },
+   "reopenedAt": "2026-11-03T14:30:37Z",
+   "evidence": {
+    "agency": "Florida Highway Patrol",
+    "kind": "fhp-dropped",
+    "missingSince": "2026-11-03T10:40:48Z",
+    "reopenedAt": "2026-11-03T14:30:37Z",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
+   },
+   "stillReported": [
+    {
+     "id": "brevard:fl511:938041",
+     "where": "I-95 NB at MM 184",
+     "source": "FL511 (FDOT)",
+     "since": "2026-11-03T10:40:48Z"
+    }
+   ]
+  },
+  {
+   "from": "Haverhill Rd",
+   "fullClosure": false,
+   "lanes": "Partial Roadblock - Use Caution",
+   "lat": 28.4777264822134,
+   "layer": "FHP",
+   "line": [
+    [
+     28.477453,
+     -80.770267
+    ],
+    [
+     28.477743,
+     -80.769525
+    ],
+    [
+     28.477826,
+     -80.769275
+    ],
+    [
+     28.477868,
+     -80.769237
+    ],
+    [
+     28.477904,
+     -80.769204
+    ]
+   ],
+   "lng": -80.76903786308,
+   "reported": "2026-11-02T11:41:29Z",
+   "road": "FAY BLVD",
+   "roadShort": "Fay Blvd",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "spot": "at N Cocoa Blvd",
+   "status": "caution",
+   "title": "MVC W/Roadblock at FAY BLVD x[N COCOA BLVD] [COCOA] (Partial Roadblock - Use Caution)",
+   "to": "N Highway 1",
+   "where": "Fay Blvd at N Cocoa Blvd",
+   "id": "brevard:fhp:20261102114129-3a98442e",
+   "updated": "2026-11-02T11:42:17Z",
+   "lastReported": "2026-11-02T11:42:17Z",
+   "firstReported": "2026-11-02T11:42:17Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-02T11:42:17Z"
+   },
+   "reopenedAt": "2026-11-03T14:30:37Z",
+   "evidence": {
+    "agency": "Florida Highway Patrol",
+    "kind": "fhp-dropped",
+    "missingSince": "2026-11-03T10:40:48Z",
+    "reopenedAt": "2026-11-03T14:30:37Z",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
+   },
+   "stillReported": []
+  },
+  {
+   "fullClosure": false,
+   "lanes": "Debris In The Roadway Use Caution",
+   "lat": 28.4095070750988,
+   "layer": "FHP",
+   "lng": -80.8206074357304,
+   "reported": "2026-11-02T11:06:25Z",
+   "road": "I-95 SB [MM205]",
+   "roadShort": "I-95 Sb [MM205]",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "spot": "at Mm205",
+   "status": "caution",
+   "title": "Roadway Debris/Object at I-95 SB [MM205] x[MM205] [COCOA] (Debris In The Roadway Use Caution)",
+   "where": "I-95 Sb [MM205] at Mm205",
+   "id": "brevard:fhp:20261102110625-42190621",
+   "updated": "2026-11-02T11:06:25Z",
+   "lastReported": "2026-11-02T11:06:25Z",
+   "firstReported": "2026-11-02T11:06:25Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-02T11:06:25Z"
+   },
+   "reopenedAt": "2026-11-03T14:30:37Z",
+   "evidence": {
+    "agency": "Florida Highway Patrol",
+    "kind": "fhp-dropped",
+    "missingSince": "2026-11-03T10:40:48Z",
+    "reopenedAt": "2026-11-03T14:30:37Z",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
+   },
+   "stillReported": []
+  },
+  {
+   "from": "Deer Lakes Dr",
+   "fullClosure": false,
+   "lanes": "Roadblock",
+   "lat": 28.2009644971454,
+   "layer": "FHP",
+   "line": [
+    [
+     28.197341,
+     -80.67205
+    ],
+    [
+     28.198774,
+     -80.672049
+    ],
+    [
+     28.200463,
+     -80.672042
+    ],
+    [
+     28.200621,
+     -80.672066
+    ],
+    [
+     28.200845,
+     -80.67204
+    ],
+    [
+     28.200954,
+     -80.672023
+    ],
+    [
+     28.200972,
+     -80.67202
+    ],
+    [
+     28.201174,
+     -80.672068
+    ],
+    [
+     28.202222,
+     -80.672066
+    ],
+    [
+     28.202275,
+     -80.672066
+    ],
+    [
+     28.203104,
+     -80.672093
+    ],
+    [
+     28.203247,
+     -80.672098
+    ]
+   ],
+   "lng": -80.6721034952351,
+   "reported": "2026-11-02T13:12:13Z",
+   "road": "N WICKHAM RD",
+   "roadShort": "N Wickham Rd",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "spot": "at Pineda Cswy",
+   "status": "closed",
+   "title": "MVC W/Roadblock at N WICKHAM RD x[PINEDA CSWY] [MELBOURNE] (Roadblock)",
+   "to": "Windsor Estates Dr",
+   "where": "N Wickham Rd at Pineda Cswy",
+   "id": "brevard:fhp:20261102131213-1bc440e2",
+   "updated": "2026-11-02T13:17:10Z",
+   "lastReported": "2026-11-02T13:17:10Z",
+   "firstReported": "2026-11-02T13:12:13Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-02T13:12:13Z"
+   },
+   "reopenedAt": "2026-11-03T14:30:37Z",
+   "evidence": {
+    "agency": "Florida Highway Patrol",
+    "kind": "fhp-dropped",
+    "missingSince": "2026-11-03T10:40:48Z",
+    "reopenedAt": "2026-11-03T14:30:37Z",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
+   },
+   "stillReported": [
+    {
+     "id": "brevard:fl511:938153",
+     "where": "Wickham Rd SB at Pineda Causeway",
+     "source": "FL511 (FDOT)",
+     "since": "2026-11-03T10:40:48Z"
+    }
+   ]
+  },
+  {
+   "fullClosure": false,
+   "lat": 28.405322345191,
+   "layer": "FHP",
+   "lng": -80.6528467666249,
+   "reported": "2026-11-02T13:27:54Z",
+   "road": "SR-528 WB [MM52]",
+   "roadShort": "SR-528 Wb [MM52]",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "spot": "at Mm52",
+   "status": "caution",
+   "title": "MVC at SR-528 WB [MM52] x[MM52] [MERRITT ISLAND]",
+   "where": "SR-528 Wb [MM52] at Mm52",
+   "id": "brevard:fhp:20261102132754-e78cedd2",
+   "updated": "2026-11-02T13:27:54Z",
+   "lastReported": "2026-11-02T13:27:54Z",
+   "firstReported": "2026-11-02T13:27:54Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-02T13:27:54Z"
+   },
+   "reopenedAt": "2026-11-03T14:30:37Z",
+   "evidence": {
+    "agency": "Florida Highway Patrol",
+    "kind": "fhp-dropped",
+    "missingSince": "2026-11-03T10:40:48Z",
+    "reopenedAt": "2026-11-03T14:30:37Z",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
+   },
+   "stillReported": []
+  },
+  {
+   "fullClosure": false,
+   "lanes": "Roadblock",
+   "lat": 28.6455809793588,
+   "layer": "FHP",
+   "lng": -80.8615091958664,
+   "reported": "2026-11-02T13:57:23Z",
+   "road": "I-95 SB [MM222]",
+   "roadShort": "I-95 Sb [MM222]",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "spot": "at Mm222",
+   "status": "closed",
+   "title": "MVC W/Roadblock at I-95 SB [MM222] x[MM222] [TITUSVILLE] (Roadblock)",
+   "where": "I-95 Sb [MM222] at Mm222",
+   "id": "brevard:fhp:20261102135723-7b4b61d0",
+   "updated": "2026-11-02T13:57:23Z",
+   "lastReported": "2026-11-02T13:57:23Z",
+   "firstReported": "2026-11-02T13:57:23Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-02T13:57:23Z"
+   },
+   "reopenedAt": "2026-11-03T14:30:37Z",
+   "evidence": {
+    "agency": "Florida Highway Patrol",
+    "kind": "fhp-dropped",
+    "missingSince": "2026-11-03T10:40:48Z",
+    "reopenedAt": "2026-11-03T14:30:37Z",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
+   },
+   "stillReported": [
+    {
+     "id": "brevard:fl511:938170",
+     "where": "I-95 SB at MM 222",
+     "source": "FL511 (FDOT)",
+     "since": "2026-11-03T10:40:48Z"
+    }
+   ]
+  },
+  {
+   "fullClosure": false,
+   "lanes": "No Road Block",
+   "lat": 28.6588670750988,
+   "layer": "FHP",
+   "lng": -80.8667062405654,
+   "reported": "2026-11-02T13:57:23Z",
+   "road": "I-95 NB [MM223]",
+   "roadShort": "I-95 Nb [MM223]",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "spot": "at Mm223",
+   "status": "caution",
+   "title": "MVC at I-95 NB [MM223] x[MM223] [MIMS] (No Road Block)",
+   "where": "I-95 Nb [MM223] at Mm223",
+   "id": "brevard:fhp:20261102135723-fe328670",
+   "updated": "2026-11-02T13:57:23Z",
+   "lastReported": "2026-11-02T13:57:23Z",
+   "firstReported": "2026-11-02T13:57:23Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-02T13:57:23Z"
+   },
+   "reopenedAt": "2026-11-03T14:30:37Z",
+   "evidence": {
+    "agency": "Florida Highway Patrol",
+    "kind": "fhp-dropped",
+    "missingSince": "2026-11-03T10:40:48Z",
+    "reopenedAt": "2026-11-03T14:30:37Z",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
+   },
+   "stillReported": []
+  },
+  {
+   "fullClosure": false,
+   "lanes": "Roadway Clear",
+   "lat": 28.3557158761528,
+   "layer": "FHP",
+   "lng": -80.7551646812108,
+   "reported": "2026-11-02T14:14:28Z",
+   "road": "W KING ST",
+   "roadShort": "W King St",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "spot": "at Clearlake Rd",
+   "status": "caution",
+   "title": "MVC at W KING ST x[CLEARLAKE RD] [COCOA] (Roadway Clear)",
+   "where": "W King St at Clearlake Rd",
+   "id": "brevard:fhp:20261102141428-7174b51b",
+   "updated": "2026-11-02T14:14:28Z",
+   "lastReported": "2026-11-02T14:14:28Z",
+   "firstReported": "2026-11-02T14:14:28Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-02T14:14:28Z"
+   },
+   "reopenedAt": "2026-11-03T14:30:37Z",
+   "evidence": {
+    "agency": "Florida Highway Patrol",
+    "kind": "fhp-dropped",
+    "missingSince": "2026-11-03T10:40:48Z",
+    "reopenedAt": "2026-11-03T14:30:37Z",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
+   },
+   "stillReported": []
+  },
+  {
+   "fullClosure": false,
+   "lat": 28.3572401800615,
+   "layer": "FHP",
+   "lng": -80.6999319863702,
+   "reported": "2026-11-03T12:29:16Z",
+   "road": "N COURTENAY PKWY",
+   "roadShort": "N Courtenay Pkwy",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "spot": "at Merritt Island Cswy E",
+   "status": "caution",
+   "title": "MVC at N COURTENAY PKWY x[MERRITT ISLAND CSWY E] [MERRITT ISLAND]",
+   "where": "N Courtenay Pkwy at Merritt Island Cswy E",
+   "id": "brevard:fhp:20261103122916-8e730753",
+   "updated": "2026-11-03T12:29:16Z",
+   "lastReported": "2026-11-03T12:29:16Z",
+   "firstReported": "2026-11-03T12:29:16Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-03T12:29:16Z"
+   },
+   "reopenedAt": "2026-11-03T14:30:37Z",
+   "evidence": {
+    "agency": "Florida Highway Patrol",
+    "kind": "fhp-dropped",
+    "missingSince": "2026-11-03T12:46:41Z",
+    "reopenedAt": "2026-11-03T14:30:37Z",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
+   },
+   "stillReported": []
+  },
+  {
+   "from": "S Sail Dr",
+   "fullClosure": false,
+   "lanes": "Roadblock In The Intersection -- Use Caution",
+   "lat": 28.1403992270531,
+   "layer": "FHP",
+   "line": [
+    [
+     28.140548,
+     -80.587437
+    ],
+    [
+     28.140549,
+     -80.5874
+    ],
+    [
+     28.14056,
+     -80.586841
+    ],
+    [
+     28.140557,
+     -80.586781
+    ],
+    [
+     28.140546,
+     -80.586721
+    ],
+    [
+     28.140528,
+     -80.586681
+    ],
+    [
+     28.140499,
+     -80.586638
+    ]
+   ],
+   "lng": -80.5873962101033,
+   "reported": "2026-11-03T13:34:49Z",
+   "road": "ROYAL PALM AVE",
+   "roadShort": "Royal Palm Ave",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "spot": "at Bay View Dr",
+   "status": "closed",
+   "title": "Disabled Vehicle In Roadway at ROYAL PALM AVE x[BAY VIEW DR] [INDIAN HARBOUR BEA] (Roadblock In The Intersection -- Use Caution)",
+   "to": "Bel Aire Dr",
+   "where": "Royal Palm Ave at Bay View Dr",
+   "id": "brevard:fhp:20261103133449-db91abb0",
+   "updated": "2026-11-03T13:34:49Z",
+   "lastReported": "2026-11-03T13:34:49Z",
+   "firstReported": "2026-11-03T13:34:49Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-03T13:34:49Z"
+   },
+   "reopenedAt": "2026-11-03T14:30:37Z",
+   "evidence": {
+    "agency": "Florida Highway Patrol",
+    "kind": "fhp-dropped",
+    "missingSince": "2026-11-03T14:15:41Z",
+    "reopenedAt": "2026-11-03T14:30:37Z",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
+   },
+   "stillReported": []
+  }
+ ],
  "sources": {
   "fhp": {
    "state": "up",
@@ -4030,91 +4044,6 @@
    "expires": "2026-11-03T19:30:00-05:00",
    "description": "* WHAT...Dangerous rip currents.\n\n* WHERE...Coastal Volusia, Coastal Indian River, and Coastal\nBrevard Counties.\n\n* WHEN...Through late Wednesday night.\n\n* IMPACTS...Rip currents can sweep even the best swimmers away\nfrom shore into deeper water. Rough breaking surf of 4 to 6 feet\nexpected.",
    "geometry": null
-  },
-  {
-   "id": "urn:oid:2.49.0.1.840.0.d5ec6e3e784e6ff98f3e5e84286ac912f718d375.001.1",
-   "event": "Flood Warning",
-   "severity": "Severe",
-   "headline": "Flood Warning issued November 2 at 9:15PM EST until November 3 at 9:30AM EST by NWS Melbourne FL",
-   "areas": "Brevard, FL; Indian River, FL; Martin, FL; St. Lucie, FL",
-   "effective": "2026-11-02T21:15:00-05:00",
-   "expires": "2026-11-03T09:30:00-05:00",
-   "description": "* WHAT...Flooding caused by excessive rainfall is expected.\n\n* WHERE...Southeastern Brevard County in east central Florida...\nEastern Indian River County in east central Florida...\nNortheastern Martin County in east central Florida...\nSt. Lucie County in east central Florida...\n\n* WHEN...Until 930 AM EST Tuesday.\n\n* IMPACTS...Flooding of rivers, creeks, streams, and other low-lying\nand flood-prone locations is imminent or occurring. It will take\nseveral hours for all the water from the heavy rain that has\nalready fallen to work through local drainage systems in urban\nareas.\n\n* ADDITIONAL DETAILS...\n- At 914 PM EST, Flooding is already occurring in the warned area.\nDoppler radar and automated rain gauges indicated additional\ndownpours developing and moving over already saturated ground.\n- This replaces the existing Flood Warning. If heavy rain persists,\nadditional Flash Flood Warnings may be required overnight.\n- Some locations that will experience flooding include...\nPort Saint Lucie, Palm Bay, Melbourne, Walton, Fort Pierce,\nSebastian, Stuart, Vero Beach, Satellite Beach, Fellsmere, Indian\nRiver Shores, Malabar, Indialantic, Vero Beach South, Gifford,\nWinter Beach, Wabasso, Sebast",
-   "geometry": {
-    "type": "Polygon",
-    "coordinates": [
-     [
-      [
-       -80.83,
-       28.26
-      ],
-      [
-       -80.58,
-       28.27
-      ],
-      [
-       -80.57,
-       28.19
-      ],
-      [
-       -80.52,
-       28.09
-      ],
-      [
-       -80.43,
-       27.89
-      ],
-      [
-       -80.42,
-       27.88
-      ],
-      [
-       -80.36,
-       27.75
-      ],
-      [
-       -80.34,
-       27.69
-      ],
-      [
-       -80.31,
-       27.58
-      ],
-      [
-       -80.3,
-       27.58
-      ],
-      [
-       -80.12,
-       27.09
-      ],
-      [
-       -80.23,
-       27.11
-      ],
-      [
-       -80.47,
-       27.1
-      ],
-      [
-       -80.64,
-       27.54
-      ],
-      [
-       -80.63,
-       27.83
-      ],
-      [
-       -80.78,
-       27.95
-      ],
-      [
-       -80.83,
-       28.26
-      ]
-     ]
-    ]
-   }
   },
   {
    "id": "urn:oid:2.49.0.1.840.0.72a0e8919d39028d187b8c049a71412bddbfceb7.001.1",
