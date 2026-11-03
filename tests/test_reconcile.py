@@ -89,7 +89,16 @@ cases = [("MVC", "No Roadblock", "caution", False, False), ("MVC", "No Road Bloc
          ("MVC", "Road Blocked", "closed", True, True), ("MVC", "All Lanes Blocked", "closed", True, True),
          ("ROAD CLOSED", "", "closed", True, True), ("MVC", "Roadway Open", "caution", False, False),
          ("MVC W/Roadblock", "Roadway Open", "caution", False, False), ("MVC", "Right lane blocked", "caution", False, False),
-         ("MVC", "Water over roadway", "flooded", False, False)]
+         ("MVC", "Water over roadway", "flooded", False, False),
+         ("MVC", "Right lane closed", "caution", False, False), ("MVC", "Left two lanes closed", "caution", False, False),
+         ("MVC", "Road not closed", "caution", False, False), ("MVC", "Not all lanes closed", "caution", False, False),
+         ("MVC", "Right shoulder blocked", "caution", False, False), ("MVC", "Ramp closed", "caution", False, False),
+         ("MVC W/Roadblock", "Right lane blocked", "caution", False, False),
+         ("MVC", "All lanes closed NB, SB open", "caution", False, False),
+         ("MVC", "Roadway closed", "closed", True, True), ("MVC", "All lanes are blocked", "closed", True, True),
+         ("Road Closed Due To Water", "Southbound Lanes Under Water Use Caution", "flooded", True, True),
+         ("Road Closed Due To Water", "", "flooded", True, True), ("Roadway Debris/Object", "Debris In The Roadway Use Caution",
+                                                                 "caution", False, False)]
 bad = [c for c in cases if (*R.fhp_classify(c[0], c[1]), page_closed(*R.fhp_classify(c[0], c[1]))) != c[2:]]
 check(f"FHP rows: negated/partial roadblock is never closed on the page; full closure needs explicit wording ({bad})",
       not bad)

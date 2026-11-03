@@ -24,27 +24,37 @@ ANOMALY_MIN = 3  # an empty feed while we hold at least this many of its records
 
 
 _FHP_NOT_FULL = re.compile(r"\b(?:NO|W/?O|WITHOUT|PARTIAL)\s+ROAD\s*BLOCK(?:ED)?", re.I)
-_FHP_FULL = re.compile(r"\bCLOSED\b|\bROAD\s+BLOCKED\b|\bALL\s+LANES\s+(?:CLOSED|BLOCKED)\b", re.I)
+_FHP_NEGATED = re.compile(r"\bNOT\b", re.I)
+_FHP_TYPE_FULL = re.compile(r"^\s*ROAD(?:WAY)?\s+CLOSED\b", re.I)  # CAD types ROAD CLOSED, ROAD CLOSED DUE TO WATER
+_FHP_FULL = re.compile(r"\bROAD(?:WAY)?\s+(?:IS\s+)?(?:CLOSED|BLOCKED)\b|\bALL\s+LANES\s+(?:ARE\s+)?(?:CLOSED|BLOCKED)\b",
+                       re.I)
+_FHP_PART = re.compile(r"\b(?:RIGHT|LEFT|CENTER|MIDDLE|INSIDE|OUTSIDE|ONE|TWO|THREE|SOME|\d+)\s+(?:\w+\s+)?LANES?\b"
+                       r"|\bSHOULDER\b|\bRAMP\b", re.I)
+_FHP_DIR = re.compile(r"\b(?:[NSEW]B|NORTH|SOUTH|EAST|WEST)(?:BOUND)?\b", re.I)
 _FHP_BLOCK = re.compile(r"\bROAD\s*BLOCK(?:ED)?\b", re.I)
-_FHP_OPEN = re.compile(r"\bROA?I?D(?:WAY)?\s+(?:OPEN|CLEAR)\b", re.I)
+_FHP_OPEN = re.compile(r"\bOPEN\b|\bROA?I?D(?:WAY)?\s+CLEAR\b", re.I)
 
 
 def fhp_classify(typ: str, remark: str) -> tuple[str, bool]:
     """FHP CAD row -> (status, fullClosure), the one classification the updater and the migration use.
-    Full closure needs explicit wording (CLOSED, ROAD BLOCKED, ALL LANES CLOSED/BLOCKED). A generic ROADBLOCK makes
-    the row closed but not proof that every lane is shut. An explicit NO / W/O / WITHOUT / PARTIAL ROADBLOCK anywhere
-    in the row is the source's own meaning: it overrides a generic ROADBLOCK, so the row stays a visible caution
-    with the source's wording, never a closure. 'Roadway open' wording is a caution too (never an all-clear)."""
-    text = f"{typ or ''} {remark or ''}"
-    negated = bool(_FHP_NOT_FULL.search(text))
-    rest = _FHP_NOT_FULL.sub(" ", text)
+    Only a closed-road vocabulary makes a full closure: the CAD type ROAD CLOSED (... DUE TO WATER), or a remark saying
+    ROAD/ROADWAY CLOSED or BLOCKED or ALL LANES CLOSED/BLOCKED, with no NOT, no lane or shoulder scope, and no
+    direction left open. A generic ROADBLOCK makes the row closed, not full. Any explicit negation (NOT, NO / W/O /
+    WITHOUT / PARTIAL ROADBLOCK), lane scope ('Right lane closed') or 'open' wording keeps it a visible caution with
+    the source's wording: ambiguity is shown as a hazard, never promoted to a closure."""
+    remark = remark or ""
+    text = f"{typ or ''} {remark}"
+    negated = bool(_FHP_NOT_FULL.search(text) or _FHP_NEGATED.search(text))
+    scoped = bool(_FHP_PART.search(remark) or (_FHP_DIR.search(remark) and _FHP_OPEN.search(remark)))
+    said_full = bool(_FHP_FULL.search(remark)) and not (negated or scoped)
+    full = bool(_FHP_TYPE_FULL.search(typ or "")) or said_full
     if re.search(r"flood|water", text, re.I):
         status = "flooded"
-    elif _FHP_FULL.search(rest) or (_FHP_BLOCK.search(rest) and not negated and not _FHP_OPEN.search(text)):
+    elif full or (_FHP_BLOCK.search(_FHP_NOT_FULL.sub(" ", text)) and not (negated or scoped or _FHP_OPEN.search(text))):
         status = "closed"
     else:
         status = "caution"
-    return status, bool(_FHP_FULL.search(rest))
+    return status, full
 
 
 def fhp_normalize(it: dict) -> dict | None:
