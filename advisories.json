@@ -54,22 +54,10 @@
   "url": "https://mynews13.com/fl/orlando/news/2026/11/03/heavy-rain-floods-roads-strands-drivers-and-damages-homes-across-brevard-county"
  },
  {
-  "agency": "Brevard County Supervisor of Elections (via Florida Today/Yahoo News)",
-  "time": "2026-11-02T16:02:00Z",
-  "text": "Because of flooding, the Supervisor of Elections offices in Titusville, Melbourne and Palm Bay are closed to the public until further notice. The Viera office at 2725 Judge Fran Jamieson Way is open, and its secure ballot intake station is taking completed mail ballots.",
-  "url": "https://www.yahoo.com/news/weather-news/articles/brevard-voting-sites-expected-open-160252636.html"
- },
- {
   "agency": "Brevard County Sheriff's Office (via Space Coast Daily)",
   "time": "2026-11-03T05:00:02Z",
   "text": "Sheriff Wayne Ivey says courts will be back in session Tuesday, Nov. 3, and many government offices are expected to reopen as flooding damage is assessed. Brevard Public Schools stay closed Tuesday so the district can inspect buildings. The full extent of flood damage is not yet known, so residents should stay off the roads unless they need to travel.",
   "url": "https://spacecoastdaily.com/2026/11/brevard-public-schools-to-remain-closed-tuesday-as-courts-and-government-offices-reopen/"
- },
- {
-  "agency": "City of Melbourne (via WESH 2/News Beep)",
-  "time": "2026-11-02T16:00:00Z",
-  "text": "Melbourne is under a boil water notice.",
-  "url": "https://www.newsbeep.com/795319/"
  },
  {
   "agency": "Brevard County Emergency Management (via Above the Norm News)",
@@ -87,6 +75,24 @@
   "agency": "City of Palm Bay (via News 6 WKMG)",
   "time": "2026-11-02T20:00:00Z",
   "text": "Boil water notice now in effect: after the water main break, some Palm Bay customers have no water while others do. Everyone in the expanded affected area must boil water for drinking, cooking and brushing teeth until the city lifts the notice. Flooded, unsafe conditions may delay repairs and getting water back.",
+  "url": "https://www.clickorlando.com/news/local/2026/11/02/brevard-county-schools-closed-amid-flash-flood-warning-heavy-rain/"
+ },
+ {
+  "agency": "City of West Melbourne",
+  "time": "2026-11-02T21:00:00Z",
+  "text": "The boil water notice now covers all West Melbourne water customers. It replaces the earlier notice, which covered only the area south of US 192 and east of Hollywood Blvd. The City of Melbourne, which supplies West Melbourne's water, reported a water main break whose exact location is not yet known. Boil all water for drinking, cooking, making ice, brushing teeth and washing dishes, or use bottled water, until the city says the water is safe.",
+  "url": "https://westmelbourne.gov/905/Emergency-Information"
+ },
+ {
+  "agency": "City of Melbourne (via News 6 WKMG)",
+  "time": "2026-11-03T00:00:00Z",
+  "text": "A water main break in Melbourne's system has cut water pressure, and in some cases all water service, for customers in Indialantic, Indian Harbour Beach, Melbourne Beach, Satellite Beach and some unincorporated areas that get their water from the City of Melbourne.",
+  "url": "https://www.clickorlando.com/news/local/2026/11/02/brevard-county-schools-closed-amid-flash-flood-warning-heavy-rain/"
+ },
+ {
+  "agency": "City of Cocoa Beach (via News 6 WKMG)",
+  "time": "2026-11-03T00:00:00Z",
+  "text": "Too much water is flowing into the Cocoa Beach wastewater treatment plant and lift stations. Residents, especially in the south end and Snug Harbor, are asked to limit nonessential water use.",
   "url": "https://www.clickorlando.com/news/local/2026/11/02/brevard-county-schools-closed-amid-flash-flood-warning-heavy-rain/"
  }
 ]
