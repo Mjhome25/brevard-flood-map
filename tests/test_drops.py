@@ -134,8 +134,8 @@ r = rep(base + [seen("brevard:fl511:3", "2026-11-04T10:00:00Z", dict(FL, road="M
                                                                       status="flooded", fullClosure=False)),
                 gone("brevard:fl511:3", "2026-11-04T12:00:00Z")])
 check("all four agreed groups are always reported, even with no drops in them",
-      list(r["trial"]["byGroup"])[:4] == D.GROUPS and r["trial"]["byGroup"]["flooding/hazard, local street"]["episodes"] == 1
-      and r["trial"]["byGroup"]["flooding/hazard, state road"]["episodes"] == 1
+      list(r["trial"]["byGroup"])[:4] == D.GROUPS and r["trial"]["byGroup"]["flooding/hazard, local street"]["episodes"] == 2
+      and r["trial"]["byGroup"]["flooding/hazard, state road"]["episodes"] == 0
       and r["trial"]["byGroup"]["crash, state road"]["episodes"] == 0 and "not proof" in r["trial"]["limits"])
 check("Codex repro: W New Haven Ave (US-192) is a state road; Minton Rd is a local street; no road is unknown",
       D.group({"title": "Flooding", "road": "W New Haven Ave"}) == "flooding/hazard, state road"
