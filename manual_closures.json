@@ -1084,5 +1084,23 @@
   "note": "On West Melbourne's 8 a.m. Tuesday closure list. I could not confirm where Morris Ct is, so the pin is only a rough spot near US 192 in West Melbourne and needs checking. Pin approximate.",
   "id": "man-haven-dr-at-morris-ct-west-melbourne",
   "updated": "2026-11-03T13:00:00Z"
+ },
+ {
+  "road": "I-95 off-ramps to Ellis Rd",
+  "where": "I-95 NB and SB off-ramps, turn lanes to EB Ellis Rd, Melbourne",
+  "title": "I-95 off-ramp turn lanes to eastbound Ellis Rd closed by flooding",
+  "city": "Melbourne",
+  "status": "closed",
+  "fullClosure": false,
+  "lanes": "Turn lanes from the NB and SB I-95 off-ramps onto EB Ellis Rd are closed",
+  "lat": 28.1045,
+  "lng": -80.6905,
+  "approx": true,
+  "source": "City of Melbourne (via Spectrum News 13)",
+  "sourceUrl": "https://mynews13.com/fl/orlando/news/2026/11/03/several-roads-remain-closed-in-melbourne-due-to-severe-flooding",
+  "reported": "2026-11-03T20:38:00Z",
+  "note": "Spectrum News 13 updated its story at 3:38 PM ET and added this item to the City of Melbourne's list. It says the turn lanes are closed because flooding is affecting eastbound travel on Ellis Rd. The coordinates are approximate, near the I-95 / Ellis Rd–NASA Blvd interchange. In the same update the city also says some roads reopened Tuesday, but it does not name them.",
+  "id": "man-i-95-nb-and-sb-off-ramps-turn-lanes-to-e",
+  "updated": "2026-11-03T20:38:00Z"
  }
 ]

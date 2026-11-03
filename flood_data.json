@@ -1,6 +1,8 @@
 {
- "generated": "2026-11-03T21:45:42Z",
- "errors": [],
+ "generated": "2026-11-03T22:01:47Z",
+ "errors": [
+  "FL511 map locations: 1 report(s) without a pin"
+ ],
  "items": [
   {
    "fullClosure": true,
@@ -1104,9 +1106,15 @@
     "kind": "feed",
     "publishedAt": "2026-11-03T09:37:20Z"
    },
-   "awaitingOfficial": false,
-   "missingSince": null,
-   "recheck": []
+   "awaitingOfficial": true,
+   "missingSince": "2026-11-03T22:01:57Z",
+   "recheck": [],
+   "noLongerListed": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "since": "2026-11-03T22:01:57Z",
+    "wasClosed": true
+   }
   },
   {
    "from": "Lakes Of Melbourne Dr",
@@ -1737,8 +1745,8 @@
    "to": "Pine St",
    "where": "US-192 EB at Minton Rd/S Wickham Rd",
    "id": "brevard:fl511:937010",
-   "updated": "2026-11-03T21:12:00Z",
-   "lastReported": "2026-11-03T21:12:00Z",
+   "updated": "2026-11-03T21:53:00Z",
+   "lastReported": "2026-11-03T21:53:00Z",
    "firstReported": "2026-11-02T19:54:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
@@ -2003,8 +2011,8 @@
    "to": "Circle Dr",
    "where": "US-192 EB beyond Coastal Ln",
    "id": "brevard:fl511:937141",
-   "updated": "2026-11-03T21:13:00Z",
-   "lastReported": "2026-11-03T21:13:00Z",
+   "updated": "2026-11-03T21:53:00Z",
+   "lastReported": "2026-11-03T21:53:00Z",
    "firstReported": "2026-11-02T19:54:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
@@ -2161,8 +2169,8 @@
    "to": "Coastal Ln",
    "where": "US-192 WB at S John Rodes Blvd",
    "id": "brevard:fl511:937222",
-   "updated": "2026-11-03T21:01:00Z",
-   "lastReported": "2026-11-03T21:01:00Z",
+   "updated": "2026-11-03T21:54:00Z",
+   "lastReported": "2026-11-03T21:54:00Z",
    "firstReported": "2026-11-02T19:54:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
@@ -2513,8 +2521,8 @@
    "to": "Highway 1",
    "where": "SR-514 EB at US-1",
    "id": "brevard:fl511:937844",
-   "updated": "2026-11-03T21:12:00Z",
-   "lastReported": "2026-11-03T21:12:00Z",
+   "updated": "2026-11-03T21:53:00Z",
+   "lastReported": "2026-11-03T21:53:00Z",
    "firstReported": "2026-11-02T23:15:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
@@ -3926,6 +3934,35 @@
    }
   },
   {
+   "dir": "both directions",
+   "fullClosure": false,
+   "lat": 28.3577300000001,
+   "layer": "Incidents",
+   "lng": -80.6230234699472,
+   "reported": "2026-11-03T21:52:00Z",
+   "road": "SR-520",
+   "roadShort": "SR-520",
+   "source": "FL511 (FDOT)",
+   "sourceUrl": "https://fl511.com",
+   "spot": "At John Horne Dr",
+   "status": "flooded",
+   "title": "Flooding on SR-520 Both Directions At John Horne Dr.",
+   "where": "SR-520 both directions At John Horne Dr",
+   "id": "brevard:fl511:939664",
+   "updated": "2026-11-03T21:53:00Z",
+   "lastReported": "2026-11-03T21:53:00Z",
+   "firstReported": "2026-11-03T21:53:00Z",
+   "verified": {
+    "agency": "FL511 (FDOT)",
+    "url": "https://fl511.com",
+    "kind": "feed",
+    "publishedAt": "2026-11-03T21:53:00Z"
+   },
+   "awaitingOfficial": false,
+   "missingSince": null,
+   "recheck": []
+  },
+  {
    "approx": true,
    "city": "Patrick SFB / Satellite Beach",
    "fullClosure": false,
@@ -4893,6 +4930,31 @@
    "updated": "2026-11-03T13:00:00Z",
    "lastReported": "2026-11-03T13:00:00Z",
    "firstReported": "2026-11-03T13:00:00Z",
+   "verified": null,
+   "awaitingOfficial": false,
+   "missingSince": null,
+   "recheck": []
+  },
+  {
+   "approx": true,
+   "city": "Melbourne",
+   "fullClosure": false,
+   "lanes": "Turn lanes from the NB and SB I-95 off-ramps onto EB Ellis Rd are closed",
+   "lat": 28.1045,
+   "layer": "manual",
+   "lng": -80.6905,
+   "note": "Spectrum News 13 updated its story at 3:38 PM ET and added this item to the City of Melbourne's list. It says the turn lanes are closed because flooding is affecting eastbound travel on Ellis Rd. The coordinates are approximate, near the I-95 / Ellis Rd\u2013NASA Blvd interchange. In the same update the city also says some roads reopened Tuesday, but it does not name them.",
+   "reported": "2026-11-03T20:38:00Z",
+   "road": "I-95 off-ramps to Ellis Rd",
+   "source": "City of Melbourne (via Spectrum News 13)",
+   "sourceUrl": "https://mynews13.com/fl/orlando/news/2026/11/03/several-roads-remain-closed-in-melbourne-due-to-severe-flooding",
+   "status": "closed",
+   "title": "I-95 off-ramp turn lanes to eastbound Ellis Rd closed by flooding",
+   "where": "I-95 NB and SB off-ramps, turn lanes to EB Ellis Rd, Melbourne",
+   "id": "brevard:manual:i-95-nb-and-sb-off-ramps-turn-lanes-to-e",
+   "updated": "2026-11-03T20:38:00Z",
+   "lastReported": "2026-11-03T20:38:00Z",
+   "firstReported": "2026-11-03T20:38:00Z",
    "verified": null,
    "awaitingOfficial": false,
    "missingSince": null,
@@ -7250,12 +7312,6 @@
  ],
  "advisories": [
   {
-   "agency": "State of Florida, Governor's Office (via WFTV)",
-   "time": "2026-11-02T22:00:00Z",
-   "text": "State of emergency declared for Brevard and six other counties (Executive Order 26-227) because of flooding. Effective immediately for 60 days; includes price-gouging protections.",
-   "url": "https://www.wftv.com/news/local/desantis-declares-state-emergency-7-florida-counties-after-severe-flooding/PXEG7FBYZZCWDKNC4PUQMTZ7P4/"
-  },
-  {
    "agency": "Brevard Public Schools (via Florida Today/Yahoo News)",
    "time": "2026-11-02T22:16:00Z",
    "text": "Because of the extent of flooding across the county, all Brevard Public Schools campuses and district offices will stay closed Tuesday, Nov. 3. Schools are expected to reopen Wednesday.",
@@ -7280,12 +7336,6 @@
    "url": "https://spacecoastdaily.com/2026/11/brevard-public-schools-to-remain-closed-tuesday-as-courts-and-government-offices-reopen/"
   },
   {
-   "agency": "Eastern Florida State College (via Space Coast Daily)",
-   "time": "2026-11-02T22:00:00Z",
-   "text": "Eastern Florida State College stays closed Tuesday, Nov. 3, because of flooding.",
-   "url": "https://spacecoastdaily.com/2026/11/city-of-melbourne-reports-multiple-road-closures-urges-residents-to-shelter-in-place/"
-  },
-  {
    "agency": "City of Melbourne (via News 6 WKMG)",
    "time": "2026-11-03T00:00:00Z",
    "text": "A water main break in Melbourne's system has cut water pressure, and in some cases all water service, for customers in Indialantic, Indian Harbour Beach, Melbourne Beach, Satellite Beach and some unincorporated areas that get their water from the City of Melbourne.",
@@ -7308,6 +7358,12 @@
    "time": "2026-11-03T13:17:00Z",
    "text": "Several Melbourne roads are still fully closed because floodwater has not drained. Many abandoned vehicles are still blocking roads and slowing emergency response.",
    "url": "https://www.melbourneflorida.org/Government/City-News/Traffic-Advisories"
+  },
+  {
+   "agency": "Brevard Public Schools (via Florida Today/Yahoo News)",
+   "time": "2026-11-03T20:40:00Z",
+   "text": "Brevard Public Schools will stay closed for a third day in a row on Wednesday, Nov. 4. A district spokesperson said campus damage, flooded roads and water service outages mean the district can't open safely. District crews are continuing inspections, repairs and cleanup to get campuses ready to reopen.",
+   "url": "https://www.yahoo.com/news/weather-news/articles/brevard-schools-closes-wednesday-amid-204022828.html"
   }
  ]
 }
