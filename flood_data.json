@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-03T13:46:43Z",
+ "generated": "2026-11-03T14:00:50Z",
  "errors": [
   "FL511 Closures: 'NoneType' object has no attribute 'group'"
  ],
@@ -1320,6 +1320,34 @@
     "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
     "kind": "feed",
     "publishedAt": "2026-11-03T13:35:27Z"
+   },
+   "awaitingOfficial": false,
+   "missingSince": null,
+   "recheck": []
+  },
+  {
+   "fullClosure": false,
+   "lanes": "Vehicle In Roadway -- Use Caution",
+   "lat": 28.0936537373737,
+   "layer": "FHP",
+   "lng": -80.6803231109547,
+   "reported": "2026-11-03T13:56:33Z",
+   "road": "7693 GREENBORO DR [WEST MELBOURNE]",
+   "roadShort": "7693 Greenboro Dr [West Melbourne]",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "status": "caution",
+   "title": "Disabled Vehicle In Roadway at 7693 GREENBORO DR [WEST MELBOURNE] (Vehicle In Roadway -- Use Caution)",
+   "where": "7693 Greenboro Dr [West Melbourne]",
+   "id": "brevard:fhp:20261103135633-30a75736",
+   "updated": "2026-11-03T13:56:33Z",
+   "lastReported": "2026-11-03T13:56:33Z",
+   "firstReported": "2026-11-03T13:56:33Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-03T13:56:33Z"
    },
    "awaitingOfficial": false,
    "missingSince": null,
