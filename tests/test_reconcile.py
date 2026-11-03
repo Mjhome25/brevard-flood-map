@@ -151,10 +151,10 @@ check("the updater no longer drops incidents by a third time column", "t_clr" no
 import verify as V  # noqa: E402
 NOWV = datetime.datetime(2026, 11, 3, 12, 0, tzinfo=datetime.timezone.utc)
 MEL = "https://www.melbourneflorida.org/Government/City-News/Traffic-Advisories/Road-Closures"
-PAGE = ("<html><body><h1>Road Closures</h1><article><p>Published on November 02, 2026</p><p>All of Dairy Road is closed. "
-        "Babcock Street at University Boulevard is closed. Flooding on Minton Road at Norfolk Parkway. "
-        "City Hall is open Monday through Friday. Hollywood Boulevard is not closed. Sarno Road will be closed. "
-        "A driver was injured on Eber Road at Dairy Road and Eber Road is closed.</p></article></body></html>")
+PAGE = ("<html><body><h1>Road Closures</h1><article><p>Published on November 02, 2026</p><p>All of Dairy Road is closed.</p>"
+        "<p>Babcock Street at University Boulevard is closed.</p><p>Flooding on Minton Road at Norfolk Parkway.</p>"
+        "<p>City Hall is open Monday through Friday.</p><p>Hollywood Boulevard is not closed.</p><p>Sarno Road will be "
+        "closed.</p><p>A driver was injured on Eber Road at Dairy Road and Eber Road is closed.</p></article></body></html>")
 pv = os.path.join(tmp, "v.jsonl")
 man = lambda rid, **kw: dict({"id": "man-" + rid, "layer": "manual", "status": "flooded", "reported": "2026-11-02T12:00:00Z",
                               "updated": "2026-11-02T12:00:00Z", "source": "City of Melbourne (via Space Coast Daily)",
@@ -248,8 +248,8 @@ def refusedq(rid, quote, raise_to=None, page=PAGE):
     except E.Refused as exc:
         return str(exc) if open(pq).read() == before else ""  # a refusal leaves the history untouched
     return ""
-P2 = PAGE.replace("All of Dairy Road is closed. ", "All of Babcock Street is closed near Dairy Road. All of Dairy Road "
-                  "is flooded. All of Dairy Road is closed, John Smith confirms. ")
+P2 = PAGE.replace("<p>All of Dairy Road is closed.</p>", "<p>All of Babcock Street is closed near Dairy Road.</p><p>All of "
+                  "Dairy Road is flooded.</p><p>All of Dairy Road is closed, John Smith confirms.</p>")
 check("refused: 'all of' belongs to another road that only mentions this one",
       refusedq("dairy", "All of Babcock Street is closed near Dairy Road.", "full", P2) and recq("dairy")["verified"] is None
       and recq("dairy")["fields"]["status"] == "flooded")
@@ -298,6 +298,11 @@ run(pq, {"sources": {"manual": "up"}, "items": [
 check("the real notice verifies the matching Babcock closure, dated Nov 2",
       not refusedq("bab", "Babcock Street at University Boulevard is closed.", None, REAL)
       and recq("bab")["verified"]["publishedDate"] == "2026-11-02")
+for para in ("This claim is false: All of Dairy Road is closed.", "Exercise scenario: All of Dairy Road is closed.",
+             "All of Dairy Road is closed. This previous notice is no longer in effect."):
+    pg = f"<html><body><article><p>Published on November 2, 2026</p><p>{para}</p></article></body></html>"
+    check(f"refused, history untouched: the quote is only part of the paragraph '{para}'",
+          refusedq("dairy", "All of Dairy Road is closed.", "full", pg) and recq("dairy")["fields"]["status"] == "flooded")
 fake = dict(good["evidence"], quote="All of Hollywood Boulevard is closed.")
 E.append([{"rid": "brevard:manual:dfull", "src": "manual", "kind": "verified", "actor": "x", "evidence": fake}], pq, now=NOWV)
 check("a well-formed raw receipt about another road does not badge this record",

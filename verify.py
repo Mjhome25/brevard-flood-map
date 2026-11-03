@@ -54,6 +54,7 @@ class Posts(html.parser.HTMLParser):
     def __init__(self):
         super().__init__(convert_charrefs=True)
         self.stack, self.posts = [], []  # stack of (tag, inside #main-content, index of the post it opens or None)
+        self.units = []  # (post index, text) of each <p>/<li> inside a post: a whole notice statement
 
     def handle_starttag(self, tag, attrs):
         if tag in VOID:
@@ -63,29 +64,39 @@ class Posts(html.parser.HTMLParser):
         opens = tag == "article" or (tag == "div" and main and "col-m-8" in (a.get("class") or "").split())
         if opens:
             self.posts.append([])
-        self.stack.append((tag, main, len(self.posts) - 1 if opens else None))
+        post = next((s[2] for s in reversed(self.stack) if s[2] is not None), len(self.posts) - 1 if opens else None)
+        if tag in ("p", "li") and post is not None:
+            self.units.append((post, []))
+            self.stack.append((tag, main, None, len(self.units) - 1))
+            return
+        self.stack.append((tag, main, len(self.posts) - 1 if opens else None, None))
 
     def handle_endtag(self, tag):
         if tag in VOID or tag not in (s[0] for s in self.stack):
             return  # <img/> and stray closing tags close nothing
-        while self.stack:
+        while self.stack:  # entries are (tag, inside #main-content, post index, unit index)
             if self.stack.pop()[0] == tag:
                 break
 
     def handle_data(self, data):
-        for _, _, i in self.stack:
+        for _, _, i, u in self.stack:
             if i is not None:
                 self.posts[i].append(data)
+            if u is not None:
+                self.units[u][1].append(data)
 
 
 def post_of(page: str, quote: str) -> tuple[str, str] | None:
     """(date, post text) of the one supported post block holding the sentence, with its own 'Published on' before it.
-    A sentence outside a supported block, or a block with no date or several dates, is not supported."""
+    The sentence must be a whole paragraph or list item of that post on its own: no prefix ("This claim is false:"),
+    no continuation ("... no longer in effect"). Otherwise, or with no date or several dates, it is not supported."""
     parser = Posts()
     parser.feed(re.sub(r"<script.*?</script>|<style.*?</style>", " ", page, flags=re.S | re.I))
-    for parts in parser.posts:
-        text = re.sub(r"\s+", " ", " ".join(parts)).strip()
-        if quote not in text:
+    flat = lambda parts: re.sub(r"\s+", " ", " ".join(parts).replace("\xa0", " ")).strip()
+    whole = {i for i, parts in parser.units if flat(parts) == quote}
+    for i, parts in enumerate(parser.posts):
+        text = flat(parts)
+        if i not in whole or quote not in text:
             continue
         dates = list(PUBLISHED.finditer(text))
         if len(dates) != 1 or dates[0].start() > text.index(quote):
