@@ -610,7 +610,11 @@ check("popup labels the first report 'Earlier report' and shows the dated citati
       and "(it.raisedBy||it.supportedBy?'Earlier report: ':'')" in tpl)
 for bad, why in ((dict(cite, url="http://x.example/"), "a plain-http link"),
                  (dict(cite, published="2027-01-01T00:00:00Z"), "a publish time in the future"),
-                 ({k: v for k, v in cite.items() if k != "quote"}, "a missing quote")):
+                 ({k: v for k, v in cite.items() if k != "quote"}, "a missing quote"),
+                 (dict(cite, url="https:///795319/"), "a link with no host"),
+                 (dict(cite, quote="Port Malabar Boulevard closed after a driver was injured"), "personal detail"),
+                 (dict(cite, quote="Port Malabar Boulevard closed by a crash"), "crash wording"),
+                 (dict(cite, extra="x"), "an extra field")):
     try:
         E.append([{"rid": "brevard:manual:pm2", "src": "manual", "kind": "reported", "actor": "x",
                    "stime": "2026-11-02T11:00:00Z", "fields": dict(R.fields_of(raised)), "supportedBy": bad}], pm)
@@ -627,6 +631,10 @@ except E.Refused:
 check("supportedBy refused on a feed record", ok)
 new_fl, _ = R.plan({"sources": {"fl511": "up"}, "items": [item(9, raisedPer=cite)]}, E.derive([]), E.iso(T0))
 check("plan never attaches a citation to a feed record", all("supportedBy" not in e for e in new_fl))
+
+ns_src = open(os.path.join(repo, "news_sweep.py")).read()
+check("the news sweep drops model-supplied raise and pin citations",
+      'for k in ("raisedPer", "locatedPer"):' in ns_src and "c.pop(k, None)" in ns_src)
 
 # FHP ids are the same in separate processes (the old id used Python's per-process hash)
 code = ("import sys; sys.path.insert(0, sys.argv[1]); import reconcile as R; "

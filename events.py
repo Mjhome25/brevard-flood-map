@@ -168,15 +168,25 @@ def supports(fields: dict, quote: str, raise_to: str | None = None) -> str | Non
 SUPPORT_FIELDS = ("source", "url", "published", "quote")
 
 
+def _plain_citation(seq, v: dict, fields: tuple, what: str) -> None:
+    """Exactly these string fields, road wording only (the page's privacy rule, Mike Nov 2), a plain https link with a host."""
+    if not isinstance(v, dict) or set(v) != set(fields) or not all(isinstance(v[k], str) and v[k].strip() for k in v):
+        raise Refused(f"seq {seq}: {what} needs exactly {', '.join(fields)}")
+    if any(SENSITIVE.search(v[k]) or CRASH.search(v[k]) for k in fields if k != "url"):
+        raise Refused(f"seq {seq}: {what} carries personal or crash detail; citations are road wording only")
+    p = urllib.parse.urlparse(v["url"])
+    if p.scheme != "https" or not p.hostname or "." not in p.hostname or p.port or p.username or p.password:
+        raise Refused(f"seq {seq}: {what} link must be plain https with a real host")
+
+
 def _check_support(ev: dict) -> None:
     """A cited raise of a manual report: every field present, a plain https link, a publish time not after the event."""
     v, seq = ev["supportedBy"], ev["seq"]
     if ev["kind"] not in ("reported", "relisted") or ev.get("src") != "manual":
         raise Refused(f"seq {seq}: supportedBy is only for manual reports")
-    if not isinstance(v, dict) or set(v) != set(SUPPORT_FIELDS) or not all(isinstance(v[k], str) and v[k] for k in v):
-        raise Refused(f"seq {seq}: supportedBy needs exactly {', '.join(SUPPORT_FIELDS)}")
-    if urllib.parse.urlparse(v["url"]).scheme != "https" or not parse(v["published"]) or v["published"] > ev["at"]:
-        raise Refused(f"seq {seq}: supportedBy needs an https link and a publish time not after the event")
+    _plain_citation(seq, v, SUPPORT_FIELDS, "supportedBy")
+    if not parse(v["published"]) or v["published"] > ev["at"]:
+        raise Refused(f"seq {seq}: supportedBy needs a publish time not after the event")
 
 
 def _check_gov(seq, v: dict, at: str) -> None:

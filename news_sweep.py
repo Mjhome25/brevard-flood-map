@@ -116,6 +116,8 @@ def main():
         if not valid_closure(c) or parse(c["reported"]) < cutoff: continue
         cid = "man-" + slug(c["where"])
         if cid in ids: continue
+        for k in ("raisedPer", "locatedPer"):  # citations for raises and pin corrections are hand-curated, never model output
+            c.pop(k, None)
         c.update(id=cid, updated=c["reported"], lat=float(c["lat"]), lng=float(c["lng"]))
         if c.get("approx") and "approximate" not in c.get("note", "").lower():
             c["note"] = (c.get("note", "") + " Pin approximate.").strip()
