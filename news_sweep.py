@@ -71,6 +71,13 @@ def ask_claude(prompt):
         return json.loads(m.group(0))
     raise RuntimeError("turn kept pausing")
 
+def host(url):
+    m = re.match(r"https?://([A-Za-z0-9.-]+)", str(url or ""))
+    return m.group(1).lower() if m else ""
+def sha(s):
+    import hashlib
+    return hashlib.sha256(str(s or "").encode()).hexdigest() if s else ""
+
 def slug(s): return re.sub(r"[^a-z0-9]+", "-", s.lower()).strip("-")[:40]
 
 def valid_closure(c):
@@ -116,15 +123,18 @@ def main():
     # Reopen reports are proposals only (Mike, November 3, 2026): nothing leaves the map until the reviewed evidence
     # path exists. Each proposal is kept for review with its source; the closure itself is left untouched.
     proposals = load("reopen_proposals.json", [])
-    seen = {(p.get("id"), p.get("sourceUrl"), p.get("time")) for p in proposals}
+    seen = {(p.get("id"), p.get("sourceUrlSha256"), p.get("time")) for p in proposals}
     proposed = 0
     for r in out.get("reopened", []):
         c = next((c for c in closures if c["id"] == r.get("id")), None)
-        key = (r.get("id"), r.get("sourceUrl", ""), r.get("time", ""))
+        key = (r.get("id"), sha(r.get("sourceUrl", "")), r.get("time", "") if parse(r.get("time", "")) else "")
         if not c or key in seen: continue
+        # This file is committed to a public repo: no model prose (quote, agency text, URL path) is stored, only
+        # our own closure fields, the URL's host and hashes, so no personal detail from a source can be published.
         proposals.append({"id": r["id"], "where": c.get("where") or c.get("road"), "partial": bool(r.get("partial")),
-                          "source": r.get("source", ""), "sourceUrl": r.get("sourceUrl", ""), "quote": r.get("quote", ""),
-                          "time": r.get("time", ""), "found": iso(now())})
+                          "sourceHost": host(r.get("sourceUrl", "")), "sourceUrlSha256": sha(r.get("sourceUrl", "")),
+                          "quoteSha256": sha(r.get("quote", "")), "time": r.get("time", "") if parse(r.get("time", "")) else "",
+                          "found": iso(now())})
         seen.add(key); proposed += 1
     have = {(a.get("agency"), a.get("text")) for a in advisories}
     new_adv = [a for a in out.get("advisories", [])

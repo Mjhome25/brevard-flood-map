@@ -23,13 +23,18 @@ check("error path, 1000 days later: all %d closures kept" % len(ids), [c["id"] f
 # 2. success path with reopen output for full and partial
 ns.ask_claude = lambda p: {"closures": [], "advisories": [], "reopened": [
     {"id": ids[0], "partial": False, "source": "X", "sourceUrl": "https://x.example", "quote": "q", "time": "2026-11-03T09:00:00Z"},
-    {"id": ids[1], "partial": True, "source": "Y", "time": "2026-11-03T09:00:00Z"}]}
+    {"id": ids[1], "partial": True, "source": "Officer John Smith said the driver was killed",
+     "sourceUrl": "https://news.example/man-killed-crash-babcock", "quote": "a woman, 34, was injured and transported",
+     "time": "2026-11-03T09:00:00Z"}]}
 ns.main()
 after = json.load(open(os.path.join(tmp, "manual_closures.json")))
 check("success path, 1000 days later: no closure deleted", [c["id"] for c in after] == ids)
 check("reopen output changed no closure (status, note, updated)", after == before)
 props = json.load(open(os.path.join(tmp, "reopen_proposals.json")))
 check("both reopen reports held as proposals", sorted(p["id"] for p in props) == sorted(ids[:2]))
+raw = open(os.path.join(tmp, "reopen_proposals.json")).read()
+check("no model prose (names, injuries, URL path) reaches the public proposals file",
+      not any(w in raw for w in ("Smith", "killed", "injured", "woman", "transported", "man-killed", "x.example/")))
 ns.main()
 check("repeat run does not duplicate proposals", len(json.load(open(os.path.join(tmp, "reopen_proposals.json")))) == 2)
 print("failures:", fails); sys.exit(fails)
