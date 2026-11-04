@@ -1,8 +1,6 @@
 {
- "generated": "2026-11-04T23:15:36Z",
- "errors": [
-  "FL511 map locations: 1 report(s) without a pin"
- ],
+ "generated": "2026-11-04T23:31:55Z",
+ "errors": [],
  "items": [
   {
    "from": "Leghorn Rd",
@@ -121,79 +119,6 @@
    "recheck": [
     "source changed its lane description"
    ]
-  },
-  {
-   "fullClosure": false,
-   "lanes": "Unknown Roadblock - Use Caution",
-   "lat": 28.4883727580149,
-   "layer": "FHP",
-   "lng": -80.7737673537838,
-   "reported": "2026-11-04T08:03:53Z",
-   "road": "N COCOA BLVD",
-   "roadShort": "N Cocoa Blvd",
-   "source": "FHP live CAD",
-   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-   "spot": "at Palm St",
-   "status": "closed",
-   "title": "MVC at N COCOA BLVD x[PALM ST] [COCOA] (Unknown Roadblock - Use Caution)",
-   "where": "N Cocoa Blvd at Palm St",
-   "id": "brevard:fhp:20261104080353-361dbba5",
-   "updated": "2026-11-04T08:03:53Z",
-   "lastReported": "2026-11-04T08:03:53Z",
-   "firstReported": "2026-11-04T08:03:53Z",
-   "verified": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "kind": "feed",
-    "publishedAt": "2026-11-04T08:03:53Z"
-   },
-   "awaitingOfficial": true,
-   "missingSince": "2026-11-04T23:15:43Z",
-   "recheck": [
-    "source changed its lane description",
-    "source shows reduced impact"
-   ],
-   "noLongerListed": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "since": "2026-11-04T23:15:43Z",
-    "wasClosed": true
-   }
-  },
-  {
-   "fullClosure": false,
-   "lanes": "Roadblock In Right Lane",
-   "lat": 28.0222762889767,
-   "layer": "FHP",
-   "lng": -80.6475479672184,
-   "reported": "2026-11-04T09:31:39Z",
-   "road": "I-95 SB [MM175]",
-   "roadShort": "I-95 Sb [MM175]",
-   "source": "FHP live CAD",
-   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-   "spot": "at Mm175",
-   "status": "caution",
-   "title": "MVC W/Roadblock at I-95 SB [MM175] x[MM175] [PALM BAY] (Roadblock In Right Lane)",
-   "where": "I-95 Sb [MM175] at Mm175",
-   "id": "brevard:fhp:20261104093139-095547b0",
-   "updated": "2026-11-04T09:31:39Z",
-   "lastReported": "2026-11-04T09:31:39Z",
-   "firstReported": "2026-11-04T09:31:39Z",
-   "verified": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "kind": "feed",
-    "publishedAt": "2026-11-04T09:31:39Z"
-   },
-   "awaitingOfficial": true,
-   "missingSince": "2026-11-04T23:15:43Z",
-   "recheck": [],
-   "noLongerListed": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "since": "2026-11-04T23:15:43Z",
-    "wasClosed": false
-   }
   },
   {
    "fullClosure": false,
@@ -338,8 +263,8 @@
    "title": "MVC on I-95 South, beyond MM 175. Right shoulder blocked",
    "where": "I-95 SB beyond MM 175",
    "id": "brevard:fl511:941494",
-   "updated": "2026-11-04T22:55:00Z",
-   "lastReported": "2026-11-04T22:55:00Z",
+   "updated": "2026-11-04T23:27:00Z",
+   "lastReported": "2026-11-04T23:27:00Z",
    "firstReported": "2026-11-04T21:25:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
@@ -353,63 +278,6 @@
     "source changed its lane description",
     "source changed the closed stretch"
    ]
-  },
-  {
-   "dir": "SB",
-   "fullClosure": false,
-   "lanes": "2 Left lanes blocked",
-   "lat": 28.431486,
-   "layer": "Incidents",
-   "line": [
-    [
-     28.43149,
-     -80.82048
-    ],
-    [
-     28.43138,
-     -80.82048
-    ],
-    [
-     28.42896,
-     -80.82047
-    ],
-    [
-     28.42485,
-     -80.82047
-    ]
-   ],
-   "lng": -80.820407,
-   "reported": "2026-11-04T21:54:00Z",
-   "road": "I-95",
-   "roadShort": "I-95",
-   "source": "FL511 (FDOT)",
-   "sourceUrl": "https://fl511.com",
-   "spot": "before MM 206",
-   "status": "caution",
-   "title": "Object on roadway on I-95 South, before MM 206. 2 Left lanes blocked",
-   "where": "I-95 SB before MM 206",
-   "id": "brevard:fl511:941573",
-   "updated": "2026-11-04T22:54:00Z",
-   "lastReported": "2026-11-04T22:54:00Z",
-   "firstReported": "2026-11-04T21:56:00Z",
-   "verified": {
-    "agency": "FL511 (FDOT)",
-    "url": "https://fl511.com",
-    "kind": "feed",
-    "publishedAt": "2026-11-04T21:56:00Z"
-   },
-   "awaitingOfficial": true,
-   "missingSince": "2026-11-04T23:15:43Z",
-   "recheck": [
-    "source changed its lane description",
-    "source changed the closed stretch"
-   ],
-   "noLongerListed": {
-    "agency": "FL511 (FDOT)",
-    "url": "https://fl511.com",
-    "since": "2026-11-04T23:15:43Z",
-    "wasClosed": false
-   }
   },
   {
    "dir": "NB",
@@ -553,6 +421,130 @@
   }
  ],
  "reopened": [
+  {
+   "fullClosure": false,
+   "lanes": "Unknown Roadblock - Use Caution",
+   "lat": 28.4883727580149,
+   "layer": "FHP",
+   "lng": -80.7737673537838,
+   "reported": "2026-11-04T08:03:53Z",
+   "road": "N COCOA BLVD",
+   "roadShort": "N Cocoa Blvd",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "spot": "at Palm St",
+   "status": "closed",
+   "title": "MVC at N COCOA BLVD x[PALM ST] [COCOA] (Unknown Roadblock - Use Caution)",
+   "where": "N Cocoa Blvd at Palm St",
+   "id": "brevard:fhp:20261104080353-361dbba5",
+   "updated": "2026-11-04T08:03:53Z",
+   "lastReported": "2026-11-04T08:03:53Z",
+   "firstReported": "2026-11-04T08:03:53Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-04T08:03:53Z"
+   },
+   "reopenedAt": "2026-11-04T23:31:59Z",
+   "evidence": {
+    "agency": "Florida Highway Patrol",
+    "kind": "feed-dropped",
+    "missingSince": "2026-11-04T23:15:43Z",
+    "reopenedAt": "2026-11-04T23:31:59Z",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
+   },
+   "stillReported": []
+  },
+  {
+   "fullClosure": false,
+   "lanes": "Roadblock In Right Lane",
+   "lat": 28.0222762889767,
+   "layer": "FHP",
+   "lng": -80.6475479672184,
+   "reported": "2026-11-04T09:31:39Z",
+   "road": "I-95 SB [MM175]",
+   "roadShort": "I-95 Sb [MM175]",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "spot": "at Mm175",
+   "status": "caution",
+   "title": "MVC W/Roadblock at I-95 SB [MM175] x[MM175] [PALM BAY] (Roadblock In Right Lane)",
+   "where": "I-95 Sb [MM175] at Mm175",
+   "id": "brevard:fhp:20261104093139-095547b0",
+   "updated": "2026-11-04T09:31:39Z",
+   "lastReported": "2026-11-04T09:31:39Z",
+   "firstReported": "2026-11-04T09:31:39Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-04T09:31:39Z"
+   },
+   "reopenedAt": "2026-11-04T23:31:59Z",
+   "evidence": {
+    "agency": "Florida Highway Patrol",
+    "kind": "feed-dropped",
+    "missingSince": "2026-11-04T23:15:43Z",
+    "reopenedAt": "2026-11-04T23:31:59Z",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
+   },
+   "stillReported": []
+  },
+  {
+   "dir": "SB",
+   "fullClosure": false,
+   "lanes": "2 Left lanes blocked",
+   "lat": 28.431486,
+   "layer": "Incidents",
+   "line": [
+    [
+     28.43149,
+     -80.82048
+    ],
+    [
+     28.43138,
+     -80.82048
+    ],
+    [
+     28.42896,
+     -80.82047
+    ],
+    [
+     28.42485,
+     -80.82047
+    ]
+   ],
+   "lng": -80.820407,
+   "reported": "2026-11-04T21:54:00Z",
+   "road": "I-95",
+   "roadShort": "I-95",
+   "source": "FL511 (FDOT)",
+   "sourceUrl": "https://fl511.com",
+   "spot": "before MM 206",
+   "status": "caution",
+   "title": "Object on roadway on I-95 South, before MM 206. 2 Left lanes blocked",
+   "where": "I-95 SB before MM 206",
+   "id": "brevard:fl511:941573",
+   "updated": "2026-11-04T22:54:00Z",
+   "lastReported": "2026-11-04T22:54:00Z",
+   "firstReported": "2026-11-04T21:56:00Z",
+   "verified": {
+    "agency": "FL511 (FDOT)",
+    "url": "https://fl511.com",
+    "kind": "feed",
+    "publishedAt": "2026-11-04T21:56:00Z"
+   },
+   "reopenedAt": "2026-11-04T23:31:59Z",
+   "evidence": {
+    "agency": "FL511 (FDOT)",
+    "kind": "feed-dropped",
+    "missingSince": "2026-11-04T23:15:43Z",
+    "reopenedAt": "2026-11-04T23:31:59Z",
+    "url": "https://fl511.com"
+   },
+   "stillReported": []
+  },
   {
    "dir": "SB",
    "fullClosure": true,
