@@ -1,5 +1,5 @@
 {
- "checkedAt": "2026-11-04T17:45:37Z",
+ "checkedAt": "2026-11-04T18:00:59Z",
  "fresh": true,
  "pilot": "City of Melbourne",
  "pending": [
@@ -1434,8 +1434,8 @@
    "needsReview": [
     "a4f9dd6cbe26b7abd47c669b44544a430cd20c0aa5a27f2cdf0d5b5138ba3cf3"
    ],
-   "sha256": "ad2ca8f73bb9a49deaf6cd5b46341164e3689cedbdef69539de618a58c49fbff",
-   "readAt": "2026-11-04T05:45:39Z"
+   "sha256": "8a88a5ca1c3b6bc6e16ecec7802741fef6c661152f0631e0a35a35ff604b282a",
+   "readAt": "2026-11-04T18:00:59Z"
   },
   "https://www.melbourneflorida.org/Government/City-News/Traffic-Advisories/Road-Closures-Aurora-and-Sarno": {
    "agency": "City of Melbourne",
@@ -1469,8 +1469,8 @@
    "needsReview": [
     "8fcfaa7bdaad35615ae63383039dd306452727190be5382513c8eaf056ec1e5e"
    ],
-   "sha256": "e1d299f67d1e7cd1b9ca94a41234695d3c5bf2f11b6bd42b4eb0e9fdd645c3a3",
-   "readAt": "2026-11-04T05:45:39Z"
+   "sha256": "518dc6b00824e2f7de4603a9de89ba5665563335af569565a0254526078b2f0f",
+   "readAt": "2026-11-04T18:00:59Z"
   },
   "https://www.melbourneflorida.org/Government/City-News/Traffic-Advisories/Lane-Closure-Country-Club-Road": {
    "date": "2026-10-27",
@@ -1621,8 +1621,8 @@
     "679866428cf4406fd68d4376fb3934bf99e6e314857217c03f7ed8a888d60e4f",
     "746cdc91f2e0b08cdb9dadc4c9f958c6d390971a96b2908eb8496905fb973e6f"
    ],
-   "sha256": "2512ec4dc3a533ad11f590867ee28c7d18a57fb46e274922c0126635f1a3419b",
-   "readAt": "2026-11-04T17:45:37Z"
+   "sha256": "8c728a968cd0609ba250471637bd1e48ac6657ffef25ed045642871ad276721b",
+   "readAt": "2026-11-04T18:00:59Z"
   },
   "https://www.melbourneflorida.org/Government/City-News/Traffic-Advisories/Road-Closures-1525": {
    "agency": "City of Melbourne",
@@ -1634,8 +1634,8 @@
     "97e677fe040fc517ea06a0c0051d7e189466888dc0cbea88d01828d21040db05",
     "746cdc91f2e0b08cdb9dadc4c9f958c6d390971a96b2908eb8496905fb973e6f"
    ],
-   "sha256": "e14c9419e54fc468a0bea0ac05717fa1566ab09d5ca3867c14507da817c361f4",
-   "readAt": "2026-11-04T17:45:37Z"
+   "sha256": "fad0e392202220c153ff93e205dd9721f1e107a753638f1d7f14d787926e6e25",
+   "readAt": "2026-11-04T18:00:59Z"
   },
   "https://www.melbourneflorida.org/Government/City-News/Traffic-Advisories/Lane-Closure-NASA-Blvd": {
    "agency": "City of Melbourne",
@@ -1645,8 +1645,8 @@
    "needsReview": [
     "d3b63822f83243ea40717b27e5b78827b787af45119ff216d61ea39a90a41734"
    ],
-   "sha256": "08d69b97fe1f7005d39fae667a8139b3a9ba6af12894f169c0a7290e4736eaae",
-   "readAt": "2026-11-04T17:45:37Z"
+   "sha256": "b95ddb07a36e65d4cc0dd24f7dbc1228bbe8b3d51c2dead041e0a13b0f1a099a",
+   "readAt": "2026-11-04T18:00:59Z"
   }
  }
 }
