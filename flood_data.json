@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-04T22:45:40Z",
+ "generated": "2026-11-04T23:00:46Z",
  "errors": [],
  "items": [
   {
@@ -154,41 +154,6 @@
   },
   {
    "fullClosure": false,
-   "lanes": "No Road Block",
-   "lat": 28.1957425647782,
-   "layer": "FHP",
-   "lng": -80.7082737866811,
-   "reported": "2026-11-04T09:28:40Z",
-   "road": "I-95 SB [EXIT RAMP]",
-   "roadShort": "I-95 Sb [Exit Ramp]",
-   "source": "FHP live CAD",
-   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-   "spot": "at Pineda Cswy",
-   "status": "caution",
-   "title": "MVC at I-95 SB [EXIT RAMP] x[PINEDA CSWY] [MELBOURNE] (No Road Block)",
-   "where": "I-95 Sb [Exit Ramp] at Pineda Cswy",
-   "id": "brevard:fhp:20261104092840-9a5b9353",
-   "updated": "2026-11-04T09:28:40Z",
-   "lastReported": "2026-11-04T09:28:40Z",
-   "firstReported": "2026-11-04T09:28:40Z",
-   "verified": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "kind": "feed",
-    "publishedAt": "2026-11-04T09:28:40Z"
-   },
-   "awaitingOfficial": true,
-   "missingSince": "2026-11-04T22:45:46Z",
-   "recheck": [],
-   "noLongerListed": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "since": "2026-11-04T22:45:46Z",
-    "wasClosed": false
-   }
-  },
-  {
-   "fullClosure": false,
    "lanes": "Roadblock In Right Lane",
    "lat": 28.0222762889767,
    "layer": "FHP",
@@ -305,62 +270,6 @@
   },
   {
    "dir": "SB",
-   "fullClosure": true,
-   "lat": 28.490978,
-   "layer": "Incidents",
-   "line": [
-    [
-     28.49092,
-     -80.77558
-    ],
-    [
-     28.49056,
-     -80.77529
-    ],
-    [
-     28.4903,
-     -80.77511
-    ],
-    [
-     28.49023,
-     -80.77506
-    ]
-   ],
-   "lng": -80.775502,
-   "reported": "2026-11-04T20:05:00Z",
-   "road": "US-1",
-   "roadShort": "US-1",
-   "source": "FL511 (FDOT)",
-   "sourceUrl": "https://fl511.com",
-   "spot": "at Kings Hwy",
-   "status": "closed",
-   "title": "MVC on US-1 South, at Kings Hwy",
-   "where": "US-1 SB at Kings Hwy",
-   "id": "brevard:fl511:941323",
-   "updated": "2026-11-04T21:36:00Z",
-   "lastReported": "2026-11-04T21:36:00Z",
-   "firstReported": "2026-11-04T20:19:00Z",
-   "verified": {
-    "agency": "FL511 (FDOT)",
-    "url": "https://fl511.com",
-    "kind": "feed",
-    "publishedAt": "2026-11-04T20:33:00Z"
-   },
-   "awaitingOfficial": true,
-   "missingSince": "2026-11-04T22:45:46Z",
-   "recheck": [
-    "source changed its lane description",
-    "source changed the closed stretch"
-   ],
-   "noLongerListed": {
-    "agency": "FL511 (FDOT)",
-    "url": "https://fl511.com",
-    "since": "2026-11-04T22:45:46Z",
-    "wasClosed": true
-   }
-  },
-  {
-   "dir": "SB",
    "fullClosure": false,
    "lanes": "Right shoulder blocked",
    "lat": 28.017419,
@@ -386,8 +295,8 @@
    "title": "MVC on I-95 South, beyond MM 175. Right shoulder blocked",
    "where": "I-95 SB beyond MM 175",
    "id": "brevard:fl511:941494",
-   "updated": "2026-11-04T21:40:00Z",
-   "lastReported": "2026-11-04T21:40:00Z",
+   "updated": "2026-11-04T22:55:00Z",
+   "lastReported": "2026-11-04T22:55:00Z",
    "firstReported": "2026-11-04T21:25:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
@@ -398,7 +307,8 @@
    "awaitingOfficial": true,
    "missingSince": null,
    "recheck": [
-    "source changed its lane description"
+    "source changed its lane description",
+    "source changed the closed stretch"
    ]
   },
   {
@@ -436,8 +346,8 @@
    "title": "Object on roadway on I-95 South, before MM 206. 2 Left lanes blocked",
    "where": "I-95 SB before MM 206",
    "id": "brevard:fl511:941573",
-   "updated": "2026-11-04T22:02:00Z",
-   "lastReported": "2026-11-04T22:02:00Z",
+   "updated": "2026-11-04T22:54:00Z",
+   "lastReported": "2026-11-04T22:54:00Z",
    "firstReported": "2026-11-04T21:56:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
@@ -448,7 +358,8 @@
    "awaitingOfficial": true,
    "missingSince": null,
    "recheck": [
-    "source changed its lane description"
+    "source changed its lane description",
+    "source changed the closed stretch"
    ]
   },
   {
@@ -553,6 +464,94 @@
   }
  ],
  "reopened": [
+  {
+   "dir": "SB",
+   "fullClosure": true,
+   "lat": 28.490978,
+   "layer": "Incidents",
+   "line": [
+    [
+     28.49092,
+     -80.77558
+    ],
+    [
+     28.49056,
+     -80.77529
+    ],
+    [
+     28.4903,
+     -80.77511
+    ],
+    [
+     28.49023,
+     -80.77506
+    ]
+   ],
+   "lng": -80.775502,
+   "reported": "2026-11-04T20:05:00Z",
+   "road": "US-1",
+   "roadShort": "US-1",
+   "source": "FL511 (FDOT)",
+   "sourceUrl": "https://fl511.com",
+   "spot": "at Kings Hwy",
+   "status": "closed",
+   "title": "MVC on US-1 South, at Kings Hwy",
+   "where": "US-1 SB at Kings Hwy",
+   "id": "brevard:fl511:941323",
+   "updated": "2026-11-04T21:36:00Z",
+   "lastReported": "2026-11-04T21:36:00Z",
+   "firstReported": "2026-11-04T20:19:00Z",
+   "verified": {
+    "agency": "FL511 (FDOT)",
+    "url": "https://fl511.com",
+    "kind": "feed",
+    "publishedAt": "2026-11-04T20:33:00Z"
+   },
+   "reopenedAt": "2026-11-04T23:00:50Z",
+   "evidence": {
+    "agency": "FL511 (FDOT)",
+    "kind": "feed-dropped",
+    "missingSince": "2026-11-04T22:45:46Z",
+    "reopenedAt": "2026-11-04T23:00:50Z",
+    "url": "https://fl511.com"
+   },
+   "stillReported": []
+  },
+  {
+   "fullClosure": false,
+   "lanes": "No Road Block",
+   "lat": 28.1957425647782,
+   "layer": "FHP",
+   "lng": -80.7082737866811,
+   "reported": "2026-11-04T09:28:40Z",
+   "road": "I-95 SB [EXIT RAMP]",
+   "roadShort": "I-95 Sb [Exit Ramp]",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "spot": "at Pineda Cswy",
+   "status": "caution",
+   "title": "MVC at I-95 SB [EXIT RAMP] x[PINEDA CSWY] [MELBOURNE] (No Road Block)",
+   "where": "I-95 Sb [Exit Ramp] at Pineda Cswy",
+   "id": "brevard:fhp:20261104092840-9a5b9353",
+   "updated": "2026-11-04T09:28:40Z",
+   "lastReported": "2026-11-04T09:28:40Z",
+   "firstReported": "2026-11-04T09:28:40Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-04T09:28:40Z"
+   },
+   "reopenedAt": "2026-11-04T23:00:50Z",
+   "evidence": {
+    "agency": "Florida Highway Patrol",
+    "kind": "feed-dropped",
+    "missingSince": "2026-11-04T22:45:46Z",
+    "reopenedAt": "2026-11-04T23:00:50Z",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
+   },
+   "stillReported": []
+  },
   {
    "fullClosure": false,
    "lanes": "No Roadblock",
