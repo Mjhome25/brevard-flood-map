@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-04T01:30:32Z",
+ "generated": "2026-11-04T01:45:32Z",
  "errors": [],
  "items": [
   {
@@ -1521,6 +1521,35 @@
   },
   {
    "fullClosure": false,
+   "lanes": "Partial Road Block",
+   "lat": 28.3573421519543,
+   "layer": "FHP",
+   "lng": -80.6835788863004,
+   "reported": "2026-11-03T13:41:00Z",
+   "road": "SYKES CREEK PKWY",
+   "roadShort": "Sykes Creek Pkwy",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "spot": "at Merritt Island Cswy E",
+   "status": "caution",
+   "title": "MVC W/Roadblock at SYKES CREEK PKWY x[MERRITT ISLAND CSWY E] [MERRITT ISLAND] (Partial Road Block)",
+   "where": "Sykes Creek Pkwy at Merritt Island Cswy E",
+   "id": "brevard:fhp:20261103134100-bc738f6b",
+   "updated": "2026-11-03T13:41:00Z",
+   "lastReported": "2026-11-03T13:41:00Z",
+   "firstReported": "2026-11-03T13:41:00Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-03T13:41:00Z"
+   },
+   "awaitingOfficial": false,
+   "missingSince": null,
+   "recheck": []
+  },
+  {
+   "fullClosure": false,
    "lanes": "Vehicle In Roadway -- Use Caution",
    "lat": 28.0936537373737,
    "layer": "FHP",
@@ -1781,8 +1810,8 @@
    "to": "Pine St",
    "where": "US-192 EB at Minton Rd/S Wickham Rd",
    "id": "brevard:fl511:937010",
-   "updated": "2026-11-04T00:11:00Z",
-   "lastReported": "2026-11-04T00:11:00Z",
+   "updated": "2026-11-04T01:34:00Z",
+   "lastReported": "2026-11-04T01:34:00Z",
    "firstReported": "2026-11-02T19:54:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
@@ -2047,8 +2076,8 @@
    "to": "Circle Dr",
    "where": "US-192 EB beyond Coastal Ln",
    "id": "brevard:fl511:937141",
-   "updated": "2026-11-04T00:11:00Z",
-   "lastReported": "2026-11-04T00:11:00Z",
+   "updated": "2026-11-04T01:34:00Z",
+   "lastReported": "2026-11-04T01:34:00Z",
    "firstReported": "2026-11-02T19:54:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
@@ -2205,8 +2234,8 @@
    "to": "Coastal Ln",
    "where": "US-192 WB at S John Rodes Blvd",
    "id": "brevard:fl511:937222",
-   "updated": "2026-11-04T00:11:00Z",
-   "lastReported": "2026-11-04T00:11:00Z",
+   "updated": "2026-11-04T01:33:00Z",
+   "lastReported": "2026-11-04T01:33:00Z",
    "firstReported": "2026-11-02T19:54:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
@@ -2408,8 +2437,8 @@
    "title": "Traffic lights working incorrectly on US-1 North, at Masterson St",
    "where": "US-1 NB at Masterson St",
    "id": "brevard:fl511:937621",
-   "updated": "2026-11-03T23:37:00Z",
-   "lastReported": "2026-11-03T23:37:00Z",
+   "updated": "2026-11-04T01:33:00Z",
+   "lastReported": "2026-11-04T01:33:00Z",
    "firstReported": "2026-11-03T23:37:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
@@ -2856,8 +2885,8 @@
    "title": "Traffic lights not working on US-192 / Vine St / Bronson Hwy East, at S John Rodes Blvd",
    "where": "US-192 EB at S John Rodes Blvd",
    "id": "brevard:fl511:938257",
-   "updated": "2026-11-04T00:11:00Z",
-   "lastReported": "2026-11-04T00:11:00Z",
+   "updated": "2026-11-04T01:33:00Z",
+   "lastReported": "2026-11-04T01:33:00Z",
    "firstReported": "2026-11-03T03:18:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
@@ -4099,8 +4128,8 @@
    "title": "MVC on US-1 North, at Olive St. 2 Right lanes blocked",
    "where": "US-1 NB at Olive St",
    "id": "brevard:fl511:939945",
-   "updated": "2026-11-04T01:22:00Z",
-   "lastReported": "2026-11-04T01:22:00Z",
+   "updated": "2026-11-04T01:41:00Z",
+   "lastReported": "2026-11-04T01:41:00Z",
    "firstReported": "2026-11-04T01:22:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
