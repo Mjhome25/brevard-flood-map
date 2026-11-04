@@ -1,6 +1,8 @@
 {
- "generated": "2026-11-04T04:01:32Z",
- "errors": [],
+ "generated": "2026-11-04T04:15:31Z",
+ "errors": [
+  "FL511 map locations: 2 report(s) without a pin"
+ ],
  "items": [
   {
    "fullClosure": true,
@@ -4096,6 +4098,100 @@
     "since": "2026-11-04T02:45:44Z",
     "wasClosed": false
    }
+  },
+  {
+   "dir": "EB",
+   "from": "Marie St",
+   "fullClosure": true,
+   "lanes": "All lanes closed",
+   "lat": 28.0011780774221,
+   "layer": "Closures",
+   "line": [
+    [
+     28.001099,
+     -80.573026
+    ],
+    [
+     28.001169,
+     -80.572821
+    ],
+    [
+     28.001389,
+     -80.572179
+    ]
+   ],
+   "lng": -80.5728248447233,
+   "reported": "2026-11-04T04:10:00Z",
+   "road": "SR-514",
+   "roadShort": "SR-514",
+   "source": "FL511 (FDOT)",
+   "sourceUrl": "https://fl511.com",
+   "status": "flooded",
+   "title": "Flooding on SR-514 Eastbound Near Marie St. All lanes closed.",
+   "to": "Blanche St",
+   "where": "SR-514 EB",
+   "id": "brevard:fl511:940189",
+   "updated": "2026-11-04T04:11:00Z",
+   "lastReported": "2026-11-04T04:11:00Z",
+   "firstReported": "2026-11-04T04:11:00Z",
+   "verified": {
+    "agency": "FL511 (FDOT)",
+    "url": "https://fl511.com",
+    "kind": "feed",
+    "publishedAt": "2026-11-04T04:11:00Z"
+   },
+   "awaitingOfficial": false,
+   "missingSince": null,
+   "recheck": []
+  },
+  {
+   "dir": "WB",
+   "from": "West Railroad Ave",
+   "fullClosure": true,
+   "lanes": "All lanes closed",
+   "lat": 28.0029612862187,
+   "layer": "Closures",
+   "line": [
+    [
+     28.003482,
+     -80.566327
+    ],
+    [
+     28.003442,
+     -80.566474
+    ],
+    [
+     28.002968,
+     -80.567808
+    ],
+    [
+     28.002961,
+     -80.567829
+    ]
+   ],
+   "lng": -80.5678047798157,
+   "reported": "2026-11-04T04:11:00Z",
+   "road": "SR-514",
+   "roadShort": "SR-514",
+   "source": "FL511 (FDOT)",
+   "sourceUrl": "https://fl511.com",
+   "status": "flooded",
+   "title": "Flooding on SR-514 Westbound Near Pine St. All lanes closed.",
+   "to": "Pine St",
+   "where": "SR-514 WB",
+   "id": "brevard:fl511:940190",
+   "updated": "2026-11-04T04:12:00Z",
+   "lastReported": "2026-11-04T04:12:00Z",
+   "firstReported": "2026-11-04T04:12:00Z",
+   "verified": {
+    "agency": "FL511 (FDOT)",
+    "url": "https://fl511.com",
+    "kind": "feed",
+    "publishedAt": "2026-11-04T04:12:00Z"
+   },
+   "awaitingOfficial": false,
+   "missingSince": null,
+   "recheck": []
   },
   {
    "approx": true,
