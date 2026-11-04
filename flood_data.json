@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-04T15:45:30Z",
+ "generated": "2026-11-04T16:00:51Z",
  "errors": [],
  "items": [
   {
@@ -3814,8 +3814,8 @@
    "title": "Flooding on Sunlake Rd Both Directions At SR-507 Northbound. All lanes closed.",
    "where": "Sunlake Rd both directions At SR-507 Northbound",
    "id": "brevard:fl511:939237",
-   "updated": "2026-11-04T15:04:00Z",
-   "lastReported": "2026-11-04T15:04:00Z",
+   "updated": "2026-11-04T15:53:00Z",
+   "lastReported": "2026-11-04T15:53:00Z",
    "firstReported": "2026-11-03T17:58:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
@@ -7752,75 +7752,6 @@
     "kind": "fhp-dropped",
     "missingSince": "2026-11-03T16:45:43Z",
     "reopenedAt": "2026-11-03T17:00:49Z",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
-   },
-   "stillReported": []
-  },
-  {
-   "fullClosure": false,
-   "lanes": "No Roadblock",
-   "lat": 28.0835380412824,
-   "layer": "FHP",
-   "lng": -80.7003731007794,
-   "reported": "2026-11-03T13:32:59Z",
-   "road": "1575 S JOHN RODES BLVD [MELBOURNE]",
-   "roadShort": "1575 S John Rodes Blvd [Melbourne]",
-   "source": "FHP live CAD",
-   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-   "status": "caution",
-   "title": "MVCMVC at 1575 S JOHN RODES BLVD [MELBOURNE] (No Roadblock)",
-   "where": "1575 S John Rodes Blvd [Melbourne]",
-   "id": "brevard:fhp:20261103133259-6de26ffe",
-   "updated": "2026-11-03T13:32:59Z",
-   "lastReported": "2026-11-03T13:32:59Z",
-   "firstReported": "2026-11-03T13:32:59Z",
-   "verified": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "kind": "feed",
-    "publishedAt": "2026-11-03T13:32:59Z"
-   },
-   "reopenedAt": "2026-11-03T15:50:56Z",
-   "evidence": {
-    "agency": "Florida Highway Patrol",
-    "kind": "fhp-dropped",
-    "missingSince": "2026-11-03T15:33:12Z",
-    "reopenedAt": "2026-11-03T15:50:56Z",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
-   },
-   "stillReported": []
-  },
-  {
-   "fullClosure": false,
-   "lanes": "No Roadblock",
-   "lat": 28.1138033509003,
-   "layer": "FHP",
-   "lng": -80.7061010428319,
-   "reported": "2026-11-03T14:34:07Z",
-   "road": "I-95 SB [MM183]",
-   "roadShort": "I-95 Sb [MM183]",
-   "source": "FHP live CAD",
-   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-   "spot": "at Mm183",
-   "status": "caution",
-   "title": "MVCMVC at I-95 SB [MM183] x[MM183] [MELBOURNE] (No Roadblock)",
-   "where": "I-95 Sb [MM183] at Mm183",
-   "id": "brevard:fhp:20261103143407-029206f3",
-   "updated": "2026-11-03T14:34:07Z",
-   "lastReported": "2026-11-03T14:34:07Z",
-   "firstReported": "2026-11-03T14:34:07Z",
-   "verified": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "kind": "feed",
-    "publishedAt": "2026-11-03T14:34:07Z"
-   },
-   "reopenedAt": "2026-11-03T15:50:56Z",
-   "evidence": {
-    "agency": "Florida Highway Patrol",
-    "kind": "fhp-dropped",
-    "missingSince": "2026-11-03T14:45:30Z",
-    "reopenedAt": "2026-11-03T15:50:56Z",
     "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
    },
    "stillReported": []
