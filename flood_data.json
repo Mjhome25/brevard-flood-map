@@ -1,8 +1,6 @@
 {
- "generated": "2026-11-04T20:31:38Z",
- "errors": [
-  "FL511 map locations: 1 report(s) without a pin"
- ],
+ "generated": "2026-11-04T20:45:31Z",
+ "errors": [],
  "items": [
   {
    "from": "Leghorn Rd",
@@ -271,7 +269,7 @@
   },
   {
    "dir": "SB",
-   "fullClosure": false,
+   "fullClosure": true,
    "lat": 28.490978,
    "layer": "Incidents",
    "line": [
@@ -299,22 +297,25 @@
    "source": "FL511 (FDOT)",
    "sourceUrl": "https://fl511.com",
    "spot": "at Kings Hwy",
-   "status": "caution",
+   "status": "closed",
    "title": "MVC on US-1 South, at Kings Hwy",
    "where": "US-1 SB at Kings Hwy",
    "id": "brevard:fl511:941323",
-   "updated": "2026-11-04T20:19:00Z",
-   "lastReported": "2026-11-04T20:19:00Z",
+   "updated": "2026-11-04T20:33:00Z",
+   "lastReported": "2026-11-04T20:33:00Z",
    "firstReported": "2026-11-04T20:19:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
     "url": "https://fl511.com",
     "kind": "feed",
-    "publishedAt": "2026-11-04T20:19:00Z"
+    "publishedAt": "2026-11-04T20:33:00Z"
    },
-   "awaitingOfficial": false,
+   "awaitingOfficial": true,
    "missingSince": null,
-   "recheck": []
+   "recheck": [
+    "source changed its lane description",
+    "source changed the closed stretch"
+   ]
   },
   {
    "approx": true,
