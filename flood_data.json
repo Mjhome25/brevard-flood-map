@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-04T22:15:36Z",
+ "generated": "2026-11-04T22:31:30Z",
  "errors": [
   "FL511 map locations: 2 report(s) without a pin"
  ],
@@ -150,7 +150,8 @@
    "awaitingOfficial": true,
    "missingSince": null,
    "recheck": [
-    "source changed its lane description"
+    "source changed its lane description",
+    "source shows reduced impact"
    ]
   },
   {
