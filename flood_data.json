@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-04T04:45:33Z",
+ "generated": "2026-11-04T05:01:47Z",
  "errors": [
   "FL511 map locations: 3 report(s) without a pin"
  ],
@@ -1754,8 +1754,8 @@
    "to": "Pine St",
    "where": "US-192 EB at Minton Rd/S Wickham Rd",
    "id": "brevard:fl511:937010",
-   "updated": "2026-11-04T04:20:00Z",
-   "lastReported": "2026-11-04T04:20:00Z",
+   "updated": "2026-11-04T04:56:00Z",
+   "lastReported": "2026-11-04T04:56:00Z",
    "firstReported": "2026-11-02T19:54:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
@@ -2020,8 +2020,8 @@
    "to": "Circle Dr",
    "where": "US-192 EB beyond Coastal Ln",
    "id": "brevard:fl511:937141",
-   "updated": "2026-11-04T04:20:00Z",
-   "lastReported": "2026-11-04T04:20:00Z",
+   "updated": "2026-11-04T04:55:00Z",
+   "lastReported": "2026-11-04T04:55:00Z",
    "firstReported": "2026-11-02T19:54:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
@@ -2178,8 +2178,8 @@
    "to": "Coastal Ln",
    "where": "US-192 WB at S John Rodes Blvd",
    "id": "brevard:fl511:937222",
-   "updated": "2026-11-04T04:20:00Z",
-   "lastReported": "2026-11-04T04:20:00Z",
+   "updated": "2026-11-04T04:56:00Z",
+   "lastReported": "2026-11-04T04:56:00Z",
    "firstReported": "2026-11-02T19:54:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
@@ -2837,8 +2837,8 @@
    "title": "Traffic lights not working on US-192 / Vine St / Bronson Hwy East, at S John Rodes Blvd",
    "where": "US-192 EB at S John Rodes Blvd",
    "id": "brevard:fl511:938257",
-   "updated": "2026-11-04T04:25:00Z",
-   "lastReported": "2026-11-04T04:25:00Z",
+   "updated": "2026-11-04T04:56:00Z",
+   "lastReported": "2026-11-04T04:56:00Z",
    "firstReported": "2026-11-03T03:18:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
@@ -3560,8 +3560,8 @@
    "to": "Burdock Ave",
    "where": "CR-509 both directions",
    "id": "brevard:fl511:939236",
-   "updated": "2026-11-04T04:19:00Z",
-   "lastReported": "2026-11-04T04:19:00Z",
+   "updated": "2026-11-04T04:56:00Z",
+   "lastReported": "2026-11-04T04:56:00Z",
    "firstReported": "2026-11-03T17:58:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
@@ -3590,8 +3590,8 @@
    "title": "Flooding on Sunlake Rd Both Directions At SR-507 Northbound. All lanes closed.",
    "where": "Sunlake Rd both directions At SR-507 Northbound",
    "id": "brevard:fl511:939237",
-   "updated": "2026-11-04T04:19:00Z",
-   "lastReported": "2026-11-04T04:19:00Z",
+   "updated": "2026-11-04T04:56:00Z",
+   "lastReported": "2026-11-04T04:56:00Z",
    "firstReported": "2026-11-03T17:58:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
@@ -3647,8 +3647,8 @@
    "to": "S John Rodes Blvd",
    "where": "Ellis Rd both directions",
    "id": "brevard:fl511:939238",
-   "updated": "2026-11-04T04:19:00Z",
-   "lastReported": "2026-11-04T04:19:00Z",
+   "updated": "2026-11-04T04:56:00Z",
+   "lastReported": "2026-11-04T04:56:00Z",
    "firstReported": "2026-11-03T17:58:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
@@ -3696,8 +3696,8 @@
    "to": "Rogers Pl",
    "where": "CR-511 both directions",
    "id": "brevard:fl511:939239",
-   "updated": "2026-11-04T04:19:00Z",
-   "lastReported": "2026-11-04T04:19:00Z",
+   "updated": "2026-11-04T04:56:00Z",
+   "lastReported": "2026-11-04T04:56:00Z",
    "firstReported": "2026-11-03T17:58:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
@@ -3766,8 +3766,8 @@
    "to": "Helio Way",
    "where": "Florida Ave both directions at Babcock St S",
    "id": "brevard:fl511:939287",
-   "updated": "2026-11-04T04:19:00Z",
-   "lastReported": "2026-11-04T04:19:00Z",
+   "updated": "2026-11-04T04:56:00Z",
+   "lastReported": "2026-11-04T04:56:00Z",
    "firstReported": "2026-11-03T18:23:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
@@ -4011,8 +4011,8 @@
    "title": "Flooding on SR-520 Both Directions At John Horne Dr.",
    "where": "SR-520 both directions At John Horne Dr",
    "id": "brevard:fl511:939664",
-   "updated": "2026-11-04T04:19:00Z",
-   "lastReported": "2026-11-04T04:19:00Z",
+   "updated": "2026-11-04T04:57:00Z",
+   "lastReported": "2026-11-04T04:57:00Z",
    "firstReported": "2026-11-03T21:53:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
@@ -4040,8 +4040,8 @@
    "title": "Flooding on SR-513 Southbound At SR-518. 2 Right Lanes Closed.",
    "where": "SR-513 SB",
    "id": "brevard:fl511:939898",
-   "updated": "2026-11-04T04:19:00Z",
-   "lastReported": "2026-11-04T04:19:00Z",
+   "updated": "2026-11-04T04:57:00Z",
+   "lastReported": "2026-11-04T04:57:00Z",
    "firstReported": "2026-11-04T00:37:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
@@ -4131,8 +4131,8 @@
    "to": "Blanche St",
    "where": "SR-514 EB",
    "id": "brevard:fl511:940189",
-   "updated": "2026-11-04T04:19:00Z",
-   "lastReported": "2026-11-04T04:19:00Z",
+   "updated": "2026-11-04T04:57:00Z",
+   "lastReported": "2026-11-04T04:57:00Z",
    "firstReported": "2026-11-04T04:11:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
@@ -4180,8 +4180,8 @@
    "to": "Pine St",
    "where": "SR-514 WB",
    "id": "brevard:fl511:940190",
-   "updated": "2026-11-04T04:12:00Z",
-   "lastReported": "2026-11-04T04:12:00Z",
+   "updated": "2026-11-04T04:57:00Z",
+   "lastReported": "2026-11-04T04:57:00Z",
    "firstReported": "2026-11-04T04:12:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
@@ -7860,12 +7860,6 @@
  ],
  "advisories": [
   {
-   "agency": "Brevard County Sheriff's Office (via Space Coast Daily)",
-   "time": "2026-11-03T05:00:02Z",
-   "text": "Sheriff Wayne Ivey says courts will be back in session Tuesday, Nov. 3, and many government offices are expected to reopen as flooding damage is assessed. Brevard Public Schools stay closed Tuesday so the district can inspect buildings. The full extent of flood damage is not yet known, so residents should stay off the roads unless they need to travel.",
-   "url": "https://spacecoastdaily.com/2026/11/brevard-public-schools-to-remain-closed-tuesday-as-courts-and-government-offices-reopen/"
-  },
-  {
    "agency": "City of West Melbourne (via WFTV)",
    "time": "2026-11-03T13:00:00Z",
    "text": "Several roads and intersections in West Melbourne are still closed by flooding as of 8 a.m. Tuesday. Drive slowly and carefully, especially near flooded neighborhoods, because wakes from passing vehicles can push water into homes. Officials are still checking whether flooded areas are safe to travel.",
@@ -7882,12 +7876,6 @@
    "time": "2026-11-03T20:40:00Z",
    "text": "Brevard Public Schools will stay closed for a third day in a row on Wednesday, Nov. 4. A district spokesperson said campus damage, flooded roads and water service outages mean the district can't open safely. District crews are continuing inspections, repairs and cleanup to get campuses ready to reopen.",
    "url": "https://www.yahoo.com/news/weather-news/articles/brevard-schools-closes-wednesday-amid-204022828.html"
-  },
-  {
-   "agency": "City of Palm Bay (via WFTV)",
-   "time": "2026-11-03T04:19:00Z",
-   "text": "A large water main break along Port Malabar Blvd NE in Palm Bay flooded nearby streets and led to a boil water advisory for the affected area. Weather kept city crews from making repairs.",
-   "url": "https://www.wftv.com/news/local/water-main-break-floods-palm-bay-neighborhood-forces-road-closures/BEXNMTIUJNDETKNRKQTXWZKD5E/"
   },
   {
    "agency": "City of Palm Bay Mayor (via The Palm Bayer)",
