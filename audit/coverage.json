@@ -1,5 +1,5 @@
 {
- "checkedAt": "2026-11-04T19:15:40Z",
+ "checkedAt": "2026-11-04T19:31:34Z",
  "fresh": true,
  "pilot": "City of Melbourne",
  "pending": [
@@ -32,9 +32,9 @@
      "source": "https://www.melbourneflorida.org/Government/City-News/Traffic-Advisories/Road-Closures-Aurora-and-Sarno",
      "sourceTime": "2026-11-02",
      "inNewest": false,
-     "verdict": "covered",
+     "verdict": "partial",
      "pins": [
-      "brevard:manual:aurora-stewart"
+      "brevard:manual:commodore-blvd-at-aurora-rd-intersection"
      ]
     },
     {
@@ -51,9 +51,9 @@
      "source": "https://www.melbourneflorida.org/Government/City-News/Traffic-Advisories/Traffic-Advisory-November-2",
      "sourceTime": "2026-11-02",
      "inNewest": false,
-     "verdict": "covered",
+     "verdict": "partial",
      "pins": [
-      "brevard:manual:babcock-st-at-avenue-b"
+      "brevard:manual:babcock-sunlakes"
      ]
     },
     {
@@ -70,9 +70,9 @@
      "source": "https://www.melbourneflorida.org/Government/City-News/Traffic-Advisories/Traffic-Advisory-November-2",
      "sourceTime": "2026-11-02",
      "inNewest": false,
-     "verdict": "covered",
+     "verdict": "partial",
      "pins": [
-      "brevard:manual:babcock-st-at-florida-ave"
+      "brevard:manual:babcock-sunlakes"
      ]
     },
     {
@@ -89,9 +89,9 @@
      "source": "https://www.melbourneflorida.org/Government/City-News/Traffic-Advisories/Traffic-Advisory-November-2",
      "sourceTime": "2026-11-02",
      "inNewest": false,
-     "verdict": "covered",
+     "verdict": "partial",
      "pins": [
-      "brevard:manual:babcock-st-at-southgate-blvd"
+      "brevard:manual:babcock-sunlakes"
      ]
     },
     {
@@ -130,9 +130,9 @@
      "source": "https://www.melbourneflorida.org/Government/City-News/Traffic-Advisories/Road-Closures-Dairy-Babcock-Lake-Washington",
      "sourceTime": "2026-11-02",
      "inNewest": false,
-     "verdict": "covered",
+     "verdict": "partial",
      "pins": [
-      "brevard:manual:babcock-st-at-university-blvd"
+      "brevard:manual:babcock-sunlakes"
      ]
     },
     {
@@ -149,10 +149,8 @@
      "source": "https://www.melbourneflorida.org/Government/City-News/Traffic-Advisories/Traffic-Advisory-November-2",
      "sourceTime": "2026-11-02",
      "inNewest": false,
-     "verdict": "covered",
-     "pins": [
-      "brevard:manual:dairy-rd-at-edgewood-dr"
-     ]
+     "verdict": "missed",
+     "pins": []
     },
     {
      "place": "point|dairy|florida",
@@ -168,10 +166,8 @@
      "source": "https://www.melbourneflorida.org/Government/City-News/Traffic-Advisories/Traffic-Advisory-November-2",
      "sourceTime": "2026-11-02",
      "inNewest": false,
-     "verdict": "covered",
-     "pins": [
-      "brevard:manual:dairy-rd-at-florida-ave"
-     ]
+     "verdict": "missed",
+     "pins": []
     },
     {
      "place": "point|dairy|snicole",
@@ -187,10 +183,8 @@
      "source": "https://www.melbourneflorida.org/Government/City-News/Traffic-Advisories/Traffic-Advisory-November-2",
      "sourceTime": "2026-11-02",
      "inNewest": false,
-     "verdict": "covered",
-     "pins": [
-      "brevard:manual:dairy-rd-at-snicole-rd"
-     ]
+     "verdict": "missed",
+     "pins": []
     },
     {
      "place": "point|drive martin luther king jr|nasa",
@@ -206,10 +200,8 @@
      "source": "https://www.melbourneflorida.org/Government/City-News/Traffic-Advisories/Traffic-Advisory-November-2",
      "sourceTime": "2026-11-02",
      "inNewest": false,
-     "verdict": "covered",
-     "pins": [
-      "brevard:manual:dr-martin-luther-king-jr-blvd-at-nasa-bl"
-     ]
+     "verdict": "missed",
+     "pins": []
     },
     {
      "place": "point|drive martin luther king jr|new haven",
@@ -225,10 +217,8 @@
      "source": "https://www.melbourneflorida.org/Government/City-News/Traffic-Advisories/Traffic-Advisory-November-2",
      "sourceTime": "2026-11-02",
      "inNewest": false,
-     "verdict": "covered",
-     "pins": [
-      "brevard:manual:dr-martin-luther-king-jr-blvd-at-new-hav"
-     ]
+     "verdict": "missed",
+     "pins": []
     },
     {
      "place": "point|eau gallie|commodore",
@@ -244,10 +234,8 @@
      "source": "https://www.melbourneflorida.org/Government/City-News/Traffic-Advisories/Traffic-Advisory-November-2",
      "sourceTime": "2026-11-02",
      "inNewest": false,
-     "verdict": "covered",
-     "pins": [
-      "brevard:manual:eau-gallie-blvd-at-commodore-blvd"
-     ]
+     "verdict": "missed",
+     "pins": []
     },
     {
      "place": "point|eau gallie|john rodes|SB",
@@ -265,10 +253,8 @@
      "source": "https://www.melbourneflorida.org/Government/City-News/Traffic-Advisories/Road-Closures-1320",
      "sourceTime": "2026-11-03T18:20:00Z",
      "inNewest": false,
-     "verdict": "covered",
-     "pins": [
-      "brevard:manual:john-rodes-sb-at-eau-gallie"
-     ]
+     "verdict": "missed",
+     "pins": []
     },
     {
      "place": "point|eau gallie|sarno",
@@ -284,12 +270,8 @@
      "source": "https://www.melbourneflorida.org/Government/City-News/Traffic-Advisories/Traffic-Advisory-November-2",
      "sourceTime": "2026-11-02",
      "inNewest": false,
-     "verdict": "partial",
-     "pins": [
-      "brevard:manual:riverside-dr-sb-at-eau-gallie-blvd",
-      "brevard:manual:eau-gallie-blvd-at-commodore-blvd",
-      "brevard:manual:john-rodes-sb-at-eau-gallie"
-     ]
+     "verdict": "missed",
+     "pins": []
     },
     {
      "place": "point|eber|babcock|EB|SB",
@@ -308,10 +290,8 @@
      "source": "https://www.melbourneflorida.org/Government/City-News/Traffic-Advisories/Road-Closures-1320",
      "sourceTime": "2026-11-03T18:20:00Z",
      "inNewest": false,
-     "verdict": "covered",
-     "pins": [
-      "brevard:manual:babcock-eber"
-     ]
+     "verdict": "missed",
+     "pins": []
     },
     {
      "place": "point|edgewood|ruffner",
@@ -327,10 +307,8 @@
      "source": "https://www.melbourneflorida.org/Government/City-News/Traffic-Advisories/Traffic-Advisory-November-2",
      "sourceTime": "2026-11-02",
      "inNewest": false,
-     "verdict": "covered",
-     "pins": [
-      "brevard:manual:edgewood-ruffner"
-     ]
+     "verdict": "missed",
+     "pins": []
     },
     {
      "place": "point|florida|babcock|WB",
@@ -348,10 +326,8 @@
      "source": "https://www.melbourneflorida.org/Government/City-News/Traffic-Advisories/Road-Closures-1045",
      "sourceTime": "2026-11-03T15:45:00Z",
      "inNewest": false,
-     "verdict": "direction-unstated",
-     "pins": [
-      "brevard:manual:babcock-st-at-florida-ave"
-     ]
+     "verdict": "missed",
+     "pins": []
     },
     {
      "place": "point|florida|dairy|EB",
@@ -369,10 +345,8 @@
      "source": "https://www.melbourneflorida.org/Government/City-News/Traffic-Advisories/Road-Closures-1320",
      "sourceTime": "2026-11-03T18:20:00Z",
      "inNewest": false,
-     "verdict": "direction-unstated",
-     "pins": [
-      "brevard:manual:dairy-rd-at-florida-ave"
-     ]
+     "verdict": "missed",
+     "pins": []
     },
     {
      "place": "point|lake washington|stewart",
@@ -388,10 +362,8 @@
      "source": "https://www.melbourneflorida.org/Government/City-News/Traffic-Advisories/Traffic-Advisory-November-2",
      "sourceTime": "2026-11-02",
      "inNewest": false,
-     "verdict": "covered",
-     "pins": [
-      "brevard:manual:lake-washington-rd-at-stewart-rd"
-     ]
+     "verdict": "missed",
+     "pins": []
     },
     {
      "place": "point|lipscomb|university",
@@ -407,10 +379,8 @@
      "source": "https://www.melbourneflorida.org/Government/City-News/Traffic-Advisories/Traffic-Advisory-November-2",
      "sourceTime": "2026-11-02",
      "inNewest": false,
-     "verdict": "covered",
-     "pins": [
-      "brevard:manual:university-blvd-at-lipscomb-st"
-     ]
+     "verdict": "missed",
+     "pins": []
     },
     {
      "place": "point|riverside|eau gallie|SB",
@@ -428,10 +398,8 @@
      "source": "https://www.melbourneflorida.org/Government/City-News/Traffic-Advisories/Traffic-Advisory-November-2",
      "sourceTime": "2026-11-02",
      "inNewest": false,
-     "verdict": "covered",
-     "pins": [
-      "brevard:manual:riverside-dr-sb-at-eau-gallie-blvd"
-     ]
+     "verdict": "missed",
+     "pins": []
     },
     {
      "place": "point|sun lakes|babcock",
@@ -466,10 +434,8 @@
      "source": "https://www.melbourneflorida.org/Government/City-News/Traffic-Advisories/Traffic-Advisory-November-2",
      "sourceTime": "2026-11-02",
      "inNewest": false,
-     "verdict": "covered",
-     "pins": [
-      "brevard:manual:babcock-st-at-university-blvd"
-     ]
+     "verdict": "missed",
+     "pins": []
     },
     {
      "place": "point|university|main",
@@ -485,10 +451,8 @@
      "source": "https://www.melbourneflorida.org/Government/City-News/Traffic-Advisories/Traffic-Advisory-November-2",
      "sourceTime": "2026-11-02",
      "inNewest": false,
-     "verdict": "covered",
-     "pins": [
-      "brevard:manual:university-blvd-at-main-st-briarwood-com"
-     ]
+     "verdict": "missed",
+     "pins": []
     },
     {
      "place": "point|us 192|country club",
@@ -504,10 +468,8 @@
      "source": "https://www.melbourneflorida.org/Government/City-News/Traffic-Advisories/Traffic-Advisory-November-2",
      "sourceTime": "2026-11-02",
      "inNewest": false,
-     "verdict": "covered",
-     "pins": [
-      "brevard:manual:us-192-at-country-club-rd"
-     ]
+     "verdict": "missed",
+     "pins": []
     },
     {
      "place": "road|dubber",
@@ -521,10 +483,8 @@
      "source": "https://www.melbourneflorida.org/Government/City-News/Traffic-Advisories/Traffic-Advisory-November-2",
      "sourceTime": "2026-11-02",
      "inNewest": false,
-     "verdict": "covered-road",
-     "pins": [
-      "brevard:manual:dubber-rd"
-     ]
+     "verdict": "missed",
+     "pins": []
     },
     {
      "place": "road|golfclub",
@@ -538,10 +498,8 @@
      "source": "https://www.melbourneflorida.org/Government/City-News/Traffic-Advisories/Traffic-Advisory-November-2",
      "sourceTime": "2026-11-02",
      "inNewest": false,
-     "verdict": "unlocated",
-     "pins": [
-      "brevard:manual:golfclub"
-     ]
+     "verdict": "missed",
+     "pins": []
     },
     {
      "place": "road|north",
@@ -555,10 +513,8 @@
      "source": "https://www.melbourneflorida.org/Government/City-News/Traffic-Advisories/Traffic-Advisory-November-2",
      "sourceTime": "2026-11-02",
      "inNewest": false,
-     "verdict": "covered-road",
-     "pins": [
-      "brevard:manual:north-dr"
-     ]
+     "verdict": "missed",
+     "pins": []
     },
     {
      "place": "road|snicole",
@@ -572,10 +528,8 @@
      "source": "https://www.melbourneflorida.org/Government/City-News/Traffic-Advisories/Traffic-Advisory-November-2",
      "sourceTime": "2026-11-02",
      "inNewest": false,
-     "verdict": "unlocated",
-     "pins": [
-      "brevard:manual:snicole-rd"
-     ]
+     "verdict": "missed",
+     "pins": []
     },
     {
      "place": "road|stewart",
@@ -589,10 +543,8 @@
      "source": "https://www.melbourneflorida.org/Government/City-News/Traffic-Advisories/Traffic-Advisory-November-2",
      "sourceTime": "2026-11-02",
      "inNewest": false,
-     "verdict": "covered-road",
-     "pins": [
-      "brevard:manual:stewart-rd"
-     ]
+     "verdict": "missed",
+     "pins": []
     },
     {
      "place": "segment|babcock|brevard|east avenue b",
@@ -611,12 +563,6 @@
      "inNewest": false,
      "verdict": "partial",
      "pins": [
-      "brevard:manual:babcock-st-at-university-blvd",
-      "brevard:manual:babcock-st-at-florida-ave",
-      "brevard:manual:babcock-st-at-southgate-blvd",
-      "brevard:manual:babcock-st-at-avenue-b",
-      "brevard:manual:babcock-st-at-palm-bay-rd",
-      "brevard:manual:babcock-eber",
       "brevard:manual:babcock-sunlakes"
      ]
     },
@@ -637,12 +583,6 @@
      "inNewest": false,
      "verdict": "reopen-review",
      "pins": [
-      "brevard:manual:babcock-st-at-university-blvd",
-      "brevard:manual:babcock-st-at-florida-ave",
-      "brevard:manual:babcock-st-at-southgate-blvd",
-      "brevard:manual:babcock-st-at-avenue-b",
-      "brevard:manual:babcock-st-at-palm-bay-rd",
-      "brevard:manual:babcock-eber",
       "brevard:manual:babcock-sunlakes"
      ],
      "context": "other sentences in the same paragraph"
@@ -662,14 +602,8 @@
      "source": "https://www.melbourneflorida.org/Government/City-News/Traffic-Advisories/Road-Closures-1045",
      "sourceTime": "2026-11-03T15:45:00Z",
      "inNewest": false,
-     "verdict": "reopen-review",
-     "pins": [
-      "brevard:fhp:20261103113554-f45b9b31",
-      "brevard:fhp:20261102162806-a1e1d51b",
-      "brevard:manual:babcock-eber",
-      "brevard:manual:eber-blvd-at-stack-blvd-all-directions",
-      "brevard:fhp:20261103161117-8de2c55c"
-     ]
+     "verdict": "no-active-pin",
+     "pins": []
     },
     {
      "place": "segment|sarno|eau gallie|sarno",
@@ -709,11 +643,8 @@
      "source": "https://www.melbourneflorida.org/Government/City-News/Traffic-Advisories/Road-Closures-1045",
      "sourceTime": "2026-11-03T15:45:00Z",
      "inNewest": false,
-     "verdict": "reopen-review",
-     "pins": [
-      "brevard:manual:palm-bay-rd-nb-at-stack-blvd",
-      "brevard:manual:eber-blvd-at-stack-blvd-all-directions"
-     ]
+     "verdict": "no-active-pin",
+     "pins": []
     },
     {
      "place": "whole|dairy",
@@ -727,10 +658,8 @@
      "source": "https://www.melbourneflorida.org/Government/City-News/Traffic-Advisories/Road-Closures-Dairy-Babcock-Lake-Washington",
      "sourceTime": "2026-11-02",
      "inNewest": false,
-     "verdict": "covered",
-     "pins": [
-      "brevard:manual:all-dairy-rd"
-     ]
+     "verdict": "missed",
+     "pins": []
     },
     {
      "place": "whole|lake washington",
@@ -744,10 +673,8 @@
      "source": "https://www.melbourneflorida.org/Government/City-News/Traffic-Advisories/Road-Closures-Dairy-Babcock-Lake-Washington",
      "sourceTime": "2026-11-02",
      "inNewest": false,
-     "verdict": "covered",
-     "pins": [
-      "brevard:manual:all-lake-washington-rd"
-     ]
+     "verdict": "missed",
+     "pins": []
     },
     {
      "place": "whole|sarno",
@@ -761,21 +688,18 @@
      "source": "https://www.melbourneflorida.org/Government/City-News/Traffic-Advisories/Copy-of-Road-Closures-1150",
      "sourceTime": "2026-11-03T16:50:00Z",
      "inNewest": false,
-     "verdict": "reopen-review",
-     "pins": [
-      "brevard:manual:sarno-rd-at-wickham-rd"
-     ]
+     "verdict": "no-active-pin",
+     "pins": []
     }
    ],
    "summary": {
-    "covered": 24,
-    "partial": 2,
-    "direction-unstated": 2,
-    "covered-road": 3,
-    "unlocated": 2,
-    "reopen-review": 4,
+    "partial": 6,
+    "covered": 2,
+    "missed": 25,
+    "reopen-review": 1,
+    "no-active-pin": 3,
     "resolved-by-city": 1,
-    "older-unresolved": 6,
+    "older-unresolved": 31,
     "needs-review": 20
    }
   }
@@ -1621,8 +1545,8 @@
     "679866428cf4406fd68d4376fb3934bf99e6e314857217c03f7ed8a888d60e4f",
     "746cdc91f2e0b08cdb9dadc4c9f958c6d390971a96b2908eb8496905fb973e6f"
    ],
-   "sha256": "3098ec4693e2c493c0de7c22af1f5424664f1bad2d2f45837e9d72652e632052",
-   "readAt": "2026-11-04T19:15:40Z"
+   "sha256": "738f617db2170889d105e2163de4b5e6974d71873ed0a41db89f36cb2d8eedd9",
+   "readAt": "2026-11-04T19:31:34Z"
   },
   "https://www.melbourneflorida.org/Government/City-News/Traffic-Advisories/Road-Closures-1525": {
    "agency": "City of Melbourne",
@@ -1634,8 +1558,8 @@
     "97e677fe040fc517ea06a0c0051d7e189466888dc0cbea88d01828d21040db05",
     "746cdc91f2e0b08cdb9dadc4c9f958c6d390971a96b2908eb8496905fb973e6f"
    ],
-   "sha256": "d3dcda2fcf359a8890e66d29b6d4c53c3358a7752f4f77a4c79056391fd2e0b5",
-   "readAt": "2026-11-04T19:15:40Z"
+   "sha256": "edbbf10524282c82ed2c4c6dbc5a052297ce0456d4609adecd16f3f7c5621b5f",
+   "readAt": "2026-11-04T19:31:34Z"
   },
   "https://www.melbourneflorida.org/Government/City-News/Traffic-Advisories/Lane-Closure-NASA-Blvd": {
    "agency": "City of Melbourne",
@@ -1645,8 +1569,8 @@
    "needsReview": [
     "d3b63822f83243ea40717b27e5b78827b787af45119ff216d61ea39a90a41734"
    ],
-   "sha256": "86f4bf4714a0db7db64e17389b94f3eaf31a7c16ec762654934b5481bf9f3484",
-   "readAt": "2026-11-04T19:15:40Z"
+   "sha256": "e1ce5ad09ac280dee7bfb68819d0019196c27fc53088ea29c9d5355487a48d54",
+   "readAt": "2026-11-04T19:31:34Z"
   }
  }
 }
