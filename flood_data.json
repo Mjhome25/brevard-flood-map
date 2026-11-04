@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-04T22:00:43Z",
+ "generated": "2026-11-04T22:15:36Z",
  "errors": [
   "FL511 map locations: 2 report(s) without a pin"
  ],
@@ -152,41 +152,6 @@
    "recheck": [
     "source changed its lane description"
    ]
-  },
-  {
-   "fullClosure": false,
-   "lanes": "No Roadblock",
-   "lat": 28.3716697935881,
-   "layer": "FHP",
-   "lng": -80.6684675223702,
-   "reported": "2026-11-04T08:20:43Z",
-   "road": "SYKES CREEK PKWY",
-   "roadShort": "Sykes Creek Pkwy",
-   "source": "FHP live CAD",
-   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-   "spot": "at N Banana River Dr",
-   "status": "caution",
-   "title": "MVC at SYKES CREEK PKWY x[N BANANA RIVER DR] [MERRITT ISLAND] (No Roadblock)",
-   "where": "Sykes Creek Pkwy at N Banana River Dr",
-   "id": "brevard:fhp:20261104082043-8eea2807",
-   "updated": "2026-11-04T08:20:43Z",
-   "lastReported": "2026-11-04T08:20:43Z",
-   "firstReported": "2026-11-04T08:20:43Z",
-   "verified": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "kind": "feed",
-    "publishedAt": "2026-11-04T08:20:43Z"
-   },
-   "awaitingOfficial": true,
-   "missingSince": "2026-11-04T22:00:48Z",
-   "recheck": [],
-   "noLongerListed": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "since": "2026-11-04T22:00:48Z",
-    "wasClosed": false
-   }
   },
   {
    "fullClosure": false,
@@ -403,8 +368,8 @@
    "title": "Object on roadway on I-95 South, before MM 206. 2 Left lanes blocked",
    "where": "I-95 SB before MM 206",
    "id": "brevard:fl511:941573",
-   "updated": "2026-11-04T21:56:00Z",
-   "lastReported": "2026-11-04T21:56:00Z",
+   "updated": "2026-11-04T22:02:00Z",
+   "lastReported": "2026-11-04T22:02:00Z",
    "firstReported": "2026-11-04T21:56:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
@@ -412,9 +377,11 @@
     "kind": "feed",
     "publishedAt": "2026-11-04T21:56:00Z"
    },
-   "awaitingOfficial": false,
+   "awaitingOfficial": true,
    "missingSince": null,
-   "recheck": []
+   "recheck": [
+    "source changed its lane description"
+   ]
   },
   {
    "approx": true,
@@ -518,6 +485,41 @@
   }
  ],
  "reopened": [
+  {
+   "fullClosure": false,
+   "lanes": "No Roadblock",
+   "lat": 28.3716697935881,
+   "layer": "FHP",
+   "lng": -80.6684675223702,
+   "reported": "2026-11-04T08:20:43Z",
+   "road": "SYKES CREEK PKWY",
+   "roadShort": "Sykes Creek Pkwy",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "spot": "at N Banana River Dr",
+   "status": "caution",
+   "title": "MVC at SYKES CREEK PKWY x[N BANANA RIVER DR] [MERRITT ISLAND] (No Roadblock)",
+   "where": "Sykes Creek Pkwy at N Banana River Dr",
+   "id": "brevard:fhp:20261104082043-8eea2807",
+   "updated": "2026-11-04T08:20:43Z",
+   "lastReported": "2026-11-04T08:20:43Z",
+   "firstReported": "2026-11-04T08:20:43Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-04T08:20:43Z"
+   },
+   "reopenedAt": "2026-11-04T22:15:43Z",
+   "evidence": {
+    "agency": "Florida Highway Patrol",
+    "kind": "feed-dropped",
+    "missingSince": "2026-11-04T22:00:48Z",
+    "reopenedAt": "2026-11-04T22:15:43Z",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
+   },
+   "stillReported": []
+  },
   {
    "fullClosure": false,
    "lanes": "No Roadblock",
