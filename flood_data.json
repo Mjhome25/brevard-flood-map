@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-04T00:15:34Z",
+ "generated": "2026-11-04T00:30:34Z",
  "errors": [
   "FL511 map locations: 1 report(s) without a pin"
  ],
@@ -1248,9 +1248,15 @@
     "kind": "feed",
     "publishedAt": "2026-11-03T11:39:34Z"
    },
-   "awaitingOfficial": false,
-   "missingSince": null,
-   "recheck": []
+   "awaitingOfficial": true,
+   "missingSince": "2026-11-04T00:30:42Z",
+   "recheck": [],
+   "noLongerListed": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "since": "2026-11-04T00:30:42Z",
+    "wasClosed": false
+   }
   },
   {
    "fullClosure": false,
@@ -6728,7 +6734,7 @@
      "id": "brevard:fhp:20261103113934-fa0ee9b4",
      "where": "I-95 Nb [Exit Ramp] at Mm183",
      "source": "FHP live CAD",
-     "since": null
+     "since": "2026-11-04T00:30:42Z"
     }
    ]
   },
