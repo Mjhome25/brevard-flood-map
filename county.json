@@ -24,7 +24,9 @@
     "enabled": true,
     "kinds": [
       "fhp-dropped",
-      "official"
+      "official",
+      "feed-dropped",
+      "owner-cleanup"
     ],
     "note": "Mike, Nov 3 2026: \"we can clear crashes when they come off the FHP website, just not road closures\" and \"make sure that there is never a 'no longer listed' that is still actually closed.\" Only a plain FHP crash (MVC, never closed) that the FHP page stops listing (gone on two successful fetches) comes off the map, cited. Water closures, roadblocks, debris and anything closed stay until a cited source says the road is open. Temporary; Mike will revisit. Official (Mike, Nov 3): a road may be shown reopened when an official statement on a credible government website on the verify list says it is open, cited on the pin; no per-item approval (\"I don't have to approve every removal, just make sure it follows our rules\"); every removal is in the daily audit.",
     "hosts": {}

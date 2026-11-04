@@ -105,18 +105,19 @@ def counterparts(ep: dict, events: list[dict], final: dict) -> tuple[list[dict],
                       "url": f.get("sourceUrl"), "status": f.get("status"), "fullClosure": bool(f.get("fullClosure")),
                       "reportedAt": again[0]["at"], "sourceTime": again[0].get("stime")})
     for rid, r in final["records"].items():
-        if rid == ep["rid"] or r["status"] != "active" and E.parse(r["lastReported"]) <= cut:
+        owner_removed=(r.get("evidence") or {}).get("kind")=="owner-cleanup"
+        if rid == ep["rid"] or (r["status"] != "active" and not owner_removed and E.parse(r["lastReported"]) <= cut):
             continue
         if not R.same_spot(ep["fields"], r["fields"]):
             continue
         first, last = E.parse(r["firstReported"]), E.parse(r["lastReported"])
         rel = ("later-report" if first > cut else "reported-after-drop" if last > cut
-               else "older-entry" if r["status"] == "active" else None)
+               else "older-entry" if r["status"] == "active" or owner_removed else None)
         if not rel:
             continue
         f = r["fields"]
         up = final["sources"].get(r["src"], {}).get("state") == "up"
-        listing = ("no longer listed by its feed" if r["src"] in FEEDS and r.get("missingSince")
+        listing = ("administratively removed by the owner; no reopening confirmed" if owner_removed else "no longer listed by its feed" if r["src"] in FEEDS and r.get("missingSince")
                    else "listing unconfirmed (its feed is not reading normally)" if r["src"] in FEEDS and not up
                    else "still listed by its feed" if r["src"] in FEEDS
                    else "not a live feed (cannot tell if its source still lists it)")

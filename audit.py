@@ -62,7 +62,7 @@ def verdict(c: dict, events: list[dict], final: dict) -> tuple[str, list[str]]:
     cut = E.parse(c["cut"])
     later = [ev for ev in events if ev.get("rid") == c["rid"] and ev["kind"] in ("reported", "relisted")
              and ev["at"] > c["at"]]
-    if later and (c["kind"] == "disappeared" or c["why"] == "fhp-dropped"):
+    if later and (c["kind"] == "disappeared" or c["why"] in ("fhp-dropped", "feed-dropped")):
         return "source-relisted", [f"{c['src']} listed it again at {later[0]['at']} (source time {later[0].get('stime')})"]
     found = {"still-blocked": [], "later-report": [], "stale-unresolved": []}
     for rid, r in final["records"].items():

@@ -32,6 +32,7 @@ jobs:
           python3 -I tests/test_no_fade.py "$PWD"
           python3 -I tests/test_events.py "$PWD"
           python3 -I tests/test_reconcile.py "$PWD"
+          python3 -I tests/test_owner_cleanup.py
           python3 -I tests/test_water_notices.py
           python3 -I tests/test_audit.py "$PWD"
           python3 -I tests/test_coverage.py "$PWD"

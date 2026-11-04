@@ -71,12 +71,46 @@ def health(src, ok):
 
 
 # ---- FL511 ------------------------------------------------------------
+fl511_totals = {}  # statewide rows per layer, from complete reads only
+
+
+def _fl511_id(i):
+    return not isinstance(i, bool) and isinstance(i, (int, str)) and str(i).strip() != ""
+
+
+def fl511_rows(layer, page=500, max_pages=20):
+    """Every statewide row of an FL511 list, or an exception. The response must be the list envelope
+    {draw, recordsTotal, recordsFiltered, data: [...]}; pages are read until the stated total is reached, so a missing,
+    malformed or truncated list never looks like reports that stopped being listed (Codex FL review)."""
+    rows, total = [], None
+    for n in range(max_pages):
+        q = urllib.parse.quote(json.dumps({"columns": [], "start": len(rows), "length": page}))
+        d = json.loads(get(f"https://fl511.com/List/GetData/{layer}?query={q}&lang=en-US"))
+        if not isinstance(d, dict) or not isinstance(d.get("data"), list) or not isinstance(d.get("recordsTotal"), int) \
+                or isinstance(d.get("recordsTotal"), bool) or d["recordsTotal"] < 0:
+            raise ValueError("unrecognised FL511 list response (no data list or recordsTotal)")
+        if total is not None and d["recordsTotal"] != total:
+            raise ValueError(f"FL511 list changed while paging ({total} -> {d['recordsTotal']})")
+        total = d["recordsTotal"]
+        rows += d["data"]
+        if len(rows) >= total or not d["data"]: break
+    if len(rows) != total:
+        raise ValueError(f"FL511 list incomplete: {len(rows)} of {total} rows")
+    # a repeated page or overlapping read is not a complete list: each id appears once (rows without a usable id
+    # are unreadable rows of any county, which make the feed partial in fl511())
+    ids = [str(r["id"]) for r in rows if isinstance(r, dict) and _fl511_id(r.get("id"))]
+    if len(set(ids)) != len(ids):
+        raise ValueError(f"FL511 list repeats rows ({len(ids) - len(set(ids))} duplicate ids)")
+    fl511_totals[layer] = total
+    return rows
+
+
 def fl511(layer):
-    q = urllib.parse.quote(json.dumps({"columns": [], "start": 0, "length": 500}))
-    d = json.loads(get(f"https://fl511.com/List/GetData/{layer}?query={q}&lang=en-US"))
     out = []
-    for r in d.get("data", []):
+    for r in fl511_rows(layer):
         with row("fl511", r.get("id") if isinstance(r, dict) else repr(r)[:40]):  # a malformed row of any county counts
+            if not _fl511_id(r.get("id")):
+                raise ValueError(f"no id ({r.get('id')!r})")  # any county: the list cannot be shown complete
             county = r.get("county")
             if not isinstance(county, str) or not county.strip():
                 raise ValueError(f"no county name ({county!r})")  # could be ours: the feed counts as partial
@@ -105,7 +139,9 @@ sources = {}  # per-source health for the closure history: up, down (fetch or pa
 for layer in ("Closures", "Incidents"):
     try: items += [it for it in fl511(layer) if not (it["id"] in seen_ids or seen_ids.add(it["id"]))]
     except Exception as e: errors.append(f"FL511 {layer}: {e}"); sources["fl511"] = "down"
-health("fl511", any(it["layer"] != "FHP" for it in items))
+# complete reads of both lists are a successful read even with no rows for this county (its last report gone); a
+# statewide total of zero, like an empty FHP table, is treated as empty (an anomaly when reports are open), not "up"
+health("fl511", len(fl511_totals) == 2 and sum(fl511_totals.values()) > 0)
 
 # FL511 list rows carry no coordinates; the map-icon endpoint does (by id). Cache them so a transient failure keeps pins.
 cache_path = os.path.join(HERE, "fl511_coords_cache.json")

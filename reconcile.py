@@ -200,7 +200,7 @@ def stime_of(it: dict, fallback: str = "") -> str:
     return fallback
 
 
-def plan(obs: dict, state: dict, now: str, county: str = "brevard", fhp_clears: bool = False
+def plan(obs: dict, state: dict, now: str, county: str = "brevard", fhp_clears: bool = False, feed_clears: bool = False
          ) -> tuple[list[dict], list[str]]:
     """The events this run adds, and notes for the page's errors list."""
     new, notes = [], []
@@ -239,7 +239,12 @@ def plan(obs: dict, state: dict, now: str, county: str = "brevard", fhp_clears: 
         for r in recs:
             if r["rid"] not in observed and not r["missingSince"]:
                 new.append({"rid": r["rid"], "kind": "missing", "src": src, "actor": "reconcile", "stime": now})
-            elif (r["rid"] not in observed and src == "fhp" and fhp_clears and health == "up"
+            elif r["rid"] not in observed and src in E.FEED_DROP and feed_clears and health == "up" and not E.independent(r):
+                # Mike (Nov 4): anything FHP or FL511 stopped listing, still gone on the next successful fetch, comes off the map, citing that feed
+                new.append({"rid": r["rid"], "kind": "cleared", "src": src, "actor": "reconcile", "stime": now,
+                            "evidence": {"kind": "feed-dropped", "agency": E.FEED_DROP[src][0], "url": E.FEED_DROP[src][1],
+                                         "missingSince": r["missingSince"], "reopenedAt": ""}})
+            elif (r["rid"] not in observed and src == "fhp" and fhp_clears and health == "up" and not E.independent(r)
                   and E.fhp_clearable(r["fields"])):
                 # Mike (Nov 3), for now: an FHP crash (never a closure) still gone on the next successful fetch is cleared, citing FHP
                 new.append({"rid": r["rid"], "kind": "cleared", "src": src, "actor": "reconcile", "stime": now,
@@ -275,6 +280,8 @@ def display(state: dict) -> tuple[list[dict], list[dict]]:
         it = dict(r["fields"], id=r["rid"], updated=r["lastReported"], lastReported=r["lastReported"],
                   firstReported=r["firstReported"])
         it["verified"] = verification(r)
+        if r.get("verified") and it["verified"].get("kind") != "page":  # a feed record a government page also confirmed
+            it["pageVerified"] = dict(r["verified"], kind="page")
         if r.get("raisedBy"):
             it["raisedBy"] = r["raisedBy"]
         elif r.get("supportedBy"):
@@ -390,22 +397,35 @@ def keep_independent(items: list[dict]) -> list[dict]:
     for it in items:
         if not it.get("noLongerListed"):
             continue
-        page = it.get("raisedBy") or it.get("supportedBy") or ((it.get("verified") or {}).get("kind") == "page" and it["verified"])
-        kept = []
-        if page:  # the page's own words set or confirmed this impact; it stands without the feed
+        page = (it.get("raisedBy") or it.get("supportedBy") or ((it.get("verified") or {}).get("kind") == "page" and it["verified"])
+                or it.get("pageVerified"))
+        kept, nws = [], it.get("nws") or []
+        if page:
             kept.append({"kind": "page", "source": page.get("agency") or page.get("source"), "url": page.get("url")})
-        nws = it.get("nws") or []
-        if nws:
-            kept += [{"kind": "nws", "source": "NWS storm report", "reporter": r.get("reporter"), "url": r.get("url"),
-                      "status": r.get("status")} for r in nws]
-            if not page:  # what remains is only the NWS reports: their most serious status, never the feed's full closure
-                top = max(nws, key=lambda r: E.SEVERITY.get(r.get("status"), 0))
+        kept += [{"kind": "nws", "source": "NWS storm report", "reporter": r.get("reporter"), "url": r.get("url"),
+                  "status": r.get("status")} for r in nws]
+        if kept:
+            # what remains is only what the independent evidence itself says: the page sentence's impact (closed, or
+            # flooded never shown closed; full only for a sentence covering all of the road) or the NWS reports' most
+            # serious status, never the dropped feed's closure, lanes or stretch (Codex FL review)
+            n = E.notice(page.get("quote") or "") if page else None
+            # the page's own sentence says closed or flooded (never a crash, lanes or a stretch). A citation in a form we
+            # can no longer parse keeps the impact it was checked against when written (raise/support), else caution
+            if page and n:
+                p_status, p_full = n["impact"], n["impact"] == "closed" and n["whole"]
+            elif page:
+                cited = bool(it.get("raisedBy") or it.get("supportedBy"))
+                p_status, p_full = (it.get("status"), bool(it.get("fullClosure"))) if cited else ("caution", False)
+            top = max(nws, key=lambda r: E.SEVERITY.get(r.get("status"), 0)) if nws else None
+            use_page = bool(page) and (not top or E.SEVERITY.get(p_status, 0) >= E.SEVERITY.get(top.get("status"), 0))
+            status, full = (p_status, p_full) if use_page else (top.get("status"), False)
+            if status != it.get("status") or full != bool(it.get("fullClosure")):
                 it.setdefault("baseStatus", it.get("status"))
-                it.update(status=top.get("status"), statusBy=top, fullClosure=False)
-                # the dropped feed's lane and stretch wording no longer describes the road; kept only as its earlier report
-                gone = {k: it.pop(k) for k in ("lanes", "line", "from", "to", "length_m") if k in it}
-                if gone.get("lanes"):
-                    it["earlierReport"] = f"{it['noLongerListed']['agency']} earlier: {gone['lanes']}"
+            it.update(status=status, fullClosure=full, statusBy=page if use_page else top)
+            # the gone feed's lane wording and drawn stretch are its own: kept only as a dated earlier report
+            gone = {k: it.pop(k) for k in ("lanes", "line", "from", "to", "length_m") if k in it}
+            if gone.get("lanes"):
+                it["earlierReport"] = f"{it['noLongerListed']['agency']} earlier: {gone['lanes']}"
         if kept:
             it["keptBy"] = kept
     return items
@@ -418,9 +438,15 @@ def main() -> int:
     state = E.derive(E.load(), now)
     clearance = county.get("clearance", {})
     fhp_clears = bool(clearance.get("enabled")) and "fhp-dropped" in clearance.get("kinds", [])
-    new, notes = plan(obs, state, E.iso(now), county["id"], fhp_clears=fhp_clears)
+    feed_clears = bool(clearance.get("enabled")) and "feed-dropped" in clearance.get("kinds", [])
+    new, notes = plan(obs, state, E.iso(now), county["id"], fhp_clears=fhp_clears, feed_clears=feed_clears)
     written = E.append(new, clearance_enabled=bool(clearance.get("enabled")), now=now)
     state = E.derive(E.load(), now)
+    if bool(clearance.get("enabled")) and "owner-cleanup" in clearance.get("kinds",[]):
+        import owner_cleanup as O
+        cleaned, receipt = O.execute(obs,state,now,county["id"])
+        written += cleaned
+        state = E.derive(E.load(),now)
     items, reopened = display(state)
     data = {"generated": obs["generated"], "errors": obs.get("errors", []) + notes, "items": items,
             "reopened": reopened, "sources": state["sources"], "alerts": obs.get("alerts", []),

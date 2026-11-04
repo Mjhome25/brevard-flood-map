@@ -80,6 +80,7 @@ h1,h2,h3{margin:0;text-wrap:balance}
 .leaflet-tooltip.lbl.k-mvc b{color:var(--mvc)}
 .leaflet-tooltip.lbl::before{display:none}
 @media (max-width:900px){.leaflet-container:has(.leaflet-popup) .leaflet-control-zoom,.mapbox:has(.leaflet-popup) .legend{visibility:hidden}}  /* zoom buttons and the legend would cover an open popup */
+@media (max-width:900px){.leaflet-popup-content{max-height:max(220px,calc(min(58vh,520px) - 100px));overflow-y:auto}}  /* long cited evidence stays scrollable inside the map */
 .mk svg{display:block;overflow:visible;filter:drop-shadow(0 1px 2px rgba(0,0,0,.5))}
 
 .side{width:400px;flex:none;background:var(--panel);border-left:1px solid var(--line);display:flex;flex-direction:column;min-height:0}
@@ -527,13 +528,15 @@ h1,h2,h3{margin:0;text-wrap:balance}
     // The check goes with the newest report from a government agency, naming what that report said, so a government
     // flooding report never looks like it confirms a closure that came from someone else.
     const g=it.nws&&it.nws.find(r=>r.gov), gw=g&&(g.status==='closed'?'road closure':'flooding');
-    const nb=n?`<div class="vb ok" role="note"><span class="seal" aria-hidden="true">${g?'✓':'i'}</span><div><b>${g?'Government verified '+esc(gw)+' · NWS storm report':'NWS storm report'}</b><div class="d">${g?`${esc(g.reporter.toLowerCase())} reported ${esc(gw)} to the National Weather Service · ${esc(when(g.at))} · <a href="${esc(g.url)}" target="_blank" rel="noopener">NWS Melbourne ↗</a><br>`:''}${g!==n?`Latest: reported${n.reporter?' by '+esc(n.reporter.toLowerCase()):''} · ${esc(when(n.at))} · <a href="${esc(n.url)}" target="_blank" rel="noopener">NWS Melbourne ↗</a>`:''}${it.nws.length>1?` · ${it.nws.length} reports`:''}${it.statusBy?`<br>Shown ${esc(it.status)} because of the NWS storm report of ${esc(when(it.statusBy.at))}${it.statusBy.reporter?' ('+esc(it.statusBy.reporter.toLowerCase())+')':''} · <a href="${esc(it.statusBy.url)}" target="_blank" rel="noopener">that report ↗</a>`:''}</div></div></div>`:'';
+    const nb=n?`<div class="vb ok" role="note"><span class="seal" aria-hidden="true">${g?'✓':'i'}</span><div><b>${g?'Government verified '+esc(gw)+' · NWS storm report':'NWS storm report'}</b><div class="d">${g?`${esc(g.reporter.toLowerCase())} reported ${esc(gw)} to the National Weather Service · ${esc(when(g.at))} · <a href="${esc(g.url)}" target="_blank" rel="noopener">NWS Melbourne ↗</a><br>`:''}${g!==n?`Latest: reported${n.reporter?' by '+esc(n.reporter.toLowerCase()):''} · ${esc(when(n.at))} · <a href="${esc(n.url)}" target="_blank" rel="noopener">NWS Melbourne ↗</a>`:''}${it.nws.length>1?` · ${it.nws.length} reports`:''}${it.statusBy?`<br>Shown ${esc(it.status)} because of ${it.statusBy.quote?esc(it.statusBy.agency||it.statusBy.source||'the government page'):'the NWS storm report'} of ${esc(it.statusBy.quote?vday(it.statusBy):when(it.statusBy.at))}${it.statusBy.reporter?' ('+esc(it.statusBy.reporter.toLowerCase())+')':''} · <a href="${esc(it.statusBy.url)}" target="_blank" rel="noopener">that report ↗</a>`:''}</div></div></div>`:'';
+    const p=it.pageVerified;
+    const page=p?`<div class="vb ok" role="note"><span class="seal" aria-hidden="true">i</span><div><b>Government page report</b><div class="d">${esc(p.agency)}: “${esc(p.quote)}” · published ${esc(vday(p))} · <a href="${esc(p.url)}" target="_blank" rel="noopener">Read the government statement ↗</a></div></div></div>`:'';
     if(v){
       const what=v.kind==='feed'?`${esc(v.agency)} listed this ${claimOf(it)} · ${esc(when(v.publishedAt))}`
         :`${esc(v.agency)}: “${esc(v.quote)}” · published ${esc(vday(v))}`;
-      return nb+`<div class="vb ok" role="note"><span class="seal" aria-hidden="true">✓</span><div><b>Government verified</b><div class="d">${what} · <a href="${esc(v.url)}" target="_blank" rel="noopener">${esc(v.agency)} ↗</a>${pending?'<br>Current status: awaiting official confirmation':''}</div></div></div>`;
+      return nb+page+`<div class="vb ok" role="note"><span class="seal" aria-hidden="true">✓</span><div><b>Government verified</b><div class="d">${what} · <a href="${esc(v.url)}" target="_blank" rel="noopener">${esc(v.agency)} ↗</a>${pending?'<br>Current status: awaiting official confirmation':''}</div></div></div>`;
     }
-    if(n) return nb;
+    if(n||p) return nb+page;
     return `<div class="vb unv" role="note"><span class="seal" aria-hidden="true">!</span><div><b>Reported, not government verified</b><div class="d">Awaiting government confirmation${it.source?' · reported by '+esc(it.source):''}</div></div></div>`;
   }
   const vday=v=>v.publishedDate?new Date(v.publishedDate+'T12:00:00Z').toLocaleDateString('en-US',{month:'short',day:'numeric',timeZone:'UTC'}):when(v.publishedAt);

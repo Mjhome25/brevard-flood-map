@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 """Closure history: the only writer of closure_events.jsonl and the reducer that derives road state from it.
 
-Mike's rule (November 3, 2026): a road or hazard never fades. It leaves the map only through a `cleared` event backed
-by a cited official statement on a vetted government website. Nothing else (time, a feed dropping it, traffic speed,
-an unofficial report) changes its status.
+Reports leave through explicitly enabled clearance events: an official reopening statement, an approved feed-drop
+rule, or the bounded Nov4 administrative cleanup. Only the official statement confirms reopening; the cleanup is
+hidden immediately and keeps the source history. Time and inferred travel speed never reopen a report.
 
 Each line of closure_events.jsonl is one event: {seq, at, eid, rid, kind, actor, src, stime, ...}.
   rid    record id, "<county>:<source>:<key>"; one source report per record, records are never merged
@@ -24,9 +24,10 @@ Kinds:
              `locatedBy`: source, url, checked, note), e.g. the county road map's intersection. Never changes status;
              the old position is kept in the record and the closed stretch is redrawn from the new pin
   cleared    the record comes off the active map, for one of the county's enabled clearance kinds: "fhp-dropped" (a plain
-             FHP crash FHP stopped listing) or "official" (a government page on the verify list says the road is open,
+             FHP crash FHP stopped listing; history before Nov 4), "feed-dropped" (anything FHP or FL511 stopped listing,
+             closures included; Mike, Nov 4) or "official" (a government page on the verify list says the road is open,
              as one supported sentence, written by verify.py --open; Mike, Nov 3: only an official statement on a
-             credible website may show a road reopened)
+             credible website may show a road reopened); "owner-cleanup" is the bounded Nov4 administrative removal, hidden immediately
 Status comes only from reported and cleared.
 """
 from __future__ import annotations
@@ -312,6 +313,10 @@ def validate(ev: dict, prev_seq: int, clearance_enabled: bool, prev_eid: str = "
             raise Refused(f"seq {ev['seq']}: clearance is disabled for this county")
         if (ev.get("evidence") or {}).get("kind") == "official":
             _check_official(ev)
+        elif (ev.get("evidence") or {}).get("kind") == "owner-cleanup":
+            _check_owner_cleanup(ev)
+        elif (ev.get("evidence") or {}).get("kind") == "feed-dropped":
+            _check_feed_drop(ev)
         else:
             _check_fhp_drop(ev)
 
@@ -338,6 +343,41 @@ def _check_fhp_drop(ev: dict) -> None:
             or ev.get("src") != "fhp" or not str(ev.get("rid", "")).split(":")[1:2] == ["fhp"]
             or not parse(v["missingSince"]) or v["reopenedAt"] != ev["at"] or parse(v["missingSince"]) >= parse(ev["at"])):
         raise Refused(f"seq {ev['seq']}: the only clearance is an FHP incident the FHP page stopped listing")
+
+
+def independent(r: dict) -> bool:
+    """A record carrying evidence of its own besides its feed: a government page that raised or confirmed its impact
+    (raisedBy, supportedBy) or verified it. A feed drop removes only the feed's part, so such a record stays active and
+    the page shows it kept by that evidence (reconcile.keep_independent, Codex FL review)."""
+    return bool(r.get("raisedBy") or r.get("supportedBy") or r.get("verified"))
+
+
+FEED_DROP = {"fhp": ("Florida Highway Patrol", FHP_URL), "fl511": ("FL511 (FDOT)", "https://fl511.com")}
+
+
+def _check_feed_drop(ev: dict) -> None:
+    """Mike (Nov 4 2026): "if FHP/FL511 drop something that was previously there, we drop it too." Any report from the
+    FHP CAD page or FL511, closures included, that its feed no longer lists, seen gone on two successful fetches. Its
+    evidence names that feed, when the report was first missing, and when it was confirmed gone. Florida only: the
+    county's clearance kinds enable it, and nj/ny never list it."""
+    v = ev.get("evidence") or {}
+    src = ev.get("src")
+    keys = {"kind", "agency", "url", "missingSince", "reopenedAt"}
+    if (set(v) != keys or v["kind"] != "feed-dropped" or src not in FEED_DROP or (v["agency"], v["url"]) != FEED_DROP[src]
+            or not str(ev.get("rid", "")).split(":")[1:2] == [src]
+            or not parse(v["missingSince"]) or v["reopenedAt"] != ev["at"] or parse(v["missingSince"]) >= parse(ev["at"])):
+        raise Refused(f"seq {ev['seq']}: a feed drop clears only a report its own FHP or FL511 feed stopped listing")
+
+
+def _check_owner_cleanup(ev):
+    import owner_cleanup as O
+    v=ev.get("evidence") or {}
+    if (set(v)!={"kind","cutoff","rule","checkedAt","reopenedAt"} or v.get("kind")!="owner-cleanup"
+            or v.get("cutoff")!=O.CUTOFF or v.get("rule")!=O.RULE or v.get("reopenedAt")!=ev["at"]
+            or ev.get("src") in FEED_DROP or str(ev.get("rid","")).split(":")[0] not in O.COUNTIES
+            or parse(ev["at"])<=parse(O.CUTOFF) or not parse(v.get("checkedAt"))
+            or not 0 <= (parse(ev["at"])-parse(v["checkedAt"])).total_seconds() <= 300):
+        raise Refused("owner cleanup is limited to the approved old non-feed Florida reports")
 
 
 def official_time(v: dict) -> str:
@@ -382,12 +422,12 @@ def append(new: list[dict], path: str = EVENTS, clearance_enabled: bool = False,
     at = iso(now or utcnow())
     written = []
     for raw in new:
-        if raw.get("kind") == "cleared" and (raw.get("evidence") or {}).get("kind") not in ("fhp-dropped", "official"):
-            raise Refused("cleared events come only from the FHP drop rule or the verifier's --open path")
+        if raw.get("kind") == "cleared" and (raw.get("evidence") or {}).get("kind") not in ("fhp-dropped", "feed-dropped", "owner-cleanup", "official"):
+            raise Refused("cleared events come only from the FHP/FL511 drop rules or the verifier's --open path")
         ev = {k: v for k, v in raw.items() if k not in ("seq", "at", "eid")}
         if ev["kind"] == "cleared":  # an FHP drop is dated when written; an official reopening by the statement
             ev["evidence"] = dict(ev["evidence"], reopenedAt=official_time(ev["evidence"])
-                                  if ev["evidence"].get("kind") == "official" else at)
+                                  if ev["evidence"].get("kind") == "official" else at)  # a feed drop is dated when written
         ev["seq"], ev["at"], ev["eid"] = seq + 1, at, eid_of(ev, prev)
         ev = {k: ev[k] for k in ("seq", "at", "eid", *sorted(k for k in ev if k not in ("seq", "at", "eid")))}
         validate(ev, seq, clearance_enabled, prev)
@@ -463,7 +503,9 @@ def apply(state: dict, ev: dict) -> None:
             return
         if r["status"] == "reopened":
             # an FHP incident listed again after it dropped off is active again (its source time is the old Received time)
-            again = (r["evidence"] or {}).get("kind") == "fhp-dropped" and parse(ev["at"]) > parse(r["reopenedAt"])
+            again = (r["evidence"] or {}).get("kind") in ("fhp-dropped", "feed-dropped") and parse(ev["at"]) > parse(r["reopenedAt"])
+            if (r.get("evidence") or {}).get("kind")=="owner-cleanup":
+                again=bool(st and st>parse(r["evidence"]["cutoff"]))
             if again or (st and st > parse(r["reopenedAt"])):
                 r.update(status="active", fields=dict(ev["fields"]), lastReported=ev["stime"], recheck=[],
                          missingSince=None, reopenedAt=None, evidence=None, verified=None, raisedBy=None,
@@ -512,10 +554,18 @@ def apply(state: dict, ev: dict) -> None:
             r["verified"] = ev["evidence"]
     elif kind == "cleared":
         v = ev["evidence"]
+        if v.get("kind")=="owner-cleanup":
+            import owner_cleanup as O
+            if not O.safe_to_remove(r,state):return
         if v.get("kind") == "fhp-dropped" and not (r["status"] == "active" and r["src"] == "fhp"
                                                     and r["missingSince"] == v["missingSince"]
                                                     and fhp_clearable(r["fields"])):
             return  # only a still-missing FHP crash, gone since the time its evidence says (never a road closure)
+        if v.get("kind") == "feed-dropped" and not (r["status"] == "active" and FEED_DROP.get(r["src"], (None,))[0] == v.get("agency")
+                                                     and r["missingSince"] == v["missingSince"]):
+            return  # only a report still missing from its own feed since the time its evidence says
+        if v.get("kind") in ("feed-dropped", "fhp-dropped") and independent(r):
+            return  # a government page raised, supported or confirmed it: that evidence stands without the feed
         if v.get("kind") == "official" and (r["status"] != "active" or opens(r["fields"], v["quote"])
                                             or not official_after(v, r["lastReported"])):
             return  # an open statement must be about this road and newer than its latest report
@@ -546,7 +596,7 @@ def derive(events: list[dict], now: datetime.datetime | None = None) -> dict:
         apply(state, ev)
     for r in state["records"].values():
         if r["status"] == "reopened":
-            r["show"] = "green" if now < parse(r["reopenedAt"]) + datetime.timedelta(hours=GREEN_HOURS) else "hidden"
+            r["show"] = "green" if (r.get("evidence") or {}).get("kind")!="owner-cleanup" and now < parse(r["reopenedAt"]) + datetime.timedelta(hours=GREEN_HOURS) else "hidden"
         else:
             r["show"] = "active"
             old = now - parse(r["lastReported"]) > datetime.timedelta(hours=RECHECK_AFTER_HOURS)

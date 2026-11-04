@@ -10,6 +10,7 @@ import os
 import subprocess
 import sys
 import tempfile
+import urllib.parse
 
 repo = os.path.abspath(sys.argv[1] if len(sys.argv) > 1 else os.path.dirname(os.path.dirname(__file__)))
 sys.path.insert(0, repo)
@@ -590,6 +591,45 @@ for bad, why in (({"kind": "fhp-dropped", "agency": "Florida Highway Patrol", "u
         ok = True
     check(f"no clearance for {why}", ok)
 
+# Mike (Nov 4): "if FHP/FL511 drop something that was previously there, we drop it too" (feed-dropped), closures included
+def runf(path, obs, hours):
+    now = T0 + datetime.timedelta(hours=hours)
+    new, _ = R.plan(obs, E.derive(E.load(path), now), E.iso(now), fhp_clears=True, feed_clears=True)
+    E.append(new, path, clearance_enabled=True, now=now)
+    return E.derive(E.load(path), now)
+fclosed = dict(crash, id="fhp-9", status="closed", fullClosure=True, title="Roadblock at I-95", spot="at Eau Gallie Blvd")
+fl511c = dict(item(8), status="closed", fullClosure=True)
+manual_same = man("ms", road="I-95", spot="at Eau Gallie Blvd")
+pf = os.path.join(tmp, "feeddrop.jsonl")
+runf(pf, {"sources": {"fhp": "up", "fl511": "up", "manual": "up"}, "items": [fclosed, fl511c, other, manual_same]}, 0)
+f1 = runf(pf, {"sources": {"fhp": "up", "fl511": "up", "manual": "up"}, "items": [other, manual_same]}, 0.25)
+fr, lr = R.rid_of(fclosed), "brevard:fl511:8"
+check("feed drop: first miss only flags (FHP closure and FL511 closure still active)",
+      f1["records"][fr]["status"] == "active" and f1["records"][lr]["status"] == "active" and f1["records"][lr]["missingSince"])
+f2 = runf(pf, {"sources": {"fhp": "up", "fl511": "down", "manual": "up"}, "items": [other, manual_same]}, 0.5)
+check("feed drop: FHP closure cleared on the next successful FHP fetch, citing FHP",
+      f2["records"][fr]["status"] == "reopened" and f2["records"][fr]["evidence"]["kind"] == "feed-dropped"
+      and f2["records"][fr]["evidence"]["url"] == E.FHP_URL)
+check("feed drop: never while that feed is down (FL511 down: its closure stays)", f2["records"][lr]["status"] == "active")
+f3 = runf(pf, {"sources": {"fhp": "up", "fl511": "up", "manual": "up"}, "items": [other, manual_same]}, 0.75)
+ev3 = f3["records"][lr]["evidence"] or {}
+check("feed drop: FL511 closure cleared on its next successful fetch, citing FL511",
+      f3["records"][lr]["status"] == "reopened" and ev3.get("kind") == "feed-dropped" and ev3.get("agency") == "FL511 (FDOT)"
+      and ev3.get("url") == "https://fl511.com" and ev3.get("missingSince") == f1["records"][lr]["missingSince"])
+check("feed drop: another source's report at the same place keeps its own pin",
+      f3["records"][R.rid_of(manual_same)]["status"] == "active")
+f4 = runf(pf, {"sources": {"fhp": "up", "fl511": "up", "manual": "up"}, "items": [other, manual_same, fl511c]}, 1.0)
+check("feed drop: the feed listing it again makes it active again", f4["records"][lr]["status"] == "active")
+try:
+    E.append([{"rid": R.rid_of(manual_same), "src": "manual", "kind": "cleared", "actor": "x",
+               "evidence": {"kind": "feed-dropped", "agency": "FL511 (FDOT)", "url": "https://fl511.com",
+                            "missingSince": "2026-11-02T12:00:00Z", "reopenedAt": ""}}], pf, clearance_enabled=True)
+    ok = E.derive(E.load(pf))["records"][R.rid_of(manual_same)]["status"] == "active"
+except E.Refused:
+    ok = True
+check("feed drop never clears a manual (or any non-FHP/FL511) report", ok)
+check("legacy Brevard enables the reviewed feed-drop rule", "feed-dropped" in json.load(open(os.path.join(repo,"county.json")))["clearance"]["kinds"])
+
 # Official reopening (verify.py --open): a government open sentence about THIS road takes it off the active map, cited
 po = os.path.join(tmp, "open.jsonl")
 OPAGE = ("<html><body><article><p>Published on November 03, 2026</p><p>Nov. 3, 8:30 a.m. traffic update:</p><ul>"
@@ -834,14 +874,14 @@ check("FL511 time converts with daylight saving", ns["parse_fl511_time"]("7/4/26
 
 # One unreadable FL511 row is skipped, the rest still come in, and the feed is "partial": nothing counts as gone
 keep2 = [n for n in tree.body if isinstance(n, (ast.Import, ast.ImportFrom))
-         or (isinstance(n, ast.Assign) and any(getattr(t, "id", "") in ("TZ", "bad_rows") for t in n.targets))
+         or (isinstance(n, ast.Assign) and any(getattr(t, "id", "") in ("TZ", "bad_rows", "CFG", "fl511_totals") for t in n.targets))
          or (isinstance(n, ast.FunctionDef) and n.name in ("iso", "parse_fl511_time", "classify", "row", "health",
-                                                           "fl511", "fl511_item"))]
+                                                           "fl511", "fl511_item", "fl511_rows", "_fl511_id"))]
 ns2 = {"sources": {}, "errors": []}
 exec(compile(ast.Module(body=keep2, type_ignores=[]), "update_flood_data.py", "exec"), ns2)
 rowok = {"id": 1, "county": "Brevard", "description": "Closed: Ellis Rd, Both Directions at I-95. Last updated",
          "roadwayName": "Ellis Rd", "startDate": "11/3/26, 8:00 AM", "lastUpdated": "11/3/26, 9:00 AM"}
-ns2["get"] = lambda url, **kw: json.dumps({"data": [rowok, {"county": "Brevard", "description": None}, None,
+ns2["get"] = lambda url, **kw: json.dumps({"recordsTotal": 5, "data": [rowok, {"county": "Brevard", "description": None}, None,
                                                      {"id": 3, "county": 7}, dict(rowok, id=2)]})
 got = ns2["fl511"]("Closures")
 ns2["health"]("fl511", bool(got))
@@ -850,10 +890,131 @@ check("the feed is marked partial and the page lists the skipped row",
       ns2["sources"]["fl511"] == "partial" and "3 row(s) unreadable" in ns2["errors"][0])  # None row, no description, county 7 (Codex #189)
 ns3 = {"sources": {}, "errors": []}
 exec(compile(ast.Module(body=keep2, type_ignores=[]), "update_flood_data.py", "exec"), ns3)
-ns3["get"] = lambda url, **kw: json.dumps({"data": [rowok, {"id": 4, "description": "x"}, {"id": 5, "county": "Orange"}]})
+ns3["get"] = lambda url, **kw: json.dumps({"recordsTotal": 3, "data": [rowok, {"id": 4, "description": "x"}, {"id": 5, "county": "Orange"}]})
 ns3["health"]("fl511", bool(ns3["fl511"]("Closures")))
 check("a row with no county name makes the feed partial; another county's row does not",
       ns3["sources"]["fl511"] == "partial" and "1 row(s) unreadable" in ns3["errors"][0])
+# a feed record that a government page raised, supported or verified keeps that evidence when its feed drops it
+pi = os.path.join(tmp, "indep.jsonl")
+runf(pi, {"sources": {"fl511": "up"}, "items": [dict(item(40), status="closed", road="Main St", where="Main St NB at Oak Ave"), item(41)]}, 0)
+si = runf(pi, {"sources": {"fl511": "up"}, "items": [item(41)]}, 0.25)
+page = {"agency": "City of Melbourne", "url": "https://www.melbourneflorida.org/x", "quote": "All of Main Street is closed.",
+        "publishedDate": "2026-11-02", "host": "www.melbourneflorida.org"}
+for fld in ("raisedBy", "supportedBy", "verified"):
+    st = json.loads(json.dumps(si))
+    st["records"]["brevard:fl511:40"][fld] = page
+    nw, _ = R.plan({"sources": {"fl511": "up"}, "items": [item(41)]}, st, E.iso(T0 + datetime.timedelta(hours=0.5)), feed_clears=True)
+    check(f"feed drop: no clear proposed for a record with page evidence ({fld})",
+          not [e for e in nw if e["kind"] == "cleared" and e["rid"] == "brevard:fl511:40"])
+    E.apply(st, {"kind": "cleared", "rid": "brevard:fl511:40", "src": "fl511", "at": "2026-11-02T12:30:00Z",
+                 "evidence": {"kind": "feed-dropped", "agency": "FL511 (FDOT)", "url": "https://fl511.com",
+                              "missingSince": st["records"]["brevard:fl511:40"]["missingSince"], "reopenedAt": "2026-11-02T12:30:00Z"}})
+    act = [i for i in R.keep_independent(R.display(st)[0]) if i["id"] == "brevard:fl511:40"]
+    check(f"...and a feed-dropped clear never removes it: still active, kept by the page ({fld})",
+          st["records"]["brevard:fl511:40"]["status"] == "active" and act and act[0].get("keptBy", [{}])[0].get("kind") == "page"
+          and act[0]["status"] == "closed")
+
+# verified flooding, then the feed raises it to a full closure, then drops it: only the page's flooding remains
+pv = os.path.join(tmp, "verflood.jsonl")
+runf(pv, {"sources": {"fl511": "up"}, "items": [dict(item(50), status="flooded", fullClosure=False, road="Main St", where="Main St NB at Oak Ave"), item(41)]}, 0)
+sv = E.derive(E.load(pv), T0 + datetime.timedelta(hours=0.1))
+sv["records"]["brevard:fl511:50"]["verified"] = dict(page, quote="All of Main Street is flooded.")
+E.apply(sv, {"kind": "relisted", "rid": "brevard:fl511:50", "src": "fl511", "at": "2026-11-02T12:20:00Z", "stime": "2026-11-02T11:40:00Z",
+             "fields": dict(R.fields_of(dict(item(50), road="Main St", where="Main St NB at Oak Ave")), status="closed", fullClosure=True, lanes="All lanes closed")})
+E.apply(sv, {"kind": "missing", "rid": "brevard:fl511:50", "src": "fl511", "at": "2026-11-02T12:25:00Z"})
+it50 = [i for i in R.keep_independent(R.display(sv)[0]) if i["id"] == "brevard:fl511:50"]
+check("verified flooding + feed-raised closure, then feed drop: shown flooded (not closed/full), by the page's own sentence",
+      it50 and it50[0]["status"] == "flooded" and it50[0]["fullClosure"] is False and "lanes" not in it50[0]
+      and it50[0]["keptBy"][0]["kind"] == "page" and it50[0]["statusBy"]["quote"] == "All of Main Street is flooded."
+      and it50[0]["baseStatus"] == "closed")
+sv["records"]["brevard:fl511:50"]["verified"] = page  # a closed page keeps the closure
+it50 = [i for i in R.keep_independent(R.display(sv)[0]) if i["id"] == "brevard:fl511:50"]
+check("verified closure page + feed drop: stays closed, kept by the page", it50 and it50[0]["status"] == "closed")
+
+# a gone FHP crash with a full closure, confirmed only by "All of Main Street is closed.": closed (not a crash), and the
+# feed's lanes and stretch go even though the category is unchanged
+g = R.keep_independent([{"id": "x", "road": "Main St", "where": "Main St at Oak Ave", "status": "mvc", "fullClosure": True,
+                         "lanes": "ALL LANES BLOCKED", "line": [[28.1, -80.6], [28.2, -80.6]], "noLongerListed": {"agency": "Florida Highway Patrol"},
+                         "verified": {"kind": "feed"}, "pageVerified": dict(page, kind="page")}])[0]
+check("page-confirmed gone crash: shown as the page's closure, not a crash; feed lanes/stretch only as an earlier report",
+      g["status"] == "closed" and g["fullClosure"] is True and "lanes" not in g and "line" not in g
+      and g["earlierReport"] == "Florida Highway Patrol earlier: ALL LANES BLOCKED" and g["statusBy"]["quote"] == page["quote"])
+g = R.keep_independent([{"id": "y", "road": "Main St", "where": "Main St at Oak Ave", "status": "closed", "fullClosure": False,
+                         "line": [[28.1, -80.6], [28.2, -80.6]], "noLongerListed": {"agency": "FL511 (FDOT)"},
+                         "raisedBy": dict(page, quote="Main Street is closed at Oak Avenue.")}])[0]
+check("same category (closed): the gone feed's stretch is still dropped", g["status"] == "closed" and "line" not in g)
+
+# the older crash-only rule (fhp-dropped) never clears a page-backed FHP record either
+pf2 = os.path.join(tmp, "fhpindep.jsonl")
+fcr = dict(crash, id="fhp-77", status="mvc", spot="at Oak Ave", road="Main St", title="MVC at Main St")
+def runo(path, obs, hours, **kw):
+    now = T0 + datetime.timedelta(hours=hours)
+    new, _ = R.plan(obs, E.derive(E.load(path), now), E.iso(now), **kw)
+    E.append(new, path, clearance_enabled=True, now=now)
+    return E.derive(E.load(path), now), new
+runo(pf2, {"sources": {"fhp": "up"}, "items": [fcr, other]}, 0, fhp_clears=True)
+s2, _ = runo(pf2, {"sources": {"fhp": "up"}, "items": [other]}, 0.25, fhp_clears=True)
+fr2 = R.rid_of(fcr)
+for flags in ({"fhp_clears": True}, {"fhp_clears": True, "feed_clears": True}):
+    st = json.loads(json.dumps(s2)); st["records"][fr2]["verified"] = page
+    nw, _ = R.plan({"sources": {"fhp": "up"}, "items": [other]}, st, E.iso(T0 + datetime.timedelta(hours=0.5)), **flags)
+    check(f"page-backed FHP crash: no clear proposed ({sorted(flags)})", not [e for e in nw if e["kind"] == "cleared" and e["rid"] == fr2])
+st = json.loads(json.dumps(s2)); st["records"][fr2]["verified"] = page
+E.apply(st, {"kind": "cleared", "rid": fr2, "src": "fhp", "at": "2026-11-02T12:30:00Z",
+             "evidence": {"kind": "fhp-dropped", "agency": "Florida Highway Patrol", "url": E.FHP_URL,
+                          "missingSince": st["records"][fr2]["missingSince"], "reopenedAt": "2026-11-02T12:30:00Z"}})
+check("the reducer refuses an fhp-dropped clear of a page-backed record", st["records"][fr2]["status"] == "active")
+
+# FL511 completeness (Codex FL review): envelope, total and paging decide whether absence can count
+def fl511ns(pages):
+    n = {"sources": {}, "errors": []}
+    exec(compile(ast.Module(body=keep2, type_ignores=[]), "update_flood_data.py", "exec"), n)
+    calls = []
+    def get(url, **kw):
+        start = json.loads(urllib.parse.unquote(url.split("query=")[1].split("&")[0]))["start"]
+        calls.append(start)
+        return pages(start)
+    n["get"], n["calls"] = get, calls
+    return n
+def outcome(pages):
+    n = fl511ns(pages)
+    try:
+        got = [g["id"] for lay in ("Closures", "Incidents") for g in n["fl511"](lay)]
+    except Exception as e:
+        return ("error", str(e)[:40]), n
+    n["health"]("fl511", len(n["fl511_totals"]) == 2 and sum(n["fl511_totals"].values()) > 0)
+    return (n["sources"]["fl511"], got), n
+orange = dict(rowok, id=9, county="Orange")
+check("complete read with no rows for this county (its last report gone) is a successful read",
+      outcome(lambda st: json.dumps({"recordsTotal": 1, "data": [orange]}))[0] == ("up", []))
+check("statewide zero rows is empty, not up", outcome(lambda st: json.dumps({"recordsTotal": 0, "data": []}))[0][0] == "empty")
+for name, body in (("no data list", {"recordsTotal": 1}), ("no recordsTotal", {"data": [orange]}), ("an error envelope", {"error": "x"}),
+                   ("a list instead of the envelope", [orange]), ("total larger than rows returned", {"recordsTotal": 3, "data": [orange]})):
+    check(f"FL511 {name} fails the read (never counts as absence)",
+          outcome(lambda st, b=body: json.dumps(b if st == 0 else dict(b, data=[]) if isinstance(b, dict) else []))[0][0] == "error")
+big = [dict(orange, id=i) for i in range(700)] + [dict(rowok, id=701)]
+res, nb = outcome(lambda st: json.dumps({"recordsTotal": len(big), "data": big[st:st + 500]}))
+check("a list longer than one page is read to the end (our row on page 2 is found)", res == ("up", ["fl511-701", "fl511-701"]) and nb["calls"][:2] == [0, 500])
+check("a repeated second page (same ids, total 1000) fails the read",
+      outcome(lambda st: json.dumps({"recordsTotal": 1000, "data": big[:500]}))[0][0] == "error")
+check("a duplicate id within a page fails the read",
+      outcome(lambda st: json.dumps({"recordsTotal": 2, "data": [orange, dict(orange)]}))[0][0] == "error")
+check("another county's row without an id makes the feed partial (nothing counts as gone)",
+      outcome(lambda st: json.dumps({"recordsTotal": 2, "data": [orange, dict(orange, id=None)]}))[0][0] == "partial")
+check("the same id in both layers is allowed (deduplicated downstream)",
+      outcome(lambda st: json.dumps({"recordsTotal": 1, "data": [orange]}))[0][0] == "up")
+check("a total that changes while paging fails the read",
+      outcome(lambda st: json.dumps({"recordsTotal": 701 if st == 0 else 702, "data": big[st:st + 500]}))[0][0] == "error")
+check("update_flood_data marks FL511 health from complete reads, not county item count",
+      'health("fl511", len(fl511_totals) == 2 and sum(fl511_totals.values()) > 0)' in src)
+
+# the county's last FL511 report: two complete reads without it clear it (feed-dropped)
+pl = os.path.join(tmp, "lastfl.jsonl")
+runf(pl, {"sources": {"fl511": "up"}, "items": [dict(item(30), status="closed")]}, 0)
+runf(pl, {"sources": {"fl511": "up"}, "items": []}, 0.25)
+sl = runf(pl, {"sources": {"fl511": "up"}, "items": []}, 0.5)
+check("the county's last FL511 closure clears after two complete reads without it", sl["records"]["brevard:fl511:30"]["status"] == "reopened")
+
 pp = os.path.join(tmp, "partial.jsonl")
 run(pp, {"sources": {"fl511": "up"}, "items": [item(1), item(2)]}, 0)
 w, _, recs = run(pp, {"sources": {"fl511": "partial"}, "items": [item(1)]}, 1)
