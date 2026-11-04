@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-04T13:31:47Z",
+ "generated": "2026-11-04T13:45:28Z",
  "errors": [],
  "items": [
   {
@@ -97,9 +97,11 @@
     "kind": "feed",
     "publishedAt": "2026-11-02T09:39:43Z"
    },
-   "awaitingOfficial": false,
+   "awaitingOfficial": true,
    "missingSince": null,
-   "recheck": []
+   "recheck": [
+    "source changed its lane description"
+   ]
   },
   {
    "fullClosure": true,
@@ -1856,41 +1858,6 @@
    "recheck": []
   },
   {
-   "fullClosure": false,
-   "lanes": "No Roadblock",
-   "lat": 28.1008619455424,
-   "layer": "FHP",
-   "lng": -80.7060220910327,
-   "reported": "2026-11-04T12:52:38Z",
-   "road": "I-95 NB [MM182]",
-   "roadShort": "I-95 Nb [MM182]",
-   "source": "FHP live CAD",
-   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-   "spot": "at Mm182",
-   "status": "caution",
-   "title": "MVC at I-95 NB [MM182] x[MM182] [MELBOURNE] (No Roadblock)",
-   "where": "I-95 Nb [MM182] at Mm182",
-   "id": "brevard:fhp:20261104125238-a206ab4b",
-   "updated": "2026-11-04T12:52:38Z",
-   "lastReported": "2026-11-04T12:52:38Z",
-   "firstReported": "2026-11-04T12:52:38Z",
-   "verified": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "kind": "feed",
-    "publishedAt": "2026-11-04T12:52:38Z"
-   },
-   "awaitingOfficial": true,
-   "missingSince": "2026-11-04T13:31:56Z",
-   "recheck": [],
-   "noLongerListed": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "since": "2026-11-04T13:31:56Z",
-    "wasClosed": false
-   }
-  },
-  {
    "dir": "EB",
    "from": "Hickory St",
    "fullClosure": true,
@@ -3068,10 +3035,16 @@
     "publishedAt": "2026-11-03T03:18:00Z"
    },
    "awaitingOfficial": true,
-   "missingSince": null,
+   "missingSince": "2026-11-04T13:45:33Z",
    "recheck": [
     "source changed its lane description"
-   ]
+   ],
+   "noLongerListed": {
+    "agency": "FL511 (FDOT)",
+    "url": "https://fl511.com",
+    "since": "2026-11-04T13:45:33Z",
+    "wasClosed": false
+   }
   },
   {
    "dir": "NB",
@@ -4264,10 +4237,16 @@
     "publishedAt": "2026-11-04T13:06:00Z"
    },
    "awaitingOfficial": true,
-   "missingSince": null,
+   "missingSince": "2026-11-04T13:45:33Z",
    "recheck": [
     "source changed its lane description"
-   ]
+   ],
+   "noLongerListed": {
+    "agency": "FL511 (FDOT)",
+    "url": "https://fl511.com",
+    "since": "2026-11-04T13:45:33Z",
+    "wasClosed": true
+   }
   },
   {
    "dir": "SB",
@@ -7260,6 +7239,41 @@
   }
  ],
  "reopened": [
+  {
+   "fullClosure": false,
+   "lanes": "No Roadblock",
+   "lat": 28.1008619455424,
+   "layer": "FHP",
+   "lng": -80.7060220910327,
+   "reported": "2026-11-04T12:52:38Z",
+   "road": "I-95 NB [MM182]",
+   "roadShort": "I-95 Nb [MM182]",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "spot": "at Mm182",
+   "status": "caution",
+   "title": "MVC at I-95 NB [MM182] x[MM182] [MELBOURNE] (No Roadblock)",
+   "where": "I-95 Nb [MM182] at Mm182",
+   "id": "brevard:fhp:20261104125238-a206ab4b",
+   "updated": "2026-11-04T12:52:38Z",
+   "lastReported": "2026-11-04T12:52:38Z",
+   "firstReported": "2026-11-04T12:52:38Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-04T12:52:38Z"
+   },
+   "reopenedAt": "2026-11-04T13:45:33Z",
+   "evidence": {
+    "agency": "Florida Highway Patrol",
+    "kind": "fhp-dropped",
+    "missingSince": "2026-11-04T13:31:56Z",
+    "reopenedAt": "2026-11-04T13:45:33Z",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
+   },
+   "stillReported": []
+  },
   {
    "fullClosure": false,
    "lanes": "Road Clear",
