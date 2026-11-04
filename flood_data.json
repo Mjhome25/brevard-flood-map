@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-03T23:45:34Z",
+ "generated": "2026-11-04T00:01:56Z",
  "errors": [
   "FL511 map locations: 1 report(s) without a pin"
  ],
@@ -1213,9 +1213,15 @@
     "kind": "feed",
     "publishedAt": "2026-11-03T11:36:15Z"
    },
-   "awaitingOfficial": false,
-   "missingSince": null,
-   "recheck": []
+   "awaitingOfficial": true,
+   "missingSince": "2026-11-04T00:02:07Z",
+   "recheck": [],
+   "noLongerListed": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "since": "2026-11-04T00:02:07Z",
+    "wasClosed": true
+   }
   },
   {
    "fullClosure": false,
@@ -1575,10 +1581,16 @@
     "publishedAt": "2026-11-03T16:11:17Z"
    },
    "awaitingOfficial": true,
-   "missingSince": null,
+   "missingSince": "2026-11-04T00:02:07Z",
    "recheck": [
     "source changed its lane description"
-   ]
+   ],
+   "noLongerListed": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "since": "2026-11-04T00:02:07Z",
+    "wasClosed": true
+   }
   },
   {
    "fullClosure": false,
@@ -7473,18 +7485,6 @@
    "time": "2026-11-03T05:00:02Z",
    "text": "Sheriff Wayne Ivey says courts will be back in session Tuesday, Nov. 3, and many government offices are expected to reopen as flooding damage is assessed. Brevard Public Schools stay closed Tuesday so the district can inspect buildings. The full extent of flood damage is not yet known, so residents should stay off the roads unless they need to travel.",
    "url": "https://spacecoastdaily.com/2026/11/brevard-public-schools-to-remain-closed-tuesday-as-courts-and-government-offices-reopen/"
-  },
-  {
-   "agency": "City of Melbourne (via News 6 WKMG)",
-   "time": "2026-11-03T00:00:00Z",
-   "text": "A water main break in Melbourne's system has cut water pressure, and in some cases all water service, for customers in Indialantic, Indian Harbour Beach, Melbourne Beach, Satellite Beach and some unincorporated areas that get their water from the City of Melbourne.",
-   "url": "https://www.clickorlando.com/news/local/2026/11/02/brevard-county-schools-closed-amid-flash-flood-warning-heavy-rain/"
-  },
-  {
-   "agency": "City of Cocoa Beach (via News 6 WKMG)",
-   "time": "2026-11-03T00:00:00Z",
-   "text": "Too much water is flowing into the Cocoa Beach wastewater treatment plant and lift stations. Residents, especially in the south end and Snug Harbor, are asked to limit nonessential water use.",
-   "url": "https://www.clickorlando.com/news/local/2026/11/02/brevard-county-schools-closed-amid-flash-flood-warning-heavy-rain/"
   },
   {
    "agency": "City of West Melbourne (via WFTV)",
