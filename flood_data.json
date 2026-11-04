@@ -1,8 +1,6 @@
 {
- "generated": "2026-11-04T00:30:34Z",
- "errors": [
-  "FL511 map locations: 1 report(s) without a pin"
- ],
+ "generated": "2026-11-04T00:45:32Z",
+ "errors": [],
  "items": [
   {
    "fullClosure": true,
@@ -1221,41 +1219,6 @@
     "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
     "since": "2026-11-04T00:02:07Z",
     "wasClosed": true
-   }
-  },
-  {
-   "fullClosure": false,
-   "lanes": "Source said \"Roadway Open\" (2026-11-03 11:39 UTC); not a verified reopening",
-   "lat": 28.1141635177866,
-   "layer": "FHP",
-   "lng": -80.7057972271611,
-   "reported": "2026-11-03T11:39:34Z",
-   "road": "I-95 NB [EXIT RAMP]",
-   "roadShort": "I-95 Nb [Exit Ramp]",
-   "source": "FHP live CAD",
-   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-   "spot": "at Mm183",
-   "status": "caution",
-   "title": "MVC at I-95 NB [EXIT RAMP] x[MM183] [MELBOURNE] (Roadway Open)",
-   "where": "I-95 Nb [Exit Ramp] at Mm183",
-   "id": "brevard:fhp:20261103113934-fa0ee9b4",
-   "updated": "2026-11-03T11:39:34Z",
-   "lastReported": "2026-11-03T11:39:34Z",
-   "firstReported": "2026-11-03T11:39:34Z",
-   "verified": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "kind": "feed",
-    "publishedAt": "2026-11-03T11:39:34Z"
-   },
-   "awaitingOfficial": true,
-   "missingSince": "2026-11-04T00:30:42Z",
-   "recheck": [],
-   "noLongerListed": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "since": "2026-11-04T00:30:42Z",
-    "wasClosed": false
    }
   },
   {
@@ -4047,6 +4010,35 @@
    "recheck": []
   },
   {
+   "dir": "SB",
+   "fullClosure": false,
+   "lanes": "2 Right Lanes Closed",
+   "lat": 28.13847,
+   "layer": "Incidents",
+   "lng": -80.59851,
+   "reported": "2026-11-04T00:36:00Z",
+   "road": "SR-513",
+   "roadShort": "SR-513",
+   "source": "FL511 (FDOT)",
+   "sourceUrl": "https://fl511.com",
+   "status": "flooded",
+   "title": "Flooding on SR-513 Southbound At SR-518. 2 Right Lanes Closed.",
+   "where": "SR-513 SB",
+   "id": "brevard:fl511:939898",
+   "updated": "2026-11-04T00:37:00Z",
+   "lastReported": "2026-11-04T00:37:00Z",
+   "firstReported": "2026-11-04T00:37:00Z",
+   "verified": {
+    "agency": "FL511 (FDOT)",
+    "url": "https://fl511.com",
+    "kind": "feed",
+    "publishedAt": "2026-11-04T00:37:00Z"
+   },
+   "awaitingOfficial": false,
+   "missingSince": null,
+   "recheck": []
+  },
+  {
    "approx": true,
    "city": "Patrick SFB / Satellite Beach",
    "fullClosure": false,
@@ -6553,6 +6545,41 @@
  "reopened": [
   {
    "fullClosure": false,
+   "lanes": "Roadway Open",
+   "lat": 28.1141635177866,
+   "layer": "FHP",
+   "lng": -80.7057972271611,
+   "reported": "2026-11-03T11:39:34Z",
+   "road": "I-95 NB [EXIT RAMP]",
+   "roadShort": "I-95 Nb [Exit Ramp]",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "spot": "at Mm183",
+   "status": "caution",
+   "title": "MVC at I-95 NB [EXIT RAMP] x[MM183] [MELBOURNE] (Roadway Open)",
+   "where": "I-95 Nb [Exit Ramp] at Mm183",
+   "id": "brevard:fhp:20261103113934-fa0ee9b4",
+   "updated": "2026-11-03T11:39:34Z",
+   "lastReported": "2026-11-03T11:39:34Z",
+   "firstReported": "2026-11-03T11:39:34Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-03T11:39:34Z"
+   },
+   "reopenedAt": "2026-11-04T00:45:37Z",
+   "evidence": {
+    "agency": "Florida Highway Patrol",
+    "kind": "fhp-dropped",
+    "missingSince": "2026-11-04T00:30:42Z",
+    "reopenedAt": "2026-11-04T00:45:37Z",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
+   },
+   "stillReported": []
+  },
+  {
+   "fullClosure": false,
    "lat": 28.0990168555116,
    "layer": "FHP",
    "lng": -80.7000330806801,
@@ -6729,14 +6756,7 @@
     "reopenedAt": "2026-11-03T19:16:02Z",
     "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
    },
-   "stillReported": [
-    {
-     "id": "brevard:fhp:20261103113934-fa0ee9b4",
-     "where": "I-95 Nb [Exit Ramp] at Mm183",
-     "source": "FHP live CAD",
-     "since": "2026-11-04T00:30:42Z"
-    }
-   ]
+   "stillReported": []
   },
   {
    "fullClosure": false,
