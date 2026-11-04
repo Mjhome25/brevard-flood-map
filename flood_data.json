@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-04T16:31:39Z",
+ "generated": "2026-11-04T16:45:32Z",
  "errors": [],
  "items": [
   {
@@ -1849,6 +1849,35 @@
     "since": "2026-11-04T15:15:47Z",
     "wasClosed": false
    }
+  },
+  {
+   "fullClosure": false,
+   "lanes": "Debris In Roadway, Use Caution",
+   "lat": 28.2011319455424,
+   "layer": "FHP",
+   "lng": -80.6721376701644,
+   "reported": "2026-11-04T16:33:49Z",
+   "road": "PINEDA CSWY [EB]",
+   "roadShort": "Pineda Cswy [Eb]",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "spot": "at N Wickham Rd",
+   "status": "caution",
+   "title": "Roadway Debris/Object at PINEDA CSWY [EB] x[N WICKHAM RD] [MELBOURNE] (Debris In Roadway, Use Caution)",
+   "where": "Pineda Cswy [Eb] at N Wickham Rd",
+   "id": "brevard:fhp:20261104163349-f11a7681",
+   "updated": "2026-11-04T16:33:49Z",
+   "lastReported": "2026-11-04T16:33:49Z",
+   "firstReported": "2026-11-04T16:33:49Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-04T16:33:49Z"
+   },
+   "awaitingOfficial": false,
+   "missingSince": null,
+   "recheck": []
   },
   {
    "dir": "EB",
@@ -3785,8 +3814,8 @@
    "title": "Flooding on Sunlake Rd Both Directions At SR-507 Northbound. All lanes closed.",
    "where": "Sunlake Rd both directions At SR-507 Northbound",
    "id": "brevard:fl511:939237",
-   "updated": "2026-11-04T15:53:00Z",
-   "lastReported": "2026-11-04T15:53:00Z",
+   "updated": "2026-11-04T16:34:00Z",
+   "lastReported": "2026-11-04T16:34:00Z",
    "firstReported": "2026-11-03T17:58:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
