@@ -1,8 +1,6 @@
 {
- "generated": "2026-11-04T20:00:51Z",
- "errors": [
-  "FL511 map locations: 1 report(s) without a pin"
- ],
+ "generated": "2026-11-04T20:15:33Z",
+ "errors": [],
  "items": [
   {
    "from": "Leghorn Rd",
@@ -180,6 +178,35 @@
    "recheck": []
   },
   {
+   "fullClosure": false,
+   "lanes": "Unknown Roadblock - Use Caution",
+   "lat": 28.4883727580149,
+   "layer": "FHP",
+   "lng": -80.7737673537838,
+   "reported": "2026-11-04T08:03:53Z",
+   "road": "N COCOA BLVD",
+   "roadShort": "N Cocoa Blvd",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "spot": "at Palm St",
+   "status": "closed",
+   "title": "MVC at N COCOA BLVD x[PALM ST] [COCOA] (Unknown Roadblock - Use Caution)",
+   "where": "N Cocoa Blvd at Palm St",
+   "id": "brevard:fhp:20261104080353-361dbba5",
+   "updated": "2026-11-04T08:03:53Z",
+   "lastReported": "2026-11-04T08:03:53Z",
+   "firstReported": "2026-11-04T08:03:53Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-04T08:03:53Z"
+   },
+   "awaitingOfficial": false,
+   "missingSince": null,
+   "recheck": []
+  },
+  {
    "dir": "both directions",
    "fullClosure": true,
    "lanes": "All lanes closed",
@@ -258,10 +285,16 @@
     "publishedAt": "2026-11-04T19:41:00Z"
    },
    "awaitingOfficial": true,
-   "missingSince": null,
+   "missingSince": "2026-11-04T20:15:36Z",
    "recheck": [
     "source changed its lane description"
-   ]
+   ],
+   "noLongerListed": {
+    "agency": "FL511 (FDOT)",
+    "url": "https://fl511.com",
+    "since": "2026-11-04T20:15:36Z",
+    "wasClosed": false
+   }
   },
   {
    "approx": true,
