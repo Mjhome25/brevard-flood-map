@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-04T10:01:42Z",
+ "generated": "2026-11-04T10:15:33Z",
  "errors": [],
  "items": [
   {
@@ -2847,8 +2847,8 @@
    "title": "Traffic lights not working on US-192 / Vine St / Bronson Hwy East, at S John Rodes Blvd",
    "where": "US-192 EB at S John Rodes Blvd",
    "id": "brevard:fl511:938257",
-   "updated": "2026-11-04T09:30:00Z",
-   "lastReported": "2026-11-04T09:30:00Z",
+   "updated": "2026-11-04T10:01:00Z",
+   "lastReported": "2026-11-04T10:01:00Z",
    "firstReported": "2026-11-03T03:18:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
@@ -3570,8 +3570,8 @@
    "to": "Burdock Ave",
    "where": "CR-509 both directions",
    "id": "brevard:fl511:939236",
-   "updated": "2026-11-04T09:29:00Z",
-   "lastReported": "2026-11-04T09:29:00Z",
+   "updated": "2026-11-04T10:01:00Z",
+   "lastReported": "2026-11-04T10:01:00Z",
    "firstReported": "2026-11-03T17:58:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
@@ -3600,8 +3600,8 @@
    "title": "Flooding on Sunlake Rd Both Directions At SR-507 Northbound. All lanes closed.",
    "where": "Sunlake Rd both directions At SR-507 Northbound",
    "id": "brevard:fl511:939237",
-   "updated": "2026-11-04T09:29:00Z",
-   "lastReported": "2026-11-04T09:29:00Z",
+   "updated": "2026-11-04T10:01:00Z",
+   "lastReported": "2026-11-04T10:01:00Z",
    "firstReported": "2026-11-03T17:58:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
@@ -3657,8 +3657,8 @@
    "to": "S John Rodes Blvd",
    "where": "Ellis Rd both directions",
    "id": "brevard:fl511:939238",
-   "updated": "2026-11-04T09:29:00Z",
-   "lastReported": "2026-11-04T09:29:00Z",
+   "updated": "2026-11-04T10:01:00Z",
+   "lastReported": "2026-11-04T10:01:00Z",
    "firstReported": "2026-11-03T17:58:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
@@ -3706,8 +3706,8 @@
    "to": "Rogers Pl",
    "where": "CR-511 both directions",
    "id": "brevard:fl511:939239",
-   "updated": "2026-11-04T09:29:00Z",
-   "lastReported": "2026-11-04T09:29:00Z",
+   "updated": "2026-11-04T10:01:00Z",
+   "lastReported": "2026-11-04T10:01:00Z",
    "firstReported": "2026-11-03T17:58:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
@@ -3776,8 +3776,8 @@
    "to": "Helio Way",
    "where": "Florida Ave both directions at Babcock St S",
    "id": "brevard:fl511:939287",
-   "updated": "2026-11-04T09:29:00Z",
-   "lastReported": "2026-11-04T09:29:00Z",
+   "updated": "2026-11-04T10:01:00Z",
+   "lastReported": "2026-11-04T10:01:00Z",
    "firstReported": "2026-11-03T18:23:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
@@ -4021,8 +4021,8 @@
    "title": "Flooding on SR-520 Both Directions At John Horne Dr.",
    "where": "SR-520 both directions At John Horne Dr",
    "id": "brevard:fl511:939664",
-   "updated": "2026-11-04T09:29:00Z",
-   "lastReported": "2026-11-04T09:29:00Z",
+   "updated": "2026-11-04T10:01:00Z",
+   "lastReported": "2026-11-04T10:01:00Z",
    "firstReported": "2026-11-03T21:53:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
@@ -4050,8 +4050,8 @@
    "title": "Flooding on SR-513 Southbound At SR-518. 2 Right Lanes Closed.",
    "where": "SR-513 SB",
    "id": "brevard:fl511:939898",
-   "updated": "2026-11-04T09:29:00Z",
-   "lastReported": "2026-11-04T09:29:00Z",
+   "updated": "2026-11-04T10:01:00Z",
+   "lastReported": "2026-11-04T10:01:00Z",
    "firstReported": "2026-11-04T00:37:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
@@ -4141,8 +4141,8 @@
    "to": "Blanche St",
    "where": "SR-514 EB",
    "id": "brevard:fl511:940189",
-   "updated": "2026-11-04T09:29:00Z",
-   "lastReported": "2026-11-04T09:29:00Z",
+   "updated": "2026-11-04T10:01:00Z",
+   "lastReported": "2026-11-04T10:01:00Z",
    "firstReported": "2026-11-04T04:11:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
@@ -4190,8 +4190,8 @@
    "to": "Pine St",
    "where": "SR-514 WB",
    "id": "brevard:fl511:940190",
-   "updated": "2026-11-04T09:29:00Z",
-   "lastReported": "2026-11-04T09:29:00Z",
+   "updated": "2026-11-04T10:01:00Z",
+   "lastReported": "2026-11-04T10:01:00Z",
    "firstReported": "2026-11-04T04:12:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
