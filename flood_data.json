@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-04T02:45:34Z",
+ "generated": "2026-11-04T03:01:58Z",
  "errors": [],
  "items": [
   {
@@ -1219,41 +1219,6 @@
     "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
     "since": "2026-11-04T00:02:07Z",
     "wasClosed": true
-   }
-  },
-  {
-   "fullClosure": false,
-   "lanes": "No Roadblock",
-   "lat": 28.2872178348704,
-   "layer": "FHP",
-   "lng": -80.7104183242584,
-   "reported": "2026-11-03T12:02:54Z",
-   "road": "CLUBHOUSE DR",
-   "roadShort": "Clubhouse Dr",
-   "source": "FHP live CAD",
-   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-   "spot": "at Auburn Lakes Dr",
-   "status": "caution",
-   "title": "MVC at CLUBHOUSE DR x[AUBURN LAKES DR] [ROCKLEDGE] (No Roadblock)",
-   "where": "Clubhouse Dr at Auburn Lakes Dr",
-   "id": "brevard:fhp:20261103120254-5f1f0c59",
-   "updated": "2026-11-03T12:02:54Z",
-   "lastReported": "2026-11-03T12:02:54Z",
-   "firstReported": "2026-11-03T12:02:54Z",
-   "verified": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "kind": "feed",
-    "publishedAt": "2026-11-03T12:02:54Z"
-   },
-   "awaitingOfficial": true,
-   "missingSince": "2026-11-04T02:45:44Z",
-   "recheck": [],
-   "noLongerListed": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "since": "2026-11-04T02:45:44Z",
-    "wasClosed": false
    }
   },
   {
@@ -6683,6 +6648,41 @@
   }
  ],
  "reopened": [
+  {
+   "fullClosure": false,
+   "lanes": "No Roadblock",
+   "lat": 28.2872178348704,
+   "layer": "FHP",
+   "lng": -80.7104183242584,
+   "reported": "2026-11-03T12:02:54Z",
+   "road": "CLUBHOUSE DR",
+   "roadShort": "Clubhouse Dr",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "spot": "at Auburn Lakes Dr",
+   "status": "caution",
+   "title": "MVC at CLUBHOUSE DR x[AUBURN LAKES DR] [ROCKLEDGE] (No Roadblock)",
+   "where": "Clubhouse Dr at Auburn Lakes Dr",
+   "id": "brevard:fhp:20261103120254-5f1f0c59",
+   "updated": "2026-11-03T12:02:54Z",
+   "lastReported": "2026-11-03T12:02:54Z",
+   "firstReported": "2026-11-03T12:02:54Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-03T12:02:54Z"
+   },
+   "reopenedAt": "2026-11-04T03:02:05Z",
+   "evidence": {
+    "agency": "Florida Highway Patrol",
+    "kind": "fhp-dropped",
+    "missingSince": "2026-11-04T02:45:44Z",
+    "reopenedAt": "2026-11-04T03:02:05Z",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
+   },
+   "stillReported": []
+  },
   {
    "fullClosure": false,
    "lanes": "Roadway Open",
