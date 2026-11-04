@@ -1,5 +1,5 @@
 {
- "checkedAt": "2026-11-04T05:30:39Z",
+ "checkedAt": "2026-11-04T05:45:39Z",
  "fresh": true,
  "pilot": "City of Melbourne",
  "pending": [
@@ -1434,8 +1434,8 @@
    "needsReview": [
     "a4f9dd6cbe26b7abd47c669b44544a430cd20c0aa5a27f2cdf0d5b5138ba3cf3"
    ],
-   "sha256": "8903dc1d4deeb38823c641f983019e15ff1dbcb73ecd98c1db9e59fc61a261b3",
-   "readAt": "2026-11-03T17:25:08Z"
+   "sha256": "ad2ca8f73bb9a49deaf6cd5b46341164e3689cedbdef69539de618a58c49fbff",
+   "readAt": "2026-11-04T05:45:39Z"
   },
   "https://www.melbourneflorida.org/Government/City-News/Traffic-Advisories/Road-Closures-Aurora-and-Sarno": {
    "agency": "City of Melbourne",
@@ -1469,8 +1469,8 @@
    "needsReview": [
     "8fcfaa7bdaad35615ae63383039dd306452727190be5382513c8eaf056ec1e5e"
    ],
-   "sha256": "8c651cd2b46eb786b30388ec0e9d0f0c23f33a3f1d73aa0bccebca85d1568019",
-   "readAt": "2026-11-03T17:25:08Z"
+   "sha256": "e1d299f67d1e7cd1b9ca94a41234695d3c5bf2f11b6bd42b4eb0e9fdd645c3a3",
+   "readAt": "2026-11-04T05:45:39Z"
   },
   "https://www.melbourneflorida.org/Government/City-News/Traffic-Advisories/Lane-Closure-Country-Club-Road": {
    "date": "2026-10-27",
@@ -1608,8 +1608,8 @@
    "needsReview": [
     "0034d78371196ede2a8228bda807ad82d45b4a1f24031814f0a540732938db51"
    ],
-   "sha256": "5f383074c0460bbc8a874b6c55614e9dd9ae106c50e67adfe304251552affab5",
-   "readAt": "2026-11-04T05:30:39Z"
+   "sha256": "aef9e25d325905a28daf03efa78e313243006d7e7a52279d460775561168b316",
+   "readAt": "2026-11-04T05:45:39Z"
   },
   "https://www.melbourneflorida.org/Government/City-News/Traffic-Advisories/Road-Closures-1450": {
    "agency": "City of Melbourne",
@@ -1621,8 +1621,8 @@
     "679866428cf4406fd68d4376fb3934bf99e6e314857217c03f7ed8a888d60e4f",
     "746cdc91f2e0b08cdb9dadc4c9f958c6d390971a96b2908eb8496905fb973e6f"
    ],
-   "sha256": "20c36da26bdcde0661885f8376ba5f871d82215b145dfb104ade99bee6f02ebb",
-   "readAt": "2026-11-04T05:30:39Z"
+   "sha256": "e483be41b93eab79c2e9338885d063b3ba95b892e26b433c964bc4612f6fe899",
+   "readAt": "2026-11-04T05:45:39Z"
   },
   "https://www.melbourneflorida.org/Government/City-News/Traffic-Advisories/Road-Closures-1525": {
    "agency": "City of Melbourne",
@@ -1634,8 +1634,8 @@
     "97e677fe040fc517ea06a0c0051d7e189466888dc0cbea88d01828d21040db05",
     "746cdc91f2e0b08cdb9dadc4c9f958c6d390971a96b2908eb8496905fb973e6f"
    ],
-   "sha256": "ba78aaddf19b8223a605898a55d869d7f1b30b166aeb80291bd98a00697d62c5",
-   "readAt": "2026-11-04T05:30:39Z"
+   "sha256": "2817fa618c30be0eee1af6833aa7ab56e65fe33ce9faa45fc1adc12a8d700fd2",
+   "readAt": "2026-11-04T05:45:39Z"
   }
  }
 }
