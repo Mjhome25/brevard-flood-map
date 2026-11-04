@@ -1,5 +1,5 @@
 {
- "checkedAt": "2026-11-04T06:15:49Z",
+ "checkedAt": "2026-11-04T06:30:40Z",
  "fresh": true,
  "pilot": "City of Melbourne",
  "pending": [
@@ -1033,8 +1033,8 @@
    "needsReview": [
     "d54071e726fa2354c58e08d89eb84b6797fc16d3ebe4259b1f257e4db1a39e2a"
    ],
-   "sha256": "db9a8d2c4271816a8730cd14477a57cf1f4cc8f88bf2aff87a94930989f65bad",
-   "readAt": "2026-11-03T18:16:09Z"
+   "sha256": "8654750ccf351c9fe80635a8d0717778d8fd9d3f606ca4d355e343a09e850d0a",
+   "readAt": "2026-11-04T06:30:40Z"
   },
   "https://www.melbourneflorida.org/Government/City-News/Traffic-Advisories/Road-Closures-0830": {
    "agency": "City of Melbourne",
@@ -1608,8 +1608,8 @@
    "needsReview": [
     "0034d78371196ede2a8228bda807ad82d45b4a1f24031814f0a540732938db51"
    ],
-   "sha256": "bcfe4a93b26641d228fcf78f6b9d45195be5cf31576034b3cea71f9809a29213",
-   "readAt": "2026-11-04T06:15:49Z"
+   "sha256": "04df81c6c5dcba25fdab472e40c94c9c67bcb61f7fad2f6dfad8c2ef01e2c10a",
+   "readAt": "2026-11-04T06:30:40Z"
   },
   "https://www.melbourneflorida.org/Government/City-News/Traffic-Advisories/Road-Closures-1450": {
    "agency": "City of Melbourne",
@@ -1621,8 +1621,8 @@
     "679866428cf4406fd68d4376fb3934bf99e6e314857217c03f7ed8a888d60e4f",
     "746cdc91f2e0b08cdb9dadc4c9f958c6d390971a96b2908eb8496905fb973e6f"
    ],
-   "sha256": "8454ac9fb1183a66e0debe75b8ae458847cda6a69da466614b95af21b9efac90",
-   "readAt": "2026-11-04T06:15:49Z"
+   "sha256": "4f18bdd9f09e907d1acf065b80d7596b08fac54b3d5cb66ba76b139e80031581",
+   "readAt": "2026-11-04T06:30:40Z"
   },
   "https://www.melbourneflorida.org/Government/City-News/Traffic-Advisories/Road-Closures-1525": {
    "agency": "City of Melbourne",
@@ -1634,8 +1634,8 @@
     "97e677fe040fc517ea06a0c0051d7e189466888dc0cbea88d01828d21040db05",
     "746cdc91f2e0b08cdb9dadc4c9f958c6d390971a96b2908eb8496905fb973e6f"
    ],
-   "sha256": "e07f003ca91b1e75d48cb75745d8d1bef0bc5ab18b2d49054524271de211d274",
-   "readAt": "2026-11-04T06:15:49Z"
+   "sha256": "948ce49b93cc5fca8203caab6c6739ed09a9c383bc5290e21c4626897e3502e2",
+   "readAt": "2026-11-04T06:30:40Z"
   }
  }
 }
