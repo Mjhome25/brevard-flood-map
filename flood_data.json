@@ -1,7 +1,7 @@
 {
- "generated": "2026-11-04T04:30:35Z",
+ "generated": "2026-11-04T04:45:33Z",
  "errors": [
-  "FL511 map locations: 2 report(s) without a pin"
+  "FL511 map locations: 3 report(s) without a pin"
  ],
  "items": [
   {
@@ -4188,6 +4188,78 @@
     "url": "https://fl511.com",
     "kind": "feed",
     "publishedAt": "2026-11-04T04:12:00Z"
+   },
+   "awaitingOfficial": false,
+   "missingSince": null,
+   "recheck": []
+  },
+  {
+   "dir": "SB",
+   "fullClosure": false,
+   "lanes": "On-ramp closed, Right lane blocked",
+   "lat": 28.192555,
+   "layer": "Closures",
+   "line": [
+    [
+     28.19257,
+     -80.70773
+    ],
+    [
+     28.19252,
+     -80.70772
+    ],
+    [
+     28.19239,
+     -80.70768
+    ],
+    [
+     28.19187,
+     -80.70756
+    ],
+    [
+     28.19099,
+     -80.70736
+    ],
+    [
+     28.19025,
+     -80.7072
+    ],
+    [
+     28.18966,
+     -80.70707
+    ],
+    [
+     28.18887,
+     -80.70692
+    ],
+    [
+     28.1879,
+     -80.70675
+    ],
+    [
+     28.1872,
+     -80.70665
+    ]
+   ],
+   "lng": -80.707798,
+   "reported": "2026-11-04T04:41:00Z",
+   "road": "I-95",
+   "roadShort": "I-95",
+   "source": "FL511 (FDOT)",
+   "sourceUrl": "https://fl511.com",
+   "spot": "before MM 188/SR-404",
+   "status": "closed",
+   "title": "Planned construction on I-95 South, before MM 188/SR-404. On-ramp closed, Right lane blocked",
+   "where": "I-95 SB before MM 188/SR-404",
+   "id": "brevard:fl511:940209",
+   "updated": "2026-11-04T04:43:00Z",
+   "lastReported": "2026-11-04T04:43:00Z",
+   "firstReported": "2026-11-04T04:43:00Z",
+   "verified": {
+    "agency": "FL511 (FDOT)",
+    "url": "https://fl511.com",
+    "kind": "feed",
+    "publishedAt": "2026-11-04T04:43:00Z"
    },
    "awaitingOfficial": false,
    "missingSince": null,
