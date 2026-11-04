@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-04T11:45:28Z",
+ "generated": "2026-11-04T12:00:47Z",
  "errors": [],
  "items": [
   {
@@ -27,9 +27,15 @@
     "kind": "feed",
     "publishedAt": "2026-11-02T09:39:43Z"
    },
-   "awaitingOfficial": false,
-   "missingSince": null,
-   "recheck": []
+   "awaitingOfficial": true,
+   "missingSince": "2026-11-04T12:00:52Z",
+   "recheck": [],
+   "noLongerListed": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "since": "2026-11-04T12:00:52Z",
+    "wasClosed": true
+   }
   },
   {
    "fullClosure": true,
@@ -65,6 +71,35 @@
     "since": "2026-11-03T17:45:52Z",
     "wasClosed": true
    }
+  },
+  {
+   "fullClosure": true,
+   "lanes": "Malabar Rd Closed Between Us 1 And Marie St",
+   "lat": 28.0043366754502,
+   "layer": "FHP",
+   "lng": -80.5636179775855,
+   "reported": "2026-11-02T09:39:43Z",
+   "road": "MALABAR RD [WEST OF]",
+   "roadShort": "Malabar Rd [West Of]",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "spot": "at Us-1",
+   "status": "flooded",
+   "title": "Road Closed Due To Water at MALABAR RD [WEST OF] x[US-1] [MALABAR] (Malabar Rd Closed Between Us 1 And Marie St)",
+   "where": "Malabar Rd [West Of] at Us-1",
+   "id": "brevard:fhp:20261102093943-a8590709",
+   "updated": "2026-11-02T09:39:43Z",
+   "lastReported": "2026-11-02T09:39:43Z",
+   "firstReported": "2026-11-02T09:39:43Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-02T09:39:43Z"
+   },
+   "awaitingOfficial": false,
+   "missingSince": null,
+   "recheck": []
   },
   {
    "fullClosure": true,
@@ -1348,9 +1383,15 @@
     "kind": "feed",
     "publishedAt": "2026-11-03T13:16:50Z"
    },
-   "awaitingOfficial": false,
-   "missingSince": null,
-   "recheck": []
+   "awaitingOfficial": true,
+   "missingSince": "2026-11-04T12:00:52Z",
+   "recheck": [],
+   "noLongerListed": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "since": "2026-11-04T12:00:52Z",
+    "wasClosed": true
+   }
   },
   {
    "fullClosure": true,
@@ -1683,9 +1724,15 @@
     "kind": "feed",
     "publishedAt": "2026-11-03T17:51:44Z"
    },
-   "awaitingOfficial": false,
-   "missingSince": null,
-   "recheck": []
+   "awaitingOfficial": true,
+   "missingSince": "2026-11-04T12:00:52Z",
+   "recheck": [],
+   "noLongerListed": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "since": "2026-11-04T12:00:52Z",
+    "wasClosed": true
+   }
   },
   {
    "fullClosure": true,
@@ -1745,6 +1792,63 @@
     "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
     "kind": "feed",
     "publishedAt": "2026-11-04T11:33:06Z"
+   },
+   "awaitingOfficial": false,
+   "missingSince": null,
+   "recheck": []
+  },
+  {
+   "fullClosure": false,
+   "lanes": "No Roadblock",
+   "lat": 28.4049847035573,
+   "layer": "FHP",
+   "lng": -80.7190913233869,
+   "reported": "2026-11-04T11:50:52Z",
+   "road": "BEACHLINE EXPY EB (SR-528 EB) [MM48]",
+   "roadShort": "Beachline Expy Eb (SR-528 Eb) [MM48]",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "spot": "at Mm48",
+   "status": "caution",
+   "title": "MVC at BEACHLINE EXPY EB (SR-528 EB) [MM48] x[MM48] [MERRITT ISLAND] (No Roadblock)",
+   "where": "Beachline Expy Eb (SR-528 Eb) [MM48] at Mm48",
+   "id": "brevard:fhp:20261104115052-8a580b1f",
+   "updated": "2026-11-04T11:50:52Z",
+   "lastReported": "2026-11-04T11:50:52Z",
+   "firstReported": "2026-11-04T11:50:52Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-04T11:50:52Z"
+   },
+   "awaitingOfficial": false,
+   "missingSince": null,
+   "recheck": []
+  },
+  {
+   "fullClosure": false,
+   "lat": 28.3564443039087,
+   "layer": "FHP",
+   "lng": -80.7925646722108,
+   "reported": "2026-11-04T11:58:00Z",
+   "road": "I-95 SB [MM201]",
+   "roadShort": "I-95 Sb [MM201]",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "spot": "at Mm201",
+   "status": "caution",
+   "title": "Roadway Debris/Object at I-95 SB [MM201] x[MM201] [COCOA]",
+   "where": "I-95 Sb [MM201] at Mm201",
+   "id": "brevard:fhp:20261104115800-bc29a303",
+   "updated": "2026-11-04T11:58:00Z",
+   "lastReported": "2026-11-04T11:58:00Z",
+   "firstReported": "2026-11-04T11:58:00Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-04T11:58:00Z"
    },
    "awaitingOfficial": false,
    "missingSince": null,
@@ -2083,8 +2187,8 @@
    "to": "Circle Dr",
    "where": "US-192 EB beyond Coastal Ln",
    "id": "brevard:fl511:937141",
-   "updated": "2026-11-04T11:03:00Z",
-   "lastReported": "2026-11-04T11:03:00Z",
+   "updated": "2026-11-04T11:55:00Z",
+   "lastReported": "2026-11-04T11:55:00Z",
    "firstReported": "2026-11-02T19:54:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
@@ -4387,6 +4491,62 @@
     "url": "https://fl511.com",
     "kind": "feed",
     "publishedAt": "2026-11-04T11:43:00Z"
+   },
+   "awaitingOfficial": false,
+   "missingSince": null,
+   "recheck": []
+  },
+  {
+   "dir": "EB",
+   "fullClosure": false,
+   "lanes": "Left lane blocked",
+   "lat": 28.404537,
+   "layer": "Incidents",
+   "line": [
+    [
+     28.40443,
+     -80.72289
+    ],
+    [
+     28.40446,
+     -80.72268
+    ],
+    [
+     28.40461,
+     -80.72167
+    ],
+    [
+     28.40478,
+     -80.72043
+    ],
+    [
+     28.40492,
+     -80.71943
+    ],
+    [
+     28.405,
+     -80.71884
+    ]
+   ],
+   "lng": -80.722904,
+   "reported": "2026-11-04T11:53:00Z",
+   "road": "SR-528",
+   "roadShort": "SR-528",
+   "source": "FL511 (FDOT)",
+   "sourceUrl": "https://fl511.com",
+   "spot": "from before MM 46/Indian River Dr to MM 48",
+   "status": "caution",
+   "title": "MVC on SR-528 East, from before MM 46/Indian River Dr to MM 48. Left lane blocked",
+   "where": "SR-528 EB from before MM 46/Indian River Dr to MM 48",
+   "id": "brevard:fl511:940474",
+   "updated": "2026-11-04T11:59:00Z",
+   "lastReported": "2026-11-04T11:59:00Z",
+   "firstReported": "2026-11-04T11:59:00Z",
+   "verified": {
+    "agency": "FL511 (FDOT)",
+    "url": "https://fl511.com",
+    "kind": "feed",
+    "publishedAt": "2026-11-04T11:59:00Z"
    },
    "awaitingOfficial": false,
    "missingSince": null,
@@ -7071,7 +7231,7 @@
      "id": "brevard:fhp:20261103131650-92bc021a",
      "where": "Ellis Rd at S John Rodes Blvd",
      "source": "FHP live CAD",
-     "since": null
+     "since": "2026-11-04T12:00:52Z"
     }
    ]
   },

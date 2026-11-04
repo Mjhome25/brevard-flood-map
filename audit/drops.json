@@ -1,19 +1,19 @@
 {
- "checkedAt": "2026-11-04T11:45:39Z",
+ "checkedAt": "2026-11-04T12:00:54Z",
  "fresh": true,
  "trial": {
   "from": "2026-11-03T17:36:43Z",
   "to": "2026-11-10T17:36:43Z",
   "windowElapsed": false,
-  "episodes": 44,
-  "incidents": 43,
+  "episodes": 47,
+  "incidents": 46,
   "bySource": {
-   "fhp": 26,
+   "fhp": 29,
    "fl511": 18
   },
   "contrary evidence": 1,
-  "possibly stale entry": 6,
-  "nothing found": 37,
+  "possibly stale entry": 7,
+  "nothing found": 39,
   "byGroup": {
    "crash, state road": {
     "episodes": 6,
@@ -38,26 +38,26 @@
     "nothing found": 6
    },
    "flooding/hazard, state road": {
-    "episodes": 16,
-    "incidents": 15,
+    "episodes": 18,
+    "incidents": 17,
     "bySource": {
-     "fhp": 7,
+     "fhp": 9,
      "fl511": 9
     },
     "contrary evidence": 1,
-    "possibly stale entry": 1,
-    "nothing found": 14
+    "possibly stale entry": 2,
+    "nothing found": 15
    },
    "flooding/hazard, local street": {
-    "episodes": 14,
-    "incidents": 14,
+    "episodes": 15,
+    "incidents": 15,
     "bySource": {
-     "fhp": 8,
+     "fhp": 9,
      "fl511": 6
     },
     "contrary evidence": 0,
     "possibly stale entry": 2,
-    "nothing found": 12
+    "nothing found": 13
    },
    "crash, road class unknown": {
     "episodes": 1,
@@ -99,16 +99,20 @@
   "drop:db9c89b442d476b24a5010ef8a89e4a7",
   "drop:0d9e4e45b68edcc9c5f764858c916c3a",
   "drop:a39fb134a8daea95abb7c74d8cf8db61",
-  "drop:f1e4de49dfcc86b56bb7631f8efe783e"
+  "drop:f1e4de49dfcc86b56bb7631f8efe783e",
+  "drop:138ef7eebcdb44100d5c34ce233616a2"
  ],
  "newForMike": [
   "drop:5e80be05cd9557a04fdea3984859956d",
+  "drop:67cf16b14367c1ac9a3cd8729d9eeb69",
+  "drop:acba85db46577c66fbb71c5ee826267e",
   "drop:36cfb665f93d8927ce318ac33745ca5d",
   "drop:e61ea9d2864aa635e241538d2c974839",
   "drop:db9c89b442d476b24a5010ef8a89e4a7",
   "drop:0d9e4e45b68edcc9c5f764858c916c3a",
   "drop:a39fb134a8daea95abb7c74d8cf8db61",
-  "drop:f1e4de49dfcc86b56bb7631f8efe783e"
+  "drop:f1e4de49dfcc86b56bb7631f8efe783e",
+  "drop:138ef7eebcdb44100d5c34ce233616a2"
  ],
  "note": "nothing found means no contrary report on our map, not proof the road reopened",
  "cases": [
@@ -132,7 +136,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-04T11:45:39Z"
+   "checkedAt": "2026-11-04T12:00:54Z"
   },
   {
    "id": "drop:df68d63a24d6f427cec24e2dfce0903a",
@@ -154,7 +158,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-04T11:45:39Z"
+   "checkedAt": "2026-11-04T12:00:54Z"
   },
   {
    "id": "drop:6ebc8286d59a975aa20810641bcbb853",
@@ -176,7 +180,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-04T11:45:39Z"
+   "checkedAt": "2026-11-04T12:00:54Z"
   },
   {
    "id": "drop:4018a14e01fff018d32bba9e7d15c5ad",
@@ -198,7 +202,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-04T11:45:39Z"
+   "checkedAt": "2026-11-04T12:00:54Z"
   },
   {
    "id": "drop:bd3693b03e420575bc3cbf4ae3441ee9",
@@ -236,7 +240,7 @@
    "fingerprint": "c0b834d45ad36762",
    "review": "unreviewed",
    "firstFound": "2026-11-03T18:14:41Z",
-   "checkedAt": "2026-11-04T11:45:39Z"
+   "checkedAt": "2026-11-04T12:00:54Z"
   },
   {
    "id": "drop:d3d3569778a94ee69fd99fd50543fd20",
@@ -258,7 +262,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-04T11:45:39Z"
+   "checkedAt": "2026-11-04T12:00:54Z"
   },
   {
    "id": "drop:10c7fe7b40d2a77c27177b3e7f05b684",
@@ -296,7 +300,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-04T11:45:39Z"
+   "checkedAt": "2026-11-04T12:00:54Z"
   },
   {
    "id": "drop:e01f98e88a3093e657636d0a0bdd484c",
@@ -318,7 +322,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-04T11:45:39Z"
+   "checkedAt": "2026-11-04T12:00:54Z"
   },
   {
    "id": "drop:f82019e8a1567b555c15960c76afaf70",
@@ -356,7 +360,7 @@
    "fingerprint": "14a23981a5a0df61",
    "review": "unreviewed",
    "firstFound": "2026-11-03T18:14:41Z",
-   "checkedAt": "2026-11-04T11:45:39Z"
+   "checkedAt": "2026-11-04T12:00:54Z"
   },
   {
    "id": "drop:72861753ae13cbb1817921a748ab0688",
@@ -378,7 +382,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-04T11:45:39Z"
+   "checkedAt": "2026-11-04T12:00:54Z"
   },
   {
    "id": "drop:5407a0915e764b934e8540e5c0e4610f",
@@ -400,7 +404,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-04T11:45:39Z"
+   "checkedAt": "2026-11-04T12:00:54Z"
   },
   {
    "id": "drop:23875b856f473bd11d9853a9e249295a",
@@ -422,7 +426,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-04T11:45:39Z"
+   "checkedAt": "2026-11-04T12:00:54Z"
   },
   {
    "id": "drop:289a254b7113519c1f11c3184fc8f1fe",
@@ -444,7 +448,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-04T11:45:39Z"
+   "checkedAt": "2026-11-04T12:00:54Z"
   },
   {
    "id": "drop:fbb9e7f8cc77c299e1535953072a2f74",
@@ -466,7 +470,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-04T11:45:39Z"
+   "checkedAt": "2026-11-04T12:00:54Z"
   },
   {
    "id": "drop:3b9d9e8f164becfa5fcfeec783c30cc7",
@@ -488,7 +492,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-04T11:45:39Z"
+   "checkedAt": "2026-11-04T12:00:54Z"
   },
   {
    "id": "drop:0807353f5fdbc93591b36bbfd2df0e65",
@@ -510,7 +514,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-04T11:45:39Z"
+   "checkedAt": "2026-11-04T12:00:54Z"
   },
   {
    "id": "drop:13d150a394c88fb9aa8c7e5c3571cb97",
@@ -532,7 +536,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-04T11:45:39Z"
+   "checkedAt": "2026-11-04T12:00:54Z"
   },
   {
    "id": "drop:06a5ef0035220c87ff48e8d86fefc85d",
@@ -554,7 +558,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-04T11:45:39Z"
+   "checkedAt": "2026-11-04T12:00:54Z"
   },
   {
    "id": "drop:a9ef9bf925123399799da39101acff23",
@@ -576,7 +580,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-04T11:45:39Z"
+   "checkedAt": "2026-11-04T12:00:54Z"
   },
   {
    "id": "drop:02c3037142cd717f121c745f49705cd0",
@@ -614,7 +618,7 @@
    "fingerprint": "e61302cdacb83a91",
    "review": "unreviewed",
    "firstFound": "2026-11-03T18:14:41Z",
-   "checkedAt": "2026-11-04T11:45:39Z"
+   "checkedAt": "2026-11-04T12:00:54Z"
   },
   {
    "id": "drop:a60bdee1a1cb80c57c1ef481976f4b93",
@@ -652,7 +656,7 @@
    "fingerprint": "b328846605c7d410",
    "review": "unreviewed",
    "firstFound": "2026-11-03T18:14:41Z",
-   "checkedAt": "2026-11-04T11:45:39Z"
+   "checkedAt": "2026-11-04T12:00:54Z"
   },
   {
    "id": "drop:530e5a1f0f5dc00c5926e18100771b83",
@@ -674,7 +678,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-04T11:45:39Z"
+   "checkedAt": "2026-11-04T12:00:54Z"
   },
   {
    "id": "drop:8fcbb4e3e4fa3d02124ec3878edf686c",
@@ -712,7 +716,7 @@
    "fingerprint": "c1fbc027b29bde21",
    "review": "unreviewed",
    "firstFound": "2026-11-03T18:14:41Z",
-   "checkedAt": "2026-11-04T11:45:39Z"
+   "checkedAt": "2026-11-04T12:00:54Z"
   },
   {
    "id": "drop:5e80be05cd9557a04fdea3984859956d",
@@ -765,7 +769,7 @@
    "fingerprint": "2326d136179bc990",
    "review": "unreviewed",
    "firstFound": "2026-11-03T18:14:41Z",
-   "checkedAt": "2026-11-04T11:45:39Z"
+   "checkedAt": "2026-11-04T12:00:54Z"
   },
   {
    "id": "drop:d5de43a41199026e73a157d1d7298457",
@@ -787,7 +791,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-04T11:45:39Z"
+   "checkedAt": "2026-11-04T12:00:54Z"
   },
   {
    "id": "drop:dac4714e1f0d888d83c7a9f1b11f1b41",
@@ -809,7 +813,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-04T11:45:39Z"
+   "checkedAt": "2026-11-04T12:00:54Z"
   },
   {
    "id": "drop:24c750b4bc77fda99bbcc75b57b2094f",
@@ -831,7 +835,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-04T11:45:39Z"
+   "checkedAt": "2026-11-04T12:00:54Z"
   },
   {
    "id": "drop:13c64b7501b05a528a7be5946d3829b0",
@@ -853,7 +857,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-04T11:45:39Z"
+   "checkedAt": "2026-11-04T12:00:54Z"
   },
   {
    "id": "drop:3457eee0793d266fb1001178253ade06",
@@ -875,7 +879,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-04T11:45:39Z"
+   "checkedAt": "2026-11-04T12:00:54Z"
   },
   {
    "id": "drop:fe8534c587b5b4a8e4c542039046f2b2",
@@ -897,7 +901,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-04T11:45:39Z"
+   "checkedAt": "2026-11-04T12:00:54Z"
   },
   {
    "id": "drop:67cf16b14367c1ac9a3cd8729d9eeb69",
@@ -941,16 +945,31 @@
      "fullClosure": true,
      "firstReported": "2026-11-02T09:39:43Z",
      "lastReported": "2026-11-02T09:39:43Z",
+     "missingSince": "2026-11-04T12:00:52Z",
+     "onMap": true,
+     "listing": "no longer listed by its feed"
+    },
+    {
+     "relation": "older-entry",
+     "rid": "brevard:fhp:20261102093943-a8590709",
+     "src": "fhp",
+     "source": "FHP live CAD",
+     "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+     "where": "Malabar Rd [West Of] at Us-1",
+     "status": "flooded",
+     "fullClosure": true,
+     "firstReported": "2026-11-02T09:39:43Z",
+     "lastReported": "2026-11-02T09:39:43Z",
      "missingSince": null,
      "onMap": true,
      "listing": "still listed by its feed"
     }
    ],
    "lesser": [],
-   "fingerprint": "7d97a0d9b60c04a4",
+   "fingerprint": "43193a8cedad378a",
    "review": "unreviewed",
    "firstFound": "2026-11-03T18:14:41Z",
-   "checkedAt": "2026-11-04T11:45:39Z"
+   "checkedAt": "2026-11-04T12:00:54Z"
   },
   {
    "id": "drop:c7eb53e1813026901550bc9cfaccb502",
@@ -972,7 +991,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-04T11:45:39Z"
+   "checkedAt": "2026-11-04T12:00:54Z"
   },
   {
    "id": "drop:777931949a98ca7790f484dbe9f268c1",
@@ -994,7 +1013,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-04T11:45:39Z"
+   "checkedAt": "2026-11-04T12:00:54Z"
   },
   {
    "id": "drop:b31fee7296a8aa363f6c05e515b42af9",
@@ -1016,7 +1035,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-04T11:45:39Z"
+   "checkedAt": "2026-11-04T12:00:54Z"
   },
   {
    "id": "drop:749e41871d71ed6c9d92723c30a1363a",
@@ -1038,7 +1057,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-04T11:45:39Z"
+   "checkedAt": "2026-11-04T12:00:54Z"
   },
   {
    "id": "drop:0d780920a0446c7a40cbaf58a2ef06e4",
@@ -1060,7 +1079,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-04T11:45:39Z"
+   "checkedAt": "2026-11-04T12:00:54Z"
   },
   {
    "id": "drop:e0d68e17e8e60e31732b81ae85fbb610",
@@ -1082,7 +1101,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-04T11:45:39Z"
+   "checkedAt": "2026-11-04T12:00:54Z"
   },
   {
    "id": "drop:12426ddfd155202d0e58f4f0a2ec56a4",
@@ -1104,7 +1123,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-04T11:45:39Z"
+   "checkedAt": "2026-11-04T12:00:54Z"
   },
   {
    "id": "drop:9006ef30cbd9148b1dcb099b05ea254f",
@@ -1126,7 +1145,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-04T11:45:39Z"
+   "checkedAt": "2026-11-04T12:00:54Z"
   },
   {
    "id": "drop:530072dfd915eabdd2154e28393cabea",
@@ -1148,7 +1167,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-04T11:45:39Z"
+   "checkedAt": "2026-11-04T12:00:54Z"
   },
   {
    "id": "drop:acba85db46577c66fbb71c5ee826267e",
@@ -1192,16 +1211,31 @@
      "fullClosure": true,
      "firstReported": "2026-11-02T09:39:43Z",
      "lastReported": "2026-11-02T09:39:43Z",
+     "missingSince": "2026-11-04T12:00:52Z",
+     "onMap": true,
+     "listing": "no longer listed by its feed"
+    },
+    {
+     "relation": "older-entry",
+     "rid": "brevard:fhp:20261102093943-a8590709",
+     "src": "fhp",
+     "source": "FHP live CAD",
+     "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+     "where": "Malabar Rd [West Of] at Us-1",
+     "status": "flooded",
+     "fullClosure": true,
+     "firstReported": "2026-11-02T09:39:43Z",
+     "lastReported": "2026-11-02T09:39:43Z",
      "missingSince": null,
      "onMap": true,
      "listing": "still listed by its feed"
     }
    ],
    "lesser": [],
-   "fingerprint": "ebcb86b961c11a10",
+   "fingerprint": "61d3b9dcff94d82c",
    "review": "unreviewed",
    "firstFound": "2026-11-03T18:14:41Z",
-   "checkedAt": "2026-11-04T11:45:39Z"
+   "checkedAt": "2026-11-04T12:00:54Z"
   },
   {
    "id": "drop:4eeaeab17e51a14e100799cc16d1997f",
@@ -1223,7 +1257,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-04T11:45:39Z"
+   "checkedAt": "2026-11-04T12:00:54Z"
   },
   {
    "id": "drop:f92e2656caeda579e1cd4f4a002c561b",
@@ -1245,7 +1279,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-04T11:45:39Z"
+   "checkedAt": "2026-11-04T12:00:54Z"
   },
   {
    "id": "drop:4d1d55af82bb6d136aad78951ce1166f",
@@ -1267,7 +1301,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-04T11:45:39Z"
+   "checkedAt": "2026-11-04T12:00:54Z"
   },
   {
    "id": "drop:4fd1a8d22b0cba9501306d286856af66",
@@ -1289,7 +1323,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-04T11:45:39Z"
+   "checkedAt": "2026-11-04T12:00:54Z"
   },
   {
    "id": "drop:e75e33eda36400704eb93c5e604c8f34",
@@ -1311,7 +1345,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-04T11:45:39Z"
+   "checkedAt": "2026-11-04T12:00:54Z"
   },
   {
    "id": "drop:e2046326fbc44e40ccfad5bae40d448d",
@@ -1333,7 +1367,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-04T11:45:39Z"
+   "checkedAt": "2026-11-04T12:00:54Z"
   },
   {
    "id": "drop:147b5424732bc727aa1d1c64b95b1a3c",
@@ -1355,7 +1389,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-04T11:45:39Z"
+   "checkedAt": "2026-11-04T12:00:54Z"
   },
   {
    "id": "drop:db1871b64117bbe9a9dbcee6354068c3",
@@ -1377,7 +1411,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-04T11:45:39Z"
+   "checkedAt": "2026-11-04T12:00:54Z"
   },
   {
    "id": "drop:e1479ac925f3fc381db00a53175a6ba5",
@@ -1399,7 +1433,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-04T11:45:39Z"
+   "checkedAt": "2026-11-04T12:00:54Z"
   },
   {
    "id": "drop:36cfb665f93d8927ce318ac33745ca5d",
@@ -1437,7 +1471,7 @@
    "fingerprint": "9055931dda518dc6",
    "review": "unreviewed",
    "firstFound": "2026-11-03T23:45:49Z",
-   "checkedAt": "2026-11-04T11:45:39Z"
+   "checkedAt": "2026-11-04T12:00:54Z"
   },
   {
    "id": "drop:10d5d3a076087bff7367102ec2b85a61",
@@ -1459,7 +1493,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-04T11:45:39Z"
+   "checkedAt": "2026-11-04T12:00:54Z"
   },
   {
    "id": "drop:b4be7fd4d6bed08327907a13ed749a40",
@@ -1481,7 +1515,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-04T11:45:39Z"
+   "checkedAt": "2026-11-04T12:00:54Z"
   },
   {
    "id": "drop:30facf98374e1eb59c4458b95d4c717a",
@@ -1503,7 +1537,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-04T11:45:39Z"
+   "checkedAt": "2026-11-04T12:00:54Z"
   },
   {
    "id": "drop:e61ea9d2864aa635e241538d2c974839",
@@ -1537,7 +1571,7 @@
    "fingerprint": "fc2911fda6cb8546",
    "review": "unreviewed",
    "firstFound": "2026-11-03T21:02:32Z",
-   "checkedAt": "2026-11-04T11:45:39Z"
+   "checkedAt": "2026-11-04T12:00:54Z"
   },
   {
    "id": "drop:f41f82037d0005187899c8ebea4aba97",
@@ -1559,7 +1593,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-04T11:45:39Z"
+   "checkedAt": "2026-11-04T12:00:54Z"
   },
   {
    "id": "drop:08e899d319e36a03d4b1d35ea3293d97",
@@ -1581,7 +1615,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-04T11:45:39Z"
+   "checkedAt": "2026-11-04T12:00:54Z"
   },
   {
    "id": "drop:7e69454d37985d4d4b54e810adaca27e",
@@ -1603,7 +1637,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-04T11:45:39Z"
+   "checkedAt": "2026-11-04T12:00:54Z"
   },
   {
    "id": "drop:9d51aebe3d0213bad2cd620a7f299343",
@@ -1625,7 +1659,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-04T11:45:39Z"
+   "checkedAt": "2026-11-04T12:00:54Z"
   },
   {
    "id": "drop:4cdb9816d0203379f1a532c7b26fe5e3",
@@ -1647,7 +1681,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-04T11:45:39Z"
+   "checkedAt": "2026-11-04T12:00:54Z"
   },
   {
    "id": "drop:257d72299ad405b373ff3250143e855a",
@@ -1669,7 +1703,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-04T11:45:39Z"
+   "checkedAt": "2026-11-04T12:00:54Z"
   },
   {
    "id": "drop:d862c7f72680c70005f887f2357e1c61",
@@ -1691,7 +1725,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-04T11:45:39Z"
+   "checkedAt": "2026-11-04T12:00:54Z"
   },
   {
    "id": "drop:1b33dffab9a2ea379781e0bc5b8cdc37",
@@ -1713,7 +1747,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-04T11:45:39Z"
+   "checkedAt": "2026-11-04T12:00:54Z"
   },
   {
    "id": "drop:db9c89b442d476b24a5010ef8a89e4a7",
@@ -1742,16 +1776,16 @@
      "fullClosure": true,
      "firstReported": "2026-11-03T13:16:50Z",
      "lastReported": "2026-11-03T13:16:50Z",
-     "missingSince": null,
+     "missingSince": "2026-11-04T12:00:52Z",
      "onMap": true,
-     "listing": "still listed by its feed"
+     "listing": "no longer listed by its feed"
     }
    ],
    "lesser": [],
-   "fingerprint": "eadacfadedf80217",
+   "fingerprint": "e660aaf8f31cc420",
    "review": "unreviewed",
    "firstFound": "2026-11-03T23:30:40Z",
-   "checkedAt": "2026-11-04T11:45:39Z"
+   "checkedAt": "2026-11-04T12:00:54Z"
   },
   {
    "id": "drop:b7f5b92c2900edb1e565cc1ab2bcc1ee",
@@ -1773,7 +1807,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-04T11:45:39Z"
+   "checkedAt": "2026-11-04T12:00:54Z"
   },
   {
    "id": "drop:0d9e4e45b68edcc9c5f764858c916c3a",
@@ -1826,7 +1860,7 @@
    "fingerprint": "7f75190e054889bc",
    "review": "unreviewed",
    "firstFound": "2026-11-03T23:45:49Z",
-   "checkedAt": "2026-11-04T11:45:39Z"
+   "checkedAt": "2026-11-04T12:00:54Z"
   },
   {
    "id": "drop:a39fb134a8daea95abb7c74d8cf8db61",
@@ -1864,7 +1898,7 @@
    "fingerprint": "5cc89caed505cb06",
    "review": "unreviewed",
    "firstFound": "2026-11-04T00:02:09Z",
-   "checkedAt": "2026-11-04T11:45:39Z"
+   "checkedAt": "2026-11-04T12:00:54Z"
   },
   {
    "id": "drop:2da671dbd9b08e065d8dab54a5a50aa1",
@@ -1886,7 +1920,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-04T11:45:39Z"
+   "checkedAt": "2026-11-04T12:00:54Z"
   },
   {
    "id": "drop:f1e4de49dfcc86b56bb7631f8efe783e",
@@ -1924,7 +1958,7 @@
    "fingerprint": "9055931dda518dc6",
    "review": "unreviewed",
    "firstFound": "2026-11-04T01:30:39Z",
-   "checkedAt": "2026-11-04T11:45:39Z"
+   "checkedAt": "2026-11-04T12:00:54Z"
   },
   {
    "id": "drop:8eeb6726db05a23a4a8fed1f2007b709",
@@ -1946,7 +1980,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-04T11:45:39Z"
+   "checkedAt": "2026-11-04T12:00:54Z"
   },
   {
    "id": "drop:3a1353aba59274562194adbede53145c",
@@ -1968,7 +2002,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-04T11:45:39Z"
+   "checkedAt": "2026-11-04T12:00:54Z"
   },
   {
    "id": "drop:9cccb91f2866f20a6cf0f8edcb68f3ad",
@@ -1990,7 +2024,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-04T11:45:39Z"
+   "checkedAt": "2026-11-04T12:00:54Z"
   },
   {
    "id": "drop:f500647d0acbee56bd48ef01cdc165d8",
@@ -2012,7 +2046,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-04T11:45:39Z"
+   "checkedAt": "2026-11-04T12:00:54Z"
   },
   {
    "id": "drop:d36a7f7a4336eecc16d1062cfa95c312",
@@ -2034,7 +2068,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-04T11:45:39Z"
+   "checkedAt": "2026-11-04T12:00:54Z"
   },
   {
    "id": "drop:482f104145bf7347b97db74d941e5bbc",
@@ -2056,7 +2090,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-04T11:45:39Z"
+   "checkedAt": "2026-11-04T12:00:54Z"
   },
   {
    "id": "drop:349f9a07444ac3f2a6648f975d60fc26",
@@ -2078,7 +2112,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-04T11:45:39Z"
+   "checkedAt": "2026-11-04T12:00:54Z"
   },
   {
    "id": "drop:ac69ba51c39b9c711a49296e72222fbb",
@@ -2100,7 +2134,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-04T11:45:39Z"
+   "checkedAt": "2026-11-04T12:00:54Z"
   },
   {
    "id": "drop:b57e85f8dd28e29a47eef6bf097a04cf",
@@ -2122,7 +2156,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-04T11:45:39Z"
+   "checkedAt": "2026-11-04T12:00:54Z"
   },
   {
    "id": "drop:fbca4ad1ee4f618598ee7707f0ec3e2b",
@@ -2144,7 +2178,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-04T11:45:39Z"
+   "checkedAt": "2026-11-04T12:00:54Z"
   },
   {
    "id": "drop:9fd747a42eee930db8ec8854dc517bf0",
@@ -2166,7 +2200,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-04T11:45:39Z"
+   "checkedAt": "2026-11-04T12:00:54Z"
   },
   {
    "id": "drop:57c84a445482f77783edc737f1d5598c",
@@ -2188,7 +2222,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-04T11:45:39Z"
+   "checkedAt": "2026-11-04T12:00:54Z"
   },
   {
    "id": "drop:87840de9cc1c7a08a33d12036b9dbe4f",
@@ -2210,7 +2244,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-04T11:45:39Z"
+   "checkedAt": "2026-11-04T12:00:54Z"
   },
   {
    "id": "drop:06ab10082ffababa760ae850fadaa650",
@@ -2232,7 +2266,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-04T11:45:39Z"
+   "checkedAt": "2026-11-04T12:00:54Z"
   },
   {
    "id": "drop:34ac0f3de9291f8f07051a9a7503f966",
@@ -2254,7 +2288,119 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-04T11:45:39Z"
+   "checkedAt": "2026-11-04T12:00:54Z"
+  },
+  {
+   "id": "drop:d53080131fd64032a3fcbcbd7402c6a9",
+   "rid": "brevard:fhp:20261103131650-92bc021a",
+   "src": "fhp",
+   "where": "Ellis Rd at S John Rodes Blvd",
+   "status": "flooded",
+   "fullClosure": true,
+   "group": "flooding/hazard, local street",
+   "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "firstReported": "2026-11-03T13:16:50Z",
+   "sourceLastReported": "2026-11-03T13:16:50Z",
+   "missingSince": "2026-11-04T12:00:52Z",
+   "seenGoneAt": "2026-11-04T12:00:52Z",
+   "cohort": "trial",
+   "finding": "nothing found",
+   "counterparts": [],
+   "lesser": [],
+   "fingerprint": null,
+   "review": "unreviewed",
+   "firstFound": null,
+   "checkedAt": "2026-11-04T12:00:54Z"
+  },
+  {
+   "id": "drop:138ef7eebcdb44100d5c34ce233616a2",
+   "rid": "brevard:fhp:20261102093943-1755147b",
+   "src": "fhp",
+   "where": "US-1 [West Of] at Malabar Rd",
+   "status": "flooded",
+   "fullClosure": true,
+   "group": "flooding/hazard, state road",
+   "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "firstReported": "2026-11-02T09:39:43Z",
+   "sourceLastReported": "2026-11-02T09:39:43Z",
+   "missingSince": "2026-11-04T12:00:52Z",
+   "seenGoneAt": "2026-11-04T12:00:52Z",
+   "cohort": "trial",
+   "finding": "possibly stale entry",
+   "counterparts": [
+    {
+     "relation": "older-entry",
+     "rid": "brevard:fhp:20261102093943-ab2dc59d",
+     "src": "fhp",
+     "source": "FHP live CAD",
+     "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+     "where": "US-1 [2 Miles Sof] at Malabar Rd",
+     "status": "flooded",
+     "fullClosure": true,
+     "firstReported": "2026-11-02T09:39:43Z",
+     "lastReported": "2026-11-02T09:39:43Z",
+     "missingSince": "2026-11-03T14:39:41Z",
+     "onMap": true,
+     "listing": "no longer listed by its feed"
+    },
+    {
+     "relation": "older-entry",
+     "rid": "brevard:fhp:20261102093943-7b677c87",
+     "src": "fhp",
+     "source": "FHP live CAD",
+     "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+     "where": "US-1 at Malabar Rd",
+     "status": "flooded",
+     "fullClosure": true,
+     "firstReported": "2026-11-02T09:39:43Z",
+     "lastReported": "2026-11-02T09:39:43Z",
+     "missingSince": "2026-11-03T17:45:52Z",
+     "onMap": true,
+     "listing": "no longer listed by its feed"
+    },
+    {
+     "relation": "older-entry",
+     "rid": "brevard:fhp:20261102093943-a8590709",
+     "src": "fhp",
+     "source": "FHP live CAD",
+     "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+     "where": "Malabar Rd [West Of] at Us-1",
+     "status": "flooded",
+     "fullClosure": true,
+     "firstReported": "2026-11-02T09:39:43Z",
+     "lastReported": "2026-11-02T09:39:43Z",
+     "missingSince": null,
+     "onMap": true,
+     "listing": "still listed by its feed"
+    }
+   ],
+   "lesser": [],
+   "fingerprint": "c00521d502dc8078",
+   "review": "unreviewed",
+   "firstFound": "2026-11-04T12:00:54Z",
+   "checkedAt": "2026-11-04T12:00:54Z"
+  },
+  {
+   "id": "drop:71cdeb3b753dd8dc376dd91703826825",
+   "rid": "brevard:fhp:20261103175144-a927f7cd",
+   "src": "fhp",
+   "where": "Ellis Rd [I-95 Nb Sb Exit 182] [West Melbourne]",
+   "status": "flooded",
+   "fullClosure": true,
+   "group": "flooding/hazard, state road",
+   "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "firstReported": "2026-11-03T17:51:44Z",
+   "sourceLastReported": "2026-11-03T17:51:44Z",
+   "missingSince": "2026-11-04T12:00:52Z",
+   "seenGoneAt": "2026-11-04T12:00:52Z",
+   "cohort": "trial",
+   "finding": "nothing found",
+   "counterparts": [],
+   "lesser": [],
+   "fingerprint": null,
+   "review": "unreviewed",
+   "firstFound": null,
+   "checkedAt": "2026-11-04T12:00:54Z"
   }
  ]
 }
