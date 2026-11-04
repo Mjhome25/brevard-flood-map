@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-04T21:01:01Z",
+ "generated": "2026-11-04T21:15:30Z",
  "errors": [],
  "items": [
   {
@@ -173,9 +173,15 @@
     "kind": "feed",
     "publishedAt": "2026-11-04T07:38:31Z"
    },
-   "awaitingOfficial": false,
-   "missingSince": null,
-   "recheck": []
+   "awaitingOfficial": true,
+   "missingSince": "2026-11-04T21:15:35Z",
+   "recheck": [],
+   "noLongerListed": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "since": "2026-11-04T21:15:35Z",
+    "wasClosed": false
+   }
   },
   {
    "fullClosure": false,
@@ -232,6 +238,35 @@
     "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
     "kind": "feed",
     "publishedAt": "2026-11-04T08:20:43Z"
+   },
+   "awaitingOfficial": false,
+   "missingSince": null,
+   "recheck": []
+  },
+  {
+   "fullClosure": false,
+   "lanes": "Source said \"Roadway Clear\" (2026-11-04 09:11 UTC); not a verified reopening",
+   "lat": 28.3572782345191,
+   "layer": "FHP",
+   "lng": -80.6851542134412,
+   "reported": "2026-11-04T09:11:50Z",
+   "road": "E MERRITT ISLAND CSWY [770]",
+   "roadShort": "E Merritt Island Cswy [770]",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "spot": "at Borman Dr",
+   "status": "caution",
+   "title": "MVC at E MERRITT ISLAND CSWY [770] x[BORMAN DR] [MERRITT ISLAND] (Roadway Clear)",
+   "where": "E Merritt Island Cswy [770] at Borman Dr",
+   "id": "brevard:fhp:20261104091150-ea0e8483",
+   "updated": "2026-11-04T09:11:50Z",
+   "lastReported": "2026-11-04T09:11:50Z",
+   "firstReported": "2026-11-04T09:11:50Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-04T09:11:50Z"
    },
    "awaitingOfficial": false,
    "missingSince": null,
@@ -301,8 +336,8 @@
    "title": "MVC on US-1 South, at Kings Hwy",
    "where": "US-1 SB at Kings Hwy",
    "id": "brevard:fl511:941323",
-   "updated": "2026-11-04T20:33:00Z",
-   "lastReported": "2026-11-04T20:33:00Z",
+   "updated": "2026-11-04T21:05:00Z",
+   "lastReported": "2026-11-04T21:05:00Z",
    "firstReported": "2026-11-04T20:19:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
