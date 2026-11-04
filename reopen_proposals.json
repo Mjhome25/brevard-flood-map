@@ -48,5 +48,25 @@
   "quoteSha256": "dc89de42d7d408458aa4b04670bcc7fa03daf03af353a945d434c166702c7138",
   "time": "2026-11-03T19:50:00Z",
   "found": "2026-11-04T11:31:43Z"
+ },
+ {
+  "id": "man-sarno-eaugallie",
+  "where": "Sarno Rd between Eau Gallie Blvd and its west end (limits as reported unclear)",
+  "partial": false,
+  "sourceHost": "melbourneflorida.org",
+  "sourceUrlSha256": "5125af64bc4b4815815c7746b6c36bb11997c0db0ce5c047de97adb19d144153",
+  "quoteSha256": "0034d78371196ede2a8228bda807ad82d45b4a1f24031814f0a540732938db51",
+  "time": "2026-11-03T18:20:00Z",
+  "found": "2026-11-04T12:31:41Z"
+ },
+ {
+  "id": "man-sarno-rd-at-wickham-rd",
+  "where": "Sarno Rd at Wickham Rd",
+  "partial": false,
+  "sourceHost": "melbourneflorida.org",
+  "sourceUrlSha256": "5125af64bc4b4815815c7746b6c36bb11997c0db0ce5c047de97adb19d144153",
+  "quoteSha256": "0034d78371196ede2a8228bda807ad82d45b4a1f24031814f0a540732938db51",
+  "time": "2026-11-03T18:20:00Z",
+  "found": "2026-11-04T12:31:41Z"
  }
 ]

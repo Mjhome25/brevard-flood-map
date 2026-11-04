@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-04T12:15:32Z",
+ "generated": "2026-11-04T12:31:45Z",
  "errors": [],
  "items": [
   {
@@ -3771,8 +3771,8 @@
    "title": "Flooding on Sunlake Rd Both Directions At SR-507 Northbound. All lanes closed.",
    "where": "Sunlake Rd both directions At SR-507 Northbound",
    "id": "brevard:fl511:939237",
-   "updated": "2026-11-04T10:38:00Z",
-   "lastReported": "2026-11-04T10:38:00Z",
+   "updated": "2026-11-04T12:25:00Z",
+   "lastReported": "2026-11-04T12:25:00Z",
    "firstReported": "2026-11-03T17:58:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
@@ -4198,8 +4198,8 @@
    "title": "Flooding on SR-520 Both Directions At John Horne Dr.",
    "where": "SR-520 both directions At John Horne Dr",
    "id": "brevard:fl511:939664",
-   "updated": "2026-11-04T10:38:00Z",
-   "lastReported": "2026-11-04T10:38:00Z",
+   "updated": "2026-11-04T12:15:00Z",
+   "lastReported": "2026-11-04T12:15:00Z",
    "firstReported": "2026-11-03T21:53:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
@@ -4227,8 +4227,8 @@
    "title": "Flooding on SR-513 Southbound At SR-518. 2 Right Lanes Closed.",
    "where": "SR-513 SB",
    "id": "brevard:fl511:939898",
-   "updated": "2026-11-04T10:38:00Z",
-   "lastReported": "2026-11-04T10:38:00Z",
+   "updated": "2026-11-04T12:15:00Z",
+   "lastReported": "2026-11-04T12:15:00Z",
    "firstReported": "2026-11-04T00:37:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
@@ -4318,8 +4318,8 @@
    "to": "Blanche St",
    "where": "SR-514 EB",
    "id": "brevard:fl511:940189",
-   "updated": "2026-11-04T10:38:00Z",
-   "lastReported": "2026-11-04T10:38:00Z",
+   "updated": "2026-11-04T12:15:00Z",
+   "lastReported": "2026-11-04T12:15:00Z",
    "firstReported": "2026-11-04T04:11:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
@@ -4367,8 +4367,8 @@
    "to": "Pine St",
    "where": "SR-514 WB",
    "id": "brevard:fl511:940190",
-   "updated": "2026-11-04T10:38:00Z",
-   "lastReported": "2026-11-04T10:38:00Z",
+   "updated": "2026-11-04T12:15:00Z",
+   "lastReported": "2026-11-04T12:15:00Z",
    "firstReported": "2026-11-04T04:12:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
@@ -4485,8 +4485,8 @@
    "title": "MVC on I-95 North, before MM 195/SR-519. Left shoulder blocked",
    "where": "I-95 NB before MM 195/SR-519",
    "id": "brevard:fl511:940446",
-   "updated": "2026-11-04T11:43:00Z",
-   "lastReported": "2026-11-04T11:43:00Z",
+   "updated": "2026-11-04T12:16:00Z",
+   "lastReported": "2026-11-04T12:16:00Z",
    "firstReported": "2026-11-04T11:43:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
@@ -4551,11 +4551,17 @@
     "publishedAt": "2026-11-04T11:59:00Z"
    },
    "awaitingOfficial": true,
-   "missingSince": null,
+   "missingSince": "2026-11-04T12:31:49Z",
    "recheck": [
     "source changed its lane description",
     "source changed the closed stretch"
-   ]
+   ],
+   "noLongerListed": {
+    "agency": "FL511 (FDOT)",
+    "url": "https://fl511.com",
+    "since": "2026-11-04T12:31:49Z",
+    "wasClosed": false
+   }
   },
   {
    "approx": true,
@@ -8180,6 +8186,12 @@
    "time": "2026-11-03T20:25:00Z",
    "text": "In its 3:25 p.m. Tuesday traffic update, the City of Melbourne lists only two current closures: John Rodes Blvd south of Dow Rd, and Sunlake Rd at Babcock St. John Rodes Blvd has reopened between Eau Gallie Blvd and Dow Rd. Drive with extreme caution and do not drive around barricades.",
    "url": "https://www.melbourneflorida.org/Government/City-News/Traffic-Advisories/Road-Closures-1525"
+  },
+  {
+   "agency": "National Weather Service (via WFTV)",
+   "time": "2026-11-04T11:18:37Z",
+   "text": "A flood warning is in effect until 9:30 a.m. Wednesday for some of the hardest-hit parts of Brevard County. Standing water and multiple road closures are still making travel hazardous. Little more rain is expected, but even a small amount could cause problems where floodwater has not drained. Residents in flood-prone areas should stay cautious, avoid driving through standing water and check for road closures before heading out.",
+   "url": "https://www.wftv.com/news/local/brevard-county-flood-warning-continues-standing-water-road-closures-remain/DZXVHMEOJ5FN3MNNFZCCLG3PKE/"
   }
  ]
 }
