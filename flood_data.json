@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-04T12:00:47Z",
+ "generated": "2026-11-04T12:15:32Z",
  "errors": [],
  "items": [
   {
@@ -1850,9 +1850,11 @@
     "kind": "feed",
     "publishedAt": "2026-11-04T11:58:00Z"
    },
-   "awaitingOfficial": false,
+   "awaitingOfficial": true,
    "missingSince": null,
-   "recheck": []
+   "recheck": [
+    "source changed its lane description"
+   ]
   },
   {
    "dir": "EB",
@@ -4539,8 +4541,8 @@
    "title": "MVC on SR-528 East, from before MM 46/Indian River Dr to MM 48. Left lane blocked",
    "where": "SR-528 EB from before MM 46/Indian River Dr to MM 48",
    "id": "brevard:fl511:940474",
-   "updated": "2026-11-04T11:59:00Z",
-   "lastReported": "2026-11-04T11:59:00Z",
+   "updated": "2026-11-04T12:14:00Z",
+   "lastReported": "2026-11-04T12:14:00Z",
    "firstReported": "2026-11-04T11:59:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
@@ -4548,9 +4550,12 @@
     "kind": "feed",
     "publishedAt": "2026-11-04T11:59:00Z"
    },
-   "awaitingOfficial": false,
+   "awaitingOfficial": true,
    "missingSince": null,
-   "recheck": []
+   "recheck": [
+    "source changed its lane description",
+    "source changed the closed stretch"
+   ]
   },
   {
    "approx": true,
