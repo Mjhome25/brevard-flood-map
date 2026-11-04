@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-04T18:15:37Z",
+ "generated": "2026-11-04T18:31:44Z",
  "errors": [],
  "items": [
   {
@@ -6406,6 +6406,31 @@
   {
    "approx": true,
    "city": "Melbourne",
+   "fullClosure": false,
+   "lanes": "Westbound outside lane closed 8 a.m.-5:30 p.m. daily through Fri Nov 6",
+   "lat": 28.0918,
+   "layer": "manual",
+   "lng": -80.6125,
+   "note": "Planned daytime lane closure (not flooding). The City of Melbourne says the westbound outside lane between Hickory St and the railroad tracks is closed through Friday, Nov. 6, from 8 a.m. to 5:30 p.m. each day. Pin approximate.",
+   "reported": "2026-11-04T13:00:00Z",
+   "road": "NASA Blvd (SR 508)",
+   "source": "City of Melbourne",
+   "sourceUrl": "https://www.melbourneflorida.org/Government/City-News/Traffic-Advisories/Lane-Closure-NASA-Blvd",
+   "status": "caution",
+   "title": "NASA Blvd westbound outside lane closed Nov. 4-6",
+   "where": "NASA Blvd (SR 508) WB outside lane between Hickory St and the railroad tracks",
+   "id": "brevard:manual:nasa-blvd-sr-508-wb-outside-lane-between",
+   "updated": "2026-11-04T13:00:00Z",
+   "lastReported": "2026-11-04T13:00:00Z",
+   "firstReported": "2026-11-04T13:00:00Z",
+   "verified": null,
+   "awaitingOfficial": false,
+   "missingSince": null,
+   "recheck": []
+  },
+  {
+   "approx": true,
+   "city": "Melbourne",
    "from": "Opportunity Dr",
    "fullClosure": true,
    "lanes": "All lanes closed",
@@ -7729,39 +7754,6 @@
      "since": "2026-11-04T11:31:54Z"
     }
    ]
-  },
-  {
-   "fullClosure": false,
-   "lat": 28.3559845234958,
-   "layer": "FHP",
-   "lng": -80.7786444332018,
-   "reported": "2026-11-03T17:02:03Z",
-   "road": "3555 W KING ST [COCOA]",
-   "roadShort": "3555 W King St [Cocoa]",
-   "source": "FHP live CAD",
-   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-   "status": "caution",
-   "title": "MVC at 3555 W KING ST [COCOA]",
-   "where": "3555 W King St [Cocoa]",
-   "id": "brevard:fhp:20261103170203-3c7c2f94",
-   "updated": "2026-11-03T17:02:03Z",
-   "lastReported": "2026-11-03T17:02:03Z",
-   "firstReported": "2026-11-03T17:02:03Z",
-   "verified": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "kind": "feed",
-    "publishedAt": "2026-11-03T17:02:03Z"
-   },
-   "reopenedAt": "2026-11-03T18:16:09Z",
-   "evidence": {
-    "agency": "Florida Highway Patrol",
-    "kind": "fhp-dropped",
-    "missingSince": "2026-11-03T18:14:39Z",
-    "reopenedAt": "2026-11-03T18:16:09Z",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
-   },
-   "stillReported": []
   }
  ],
  "sources": {

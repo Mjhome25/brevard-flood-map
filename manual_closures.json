@@ -1138,5 +1138,23 @@
   "note": "From the City of Melbourne traffic update at 3:25 p.m. Nov. 3. The road is closed south of Dow Rd. The stretch from Eau Gallie Blvd to Dow Rd has reopened. Do not drive around barricades. The coordinates are a rough estimate. Pin approximate.",
   "id": "man-john-rodes-blvd-south-of-dow-rd",
   "updated": "2026-11-03T20:25:00Z"
+ },
+ {
+  "road": "NASA Blvd (SR 508)",
+  "where": "NASA Blvd (SR 508) WB outside lane between Hickory St and the railroad tracks",
+  "title": "NASA Blvd westbound outside lane closed Nov. 4-6",
+  "city": "Melbourne",
+  "status": "caution",
+  "fullClosure": false,
+  "lanes": "Westbound outside lane closed 8 a.m.-5:30 p.m. daily through Fri Nov 6",
+  "lat": 28.0918,
+  "lng": -80.6125,
+  "approx": true,
+  "source": "City of Melbourne",
+  "sourceUrl": "https://www.melbourneflorida.org/Government/City-News/Traffic-Advisories/Lane-Closure-NASA-Blvd",
+  "reported": "2026-11-04T13:00:00Z",
+  "note": "Planned daytime lane closure (not flooding). The City of Melbourne says the westbound outside lane between Hickory St and the railroad tracks is closed through Friday, Nov. 6, from 8 a.m. to 5:30 p.m. each day. Pin approximate.",
+  "id": "man-nasa-blvd-sr-508-wb-outside-lane-between",
+  "updated": "2026-11-04T13:00:00Z"
  }
 ]
