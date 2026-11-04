@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-04T06:45:37Z",
+ "generated": "2026-11-04T07:01:39Z",
  "errors": [],
  "items": [
   {
@@ -891,9 +891,15 @@
     "kind": "feed",
     "publishedAt": "2026-11-03T08:43:25Z"
    },
-   "awaitingOfficial": false,
-   "missingSince": null,
-   "recheck": []
+   "awaitingOfficial": true,
+   "missingSince": "2026-11-04T07:01:44Z",
+   "recheck": [],
+   "noLongerListed": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "since": "2026-11-04T07:01:44Z",
+    "wasClosed": false
+   }
   },
   {
    "from": "Leghorn Rd",
@@ -1036,9 +1042,15 @@
     "kind": "feed",
     "publishedAt": "2026-11-03T08:52:18Z"
    },
-   "awaitingOfficial": false,
-   "missingSince": null,
-   "recheck": []
+   "awaitingOfficial": true,
+   "missingSince": "2026-11-04T07:01:44Z",
+   "recheck": [],
+   "noLongerListed": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "since": "2026-11-04T07:01:44Z",
+    "wasClosed": false
+   }
   },
   {
    "from": "Ruthann Cir",
