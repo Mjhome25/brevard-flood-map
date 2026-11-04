@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-04T12:45:28Z",
+ "generated": "2026-11-04T13:00:56Z",
  "errors": [],
  "items": [
   {
@@ -1885,6 +1885,35 @@
    "recheck": []
   },
   {
+   "fullClosure": false,
+   "lanes": "No Roadblock",
+   "lat": 28.1008619455424,
+   "layer": "FHP",
+   "lng": -80.7060220910327,
+   "reported": "2026-11-04T12:52:38Z",
+   "road": "I-95 NB [MM182]",
+   "roadShort": "I-95 Nb [MM182]",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "spot": "at Mm182",
+   "status": "caution",
+   "title": "MVC at I-95 NB [MM182] x[MM182] [MELBOURNE] (No Roadblock)",
+   "where": "I-95 Nb [MM182] at Mm182",
+   "id": "brevard:fhp:20261104125238-a206ab4b",
+   "updated": "2026-11-04T12:52:38Z",
+   "lastReported": "2026-11-04T12:52:38Z",
+   "firstReported": "2026-11-04T12:52:38Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-04T12:52:38Z"
+   },
+   "awaitingOfficial": false,
+   "missingSince": null,
+   "recheck": []
+  },
+  {
    "dir": "EB",
    "from": "Hickory St",
    "fullClosure": true,
@@ -3052,8 +3081,8 @@
    "title": "Traffic lights not working on US-192 / Vine St / Bronson Hwy East, at S John Rodes Blvd",
    "where": "US-192 EB at S John Rodes Blvd",
    "id": "brevard:fl511:938257",
-   "updated": "2026-11-04T12:34:00Z",
-   "lastReported": "2026-11-04T12:34:00Z",
+   "updated": "2026-11-04T12:58:00Z",
+   "lastReported": "2026-11-04T12:58:00Z",
    "firstReported": "2026-11-03T03:18:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
@@ -3061,9 +3090,11 @@
     "kind": "feed",
     "publishedAt": "2026-11-03T03:18:00Z"
    },
-   "awaitingOfficial": false,
+   "awaitingOfficial": true,
    "missingSince": null,
-   "recheck": []
+   "recheck": [
+    "source changed its lane description"
+   ]
   },
   {
    "dir": "NB",
@@ -3862,8 +3893,8 @@
    "to": "S John Rodes Blvd",
    "where": "Ellis Rd both directions",
    "id": "brevard:fl511:939238",
-   "updated": "2026-11-04T10:38:00Z",
-   "lastReported": "2026-11-04T10:38:00Z",
+   "updated": "2026-11-04T12:47:00Z",
+   "lastReported": "2026-11-04T12:47:00Z",
    "firstReported": "2026-11-03T17:58:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
@@ -3871,9 +3902,11 @@
     "kind": "feed",
     "publishedAt": "2026-11-03T17:58:00Z"
    },
-   "awaitingOfficial": false,
+   "awaitingOfficial": true,
    "missingSince": null,
-   "recheck": []
+   "recheck": [
+    "source changed the closed stretch"
+   ]
   },
   {
    "dir": "both directions",
@@ -4367,9 +4400,15 @@
     "kind": "feed",
     "publishedAt": "2026-11-04T04:11:00Z"
    },
-   "awaitingOfficial": false,
-   "missingSince": null,
-   "recheck": []
+   "awaitingOfficial": true,
+   "missingSince": "2026-11-04T13:01:06Z",
+   "recheck": [],
+   "noLongerListed": {
+    "agency": "FL511 (FDOT)",
+    "url": "https://fl511.com",
+    "since": "2026-11-04T13:01:06Z",
+    "wasClosed": true
+   }
   },
   {
    "dir": "WB",
@@ -4415,6 +4454,58 @@
     "url": "https://fl511.com",
     "kind": "feed",
     "publishedAt": "2026-11-04T04:12:00Z"
+   },
+   "awaitingOfficial": true,
+   "missingSince": "2026-11-04T13:01:06Z",
+   "recheck": [],
+   "noLongerListed": {
+    "agency": "FL511 (FDOT)",
+    "url": "https://fl511.com",
+    "since": "2026-11-04T13:01:06Z",
+    "wasClosed": true
+   }
+  },
+  {
+   "dir": "EB",
+   "from": "Highway 1",
+   "fullClosure": true,
+   "lanes": "All lanes closed",
+   "lat": 28.004412,
+   "layer": "Closures",
+   "line": [
+    [
+     28.004349,
+     -80.563803
+    ],
+    [
+     28.004395,
+     -80.563727
+    ],
+    [
+     28.004422,
+     -80.563682
+    ]
+   ],
+   "lng": -80.56374,
+   "reported": "2026-11-02T21:51:00Z",
+   "road": "SR-514",
+   "roadShort": "SR-514",
+   "source": "FL511 (FDOT)",
+   "sourceUrl": "https://fl511.com",
+   "spot": "at US-1",
+   "status": "flooded",
+   "title": "Flooding on SR-514 West, at US-1. All lanes closed",
+   "to": "Highway 1",
+   "where": "SR-514 EB at US-1",
+   "id": "brevard:fl511:940201",
+   "updated": "2026-11-04T12:53:00Z",
+   "lastReported": "2026-11-04T12:53:00Z",
+   "firstReported": "2026-11-04T12:53:00Z",
+   "verified": {
+    "agency": "FL511 (FDOT)",
+    "url": "https://fl511.com",
+    "kind": "feed",
+    "publishedAt": "2026-11-04T12:53:00Z"
    },
    "awaitingOfficial": false,
    "missingSince": null,
@@ -4534,9 +4625,15 @@
     "kind": "feed",
     "publishedAt": "2026-11-04T11:43:00Z"
    },
-   "awaitingOfficial": false,
-   "missingSince": null,
-   "recheck": []
+   "awaitingOfficial": true,
+   "missingSince": "2026-11-04T13:01:06Z",
+   "recheck": [],
+   "noLongerListed": {
+    "agency": "FL511 (FDOT)",
+    "url": "https://fl511.com",
+    "since": "2026-11-04T13:01:06Z",
+    "wasClosed": false
+   }
   },
   {
    "dir": "EB",
@@ -4602,6 +4699,51 @@
     "since": "2026-11-04T12:31:49Z",
     "wasClosed": false
    }
+  },
+  {
+   "dir": "EB",
+   "from": "Marie St",
+   "fullClosure": true,
+   "lanes": "All lanes closed",
+   "lat": 28.0011780774221,
+   "layer": "Closures",
+   "line": [
+    [
+     28.001099,
+     -80.573026
+    ],
+    [
+     28.001169,
+     -80.572821
+    ],
+    [
+     28.001389,
+     -80.572179
+    ]
+   ],
+   "lng": -80.5728248447233,
+   "reported": "2026-11-04T04:10:00Z",
+   "road": "SR-514",
+   "roadShort": "SR-514",
+   "source": "FL511 (FDOT)",
+   "sourceUrl": "https://fl511.com",
+   "status": "flooded",
+   "title": "Flooding on SR-514 Eastbound Near Marie St. All lanes closed.",
+   "to": "Blanche St",
+   "where": "SR-514 EB",
+   "id": "brevard:fl511:940583",
+   "updated": "2026-11-04T12:52:00Z",
+   "lastReported": "2026-11-04T12:52:00Z",
+   "firstReported": "2026-11-04T12:52:00Z",
+   "verified": {
+    "agency": "FL511 (FDOT)",
+    "url": "https://fl511.com",
+    "kind": "feed",
+    "publishedAt": "2026-11-04T12:52:00Z"
+   },
+   "awaitingOfficial": false,
+   "missingSince": null,
+   "recheck": []
   },
   {
    "approx": true,
