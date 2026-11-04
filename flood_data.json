@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-04T13:00:56Z",
+ "generated": "2026-11-04T13:15:33Z",
  "errors": [],
  "items": [
   {
@@ -1793,9 +1793,15 @@
     "kind": "feed",
     "publishedAt": "2026-11-04T11:33:06Z"
    },
-   "awaitingOfficial": false,
-   "missingSince": null,
-   "recheck": []
+   "awaitingOfficial": true,
+   "missingSince": "2026-11-04T13:15:42Z",
+   "recheck": [],
+   "noLongerListed": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "since": "2026-11-04T13:15:42Z",
+    "wasClosed": false
+   }
   },
   {
    "fullClosure": false,
@@ -3815,9 +3821,15 @@
     "kind": "feed",
     "publishedAt": "2026-11-03T17:58:00Z"
    },
-   "awaitingOfficial": false,
-   "missingSince": null,
-   "recheck": []
+   "awaitingOfficial": true,
+   "missingSince": "2026-11-04T13:15:42Z",
+   "recheck": [],
+   "noLongerListed": {
+    "agency": "FL511 (FDOT)",
+    "url": "https://fl511.com",
+    "since": "2026-11-04T13:15:42Z",
+    "wasClosed": true
+   }
   },
   {
    "dir": "both directions",
@@ -4257,7 +4269,7 @@
   },
   {
    "dir": "both directions",
-   "fullClosure": false,
+   "fullClosure": true,
    "lat": 28.3577300000001,
    "layer": "Incidents",
    "lng": -80.6230234699472,
@@ -4271,18 +4283,20 @@
    "title": "Flooding on SR-520 Both Directions At John Horne Dr.",
    "where": "SR-520 both directions At John Horne Dr",
    "id": "brevard:fl511:939664",
-   "updated": "2026-11-04T12:15:00Z",
-   "lastReported": "2026-11-04T12:15:00Z",
+   "updated": "2026-11-04T13:06:00Z",
+   "lastReported": "2026-11-04T13:06:00Z",
    "firstReported": "2026-11-03T21:53:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
     "url": "https://fl511.com",
     "kind": "feed",
-    "publishedAt": "2026-11-03T21:53:00Z"
+    "publishedAt": "2026-11-04T13:06:00Z"
    },
-   "awaitingOfficial": false,
+   "awaitingOfficial": true,
    "missingSince": null,
-   "recheck": []
+   "recheck": [
+    "source changed its lane description"
+   ]
   },
   {
    "dir": "SB",
