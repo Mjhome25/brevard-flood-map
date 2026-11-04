@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-04T12:31:45Z",
+ "generated": "2026-11-04T12:45:28Z",
  "errors": [],
  "items": [
   {
@@ -1857,6 +1857,34 @@
    ]
   },
   {
+   "fullClosure": false,
+   "lat": 28.0788272683355,
+   "layer": "FHP",
+   "lng": -80.7000962116992,
+   "reported": "2026-11-04T12:41:21Z",
+   "road": "W NEW HAVEN AVE",
+   "roadShort": "W New Haven Ave",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "spot": "at S John Rodes Blvd",
+   "status": "caution",
+   "title": "Traffic Light Out at W NEW HAVEN AVE x[S JOHN RODES BLVD] [MELBOURNE]",
+   "where": "W New Haven Ave at S John Rodes Blvd",
+   "id": "brevard:fhp:20261104124121-88266fef",
+   "updated": "2026-11-04T12:41:21Z",
+   "lastReported": "2026-11-04T12:41:21Z",
+   "firstReported": "2026-11-04T12:41:21Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-04T12:41:21Z"
+   },
+   "awaitingOfficial": false,
+   "missingSince": null,
+   "recheck": []
+  },
+  {
    "dir": "EB",
    "from": "Hickory St",
    "fullClosure": true,
@@ -2198,9 +2226,15 @@
     "kind": "feed",
     "publishedAt": "2026-11-02T19:54:00Z"
    },
-   "awaitingOfficial": false,
-   "missingSince": null,
-   "recheck": []
+   "awaitingOfficial": true,
+   "missingSince": "2026-11-04T12:45:32Z",
+   "recheck": [],
+   "noLongerListed": {
+    "agency": "FL511 (FDOT)",
+    "url": "https://fl511.com",
+    "since": "2026-11-04T12:45:32Z",
+    "wasClosed": true
+   }
   },
   {
    "dir": "SB",
@@ -3018,8 +3052,8 @@
    "title": "Traffic lights not working on US-192 / Vine St / Bronson Hwy East, at S John Rodes Blvd",
    "where": "US-192 EB at S John Rodes Blvd",
    "id": "brevard:fl511:938257",
-   "updated": "2026-11-04T11:10:00Z",
-   "lastReported": "2026-11-04T11:10:00Z",
+   "updated": "2026-11-04T12:34:00Z",
+   "lastReported": "2026-11-04T12:34:00Z",
    "firstReported": "2026-11-03T03:18:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
@@ -3886,9 +3920,15 @@
     "kind": "feed",
     "publishedAt": "2026-11-03T17:58:00Z"
    },
-   "awaitingOfficial": false,
-   "missingSince": null,
-   "recheck": []
+   "awaitingOfficial": true,
+   "missingSince": "2026-11-04T12:45:32Z",
+   "recheck": [],
+   "noLongerListed": {
+    "agency": "FL511 (FDOT)",
+    "url": "https://fl511.com",
+    "since": "2026-11-04T12:45:32Z",
+    "wasClosed": true
+   }
   },
   {
    "dir": "both directions",
