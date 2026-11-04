@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-04T14:00:54Z",
+ "generated": "2026-11-04T14:15:40Z",
  "errors": [],
  "items": [
   {
@@ -8160,25 +8160,14 @@
  },
  "alerts": [
   {
-   "id": "urn:oid:2.49.0.1.840.0.f796a95fb4fca1ce39ce062387eab650c421e5ca.001.1",
-   "event": "Rip Current Statement",
-   "severity": "Moderate",
-   "headline": "Rip Current Statement issued November 4 at 1:09AM EST until November 5 at 2:00AM EST by NWS Melbourne FL",
-   "areas": "Coastal Volusia; Coastal Indian River; Coastal St. Lucie; Coastal Martin; Mainland Northern Brevard; Northern Brevard Barrier Islands; Mainland Southern Brevard; Southern Brevard Barrier Islands",
-   "effective": "2026-11-04T01:09:00-05:00",
-   "expires": "2026-11-05T02:00:00-05:00",
-   "description": "* WHAT...Dangerous rip currents.\n\n* WHERE...Coastal Volusia, Coastal Brevard, Coastal Indian River,\nCoastal Saint Lucie and Coastal Martin counties.\n\n* WHEN...Through late Wednesday night.\n\n* IMPACTS...Rip currents can sweep even the best swimmers away\nfrom shore into deeper water. Breaking surf of 3 to 4 feet\nexpected.",
-   "geometry": null
-  },
-  {
-   "id": "urn:oid:2.49.0.1.840.0.eab2f02d761bbb94354321c9f753dca96f0874a9.001.1",
+   "id": "urn:oid:2.49.0.1.840.0.ec99f53a83c6d945a61164e316fc796c8dfc17e0.001.1",
    "event": "Flood Warning",
    "severity": "Severe",
-   "headline": "Flood Warning issued November 3 at 8:55PM EST by NWS Melbourne FL",
+   "headline": "Flood Warning issued November 4 at 9:06AM EST by NWS Melbourne FL",
    "areas": "Brevard, FL",
-   "effective": "2026-11-03T20:55:00-05:00",
-   "expires": "2026-11-04T11:00:00-05:00",
-   "description": "...The Flood Warning continues for the following rivers in Florida...\n\nSt Johns River Near Cocoa 9w affecting Brevard County.\n\n.Heavy rainfall has caused the St. Johns River near Cocoa to rise\ninto Minor Flood Stage. The river is forecast to climb into Moderate\nFlood Stage in the next couple days, approaching Major Flood Stage\nlate in the week.\n\nFor the St. Johns River...including Cocoa 9w...Moderate flooding is\nforecast.\n\n* WHAT...Moderate flooding is occurring and moderate flooding is\nforecast.\n\n* WHERE...St Johns River near Cocoa 9w.\n\n* WHEN...Until further notice.\n\n* IMPACTS...At 17.0 feet, Flooding to some roads and water\napproaching low lying homes in the Silver Pines subdivision in\nRockledge. Many yards, ditches and pastures flooded and water\napproaching low lying structures along Pluckebaum Road in Cocoa and\nRockledge. Flooding to low lying structures in the Lake Washington\narea of Melbourne.\n\n* ADDITIONAL DETAILS...\n- At 8:15 PM EST Tuesday the stage was 16.6 feet.\n- Bankfull stage is 15.8 feet.\n- Recent Activity...The maximum river stage in the 24 hours ending\nat 8:15 PM EST Tuesday was 16.6 feet.\n- Forecast...The river is expected to remain steady above flood\nstage at 16",
+   "effective": "2026-11-04T09:06:00-05:00",
+   "expires": "2026-11-04T23:15:00-05:00",
+   "description": "...Forecast flooding changed from Moderate to Major severity for the\nfollowing rivers in Florida...\n\nSt Johns River Near Cocoa 9w affecting Brevard County.\n\n.Heavy rainfall has caused the St. Johns River near Cocoa to rise\ninto Moderate Flood Stage. The river is forecast to climb to Major\nFlood Stage by late this week and remain at Major Flood Stage into\nthis weekend.\n\nFor the St. Johns River...including Cocoa 9w...Major flooding is\nforecast.\n\n* WHAT...Moderate flooding is occurring and major flooding is\nforecast.\n\n* WHERE...St Johns River near Cocoa 9w.\n\n* WHEN...Until further notice.\n\n* IMPACTS...At 17.0 feet, Flooding to some roads and water\napproaching low lying homes in the Silver Pines subdivision in\nRockledge. Many yards, ditches and pastures flooded and water\napproaching low lying structures along Pluckebaum Road in Cocoa and\nRockledge. Flooding to low lying structures in the Lake Washington\narea of Melbourne.\n\n* ADDITIONAL DETAILS...\n- At 8:15 AM EST Wednesday the stage was 16.7 feet.\n- Bankfull stage is 15.8 feet.\n- Recent Activity...The maximum river stage in the 24 hours ending\nat 8:15 AM EST Wednesday was 16.7 feet.\n- Forecast...The river is forecast to continue to cli",
    "geometry": {
     "type": "Polygon",
     "coordinates": [
@@ -8206,6 +8195,17 @@
      ]
     ]
    }
+  },
+  {
+   "id": "urn:oid:2.49.0.1.840.0.f796a95fb4fca1ce39ce062387eab650c421e5ca.001.1",
+   "event": "Rip Current Statement",
+   "severity": "Moderate",
+   "headline": "Rip Current Statement issued November 4 at 1:09AM EST until November 5 at 2:00AM EST by NWS Melbourne FL",
+   "areas": "Coastal Volusia; Coastal Indian River; Coastal St. Lucie; Coastal Martin; Mainland Northern Brevard; Northern Brevard Barrier Islands; Mainland Southern Brevard; Southern Brevard Barrier Islands",
+   "effective": "2026-11-04T01:09:00-05:00",
+   "expires": "2026-11-05T02:00:00-05:00",
+   "description": "* WHAT...Dangerous rip currents.\n\n* WHERE...Coastal Volusia, Coastal Brevard, Coastal Indian River,\nCoastal Saint Lucie and Coastal Martin counties.\n\n* WHEN...Through late Wednesday night.\n\n* IMPACTS...Rip currents can sweep even the best swimmers away\nfrom shore into deeper water. Breaking surf of 3 to 4 feet\nexpected.",
+   "geometry": null
   },
   {
    "id": "urn:oid:2.49.0.1.840.0.57b09679b0ffae10e5940def5bb8564a1e56824b.001.1",
