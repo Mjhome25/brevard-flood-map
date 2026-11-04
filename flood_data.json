@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-04T09:30:33Z",
+ "generated": "2026-11-04T09:45:33Z",
  "errors": [],
  "items": [
   {
@@ -1764,8 +1764,8 @@
    "to": "Pine St",
    "where": "US-192 EB at Minton Rd/S Wickham Rd",
    "id": "brevard:fl511:937010",
-   "updated": "2026-11-04T09:01:00Z",
-   "lastReported": "2026-11-04T09:01:00Z",
+   "updated": "2026-11-04T09:29:00Z",
+   "lastReported": "2026-11-04T09:29:00Z",
    "firstReported": "2026-11-02T19:54:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
@@ -2188,8 +2188,8 @@
    "to": "Coastal Ln",
    "where": "US-192 WB at S John Rodes Blvd",
    "id": "brevard:fl511:937222",
-   "updated": "2026-11-04T09:01:00Z",
-   "lastReported": "2026-11-04T09:01:00Z",
+   "updated": "2026-11-04T09:38:00Z",
+   "lastReported": "2026-11-04T09:38:00Z",
    "firstReported": "2026-11-02T19:54:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
@@ -2393,8 +2393,8 @@
    "title": "Traffic lights working incorrectly on US-1 North, at Masterson St",
    "where": "US-1 NB at Masterson St",
    "id": "brevard:fl511:937621",
-   "updated": "2026-11-04T09:02:00Z",
-   "lastReported": "2026-11-04T09:02:00Z",
+   "updated": "2026-11-04T09:30:00Z",
+   "lastReported": "2026-11-04T09:30:00Z",
    "firstReported": "2026-11-03T23:37:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
@@ -2847,8 +2847,8 @@
    "title": "Traffic lights not working on US-192 / Vine St / Bronson Hwy East, at S John Rodes Blvd",
    "where": "US-192 EB at S John Rodes Blvd",
    "id": "brevard:fl511:938257",
-   "updated": "2026-11-04T09:01:00Z",
-   "lastReported": "2026-11-04T09:01:00Z",
+   "updated": "2026-11-04T09:30:00Z",
+   "lastReported": "2026-11-04T09:30:00Z",
    "firstReported": "2026-11-03T03:18:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
