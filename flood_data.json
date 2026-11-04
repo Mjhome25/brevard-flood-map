@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-04T03:15:36Z",
+ "generated": "2026-11-04T03:30:32Z",
  "errors": [],
  "items": [
   {
@@ -1492,41 +1492,6 @@
   },
   {
    "fullClosure": false,
-   "lanes": "Partial Road Block",
-   "lat": 28.3573421519543,
-   "layer": "FHP",
-   "lng": -80.6835788863004,
-   "reported": "2026-11-03T13:41:00Z",
-   "road": "SYKES CREEK PKWY",
-   "roadShort": "Sykes Creek Pkwy",
-   "source": "FHP live CAD",
-   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-   "spot": "at Merritt Island Cswy E",
-   "status": "caution",
-   "title": "MVC W/Roadblock at SYKES CREEK PKWY x[MERRITT ISLAND CSWY E] [MERRITT ISLAND] (Partial Road Block)",
-   "where": "Sykes Creek Pkwy at Merritt Island Cswy E",
-   "id": "brevard:fhp:20261103134100-bc738f6b",
-   "updated": "2026-11-03T13:41:00Z",
-   "lastReported": "2026-11-03T13:41:00Z",
-   "firstReported": "2026-11-03T13:41:00Z",
-   "verified": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "kind": "feed",
-    "publishedAt": "2026-11-03T13:41:00Z"
-   },
-   "awaitingOfficial": true,
-   "missingSince": "2026-11-04T03:15:43Z",
-   "recheck": [],
-   "noLongerListed": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "since": "2026-11-04T03:15:43Z",
-    "wasClosed": false
-   }
-  },
-  {
-   "fullClosure": false,
    "lanes": "Vehicle In Roadway -- Use Caution",
    "lat": 28.0936537373737,
    "layer": "FHP",
@@ -1787,8 +1752,8 @@
    "to": "Pine St",
    "where": "US-192 EB at Minton Rd/S Wickham Rd",
    "id": "brevard:fl511:937010",
-   "updated": "2026-11-04T02:37:00Z",
-   "lastReported": "2026-11-04T02:37:00Z",
+   "updated": "2026-11-04T03:22:00Z",
+   "lastReported": "2026-11-04T03:22:00Z",
    "firstReported": "2026-11-02T19:54:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
@@ -6654,6 +6619,41 @@
   }
  ],
  "reopened": [
+  {
+   "fullClosure": false,
+   "lanes": "Partial Road Block",
+   "lat": 28.3573421519543,
+   "layer": "FHP",
+   "lng": -80.6835788863004,
+   "reported": "2026-11-03T13:41:00Z",
+   "road": "SYKES CREEK PKWY",
+   "roadShort": "Sykes Creek Pkwy",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "spot": "at Merritt Island Cswy E",
+   "status": "caution",
+   "title": "MVC W/Roadblock at SYKES CREEK PKWY x[MERRITT ISLAND CSWY E] [MERRITT ISLAND] (Partial Road Block)",
+   "where": "Sykes Creek Pkwy at Merritt Island Cswy E",
+   "id": "brevard:fhp:20261103134100-bc738f6b",
+   "updated": "2026-11-03T13:41:00Z",
+   "lastReported": "2026-11-03T13:41:00Z",
+   "firstReported": "2026-11-03T13:41:00Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-03T13:41:00Z"
+   },
+   "reopenedAt": "2026-11-04T03:30:42Z",
+   "evidence": {
+    "agency": "Florida Highway Patrol",
+    "kind": "fhp-dropped",
+    "missingSince": "2026-11-04T03:15:43Z",
+    "reopenedAt": "2026-11-04T03:30:42Z",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
+   },
+   "stillReported": []
+  },
   {
    "fullClosure": false,
    "lanes": "No Roadblock",
