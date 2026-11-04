@@ -1,5 +1,5 @@
 {
- "checkedAt": "2026-11-04T19:45:38Z",
+ "checkedAt": "2026-11-04T20:00:56Z",
  "fresh": true,
  "pilot": "City of Melbourne",
  "pending": [
@@ -662,6 +662,21 @@
      "pins": []
     },
     {
+     "place": "whole|john rodes",
+     "claim": "open",
+     "scope": "whole",
+     "road": "john rodes",
+     "cross": [],
+     "dirs": [],
+     "sentence": "John Rodes Boulevard is open.",
+     "sha256": "9b8c1a2ba01f02a34084f6b491482415024fcb19d411f2a8552930116329e421",
+     "source": "https://www.melbourneflorida.org/Government/City-News/Traffic-Advisories/Copy-of-Road-Closures-Nov-4-1450",
+     "sourceTime": "2026-11-04T19:50:00Z",
+     "inNewest": true,
+     "verdict": "no-active-pin",
+     "pins": []
+    },
+    {
      "place": "whole|lake washington",
      "claim": "closure",
      "scope": "whole",
@@ -697,10 +712,10 @@
     "covered": 2,
     "missed": 25,
     "reopen-review": 1,
-    "no-active-pin": 3,
+    "no-active-pin": 4,
     "resolved-by-city": 1,
     "older-unresolved": 31,
-    "needs-review": 20
+    "needs-review": 22
    }
   }
  ],
@@ -1558,8 +1573,8 @@
     "97e677fe040fc517ea06a0c0051d7e189466888dc0cbea88d01828d21040db05",
     "746cdc91f2e0b08cdb9dadc4c9f958c6d390971a96b2908eb8496905fb973e6f"
    ],
-   "sha256": "49a388b3f0ec20f3ada1df61410c56c14541597a6faac7633209194ae33158e5",
-   "readAt": "2026-11-04T19:45:38Z"
+   "sha256": "7b3c33d4f7935000caeddcd90f393e3269b6b3ae98ac3d18c2c99f9ccdf52d79",
+   "readAt": "2026-11-04T20:00:56Z"
   },
   "https://www.melbourneflorida.org/Government/City-News/Traffic-Advisories/Lane-Closure-NASA-Blvd": {
    "agency": "City of Melbourne",
@@ -1569,8 +1584,30 @@
    "needsReview": [
     "d3b63822f83243ea40717b27e5b78827b787af45119ff216d61ea39a90a41734"
    ],
-   "sha256": "c31922018b4484618e7e5a17dfcc182d728486b7594b580b0819c16c686c6d2e",
-   "readAt": "2026-11-04T19:45:38Z"
+   "sha256": "4d3a1a43226f061953da7e0d852b3a5d1650f0a8cd219b8113a80be2dbfd2482",
+   "readAt": "2026-11-04T20:00:56Z"
+  },
+  "https://www.melbourneflorida.org/Government/City-News/Traffic-Advisories/Copy-of-Road-Closures-Nov-4-1450": {
+   "agency": "City of Melbourne",
+   "date": "2026-11-04",
+   "time": "2026-11-04T19:50:00Z",
+   "claims": [
+    {
+     "claim": "open",
+     "scope": "whole",
+     "road": "john rodes",
+     "cross": [],
+     "dirs": [],
+     "sentence": "John Rodes Boulevard is open.",
+     "sha256": "9b8c1a2ba01f02a34084f6b491482415024fcb19d411f2a8552930116329e421"
+    }
+   ],
+   "needsReview": [
+    "f1815a2acee2dc12ec9d0fd398355de674f2a5d2013ef4b8c0d1ea938ab72343",
+    "746cdc91f2e0b08cdb9dadc4c9f958c6d390971a96b2908eb8496905fb973e6f"
+   ],
+   "sha256": "d1cb0886e64e3f12ad0fc2b05338ec7d84478eee06545bb44759811b0dc0d692",
+   "readAt": "2026-11-04T20:00:56Z"
   }
  }
 }

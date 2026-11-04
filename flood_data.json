@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-04T19:45:30Z",
+ "generated": "2026-11-04T20:00:51Z",
  "errors": [
   "FL511 map locations: 1 report(s) without a pin"
  ],
@@ -248,8 +248,8 @@
    "title": "Object on roadway on I-95 South, beyond MM 196. 2 Left lanes blocked",
    "where": "I-95 SB beyond MM 196",
    "id": "brevard:fl511:941247",
-   "updated": "2026-11-04T19:41:00Z",
-   "lastReported": "2026-11-04T19:41:00Z",
+   "updated": "2026-11-04T19:59:00Z",
+   "lastReported": "2026-11-04T19:59:00Z",
    "firstReported": "2026-11-04T19:41:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
@@ -257,9 +257,11 @@
     "kind": "feed",
     "publishedAt": "2026-11-04T19:41:00Z"
    },
-   "awaitingOfficial": false,
+   "awaitingOfficial": true,
    "missingSince": null,
-   "recheck": []
+   "recheck": [
+    "source changed its lane description"
+   ]
   },
   {
    "approx": true,
