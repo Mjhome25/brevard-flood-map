@@ -1,6 +1,8 @@
 {
- "generated": "2026-11-04T19:31:29Z",
- "errors": [],
+ "generated": "2026-11-04T19:45:30Z",
+ "errors": [
+  "FL511 map locations: 1 report(s) without a pin"
+ ],
  "items": [
   {
    "from": "Leghorn Rd",
@@ -121,6 +123,63 @@
    ]
   },
   {
+   "fullClosure": false,
+   "lanes": "No Roadblock",
+   "lat": 28.0791099868248,
+   "layer": "FHP",
+   "lng": -80.7002917177344,
+   "reported": "2026-11-04T07:33:02Z",
+   "road": "W NEW HAVEN AVE [4450]",
+   "roadShort": "W New Haven Ave [4450]",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "spot": "at S John Rodes Blvd",
+   "status": "caution",
+   "title": "MVC at W NEW HAVEN AVE [4450] x[S JOHN RODES BLVD] [MELBOURNE] (No Roadblock)",
+   "where": "W New Haven Ave [4450] at S John Rodes Blvd",
+   "id": "brevard:fhp:20261104073302-f4186787",
+   "updated": "2026-11-04T07:33:02Z",
+   "lastReported": "2026-11-04T07:33:02Z",
+   "firstReported": "2026-11-04T07:33:02Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-04T07:33:02Z"
+   },
+   "awaitingOfficial": false,
+   "missingSince": null,
+   "recheck": []
+  },
+  {
+   "fullClosure": false,
+   "lat": 28.28546390426,
+   "layer": "FHP",
+   "lng": -80.7352265557959,
+   "reported": "2026-11-04T07:38:31Z",
+   "road": "I-95 SB [MM195]",
+   "roadShort": "I-95 Sb [MM195]",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "spot": "at Mm195",
+   "status": "caution",
+   "title": "Roadway Debris/Object at I-95 SB [MM195] x[MM195] [ROCKLEDGE]",
+   "where": "I-95 Sb [MM195] at Mm195",
+   "id": "brevard:fhp:20261104073831-133e8104",
+   "updated": "2026-11-04T07:38:31Z",
+   "lastReported": "2026-11-04T07:38:31Z",
+   "firstReported": "2026-11-04T07:38:31Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-04T07:38:31Z"
+   },
+   "awaitingOfficial": false,
+   "missingSince": null,
+   "recheck": []
+  },
+  {
    "dir": "both directions",
    "fullClosure": true,
    "lanes": "All lanes closed",
@@ -145,6 +204,58 @@
     "url": "https://fl511.com",
     "kind": "feed",
     "publishedAt": "2026-11-03T17:58:00Z"
+   },
+   "awaitingOfficial": false,
+   "missingSince": null,
+   "recheck": []
+  },
+  {
+   "dir": "SB",
+   "fullClosure": false,
+   "lanes": "2 Left lanes blocked",
+   "lat": 28.295614,
+   "layer": "Incidents",
+   "line": [
+    [
+     28.29567,
+     -80.7484
+    ],
+    [
+     28.29474,
+     -80.74691
+    ],
+    [
+     28.29383,
+     -80.74544
+    ],
+    [
+     28.29305,
+     -80.74419
+    ],
+    [
+     28.29275,
+     -80.74371
+    ]
+   ],
+   "lng": -80.748438,
+   "reported": "2026-11-04T19:38:00Z",
+   "road": "I-95",
+   "roadShort": "I-95",
+   "source": "FL511 (FDOT)",
+   "sourceUrl": "https://fl511.com",
+   "spot": "beyond MM 196",
+   "status": "caution",
+   "title": "Object on roadway on I-95 South, beyond MM 196. 2 Left lanes blocked",
+   "where": "I-95 SB beyond MM 196",
+   "id": "brevard:fl511:941247",
+   "updated": "2026-11-04T19:41:00Z",
+   "lastReported": "2026-11-04T19:41:00Z",
+   "firstReported": "2026-11-04T19:41:00Z",
+   "verified": {
+    "agency": "FL511 (FDOT)",
+    "url": "https://fl511.com",
+    "kind": "feed",
+    "publishedAt": "2026-11-04T19:41:00Z"
    },
    "awaitingOfficial": false,
    "missingSince": null,
@@ -4670,7 +4781,14 @@
     "reopenedAt": "2026-11-04T19:31:34Z",
     "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
    },
-   "stillReported": []
+   "stillReported": [
+    {
+     "id": "brevard:fhp:20261104073302-f4186787",
+     "where": "W New Haven Ave [4450] at S John Rodes Blvd",
+     "source": "FHP live CAD",
+     "since": null
+    }
+   ]
   },
   {
    "dir": "EB",
