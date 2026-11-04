@@ -88,5 +88,15 @@
   "quoteSha256": "dc89de42d7d408458aa4b04670bcc7fa03daf03af353a945d434c166702c7138",
   "time": "2026-11-03T19:50:00Z",
   "found": "2026-11-04T14:31:31Z"
+ },
+ {
+  "id": "man-eber-blvd-at-stack-blvd-all-directions",
+  "where": "Eber Blvd at Stack Blvd, all directions",
+  "partial": false,
+  "sourceHost": "www.melbourneflorida.org",
+  "sourceUrlSha256": "2e29959efe019669cd31150bd0095ff150dc4a86fcb8b8a74e7a84ae276de4f6",
+  "quoteSha256": "5a84f3b7f95e244f207f901bc7bcff0ec38499de8e8c2ce8c79d8e9426f1f138",
+  "time": "2026-11-03T15:45:00Z",
+  "found": "2026-11-04T15:31:54Z"
  }
 ]
