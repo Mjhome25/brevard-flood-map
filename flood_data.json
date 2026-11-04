@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-04T11:31:46Z",
+ "generated": "2026-11-04T11:45:28Z",
  "errors": [],
  "items": [
   {
@@ -1720,6 +1720,35 @@
     "since": "2026-11-03T18:14:39Z",
     "wasClosed": true
    }
+  },
+  {
+   "fullClosure": false,
+   "lanes": "Source said \"Road Clear\" (2026-11-04 11:33 UTC); not a verified reopening",
+   "lat": 28.2852500131752,
+   "layer": "FHP",
+   "lng": -80.7350516818568,
+   "reported": "2026-11-04T11:33:06Z",
+   "road": "I-95 NB [MM195]",
+   "roadShort": "I-95 Nb [MM195]",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "spot": "at Mm195",
+   "status": "caution",
+   "title": "MVC at I-95 NB [MM195] x[MM195] [ROCKLEDGE] (Road Clear)",
+   "where": "I-95 Nb [MM195] at Mm195",
+   "id": "brevard:fhp:20261104113306-be33c846",
+   "updated": "2026-11-04T11:33:06Z",
+   "lastReported": "2026-11-04T11:33:06Z",
+   "firstReported": "2026-11-04T11:33:06Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-04T11:33:06Z"
+   },
+   "awaitingOfficial": false,
+   "missingSince": null,
+   "recheck": []
   },
   {
    "dir": "EB",
@@ -4322,6 +4351,46 @@
     "since": "2026-11-04T08:01:37Z",
     "wasClosed": true
    }
+  },
+  {
+   "dir": "NB",
+   "fullClosure": false,
+   "lanes": "Left shoulder blocked",
+   "lat": 28.290134,
+   "layer": "Incidents",
+   "line": [
+    [
+     28.28995,
+     -80.73903
+    ],
+    [
+     28.2901,
+     -80.73924
+    ]
+   ],
+   "lng": -80.739212,
+   "reported": "2026-11-04T11:35:00Z",
+   "road": "I-95",
+   "roadShort": "I-95",
+   "source": "FL511 (FDOT)",
+   "sourceUrl": "https://fl511.com",
+   "spot": "before MM 195/SR-519",
+   "status": "caution",
+   "title": "MVC on I-95 North, before MM 195/SR-519. Left shoulder blocked",
+   "where": "I-95 NB before MM 195/SR-519",
+   "id": "brevard:fl511:940446",
+   "updated": "2026-11-04T11:43:00Z",
+   "lastReported": "2026-11-04T11:43:00Z",
+   "firstReported": "2026-11-04T11:43:00Z",
+   "verified": {
+    "agency": "FL511 (FDOT)",
+    "url": "https://fl511.com",
+    "kind": "feed",
+    "publishedAt": "2026-11-04T11:43:00Z"
+   },
+   "awaitingOfficial": false,
+   "missingSince": null,
+   "recheck": []
   },
   {
    "approx": true,
