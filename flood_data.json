@@ -1,7 +1,7 @@
 {
- "generated": "2026-11-04T21:45:39Z",
+ "generated": "2026-11-04T22:00:43Z",
  "errors": [
-  "FL511 map locations: 1 report(s) without a pin"
+  "FL511 map locations: 2 report(s) without a pin"
  ],
  "items": [
   {
@@ -124,41 +124,6 @@
   },
   {
    "fullClosure": false,
-   "lanes": "No Roadblock",
-   "lat": 28.0791099868248,
-   "layer": "FHP",
-   "lng": -80.7002917177344,
-   "reported": "2026-11-04T07:33:02Z",
-   "road": "W NEW HAVEN AVE [4450]",
-   "roadShort": "W New Haven Ave [4450]",
-   "source": "FHP live CAD",
-   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-   "spot": "at S John Rodes Blvd",
-   "status": "caution",
-   "title": "MVC at W NEW HAVEN AVE [4450] x[S JOHN RODES BLVD] [MELBOURNE] (No Roadblock)",
-   "where": "W New Haven Ave [4450] at S John Rodes Blvd",
-   "id": "brevard:fhp:20261104073302-f4186787",
-   "updated": "2026-11-04T07:33:02Z",
-   "lastReported": "2026-11-04T07:33:02Z",
-   "firstReported": "2026-11-04T07:33:02Z",
-   "verified": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "kind": "feed",
-    "publishedAt": "2026-11-04T07:33:02Z"
-   },
-   "awaitingOfficial": true,
-   "missingSince": "2026-11-04T21:45:44Z",
-   "recheck": [],
-   "noLongerListed": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "since": "2026-11-04T21:45:44Z",
-    "wasClosed": false
-   }
-  },
-  {
-   "fullClosure": false,
    "lanes": "Unknown Roadblock - Use Caution",
    "lat": 28.4883727580149,
    "layer": "FHP",
@@ -213,9 +178,15 @@
     "kind": "feed",
     "publishedAt": "2026-11-04T08:20:43Z"
    },
-   "awaitingOfficial": false,
-   "missingSince": null,
-   "recheck": []
+   "awaitingOfficial": true,
+   "missingSince": "2026-11-04T22:00:48Z",
+   "recheck": [],
+   "noLongerListed": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "since": "2026-11-04T22:00:48Z",
+    "wasClosed": false
+   }
   },
   {
    "fullClosure": false,
@@ -398,6 +369,54 @@
    ]
   },
   {
+   "dir": "SB",
+   "fullClosure": false,
+   "lanes": "2 Left lanes blocked",
+   "lat": 28.431486,
+   "layer": "Incidents",
+   "line": [
+    [
+     28.43149,
+     -80.82048
+    ],
+    [
+     28.43138,
+     -80.82048
+    ],
+    [
+     28.42896,
+     -80.82047
+    ],
+    [
+     28.42485,
+     -80.82047
+    ]
+   ],
+   "lng": -80.820407,
+   "reported": "2026-11-04T21:54:00Z",
+   "road": "I-95",
+   "roadShort": "I-95",
+   "source": "FL511 (FDOT)",
+   "sourceUrl": "https://fl511.com",
+   "spot": "before MM 206",
+   "status": "caution",
+   "title": "Object on roadway on I-95 South, before MM 206. 2 Left lanes blocked",
+   "where": "I-95 SB before MM 206",
+   "id": "brevard:fl511:941573",
+   "updated": "2026-11-04T21:56:00Z",
+   "lastReported": "2026-11-04T21:56:00Z",
+   "firstReported": "2026-11-04T21:56:00Z",
+   "verified": {
+    "agency": "FL511 (FDOT)",
+    "url": "https://fl511.com",
+    "kind": "feed",
+    "publishedAt": "2026-11-04T21:56:00Z"
+   },
+   "awaitingOfficial": false,
+   "missingSince": null,
+   "recheck": []
+  },
+  {
    "approx": true,
    "city": "Melbourne",
    "from": "Palm Bay Rd NE",
@@ -499,6 +518,41 @@
   }
  ],
  "reopened": [
+  {
+   "fullClosure": false,
+   "lanes": "No Roadblock",
+   "lat": 28.0791099868248,
+   "layer": "FHP",
+   "lng": -80.7002917177344,
+   "reported": "2026-11-04T07:33:02Z",
+   "road": "W NEW HAVEN AVE [4450]",
+   "roadShort": "W New Haven Ave [4450]",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "spot": "at S John Rodes Blvd",
+   "status": "caution",
+   "title": "MVC at W NEW HAVEN AVE [4450] x[S JOHN RODES BLVD] [MELBOURNE] (No Roadblock)",
+   "where": "W New Haven Ave [4450] at S John Rodes Blvd",
+   "id": "brevard:fhp:20261104073302-f4186787",
+   "updated": "2026-11-04T07:33:02Z",
+   "lastReported": "2026-11-04T07:33:02Z",
+   "firstReported": "2026-11-04T07:33:02Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-04T07:33:02Z"
+   },
+   "reopenedAt": "2026-11-04T22:00:48Z",
+   "evidence": {
+    "agency": "Florida Highway Patrol",
+    "kind": "feed-dropped",
+    "missingSince": "2026-11-04T21:45:44Z",
+    "reopenedAt": "2026-11-04T22:00:48Z",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
+   },
+   "stillReported": []
+  },
   {
    "fullClosure": false,
    "lanes": "Roadway Clear",
@@ -5044,14 +5098,7 @@
     "reopenedAt": "2026-11-04T19:31:34Z",
     "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
    },
-   "stillReported": [
-    {
-     "id": "brevard:fhp:20261104073302-f4186787",
-     "where": "W New Haven Ave [4450] at S John Rodes Blvd",
-     "source": "FHP live CAD",
-     "since": "2026-11-04T21:45:44Z"
-    }
-   ]
+   "stillReported": []
   },
   {
    "dir": "EB",
