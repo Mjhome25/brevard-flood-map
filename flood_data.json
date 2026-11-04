@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-04T00:01:56Z",
+ "generated": "2026-11-04T00:15:34Z",
  "errors": [
   "FL511 map locations: 1 report(s) without a pin"
  ],
@@ -1253,6 +1253,35 @@
    "recheck": []
   },
   {
+   "fullClosure": false,
+   "lanes": "No Roadblock",
+   "lat": 28.2872178348704,
+   "layer": "FHP",
+   "lng": -80.7104183242584,
+   "reported": "2026-11-03T12:02:54Z",
+   "road": "CLUBHOUSE DR",
+   "roadShort": "Clubhouse Dr",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "spot": "at Auburn Lakes Dr",
+   "status": "caution",
+   "title": "MVC at CLUBHOUSE DR x[AUBURN LAKES DR] [ROCKLEDGE] (No Roadblock)",
+   "where": "Clubhouse Dr at Auburn Lakes Dr",
+   "id": "brevard:fhp:20261103120254-5f1f0c59",
+   "updated": "2026-11-03T12:02:54Z",
+   "lastReported": "2026-11-03T12:02:54Z",
+   "firstReported": "2026-11-03T12:02:54Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-03T12:02:54Z"
+   },
+   "awaitingOfficial": false,
+   "missingSince": null,
+   "recheck": []
+  },
+  {
    "from": "I 95 Hwy",
    "fullClosure": true,
    "lanes": "Ellis Rd Closed At John Rodes Blvd Due To Flooding",
@@ -1749,8 +1778,8 @@
    "to": "Pine St",
    "where": "US-192 EB at Minton Rd/S Wickham Rd",
    "id": "brevard:fl511:937010",
-   "updated": "2026-11-03T23:30:00Z",
-   "lastReported": "2026-11-03T23:30:00Z",
+   "updated": "2026-11-04T00:11:00Z",
+   "lastReported": "2026-11-04T00:11:00Z",
    "firstReported": "2026-11-02T19:54:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
@@ -2015,8 +2044,8 @@
    "to": "Circle Dr",
    "where": "US-192 EB beyond Coastal Ln",
    "id": "brevard:fl511:937141",
-   "updated": "2026-11-03T23:31:00Z",
-   "lastReported": "2026-11-03T23:31:00Z",
+   "updated": "2026-11-04T00:11:00Z",
+   "lastReported": "2026-11-04T00:11:00Z",
    "firstReported": "2026-11-02T19:54:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
@@ -2173,8 +2202,8 @@
    "to": "Coastal Ln",
    "where": "US-192 WB at S John Rodes Blvd",
    "id": "brevard:fl511:937222",
-   "updated": "2026-11-03T23:31:00Z",
-   "lastReported": "2026-11-03T23:31:00Z",
+   "updated": "2026-11-04T00:11:00Z",
+   "lastReported": "2026-11-04T00:11:00Z",
    "firstReported": "2026-11-02T19:54:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
@@ -2564,8 +2593,8 @@
    "to": "Highway 1",
    "where": "SR-514 EB at US-1",
    "id": "brevard:fl511:937844",
-   "updated": "2026-11-03T23:31:00Z",
-   "lastReported": "2026-11-03T23:31:00Z",
+   "updated": "2026-11-04T00:11:00Z",
+   "lastReported": "2026-11-04T00:11:00Z",
    "firstReported": "2026-11-02T23:15:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
@@ -2824,8 +2853,8 @@
    "title": "Traffic lights not working on US-192 / Vine St / Bronson Hwy East, at S John Rodes Blvd",
    "where": "US-192 EB at S John Rodes Blvd",
    "id": "brevard:fl511:938257",
-   "updated": "2026-11-03T23:29:00Z",
-   "lastReported": "2026-11-03T23:29:00Z",
+   "updated": "2026-11-04T00:11:00Z",
+   "lastReported": "2026-11-04T00:11:00Z",
    "firstReported": "2026-11-03T03:18:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
