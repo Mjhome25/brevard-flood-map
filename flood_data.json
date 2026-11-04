@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-04T21:31:50Z",
+ "generated": "2026-11-04T21:45:39Z",
  "errors": [
   "FL511 map locations: 1 report(s) without a pin"
  ],
@@ -147,9 +147,15 @@
     "kind": "feed",
     "publishedAt": "2026-11-04T07:33:02Z"
    },
-   "awaitingOfficial": false,
-   "missingSince": null,
-   "recheck": []
+   "awaitingOfficial": true,
+   "missingSince": "2026-11-04T21:45:44Z",
+   "recheck": [],
+   "noLongerListed": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "since": "2026-11-04T21:45:44Z",
+    "wasClosed": false
+   }
   },
   {
    "fullClosure": false,
@@ -213,41 +219,6 @@
   },
   {
    "fullClosure": false,
-   "lanes": "Source said \"Roadway Clear\" (2026-11-04 09:11 UTC); not a verified reopening",
-   "lat": 28.3572782345191,
-   "layer": "FHP",
-   "lng": -80.6851542134412,
-   "reported": "2026-11-04T09:11:50Z",
-   "road": "E MERRITT ISLAND CSWY [770]",
-   "roadShort": "E Merritt Island Cswy [770]",
-   "source": "FHP live CAD",
-   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-   "spot": "at Borman Dr",
-   "status": "caution",
-   "title": "MVC at E MERRITT ISLAND CSWY [770] x[BORMAN DR] [MERRITT ISLAND] (Roadway Clear)",
-   "where": "E Merritt Island Cswy [770] at Borman Dr",
-   "id": "brevard:fhp:20261104091150-ea0e8483",
-   "updated": "2026-11-04T09:11:50Z",
-   "lastReported": "2026-11-04T09:11:50Z",
-   "firstReported": "2026-11-04T09:11:50Z",
-   "verified": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "kind": "feed",
-    "publishedAt": "2026-11-04T09:11:50Z"
-   },
-   "awaitingOfficial": true,
-   "missingSince": "2026-11-04T21:31:58Z",
-   "recheck": [],
-   "noLongerListed": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "since": "2026-11-04T21:31:58Z",
-    "wasClosed": false
-   }
-  },
-  {
-   "fullClosure": false,
    "lanes": "No Road Block",
    "lat": 28.1957425647782,
    "layer": "FHP",
@@ -270,6 +241,35 @@
     "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
     "kind": "feed",
     "publishedAt": "2026-11-04T09:28:40Z"
+   },
+   "awaitingOfficial": false,
+   "missingSince": null,
+   "recheck": []
+  },
+  {
+   "fullClosure": false,
+   "lanes": "Roadblock In Right Lane",
+   "lat": 28.0222762889767,
+   "layer": "FHP",
+   "lng": -80.6475479672184,
+   "reported": "2026-11-04T09:31:39Z",
+   "road": "I-95 SB [MM175]",
+   "roadShort": "I-95 Sb [MM175]",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "spot": "at Mm175",
+   "status": "caution",
+   "title": "MVC W/Roadblock at I-95 SB [MM175] x[MM175] [PALM BAY] (Roadblock In Right Lane)",
+   "where": "I-95 Sb [MM175] at Mm175",
+   "id": "brevard:fhp:20261104093139-095547b0",
+   "updated": "2026-11-04T09:31:39Z",
+   "lastReported": "2026-11-04T09:31:39Z",
+   "firstReported": "2026-11-04T09:31:39Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-04T09:31:39Z"
    },
    "awaitingOfficial": false,
    "missingSince": null,
@@ -339,8 +339,8 @@
    "title": "MVC on US-1 South, at Kings Hwy",
    "where": "US-1 SB at Kings Hwy",
    "id": "brevard:fl511:941323",
-   "updated": "2026-11-04T21:05:00Z",
-   "lastReported": "2026-11-04T21:05:00Z",
+   "updated": "2026-11-04T21:36:00Z",
+   "lastReported": "2026-11-04T21:36:00Z",
    "firstReported": "2026-11-04T20:19:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
@@ -382,8 +382,8 @@
    "title": "MVC on I-95 South, beyond MM 175. Right shoulder blocked",
    "where": "I-95 SB beyond MM 175",
    "id": "brevard:fl511:941494",
-   "updated": "2026-11-04T21:25:00Z",
-   "lastReported": "2026-11-04T21:25:00Z",
+   "updated": "2026-11-04T21:40:00Z",
+   "lastReported": "2026-11-04T21:40:00Z",
    "firstReported": "2026-11-04T21:25:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
@@ -391,9 +391,11 @@
     "kind": "feed",
     "publishedAt": "2026-11-04T21:25:00Z"
    },
-   "awaitingOfficial": false,
+   "awaitingOfficial": true,
    "missingSince": null,
-   "recheck": []
+   "recheck": [
+    "source changed its lane description"
+   ]
   },
   {
    "approx": true,
@@ -497,6 +499,41 @@
   }
  ],
  "reopened": [
+  {
+   "fullClosure": false,
+   "lanes": "Roadway Clear",
+   "lat": 28.3572782345191,
+   "layer": "FHP",
+   "lng": -80.6851542134412,
+   "reported": "2026-11-04T09:11:50Z",
+   "road": "E MERRITT ISLAND CSWY [770]",
+   "roadShort": "E Merritt Island Cswy [770]",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "spot": "at Borman Dr",
+   "status": "caution",
+   "title": "MVC at E MERRITT ISLAND CSWY [770] x[BORMAN DR] [MERRITT ISLAND] (Roadway Clear)",
+   "where": "E Merritt Island Cswy [770] at Borman Dr",
+   "id": "brevard:fhp:20261104091150-ea0e8483",
+   "updated": "2026-11-04T09:11:50Z",
+   "lastReported": "2026-11-04T09:11:50Z",
+   "firstReported": "2026-11-04T09:11:50Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-04T09:11:50Z"
+   },
+   "reopenedAt": "2026-11-04T21:45:44Z",
+   "evidence": {
+    "agency": "Florida Highway Patrol",
+    "kind": "feed-dropped",
+    "missingSince": "2026-11-04T21:31:58Z",
+    "reopenedAt": "2026-11-04T21:45:44Z",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
+   },
+   "stillReported": []
+  },
   {
    "fullClosure": false,
    "lat": 28.28546390426,
@@ -5012,7 +5049,7 @@
      "id": "brevard:fhp:20261104073302-f4186787",
      "where": "W New Haven Ave [4450] at S John Rodes Blvd",
      "source": "FHP live CAD",
-     "since": null
+     "since": "2026-11-04T21:45:44Z"
     }
    ]
   },
