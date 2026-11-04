@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-04T13:15:33Z",
+ "generated": "2026-11-04T13:31:47Z",
  "errors": [],
  "items": [
   {
@@ -1770,41 +1770,6 @@
   },
   {
    "fullClosure": false,
-   "lanes": "Source said \"Road Clear\" (2026-11-04 11:33 UTC); not a verified reopening",
-   "lat": 28.2852500131752,
-   "layer": "FHP",
-   "lng": -80.7350516818568,
-   "reported": "2026-11-04T11:33:06Z",
-   "road": "I-95 NB [MM195]",
-   "roadShort": "I-95 Nb [MM195]",
-   "source": "FHP live CAD",
-   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-   "spot": "at Mm195",
-   "status": "caution",
-   "title": "MVC at I-95 NB [MM195] x[MM195] [ROCKLEDGE] (Road Clear)",
-   "where": "I-95 Nb [MM195] at Mm195",
-   "id": "brevard:fhp:20261104113306-be33c846",
-   "updated": "2026-11-04T11:33:06Z",
-   "lastReported": "2026-11-04T11:33:06Z",
-   "firstReported": "2026-11-04T11:33:06Z",
-   "verified": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "kind": "feed",
-    "publishedAt": "2026-11-04T11:33:06Z"
-   },
-   "awaitingOfficial": true,
-   "missingSince": "2026-11-04T13:15:42Z",
-   "recheck": [],
-   "noLongerListed": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "since": "2026-11-04T13:15:42Z",
-    "wasClosed": false
-   }
-  },
-  {
-   "fullClosure": false,
    "lanes": "No Roadblock",
    "lat": 28.4049847035573,
    "layer": "FHP",
@@ -1915,9 +1880,15 @@
     "kind": "feed",
     "publishedAt": "2026-11-04T12:52:38Z"
    },
-   "awaitingOfficial": false,
-   "missingSince": null,
-   "recheck": []
+   "awaitingOfficial": true,
+   "missingSince": "2026-11-04T13:31:56Z",
+   "recheck": [],
+   "noLongerListed": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "since": "2026-11-04T13:31:56Z",
+    "wasClosed": false
+   }
   },
   {
    "dir": "EB",
@@ -4512,8 +4483,8 @@
    "to": "Highway 1",
    "where": "SR-514 EB at US-1",
    "id": "brevard:fl511:940201",
-   "updated": "2026-11-04T12:53:00Z",
-   "lastReported": "2026-11-04T12:53:00Z",
+   "updated": "2026-11-04T13:25:00Z",
+   "lastReported": "2026-11-04T13:25:00Z",
    "firstReported": "2026-11-04T12:53:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
@@ -7291,6 +7262,41 @@
  "reopened": [
   {
    "fullClosure": false,
+   "lanes": "Road Clear",
+   "lat": 28.2852500131752,
+   "layer": "FHP",
+   "lng": -80.7350516818568,
+   "reported": "2026-11-04T11:33:06Z",
+   "road": "I-95 NB [MM195]",
+   "roadShort": "I-95 Nb [MM195]",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "spot": "at Mm195",
+   "status": "caution",
+   "title": "MVC at I-95 NB [MM195] x[MM195] [ROCKLEDGE] (Road Clear)",
+   "where": "I-95 Nb [MM195] at Mm195",
+   "id": "brevard:fhp:20261104113306-be33c846",
+   "updated": "2026-11-04T11:33:06Z",
+   "lastReported": "2026-11-04T11:33:06Z",
+   "firstReported": "2026-11-04T11:33:06Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-04T11:33:06Z"
+   },
+   "reopenedAt": "2026-11-04T13:31:56Z",
+   "evidence": {
+    "agency": "Florida Highway Patrol",
+    "kind": "fhp-dropped",
+    "missingSince": "2026-11-04T13:15:42Z",
+    "reopenedAt": "2026-11-04T13:31:56Z",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
+   },
+   "stillReported": []
+  },
+  {
+   "fullClosure": false,
    "lanes": "Partial Road Block",
    "lat": 28.3573421519543,
    "layer": "FHP",
@@ -8100,127 +8106,6 @@
     "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
    },
    "stillReported": []
-  },
-  {
-   "approx": true,
-   "city": "West Melbourne / Melbourne",
-   "from": "Washburn Rd",
-   "fullClosure": true,
-   "lanes": "All lanes closed",
-   "lat": 28.1213,
-   "layer": "manual",
-   "line": [
-    [
-     28.120956,
-     -80.686538
-    ],
-    [
-     28.121017,
-     -80.684986
-    ],
-    [
-     28.12123,
-     -80.679517
-    ],
-    [
-     28.121311,
-     -80.677528
-    ],
-    [
-     28.121386,
-     -80.675733
-    ]
-   ],
-   "lng": -80.685,
-   "note": "Reported closed 'between Eau Gallie Blvd and Sarno Rd'; exact limits unclear. Pin approximate.",
-   "reported": "2026-11-02T13:22:00Z",
-   "road": "Sarno Rd near Eau Gallie Blvd",
-   "roadShort": "Sarno Rd",
-   "source": "City of West Melbourne (via Spectrum News 13)",
-   "sourceUrl": "https://mynews13.com/fl/orlando/news/2026/11/02/brevard-school-officials-cancel-classes-due-to-weather-concerns",
-   "spot": "near Eau Gallie Blvd",
-   "status": "flooded",
-   "title": "Sarno Rd closed near Eau Gallie Blvd, flooding",
-   "to": "Porcella Ave",
-   "where": "Sarno Rd between Eau Gallie Blvd and its west end (limits as reported unclear)",
-   "id": "brevard:manual:sarno-eaugallie",
-   "updated": "2026-11-02T13:22:00Z",
-   "lastReported": "2026-11-02T13:22:00Z",
-   "firstReported": "2026-11-02T13:22:00Z",
-   "verified": null,
-   "reopenedAt": "2026-11-03T13:30:00Z",
-   "evidence": {
-    "agency": "City of Melbourne",
-    "checkedAt": "2026-11-03T16:10:15Z",
-    "finalUrl": "https://www.melbourneflorida.org/Government/City-News/Traffic-Advisories/Road-Closures-0830",
-    "host": "www.melbourneflorida.org",
-    "kind": "official",
-    "pageSha256": "8dc7e66929b2a8a6d24268c1a4897b500b4e89da47d832348eced94d72ea8a33",
-    "postSha256": "4a1833d5e2e8b5bdf34b4b6f9dbefb4b08e19909594bccd361f642c42b21e3cf",
-    "publishedDate": "2026-11-03",
-    "quote": "Sarno Road is open, but there are some infrastructure issues on the shoulder.",
-    "reopenedAt": "2026-11-03T13:30:00Z",
-    "sourceTime": "2026-11-03T13:30:00Z",
-    "url": "https://www.melbourneflorida.org/Government/City-News/Traffic-Advisories/Road-Closures-0830",
-    "verifier": "verify.py/3"
-   },
-   "stillReported": []
-  },
-  {
-   "approx": true,
-   "city": "Melbourne Village",
-   "from": "Pepsi Cola Dr",
-   "fullClosure": false,
-   "lat": 28.12,
-   "layer": "NWS",
-   "line": [
-    [
-     28.120829,
-     -80.690976
-    ],
-    [
-     28.120853,
-     -80.690027
-    ],
-    [
-     28.120888,
-     -80.688607
-    ]
-   ],
-   "lng": -80.69,
-   "note": "Melbourne PD has reported a road closure near Sarno Rd & Eau Gallie Blvd due to flooding.",
-   "reported": "2026-11-02T11:46:00Z",
-   "road": "Sarno Rd",
-   "roadShort": "Sarno Rd",
-   "source": "NWS Melbourne storm report (Law Enforcement)",
-   "sourceUrl": "https://api.weather.gov/products/46636742-a8d6-483b-b93e-bac5fd232b59",
-   "spot": "at Eau Gallie Blvd",
-   "status": "closed",
-   "title": "Flood reported to NWS Melbourne (Law Enforcement)",
-   "to": "North Dr",
-   "where": "Sarno Rd at Eau Gallie Blvd",
-   "id": "brevard:nws:76ca13415a",
-   "updated": "2026-11-02T11:46:00Z",
-   "lastReported": "2026-11-02T11:46:00Z",
-   "firstReported": "2026-11-02T11:46:00Z",
-   "verified": null,
-   "reopenedAt": "2026-11-03T13:30:00Z",
-   "evidence": {
-    "agency": "City of Melbourne",
-    "checkedAt": "2026-11-03T16:10:15Z",
-    "finalUrl": "https://www.melbourneflorida.org/Government/City-News/Traffic-Advisories/Road-Closures-0830",
-    "host": "www.melbourneflorida.org",
-    "kind": "official",
-    "pageSha256": "8dc7e66929b2a8a6d24268c1a4897b500b4e89da47d832348eced94d72ea8a33",
-    "postSha256": "4a1833d5e2e8b5bdf34b4b6f9dbefb4b08e19909594bccd361f642c42b21e3cf",
-    "publishedDate": "2026-11-03",
-    "quote": "Sarno Road is open, but there are some infrastructure issues on the shoulder.",
-    "reopenedAt": "2026-11-03T13:30:00Z",
-    "sourceTime": "2026-11-03T13:30:00Z",
-    "url": "https://www.melbourneflorida.org/Government/City-News/Traffic-Advisories/Road-Closures-0830",
-    "verifier": "verify.py/3"
-   },
-   "stillReported": []
   }
  ],
  "sources": {
@@ -8353,18 +8238,6 @@
   }
  ],
  "advisories": [
-  {
-   "agency": "City of West Melbourne (via WFTV)",
-   "time": "2026-11-03T13:00:00Z",
-   "text": "Several roads and intersections in West Melbourne are still closed by flooding as of 8 a.m. Tuesday. Drive slowly and carefully, especially near flooded neighborhoods, because wakes from passing vehicles can push water into homes. Officials are still checking whether flooded areas are safe to travel.",
-   "url": "https://www.wftv.com/news/local/flooding-closes-west-melbourne-roads-relocates-polling-places-election-day/AMIBMKZMW5EFVBRARJI5F545LQ/"
-  },
-  {
-   "agency": "City of Melbourne",
-   "time": "2026-11-03T13:17:00Z",
-   "text": "Several Melbourne roads are still fully closed because floodwater has not drained. Many abandoned vehicles are still blocking roads and slowing emergency response.",
-   "url": "https://www.melbourneflorida.org/Government/City-News/Traffic-Advisories"
-  },
   {
    "agency": "Brevard Public Schools (via Florida Today/Yahoo News)",
    "time": "2026-11-03T20:40:00Z",
