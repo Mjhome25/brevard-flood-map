@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-04T01:45:32Z",
+ "generated": "2026-11-04T02:02:13Z",
  "errors": [],
  "items": [
   {
@@ -2437,8 +2437,8 @@
    "title": "Traffic lights working incorrectly on US-1 North, at Masterson St",
    "where": "US-1 NB at Masterson St",
    "id": "brevard:fl511:937621",
-   "updated": "2026-11-04T01:33:00Z",
-   "lastReported": "2026-11-04T01:33:00Z",
+   "updated": "2026-11-04T01:48:00Z",
+   "lastReported": "2026-11-04T01:48:00Z",
    "firstReported": "2026-11-03T23:37:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
@@ -2625,8 +2625,8 @@
    "to": "Highway 1",
    "where": "SR-514 EB at US-1",
    "id": "brevard:fl511:937844",
-   "updated": "2026-11-04T00:11:00Z",
-   "lastReported": "2026-11-04T00:11:00Z",
+   "updated": "2026-11-04T01:48:00Z",
+   "lastReported": "2026-11-04T01:48:00Z",
    "firstReported": "2026-11-02T23:15:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
@@ -3608,8 +3608,8 @@
    "to": "Burdock Ave",
    "where": "CR-509 both directions",
    "id": "brevard:fl511:939236",
-   "updated": "2026-11-03T22:11:00Z",
-   "lastReported": "2026-11-03T22:11:00Z",
+   "updated": "2026-11-04T01:47:00Z",
+   "lastReported": "2026-11-04T01:47:00Z",
    "firstReported": "2026-11-03T17:58:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
@@ -3638,8 +3638,8 @@
    "title": "Flooding on Sunlake Rd Both Directions At SR-507 Northbound. All lanes closed.",
    "where": "Sunlake Rd both directions At SR-507 Northbound",
    "id": "brevard:fl511:939237",
-   "updated": "2026-11-03T22:30:00Z",
-   "lastReported": "2026-11-03T22:30:00Z",
+   "updated": "2026-11-04T01:47:00Z",
+   "lastReported": "2026-11-04T01:47:00Z",
    "firstReported": "2026-11-03T17:58:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
@@ -3695,8 +3695,8 @@
    "to": "S John Rodes Blvd",
    "where": "Ellis Rd both directions",
    "id": "brevard:fl511:939238",
-   "updated": "2026-11-03T22:30:00Z",
-   "lastReported": "2026-11-03T22:30:00Z",
+   "updated": "2026-11-04T01:47:00Z",
+   "lastReported": "2026-11-04T01:47:00Z",
    "firstReported": "2026-11-03T17:58:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
@@ -3744,8 +3744,8 @@
    "to": "Rogers Pl",
    "where": "CR-511 both directions",
    "id": "brevard:fl511:939239",
-   "updated": "2026-11-03T22:11:00Z",
-   "lastReported": "2026-11-03T22:11:00Z",
+   "updated": "2026-11-04T01:47:00Z",
+   "lastReported": "2026-11-04T01:47:00Z",
    "firstReported": "2026-11-03T17:58:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
@@ -3814,8 +3814,8 @@
    "to": "Helio Way",
    "where": "Florida Ave both directions at Babcock St S",
    "id": "brevard:fl511:939287",
-   "updated": "2026-11-03T22:11:00Z",
-   "lastReported": "2026-11-03T22:11:00Z",
+   "updated": "2026-11-04T01:47:00Z",
+   "lastReported": "2026-11-04T01:47:00Z",
    "firstReported": "2026-11-03T18:23:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
@@ -4059,8 +4059,8 @@
    "title": "Flooding on SR-520 Both Directions At John Horne Dr.",
    "where": "SR-520 both directions At John Horne Dr",
    "id": "brevard:fl511:939664",
-   "updated": "2026-11-03T21:53:00Z",
-   "lastReported": "2026-11-03T21:53:00Z",
+   "updated": "2026-11-04T01:46:00Z",
+   "lastReported": "2026-11-04T01:46:00Z",
    "firstReported": "2026-11-03T21:53:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
@@ -4088,8 +4088,8 @@
    "title": "Flooding on SR-513 Southbound At SR-518. 2 Right Lanes Closed.",
    "where": "SR-513 SB",
    "id": "brevard:fl511:939898",
-   "updated": "2026-11-04T00:37:00Z",
-   "lastReported": "2026-11-04T00:37:00Z",
+   "updated": "2026-11-04T01:46:00Z",
+   "lastReported": "2026-11-04T01:46:00Z",
    "firstReported": "2026-11-04T00:37:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
@@ -5159,6 +5159,31 @@
    "updated": "2026-11-03T00:00:00Z",
    "lastReported": "2026-11-03T00:00:00Z",
    "firstReported": "2026-11-03T00:00:00Z",
+   "verified": null,
+   "awaitingOfficial": false,
+   "missingSince": null,
+   "recheck": []
+  },
+  {
+   "approx": true,
+   "city": "Melbourne",
+   "fullClosure": true,
+   "lanes": "All lanes south of Dow Rd",
+   "lat": 28.122,
+   "layer": "manual",
+   "lng": -80.692,
+   "note": "From the City of Melbourne traffic update at 3:25 p.m. Nov. 3. The road is closed south of Dow Rd. The stretch from Eau Gallie Blvd to Dow Rd has reopened. Do not drive around barricades. The coordinates are a rough estimate. Pin approximate.",
+   "reported": "2026-11-03T20:25:00Z",
+   "road": "John Rodes Blvd",
+   "source": "City of Melbourne",
+   "sourceUrl": "https://www.melbourneflorida.org/Government/City-News/Traffic-Advisories/Road-Closures-1525",
+   "status": "closed",
+   "title": "John Rodes Blvd closed south of Dow Rd (flooding)",
+   "where": "John Rodes Blvd south of Dow Rd",
+   "id": "brevard:manual:john-rodes-blvd-south-of-dow-rd",
+   "updated": "2026-11-03T20:25:00Z",
+   "lastReported": "2026-11-03T20:25:00Z",
+   "firstReported": "2026-11-03T20:25:00Z",
    "verified": null,
    "awaitingOfficial": false,
    "missingSince": null,
@@ -7530,14 +7555,14 @@
  },
  "alerts": [
   {
-   "id": "urn:oid:2.49.0.1.840.0.521365d1d9ecbbe2c5c67f518425495659022306.001.1",
+   "id": "urn:oid:2.49.0.1.840.0.eab2f02d761bbb94354321c9f753dca96f0874a9.001.1",
    "event": "Flood Warning",
    "severity": "Severe",
-   "headline": "Flood Warning issued November 3 at 10:49AM EST by NWS Melbourne FL",
+   "headline": "Flood Warning issued November 3 at 8:55PM EST by NWS Melbourne FL",
    "areas": "Brevard, FL",
-   "effective": "2026-11-03T10:49:00-05:00",
-   "expires": "2026-11-04T00:15:00-05:00",
-   "description": "...The Flood Warning continues for the following rivers in Florida...\n\nSt Johns River Near Cocoa 9w affecting Brevard County.\n\n.Heavy rainfall has caused the St. Johns River near Cocoa to rise\ninto Minor Flood Stage. The river is forecast to climb into Moderate\nFlood Stage in the next couple days, approaching Major Flood Stage\nlate in the week.\n\nFor the St. Johns River...including Cocoa...Moderate flooding is\nforecast.\n\n* WHAT...Minor flooding is occurring and moderate flooding is\nforecast.\n\n* WHERE...St Johns River near Cocoa 9w.\n\n* WHEN...Until further notice.\n\n* IMPACTS...At 17.0 feet, Flooding to some roads and water\napproaching low lying homes in the Silver Pines subdivision in\nRockledge. Many yards, ditches and pastures flooded and water\napproaching low lying structures along Pluckebaum Road in Cocoa and\nRockledge. Flooding to low lying structures in the Lake Washington\narea of Melbourne.\n\n* ADDITIONAL DETAILS...\n- At 10:15 AM EST Tuesday the stage was 16.4 feet.\n- Bankfull stage is 15.8 feet.\n- Recent Activity...The maximum river stage in the 24 hours ending\nat 10:15 AM EST Tuesday was 16.4 feet.\n- Forecast...The river is forecast to climb into Moderate Flood\nStage in the ne",
+   "effective": "2026-11-03T20:55:00-05:00",
+   "expires": "2026-11-04T11:00:00-05:00",
+   "description": "...The Flood Warning continues for the following rivers in Florida...\n\nSt Johns River Near Cocoa 9w affecting Brevard County.\n\n.Heavy rainfall has caused the St. Johns River near Cocoa to rise\ninto Minor Flood Stage. The river is forecast to climb into Moderate\nFlood Stage in the next couple days, approaching Major Flood Stage\nlate in the week.\n\nFor the St. Johns River...including Cocoa 9w...Moderate flooding is\nforecast.\n\n* WHAT...Moderate flooding is occurring and moderate flooding is\nforecast.\n\n* WHERE...St Johns River near Cocoa 9w.\n\n* WHEN...Until further notice.\n\n* IMPACTS...At 17.0 feet, Flooding to some roads and water\napproaching low lying homes in the Silver Pines subdivision in\nRockledge. Many yards, ditches and pastures flooded and water\napproaching low lying structures along Pluckebaum Road in Cocoa and\nRockledge. Flooding to low lying structures in the Lake Washington\narea of Melbourne.\n\n* ADDITIONAL DETAILS...\n- At 8:15 PM EST Tuesday the stage was 16.6 feet.\n- Bankfull stage is 15.8 feet.\n- Recent Activity...The maximum river stage in the 24 hours ending\nat 8:15 PM EST Tuesday was 16.6 feet.\n- Forecast...The river is expected to remain steady above flood\nstage at 16",
    "geometry": {
     "type": "Polygon",
     "coordinates": [
@@ -7675,6 +7700,12 @@
    "time": "2026-11-03T15:00:00Z",
    "text": "The mayor says the Fairhaven and Palm Bay Estates neighborhoods cannot be reached at all. Roads in the Port Malabar sections have washed out and will stay closed until crews can inspect them. Residents should shelter in place.",
    "url": "https://www.thepalmbayer.com/p/palm-bay-after-the-flood-what-is"
+  },
+  {
+   "agency": "City of Melbourne",
+   "time": "2026-11-03T20:25:00Z",
+   "text": "In its 3:25 p.m. Tuesday traffic update, the City of Melbourne lists only two current closures: John Rodes Blvd south of Dow Rd, and Sunlake Rd at Babcock St. John Rodes Blvd has reopened between Eau Gallie Blvd and Dow Rd. Drive with extreme caution and do not drive around barricades.",
+   "url": "https://www.melbourneflorida.org/Government/City-News/Traffic-Advisories/Road-Closures-1525"
   }
  ]
 }
