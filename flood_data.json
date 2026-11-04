@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-04T13:45:28Z",
+ "generated": "2026-11-04T14:00:54Z",
  "errors": [],
  "items": [
   {
@@ -1824,10 +1824,16 @@
     "publishedAt": "2026-11-04T11:58:00Z"
    },
    "awaitingOfficial": true,
-   "missingSince": null,
+   "missingSince": "2026-11-04T14:00:57Z",
    "recheck": [
     "source changed its lane description"
-   ]
+   ],
+   "noLongerListed": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "since": "2026-11-04T14:00:57Z",
+    "wasClosed": false
+   }
   },
   {
    "fullClosure": false,
@@ -3792,8 +3798,8 @@
    "title": "Flooding on Sunlake Rd Both Directions At SR-507 Northbound. All lanes closed.",
    "where": "Sunlake Rd both directions At SR-507 Northbound",
    "id": "brevard:fl511:939237",
-   "updated": "2026-11-04T12:25:00Z",
-   "lastReported": "2026-11-04T12:25:00Z",
+   "updated": "2026-11-04T13:50:00Z",
+   "lastReported": "2026-11-04T13:50:00Z",
    "firstReported": "2026-11-03T17:58:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
@@ -3849,8 +3855,8 @@
    "to": "S John Rodes Blvd",
    "where": "Ellis Rd both directions",
    "id": "brevard:fl511:939238",
-   "updated": "2026-11-04T12:47:00Z",
-   "lastReported": "2026-11-04T12:47:00Z",
+   "updated": "2026-11-04T13:56:00Z",
+   "lastReported": "2026-11-04T13:56:00Z",
    "firstReported": "2026-11-03T17:58:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
@@ -4264,8 +4270,8 @@
    "title": "Flooding on SR-513 Southbound At SR-518. 2 Right Lanes Closed.",
    "where": "SR-513 SB",
    "id": "brevard:fl511:939898",
-   "updated": "2026-11-04T12:15:00Z",
-   "lastReported": "2026-11-04T12:15:00Z",
+   "updated": "2026-11-04T13:55:00Z",
+   "lastReported": "2026-11-04T13:55:00Z",
    "firstReported": "2026-11-04T00:37:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
@@ -4471,9 +4477,15 @@
     "kind": "feed",
     "publishedAt": "2026-11-04T12:53:00Z"
    },
-   "awaitingOfficial": false,
-   "missingSince": null,
-   "recheck": []
+   "awaitingOfficial": true,
+   "missingSince": "2026-11-04T14:00:57Z",
+   "recheck": [],
+   "noLongerListed": {
+    "agency": "FL511 (FDOT)",
+    "url": "https://fl511.com",
+    "since": "2026-11-04T14:00:57Z",
+    "wasClosed": true
+   }
   },
   {
    "dir": "SB",
@@ -4705,9 +4717,15 @@
     "kind": "feed",
     "publishedAt": "2026-11-04T12:52:00Z"
    },
-   "awaitingOfficial": false,
-   "missingSince": null,
-   "recheck": []
+   "awaitingOfficial": true,
+   "missingSince": "2026-11-04T14:00:57Z",
+   "recheck": [],
+   "noLongerListed": {
+    "agency": "FL511 (FDOT)",
+    "url": "https://fl511.com",
+    "since": "2026-11-04T14:00:57Z",
+    "wasClosed": true
+   }
   },
   {
    "approx": true,
