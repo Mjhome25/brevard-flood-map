@@ -1,8 +1,6 @@
 {
- "generated": "2026-11-04T22:31:30Z",
- "errors": [
-  "FL511 map locations: 2 report(s) without a pin"
- ],
+ "generated": "2026-11-04T22:45:40Z",
+ "errors": [],
  "items": [
   {
    "from": "Leghorn Rd",
@@ -179,9 +177,15 @@
     "kind": "feed",
     "publishedAt": "2026-11-04T09:28:40Z"
    },
-   "awaitingOfficial": false,
-   "missingSince": null,
-   "recheck": []
+   "awaitingOfficial": true,
+   "missingSince": "2026-11-04T22:45:46Z",
+   "recheck": [],
+   "noLongerListed": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "since": "2026-11-04T22:45:46Z",
+    "wasClosed": false
+   }
   },
   {
    "fullClosure": false,
@@ -207,6 +211,63 @@
     "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
     "kind": "feed",
     "publishedAt": "2026-11-04T09:31:39Z"
+   },
+   "awaitingOfficial": false,
+   "missingSince": null,
+   "recheck": []
+  },
+  {
+   "fullClosure": false,
+   "lanes": "Debris In Roadway",
+   "lat": 27.8873670750988,
+   "layer": "FHP",
+   "lng": -80.5928013548063,
+   "reported": "2026-11-04T10:38:49Z",
+   "road": "I-95 NB [MM165]",
+   "roadShort": "I-95 Nb [MM165]",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "spot": "at Mm165",
+   "status": "caution",
+   "title": "Roadway Debris/Object at I-95 NB [MM165] x[MM165] [SEBASTIAN] (Debris In Roadway)",
+   "where": "I-95 Nb [MM165] at Mm165",
+   "id": "brevard:fhp:20261104103849-2762dd35",
+   "updated": "2026-11-04T10:38:49Z",
+   "lastReported": "2026-11-04T10:38:49Z",
+   "firstReported": "2026-11-04T10:38:49Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-04T10:38:49Z"
+   },
+   "awaitingOfficial": false,
+   "missingSince": null,
+   "recheck": []
+  },
+  {
+   "fullClosure": false,
+   "lat": 28.3695437241985,
+   "layer": "FHP",
+   "lng": -80.8009362234576,
+   "reported": "2026-11-04T10:44:00Z",
+   "road": "I-95 NB [MM202]",
+   "roadShort": "I-95 Nb [MM202]",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "spot": "at Mm202",
+   "status": "caution",
+   "title": "Roadway Debris/Object at I-95 NB [MM202] x[MM202] [COCOA]",
+   "where": "I-95 Nb [MM202] at Mm202",
+   "id": "brevard:fhp:20261104104400-ac873224",
+   "updated": "2026-11-04T10:44:00Z",
+   "lastReported": "2026-11-04T10:44:00Z",
+   "firstReported": "2026-11-04T10:44:00Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-04T10:44:00Z"
    },
    "awaitingOfficial": false,
    "missingSince": null,
@@ -286,11 +347,17 @@
     "publishedAt": "2026-11-04T20:33:00Z"
    },
    "awaitingOfficial": true,
-   "missingSince": null,
+   "missingSince": "2026-11-04T22:45:46Z",
    "recheck": [
     "source changed its lane description",
     "source changed the closed stretch"
-   ]
+   ],
+   "noLongerListed": {
+    "agency": "FL511 (FDOT)",
+    "url": "https://fl511.com",
+    "since": "2026-11-04T22:45:46Z",
+    "wasClosed": true
+   }
   },
   {
    "dir": "SB",
@@ -4131,7 +4198,14 @@
     "reopenedAt": "2026-11-04T19:31:34Z",
     "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
    },
-   "stillReported": []
+   "stillReported": [
+    {
+     "id": "brevard:fhp:20261104103849-2762dd35",
+     "where": "I-95 Nb [MM165] at Mm165",
+     "source": "FHP live CAD",
+     "since": null
+    }
+   ]
   },
   {
    "fullClosure": false,
