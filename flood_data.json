@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-04T02:30:34Z",
+ "generated": "2026-11-04T02:45:34Z",
  "errors": [],
  "items": [
   {
@@ -1246,9 +1246,15 @@
     "kind": "feed",
     "publishedAt": "2026-11-03T12:02:54Z"
    },
-   "awaitingOfficial": false,
-   "missingSince": null,
-   "recheck": []
+   "awaitingOfficial": true,
+   "missingSince": "2026-11-04T02:45:44Z",
+   "recheck": [],
+   "noLongerListed": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "since": "2026-11-04T02:45:44Z",
+    "wasClosed": false
+   }
   },
   {
    "fullClosure": false,
@@ -1810,8 +1816,8 @@
    "to": "Pine St",
    "where": "US-192 EB at Minton Rd/S Wickham Rd",
    "id": "brevard:fl511:937010",
-   "updated": "2026-11-04T02:05:00Z",
-   "lastReported": "2026-11-04T02:05:00Z",
+   "updated": "2026-11-04T02:37:00Z",
+   "lastReported": "2026-11-04T02:37:00Z",
    "firstReported": "2026-11-02T19:54:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
@@ -2076,8 +2082,8 @@
    "to": "Circle Dr",
    "where": "US-192 EB beyond Coastal Ln",
    "id": "brevard:fl511:937141",
-   "updated": "2026-11-04T02:05:00Z",
-   "lastReported": "2026-11-04T02:05:00Z",
+   "updated": "2026-11-04T02:37:00Z",
+   "lastReported": "2026-11-04T02:37:00Z",
    "firstReported": "2026-11-02T19:54:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
@@ -2234,8 +2240,8 @@
    "to": "Coastal Ln",
    "where": "US-192 WB at S John Rodes Blvd",
    "id": "brevard:fl511:937222",
-   "updated": "2026-11-04T02:05:00Z",
-   "lastReported": "2026-11-04T02:05:00Z",
+   "updated": "2026-11-04T02:37:00Z",
+   "lastReported": "2026-11-04T02:37:00Z",
    "firstReported": "2026-11-02T19:54:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
@@ -2625,8 +2631,8 @@
    "to": "Highway 1",
    "where": "SR-514 EB at US-1",
    "id": "brevard:fl511:937844",
-   "updated": "2026-11-04T01:48:00Z",
-   "lastReported": "2026-11-04T01:48:00Z",
+   "updated": "2026-11-04T02:36:00Z",
+   "lastReported": "2026-11-04T02:36:00Z",
    "firstReported": "2026-11-02T23:15:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
@@ -2885,8 +2891,8 @@
    "title": "Traffic lights not working on US-192 / Vine St / Bronson Hwy East, at S John Rodes Blvd",
    "where": "US-192 EB at S John Rodes Blvd",
    "id": "brevard:fl511:938257",
-   "updated": "2026-11-04T02:05:00Z",
-   "lastReported": "2026-11-04T02:05:00Z",
+   "updated": "2026-11-04T02:37:00Z",
+   "lastReported": "2026-11-04T02:37:00Z",
    "firstReported": "2026-11-03T03:18:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
@@ -4137,9 +4143,15 @@
     "kind": "feed",
     "publishedAt": "2026-11-04T01:22:00Z"
    },
-   "awaitingOfficial": false,
-   "missingSince": null,
-   "recheck": []
+   "awaitingOfficial": true,
+   "missingSince": "2026-11-04T02:45:44Z",
+   "recheck": [],
+   "noLongerListed": {
+    "agency": "FL511 (FDOT)",
+    "url": "https://fl511.com",
+    "since": "2026-11-04T02:45:44Z",
+    "wasClosed": false
+   }
   },
   {
    "approx": true,
