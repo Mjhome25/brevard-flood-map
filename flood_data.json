@@ -1,6 +1,8 @@
 {
- "generated": "2026-11-04T23:00:46Z",
- "errors": [],
+ "generated": "2026-11-04T23:15:36Z",
+ "errors": [
+  "FL511 map locations: 1 report(s) without a pin"
+ ],
  "items": [
   {
    "from": "Leghorn Rd",
@@ -146,11 +148,17 @@
     "publishedAt": "2026-11-04T08:03:53Z"
    },
    "awaitingOfficial": true,
-   "missingSince": null,
+   "missingSince": "2026-11-04T23:15:43Z",
    "recheck": [
     "source changed its lane description",
     "source shows reduced impact"
-   ]
+   ],
+   "noLongerListed": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "since": "2026-11-04T23:15:43Z",
+    "wasClosed": true
+   }
   },
   {
    "fullClosure": false,
@@ -177,9 +185,15 @@
     "kind": "feed",
     "publishedAt": "2026-11-04T09:31:39Z"
    },
-   "awaitingOfficial": false,
-   "missingSince": null,
-   "recheck": []
+   "awaitingOfficial": true,
+   "missingSince": "2026-11-04T23:15:43Z",
+   "recheck": [],
+   "noLongerListed": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "since": "2026-11-04T23:15:43Z",
+    "wasClosed": false
+   }
   },
   {
    "fullClosure": false,
@@ -233,6 +247,35 @@
     "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
     "kind": "feed",
     "publishedAt": "2026-11-04T10:44:00Z"
+   },
+   "awaitingOfficial": false,
+   "missingSince": null,
+   "recheck": []
+  },
+  {
+   "fullClosure": false,
+   "lanes": "No Roadblock",
+   "lat": 28.0346688142292,
+   "layer": "FHP",
+   "lng": -80.6561886542542,
+   "reported": "2026-11-04T11:14:24Z",
+   "road": "I-95 SB [MM176]",
+   "roadShort": "I-95 Sb [MM176]",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "spot": "at Mm176",
+   "status": "caution",
+   "title": "MVC at I-95 SB [MM176] x[MM176] [PALM BAY] (No Roadblock)",
+   "where": "I-95 Sb [MM176] at Mm176",
+   "id": "brevard:fhp:20261104111424-f477ea16",
+   "updated": "2026-11-04T11:14:24Z",
+   "lastReported": "2026-11-04T11:14:24Z",
+   "firstReported": "2026-11-04T11:14:24Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-04T11:14:24Z"
    },
    "awaitingOfficial": false,
    "missingSince": null,
@@ -356,11 +399,57 @@
     "publishedAt": "2026-11-04T21:56:00Z"
    },
    "awaitingOfficial": true,
-   "missingSince": null,
+   "missingSince": "2026-11-04T23:15:43Z",
    "recheck": [
     "source changed its lane description",
     "source changed the closed stretch"
-   ]
+   ],
+   "noLongerListed": {
+    "agency": "FL511 (FDOT)",
+    "url": "https://fl511.com",
+    "since": "2026-11-04T23:15:43Z",
+    "wasClosed": false
+   }
+  },
+  {
+   "dir": "NB",
+   "fullClosure": false,
+   "lanes": "Left lane blocked",
+   "lat": 28.064037,
+   "layer": "Incidents",
+   "line": [
+    [
+     28.06392,
+     -80.62132
+    ],
+    [
+     28.06404,
+     -80.62132
+    ]
+   ],
+   "lng": -80.621372,
+   "reported": "2026-11-04T23:06:00Z",
+   "road": "SR-507",
+   "roadShort": "SR-507",
+   "source": "FL511 (FDOT)",
+   "sourceUrl": "https://fl511.com",
+   "spot": "at University Blvd",
+   "status": "caution",
+   "title": "MVC on SR-507 North, at University Blvd. Left lane blocked",
+   "where": "SR-507 NB at University Blvd",
+   "id": "brevard:fl511:941698",
+   "updated": "2026-11-04T23:07:00Z",
+   "lastReported": "2026-11-04T23:07:00Z",
+   "firstReported": "2026-11-04T23:07:00Z",
+   "verified": {
+    "agency": "FL511 (FDOT)",
+    "url": "https://fl511.com",
+    "kind": "feed",
+    "publishedAt": "2026-11-04T23:07:00Z"
+   },
+   "awaitingOfficial": false,
+   "missingSince": null,
+   "recheck": []
   },
   {
    "approx": true,
@@ -5589,41 +5678,6 @@
     "kind": "fhp-dropped",
     "missingSince": "2026-11-03T23:30:38Z",
     "reopenedAt": "2026-11-03T23:45:47Z",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
-   },
-   "stillReported": []
-  },
-  {
-   "fullClosure": false,
-   "lanes": "Road Open",
-   "lat": 28.2804243170839,
-   "layer": "FHP",
-   "lng": -80.7143258891384,
-   "reported": "2026-11-03T09:31:55Z",
-   "road": "CLUBHOUSE DR [1600 CLUB HOUSE]",
-   "roadShort": "Clubhouse Dr [1600 Club House]",
-   "source": "FHP live CAD",
-   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-   "spot": "at Templeton Pl",
-   "status": "caution",
-   "title": "MVC at CLUBHOUSE DR [1600 CLUB HOUSE] x[TEMPLETON PL] [ROCKLEDGE] (Road Open)",
-   "where": "Clubhouse Dr [1600 Club House] at Templeton Pl",
-   "id": "brevard:fhp:20261103093155-02e72f6c",
-   "updated": "2026-11-03T09:31:55Z",
-   "lastReported": "2026-11-03T09:31:55Z",
-   "firstReported": "2026-11-03T09:31:55Z",
-   "verified": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "kind": "feed",
-    "publishedAt": "2026-11-03T09:31:55Z"
-   },
-   "reopenedAt": "2026-11-03T23:02:54Z",
-   "evidence": {
-    "agency": "Florida Highway Patrol",
-    "kind": "fhp-dropped",
-    "missingSince": "2026-11-03T22:45:37Z",
-    "reopenedAt": "2026-11-03T23:02:54Z",
     "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
    },
    "stillReported": []
