@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-04T14:45:33Z",
+ "generated": "2026-11-04T15:00:45Z",
  "errors": [],
  "items": [
   {
@@ -1768,41 +1768,6 @@
     "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
     "since": "2026-11-03T18:14:39Z",
     "wasClosed": true
-   }
-  },
-  {
-   "fullClosure": false,
-   "lanes": "No Roadblock",
-   "lat": 28.4049847035573,
-   "layer": "FHP",
-   "lng": -80.7190913233869,
-   "reported": "2026-11-04T11:50:52Z",
-   "road": "BEACHLINE EXPY EB (SR-528 EB) [MM48]",
-   "roadShort": "Beachline Expy Eb (SR-528 Eb) [MM48]",
-   "source": "FHP live CAD",
-   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-   "spot": "at Mm48",
-   "status": "caution",
-   "title": "MVC at BEACHLINE EXPY EB (SR-528 EB) [MM48] x[MM48] [MERRITT ISLAND] (No Roadblock)",
-   "where": "Beachline Expy Eb (SR-528 Eb) [MM48] at Mm48",
-   "id": "brevard:fhp:20261104115052-8a580b1f",
-   "updated": "2026-11-04T11:50:52Z",
-   "lastReported": "2026-11-04T11:50:52Z",
-   "firstReported": "2026-11-04T11:50:52Z",
-   "verified": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "kind": "feed",
-    "publishedAt": "2026-11-04T11:50:52Z"
-   },
-   "awaitingOfficial": true,
-   "missingSince": "2026-11-04T14:45:37Z",
-   "recheck": [],
-   "noLongerListed": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "since": "2026-11-04T14:45:37Z",
-    "wasClosed": false
    }
   },
   {
@@ -7300,6 +7265,41 @@
   }
  ],
  "reopened": [
+  {
+   "fullClosure": false,
+   "lanes": "No Roadblock",
+   "lat": 28.4049847035573,
+   "layer": "FHP",
+   "lng": -80.7190913233869,
+   "reported": "2026-11-04T11:50:52Z",
+   "road": "BEACHLINE EXPY EB (SR-528 EB) [MM48]",
+   "roadShort": "Beachline Expy Eb (SR-528 Eb) [MM48]",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "spot": "at Mm48",
+   "status": "caution",
+   "title": "MVC at BEACHLINE EXPY EB (SR-528 EB) [MM48] x[MM48] [MERRITT ISLAND] (No Roadblock)",
+   "where": "Beachline Expy Eb (SR-528 Eb) [MM48] at Mm48",
+   "id": "brevard:fhp:20261104115052-8a580b1f",
+   "updated": "2026-11-04T11:50:52Z",
+   "lastReported": "2026-11-04T11:50:52Z",
+   "firstReported": "2026-11-04T11:50:52Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-04T11:50:52Z"
+   },
+   "reopenedAt": "2026-11-04T15:00:51Z",
+   "evidence": {
+    "agency": "Florida Highway Patrol",
+    "kind": "fhp-dropped",
+    "missingSince": "2026-11-04T14:45:37Z",
+    "reopenedAt": "2026-11-04T15:00:51Z",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
+   },
+   "stillReported": []
+  },
   {
    "fullClosure": false,
    "lanes": "No Roadblock",
