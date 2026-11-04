@@ -28,5 +28,25 @@
   "quoteSha256": "0034d78371196ede2a8228bda807ad82d45b4a1f24031814f0a540732938db51",
   "time": "2026-11-03T18:20:00Z",
   "found": "2026-11-04T04:01:28Z"
+ },
+ {
+  "id": "man-dairy-rd-at-florida-ave",
+  "where": "Dairy Rd at Florida Ave",
+  "partial": false,
+  "sourceHost": "www.melbourneflorida.org",
+  "sourceUrlSha256": "0a9787e32c5481857274f5a46eacbfd9072bbce0bb342554cc74aa77e7433bae",
+  "quoteSha256": "dc89de42d7d408458aa4b04670bcc7fa03daf03af353a945d434c166702c7138",
+  "time": "2026-11-03T19:50:00Z",
+  "found": "2026-11-04T11:31:43Z"
+ },
+ {
+  "id": "man-babcock-eber",
+  "where": "Babcock St SB and Eber Blvd EB at their intersection",
+  "partial": false,
+  "sourceHost": "www.melbourneflorida.org",
+  "sourceUrlSha256": "0a9787e32c5481857274f5a46eacbfd9072bbce0bb342554cc74aa77e7433bae",
+  "quoteSha256": "dc89de42d7d408458aa4b04670bcc7fa03daf03af353a945d434c166702c7138",
+  "time": "2026-11-03T19:50:00Z",
+  "found": "2026-11-04T11:31:43Z"
  }
 ]

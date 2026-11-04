@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-04T10:45:34Z",
+ "generated": "2026-11-04T11:31:46Z",
  "errors": [],
  "items": [
   {
@@ -179,9 +179,15 @@
     "kind": "feed",
     "publishedAt": "2026-11-02T11:55:58Z"
    },
-   "awaitingOfficial": false,
-   "missingSince": null,
-   "recheck": []
+   "awaitingOfficial": true,
+   "missingSince": "2026-11-04T11:31:54Z",
+   "recheck": [],
+   "noLongerListed": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "since": "2026-11-04T11:31:54Z",
+    "wasClosed": true
+   }
   },
   {
    "from": "Deer Lakes Dr",
@@ -728,10 +734,16 @@
     "publishedAt": "2026-11-02T16:28:06Z"
    },
    "awaitingOfficial": true,
-   "missingSince": null,
+   "missingSince": "2026-11-04T11:31:54Z",
    "recheck": [
     "source changed its lane description"
-   ]
+   ],
+   "noLongerListed": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "since": "2026-11-04T11:31:54Z",
+    "wasClosed": true
+   }
   },
   {
    "from": "Ellis Dr",
@@ -1257,9 +1269,15 @@
     "kind": "feed",
     "publishedAt": "2026-11-03T13:13:35Z"
    },
-   "awaitingOfficial": false,
-   "missingSince": null,
-   "recheck": []
+   "awaitingOfficial": true,
+   "missingSince": "2026-11-04T11:31:54Z",
+   "recheck": [],
+   "noLongerListed": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "since": "2026-11-04T11:31:54Z",
+    "wasClosed": false
+   }
   },
   {
    "from": "I 95 Hwy",
@@ -1773,9 +1791,15 @@
     "kind": "feed",
     "publishedAt": "2026-11-02T19:54:00Z"
    },
-   "awaitingOfficial": false,
-   "missingSince": null,
-   "recheck": []
+   "awaitingOfficial": true,
+   "missingSince": "2026-11-04T11:31:54Z",
+   "recheck": [],
+   "noLongerListed": {
+    "agency": "FL511 (FDOT)",
+    "url": "https://fl511.com",
+    "since": "2026-11-04T11:31:54Z",
+    "wasClosed": true
+   }
   },
   {
    "dir": "SB",
@@ -2030,8 +2054,8 @@
    "to": "Circle Dr",
    "where": "US-192 EB beyond Coastal Ln",
    "id": "brevard:fl511:937141",
-   "updated": "2026-11-04T10:37:00Z",
-   "lastReported": "2026-11-04T10:37:00Z",
+   "updated": "2026-11-04T11:03:00Z",
+   "lastReported": "2026-11-04T11:03:00Z",
    "firstReported": "2026-11-02T19:54:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
@@ -2198,10 +2222,16 @@
     "publishedAt": "2026-11-02T19:54:00Z"
    },
    "awaitingOfficial": true,
-   "missingSince": null,
+   "missingSince": "2026-11-04T11:31:54Z",
    "recheck": [
     "source changed its lane description"
-   ]
+   ],
+   "noLongerListed": {
+    "agency": "FL511 (FDOT)",
+    "url": "https://fl511.com",
+    "since": "2026-11-04T11:31:54Z",
+    "wasClosed": true
+   }
   },
   {
    "dir": "NB",
@@ -2402,9 +2432,15 @@
     "kind": "feed",
     "publishedAt": "2026-11-03T23:37:00Z"
    },
-   "awaitingOfficial": false,
-   "missingSince": null,
-   "recheck": []
+   "awaitingOfficial": true,
+   "missingSince": "2026-11-04T11:31:54Z",
+   "recheck": [],
+   "noLongerListed": {
+    "agency": "FL511 (FDOT)",
+    "url": "https://fl511.com",
+    "since": "2026-11-04T11:31:54Z",
+    "wasClosed": false
+   }
   },
   {
    "dir": "EB",
@@ -2847,8 +2883,8 @@
    "title": "Traffic lights not working on US-192 / Vine St / Bronson Hwy East, at S John Rodes Blvd",
    "where": "US-192 EB at S John Rodes Blvd",
    "id": "brevard:fl511:938257",
-   "updated": "2026-11-04T10:37:00Z",
-   "lastReported": "2026-11-04T10:37:00Z",
+   "updated": "2026-11-04T11:10:00Z",
+   "lastReported": "2026-11-04T11:10:00Z",
    "firstReported": "2026-11-03T03:18:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
@@ -3785,9 +3821,15 @@
     "kind": "feed",
     "publishedAt": "2026-11-03T18:23:00Z"
    },
-   "awaitingOfficial": false,
-   "missingSince": null,
-   "recheck": []
+   "awaitingOfficial": true,
+   "missingSince": "2026-11-04T11:31:54Z",
+   "recheck": [],
+   "noLongerListed": {
+    "agency": "FL511 (FDOT)",
+    "url": "https://fl511.com",
+    "since": "2026-11-04T11:31:54Z",
+    "wasClosed": true
+   }
   },
   {
    "dir": "SB",
@@ -6919,7 +6961,7 @@
      "id": "brevard:fhp:20261103131335-68d24a6b",
      "where": "I-95 Nb [MM183] at Mm183",
      "source": "FHP live CAD",
-     "since": null
+     "since": "2026-11-04T11:31:54Z"
     }
    ]
   },
@@ -7106,7 +7148,7 @@
      "id": "brevard:fhp:20261103131335-68d24a6b",
      "where": "I-95 Nb [MM183] at Mm183",
      "source": "FHP live CAD",
-     "since": null
+     "since": "2026-11-04T11:31:54Z"
     }
    ]
   },
