@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-05T22:45:36Z",
+ "generated": "2026-11-05T23:00:49Z",
  "errors": [],
  "items": [
   {
@@ -76,9 +76,15 @@
     "kind": "feed",
     "publishedAt": "2026-11-05T10:09:47Z"
    },
-   "awaitingOfficial": false,
-   "missingSince": null,
-   "recheck": []
+   "awaitingOfficial": true,
+   "missingSince": "2026-11-05T23:00:56Z",
+   "recheck": [],
+   "noLongerListed": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "since": "2026-11-05T23:00:56Z",
+    "wasClosed": false
+   }
   },
   {
    "fullClosure": false,
@@ -104,6 +110,35 @@
     "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
     "kind": "feed",
     "publishedAt": "2026-11-05T10:18:30Z"
+   },
+   "awaitingOfficial": false,
+   "missingSince": null,
+   "recheck": []
+  },
+  {
+   "fullClosure": false,
+   "lanes": "Source said \"Roadway Clear\" (2026-11-05 10:53 UTC); not a verified reopening",
+   "lat": 28.0788833245498,
+   "layer": "FHP",
+   "lng": -80.676966902044,
+   "reported": "2026-11-05T10:53:27Z",
+   "road": "W NEW HAVEN AVE",
+   "roadShort": "W New Haven Ave",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "spot": "at Hickory St",
+   "status": "caution",
+   "title": "MVC at W NEW HAVEN AVE x[HICKORY ST] [MELBOURNE] (Roadway Clear)",
+   "where": "W New Haven Ave at Hickory St",
+   "id": "brevard:fhp:20261105105327-6542b854",
+   "updated": "2026-11-05T10:53:27Z",
+   "lastReported": "2026-11-05T10:53:27Z",
+   "firstReported": "2026-11-05T10:53:27Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-05T10:53:27Z"
    },
    "awaitingOfficial": false,
    "missingSince": null,
@@ -2376,94 +2411,6 @@
     "missingSince": "2026-11-04T23:15:43Z",
     "reopenedAt": "2026-11-04T23:31:59Z",
     "url": "https://fl511.com"
-   },
-   "stillReported": []
-  },
-  {
-   "dir": "SB",
-   "fullClosure": true,
-   "lat": 28.490978,
-   "layer": "Incidents",
-   "line": [
-    [
-     28.49092,
-     -80.77558
-    ],
-    [
-     28.49056,
-     -80.77529
-    ],
-    [
-     28.4903,
-     -80.77511
-    ],
-    [
-     28.49023,
-     -80.77506
-    ]
-   ],
-   "lng": -80.775502,
-   "reported": "2026-11-04T20:05:00Z",
-   "road": "US-1",
-   "roadShort": "US-1",
-   "source": "FL511 (FDOT)",
-   "sourceUrl": "https://fl511.com",
-   "spot": "at Kings Hwy",
-   "status": "closed",
-   "title": "MVC on US-1 South, at Kings Hwy",
-   "where": "US-1 SB at Kings Hwy",
-   "id": "brevard:fl511:941323",
-   "updated": "2026-11-04T21:36:00Z",
-   "lastReported": "2026-11-04T21:36:00Z",
-   "firstReported": "2026-11-04T20:19:00Z",
-   "verified": {
-    "agency": "FL511 (FDOT)",
-    "url": "https://fl511.com",
-    "kind": "feed",
-    "publishedAt": "2026-11-04T20:33:00Z"
-   },
-   "reopenedAt": "2026-11-04T23:00:50Z",
-   "evidence": {
-    "agency": "FL511 (FDOT)",
-    "kind": "feed-dropped",
-    "missingSince": "2026-11-04T22:45:46Z",
-    "reopenedAt": "2026-11-04T23:00:50Z",
-    "url": "https://fl511.com"
-   },
-   "stillReported": []
-  },
-  {
-   "fullClosure": false,
-   "lanes": "No Road Block",
-   "lat": 28.1957425647782,
-   "layer": "FHP",
-   "lng": -80.7082737866811,
-   "reported": "2026-11-04T09:28:40Z",
-   "road": "I-95 SB [EXIT RAMP]",
-   "roadShort": "I-95 Sb [Exit Ramp]",
-   "source": "FHP live CAD",
-   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-   "spot": "at Pineda Cswy",
-   "status": "caution",
-   "title": "MVC at I-95 SB [EXIT RAMP] x[PINEDA CSWY] [MELBOURNE] (No Road Block)",
-   "where": "I-95 Sb [Exit Ramp] at Pineda Cswy",
-   "id": "brevard:fhp:20261104092840-9a5b9353",
-   "updated": "2026-11-04T09:28:40Z",
-   "lastReported": "2026-11-04T09:28:40Z",
-   "firstReported": "2026-11-04T09:28:40Z",
-   "verified": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "kind": "feed",
-    "publishedAt": "2026-11-04T09:28:40Z"
-   },
-   "reopenedAt": "2026-11-04T23:00:50Z",
-   "evidence": {
-    "agency": "Florida Highway Patrol",
-    "kind": "feed-dropped",
-    "missingSince": "2026-11-04T22:45:46Z",
-    "reopenedAt": "2026-11-04T23:00:50Z",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
    },
    "stillReported": []
   }
