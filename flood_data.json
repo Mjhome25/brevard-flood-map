@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-05T19:31:39Z",
+ "generated": "2026-11-05T19:45:35Z",
  "errors": [],
  "items": [
   {
@@ -115,10 +115,16 @@
     "publishedAt": "2026-11-03T08:44:46Z"
    },
    "awaitingOfficial": true,
-   "missingSince": null,
+   "missingSince": "2026-11-05T19:45:41Z",
    "recheck": [
     "source changed its lane description"
-   ]
+   ],
+   "noLongerListed": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "since": "2026-11-05T19:45:41Z",
+    "wasClosed": true
+   }
   },
   {
    "fullClosure": false,
@@ -145,9 +151,12 @@
     "kind": "feed",
     "publishedAt": "2026-11-05T06:28:55Z"
    },
-   "awaitingOfficial": false,
+   "awaitingOfficial": true,
    "missingSince": null,
-   "recheck": []
+   "recheck": [
+    "source shows reduced impact",
+    "source changed its lane description"
+   ]
   },
   {
    "from": "N Highway 1",
@@ -227,9 +236,15 @@
     "kind": "feed",
     "publishedAt": "2026-11-05T06:54:26Z"
    },
-   "awaitingOfficial": false,
-   "missingSince": null,
-   "recheck": []
+   "awaitingOfficial": true,
+   "missingSince": "2026-11-05T19:45:41Z",
+   "recheck": [],
+   "noLongerListed": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "since": "2026-11-05T19:45:41Z",
+    "wasClosed": false
+   }
   },
   {
    "fullClosure": false,
@@ -255,6 +270,35 @@
     "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
     "kind": "feed",
     "publishedAt": "2026-11-05T07:06:35Z"
+   },
+   "awaitingOfficial": false,
+   "missingSince": null,
+   "recheck": []
+  },
+  {
+   "fullClosure": false,
+   "lanes": "No Road Block",
+   "lat": 28.3698717523057,
+   "layer": "FHP",
+   "lng": -80.77148622347,
+   "reported": "2026-11-05T07:42:45Z",
+   "road": "PALM DR N",
+   "roadShort": "Palm Dr N",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "spot": "at Range Rd N",
+   "status": "caution",
+   "title": "MVC at PALM DR N x[RANGE RD N] [COCOA] (No Road Block)",
+   "where": "Palm Dr N at Range Rd N",
+   "id": "brevard:fhp:20261105074245-16edd26e",
+   "updated": "2026-11-05T07:42:45Z",
+   "lastReported": "2026-11-05T07:42:45Z",
+   "firstReported": "2026-11-05T07:42:45Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-05T07:42:45Z"
    },
    "awaitingOfficial": false,
    "missingSince": null,
@@ -333,8 +377,8 @@
    "title": "MVC on I-95 South, at MM 190. 2 Right lanes blocked",
    "where": "I-95 SB at MM 190",
    "id": "brevard:fl511:943231",
-   "updated": "2026-11-05T19:22:00Z",
-   "lastReported": "2026-11-05T19:22:00Z",
+   "updated": "2026-11-05T19:36:00Z",
+   "lastReported": "2026-11-05T19:36:00Z",
    "firstReported": "2026-11-05T18:42:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
@@ -342,9 +386,11 @@
     "kind": "feed",
     "publishedAt": "2026-11-05T18:42:00Z"
    },
-   "awaitingOfficial": false,
+   "awaitingOfficial": true,
    "missingSince": null,
-   "recheck": []
+   "recheck": [
+    "source changed its lane description"
+   ]
   },
   {
    "dir": "EB",
