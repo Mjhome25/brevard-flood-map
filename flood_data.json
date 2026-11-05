@@ -1,65 +1,37 @@
 {
- "generated": "2026-11-05T21:15:36Z",
- "errors": [],
+ "generated": "2026-11-05T21:31:45Z",
+ "errors": [
+  "FL511 map locations: 1 report(s) without a pin"
+ ],
  "items": [
   {
-   "from": "N Highway 1",
    "fullClosure": false,
-   "lanes": "Road Block",
-   "lat": 28.2041919718928,
+   "lanes": "No Road Block",
+   "lat": 27.997144896794,
    "layer": "FHP",
-   "line": [
-    [
-     28.204624,
-     -80.661947
-    ],
-    [
-     28.204839,
-     -80.660419
-    ],
-    [
-     28.204842,
-     -80.660397
-    ],
-    [
-     28.204988,
-     -80.65936
-    ],
-    [
-     28.205072,
-     -80.65875
-    ]
-   ],
-   "lng": -80.6602808686225,
-   "reported": "2026-11-05T06:36:08Z",
-   "road": "PINEDA CSWY",
-   "roadShort": "Pineda Cswy",
+   "lng": -80.6296244954525,
+   "reported": "2026-11-05T09:23:13Z",
+   "road": "I-95 SB [MM173]",
+   "roadShort": "I-95 Sb [MM173]",
    "source": "FHP live CAD",
    "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-   "spot": "at Us-1",
-   "status": "closed",
-   "title": "MVC W/Roadblock at PINEDA CSWY x[US-1] [MELBOURNE] (Road Block)",
-   "to": "N Highway 1",
-   "where": "Pineda Cswy at Us-1",
-   "id": "brevard:fhp:20261105063608-adea8f9f",
-   "updated": "2026-11-05T06:36:08Z",
-   "lastReported": "2026-11-05T06:36:08Z",
-   "firstReported": "2026-11-05T06:36:08Z",
+   "spot": "at Mm173",
+   "status": "caution",
+   "title": "MVC at I-95 SB [MM173] x[MM173] [PALM BAY] (No Road Block)",
+   "where": "I-95 Sb [MM173] at Mm173",
+   "id": "brevard:fhp:20261105092313-42189524",
+   "updated": "2026-11-05T09:23:13Z",
+   "lastReported": "2026-11-05T09:23:13Z",
+   "firstReported": "2026-11-05T09:23:13Z",
    "verified": {
     "agency": "Florida Highway Patrol",
     "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
     "kind": "feed",
-    "publishedAt": "2026-11-05T06:36:08Z"
+    "publishedAt": "2026-11-05T09:23:13Z"
    },
-   "awaitingOfficial": true,
-   "missingSince": "2026-11-05T21:15:42Z",
-   "recheck": [],
-   "noLongerListed": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "since": "2026-11-05T21:15:42Z",
-    "wasClosed": true
-   }
+   "awaitingOfficial": false,
+   "missingSince": null,
+   "recheck": []
   },
   {
    "dir": "both directions",
@@ -244,6 +216,66 @@
    "recheck": []
   },
   {
+   "dir": "SB",
+   "fullClosure": false,
+   "lanes": "Right shoulder blocked",
+   "lat": 28.009861,
+   "layer": "Incidents",
+   "line": [
+    [
+     28.00988,
+     -80.63869
+    ],
+    [
+     28.00941,
+     -80.63836
+    ],
+    [
+     28.00895,
+     -80.63803
+    ],
+    [
+     28.00826,
+     -80.63754
+    ],
+    [
+     28.00644,
+     -80.63625
+    ],
+    [
+     28.00556,
+     -80.63562
+    ],
+    [
+     28.00518,
+     -80.63534
+    ]
+   ],
+   "lng": -80.638725,
+   "reported": "2026-11-05T21:27:00Z",
+   "road": "I-95",
+   "roadShort": "I-95",
+   "source": "FL511 (FDOT)",
+   "sourceUrl": "https://fl511.com",
+   "spot": "at MM 174",
+   "status": "caution",
+   "title": "MVC on I-95 South, at MM 174. Right shoulder blocked",
+   "where": "I-95 SB at MM 174",
+   "id": "brevard:fl511:943676",
+   "updated": "2026-11-05T21:30:00Z",
+   "lastReported": "2026-11-05T21:30:00Z",
+   "firstReported": "2026-11-05T21:30:00Z",
+   "verified": {
+    "agency": "FL511 (FDOT)",
+    "url": "https://fl511.com",
+    "kind": "feed",
+    "publishedAt": "2026-11-05T21:30:00Z"
+   },
+   "awaitingOfficial": false,
+   "missingSince": null,
+   "recheck": []
+  },
+  {
    "approx": true,
    "city": "Melbourne",
    "from": "Palm Bay Rd NE",
@@ -345,6 +377,65 @@
   }
  ],
  "reopened": [
+  {
+   "from": "N Highway 1",
+   "fullClosure": false,
+   "lanes": "Road Block",
+   "lat": 28.2041919718928,
+   "layer": "FHP",
+   "line": [
+    [
+     28.204624,
+     -80.661947
+    ],
+    [
+     28.204839,
+     -80.660419
+    ],
+    [
+     28.204842,
+     -80.660397
+    ],
+    [
+     28.204988,
+     -80.65936
+    ],
+    [
+     28.205072,
+     -80.65875
+    ]
+   ],
+   "lng": -80.6602808686225,
+   "reported": "2026-11-05T06:36:08Z",
+   "road": "PINEDA CSWY",
+   "roadShort": "Pineda Cswy",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "spot": "at Us-1",
+   "status": "closed",
+   "title": "MVC W/Roadblock at PINEDA CSWY x[US-1] [MELBOURNE] (Road Block)",
+   "to": "N Highway 1",
+   "where": "Pineda Cswy at Us-1",
+   "id": "brevard:fhp:20261105063608-adea8f9f",
+   "updated": "2026-11-05T06:36:08Z",
+   "lastReported": "2026-11-05T06:36:08Z",
+   "firstReported": "2026-11-05T06:36:08Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-05T06:36:08Z"
+   },
+   "reopenedAt": "2026-11-05T21:31:52Z",
+   "evidence": {
+    "agency": "Florida Highway Patrol",
+    "kind": "feed-dropped",
+    "missingSince": "2026-11-05T21:15:42Z",
+    "reopenedAt": "2026-11-05T21:31:52Z",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
+   },
+   "stillReported": []
+  },
   {
    "fullClosure": false,
    "lanes": "Road Block",
