@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-05T05:15:37Z",
+ "generated": "2026-11-05T05:31:36Z",
  "errors": [],
  "items": [
   {
@@ -232,6 +232,41 @@
     "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
     "kind": "feed",
     "publishedAt": "2026-11-05T17:13:42Z"
+   },
+   "awaitingOfficial": true,
+   "missingSince": "2026-11-05T05:31:43Z",
+   "recheck": [],
+   "noLongerListed": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "since": "2026-11-05T05:31:43Z",
+    "wasClosed": true
+   }
+  },
+  {
+   "fullClosure": false,
+   "lanes": "No Roadblock",
+   "lat": 28.1140997935881,
+   "layer": "FHP",
+   "lng": -80.7058992644244,
+   "reported": "2026-11-05T17:18:54Z",
+   "road": "I-95 SB [EXIT]",
+   "roadShort": "I-95 Sb [Exit]",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "spot": "at Mm183",
+   "status": "caution",
+   "title": "MVC at I-95 SB [EXIT] x[MM183] [MELBOURNE] (No Roadblock)",
+   "where": "I-95 Sb [Exit] at Mm183",
+   "id": "brevard:fhp:20261105171854-7d20a6f4",
+   "updated": "2026-11-05T17:18:54Z",
+   "lastReported": "2026-11-05T17:18:54Z",
+   "firstReported": "2026-11-05T17:18:54Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-05T17:18:54Z"
    },
    "awaitingOfficial": false,
    "missingSince": null,
@@ -6101,6 +6136,12 @@
    "time": "2026-11-04T20:12:00Z",
    "text": "Brevard Public Schools will reopen all campuses on Thursday, Nov. 5, after being closed three days because of the flooding. Buses, before- and after-school care, and after-school activities will run on their normal schedules. Bus routes in storm-affected areas may be delayed. Several Melbourne schools stay under a precautionary boil water notice through the end of the week.",
    "url": "https://www.yahoo.com/news/weather-news/articles/brevard-schools-reopen-thursday-bus-201200644.html"
+  },
+  {
+   "agency": "City of West Melbourne / Brevard County Emergency Management",
+   "time": "2026-11-04T18:00:00Z",
+   "text": "Never drive through flooded roads. Some streets in West Melbourne, Satellite Beach, Indian Harbour Beach and Indialantic are still blocked by standing water.",
+   "url": "https://westmelbourne.gov/905/Emergency-Information"
   }
  ]
 }
