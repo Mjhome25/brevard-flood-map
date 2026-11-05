@@ -1,8 +1,6 @@
 {
- "generated": "2026-11-05T02:45:38Z",
- "errors": [
-  "FL511 map locations: 2 report(s) without a pin"
- ],
+ "generated": "2026-11-05T03:00:57Z",
+ "errors": [],
  "items": [
   {
    "from": "Leghorn Rd",
@@ -296,9 +294,15 @@
     "kind": "feed",
     "publishedAt": "2026-11-05T01:54:00Z"
    },
-   "awaitingOfficial": false,
-   "missingSince": null,
-   "recheck": []
+   "awaitingOfficial": true,
+   "missingSince": "2026-11-05T03:01:41Z",
+   "recheck": [],
+   "noLongerListed": {
+    "agency": "FL511 (FDOT)",
+    "url": "https://fl511.com",
+    "since": "2026-11-05T03:01:41Z",
+    "wasClosed": false
+   }
   },
   {
    "approx": true,
