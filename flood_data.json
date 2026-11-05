@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-05T03:00:57Z",
+ "generated": "2026-11-05T03:15:33Z",
  "errors": [],
  "items": [
   {
@@ -252,59 +252,6 @@
    "recheck": []
   },
   {
-   "dir": "EB",
-   "fullClosure": false,
-   "lat": 28.208125,
-   "layer": "Incidents",
-   "line": [
-    [
-     28.20803,
-     -80.6382
-    ],
-    [
-     28.20805,
-     -80.63812
-    ],
-    [
-     28.20824,
-     -80.63718
-    ],
-    [
-     28.2084,
-     -80.63639
-    ]
-   ],
-   "lng": -80.638223,
-   "reported": "2026-11-05T01:48:00Z",
-   "road": "SR-404",
-   "roadShort": "SR-404",
-   "source": "FL511 (FDOT)",
-   "sourceUrl": "https://fl511.com",
-   "spot": "at CR-3/S Tropical Trail",
-   "status": "caution",
-   "title": "Incident on SR-404 East, at CR-3/S Tropical Trail",
-   "where": "SR-404 EB at CR-3/S Tropical Trail",
-   "id": "brevard:fl511:941925",
-   "updated": "2026-11-05T01:54:00Z",
-   "lastReported": "2026-11-05T01:54:00Z",
-   "firstReported": "2026-11-05T01:54:00Z",
-   "verified": {
-    "agency": "FL511 (FDOT)",
-    "url": "https://fl511.com",
-    "kind": "feed",
-    "publishedAt": "2026-11-05T01:54:00Z"
-   },
-   "awaitingOfficial": true,
-   "missingSince": "2026-11-05T03:01:41Z",
-   "recheck": [],
-   "noLongerListed": {
-    "agency": "FL511 (FDOT)",
-    "url": "https://fl511.com",
-    "since": "2026-11-05T03:01:41Z",
-    "wasClosed": false
-   }
-  },
-  {
    "approx": true,
    "city": "Melbourne",
    "from": "Palm Bay Rd NE",
@@ -406,6 +353,59 @@
   }
  ],
  "reopened": [
+  {
+   "dir": "EB",
+   "fullClosure": false,
+   "lat": 28.208125,
+   "layer": "Incidents",
+   "line": [
+    [
+     28.20803,
+     -80.6382
+    ],
+    [
+     28.20805,
+     -80.63812
+    ],
+    [
+     28.20824,
+     -80.63718
+    ],
+    [
+     28.2084,
+     -80.63639
+    ]
+   ],
+   "lng": -80.638223,
+   "reported": "2026-11-05T01:48:00Z",
+   "road": "SR-404",
+   "roadShort": "SR-404",
+   "source": "FL511 (FDOT)",
+   "sourceUrl": "https://fl511.com",
+   "spot": "at CR-3/S Tropical Trail",
+   "status": "caution",
+   "title": "Incident on SR-404 East, at CR-3/S Tropical Trail",
+   "where": "SR-404 EB at CR-3/S Tropical Trail",
+   "id": "brevard:fl511:941925",
+   "updated": "2026-11-05T01:54:00Z",
+   "lastReported": "2026-11-05T01:54:00Z",
+   "firstReported": "2026-11-05T01:54:00Z",
+   "verified": {
+    "agency": "FL511 (FDOT)",
+    "url": "https://fl511.com",
+    "kind": "feed",
+    "publishedAt": "2026-11-05T01:54:00Z"
+   },
+   "reopenedAt": "2026-11-05T03:15:38Z",
+   "evidence": {
+    "agency": "FL511 (FDOT)",
+    "kind": "feed-dropped",
+    "missingSince": "2026-11-05T03:01:41Z",
+    "reopenedAt": "2026-11-05T03:15:38Z",
+    "url": "https://fl511.com"
+   },
+   "stillReported": []
+  },
   {
    "fullClosure": false,
    "lanes": "Roadway Open",
@@ -5956,41 +5956,6 @@
     "kind": "fhp-dropped",
     "missingSince": "2026-11-04T03:15:43Z",
     "reopenedAt": "2026-11-04T03:30:42Z",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
-   },
-   "stillReported": []
-  },
-  {
-   "fullClosure": false,
-   "lanes": "No Roadblock",
-   "lat": 28.2872178348704,
-   "layer": "FHP",
-   "lng": -80.7104183242584,
-   "reported": "2026-11-03T12:02:54Z",
-   "road": "CLUBHOUSE DR",
-   "roadShort": "Clubhouse Dr",
-   "source": "FHP live CAD",
-   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-   "spot": "at Auburn Lakes Dr",
-   "status": "caution",
-   "title": "MVC at CLUBHOUSE DR x[AUBURN LAKES DR] [ROCKLEDGE] (No Roadblock)",
-   "where": "Clubhouse Dr at Auburn Lakes Dr",
-   "id": "brevard:fhp:20261103120254-5f1f0c59",
-   "updated": "2026-11-03T12:02:54Z",
-   "lastReported": "2026-11-03T12:02:54Z",
-   "firstReported": "2026-11-03T12:02:54Z",
-   "verified": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "kind": "feed",
-    "publishedAt": "2026-11-03T12:02:54Z"
-   },
-   "reopenedAt": "2026-11-04T03:02:05Z",
-   "evidence": {
-    "agency": "Florida Highway Patrol",
-    "kind": "fhp-dropped",
-    "missingSince": "2026-11-04T02:45:44Z",
-    "reopenedAt": "2026-11-04T03:02:05Z",
     "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
    },
    "stillReported": []
