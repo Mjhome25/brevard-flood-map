@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-05T18:45:35Z",
+ "generated": "2026-11-05T19:00:46Z",
  "errors": [],
  "items": [
   {
@@ -150,41 +150,6 @@
    "recheck": []
   },
   {
-   "fullClosure": false,
-   "lanes": "No Road Block",
-   "lat": 28.1891382213439,
-   "layer": "FHP",
-   "lng": -80.7070549389591,
-   "reported": "2026-11-05T06:29:47Z",
-   "road": "I-95 SB [MM188]",
-   "roadShort": "I-95 Sb [MM188]",
-   "source": "FHP live CAD",
-   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-   "spot": "at Mm188",
-   "status": "caution",
-   "title": "MVC W/ And Roadblock at I-95 SB [MM188] x[MM188] [MELBOURNE] (No Road Block)",
-   "where": "I-95 Sb [MM188] at Mm188",
-   "id": "brevard:fhp:20261105062947-7696869c",
-   "updated": "2026-11-05T06:29:47Z",
-   "lastReported": "2026-11-05T06:29:47Z",
-   "firstReported": "2026-11-05T06:29:47Z",
-   "verified": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "kind": "feed",
-    "publishedAt": "2026-11-05T06:29:47Z"
-   },
-   "awaitingOfficial": true,
-   "missingSince": "2026-11-05T18:45:43Z",
-   "recheck": [],
-   "noLongerListed": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "since": "2026-11-05T18:45:43Z",
-    "wasClosed": false
-   }
-  },
-  {
    "from": "N Highway 1",
    "fullClosure": false,
    "lanes": "Road Block",
@@ -239,38 +204,32 @@
   },
   {
    "fullClosure": false,
-   "lanes": "Source said \"Roadway Open\" (2026-11-05 16:55 UTC); not a verified reopening",
-   "lat": 28.4771180281072,
+   "lanes": "Source said \"Roadway Open\" (2026-11-05 06:54 UTC); not a verified reopening",
+   "lat": 27.9535166754502,
    "layer": "FHP",
-   "lng": -80.7734078639824,
-   "reported": "2026-11-05T16:55:38Z",
-   "road": "FAY BLVD",
-   "roadShort": "Fay Blvd",
+   "lng": -80.5879397044222,
+   "reported": "2026-11-05T06:54:26Z",
+   "road": "BOBBIE LN [4165]",
+   "roadShort": "Bobbie Ln [4165]",
    "source": "FHP live CAD",
    "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-   "spot": "at Lindsay Ave",
+   "spot": "at Valkaria Rd",
    "status": "caution",
-   "title": "MVC at FAY BLVD x[LINDSAY AVE] [COCOA] (Roadway Open)",
-   "where": "Fay Blvd at Lindsay Ave",
-   "id": "brevard:fhp:20261105165538-a3e2d543",
-   "updated": "2026-11-05T16:55:38Z",
-   "lastReported": "2026-11-05T16:55:38Z",
-   "firstReported": "2026-11-05T16:55:38Z",
+   "title": "MVC at BOBBIE LN [4165] x[VALKARIA RD] [GRANT-VALKARIA] (Roadway Open)",
+   "where": "Bobbie Ln [4165] at Valkaria Rd",
+   "id": "brevard:fhp:20261105065426-c4c4cac1",
+   "updated": "2026-11-05T06:54:26Z",
+   "lastReported": "2026-11-05T06:54:26Z",
+   "firstReported": "2026-11-05T06:54:26Z",
    "verified": {
     "agency": "Florida Highway Patrol",
     "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
     "kind": "feed",
-    "publishedAt": "2026-11-05T16:55:38Z"
+    "publishedAt": "2026-11-05T06:54:26Z"
    },
-   "awaitingOfficial": true,
-   "missingSince": "2026-11-05T18:45:43Z",
-   "recheck": [],
-   "noLongerListed": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "since": "2026-11-05T18:45:43Z",
-    "wasClosed": false
-   }
+   "awaitingOfficial": false,
+   "missingSince": null,
+   "recheck": []
   },
   {
    "fullClosure": false,
@@ -297,9 +256,15 @@
     "kind": "feed",
     "publishedAt": "2026-11-05T17:38:58Z"
    },
-   "awaitingOfficial": false,
-   "missingSince": null,
-   "recheck": []
+   "awaitingOfficial": true,
+   "missingSince": "2026-11-05T19:00:49Z",
+   "recheck": [],
+   "noLongerListed": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "since": "2026-11-05T19:00:49Z",
+    "wasClosed": false
+   }
   },
   {
    "dir": "both directions",
@@ -374,14 +339,58 @@
    "title": "MVC on I-95 South, at MM 190. 2 Right lanes blocked",
    "where": "I-95 SB at MM 190",
    "id": "brevard:fl511:943231",
-   "updated": "2026-11-05T18:42:00Z",
-   "lastReported": "2026-11-05T18:42:00Z",
+   "updated": "2026-11-05T18:51:00Z",
+   "lastReported": "2026-11-05T18:51:00Z",
    "firstReported": "2026-11-05T18:42:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
     "url": "https://fl511.com",
     "kind": "feed",
     "publishedAt": "2026-11-05T18:42:00Z"
+   },
+   "awaitingOfficial": false,
+   "missingSince": null,
+   "recheck": []
+  },
+  {
+   "dir": "EB",
+   "fullClosure": false,
+   "lanes": "Right lane blocked",
+   "lat": 28.204698,
+   "layer": "Incidents",
+   "line": [
+    [
+     28.20466,
+     -80.66173
+    ],
+    [
+     28.20467,
+     -80.66167
+    ],
+    [
+     28.20471,
+     -80.66134
+    ]
+   ],
+   "lng": -80.661736,
+   "reported": "2026-11-05T18:21:00Z",
+   "road": "SR-404",
+   "roadShort": "SR-404",
+   "source": "FL511 (FDOT)",
+   "sourceUrl": "https://fl511.com",
+   "spot": "at US-1",
+   "status": "caution",
+   "title": "MVC on SR-404 East, at US-1. Right lane blocked",
+   "where": "SR-404 EB at US-1",
+   "id": "brevard:fl511:943268",
+   "updated": "2026-11-05T18:50:00Z",
+   "lastReported": "2026-11-05T18:50:00Z",
+   "firstReported": "2026-11-05T18:50:00Z",
+   "verified": {
+    "agency": "FL511 (FDOT)",
+    "url": "https://fl511.com",
+    "kind": "feed",
+    "publishedAt": "2026-11-05T18:50:00Z"
    },
    "awaitingOfficial": false,
    "missingSince": null,
@@ -489,6 +498,76 @@
   }
  ],
  "reopened": [
+  {
+   "fullClosure": false,
+   "lanes": "Roadway Open",
+   "lat": 28.4771180281072,
+   "layer": "FHP",
+   "lng": -80.7734078639824,
+   "reported": "2026-11-05T16:55:38Z",
+   "road": "FAY BLVD",
+   "roadShort": "Fay Blvd",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "spot": "at Lindsay Ave",
+   "status": "caution",
+   "title": "MVC at FAY BLVD x[LINDSAY AVE] [COCOA] (Roadway Open)",
+   "where": "Fay Blvd at Lindsay Ave",
+   "id": "brevard:fhp:20261105165538-a3e2d543",
+   "updated": "2026-11-05T16:55:38Z",
+   "lastReported": "2026-11-05T16:55:38Z",
+   "firstReported": "2026-11-05T16:55:38Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-05T16:55:38Z"
+   },
+   "reopenedAt": "2026-11-05T19:00:49Z",
+   "evidence": {
+    "agency": "Florida Highway Patrol",
+    "kind": "feed-dropped",
+    "missingSince": "2026-11-05T18:45:43Z",
+    "reopenedAt": "2026-11-05T19:00:49Z",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
+   },
+   "stillReported": []
+  },
+  {
+   "fullClosure": false,
+   "lanes": "No Road Block",
+   "lat": 28.1891382213439,
+   "layer": "FHP",
+   "lng": -80.7070549389591,
+   "reported": "2026-11-05T06:29:47Z",
+   "road": "I-95 SB [MM188]",
+   "roadShort": "I-95 Sb [MM188]",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "spot": "at Mm188",
+   "status": "caution",
+   "title": "MVC W/ And Roadblock at I-95 SB [MM188] x[MM188] [MELBOURNE] (No Road Block)",
+   "where": "I-95 Sb [MM188] at Mm188",
+   "id": "brevard:fhp:20261105062947-7696869c",
+   "updated": "2026-11-05T06:29:47Z",
+   "lastReported": "2026-11-05T06:29:47Z",
+   "firstReported": "2026-11-05T06:29:47Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-05T06:29:47Z"
+   },
+   "reopenedAt": "2026-11-05T19:00:49Z",
+   "evidence": {
+    "agency": "Florida Highway Patrol",
+    "kind": "feed-dropped",
+    "missingSince": "2026-11-05T18:45:43Z",
+    "reopenedAt": "2026-11-05T19:00:49Z",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
+   },
+   "stillReported": []
+  },
   {
    "from": "Office Park Pl",
    "fullClosure": false,
