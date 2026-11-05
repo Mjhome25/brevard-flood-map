@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-05T19:00:46Z",
+ "generated": "2026-11-05T19:15:31Z",
  "errors": [],
  "items": [
   {
@@ -234,37 +234,31 @@
   {
    "fullClosure": false,
    "lanes": "No Roadblock",
-   "lat": 28.2278811594203,
+   "lat": 28.36653609574,
    "layer": "FHP",
-   "lng": -80.678931195788,
-   "reported": "2026-11-05T17:38:58Z",
-   "road": "N WICKHAM RD",
-   "roadShort": "N Wickham Rd",
+   "lng": -80.700397339757,
+   "reported": "2026-11-05T07:06:35Z",
+   "road": "MINNA LN",
+   "roadShort": "Minna Ln",
    "source": "FHP live CAD",
    "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-   "spot": "at Suntree Blvd",
+   "spot": "at N Courtenay Pkwy",
    "status": "caution",
-   "title": "MVC at N WICKHAM RD x[SUNTREE BLVD] [MELBOURNE] (No Roadblock)",
-   "where": "N Wickham Rd at Suntree Blvd",
-   "id": "brevard:fhp:20261105173858-daccc08d",
-   "updated": "2026-11-05T17:38:58Z",
-   "lastReported": "2026-11-05T17:38:58Z",
-   "firstReported": "2026-11-05T17:38:58Z",
+   "title": "MVC at MINNA LN x[N COURTENAY PKWY] [MERRITT ISLAND] (No Roadblock)",
+   "where": "Minna Ln at N Courtenay Pkwy",
+   "id": "brevard:fhp:20261105070635-bab8abfa",
+   "updated": "2026-11-05T07:06:35Z",
+   "lastReported": "2026-11-05T07:06:35Z",
+   "firstReported": "2026-11-05T07:06:35Z",
    "verified": {
     "agency": "Florida Highway Patrol",
     "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
     "kind": "feed",
-    "publishedAt": "2026-11-05T17:38:58Z"
+    "publishedAt": "2026-11-05T07:06:35Z"
    },
-   "awaitingOfficial": true,
-   "missingSince": "2026-11-05T19:00:49Z",
-   "recheck": [],
-   "noLongerListed": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "since": "2026-11-05T19:00:49Z",
-    "wasClosed": false
-   }
+   "awaitingOfficial": false,
+   "missingSince": null,
+   "recheck": []
   },
   {
    "dir": "both directions",
@@ -498,6 +492,41 @@
   }
  ],
  "reopened": [
+  {
+   "fullClosure": false,
+   "lanes": "No Roadblock",
+   "lat": 28.2278811594203,
+   "layer": "FHP",
+   "lng": -80.678931195788,
+   "reported": "2026-11-05T17:38:58Z",
+   "road": "N WICKHAM RD",
+   "roadShort": "N Wickham Rd",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "spot": "at Suntree Blvd",
+   "status": "caution",
+   "title": "MVC at N WICKHAM RD x[SUNTREE BLVD] [MELBOURNE] (No Roadblock)",
+   "where": "N Wickham Rd at Suntree Blvd",
+   "id": "brevard:fhp:20261105173858-daccc08d",
+   "updated": "2026-11-05T17:38:58Z",
+   "lastReported": "2026-11-05T17:38:58Z",
+   "firstReported": "2026-11-05T17:38:58Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-05T17:38:58Z"
+   },
+   "reopenedAt": "2026-11-05T19:15:37Z",
+   "evidence": {
+    "agency": "Florida Highway Patrol",
+    "kind": "feed-dropped",
+    "missingSince": "2026-11-05T19:00:49Z",
+    "reopenedAt": "2026-11-05T19:15:37Z",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
+   },
+   "stillReported": []
+  },
   {
    "fullClosure": false,
    "lanes": "Roadway Open",
