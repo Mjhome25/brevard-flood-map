@@ -1,7 +1,7 @@
 {
- "generated": "2026-11-05T21:45:36Z",
+ "generated": "2026-11-05T22:01:22Z",
  "errors": [
-  "FL511 map locations: 3 report(s) without a pin"
+  "FL511 map locations: 1 report(s) without a pin"
  ],
  "items": [
   {
@@ -28,6 +28,55 @@
     "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
     "kind": "feed",
     "publishedAt": "2026-11-05T09:23:13Z"
+   },
+   "awaitingOfficial": false,
+   "missingSince": null,
+   "recheck": []
+  },
+  {
+   "from": "Artemis Blvd",
+   "fullClosure": false,
+   "lanes": "Roadblock",
+   "lat": 28.3832462889767,
+   "layer": "FHP",
+   "line": [
+    [
+     28.381552,
+     -80.702587
+    ],
+    [
+     28.383236,
+     -80.702718
+    ],
+    [
+     28.383369,
+     -80.702728
+    ],
+    [
+     28.385168,
+     -80.70279
+    ]
+   ],
+   "lng": -80.7025426082624,
+   "reported": "2026-11-05T09:51:42Z",
+   "road": "N COURTENAY PKWY",
+   "roadShort": "N Courtenay Pkwy",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "spot": "at Alma Blvd",
+   "status": "closed",
+   "title": "MVC W/Roadblock at N COURTENAY PKWY x[ALMA BLVD] [MERRITT ISLAND] (Roadblock)",
+   "to": "Diana Blvd",
+   "where": "N Courtenay Pkwy at Alma Blvd",
+   "id": "brevard:fhp:20261105095142-94d6684c",
+   "updated": "2026-11-05T09:51:42Z",
+   "lastReported": "2026-11-05T09:51:42Z",
+   "firstReported": "2026-11-05T09:51:42Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-05T09:51:42Z"
    },
    "awaitingOfficial": false,
    "missingSince": null,
@@ -106,8 +155,8 @@
    "title": "MVC on I-95 South, at MM 190. 2 Right lanes blocked",
    "where": "I-95 SB at MM 190",
    "id": "brevard:fl511:943231",
-   "updated": "2026-11-05T21:10:00Z",
-   "lastReported": "2026-11-05T21:10:00Z",
+   "updated": "2026-11-05T21:46:00Z",
+   "lastReported": "2026-11-05T21:46:00Z",
    "firstReported": "2026-11-05T18:42:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
@@ -211,9 +260,15 @@
     "kind": "feed",
     "publishedAt": "2026-11-05T21:12:00Z"
    },
-   "awaitingOfficial": false,
-   "missingSince": null,
-   "recheck": []
+   "awaitingOfficial": true,
+   "missingSince": "2026-11-05T22:01:28Z",
+   "recheck": [],
+   "noLongerListed": {
+    "agency": "FL511 (FDOT)",
+    "url": "https://fl511.com",
+    "since": "2026-11-05T22:01:28Z",
+    "wasClosed": true
+   }
   },
   {
    "dir": "SB",
@@ -323,9 +378,15 @@
     "kind": "feed",
     "publishedAt": "2026-11-05T21:34:00Z"
    },
-   "awaitingOfficial": false,
-   "missingSince": null,
-   "recheck": []
+   "awaitingOfficial": true,
+   "missingSince": "2026-11-05T22:01:28Z",
+   "recheck": [],
+   "noLongerListed": {
+    "agency": "FL511 (FDOT)",
+    "url": "https://fl511.com",
+    "since": "2026-11-05T22:01:28Z",
+    "wasClosed": false
+   }
   },
   {
    "dir": "SB",
@@ -374,6 +435,61 @@
     "url": "https://fl511.com",
     "kind": "feed",
     "publishedAt": "2026-11-05T21:38:00Z"
+   },
+   "awaitingOfficial": true,
+   "missingSince": "2026-11-05T22:01:28Z",
+   "recheck": [],
+   "noLongerListed": {
+    "agency": "FL511 (FDOT)",
+    "url": "https://fl511.com",
+    "since": "2026-11-05T22:01:28Z",
+    "wasClosed": false
+   }
+  },
+  {
+   "dir": "SB",
+   "from": "Laurie St",
+   "fullClosure": true,
+   "lanes": "All lanes closed",
+   "lat": 28.1119111075952,
+   "layer": "Closures",
+   "line": [
+    [
+     28.114551,
+     -80.620337
+    ],
+    [
+     28.113961,
+     -80.619988
+    ],
+    [
+     28.11191,
+     -80.618949
+    ],
+    [
+     28.111904,
+     -80.618946
+    ]
+   ],
+   "lng": -80.6189452922562,
+   "reported": "2026-11-05T21:58:00Z",
+   "road": "US-1",
+   "roadShort": "US-1",
+   "source": "FL511 (FDOT)",
+   "sourceUrl": "https://fl511.com",
+   "status": "closed",
+   "title": "MVC on US-1 Southbound At Shull Ave. All lanes closed.",
+   "to": "Shull Ave",
+   "where": "US-1 SB",
+   "id": "brevard:fl511:943753",
+   "updated": "2026-11-05T22:00:00Z",
+   "lastReported": "2026-11-05T22:00:00Z",
+   "firstReported": "2026-11-05T22:00:00Z",
+   "verified": {
+    "agency": "FL511 (FDOT)",
+    "url": "https://fl511.com",
+    "kind": "feed",
+    "publishedAt": "2026-11-05T22:00:00Z"
    },
    "awaitingOfficial": false,
    "missingSince": null,
@@ -2260,76 +2376,6 @@
     "kind": "feed-dropped",
     "missingSince": "2026-11-04T22:00:48Z",
     "reopenedAt": "2026-11-04T22:15:43Z",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
-   },
-   "stillReported": []
-  },
-  {
-   "fullClosure": false,
-   "lanes": "No Roadblock",
-   "lat": 28.0791099868248,
-   "layer": "FHP",
-   "lng": -80.7002917177344,
-   "reported": "2026-11-04T07:33:02Z",
-   "road": "W NEW HAVEN AVE [4450]",
-   "roadShort": "W New Haven Ave [4450]",
-   "source": "FHP live CAD",
-   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-   "spot": "at S John Rodes Blvd",
-   "status": "caution",
-   "title": "MVC at W NEW HAVEN AVE [4450] x[S JOHN RODES BLVD] [MELBOURNE] (No Roadblock)",
-   "where": "W New Haven Ave [4450] at S John Rodes Blvd",
-   "id": "brevard:fhp:20261104073302-f4186787",
-   "updated": "2026-11-04T07:33:02Z",
-   "lastReported": "2026-11-04T07:33:02Z",
-   "firstReported": "2026-11-04T07:33:02Z",
-   "verified": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "kind": "feed",
-    "publishedAt": "2026-11-04T07:33:02Z"
-   },
-   "reopenedAt": "2026-11-04T22:00:48Z",
-   "evidence": {
-    "agency": "Florida Highway Patrol",
-    "kind": "feed-dropped",
-    "missingSince": "2026-11-04T21:45:44Z",
-    "reopenedAt": "2026-11-04T22:00:48Z",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
-   },
-   "stillReported": []
-  },
-  {
-   "fullClosure": false,
-   "lanes": "Roadway Clear",
-   "lat": 28.3572782345191,
-   "layer": "FHP",
-   "lng": -80.6851542134412,
-   "reported": "2026-11-04T09:11:50Z",
-   "road": "E MERRITT ISLAND CSWY [770]",
-   "roadShort": "E Merritt Island Cswy [770]",
-   "source": "FHP live CAD",
-   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-   "spot": "at Borman Dr",
-   "status": "caution",
-   "title": "MVC at E MERRITT ISLAND CSWY [770] x[BORMAN DR] [MERRITT ISLAND] (Roadway Clear)",
-   "where": "E Merritt Island Cswy [770] at Borman Dr",
-   "id": "brevard:fhp:20261104091150-ea0e8483",
-   "updated": "2026-11-04T09:11:50Z",
-   "lastReported": "2026-11-04T09:11:50Z",
-   "firstReported": "2026-11-04T09:11:50Z",
-   "verified": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "kind": "feed",
-    "publishedAt": "2026-11-04T09:11:50Z"
-   },
-   "reopenedAt": "2026-11-04T21:45:44Z",
-   "evidence": {
-    "agency": "Florida Highway Patrol",
-    "kind": "feed-dropped",
-    "missingSince": "2026-11-04T21:31:58Z",
-    "reopenedAt": "2026-11-04T21:45:44Z",
     "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
    },
    "stillReported": []
