@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-05T04:31:30Z",
+ "generated": "2026-11-05T04:45:33Z",
  "errors": [],
  "items": [
   {
@@ -178,41 +178,6 @@
    "recheck": []
   },
   {
-   "fullClosure": false,
-   "lanes": "No Roadblock",
-   "lat": 28.0455935309618,
-   "layer": "FHP",
-   "lng": -80.666320329995,
-   "reported": "2026-11-04T16:00:52Z",
-   "road": "I-95 SB [MM177.5]",
-   "roadShort": "I-95 Sb [MM177.5]",
-   "source": "FHP live CAD",
-   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-   "spot": "at Mm177.5",
-   "status": "caution",
-   "title": "MVC at I-95 SB [MM177.5] x[MM177.5] [MELBOURNE] (No Roadblock)",
-   "where": "I-95 Sb [MM177.5] at Mm177.5",
-   "id": "brevard:fhp:20261104160052-856999fd",
-   "updated": "2026-11-04T16:00:52Z",
-   "lastReported": "2026-11-04T16:00:52Z",
-   "firstReported": "2026-11-04T16:00:52Z",
-   "verified": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "kind": "feed",
-    "publishedAt": "2026-11-04T16:00:52Z"
-   },
-   "awaitingOfficial": true,
-   "missingSince": "2026-11-05T04:31:36Z",
-   "recheck": [],
-   "noLongerListed": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "since": "2026-11-05T04:31:36Z",
-    "wasClosed": false
-   }
-  },
-  {
    "dir": "both directions",
    "fullClosure": true,
    "lanes": "All lanes closed",
@@ -388,6 +353,41 @@
   }
  ],
  "reopened": [
+  {
+   "fullClosure": false,
+   "lanes": "No Roadblock",
+   "lat": 28.0455935309618,
+   "layer": "FHP",
+   "lng": -80.666320329995,
+   "reported": "2026-11-04T16:00:52Z",
+   "road": "I-95 SB [MM177.5]",
+   "roadShort": "I-95 Sb [MM177.5]",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "spot": "at Mm177.5",
+   "status": "caution",
+   "title": "MVC at I-95 SB [MM177.5] x[MM177.5] [MELBOURNE] (No Roadblock)",
+   "where": "I-95 Sb [MM177.5] at Mm177.5",
+   "id": "brevard:fhp:20261104160052-856999fd",
+   "updated": "2026-11-04T16:00:52Z",
+   "lastReported": "2026-11-04T16:00:52Z",
+   "firstReported": "2026-11-04T16:00:52Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-04T16:00:52Z"
+   },
+   "reopenedAt": "2026-11-05T04:45:38Z",
+   "evidence": {
+    "agency": "Florida Highway Patrol",
+    "kind": "feed-dropped",
+    "missingSince": "2026-11-05T04:31:36Z",
+    "reopenedAt": "2026-11-05T04:45:38Z",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
+   },
+   "stillReported": []
+  },
   {
    "dir": "EB",
    "fullClosure": false,
