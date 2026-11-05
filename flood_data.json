@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-05T16:31:29Z",
+ "generated": "2026-11-05T16:45:32Z",
  "errors": [],
  "items": [
   {
@@ -201,9 +201,15 @@
     "kind": "feed",
     "publishedAt": "2026-11-05T16:10:40Z"
    },
-   "awaitingOfficial": false,
-   "missingSince": null,
-   "recheck": []
+   "awaitingOfficial": true,
+   "missingSince": "2026-11-05T16:45:40Z",
+   "recheck": [],
+   "noLongerListed": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "since": "2026-11-05T16:45:40Z",
+    "wasClosed": false
+   }
   },
   {
    "dir": "both directions",
@@ -6266,41 +6272,6 @@
     "kind": "feed-dropped",
     "missingSince": "2026-11-04T17:31:45Z",
     "reopenedAt": "2026-11-04T19:31:34Z",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
-   },
-   "stillReported": []
-  },
-  {
-   "fullClosure": false,
-   "lanes": "Partial Roadblock",
-   "lat": 28.4762537241985,
-   "layer": "FHP",
-   "lng": -80.7792065608759,
-   "reported": "2026-11-04T14:40:49Z",
-   "road": "FAY BLVD",
-   "roadShort": "Fay Blvd",
-   "source": "FHP live CAD",
-   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-   "spot": "at Curtis Blvd",
-   "status": "caution",
-   "title": "MVC W/Roadblock at FAY BLVD x[CURTIS BLVD] [COCOA] (Partial Roadblock)",
-   "where": "Fay Blvd at Curtis Blvd",
-   "id": "brevard:fhp:20261104144049-825cb419",
-   "updated": "2026-11-04T14:40:49Z",
-   "lastReported": "2026-11-04T14:40:49Z",
-   "firstReported": "2026-11-04T14:40:49Z",
-   "verified": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "kind": "feed",
-    "publishedAt": "2026-11-04T14:40:49Z"
-   },
-   "reopenedAt": "2026-11-04T16:31:45Z",
-   "evidence": {
-    "agency": "Florida Highway Patrol",
-    "kind": "fhp-dropped",
-    "missingSince": "2026-11-04T16:15:37Z",
-    "reopenedAt": "2026-11-04T16:31:45Z",
     "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
    },
    "stillReported": []
