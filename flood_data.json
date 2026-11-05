@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-05T00:01:00Z",
+ "generated": "2026-11-05T00:15:45Z",
  "errors": [],
  "items": [
   {
@@ -264,8 +264,8 @@
    "title": "MVC on I-95 South, beyond MM 175. Right shoulder blocked",
    "where": "I-95 SB beyond MM 175",
    "id": "brevard:fl511:941494",
-   "updated": "2026-11-04T23:27:00Z",
-   "lastReported": "2026-11-04T23:27:00Z",
+   "updated": "2026-11-05T00:03:00Z",
+   "lastReported": "2026-11-05T00:03:00Z",
    "firstReported": "2026-11-04T21:25:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
@@ -279,52 +279,6 @@
     "source changed its lane description",
     "source changed the closed stretch"
    ]
-  },
-  {
-   "dir": "NB",
-   "fullClosure": false,
-   "lanes": "Left lane blocked",
-   "lat": 28.064037,
-   "layer": "Incidents",
-   "line": [
-    [
-     28.06392,
-     -80.62132
-    ],
-    [
-     28.06404,
-     -80.62132
-    ]
-   ],
-   "lng": -80.621372,
-   "reported": "2026-11-04T23:06:00Z",
-   "road": "SR-507",
-   "roadShort": "SR-507",
-   "source": "FL511 (FDOT)",
-   "sourceUrl": "https://fl511.com",
-   "spot": "at University Blvd",
-   "status": "caution",
-   "title": "MVC on SR-507 North, at University Blvd. Left lane blocked",
-   "where": "SR-507 NB at University Blvd",
-   "id": "brevard:fl511:941698",
-   "updated": "2026-11-04T23:07:00Z",
-   "lastReported": "2026-11-04T23:07:00Z",
-   "firstReported": "2026-11-04T23:07:00Z",
-   "verified": {
-    "agency": "FL511 (FDOT)",
-    "url": "https://fl511.com",
-    "kind": "feed",
-    "publishedAt": "2026-11-04T23:07:00Z"
-   },
-   "awaitingOfficial": true,
-   "missingSince": "2026-11-05T00:01:05Z",
-   "recheck": [],
-   "noLongerListed": {
-    "agency": "FL511 (FDOT)",
-    "url": "https://fl511.com",
-    "since": "2026-11-05T00:01:05Z",
-    "wasClosed": false
-   }
   },
   {
    "dir": "SB",
@@ -476,6 +430,52 @@
   }
  ],
  "reopened": [
+  {
+   "dir": "NB",
+   "fullClosure": false,
+   "lanes": "Left lane blocked",
+   "lat": 28.064037,
+   "layer": "Incidents",
+   "line": [
+    [
+     28.06392,
+     -80.62132
+    ],
+    [
+     28.06404,
+     -80.62132
+    ]
+   ],
+   "lng": -80.621372,
+   "reported": "2026-11-04T23:06:00Z",
+   "road": "SR-507",
+   "roadShort": "SR-507",
+   "source": "FL511 (FDOT)",
+   "sourceUrl": "https://fl511.com",
+   "spot": "at University Blvd",
+   "status": "caution",
+   "title": "MVC on SR-507 North, at University Blvd. Left lane blocked",
+   "where": "SR-507 NB at University Blvd",
+   "id": "brevard:fl511:941698",
+   "updated": "2026-11-04T23:07:00Z",
+   "lastReported": "2026-11-04T23:07:00Z",
+   "firstReported": "2026-11-04T23:07:00Z",
+   "verified": {
+    "agency": "FL511 (FDOT)",
+    "url": "https://fl511.com",
+    "kind": "feed",
+    "publishedAt": "2026-11-04T23:07:00Z"
+   },
+   "reopenedAt": "2026-11-05T00:15:49Z",
+   "evidence": {
+    "agency": "FL511 (FDOT)",
+    "kind": "feed-dropped",
+    "missingSince": "2026-11-05T00:01:05Z",
+    "reopenedAt": "2026-11-05T00:15:49Z",
+    "url": "https://fl511.com"
+   },
+   "stillReported": []
+  },
   {
    "fullClosure": false,
    "lat": 28.3695437241985,
