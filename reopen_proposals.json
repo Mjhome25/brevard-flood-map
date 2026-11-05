@@ -98,5 +98,85 @@
   "quoteSha256": "5a84f3b7f95e244f207f901bc7bcff0ec38499de8e8c2ce8c79d8e9426f1f138",
   "time": "2026-11-03T15:45:00Z",
   "found": "2026-11-04T15:31:54Z"
+ },
+ {
+  "id": "man-minton-192",
+  "where": "Minton Rd southbound at US 192 (W New Haven Ave)",
+  "partial": false,
+  "sourceHost": "westmelbourne.gov",
+  "sourceUrlSha256": "30fed4362e60bbcb96b99956e22d0074dc7b5757069196e6ca1cd2829ae18284",
+  "quoteSha256": "a3fefa003b5b713e0efbbb95938e785244fdf45610c1213dcf0b828fd738c665",
+  "time": "2026-11-04T18:00:00Z",
+  "found": "2026-11-05T02:31:58Z"
+ },
+ {
+  "id": "man-minton-helen",
+  "where": "Minton Rd northbound at Helen St",
+  "partial": false,
+  "sourceHost": "westmelbourne.gov",
+  "sourceUrlSha256": "30fed4362e60bbcb96b99956e22d0074dc7b5757069196e6ca1cd2829ae18284",
+  "quoteSha256": "a3fefa003b5b713e0efbbb95938e785244fdf45610c1213dcf0b828fd738c665",
+  "time": "2026-11-04T18:00:00Z",
+  "found": "2026-11-05T02:31:58Z"
+ },
+ {
+  "id": "man-us-192-w-new-haven-ave-both-directions-f",
+  "where": "US 192 (W New Haven Ave), both directions, from Coastal Ln to Wickham Rd/Minton Rd, West Melbourne",
+  "partial": false,
+  "sourceHost": "westmelbourne.gov",
+  "sourceUrlSha256": "30fed4362e60bbcb96b99956e22d0074dc7b5757069196e6ca1cd2829ae18284",
+  "quoteSha256": "a3fefa003b5b713e0efbbb95938e785244fdf45610c1213dcf0b828fd738c665",
+  "time": "2026-11-04T18:00:00Z",
+  "found": "2026-11-05T02:31:58Z"
+ },
+ {
+  "id": "man-haven-dr-at-us-192-w-new-haven-ave-west-",
+  "where": "Haven Dr at US 192 (W New Haven Ave), West Melbourne",
+  "partial": false,
+  "sourceHost": "westmelbourne.gov",
+  "sourceUrlSha256": "30fed4362e60bbcb96b99956e22d0074dc7b5757069196e6ca1cd2829ae18284",
+  "quoteSha256": "a3fefa003b5b713e0efbbb95938e785244fdf45610c1213dcf0b828fd738c665",
+  "time": "2026-11-04T18:00:00Z",
+  "found": "2026-11-05T02:31:58Z"
+ },
+ {
+  "id": "man-haven-dr-at-morris-ct-west-melbourne",
+  "where": "Haven Dr at Morris Ct, West Melbourne",
+  "partial": false,
+  "sourceHost": "westmelbourne.gov",
+  "sourceUrlSha256": "30fed4362e60bbcb96b99956e22d0074dc7b5757069196e6ca1cd2829ae18284",
+  "quoteSha256": "a3fefa003b5b713e0efbbb95938e785244fdf45610c1213dcf0b828fd738c665",
+  "time": "2026-11-04T18:00:00Z",
+  "found": "2026-11-05T02:31:58Z"
+ },
+ {
+  "id": "man-minton-rd-at-norfolk-pkwy",
+  "where": "Minton Rd at Norfolk Pkwy",
+  "partial": false,
+  "sourceHost": "westmelbourne.gov",
+  "sourceUrlSha256": "30fed4362e60bbcb96b99956e22d0074dc7b5757069196e6ca1cd2829ae18284",
+  "quoteSha256": "a3fefa003b5b713e0efbbb95938e785244fdf45610c1213dcf0b828fd738c665",
+  "time": "2026-11-04T18:00:00Z",
+  "found": "2026-11-05T02:31:58Z"
+ },
+ {
+  "id": "man-minton-rd-from-calvary-chapel-melbourne-",
+  "where": "Minton Rd from Calvary Chapel Melbourne to Carriage Gate",
+  "partial": false,
+  "sourceHost": "westmelbourne.gov",
+  "sourceUrlSha256": "30fed4362e60bbcb96b99956e22d0074dc7b5757069196e6ca1cd2829ae18284",
+  "quoteSha256": "a3fefa003b5b713e0efbbb95938e785244fdf45610c1213dcf0b828fd738c665",
+  "time": "2026-11-04T18:00:00Z",
+  "found": "2026-11-05T02:31:58Z"
+ },
+ {
+  "id": "man-minton-rd-nb-at-henry-ave",
+  "where": "Minton Rd NB at Henry Ave",
+  "partial": false,
+  "sourceHost": "westmelbourne.gov",
+  "sourceUrlSha256": "30fed4362e60bbcb96b99956e22d0074dc7b5757069196e6ca1cd2829ae18284",
+  "quoteSha256": "a3fefa003b5b713e0efbbb95938e785244fdf45610c1213dcf0b828fd738c665",
+  "time": "2026-11-04T18:00:00Z",
+  "found": "2026-11-05T02:31:58Z"
  }
 ]
