@@ -1,45 +1,7 @@
 {
- "generated": "2026-11-05T20:45:35Z",
+ "generated": "2026-11-05T21:01:00Z",
  "errors": [],
  "items": [
-  {
-   "fullClosure": false,
-   "lanes": "Road Block",
-   "lat": 28.2029154896794,
-   "layer": "FHP",
-   "lng": -80.7106471833292,
-   "reported": "2026-11-05T06:28:55Z",
-   "road": "I-95 SB [MM189]",
-   "roadShort": "I-95 Sb [MM189]",
-   "source": "FHP live CAD",
-   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-   "spot": "at Mm189",
-   "status": "closed",
-   "title": "MVC W/Roadblock at I-95 SB [MM189] x[MM189] [MELBOURNE] (Road Block)",
-   "where": "I-95 Sb [MM189] at Mm189",
-   "id": "brevard:fhp:20261105062855-b2d937f8",
-   "updated": "2026-11-05T06:28:55Z",
-   "lastReported": "2026-11-05T06:28:55Z",
-   "firstReported": "2026-11-05T06:28:55Z",
-   "verified": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "kind": "feed",
-    "publishedAt": "2026-11-05T06:28:55Z"
-   },
-   "awaitingOfficial": true,
-   "missingSince": "2026-11-05T20:45:38Z",
-   "recheck": [
-    "source shows reduced impact",
-    "source changed its lane description"
-   ],
-   "noLongerListed": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "since": "2026-11-05T20:45:38Z",
-    "wasClosed": true
-   }
-  },
   {
    "from": "N Highway 1",
    "fullClosure": false,
@@ -283,6 +245,41 @@
   }
  ],
  "reopened": [
+  {
+   "fullClosure": false,
+   "lanes": "Road Block",
+   "lat": 28.2029154896794,
+   "layer": "FHP",
+   "lng": -80.7106471833292,
+   "reported": "2026-11-05T06:28:55Z",
+   "road": "I-95 SB [MM189]",
+   "roadShort": "I-95 Sb [MM189]",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "spot": "at Mm189",
+   "status": "closed",
+   "title": "MVC W/Roadblock at I-95 SB [MM189] x[MM189] [MELBOURNE] (Road Block)",
+   "where": "I-95 Sb [MM189] at Mm189",
+   "id": "brevard:fhp:20261105062855-b2d937f8",
+   "updated": "2026-11-05T06:28:55Z",
+   "lastReported": "2026-11-05T06:28:55Z",
+   "firstReported": "2026-11-05T06:28:55Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-05T06:28:55Z"
+   },
+   "reopenedAt": "2026-11-05T21:01:06Z",
+   "evidence": {
+    "agency": "Florida Highway Patrol",
+    "kind": "feed-dropped",
+    "missingSince": "2026-11-05T20:45:38Z",
+    "reopenedAt": "2026-11-05T21:01:06Z",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
+   },
+   "stillReported": []
+  },
   {
    "fullClosure": false,
    "lanes": "No Roadblock",
