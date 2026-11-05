@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-05T16:45:32Z",
+ "generated": "2026-11-05T17:00:51Z",
  "errors": [],
  "items": [
   {
@@ -178,38 +178,32 @@
   },
   {
    "fullClosure": false,
-   "lanes": "Wire Debris In The Left Lane",
-   "lat": 28.2980309661836,
+   "lanes": "Source said \"Roadway Open\" (2026-11-05 16:55 UTC); not a verified reopening",
+   "lat": 28.4771180281072,
    "layer": "FHP",
-   "lng": -80.7517870696771,
-   "reported": "2026-11-05T16:10:40Z",
-   "road": "I-95 SB [MM196]",
-   "roadShort": "I-95 Sb [MM196]",
+   "lng": -80.7734078639824,
+   "reported": "2026-11-05T16:55:38Z",
+   "road": "FAY BLVD",
+   "roadShort": "Fay Blvd",
    "source": "FHP live CAD",
    "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-   "spot": "at Mm196",
+   "spot": "at Lindsay Ave",
    "status": "caution",
-   "title": "Roadway Debris/Object at I-95 SB [MM196] x[MM196] [ROCKLEDGE] (Wire Debris In The Left Lane)",
-   "where": "I-95 Sb [MM196] at Mm196",
-   "id": "brevard:fhp:20261105161040-e5978d59",
-   "updated": "2026-11-05T16:10:40Z",
-   "lastReported": "2026-11-05T16:10:40Z",
-   "firstReported": "2026-11-05T16:10:40Z",
+   "title": "MVC at FAY BLVD x[LINDSAY AVE] [COCOA] (Roadway Open)",
+   "where": "Fay Blvd at Lindsay Ave",
+   "id": "brevard:fhp:20261105165538-a3e2d543",
+   "updated": "2026-11-05T16:55:38Z",
+   "lastReported": "2026-11-05T16:55:38Z",
+   "firstReported": "2026-11-05T16:55:38Z",
    "verified": {
     "agency": "Florida Highway Patrol",
     "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
     "kind": "feed",
-    "publishedAt": "2026-11-05T16:10:40Z"
+    "publishedAt": "2026-11-05T16:55:38Z"
    },
-   "awaitingOfficial": true,
-   "missingSince": "2026-11-05T16:45:40Z",
-   "recheck": [],
-   "noLongerListed": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "since": "2026-11-05T16:45:40Z",
-    "wasClosed": false
-   }
+   "awaitingOfficial": false,
+   "missingSince": null,
+   "recheck": []
   },
   {
    "dir": "both directions",
@@ -228,8 +222,8 @@
    "title": "Flooding on Sunlake Rd Both Directions At SR-507 Northbound. All lanes closed.",
    "where": "Sunlake Rd both directions At SR-507 Northbound",
    "id": "brevard:fl511:939237",
-   "updated": "2026-11-05T14:42:00Z",
-   "lastReported": "2026-11-05T14:42:00Z",
+   "updated": "2026-11-05T16:50:00Z",
+   "lastReported": "2026-11-05T16:50:00Z",
    "firstReported": "2026-11-03T17:58:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
@@ -343,6 +337,41 @@
   }
  ],
  "reopened": [
+  {
+   "fullClosure": false,
+   "lanes": "Wire Debris In The Left Lane",
+   "lat": 28.2980309661836,
+   "layer": "FHP",
+   "lng": -80.7517870696771,
+   "reported": "2026-11-05T16:10:40Z",
+   "road": "I-95 SB [MM196]",
+   "roadShort": "I-95 Sb [MM196]",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "spot": "at Mm196",
+   "status": "caution",
+   "title": "Roadway Debris/Object at I-95 SB [MM196] x[MM196] [ROCKLEDGE] (Wire Debris In The Left Lane)",
+   "where": "I-95 Sb [MM196] at Mm196",
+   "id": "brevard:fhp:20261105161040-e5978d59",
+   "updated": "2026-11-05T16:10:40Z",
+   "lastReported": "2026-11-05T16:10:40Z",
+   "firstReported": "2026-11-05T16:10:40Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-05T16:10:40Z"
+   },
+   "reopenedAt": "2026-11-05T17:00:55Z",
+   "evidence": {
+    "agency": "Florida Highway Patrol",
+    "kind": "feed-dropped",
+    "missingSince": "2026-11-05T16:45:40Z",
+    "reopenedAt": "2026-11-05T17:00:55Z",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
+   },
+   "stillReported": []
+  },
   {
    "fullClosure": false,
    "lanes": "Debris In Roadway, Use Caution",
