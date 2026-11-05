@@ -1,42 +1,7 @@
 {
- "generated": "2026-11-05T22:31:49Z",
+ "generated": "2026-11-05T22:45:36Z",
  "errors": [],
  "items": [
-  {
-   "fullClosure": false,
-   "lanes": "No Road Block",
-   "lat": 27.997144896794,
-   "layer": "FHP",
-   "lng": -80.6296244954525,
-   "reported": "2026-11-05T09:23:13Z",
-   "road": "I-95 SB [MM173]",
-   "roadShort": "I-95 Sb [MM173]",
-   "source": "FHP live CAD",
-   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-   "spot": "at Mm173",
-   "status": "caution",
-   "title": "MVC at I-95 SB [MM173] x[MM173] [PALM BAY] (No Road Block)",
-   "where": "I-95 Sb [MM173] at Mm173",
-   "id": "brevard:fhp:20261105092313-42189524",
-   "updated": "2026-11-05T09:23:13Z",
-   "lastReported": "2026-11-05T09:23:13Z",
-   "firstReported": "2026-11-05T09:23:13Z",
-   "verified": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "kind": "feed",
-    "publishedAt": "2026-11-05T09:23:13Z"
-   },
-   "awaitingOfficial": true,
-   "missingSince": "2026-11-05T22:31:54Z",
-   "recheck": [],
-   "noLongerListed": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "since": "2026-11-05T22:31:54Z",
-    "wasClosed": false
-   }
-  },
   {
    "from": "Artemis Blvd",
    "fullClosure": false,
@@ -217,8 +182,8 @@
    "title": "MVC on I-95 South, at MM 190. 2 Right lanes blocked",
    "where": "I-95 SB at MM 190",
    "id": "brevard:fl511:943231",
-   "updated": "2026-11-05T21:46:00Z",
-   "lastReported": "2026-11-05T21:46:00Z",
+   "updated": "2026-11-05T22:33:00Z",
+   "lastReported": "2026-11-05T22:33:00Z",
    "firstReported": "2026-11-05T18:42:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
@@ -231,72 +196,6 @@
    "recheck": [
     "source changed its lane description"
    ]
-  },
-  {
-   "dir": "SB",
-   "fullClosure": false,
-   "lanes": "Right shoulder blocked",
-   "lat": 28.009861,
-   "layer": "Incidents",
-   "line": [
-    [
-     28.00988,
-     -80.63869
-    ],
-    [
-     28.00941,
-     -80.63836
-    ],
-    [
-     28.00895,
-     -80.63803
-    ],
-    [
-     28.00826,
-     -80.63754
-    ],
-    [
-     28.00644,
-     -80.63625
-    ],
-    [
-     28.00556,
-     -80.63562
-    ],
-    [
-     28.00518,
-     -80.63534
-    ]
-   ],
-   "lng": -80.638725,
-   "reported": "2026-11-05T21:27:00Z",
-   "road": "I-95",
-   "roadShort": "I-95",
-   "source": "FL511 (FDOT)",
-   "sourceUrl": "https://fl511.com",
-   "spot": "at MM 174",
-   "status": "caution",
-   "title": "MVC on I-95 South, at MM 174. Right shoulder blocked",
-   "where": "I-95 SB at MM 174",
-   "id": "brevard:fl511:943676",
-   "updated": "2026-11-05T22:02:00Z",
-   "lastReported": "2026-11-05T22:02:00Z",
-   "firstReported": "2026-11-05T21:30:00Z",
-   "verified": {
-    "agency": "FL511 (FDOT)",
-    "url": "https://fl511.com",
-    "kind": "feed",
-    "publishedAt": "2026-11-05T21:30:00Z"
-   },
-   "awaitingOfficial": true,
-   "missingSince": "2026-11-05T22:31:54Z",
-   "recheck": [],
-   "noLongerListed": {
-    "agency": "FL511 (FDOT)",
-    "url": "https://fl511.com",
-    "since": "2026-11-05T22:31:54Z",
-    "wasClosed": false
-   }
   },
   {
    "dir": "SB",
@@ -503,6 +402,107 @@
   }
  ],
  "reopened": [
+  {
+   "dir": "SB",
+   "fullClosure": false,
+   "lanes": "Right shoulder blocked",
+   "lat": 28.009861,
+   "layer": "Incidents",
+   "line": [
+    [
+     28.00988,
+     -80.63869
+    ],
+    [
+     28.00941,
+     -80.63836
+    ],
+    [
+     28.00895,
+     -80.63803
+    ],
+    [
+     28.00826,
+     -80.63754
+    ],
+    [
+     28.00644,
+     -80.63625
+    ],
+    [
+     28.00556,
+     -80.63562
+    ],
+    [
+     28.00518,
+     -80.63534
+    ]
+   ],
+   "lng": -80.638725,
+   "reported": "2026-11-05T21:27:00Z",
+   "road": "I-95",
+   "roadShort": "I-95",
+   "source": "FL511 (FDOT)",
+   "sourceUrl": "https://fl511.com",
+   "spot": "at MM 174",
+   "status": "caution",
+   "title": "MVC on I-95 South, at MM 174. Right shoulder blocked",
+   "where": "I-95 SB at MM 174",
+   "id": "brevard:fl511:943676",
+   "updated": "2026-11-05T22:02:00Z",
+   "lastReported": "2026-11-05T22:02:00Z",
+   "firstReported": "2026-11-05T21:30:00Z",
+   "verified": {
+    "agency": "FL511 (FDOT)",
+    "url": "https://fl511.com",
+    "kind": "feed",
+    "publishedAt": "2026-11-05T21:30:00Z"
+   },
+   "reopenedAt": "2026-11-05T22:45:38Z",
+   "evidence": {
+    "agency": "FL511 (FDOT)",
+    "kind": "feed-dropped",
+    "missingSince": "2026-11-05T22:31:54Z",
+    "reopenedAt": "2026-11-05T22:45:38Z",
+    "url": "https://fl511.com"
+   },
+   "stillReported": []
+  },
+  {
+   "fullClosure": false,
+   "lanes": "No Road Block",
+   "lat": 27.997144896794,
+   "layer": "FHP",
+   "lng": -80.6296244954525,
+   "reported": "2026-11-05T09:23:13Z",
+   "road": "I-95 SB [MM173]",
+   "roadShort": "I-95 Sb [MM173]",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "spot": "at Mm173",
+   "status": "caution",
+   "title": "MVC at I-95 SB [MM173] x[MM173] [PALM BAY] (No Road Block)",
+   "where": "I-95 Sb [MM173] at Mm173",
+   "id": "brevard:fhp:20261105092313-42189524",
+   "updated": "2026-11-05T09:23:13Z",
+   "lastReported": "2026-11-05T09:23:13Z",
+   "firstReported": "2026-11-05T09:23:13Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-05T09:23:13Z"
+   },
+   "reopenedAt": "2026-11-05T22:45:38Z",
+   "evidence": {
+    "agency": "Florida Highway Patrol",
+    "kind": "feed-dropped",
+    "missingSince": "2026-11-05T22:31:54Z",
+    "reopenedAt": "2026-11-05T22:45:38Z",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
+   },
+   "stillReported": []
+  },
   {
    "dir": "SB",
    "from": "Ballard Dr",
