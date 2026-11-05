@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-05T23:31:43Z",
+ "generated": "2026-11-05T23:45:33Z",
  "errors": [],
  "items": [
   {
@@ -105,9 +105,15 @@
     "kind": "feed",
     "publishedAt": "2026-11-05T10:53:27Z"
    },
-   "awaitingOfficial": false,
-   "missingSince": null,
-   "recheck": []
+   "awaitingOfficial": true,
+   "missingSince": "2026-11-05T23:45:40Z",
+   "recheck": [],
+   "noLongerListed": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "since": "2026-11-05T23:45:40Z",
+    "wasClosed": false
+   }
   },
   {
    "fullClosure": false,
@@ -228,118 +234,47 @@
   },
   {
    "dir": "SB",
-   "from": "Laurie St",
-   "fullClosure": true,
-   "lanes": "All lanes closed",
-   "lat": 28.1119111075952,
-   "layer": "Closures",
+   "fullClosure": false,
+   "lanes": "Right shoulder blocked",
+   "lat": 28.292232,
+   "layer": "Incidents",
    "line": [
     [
-     28.114551,
-     -80.620337
+     28.29225,
+     -80.74291
     ],
     [
-     28.113961,
-     -80.619988
+     28.29221,
+     -80.74284
     ],
     [
-     28.11191,
-     -80.618949
-    ],
-    [
-     28.111904,
-     -80.618946
+     28.29197,
+     -80.7425
     ]
    ],
-   "lng": -80.6189452922562,
-   "reported": "2026-11-05T21:58:00Z",
-   "road": "US-1",
-   "roadShort": "US-1",
+   "lng": -80.742924,
+   "reported": "2026-11-05T23:34:00Z",
+   "road": "I-95",
+   "roadShort": "I-95",
    "source": "FL511 (FDOT)",
    "sourceUrl": "https://fl511.com",
-   "status": "closed",
-   "title": "MVC on US-1 Southbound At Shull Ave. All lanes closed.",
-   "to": "Shull Ave",
-   "where": "US-1 SB",
-   "id": "brevard:fl511:943753",
-   "updated": "2026-11-05T22:00:00Z",
-   "lastReported": "2026-11-05T22:00:00Z",
-   "firstReported": "2026-11-05T22:00:00Z",
+   "spot": "before MM 195/SR-519",
+   "status": "caution",
+   "title": "Police activity on I-95 South, before MM 195/SR-519. Right shoulder blocked",
+   "where": "I-95 SB before MM 195/SR-519",
+   "id": "brevard:fl511:943934",
+   "updated": "2026-11-05T23:42:00Z",
+   "lastReported": "2026-11-05T23:42:00Z",
+   "firstReported": "2026-11-05T23:42:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
     "url": "https://fl511.com",
     "kind": "feed",
-    "publishedAt": "2026-11-05T22:00:00Z"
+    "publishedAt": "2026-11-05T23:42:00Z"
    },
-   "awaitingOfficial": true,
-   "missingSince": "2026-11-05T23:31:51Z",
-   "recheck": [],
-   "noLongerListed": {
-    "agency": "FL511 (FDOT)",
-    "url": "https://fl511.com",
-    "since": "2026-11-05T23:31:51Z",
-    "wasClosed": true
-   }
-  },
-  {
-   "dir": "SB",
-   "from": "Florida Blvd",
-   "fullClosure": true,
-   "lanes": "All lanes blocked",
-   "lat": 28.385201,
-   "layer": "Closures",
-   "line": [
-    [
-     28.388054,
-     -80.703093
-    ],
-    [
-     28.386519,
-     -80.702885
-    ],
-    [
-     28.385202,
-     -80.702792
-    ],
-    [
-     28.385168,
-     -80.70279
-    ],
-    [
-     28.383369,
-     -80.702728
-    ]
-   ],
-   "lng": -80.702814,
-   "reported": "2026-11-05T21:53:00Z",
-   "road": "SR-3",
-   "roadShort": "SR-3",
-   "source": "FL511 (FDOT)",
-   "sourceUrl": "https://fl511.com",
-   "spot": "at Diana Blvd/Crockett Blvd",
-   "status": "closed",
-   "title": "MVC on SR-3 South, at Diana Blvd/Crockett Blvd. All lanes blocked",
-   "to": "Alma Blvd",
-   "where": "SR-3 SB at Diana Blvd/Crockett Blvd",
-   "id": "brevard:fl511:943759",
-   "updated": "2026-11-05T22:01:00Z",
-   "lastReported": "2026-11-05T22:01:00Z",
-   "firstReported": "2026-11-05T22:01:00Z",
-   "verified": {
-    "agency": "FL511 (FDOT)",
-    "url": "https://fl511.com",
-    "kind": "feed",
-    "publishedAt": "2026-11-05T22:01:00Z"
-   },
-   "awaitingOfficial": true,
-   "missingSince": "2026-11-05T23:31:51Z",
-   "recheck": [],
-   "noLongerListed": {
-    "agency": "FL511 (FDOT)",
-    "url": "https://fl511.com",
-    "since": "2026-11-05T23:31:51Z",
-    "wasClosed": true
-   }
+   "awaitingOfficial": false,
+   "missingSince": null,
+   "recheck": []
   },
   {
    "approx": true,
@@ -443,6 +378,121 @@
   }
  ],
  "reopened": [
+  {
+   "dir": "SB",
+   "from": "Laurie St",
+   "fullClosure": true,
+   "lanes": "All lanes closed",
+   "lat": 28.1119111075952,
+   "layer": "Closures",
+   "line": [
+    [
+     28.114551,
+     -80.620337
+    ],
+    [
+     28.113961,
+     -80.619988
+    ],
+    [
+     28.11191,
+     -80.618949
+    ],
+    [
+     28.111904,
+     -80.618946
+    ]
+   ],
+   "lng": -80.6189452922562,
+   "reported": "2026-11-05T21:58:00Z",
+   "road": "US-1",
+   "roadShort": "US-1",
+   "source": "FL511 (FDOT)",
+   "sourceUrl": "https://fl511.com",
+   "status": "closed",
+   "title": "MVC on US-1 Southbound At Shull Ave. All lanes closed.",
+   "to": "Shull Ave",
+   "where": "US-1 SB",
+   "id": "brevard:fl511:943753",
+   "updated": "2026-11-05T22:00:00Z",
+   "lastReported": "2026-11-05T22:00:00Z",
+   "firstReported": "2026-11-05T22:00:00Z",
+   "verified": {
+    "agency": "FL511 (FDOT)",
+    "url": "https://fl511.com",
+    "kind": "feed",
+    "publishedAt": "2026-11-05T22:00:00Z"
+   },
+   "reopenedAt": "2026-11-05T23:45:40Z",
+   "evidence": {
+    "agency": "FL511 (FDOT)",
+    "kind": "feed-dropped",
+    "missingSince": "2026-11-05T23:31:51Z",
+    "reopenedAt": "2026-11-05T23:45:40Z",
+    "url": "https://fl511.com"
+   },
+   "stillReported": []
+  },
+  {
+   "dir": "SB",
+   "from": "Florida Blvd",
+   "fullClosure": true,
+   "lanes": "All lanes blocked",
+   "lat": 28.385201,
+   "layer": "Closures",
+   "line": [
+    [
+     28.388054,
+     -80.703093
+    ],
+    [
+     28.386519,
+     -80.702885
+    ],
+    [
+     28.385202,
+     -80.702792
+    ],
+    [
+     28.385168,
+     -80.70279
+    ],
+    [
+     28.383369,
+     -80.702728
+    ]
+   ],
+   "lng": -80.702814,
+   "reported": "2026-11-05T21:53:00Z",
+   "road": "SR-3",
+   "roadShort": "SR-3",
+   "source": "FL511 (FDOT)",
+   "sourceUrl": "https://fl511.com",
+   "spot": "at Diana Blvd/Crockett Blvd",
+   "status": "closed",
+   "title": "MVC on SR-3 South, at Diana Blvd/Crockett Blvd. All lanes blocked",
+   "to": "Alma Blvd",
+   "where": "SR-3 SB at Diana Blvd/Crockett Blvd",
+   "id": "brevard:fl511:943759",
+   "updated": "2026-11-05T22:01:00Z",
+   "lastReported": "2026-11-05T22:01:00Z",
+   "firstReported": "2026-11-05T22:01:00Z",
+   "verified": {
+    "agency": "FL511 (FDOT)",
+    "url": "https://fl511.com",
+    "kind": "feed",
+    "publishedAt": "2026-11-05T22:01:00Z"
+   },
+   "reopenedAt": "2026-11-05T23:45:40Z",
+   "evidence": {
+    "agency": "FL511 (FDOT)",
+    "kind": "feed-dropped",
+    "missingSince": "2026-11-05T23:31:51Z",
+    "reopenedAt": "2026-11-05T23:45:40Z",
+    "url": "https://fl511.com"
+   },
+   "stillReported": []
+  },
   {
    "fullClosure": false,
    "lanes": "Roadway Open",
@@ -2328,130 +2378,6 @@
     "missingSince": "2026-11-04T23:45:37Z",
     "reopenedAt": "2026-11-05T00:01:05Z",
     "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
-   },
-   "stillReported": []
-  },
-  {
-   "fullClosure": false,
-   "lanes": "Unknown Roadblock - Use Caution",
-   "lat": 28.4883727580149,
-   "layer": "FHP",
-   "lng": -80.7737673537838,
-   "reported": "2026-11-04T08:03:53Z",
-   "road": "N COCOA BLVD",
-   "roadShort": "N Cocoa Blvd",
-   "source": "FHP live CAD",
-   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-   "spot": "at Palm St",
-   "status": "closed",
-   "title": "MVC at N COCOA BLVD x[PALM ST] [COCOA] (Unknown Roadblock - Use Caution)",
-   "where": "N Cocoa Blvd at Palm St",
-   "id": "brevard:fhp:20261104080353-361dbba5",
-   "updated": "2026-11-04T08:03:53Z",
-   "lastReported": "2026-11-04T08:03:53Z",
-   "firstReported": "2026-11-04T08:03:53Z",
-   "verified": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "kind": "feed",
-    "publishedAt": "2026-11-04T08:03:53Z"
-   },
-   "reopenedAt": "2026-11-04T23:31:59Z",
-   "evidence": {
-    "agency": "Florida Highway Patrol",
-    "kind": "feed-dropped",
-    "missingSince": "2026-11-04T23:15:43Z",
-    "reopenedAt": "2026-11-04T23:31:59Z",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
-   },
-   "stillReported": []
-  },
-  {
-   "fullClosure": false,
-   "lanes": "Roadblock In Right Lane",
-   "lat": 28.0222762889767,
-   "layer": "FHP",
-   "lng": -80.6475479672184,
-   "reported": "2026-11-04T09:31:39Z",
-   "road": "I-95 SB [MM175]",
-   "roadShort": "I-95 Sb [MM175]",
-   "source": "FHP live CAD",
-   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-   "spot": "at Mm175",
-   "status": "caution",
-   "title": "MVC W/Roadblock at I-95 SB [MM175] x[MM175] [PALM BAY] (Roadblock In Right Lane)",
-   "where": "I-95 Sb [MM175] at Mm175",
-   "id": "brevard:fhp:20261104093139-095547b0",
-   "updated": "2026-11-04T09:31:39Z",
-   "lastReported": "2026-11-04T09:31:39Z",
-   "firstReported": "2026-11-04T09:31:39Z",
-   "verified": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "kind": "feed",
-    "publishedAt": "2026-11-04T09:31:39Z"
-   },
-   "reopenedAt": "2026-11-04T23:31:59Z",
-   "evidence": {
-    "agency": "Florida Highway Patrol",
-    "kind": "feed-dropped",
-    "missingSince": "2026-11-04T23:15:43Z",
-    "reopenedAt": "2026-11-04T23:31:59Z",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
-   },
-   "stillReported": []
-  },
-  {
-   "dir": "SB",
-   "fullClosure": false,
-   "lanes": "2 Left lanes blocked",
-   "lat": 28.431486,
-   "layer": "Incidents",
-   "line": [
-    [
-     28.43149,
-     -80.82048
-    ],
-    [
-     28.43138,
-     -80.82048
-    ],
-    [
-     28.42896,
-     -80.82047
-    ],
-    [
-     28.42485,
-     -80.82047
-    ]
-   ],
-   "lng": -80.820407,
-   "reported": "2026-11-04T21:54:00Z",
-   "road": "I-95",
-   "roadShort": "I-95",
-   "source": "FL511 (FDOT)",
-   "sourceUrl": "https://fl511.com",
-   "spot": "before MM 206",
-   "status": "caution",
-   "title": "Object on roadway on I-95 South, before MM 206. 2 Left lanes blocked",
-   "where": "I-95 SB before MM 206",
-   "id": "brevard:fl511:941573",
-   "updated": "2026-11-04T22:54:00Z",
-   "lastReported": "2026-11-04T22:54:00Z",
-   "firstReported": "2026-11-04T21:56:00Z",
-   "verified": {
-    "agency": "FL511 (FDOT)",
-    "url": "https://fl511.com",
-    "kind": "feed",
-    "publishedAt": "2026-11-04T21:56:00Z"
-   },
-   "reopenedAt": "2026-11-04T23:31:59Z",
-   "evidence": {
-    "agency": "FL511 (FDOT)",
-    "kind": "feed-dropped",
-    "missingSince": "2026-11-04T23:15:43Z",
-    "reopenedAt": "2026-11-04T23:31:59Z",
-    "url": "https://fl511.com"
    },
    "stillReported": []
   }
