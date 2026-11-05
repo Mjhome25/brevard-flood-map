@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-05T20:00:45Z",
+ "generated": "2026-11-05T20:15:38Z",
  "errors": [],
  "items": [
   {
@@ -117,41 +117,6 @@
    "recheck": []
   },
   {
-   "fullClosure": false,
-   "lanes": "No Road Block",
-   "lat": 28.3698717523057,
-   "layer": "FHP",
-   "lng": -80.77148622347,
-   "reported": "2026-11-05T07:42:45Z",
-   "road": "PALM DR N",
-   "roadShort": "Palm Dr N",
-   "source": "FHP live CAD",
-   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-   "spot": "at Range Rd N",
-   "status": "caution",
-   "title": "MVC at PALM DR N x[RANGE RD N] [COCOA] (No Road Block)",
-   "where": "Palm Dr N at Range Rd N",
-   "id": "brevard:fhp:20261105074245-16edd26e",
-   "updated": "2026-11-05T07:42:45Z",
-   "lastReported": "2026-11-05T07:42:45Z",
-   "firstReported": "2026-11-05T07:42:45Z",
-   "verified": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "kind": "feed",
-    "publishedAt": "2026-11-05T07:42:45Z"
-   },
-   "awaitingOfficial": true,
-   "missingSince": "2026-11-05T20:00:49Z",
-   "recheck": [],
-   "noLongerListed": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "since": "2026-11-05T20:00:49Z",
-    "wasClosed": false
-   }
-  },
-  {
    "dir": "both directions",
    "fullClosure": true,
    "lanes": "All lanes closed",
@@ -224,8 +189,8 @@
    "title": "MVC on I-95 South, at MM 190. 2 Right lanes blocked",
    "where": "I-95 SB at MM 190",
    "id": "brevard:fl511:943231",
-   "updated": "2026-11-05T19:36:00Z",
-   "lastReported": "2026-11-05T19:36:00Z",
+   "updated": "2026-11-05T20:08:00Z",
+   "lastReported": "2026-11-05T20:08:00Z",
    "firstReported": "2026-11-05T18:42:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
@@ -238,56 +203,6 @@
    "recheck": [
     "source changed its lane description"
    ]
-  },
-  {
-   "dir": "EB",
-   "fullClosure": false,
-   "lanes": "Right lane blocked",
-   "lat": 28.204698,
-   "layer": "Incidents",
-   "line": [
-    [
-     28.20466,
-     -80.66173
-    ],
-    [
-     28.20467,
-     -80.66167
-    ],
-    [
-     28.20471,
-     -80.66134
-    ]
-   ],
-   "lng": -80.661736,
-   "reported": "2026-11-05T18:21:00Z",
-   "road": "SR-404",
-   "roadShort": "SR-404",
-   "source": "FL511 (FDOT)",
-   "sourceUrl": "https://fl511.com",
-   "spot": "at US-1",
-   "status": "caution",
-   "title": "MVC on SR-404 East, at US-1. Right lane blocked",
-   "where": "SR-404 EB at US-1",
-   "id": "brevard:fl511:943268",
-   "updated": "2026-11-05T18:50:00Z",
-   "lastReported": "2026-11-05T18:50:00Z",
-   "firstReported": "2026-11-05T18:50:00Z",
-   "verified": {
-    "agency": "FL511 (FDOT)",
-    "url": "https://fl511.com",
-    "kind": "feed",
-    "publishedAt": "2026-11-05T18:50:00Z"
-   },
-   "awaitingOfficial": true,
-   "missingSince": "2026-11-05T20:00:49Z",
-   "recheck": [],
-   "noLongerListed": {
-    "agency": "FL511 (FDOT)",
-    "url": "https://fl511.com",
-    "since": "2026-11-05T20:00:49Z",
-    "wasClosed": false
-   }
   },
   {
    "approx": true,
@@ -391,6 +306,91 @@
   }
  ],
  "reopened": [
+  {
+   "dir": "EB",
+   "fullClosure": false,
+   "lanes": "Right lane blocked",
+   "lat": 28.204698,
+   "layer": "Incidents",
+   "line": [
+    [
+     28.20466,
+     -80.66173
+    ],
+    [
+     28.20467,
+     -80.66167
+    ],
+    [
+     28.20471,
+     -80.66134
+    ]
+   ],
+   "lng": -80.661736,
+   "reported": "2026-11-05T18:21:00Z",
+   "road": "SR-404",
+   "roadShort": "SR-404",
+   "source": "FL511 (FDOT)",
+   "sourceUrl": "https://fl511.com",
+   "spot": "at US-1",
+   "status": "caution",
+   "title": "MVC on SR-404 East, at US-1. Right lane blocked",
+   "where": "SR-404 EB at US-1",
+   "id": "brevard:fl511:943268",
+   "updated": "2026-11-05T18:50:00Z",
+   "lastReported": "2026-11-05T18:50:00Z",
+   "firstReported": "2026-11-05T18:50:00Z",
+   "verified": {
+    "agency": "FL511 (FDOT)",
+    "url": "https://fl511.com",
+    "kind": "feed",
+    "publishedAt": "2026-11-05T18:50:00Z"
+   },
+   "reopenedAt": "2026-11-05T20:15:43Z",
+   "evidence": {
+    "agency": "FL511 (FDOT)",
+    "kind": "feed-dropped",
+    "missingSince": "2026-11-05T20:00:49Z",
+    "reopenedAt": "2026-11-05T20:15:43Z",
+    "url": "https://fl511.com"
+   },
+   "stillReported": []
+  },
+  {
+   "fullClosure": false,
+   "lanes": "No Road Block",
+   "lat": 28.3698717523057,
+   "layer": "FHP",
+   "lng": -80.77148622347,
+   "reported": "2026-11-05T07:42:45Z",
+   "road": "PALM DR N",
+   "roadShort": "Palm Dr N",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "spot": "at Range Rd N",
+   "status": "caution",
+   "title": "MVC at PALM DR N x[RANGE RD N] [COCOA] (No Road Block)",
+   "where": "Palm Dr N at Range Rd N",
+   "id": "brevard:fhp:20261105074245-16edd26e",
+   "updated": "2026-11-05T07:42:45Z",
+   "lastReported": "2026-11-05T07:42:45Z",
+   "firstReported": "2026-11-05T07:42:45Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-05T07:42:45Z"
+   },
+   "reopenedAt": "2026-11-05T20:15:43Z",
+   "evidence": {
+    "agency": "Florida Highway Patrol",
+    "kind": "feed-dropped",
+    "missingSince": "2026-11-05T20:00:49Z",
+    "reopenedAt": "2026-11-05T20:15:43Z",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
+   },
+   "stillReported": []
+  },
   {
    "from": "Leghorn Rd",
    "fullClosure": true,
@@ -2143,14 +2143,14 @@
  },
  "alerts": [
   {
-   "id": "urn:oid:2.49.0.1.840.0.ca5dfa3824a47ff68bddfe8670d00b183d75d018.001.1",
+   "id": "urn:oid:2.49.0.1.840.0.48188c715b42181a12a0eddf79fffe1de3c87256.001.1",
    "event": "Flood Warning",
    "severity": "Severe",
-   "headline": "Flood Warning issued November 5 at 9:11AM EST by NWS Melbourne FL",
+   "headline": "Flood Warning issued November 5 at 3:10PM EST by NWS Melbourne FL",
    "areas": "Brevard, FL",
-   "effective": "2026-11-05T09:11:00-05:00",
-   "expires": "2026-11-05T23:00:00-05:00",
-   "description": "...The Flood Warning continues for the following rivers in Florida...\n\nSt Johns River Near Cocoa 9w affecting Brevard County.\n\n.Heavy rainfall has caused the St. Johns River near Cocoa to rise\ninto Moderate flood stage. The river is forecast to rise into Major\nflood stage late this week and remain within Major Flood Stage this\nweekend.\n\nFor the St. Johns River...including Cocoa 9w...Major flooding is\nforecast.\n\n* WHAT...Moderate flooding is occurring and major flooding is\nforecast.\n\n* WHERE...St Johns River near Cocoa 9w.\n\n* WHEN...Until further notice.\n\n* IMPACTS...At 17.2 feet, Water enters homes along the St Johns River\nin the Lake Poinsett area west of Cocoa, also low lying homes in\nthe Silver Pines subdivision in Rockledge and the Shakespeare Park\narea of Cocoa. Providence Road area west of Cocoa becomes\nimpassable, cutting off access to homes in the Mullet Lane and Bass\nRoad area. Docks flooded and water in parking lot at Lone Cabbage\nFish Camp.\n\n* ADDITIONAL DETAILS...\n- At 8:15 AM EST Thursday the stage was 16.9 feet.\n- Bankfull stage is 15.8 feet.\n- Recent Activity...The maximum river stage in the 24 hours ending\nat 8:15 AM EST Thursday was 16.9 feet.\n- Forecast...The rive",
+   "effective": "2026-11-05T15:10:00-05:00",
+   "expires": "2026-11-06T00:00:00-05:00",
+   "description": "...The Flood Warning continues for the following rivers in Florida...\n\nSt Johns River Near Cocoa 9w affecting Brevard County.\n\n.Heavy rainfall has caused the St. Johns River near Cocoa to rise\ninto Moderate flood stage. The river is forecast to rise into Major\nflood stage late this week and remain within Major Flood Stage this\nweekend and into early next week.\n\nFor the St. Johns River...including Cocoa...Major flooding is\nforecast.\n\n* WHAT...Moderate flooding is occurring and major flooding is\nforecast.\n\n* WHERE...St Johns River near Cocoa 9w.\n\n* WHEN...Until further notice.\n\n* IMPACTS...At 17.2 feet, Water enters homes along the St Johns River\nin the Lake Poinsett area west of Cocoa, also low lying homes in\nthe Silver Pines subdivision in Rockledge and the Shakespeare Park\narea of Cocoa. Providence Road area west of Cocoa becomes\nimpassable, cutting off access to homes in the Mullet Lane and Bass\nRoad area. Docks flooded and water in parking lot at Lone Cabbage\nFish Camp.\n\n* ADDITIONAL DETAILS...\n- At 2:15 PM EST Thursday the stage was 16.9 feet.\n- Bankfull stage is 15.8 feet.\n- Recent Activity...The maximum river stage in the 24 hours ending\nat 2:15 PM EST Thursday was 16.9 feet.",
    "geometry": {
     "type": "Polygon",
     "coordinates": [
