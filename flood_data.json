@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-05T23:00:49Z",
+ "generated": "2026-11-05T23:15:30Z",
  "errors": [],
  "items": [
   {
@@ -50,41 +50,6 @@
    "awaitingOfficial": false,
    "missingSince": null,
    "recheck": []
-  },
-  {
-   "fullClosure": false,
-   "lanes": "Source said \"Roadway Open\" (2026-11-05 10:09 UTC); not a verified reopening",
-   "lat": 28.3572307992973,
-   "layer": "FHP",
-   "lng": -80.6474608956952,
-   "reported": "2026-11-05T10:09:47Z",
-   "road": "MERRITT ISLAND CSWY E",
-   "roadShort": "Merritt Island Cswy E",
-   "source": "FHP live CAD",
-   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-   "spot": "at Cocoa Beach Cswy W",
-   "status": "caution",
-   "title": "MVC at MERRITT ISLAND CSWY E x[COCOA BEACH CSWY W] [COCOA BEACH] (Roadway Open)",
-   "where": "Merritt Island Cswy E at Cocoa Beach Cswy W",
-   "id": "brevard:fhp:20261105100947-e7ff6175",
-   "updated": "2026-11-05T10:09:47Z",
-   "lastReported": "2026-11-05T10:09:47Z",
-   "firstReported": "2026-11-05T10:09:47Z",
-   "verified": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "kind": "feed",
-    "publishedAt": "2026-11-05T10:09:47Z"
-   },
-   "awaitingOfficial": true,
-   "missingSince": "2026-11-05T23:00:56Z",
-   "recheck": [],
-   "noLongerListed": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "since": "2026-11-05T23:00:56Z",
-    "wasClosed": false
-   }
   },
   {
    "fullClosure": false,
@@ -217,8 +182,8 @@
    "title": "MVC on I-95 South, at MM 190. 2 Right lanes blocked",
    "where": "I-95 SB at MM 190",
    "id": "brevard:fl511:943231",
-   "updated": "2026-11-05T22:33:00Z",
-   "lastReported": "2026-11-05T22:33:00Z",
+   "updated": "2026-11-05T23:13:00Z",
+   "lastReported": "2026-11-05T23:13:00Z",
    "firstReported": "2026-11-05T18:42:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
@@ -437,6 +402,41 @@
   }
  ],
  "reopened": [
+  {
+   "fullClosure": false,
+   "lanes": "Roadway Open",
+   "lat": 28.3572307992973,
+   "layer": "FHP",
+   "lng": -80.6474608956952,
+   "reported": "2026-11-05T10:09:47Z",
+   "road": "MERRITT ISLAND CSWY E",
+   "roadShort": "Merritt Island Cswy E",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "spot": "at Cocoa Beach Cswy W",
+   "status": "caution",
+   "title": "MVC at MERRITT ISLAND CSWY E x[COCOA BEACH CSWY W] [COCOA BEACH] (Roadway Open)",
+   "where": "Merritt Island Cswy E at Cocoa Beach Cswy W",
+   "id": "brevard:fhp:20261105100947-e7ff6175",
+   "updated": "2026-11-05T10:09:47Z",
+   "lastReported": "2026-11-05T10:09:47Z",
+   "firstReported": "2026-11-05T10:09:47Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-05T10:09:47Z"
+   },
+   "reopenedAt": "2026-11-05T23:15:36Z",
+   "evidence": {
+    "agency": "Florida Highway Patrol",
+    "kind": "feed-dropped",
+    "missingSince": "2026-11-05T23:00:56Z",
+    "reopenedAt": "2026-11-05T23:15:36Z",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
+   },
+   "stillReported": []
+  },
   {
    "dir": "SB",
    "fullClosure": false,
