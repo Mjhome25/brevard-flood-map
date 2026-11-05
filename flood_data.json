@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-05T11:00:53Z",
+ "generated": "2026-11-05T11:15:36Z",
  "errors": [],
  "items": [
   {
@@ -145,9 +145,15 @@
     "kind": "feed",
     "publishedAt": "2026-11-04T13:02:21Z"
    },
-   "awaitingOfficial": false,
-   "missingSince": null,
-   "recheck": []
+   "awaitingOfficial": true,
+   "missingSince": "2026-11-05T11:15:40Z",
+   "recheck": [],
+   "noLongerListed": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "since": "2026-11-05T11:15:40Z",
+    "wasClosed": false
+   }
   },
   {
    "fullClosure": false,
@@ -172,6 +178,40 @@
     "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
     "kind": "feed",
     "publishedAt": "2026-11-04T13:34:11Z"
+   },
+   "awaitingOfficial": true,
+   "missingSince": "2026-11-05T11:15:40Z",
+   "recheck": [],
+   "noLongerListed": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "since": "2026-11-05T11:15:40Z",
+    "wasClosed": false
+   }
+  },
+  {
+   "fullClosure": false,
+   "lat": 28.0347444971454,
+   "layer": "FHP",
+   "lng": -80.6559731019901,
+   "reported": "2026-11-05T11:13:02Z",
+   "road": "I-95 NB [MM176]",
+   "roadShort": "I-95 Nb [MM176]",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "spot": "at Mm176",
+   "status": "caution",
+   "title": "MVC at I-95 NB [MM176] x[MM176] [PALM BAY]",
+   "where": "I-95 Nb [MM176] at Mm176",
+   "id": "brevard:fhp:20261105111302-0fa4f437",
+   "updated": "2026-11-05T11:13:02Z",
+   "lastReported": "2026-11-05T11:13:02Z",
+   "firstReported": "2026-11-05T11:13:02Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-05T11:13:02Z"
    },
    "awaitingOfficial": false,
    "missingSince": null,
@@ -397,7 +437,7 @@
      "id": "brevard:fhp:20261104130221-029206f3",
      "where": "I-95 Sb [MM183] at Mm183",
      "source": "FHP live CAD",
-     "since": null
+     "since": "2026-11-05T11:15:40Z"
     }
    ]
   },
@@ -5397,7 +5437,7 @@
      "id": "brevard:fhp:20261104133411-68d24a6b",
      "where": "I-95 Nb [MM183] at Mm183",
      "source": "FHP live CAD",
-     "since": null
+     "since": "2026-11-05T11:15:40Z"
     }
    ]
   },
