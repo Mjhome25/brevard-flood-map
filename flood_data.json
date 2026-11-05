@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-04T23:45:34Z",
+ "generated": "2026-11-05T00:01:00Z",
  "errors": [],
  "items": [
   {
@@ -122,75 +122,6 @@
   },
   {
    "fullClosure": false,
-   "lanes": "Debris In Roadway",
-   "lat": 27.8873670750988,
-   "layer": "FHP",
-   "lng": -80.5928013548063,
-   "reported": "2026-11-04T10:38:49Z",
-   "road": "I-95 NB [MM165]",
-   "roadShort": "I-95 Nb [MM165]",
-   "source": "FHP live CAD",
-   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-   "spot": "at Mm165",
-   "status": "caution",
-   "title": "Roadway Debris/Object at I-95 NB [MM165] x[MM165] [SEBASTIAN] (Debris In Roadway)",
-   "where": "I-95 Nb [MM165] at Mm165",
-   "id": "brevard:fhp:20261104103849-2762dd35",
-   "updated": "2026-11-04T10:38:49Z",
-   "lastReported": "2026-11-04T10:38:49Z",
-   "firstReported": "2026-11-04T10:38:49Z",
-   "verified": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "kind": "feed",
-    "publishedAt": "2026-11-04T10:38:49Z"
-   },
-   "awaitingOfficial": true,
-   "missingSince": "2026-11-04T23:45:37Z",
-   "recheck": [],
-   "noLongerListed": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "since": "2026-11-04T23:45:37Z",
-    "wasClosed": false
-   }
-  },
-  {
-   "fullClosure": false,
-   "lat": 28.3695437241985,
-   "layer": "FHP",
-   "lng": -80.8009362234576,
-   "reported": "2026-11-04T10:44:00Z",
-   "road": "I-95 NB [MM202]",
-   "roadShort": "I-95 Nb [MM202]",
-   "source": "FHP live CAD",
-   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-   "spot": "at Mm202",
-   "status": "caution",
-   "title": "Roadway Debris/Object at I-95 NB [MM202] x[MM202] [COCOA]",
-   "where": "I-95 Nb [MM202] at Mm202",
-   "id": "brevard:fhp:20261104104400-ac873224",
-   "updated": "2026-11-04T10:44:00Z",
-   "lastReported": "2026-11-04T10:44:00Z",
-   "firstReported": "2026-11-04T10:44:00Z",
-   "verified": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "kind": "feed",
-    "publishedAt": "2026-11-04T10:44:00Z"
-   },
-   "awaitingOfficial": true,
-   "missingSince": "2026-11-04T23:45:37Z",
-   "recheck": [],
-   "noLongerListed": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "since": "2026-11-04T23:45:37Z",
-    "wasClosed": false
-   }
-  },
-  {
-   "fullClosure": false,
    "lanes": "No Roadblock",
    "lat": 28.0346688142292,
    "layer": "FHP",
@@ -242,6 +173,35 @@
     "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
     "kind": "feed",
     "publishedAt": "2026-11-04T11:41:02Z"
+   },
+   "awaitingOfficial": false,
+   "missingSince": null,
+   "recheck": []
+  },
+  {
+   "fullClosure": false,
+   "lanes": "Source said \"Roadway Clear\" (2026-11-04 11:50 UTC); not a verified reopening",
+   "lat": 28.3615011594203,
+   "layer": "FHP",
+   "lng": -80.6894615811902,
+   "reported": "2026-11-04T11:50:20Z",
+   "road": "E MERRITT AVE [415]",
+   "roadShort": "E Merritt Ave [415]",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "spot": "at N Plumosa St",
+   "status": "caution",
+   "title": "MVC at E MERRITT AVE [415] x[N PLUMOSA ST] [MERRITT ISLAND] (Roadway Clear)",
+   "where": "E Merritt Ave [415] at N Plumosa St",
+   "id": "brevard:fhp:20261104115020-4af8d6aa",
+   "updated": "2026-11-04T11:50:20Z",
+   "lastReported": "2026-11-04T11:50:20Z",
+   "firstReported": "2026-11-04T11:50:20Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-04T11:50:20Z"
    },
    "awaitingOfficial": false,
    "missingSince": null,
@@ -356,9 +316,15 @@
     "kind": "feed",
     "publishedAt": "2026-11-04T23:07:00Z"
    },
-   "awaitingOfficial": false,
-   "missingSince": null,
-   "recheck": []
+   "awaitingOfficial": true,
+   "missingSince": "2026-11-05T00:01:05Z",
+   "recheck": [],
+   "noLongerListed": {
+    "agency": "FL511 (FDOT)",
+    "url": "https://fl511.com",
+    "since": "2026-11-05T00:01:05Z",
+    "wasClosed": false
+   }
   },
   {
    "dir": "SB",
@@ -510,6 +476,75 @@
   }
  ],
  "reopened": [
+  {
+   "fullClosure": false,
+   "lat": 28.3695437241985,
+   "layer": "FHP",
+   "lng": -80.8009362234576,
+   "reported": "2026-11-04T10:44:00Z",
+   "road": "I-95 NB [MM202]",
+   "roadShort": "I-95 Nb [MM202]",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "spot": "at Mm202",
+   "status": "caution",
+   "title": "Roadway Debris/Object at I-95 NB [MM202] x[MM202] [COCOA]",
+   "where": "I-95 Nb [MM202] at Mm202",
+   "id": "brevard:fhp:20261104104400-ac873224",
+   "updated": "2026-11-04T10:44:00Z",
+   "lastReported": "2026-11-04T10:44:00Z",
+   "firstReported": "2026-11-04T10:44:00Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-04T10:44:00Z"
+   },
+   "reopenedAt": "2026-11-05T00:01:05Z",
+   "evidence": {
+    "agency": "Florida Highway Patrol",
+    "kind": "feed-dropped",
+    "missingSince": "2026-11-04T23:45:37Z",
+    "reopenedAt": "2026-11-05T00:01:05Z",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
+   },
+   "stillReported": []
+  },
+  {
+   "fullClosure": false,
+   "lanes": "Debris In Roadway",
+   "lat": 27.8873670750988,
+   "layer": "FHP",
+   "lng": -80.5928013548063,
+   "reported": "2026-11-04T10:38:49Z",
+   "road": "I-95 NB [MM165]",
+   "roadShort": "I-95 Nb [MM165]",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "spot": "at Mm165",
+   "status": "caution",
+   "title": "Roadway Debris/Object at I-95 NB [MM165] x[MM165] [SEBASTIAN] (Debris In Roadway)",
+   "where": "I-95 Nb [MM165] at Mm165",
+   "id": "brevard:fhp:20261104103849-2762dd35",
+   "updated": "2026-11-04T10:38:49Z",
+   "lastReported": "2026-11-04T10:38:49Z",
+   "firstReported": "2026-11-04T10:38:49Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-04T10:38:49Z"
+   },
+   "reopenedAt": "2026-11-05T00:01:05Z",
+   "evidence": {
+    "agency": "Florida Highway Patrol",
+    "kind": "feed-dropped",
+    "missingSince": "2026-11-04T23:45:37Z",
+    "reopenedAt": "2026-11-05T00:01:05Z",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
+   },
+   "stillReported": []
+  },
   {
    "fullClosure": false,
    "lanes": "Unknown Roadblock - Use Caution",
@@ -4367,14 +4402,7 @@
     "reopenedAt": "2026-11-04T19:31:34Z",
     "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
    },
-   "stillReported": [
-    {
-     "id": "brevard:fhp:20261104103849-2762dd35",
-     "where": "I-95 Nb [MM165] at Mm165",
-     "source": "FHP live CAD",
-     "since": "2026-11-04T23:45:37Z"
-    }
-   ]
+   "stillReported": []
   },
   {
    "fullClosure": false,
@@ -5725,40 +5753,6 @@
     "kind": "fhp-dropped",
     "missingSince": "2026-11-04T00:30:42Z",
     "reopenedAt": "2026-11-04T00:45:37Z",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
-   },
-   "stillReported": []
-  },
-  {
-   "fullClosure": false,
-   "lat": 28.0990168555116,
-   "layer": "FHP",
-   "lng": -80.7000330806801,
-   "reported": "2026-11-03T14:09:43Z",
-   "road": "ELLIS RD",
-   "roadShort": "Ellis Rd",
-   "source": "FHP live CAD",
-   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-   "spot": "at S John Rodes Blvd",
-   "status": "caution",
-   "title": "MVC W/ at ELLIS RD x[S JOHN RODES BLVD] [MELBOURNE]",
-   "where": "Ellis Rd at S John Rodes Blvd",
-   "id": "brevard:fhp:20261103140943-92bc021a",
-   "updated": "2026-11-03T14:09:43Z",
-   "lastReported": "2026-11-03T14:09:43Z",
-   "firstReported": "2026-11-03T14:09:43Z",
-   "verified": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "kind": "feed",
-    "publishedAt": "2026-11-03T14:09:43Z"
-   },
-   "reopenedAt": "2026-11-03T23:45:47Z",
-   "evidence": {
-    "agency": "Florida Highway Patrol",
-    "kind": "fhp-dropped",
-    "missingSince": "2026-11-03T23:30:38Z",
-    "reopenedAt": "2026-11-03T23:45:47Z",
     "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
    },
    "stillReported": []
