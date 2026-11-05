@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-05T07:15:33Z",
+ "generated": "2026-11-05T07:31:38Z",
  "errors": [],
  "items": [
   {
@@ -6144,6 +6144,12 @@
    "time": "2026-11-04T18:00:00Z",
    "text": "Never drive through flooded roads. Some streets in West Melbourne, Satellite Beach, Indian Harbour Beach and Indialantic are still blocked by standing water.",
    "url": "https://westmelbourne.gov/905/Emergency-Information"
+  },
+  {
+   "agency": "National Weather Service Melbourne",
+   "time": "2026-11-05T01:39:00Z",
+   "text": "A flood warning continues for the St. Johns River near Cocoa (9 miles west) in Brevard County. The river has risen into moderate flood stage and is forecast to reach major flood stage late this week and stay there through the weekend. Do not drive around barricades or through flooded areas, and use caution near the riverbanks. The next update is due Thursday at 11 a.m. EST.",
+   "url": "https://govonestop.com/nws/florida-severe-flood-warning-effective-11042026-1739"
   }
  ]
 }
