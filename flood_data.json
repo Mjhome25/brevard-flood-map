@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-05T12:31:47Z",
+ "generated": "2026-11-05T12:45:34Z",
  "errors": [],
  "items": [
   {
@@ -145,9 +145,15 @@
     "kind": "feed",
     "publishedAt": "2026-11-05T11:13:02Z"
    },
-   "awaitingOfficial": false,
-   "missingSince": null,
-   "recheck": []
+   "awaitingOfficial": true,
+   "missingSince": "2026-11-05T12:45:36Z",
+   "recheck": [],
+   "noLongerListed": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "since": "2026-11-05T12:45:36Z",
+    "wasClosed": false
+   }
   },
   {
    "fullClosure": false,
@@ -173,6 +179,34 @@
     "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
     "kind": "feed",
     "publishedAt": "2026-11-05T12:16:40Z"
+   },
+   "awaitingOfficial": false,
+   "missingSince": null,
+   "recheck": []
+  },
+  {
+   "fullClosure": false,
+   "lat": 28.1024137373737,
+   "layer": "FHP",
+   "lng": -80.5702237774925,
+   "reported": "2026-11-05T12:29:50Z",
+   "road": "HIGHWAY A1A N [1220]",
+   "roadShort": "Highway A1A N [1220]",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "spot": "at Flug Ave",
+   "status": "caution",
+   "title": "MVC at HIGHWAY A1A N [1220] x[FLUG AVE] [INDIALANTIC]",
+   "where": "Highway A1A N [1220] at Flug Ave",
+   "id": "brevard:fhp:20261105122950-f2019aeb",
+   "updated": "2026-11-05T12:29:50Z",
+   "lastReported": "2026-11-05T12:29:50Z",
+   "firstReported": "2026-11-05T12:29:50Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-05T12:29:50Z"
    },
    "awaitingOfficial": false,
    "missingSince": null,
@@ -347,7 +381,7 @@
      "id": "brevard:fhp:20261105111302-d13ca6ec",
      "where": "I-95 Nb [On Ramp] at Mm176",
      "source": "FHP live CAD",
-     "since": null
+     "since": "2026-11-05T12:45:36Z"
     }
    ]
   },
