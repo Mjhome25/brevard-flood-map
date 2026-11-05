@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-05T10:15:32Z",
+ "generated": "2026-11-05T10:31:35Z",
  "errors": [],
  "items": [
   {
@@ -247,9 +247,15 @@
     "kind": "feed",
     "publishedAt": "2026-11-05T02:31:00Z"
    },
-   "awaitingOfficial": false,
-   "missingSince": null,
-   "recheck": []
+   "awaitingOfficial": true,
+   "missingSince": "2026-11-05T10:31:40Z",
+   "recheck": [],
+   "noLongerListed": {
+    "agency": "FL511 (FDOT)",
+    "url": "https://fl511.com",
+    "since": "2026-11-05T10:31:40Z",
+    "wasClosed": true
+   }
   },
   {
    "approx": true,
