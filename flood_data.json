@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-05T00:15:45Z",
+ "generated": "2026-11-05T00:31:32Z",
  "errors": [],
  "items": [
   {
@@ -145,9 +145,15 @@
     "kind": "feed",
     "publishedAt": "2026-11-04T11:14:24Z"
    },
-   "awaitingOfficial": false,
-   "missingSince": null,
-   "recheck": []
+   "awaitingOfficial": true,
+   "missingSince": "2026-11-05T00:31:38Z",
+   "recheck": [],
+   "noLongerListed": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "since": "2026-11-05T00:31:38Z",
+    "wasClosed": false
+   }
   },
   {
    "fullClosure": false,
@@ -203,9 +209,15 @@
     "kind": "feed",
     "publishedAt": "2026-11-04T11:50:20Z"
    },
-   "awaitingOfficial": false,
-   "missingSince": null,
-   "recheck": []
+   "awaitingOfficial": true,
+   "missingSince": "2026-11-05T00:31:38Z",
+   "recheck": [],
+   "noLongerListed": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "since": "2026-11-05T00:31:38Z",
+    "wasClosed": false
+   }
   },
   {
    "dir": "both directions",
@@ -324,9 +336,15 @@
     "kind": "feed",
     "publishedAt": "2026-11-04T23:36:00Z"
    },
-   "awaitingOfficial": false,
-   "missingSince": null,
-   "recheck": []
+   "awaitingOfficial": true,
+   "missingSince": "2026-11-05T00:31:38Z",
+   "recheck": [],
+   "noLongerListed": {
+    "agency": "FL511 (FDOT)",
+    "url": "https://fl511.com",
+    "since": "2026-11-05T00:31:38Z",
+    "wasClosed": false
+   }
   },
   {
    "approx": true,
