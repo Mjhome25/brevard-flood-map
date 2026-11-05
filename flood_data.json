@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-05T18:15:41Z",
+ "generated": "2026-11-05T18:31:23Z",
  "errors": [],
  "items": [
   {
@@ -119,6 +119,64 @@
    "recheck": [
     "source changed its lane description"
    ]
+  },
+  {
+   "fullClosure": false,
+   "lanes": "Road Block",
+   "lat": 28.2029154896794,
+   "layer": "FHP",
+   "lng": -80.7106471833292,
+   "reported": "2026-11-05T06:28:55Z",
+   "road": "I-95 SB [MM189]",
+   "roadShort": "I-95 Sb [MM189]",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "spot": "at Mm189",
+   "status": "closed",
+   "title": "MVC W/Roadblock at I-95 SB [MM189] x[MM189] [MELBOURNE] (Road Block)",
+   "where": "I-95 Sb [MM189] at Mm189",
+   "id": "brevard:fhp:20261105062855-b2d937f8",
+   "updated": "2026-11-05T06:28:55Z",
+   "lastReported": "2026-11-05T06:28:55Z",
+   "firstReported": "2026-11-05T06:28:55Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-05T06:28:55Z"
+   },
+   "awaitingOfficial": false,
+   "missingSince": null,
+   "recheck": []
+  },
+  {
+   "fullClosure": false,
+   "lanes": "No Road Block",
+   "lat": 28.1891382213439,
+   "layer": "FHP",
+   "lng": -80.7070549389591,
+   "reported": "2026-11-05T06:29:47Z",
+   "road": "I-95 SB [MM188]",
+   "roadShort": "I-95 Sb [MM188]",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "spot": "at Mm188",
+   "status": "caution",
+   "title": "MVC W/ And Roadblock at I-95 SB [MM188] x[MM188] [MELBOURNE] (No Road Block)",
+   "where": "I-95 Sb [MM188] at Mm188",
+   "id": "brevard:fhp:20261105062947-7696869c",
+   "updated": "2026-11-05T06:29:47Z",
+   "lastReported": "2026-11-05T06:29:47Z",
+   "firstReported": "2026-11-05T06:29:47Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-05T06:29:47Z"
+   },
+   "awaitingOfficial": false,
+   "missingSince": null,
+   "recheck": []
   },
   {
    "fullClosure": false,
@@ -6401,12 +6459,6 @@
    "time": "2026-11-04T20:12:00Z",
    "text": "Brevard Public Schools will reopen all campuses on Thursday, Nov. 5, after being closed three days because of the flooding. Buses, before- and after-school care, and after-school activities will run on their normal schedules. Bus routes in storm-affected areas may be delayed. Several Melbourne schools stay under a precautionary boil water notice through the end of the week.",
    "url": "https://www.yahoo.com/news/weather-news/articles/brevard-schools-reopen-thursday-bus-201200644.html"
-  },
-  {
-   "agency": "City of West Melbourne / Brevard County Emergency Management",
-   "time": "2026-11-04T18:00:00Z",
-   "text": "Never drive through flooded roads. Some streets in West Melbourne, Satellite Beach, Indian Harbour Beach and Indialantic are still blocked by standing water.",
-   "url": "https://westmelbourne.gov/905/Emergency-Information"
   },
   {
    "agency": "National Weather Service Melbourne",
