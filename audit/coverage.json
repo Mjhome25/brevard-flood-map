@@ -1,5 +1,5 @@
 {
- "checkedAt": "2026-11-05T08:00:44Z",
+ "checkedAt": "2026-11-05T08:15:40Z",
  "fresh": true,
  "pilot": "City of Melbourne",
  "pending": [
@@ -874,8 +874,8 @@
     }
    ],
    "needsReview": [],
-   "sha256": "56c0d487bc01bac4f027e754c9280f2e2b97dc9fcfe4d00a9b9d1523d258a54f",
-   "readAt": "2026-11-04T20:15:36Z"
+   "sha256": "54782e169e1c1dfba5f08616b4cace71873ff648a4896ae63a3c2cda610c7c1f",
+   "readAt": "2026-11-05T08:15:40Z"
   },
   "https://www.melbourneflorida.org/Government/City-News/Traffic-Advisories/Road-Closures-1020": {
    "agency": "City of Melbourne",
@@ -1573,8 +1573,8 @@
     "97e677fe040fc517ea06a0c0051d7e189466888dc0cbea88d01828d21040db05",
     "746cdc91f2e0b08cdb9dadc4c9f958c6d390971a96b2908eb8496905fb973e6f"
    ],
-   "sha256": "07a4a5bae3b2aa2432dde9250367cf2d94d8db0545f2e516f78a33710dd6d844",
-   "readAt": "2026-11-05T08:00:44Z"
+   "sha256": "43b0b1ff6a21e71afdb8ffd94e6f463d44ca04f4d058ff5ebb2809b6d88de5f8",
+   "readAt": "2026-11-05T08:15:40Z"
   },
   "https://www.melbourneflorida.org/Government/City-News/Traffic-Advisories/Lane-Closure-NASA-Blvd": {
    "agency": "City of Melbourne",
@@ -1584,8 +1584,8 @@
    "needsReview": [
     "d3b63822f83243ea40717b27e5b78827b787af45119ff216d61ea39a90a41734"
    ],
-   "sha256": "3d6c95dfbb9a67118b0c66e5d189dd6c67483bb364e6dc410fb6704a409412db",
-   "readAt": "2026-11-05T08:00:44Z"
+   "sha256": "c424bb48ff2b529755ddda0571caf6a441e92b7533bba99060c62e5f27eb9899",
+   "readAt": "2026-11-05T08:15:40Z"
   },
   "https://www.melbourneflorida.org/Government/City-News/Traffic-Advisories/Copy-of-Road-Closures-Nov-4-1450": {
    "agency": "City of Melbourne",
@@ -1606,8 +1606,8 @@
     "f1815a2acee2dc12ec9d0fd398355de674f2a5d2013ef4b8c0d1ea938ab72343",
     "746cdc91f2e0b08cdb9dadc4c9f958c6d390971a96b2908eb8496905fb973e6f"
    ],
-   "sha256": "9d7e39a7050654eee927d4158a316e81b14f0d9c4ff5b7e2f57e7ba2db617281",
-   "readAt": "2026-11-05T08:00:44Z"
+   "sha256": "810655ea0959c4500749ada79e23da7194f8ec9c5af0187a57bfff7863d2bd9c",
+   "readAt": "2026-11-05T08:15:40Z"
   }
  }
 }
