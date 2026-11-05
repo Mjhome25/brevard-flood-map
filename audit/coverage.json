@@ -1,5 +1,5 @@
 {
- "checkedAt": "2026-11-05T22:01:28Z",
+ "checkedAt": "2026-11-05T22:15:41Z",
  "fresh": true,
  "pilot": "City of Melbourne",
  "pending": [
@@ -53,8 +53,7 @@
      "inNewest": false,
      "verdict": "partial",
      "pins": [
-      "brevard:manual:babcock-sunlakes",
-      "brevard:fl511:943619"
+      "brevard:manual:babcock-sunlakes"
      ]
     },
     {
@@ -73,8 +72,7 @@
      "inNewest": false,
      "verdict": "partial",
      "pins": [
-      "brevard:manual:babcock-sunlakes",
-      "brevard:fl511:943619"
+      "brevard:manual:babcock-sunlakes"
      ]
     },
     {
@@ -93,8 +91,7 @@
      "inNewest": false,
      "verdict": "partial",
      "pins": [
-      "brevard:manual:babcock-sunlakes",
-      "brevard:fl511:943619"
+      "brevard:manual:babcock-sunlakes"
      ]
     },
     {
@@ -135,8 +132,7 @@
      "inNewest": false,
      "verdict": "partial",
      "pins": [
-      "brevard:manual:babcock-sunlakes",
-      "brevard:fl511:943619"
+      "brevard:manual:babcock-sunlakes"
      ]
     },
     {
@@ -567,8 +563,7 @@
      "inNewest": false,
      "verdict": "partial",
      "pins": [
-      "brevard:manual:babcock-sunlakes",
-      "brevard:fl511:943619"
+      "brevard:manual:babcock-sunlakes"
      ]
     },
     {
@@ -588,8 +583,7 @@
      "inNewest": false,
      "verdict": "reopen-review",
      "pins": [
-      "brevard:manual:babcock-sunlakes",
-      "brevard:fl511:943619"
+      "brevard:manual:babcock-sunlakes"
      ],
      "context": "other sentences in the same paragraph"
     },
@@ -1579,8 +1573,8 @@
     "97e677fe040fc517ea06a0c0051d7e189466888dc0cbea88d01828d21040db05",
     "746cdc91f2e0b08cdb9dadc4c9f958c6d390971a96b2908eb8496905fb973e6f"
    ],
-   "sha256": "b65cb1380c0ad149055302dc3dc181bee62d49e85a9dc79e7d11e30af0b0db89",
-   "readAt": "2026-11-05T22:01:28Z"
+   "sha256": "9e6b0716b526f75c0e7550b002142a2d0c853df7a04c7427dbba43031494a264",
+   "readAt": "2026-11-05T22:15:41Z"
   },
   "https://www.melbourneflorida.org/Government/City-News/Traffic-Advisories/Lane-Closure-NASA-Blvd": {
    "agency": "City of Melbourne",
@@ -1590,8 +1584,8 @@
    "needsReview": [
     "d3b63822f83243ea40717b27e5b78827b787af45119ff216d61ea39a90a41734"
    ],
-   "sha256": "9632a2a6dd168a387d81a4daeba4034b33daae63dc8be1c61cd2fe4c6a50b09a",
-   "readAt": "2026-11-05T22:01:28Z"
+   "sha256": "2ed4d50b529223cfb71e5cfaab65825901f31c48ea3685d51b2967248b1d2bb5",
+   "readAt": "2026-11-05T22:15:41Z"
   },
   "https://www.melbourneflorida.org/Government/City-News/Traffic-Advisories/Copy-of-Road-Closures-Nov-4-1450": {
    "agency": "City of Melbourne",
@@ -1612,8 +1606,8 @@
     "f1815a2acee2dc12ec9d0fd398355de674f2a5d2013ef4b8c0d1ea938ab72343",
     "746cdc91f2e0b08cdb9dadc4c9f958c6d390971a96b2908eb8496905fb973e6f"
    ],
-   "sha256": "7f5d6086859697db4a3b67df8fa6e109322c28dddb61c02e270648e625219178",
-   "readAt": "2026-11-05T22:01:28Z"
+   "sha256": "cf5b79b2d91c14faca6a7f4c0aa89b2336f7a73c654c3d2cbcb882a86a7dc0ea",
+   "readAt": "2026-11-05T22:15:41Z"
   }
  }
 }

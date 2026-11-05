@@ -1,8 +1,6 @@
 {
- "generated": "2026-11-05T22:01:22Z",
- "errors": [
-  "FL511 map locations: 1 report(s) without a pin"
- ],
+ "generated": "2026-11-05T22:15:38Z",
+ "errors": [],
  "items": [
   {
    "fullClosure": false,
@@ -77,6 +75,35 @@
     "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
     "kind": "feed",
     "publishedAt": "2026-11-05T09:51:42Z"
+   },
+   "awaitingOfficial": false,
+   "missingSince": null,
+   "recheck": []
+  },
+  {
+   "fullClosure": false,
+   "lanes": "Source said \"Roadway Open\" (2026-11-05 10:09 UTC); not a verified reopening",
+   "lat": 28.3572307992973,
+   "layer": "FHP",
+   "lng": -80.6474608956952,
+   "reported": "2026-11-05T10:09:47Z",
+   "road": "MERRITT ISLAND CSWY E",
+   "roadShort": "Merritt Island Cswy E",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "spot": "at Cocoa Beach Cswy W",
+   "status": "caution",
+   "title": "MVC at MERRITT ISLAND CSWY E x[COCOA BEACH CSWY W] [COCOA BEACH] (Roadway Open)",
+   "where": "Merritt Island Cswy E at Cocoa Beach Cswy W",
+   "id": "brevard:fhp:20261105100947-e7ff6175",
+   "updated": "2026-11-05T10:09:47Z",
+   "lastReported": "2026-11-05T10:09:47Z",
+   "firstReported": "2026-11-05T10:09:47Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-05T10:09:47Z"
    },
    "awaitingOfficial": false,
    "missingSince": null,
@@ -172,106 +199,6 @@
   },
   {
    "dir": "SB",
-   "from": "Ballard Dr",
-   "fullClosure": true,
-   "lanes": "All lanes closed",
-   "lat": 28.116128,
-   "layer": "Closures",
-   "line": [
-    [
-     28.116072,
-     -80.623131
-    ],
-    [
-     28.116068,
-     -80.62312
-    ],
-    [
-     28.115855,
-     -80.6225
-    ],
-    [
-     28.115645,
-     -80.621896
-    ],
-    [
-     28.115524,
-     -80.621641
-    ],
-    [
-     28.115446,
-     -80.621477
-    ],
-    [
-     28.115358,
-     -80.621298
-    ],
-    [
-     28.115252,
-     -80.621135
-    ],
-    [
-     28.115183,
-     -80.621031
-    ],
-    [
-     28.115095,
-     -80.620896
-    ],
-    [
-     28.115011,
-     -80.620798
-    ],
-    [
-     28.114882,
-     -80.620648
-    ],
-    [
-     28.114763,
-     -80.620535
-    ],
-    [
-     28.114642,
-     -80.620418
-    ],
-    [
-     28.114551,
-     -80.620337
-    ]
-   ],
-   "lng": -80.623094,
-   "reported": "2026-11-05T21:10:00Z",
-   "road": "US-1",
-   "roadShort": "US-1",
-   "source": "FL511 (FDOT)",
-   "sourceUrl": "https://fl511.com",
-   "spot": "at Babcock St",
-   "status": "closed",
-   "title": "MVC on US-1 South, at Babcock St. All lanes closed",
-   "to": "Laurie St",
-   "where": "US-1 SB at Babcock St",
-   "id": "brevard:fl511:943619",
-   "updated": "2026-11-05T21:43:00Z",
-   "lastReported": "2026-11-05T21:43:00Z",
-   "firstReported": "2026-11-05T21:12:00Z",
-   "verified": {
-    "agency": "FL511 (FDOT)",
-    "url": "https://fl511.com",
-    "kind": "feed",
-    "publishedAt": "2026-11-05T21:12:00Z"
-   },
-   "awaitingOfficial": true,
-   "missingSince": "2026-11-05T22:01:28Z",
-   "recheck": [],
-   "noLongerListed": {
-    "agency": "FL511 (FDOT)",
-    "url": "https://fl511.com",
-    "since": "2026-11-05T22:01:28Z",
-    "wasClosed": true
-   }
-  },
-  {
-   "dir": "SB",
    "fullClosure": false,
    "lanes": "Right shoulder blocked",
    "lat": 28.009861,
@@ -317,8 +244,8 @@
    "title": "MVC on I-95 South, at MM 174. Right shoulder blocked",
    "where": "I-95 SB at MM 174",
    "id": "brevard:fl511:943676",
-   "updated": "2026-11-05T21:30:00Z",
-   "lastReported": "2026-11-05T21:30:00Z",
+   "updated": "2026-11-05T22:02:00Z",
+   "lastReported": "2026-11-05T22:02:00Z",
    "firstReported": "2026-11-05T21:30:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
@@ -329,122 +256,6 @@
    "awaitingOfficial": false,
    "missingSince": null,
    "recheck": []
-  },
-  {
-   "dir": "SB",
-   "fullClosure": false,
-   "lanes": "Right shoulder blocked",
-   "lat": 28.332224,
-   "layer": "Incidents",
-   "line": [
-    [
-     28.33212,
-     -80.77653
-    ],
-    [
-     28.33187,
-     -80.77636
-    ],
-    [
-     28.33099,
-     -80.77579
-    ],
-    [
-     28.33018,
-     -80.77525
-    ],
-    [
-     28.32931,
-     -80.77469
-    ]
-   ],
-   "lng": -80.776376,
-   "reported": "2026-11-05T21:21:00Z",
-   "road": "I-95",
-   "roadShort": "I-95",
-   "source": "FL511 (FDOT)",
-   "sourceUrl": "https://fl511.com",
-   "spot": "at MM 199",
-   "status": "caution",
-   "title": "Object on roadway on I-95 South, at MM 199. Right shoulder blocked",
-   "where": "I-95 SB at MM 199",
-   "id": "brevard:fl511:943686",
-   "updated": "2026-11-05T21:34:00Z",
-   "lastReported": "2026-11-05T21:34:00Z",
-   "firstReported": "2026-11-05T21:34:00Z",
-   "verified": {
-    "agency": "FL511 (FDOT)",
-    "url": "https://fl511.com",
-    "kind": "feed",
-    "publishedAt": "2026-11-05T21:34:00Z"
-   },
-   "awaitingOfficial": true,
-   "missingSince": "2026-11-05T22:01:28Z",
-   "recheck": [],
-   "noLongerListed": {
-    "agency": "FL511 (FDOT)",
-    "url": "https://fl511.com",
-    "since": "2026-11-05T22:01:28Z",
-    "wasClosed": false
-   }
-  },
-  {
-   "dir": "SB",
-   "fullClosure": false,
-   "lanes": "Right shoulder blocked",
-   "lat": 28.332224,
-   "layer": "Incidents",
-   "line": [
-    [
-     28.33212,
-     -80.77653
-    ],
-    [
-     28.33187,
-     -80.77636
-    ],
-    [
-     28.33099,
-     -80.77579
-    ],
-    [
-     28.33018,
-     -80.77525
-    ],
-    [
-     28.32931,
-     -80.77469
-    ]
-   ],
-   "lng": -80.776376,
-   "reported": "2026-11-05T21:38:00Z",
-   "road": "I-95",
-   "roadShort": "I-95",
-   "source": "FL511 (FDOT)",
-   "sourceUrl": "https://fl511.com",
-   "spot": "at MM 199",
-   "status": "caution",
-   "title": "MVC on I-95 South, at MM 199. Right shoulder blocked",
-   "where": "I-95 SB at MM 199",
-   "id": "brevard:fl511:943702",
-   "updated": "2026-11-05T21:38:00Z",
-   "lastReported": "2026-11-05T21:38:00Z",
-   "firstReported": "2026-11-05T21:38:00Z",
-   "verified": {
-    "agency": "FL511 (FDOT)",
-    "url": "https://fl511.com",
-    "kind": "feed",
-    "publishedAt": "2026-11-05T21:38:00Z"
-   },
-   "awaitingOfficial": true,
-   "missingSince": "2026-11-05T22:01:28Z",
-   "recheck": [],
-   "noLongerListed": {
-    "agency": "FL511 (FDOT)",
-    "url": "https://fl511.com",
-    "since": "2026-11-05T22:01:28Z",
-    "wasClosed": false
-   }
   },
   {
    "dir": "SB",
@@ -490,6 +301,60 @@
     "url": "https://fl511.com",
     "kind": "feed",
     "publishedAt": "2026-11-05T22:00:00Z"
+   },
+   "awaitingOfficial": false,
+   "missingSince": null,
+   "recheck": []
+  },
+  {
+   "dir": "SB",
+   "from": "Florida Blvd",
+   "fullClosure": true,
+   "lanes": "All lanes blocked",
+   "lat": 28.385201,
+   "layer": "Closures",
+   "line": [
+    [
+     28.388054,
+     -80.703093
+    ],
+    [
+     28.386519,
+     -80.702885
+    ],
+    [
+     28.385202,
+     -80.702792
+    ],
+    [
+     28.385168,
+     -80.70279
+    ],
+    [
+     28.383369,
+     -80.702728
+    ]
+   ],
+   "lng": -80.702814,
+   "reported": "2026-11-05T21:53:00Z",
+   "road": "SR-3",
+   "roadShort": "SR-3",
+   "source": "FL511 (FDOT)",
+   "sourceUrl": "https://fl511.com",
+   "spot": "at Diana Blvd/Crockett Blvd",
+   "status": "closed",
+   "title": "MVC on SR-3 South, at Diana Blvd/Crockett Blvd. All lanes blocked",
+   "to": "Alma Blvd",
+   "where": "SR-3 SB at Diana Blvd/Crockett Blvd",
+   "id": "brevard:fl511:943759",
+   "updated": "2026-11-05T22:01:00Z",
+   "lastReported": "2026-11-05T22:01:00Z",
+   "firstReported": "2026-11-05T22:01:00Z",
+   "verified": {
+    "agency": "FL511 (FDOT)",
+    "url": "https://fl511.com",
+    "kind": "feed",
+    "publishedAt": "2026-11-05T22:01:00Z"
    },
    "awaitingOfficial": false,
    "missingSince": null,
@@ -597,6 +462,222 @@
   }
  ],
  "reopened": [
+  {
+   "dir": "SB",
+   "from": "Ballard Dr",
+   "fullClosure": true,
+   "lanes": "All lanes closed",
+   "lat": 28.116128,
+   "layer": "Closures",
+   "line": [
+    [
+     28.116072,
+     -80.623131
+    ],
+    [
+     28.116068,
+     -80.62312
+    ],
+    [
+     28.115855,
+     -80.6225
+    ],
+    [
+     28.115645,
+     -80.621896
+    ],
+    [
+     28.115524,
+     -80.621641
+    ],
+    [
+     28.115446,
+     -80.621477
+    ],
+    [
+     28.115358,
+     -80.621298
+    ],
+    [
+     28.115252,
+     -80.621135
+    ],
+    [
+     28.115183,
+     -80.621031
+    ],
+    [
+     28.115095,
+     -80.620896
+    ],
+    [
+     28.115011,
+     -80.620798
+    ],
+    [
+     28.114882,
+     -80.620648
+    ],
+    [
+     28.114763,
+     -80.620535
+    ],
+    [
+     28.114642,
+     -80.620418
+    ],
+    [
+     28.114551,
+     -80.620337
+    ]
+   ],
+   "lng": -80.623094,
+   "reported": "2026-11-05T21:10:00Z",
+   "road": "US-1",
+   "roadShort": "US-1",
+   "source": "FL511 (FDOT)",
+   "sourceUrl": "https://fl511.com",
+   "spot": "at Babcock St",
+   "status": "closed",
+   "title": "MVC on US-1 South, at Babcock St. All lanes closed",
+   "to": "Laurie St",
+   "where": "US-1 SB at Babcock St",
+   "id": "brevard:fl511:943619",
+   "updated": "2026-11-05T21:43:00Z",
+   "lastReported": "2026-11-05T21:43:00Z",
+   "firstReported": "2026-11-05T21:12:00Z",
+   "verified": {
+    "agency": "FL511 (FDOT)",
+    "url": "https://fl511.com",
+    "kind": "feed",
+    "publishedAt": "2026-11-05T21:12:00Z"
+   },
+   "reopenedAt": "2026-11-05T22:15:41Z",
+   "evidence": {
+    "agency": "FL511 (FDOT)",
+    "kind": "feed-dropped",
+    "missingSince": "2026-11-05T22:01:28Z",
+    "reopenedAt": "2026-11-05T22:15:41Z",
+    "url": "https://fl511.com"
+   },
+   "stillReported": []
+  },
+  {
+   "dir": "SB",
+   "fullClosure": false,
+   "lanes": "Right shoulder blocked",
+   "lat": 28.332224,
+   "layer": "Incidents",
+   "line": [
+    [
+     28.33212,
+     -80.77653
+    ],
+    [
+     28.33187,
+     -80.77636
+    ],
+    [
+     28.33099,
+     -80.77579
+    ],
+    [
+     28.33018,
+     -80.77525
+    ],
+    [
+     28.32931,
+     -80.77469
+    ]
+   ],
+   "lng": -80.776376,
+   "reported": "2026-11-05T21:21:00Z",
+   "road": "I-95",
+   "roadShort": "I-95",
+   "source": "FL511 (FDOT)",
+   "sourceUrl": "https://fl511.com",
+   "spot": "at MM 199",
+   "status": "caution",
+   "title": "Object on roadway on I-95 South, at MM 199. Right shoulder blocked",
+   "where": "I-95 SB at MM 199",
+   "id": "brevard:fl511:943686",
+   "updated": "2026-11-05T21:34:00Z",
+   "lastReported": "2026-11-05T21:34:00Z",
+   "firstReported": "2026-11-05T21:34:00Z",
+   "verified": {
+    "agency": "FL511 (FDOT)",
+    "url": "https://fl511.com",
+    "kind": "feed",
+    "publishedAt": "2026-11-05T21:34:00Z"
+   },
+   "reopenedAt": "2026-11-05T22:15:41Z",
+   "evidence": {
+    "agency": "FL511 (FDOT)",
+    "kind": "feed-dropped",
+    "missingSince": "2026-11-05T22:01:28Z",
+    "reopenedAt": "2026-11-05T22:15:41Z",
+    "url": "https://fl511.com"
+   },
+   "stillReported": []
+  },
+  {
+   "dir": "SB",
+   "fullClosure": false,
+   "lanes": "Right shoulder blocked",
+   "lat": 28.332224,
+   "layer": "Incidents",
+   "line": [
+    [
+     28.33212,
+     -80.77653
+    ],
+    [
+     28.33187,
+     -80.77636
+    ],
+    [
+     28.33099,
+     -80.77579
+    ],
+    [
+     28.33018,
+     -80.77525
+    ],
+    [
+     28.32931,
+     -80.77469
+    ]
+   ],
+   "lng": -80.776376,
+   "reported": "2026-11-05T21:38:00Z",
+   "road": "I-95",
+   "roadShort": "I-95",
+   "source": "FL511 (FDOT)",
+   "sourceUrl": "https://fl511.com",
+   "spot": "at MM 199",
+   "status": "caution",
+   "title": "MVC on I-95 South, at MM 199. Right shoulder blocked",
+   "where": "I-95 SB at MM 199",
+   "id": "brevard:fl511:943702",
+   "updated": "2026-11-05T21:38:00Z",
+   "lastReported": "2026-11-05T21:38:00Z",
+   "firstReported": "2026-11-05T21:38:00Z",
+   "verified": {
+    "agency": "FL511 (FDOT)",
+    "url": "https://fl511.com",
+    "kind": "feed",
+    "publishedAt": "2026-11-05T21:38:00Z"
+   },
+   "reopenedAt": "2026-11-05T22:15:41Z",
+   "evidence": {
+    "agency": "FL511 (FDOT)",
+    "kind": "feed-dropped",
+    "missingSince": "2026-11-05T22:01:28Z",
+    "reopenedAt": "2026-11-05T22:15:41Z",
+    "url": "https://fl511.com"
+   },
+   "stillReported": []
+  },
   {
    "from": "N Highway 1",
    "fullClosure": false,
