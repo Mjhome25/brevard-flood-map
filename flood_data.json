@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-05T13:00:48Z",
+ "generated": "2026-11-05T13:15:38Z",
  "errors": [],
  "items": [
   {
@@ -151,37 +151,32 @@
   },
   {
    "fullClosure": false,
-   "lat": 28.1024137373737,
+   "lanes": "Debris In Roadway, Use Caution",
+   "lat": 28.1889778480457,
    "layer": "FHP",
-   "lng": -80.5702237774925,
-   "reported": "2026-11-05T12:29:50Z",
-   "road": "HIGHWAY A1A N [1220]",
-   "roadShort": "Highway A1A N [1220]",
+   "lng": -80.7064440837287,
+   "reported": "2026-11-05T13:02:11Z",
+   "road": "I-95 NB [MM188]",
+   "roadShort": "I-95 Nb [MM188]",
    "source": "FHP live CAD",
    "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-   "spot": "at Flug Ave",
+   "spot": "at Mm188",
    "status": "caution",
-   "title": "MVC at HIGHWAY A1A N [1220] x[FLUG AVE] [INDIALANTIC]",
-   "where": "Highway A1A N [1220] at Flug Ave",
-   "id": "brevard:fhp:20261105122950-f2019aeb",
-   "updated": "2026-11-05T12:29:50Z",
-   "lastReported": "2026-11-05T12:29:50Z",
-   "firstReported": "2026-11-05T12:29:50Z",
+   "title": "Roadway Debris/Object at I-95 NB [MM188] x[MM188] [MELBOURNE] (Debris In Roadway, Use Caution)",
+   "where": "I-95 Nb [MM188] at Mm188",
+   "id": "brevard:fhp:20261105130211-a5bc347b",
+   "updated": "2026-11-05T13:02:11Z",
+   "lastReported": "2026-11-05T13:02:11Z",
+   "firstReported": "2026-11-05T13:02:11Z",
    "verified": {
     "agency": "Florida Highway Patrol",
     "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
     "kind": "feed",
-    "publishedAt": "2026-11-05T12:29:50Z"
+    "publishedAt": "2026-11-05T13:02:11Z"
    },
-   "awaitingOfficial": true,
-   "missingSince": "2026-11-05T13:00:53Z",
-   "recheck": [],
-   "noLongerListed": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "since": "2026-11-05T13:00:53Z",
-    "wasClosed": false
-   }
+   "awaitingOfficial": false,
+   "missingSince": null,
+   "recheck": []
   },
   {
    "dir": "both directions",
@@ -354,6 +349,40 @@
   }
  ],
  "reopened": [
+  {
+   "fullClosure": false,
+   "lat": 28.1024137373737,
+   "layer": "FHP",
+   "lng": -80.5702237774925,
+   "reported": "2026-11-05T12:29:50Z",
+   "road": "HIGHWAY A1A N [1220]",
+   "roadShort": "Highway A1A N [1220]",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "spot": "at Flug Ave",
+   "status": "caution",
+   "title": "MVC at HIGHWAY A1A N [1220] x[FLUG AVE] [INDIALANTIC]",
+   "where": "Highway A1A N [1220] at Flug Ave",
+   "id": "brevard:fhp:20261105122950-f2019aeb",
+   "updated": "2026-11-05T12:29:50Z",
+   "lastReported": "2026-11-05T12:29:50Z",
+   "firstReported": "2026-11-05T12:29:50Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-05T12:29:50Z"
+   },
+   "reopenedAt": "2026-11-05T13:15:40Z",
+   "evidence": {
+    "agency": "Florida Highway Patrol",
+    "kind": "feed-dropped",
+    "missingSince": "2026-11-05T13:00:53Z",
+    "reopenedAt": "2026-11-05T13:15:40Z",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
+   },
+   "stillReported": []
+  },
   {
    "fullClosure": false,
    "lanes": "No Roadblock",
