@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-05T00:31:32Z",
+ "generated": "2026-11-05T00:45:40Z",
  "errors": [],
  "items": [
   {
@@ -122,41 +122,6 @@
   },
   {
    "fullClosure": false,
-   "lanes": "No Roadblock",
-   "lat": 28.0346688142292,
-   "layer": "FHP",
-   "lng": -80.6561886542542,
-   "reported": "2026-11-04T11:14:24Z",
-   "road": "I-95 SB [MM176]",
-   "roadShort": "I-95 Sb [MM176]",
-   "source": "FHP live CAD",
-   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-   "spot": "at Mm176",
-   "status": "caution",
-   "title": "MVC at I-95 SB [MM176] x[MM176] [PALM BAY] (No Roadblock)",
-   "where": "I-95 Sb [MM176] at Mm176",
-   "id": "brevard:fhp:20261104111424-f477ea16",
-   "updated": "2026-11-04T11:14:24Z",
-   "lastReported": "2026-11-04T11:14:24Z",
-   "firstReported": "2026-11-04T11:14:24Z",
-   "verified": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "kind": "feed",
-    "publishedAt": "2026-11-04T11:14:24Z"
-   },
-   "awaitingOfficial": true,
-   "missingSince": "2026-11-05T00:31:38Z",
-   "recheck": [],
-   "noLongerListed": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "since": "2026-11-05T00:31:38Z",
-    "wasClosed": false
-   }
-  },
-  {
-   "fullClosure": false,
    "lanes": "Source said \"Roadway Open\" (2026-11-04 11:41 UTC); not a verified reopening",
    "lat": 28.4532994071146,
    "layer": "FHP",
@@ -183,41 +148,6 @@
    "awaitingOfficial": false,
    "missingSince": null,
    "recheck": []
-  },
-  {
-   "fullClosure": false,
-   "lanes": "Source said \"Roadway Clear\" (2026-11-04 11:50 UTC); not a verified reopening",
-   "lat": 28.3615011594203,
-   "layer": "FHP",
-   "lng": -80.6894615811902,
-   "reported": "2026-11-04T11:50:20Z",
-   "road": "E MERRITT AVE [415]",
-   "roadShort": "E Merritt Ave [415]",
-   "source": "FHP live CAD",
-   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-   "spot": "at N Plumosa St",
-   "status": "caution",
-   "title": "MVC at E MERRITT AVE [415] x[N PLUMOSA ST] [MERRITT ISLAND] (Roadway Clear)",
-   "where": "E Merritt Ave [415] at N Plumosa St",
-   "id": "brevard:fhp:20261104115020-4af8d6aa",
-   "updated": "2026-11-04T11:50:20Z",
-   "lastReported": "2026-11-04T11:50:20Z",
-   "firstReported": "2026-11-04T11:50:20Z",
-   "verified": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "kind": "feed",
-    "publishedAt": "2026-11-04T11:50:20Z"
-   },
-   "awaitingOfficial": true,
-   "missingSince": "2026-11-05T00:31:38Z",
-   "recheck": [],
-   "noLongerListed": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "since": "2026-11-05T00:31:38Z",
-    "wasClosed": false
-   }
   },
   {
    "dir": "both directions",
@@ -286,63 +216,15 @@
     "publishedAt": "2026-11-04T21:25:00Z"
    },
    "awaitingOfficial": true,
-   "missingSince": null,
+   "missingSince": "2026-11-05T00:45:44Z",
    "recheck": [
     "source changed its lane description",
     "source changed the closed stretch"
-   ]
-  },
-  {
-   "dir": "SB",
-   "fullClosure": false,
-   "lanes": "Left shoulder blocked",
-   "lat": 28.035375,
-   "layer": "Incidents",
-   "line": [
-    [
-     28.03538,
-     -80.65683
-    ],
-    [
-     28.03527,
-     -80.65675
-    ],
-    [
-     28.03323,
-     -80.65532
-    ],
-    [
-     28.03206,
-     -80.6545
-    ]
    ],
-   "lng": -80.656836,
-   "reported": "2026-11-04T23:16:00Z",
-   "road": "I-95",
-   "roadShort": "I-95",
-   "source": "FL511 (FDOT)",
-   "sourceUrl": "https://fl511.com",
-   "spot": "before MM 176/CR-516",
-   "status": "caution",
-   "title": "MVC on I-95 South, before MM 176/CR-516. Left shoulder blocked",
-   "where": "I-95 SB before MM 176/CR-516",
-   "id": "brevard:fl511:941746",
-   "updated": "2026-11-04T23:36:00Z",
-   "lastReported": "2026-11-04T23:36:00Z",
-   "firstReported": "2026-11-04T23:36:00Z",
-   "verified": {
-    "agency": "FL511 (FDOT)",
-    "url": "https://fl511.com",
-    "kind": "feed",
-    "publishedAt": "2026-11-04T23:36:00Z"
-   },
-   "awaitingOfficial": true,
-   "missingSince": "2026-11-05T00:31:38Z",
-   "recheck": [],
    "noLongerListed": {
     "agency": "FL511 (FDOT)",
     "url": "https://fl511.com",
-    "since": "2026-11-05T00:31:38Z",
+    "since": "2026-11-05T00:45:44Z",
     "wasClosed": false
    }
   },
@@ -448,6 +330,130 @@
   }
  ],
  "reopened": [
+  {
+   "fullClosure": false,
+   "lanes": "No Roadblock",
+   "lat": 28.0346688142292,
+   "layer": "FHP",
+   "lng": -80.6561886542542,
+   "reported": "2026-11-04T11:14:24Z",
+   "road": "I-95 SB [MM176]",
+   "roadShort": "I-95 Sb [MM176]",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "spot": "at Mm176",
+   "status": "caution",
+   "title": "MVC at I-95 SB [MM176] x[MM176] [PALM BAY] (No Roadblock)",
+   "where": "I-95 Sb [MM176] at Mm176",
+   "id": "brevard:fhp:20261104111424-f477ea16",
+   "updated": "2026-11-04T11:14:24Z",
+   "lastReported": "2026-11-04T11:14:24Z",
+   "firstReported": "2026-11-04T11:14:24Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-04T11:14:24Z"
+   },
+   "reopenedAt": "2026-11-05T00:45:44Z",
+   "evidence": {
+    "agency": "Florida Highway Patrol",
+    "kind": "feed-dropped",
+    "missingSince": "2026-11-05T00:31:38Z",
+    "reopenedAt": "2026-11-05T00:45:44Z",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
+   },
+   "stillReported": []
+  },
+  {
+   "dir": "SB",
+   "fullClosure": false,
+   "lanes": "Left shoulder blocked",
+   "lat": 28.035375,
+   "layer": "Incidents",
+   "line": [
+    [
+     28.03538,
+     -80.65683
+    ],
+    [
+     28.03527,
+     -80.65675
+    ],
+    [
+     28.03323,
+     -80.65532
+    ],
+    [
+     28.03206,
+     -80.6545
+    ]
+   ],
+   "lng": -80.656836,
+   "reported": "2026-11-04T23:16:00Z",
+   "road": "I-95",
+   "roadShort": "I-95",
+   "source": "FL511 (FDOT)",
+   "sourceUrl": "https://fl511.com",
+   "spot": "before MM 176/CR-516",
+   "status": "caution",
+   "title": "MVC on I-95 South, before MM 176/CR-516. Left shoulder blocked",
+   "where": "I-95 SB before MM 176/CR-516",
+   "id": "brevard:fl511:941746",
+   "updated": "2026-11-04T23:36:00Z",
+   "lastReported": "2026-11-04T23:36:00Z",
+   "firstReported": "2026-11-04T23:36:00Z",
+   "verified": {
+    "agency": "FL511 (FDOT)",
+    "url": "https://fl511.com",
+    "kind": "feed",
+    "publishedAt": "2026-11-04T23:36:00Z"
+   },
+   "reopenedAt": "2026-11-05T00:45:44Z",
+   "evidence": {
+    "agency": "FL511 (FDOT)",
+    "kind": "feed-dropped",
+    "missingSince": "2026-11-05T00:31:38Z",
+    "reopenedAt": "2026-11-05T00:45:44Z",
+    "url": "https://fl511.com"
+   },
+   "stillReported": []
+  },
+  {
+   "fullClosure": false,
+   "lanes": "Roadway Clear",
+   "lat": 28.3615011594203,
+   "layer": "FHP",
+   "lng": -80.6894615811902,
+   "reported": "2026-11-04T11:50:20Z",
+   "road": "E MERRITT AVE [415]",
+   "roadShort": "E Merritt Ave [415]",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "spot": "at N Plumosa St",
+   "status": "caution",
+   "title": "MVC at E MERRITT AVE [415] x[N PLUMOSA ST] [MERRITT ISLAND] (Roadway Clear)",
+   "where": "E Merritt Ave [415] at N Plumosa St",
+   "id": "brevard:fhp:20261104115020-4af8d6aa",
+   "updated": "2026-11-04T11:50:20Z",
+   "lastReported": "2026-11-04T11:50:20Z",
+   "firstReported": "2026-11-04T11:50:20Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-04T11:50:20Z"
+   },
+   "reopenedAt": "2026-11-05T00:45:44Z",
+   "evidence": {
+    "agency": "Florida Highway Patrol",
+    "kind": "feed-dropped",
+    "missingSince": "2026-11-05T00:31:38Z",
+    "reopenedAt": "2026-11-05T00:45:44Z",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
+   },
+   "stillReported": []
+  },
   {
    "dir": "NB",
    "fullClosure": false,
@@ -5736,41 +5742,6 @@
     "kind": "fhp-dropped",
     "missingSince": "2026-11-04T02:45:44Z",
     "reopenedAt": "2026-11-04T03:02:05Z",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
-   },
-   "stillReported": []
-  },
-  {
-   "fullClosure": false,
-   "lanes": "Roadway Open",
-   "lat": 28.1141635177866,
-   "layer": "FHP",
-   "lng": -80.7057972271611,
-   "reported": "2026-11-03T11:39:34Z",
-   "road": "I-95 NB [EXIT RAMP]",
-   "roadShort": "I-95 Nb [Exit Ramp]",
-   "source": "FHP live CAD",
-   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-   "spot": "at Mm183",
-   "status": "caution",
-   "title": "MVC at I-95 NB [EXIT RAMP] x[MM183] [MELBOURNE] (Roadway Open)",
-   "where": "I-95 Nb [Exit Ramp] at Mm183",
-   "id": "brevard:fhp:20261103113934-fa0ee9b4",
-   "updated": "2026-11-03T11:39:34Z",
-   "lastReported": "2026-11-03T11:39:34Z",
-   "firstReported": "2026-11-03T11:39:34Z",
-   "verified": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "kind": "feed",
-    "publishedAt": "2026-11-03T11:39:34Z"
-   },
-   "reopenedAt": "2026-11-04T00:45:37Z",
-   "evidence": {
-    "agency": "Florida Highway Patrol",
-    "kind": "fhp-dropped",
-    "missingSince": "2026-11-04T00:30:42Z",
-    "reopenedAt": "2026-11-04T00:45:37Z",
     "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
    },
    "stillReported": []
