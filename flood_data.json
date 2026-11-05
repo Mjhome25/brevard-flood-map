@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-05T22:15:38Z",
+ "generated": "2026-11-05T22:31:49Z",
  "errors": [],
  "items": [
   {
@@ -27,9 +27,15 @@
     "kind": "feed",
     "publishedAt": "2026-11-05T09:23:13Z"
    },
-   "awaitingOfficial": false,
-   "missingSince": null,
-   "recheck": []
+   "awaitingOfficial": true,
+   "missingSince": "2026-11-05T22:31:54Z",
+   "recheck": [],
+   "noLongerListed": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "since": "2026-11-05T22:31:54Z",
+    "wasClosed": false
+   }
   },
   {
    "from": "Artemis Blvd",
@@ -104,6 +110,35 @@
     "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
     "kind": "feed",
     "publishedAt": "2026-11-05T10:09:47Z"
+   },
+   "awaitingOfficial": false,
+   "missingSince": null,
+   "recheck": []
+  },
+  {
+   "fullClosure": false,
+   "lanes": "Traffic Light Malfunctioning - Use Caution - Treat As A Four Way Stop",
+   "lat": 28.23097390426,
+   "layer": "FHP",
+   "lng": -80.7184896002343,
+   "reported": "2026-11-05T10:18:30Z",
+   "road": "WICKHAM RD",
+   "roadShort": "Wickham Rd",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "spot": "at I-95",
+   "status": "caution",
+   "title": "Traffic Light Out at WICKHAM RD x[I-95] [MELBOURNE] (Traffic Light Malfunctioning - Use Caution - Treat As A Four Way Stop)",
+   "where": "Wickham Rd at I-95",
+   "id": "brevard:fhp:20261105101830-2b834052",
+   "updated": "2026-11-05T10:18:30Z",
+   "lastReported": "2026-11-05T10:18:30Z",
+   "firstReported": "2026-11-05T10:18:30Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-05T10:18:30Z"
    },
    "awaitingOfficial": false,
    "missingSince": null,
@@ -253,9 +288,15 @@
     "kind": "feed",
     "publishedAt": "2026-11-05T21:30:00Z"
    },
-   "awaitingOfficial": false,
-   "missingSince": null,
-   "recheck": []
+   "awaitingOfficial": true,
+   "missingSince": "2026-11-05T22:31:54Z",
+   "recheck": [],
+   "noLongerListed": {
+    "agency": "FL511 (FDOT)",
+    "url": "https://fl511.com",
+    "since": "2026-11-05T22:31:54Z",
+    "wasClosed": false
+   }
   },
   {
    "dir": "SB",
@@ -2422,41 +2463,6 @@
     "kind": "feed-dropped",
     "missingSince": "2026-11-04T22:45:46Z",
     "reopenedAt": "2026-11-04T23:00:50Z",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
-   },
-   "stillReported": []
-  },
-  {
-   "fullClosure": false,
-   "lanes": "No Roadblock",
-   "lat": 28.3716697935881,
-   "layer": "FHP",
-   "lng": -80.6684675223702,
-   "reported": "2026-11-04T08:20:43Z",
-   "road": "SYKES CREEK PKWY",
-   "roadShort": "Sykes Creek Pkwy",
-   "source": "FHP live CAD",
-   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-   "spot": "at N Banana River Dr",
-   "status": "caution",
-   "title": "MVC at SYKES CREEK PKWY x[N BANANA RIVER DR] [MERRITT ISLAND] (No Roadblock)",
-   "where": "Sykes Creek Pkwy at N Banana River Dr",
-   "id": "brevard:fhp:20261104082043-8eea2807",
-   "updated": "2026-11-04T08:20:43Z",
-   "lastReported": "2026-11-04T08:20:43Z",
-   "firstReported": "2026-11-04T08:20:43Z",
-   "verified": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "kind": "feed",
-    "publishedAt": "2026-11-04T08:20:43Z"
-   },
-   "reopenedAt": "2026-11-04T22:15:43Z",
-   "evidence": {
-    "agency": "Florida Highway Patrol",
-    "kind": "feed-dropped",
-    "missingSince": "2026-11-04T22:00:48Z",
-    "reopenedAt": "2026-11-04T22:15:43Z",
     "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
    },
    "stillReported": []
