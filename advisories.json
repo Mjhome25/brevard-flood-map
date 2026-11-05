@@ -1,11 +1,5 @@
 [
  {
-  "agency": "National Weather Service (via WFTV)",
-  "time": "2026-11-04T11:18:37Z",
-  "text": "A flood warning is in effect until 9:30 a.m. Wednesday for some of the hardest-hit parts of Brevard County. Standing water and multiple road closures are still making travel hazardous. Little more rain is expected, but even a small amount could cause problems where floodwater has not drained. Residents in flood-prone areas should stay cautious, avoid driving through standing water and check for road closures before heading out.",
-  "url": "https://www.wftv.com/news/local/brevard-county-flood-warning-continues-standing-water-road-closures-remain/DZXVHMEOJ5FN3MNNFZCCLG3PKE/"
- },
- {
   "agency": "Brevard Public Schools (via Florida Today/Yahoo News)",
   "time": "2026-11-04T20:12:00Z",
   "text": "Brevard Public Schools will reopen all campuses on Thursday, Nov. 5, after being closed three days because of the flooding. Buses, before- and after-school care, and after-school activities will run on their normal schedules. Bus routes in storm-affected areas may be delayed. Several Melbourne schools stay under a precautionary boil water notice through the end of the week.",
@@ -22,5 +16,11 @@
   "time": "2026-11-05T01:39:00Z",
   "text": "A flood warning continues for the St. Johns River near Cocoa (9 miles west) in Brevard County. The river has risen into moderate flood stage and is forecast to reach major flood stage late this week and stay there through the weekend. Do not drive around barricades or through flooded areas, and use caution near the riverbanks. The next update is due Thursday at 11 a.m. EST.",
   "url": "https://govonestop.com/nws/florida-severe-flood-warning-effective-11042026-1739"
+ },
+ {
+  "agency": "Brevard County Government (via WFTV)",
+  "time": "2026-11-04T23:00:00Z",
+  "text": "Brevard County officials warn the flooding threat is not over as water keeps moving through the county. Lamplighter Village and Barefoot Bay remain areas of concern. Officials are watching water levels around Lake Washington and in low-lying areas west of I-95 in Rockledge and West Cocoa as the St. Johns River keeps rising and flowing north. Residents in areas threatened by rising river levels should be ready to evacuate if needed.",
+  "url": "https://www.wftv.com/news/local/thousands-report-damage-brevard-county-flood-recovery-continues/U4FFZDMKHRFXFLIIS4OYUROZ5Y/"
  }
 ]

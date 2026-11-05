@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-05T11:15:36Z",
+ "generated": "2026-11-05T11:31:52Z",
  "errors": [],
  "items": [
   {
@@ -122,75 +122,6 @@
   },
   {
    "fullClosure": false,
-   "lanes": "Right Lane Closed For Construction - Use Caution",
-   "lat": 28.1138911857708,
-   "layer": "FHP",
-   "lng": -80.7062562569916,
-   "reported": "2026-11-04T13:02:21Z",
-   "road": "I-95 SB [MM183]",
-   "roadShort": "I-95 Sb [MM183]",
-   "source": "FHP live CAD",
-   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-   "spot": "at Mm183",
-   "status": "caution",
-   "title": "Construction at I-95 SB [MM183] x[MM183] [MELBOURNE] (Right Lane Closed For Construction - Use Caution)",
-   "where": "I-95 Sb [MM183] at Mm183",
-   "id": "brevard:fhp:20261104130221-029206f3",
-   "updated": "2026-11-04T13:02:21Z",
-   "lastReported": "2026-11-04T13:02:21Z",
-   "firstReported": "2026-11-04T13:02:21Z",
-   "verified": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "kind": "feed",
-    "publishedAt": "2026-11-04T13:02:21Z"
-   },
-   "awaitingOfficial": true,
-   "missingSince": "2026-11-05T11:15:40Z",
-   "recheck": [],
-   "noLongerListed": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "since": "2026-11-05T11:15:40Z",
-    "wasClosed": false
-   }
-  },
-  {
-   "fullClosure": false,
-   "lat": 28.1139082476943,
-   "layer": "FHP",
-   "lng": -80.7056575343523,
-   "reported": "2026-11-04T13:34:11Z",
-   "road": "I-95 NB [MM183]",
-   "roadShort": "I-95 Nb [MM183]",
-   "source": "FHP live CAD",
-   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-   "spot": "at Mm183",
-   "status": "caution",
-   "title": "Construction at I-95 NB [MM183] x[MM183] [MELBOURNE]",
-   "where": "I-95 Nb [MM183] at Mm183",
-   "id": "brevard:fhp:20261104133411-68d24a6b",
-   "updated": "2026-11-04T13:34:11Z",
-   "lastReported": "2026-11-04T13:34:11Z",
-   "firstReported": "2026-11-04T13:34:11Z",
-   "verified": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "kind": "feed",
-    "publishedAt": "2026-11-04T13:34:11Z"
-   },
-   "awaitingOfficial": true,
-   "missingSince": "2026-11-05T11:15:40Z",
-   "recheck": [],
-   "noLongerListed": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "since": "2026-11-05T11:15:40Z",
-    "wasClosed": false
-   }
-  },
-  {
-   "fullClosure": false,
    "lat": 28.0347444971454,
    "layer": "FHP",
    "lng": -80.6559731019901,
@@ -204,6 +135,41 @@
    "title": "MVC at I-95 NB [MM176] x[MM176] [PALM BAY]",
    "where": "I-95 Nb [MM176] at Mm176",
    "id": "brevard:fhp:20261105111302-0fa4f437",
+   "updated": "2026-11-05T11:13:02Z",
+   "lastReported": "2026-11-05T11:13:02Z",
+   "firstReported": "2026-11-05T11:13:02Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-05T11:13:02Z"
+   },
+   "awaitingOfficial": true,
+   "missingSince": "2026-11-05T11:31:57Z",
+   "recheck": [],
+   "noLongerListed": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "since": "2026-11-05T11:31:57Z",
+    "wasClosed": false
+   }
+  },
+  {
+   "fullClosure": false,
+   "lanes": "No Roadblock",
+   "lat": 28.0347444971454,
+   "layer": "FHP",
+   "lng": -80.6559731019901,
+   "reported": "2026-11-05T11:13:02Z",
+   "road": "I-95 NB [ON RAMP]",
+   "roadShort": "I-95 Nb [On Ramp]",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "spot": "at Mm176",
+   "status": "caution",
+   "title": "MVC at I-95 NB [ON RAMP] x[MM176] [PALM BAY] (No Roadblock)",
+   "where": "I-95 Nb [On Ramp] at Mm176",
+   "id": "brevard:fhp:20261105111302-d13ca6ec",
    "updated": "2026-11-05T11:13:02Z",
    "lastReported": "2026-11-05T11:13:02Z",
    "firstReported": "2026-11-05T11:13:02Z",
@@ -350,6 +316,75 @@
  ],
  "reopened": [
   {
+   "fullClosure": false,
+   "lanes": "Right Lane Closed For Construction - Use Caution",
+   "lat": 28.1138911857708,
+   "layer": "FHP",
+   "lng": -80.7062562569916,
+   "reported": "2026-11-04T13:02:21Z",
+   "road": "I-95 SB [MM183]",
+   "roadShort": "I-95 Sb [MM183]",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "spot": "at Mm183",
+   "status": "caution",
+   "title": "Construction at I-95 SB [MM183] x[MM183] [MELBOURNE] (Right Lane Closed For Construction - Use Caution)",
+   "where": "I-95 Sb [MM183] at Mm183",
+   "id": "brevard:fhp:20261104130221-029206f3",
+   "updated": "2026-11-04T13:02:21Z",
+   "lastReported": "2026-11-04T13:02:21Z",
+   "firstReported": "2026-11-04T13:02:21Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-04T13:02:21Z"
+   },
+   "reopenedAt": "2026-11-05T11:31:57Z",
+   "evidence": {
+    "agency": "Florida Highway Patrol",
+    "kind": "feed-dropped",
+    "missingSince": "2026-11-05T11:15:40Z",
+    "reopenedAt": "2026-11-05T11:31:57Z",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
+   },
+   "stillReported": []
+  },
+  {
+   "fullClosure": false,
+   "lat": 28.1139082476943,
+   "layer": "FHP",
+   "lng": -80.7056575343523,
+   "reported": "2026-11-04T13:34:11Z",
+   "road": "I-95 NB [MM183]",
+   "roadShort": "I-95 Nb [MM183]",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "spot": "at Mm183",
+   "status": "caution",
+   "title": "Construction at I-95 NB [MM183] x[MM183] [MELBOURNE]",
+   "where": "I-95 Nb [MM183] at Mm183",
+   "id": "brevard:fhp:20261104133411-68d24a6b",
+   "updated": "2026-11-04T13:34:11Z",
+   "lastReported": "2026-11-04T13:34:11Z",
+   "firstReported": "2026-11-04T13:34:11Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-04T13:34:11Z"
+   },
+   "reopenedAt": "2026-11-05T11:31:57Z",
+   "evidence": {
+    "agency": "Florida Highway Patrol",
+    "kind": "feed-dropped",
+    "missingSince": "2026-11-05T11:15:40Z",
+    "reopenedAt": "2026-11-05T11:31:57Z",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
+   },
+   "stillReported": []
+  },
+  {
    "dir": "SB",
    "fullClosure": false,
    "lanes": "Off-ramp closed, Right lane blocked",
@@ -432,14 +467,7 @@
     "reopenedAt": "2026-11-05T07:15:40Z",
     "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
    },
-   "stillReported": [
-    {
-     "id": "brevard:fhp:20261104130221-029206f3",
-     "where": "I-95 Sb [MM183] at Mm183",
-     "source": "FHP live CAD",
-     "since": "2026-11-05T11:15:40Z"
-    }
-   ]
+   "stillReported": []
   },
   {
    "from": "Pine Sap Ave",
@@ -5432,14 +5460,7 @@
     "reopenedAt": "2026-11-04T19:31:34Z",
     "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
    },
-   "stillReported": [
-    {
-     "id": "brevard:fhp:20261104133411-68d24a6b",
-     "where": "I-95 Nb [MM183] at Mm183",
-     "source": "FHP live CAD",
-     "since": "2026-11-05T11:15:40Z"
-    }
-   ]
+   "stillReported": []
   },
   {
    "dir": "EB",
@@ -6174,12 +6195,6 @@
  ],
  "advisories": [
   {
-   "agency": "National Weather Service (via WFTV)",
-   "time": "2026-11-04T11:18:37Z",
-   "text": "A flood warning is in effect until 9:30 a.m. Wednesday for some of the hardest-hit parts of Brevard County. Standing water and multiple road closures are still making travel hazardous. Little more rain is expected, but even a small amount could cause problems where floodwater has not drained. Residents in flood-prone areas should stay cautious, avoid driving through standing water and check for road closures before heading out.",
-   "url": "https://www.wftv.com/news/local/brevard-county-flood-warning-continues-standing-water-road-closures-remain/DZXVHMEOJ5FN3MNNFZCCLG3PKE/"
-  },
-  {
    "agency": "Brevard Public Schools (via Florida Today/Yahoo News)",
    "time": "2026-11-04T20:12:00Z",
    "text": "Brevard Public Schools will reopen all campuses on Thursday, Nov. 5, after being closed three days because of the flooding. Buses, before- and after-school care, and after-school activities will run on their normal schedules. Bus routes in storm-affected areas may be delayed. Several Melbourne schools stay under a precautionary boil water notice through the end of the week.",
@@ -6196,6 +6211,12 @@
    "time": "2026-11-05T01:39:00Z",
    "text": "A flood warning continues for the St. Johns River near Cocoa (9 miles west) in Brevard County. The river has risen into moderate flood stage and is forecast to reach major flood stage late this week and stay there through the weekend. Do not drive around barricades or through flooded areas, and use caution near the riverbanks. The next update is due Thursday at 11 a.m. EST.",
    "url": "https://govonestop.com/nws/florida-severe-flood-warning-effective-11042026-1739"
+  },
+  {
+   "agency": "Brevard County Government (via WFTV)",
+   "time": "2026-11-04T23:00:00Z",
+   "text": "Brevard County officials warn the flooding threat is not over as water keeps moving through the county. Lamplighter Village and Barefoot Bay remain areas of concern. Officials are watching water levels around Lake Washington and in low-lying areas west of I-95 in Rockledge and West Cocoa as the St. Johns River keeps rising and flowing north. Residents in areas threatened by rising river levels should be ready to evacuate if needed.",
+   "url": "https://www.wftv.com/news/local/thousands-report-damage-brevard-county-flood-recovery-continues/U4FFZDMKHRFXFLIIS4OYUROZ5Y/"
   }
  ]
 }
