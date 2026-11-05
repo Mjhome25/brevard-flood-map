@@ -1,8 +1,6 @@
 {
- "generated": "2026-11-05T01:01:00Z",
- "errors": [
-  "FL511 map locations: 1 report(s) without a pin"
- ],
+ "generated": "2026-11-05T01:15:36Z",
+ "errors": [],
  "items": [
   {
    "from": "Leghorn Rd",
@@ -146,6 +144,35 @@
     "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
     "kind": "feed",
     "publishedAt": "2026-11-04T11:41:02Z"
+   },
+   "awaitingOfficial": false,
+   "missingSince": null,
+   "recheck": []
+  },
+  {
+   "fullClosure": false,
+   "lanes": "Right Lane Closed For Construction - Use Caution",
+   "lat": 28.1138911857708,
+   "layer": "FHP",
+   "lng": -80.7062562569916,
+   "reported": "2026-11-04T13:02:21Z",
+   "road": "I-95 SB [MM183]",
+   "roadShort": "I-95 Sb [MM183]",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "spot": "at Mm183",
+   "status": "caution",
+   "title": "Construction at I-95 SB [MM183] x[MM183] [MELBOURNE] (Right Lane Closed For Construction - Use Caution)",
+   "where": "I-95 Sb [MM183] at Mm183",
+   "id": "brevard:fhp:20261104130221-029206f3",
+   "updated": "2026-11-04T13:02:21Z",
+   "lastReported": "2026-11-04T13:02:21Z",
+   "firstReported": "2026-11-04T13:02:21Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-04T13:02:21Z"
    },
    "awaitingOfficial": false,
    "missingSince": null,
