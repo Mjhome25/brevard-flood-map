@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-05T13:45:32Z",
+ "generated": "2026-11-05T14:00:56Z",
  "errors": [],
  "items": [
   {
@@ -122,41 +122,6 @@
   },
   {
    "fullClosure": false,
-   "lanes": "No Roadblock",
-   "lat": 28.4468797935881,
-   "layer": "FHP",
-   "lng": -80.7628416680534,
-   "reported": "2026-11-05T12:16:40Z",
-   "road": "CAMP RD",
-   "roadShort": "Camp Rd",
-   "source": "FHP live CAD",
-   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-   "spot": "at N Cocoa Blvd",
-   "status": "caution",
-   "title": "MVC at CAMP RD x[N COCOA BLVD] [COCOA] (No Roadblock)",
-   "where": "Camp Rd at N Cocoa Blvd",
-   "id": "brevard:fhp:20261105121640-f46a706d",
-   "updated": "2026-11-05T12:16:40Z",
-   "lastReported": "2026-11-05T12:16:40Z",
-   "firstReported": "2026-11-05T12:16:40Z",
-   "verified": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "kind": "feed",
-    "publishedAt": "2026-11-05T12:16:40Z"
-   },
-   "awaitingOfficial": true,
-   "missingSince": "2026-11-05T13:45:39Z",
-   "recheck": [],
-   "noLongerListed": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "since": "2026-11-05T13:45:39Z",
-    "wasClosed": false
-   }
-  },
-  {
-   "fullClosure": false,
    "lanes": "Debris In Roadway, Use Caution",
    "lat": 28.1889778480457,
    "layer": "FHP",
@@ -180,9 +145,15 @@
     "kind": "feed",
     "publishedAt": "2026-11-05T13:02:11Z"
    },
-   "awaitingOfficial": false,
-   "missingSince": null,
-   "recheck": []
+   "awaitingOfficial": true,
+   "missingSince": "2026-11-05T14:00:59Z",
+   "recheck": [],
+   "noLongerListed": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "since": "2026-11-05T14:00:59Z",
+    "wasClosed": false
+   }
   },
   {
    "dir": "both directions",
@@ -316,6 +287,41 @@
   }
  ],
  "reopened": [
+  {
+   "fullClosure": false,
+   "lanes": "No Roadblock",
+   "lat": 28.4468797935881,
+   "layer": "FHP",
+   "lng": -80.7628416680534,
+   "reported": "2026-11-05T12:16:40Z",
+   "road": "CAMP RD",
+   "roadShort": "Camp Rd",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "spot": "at N Cocoa Blvd",
+   "status": "caution",
+   "title": "MVC at CAMP RD x[N COCOA BLVD] [COCOA] (No Roadblock)",
+   "where": "Camp Rd at N Cocoa Blvd",
+   "id": "brevard:fhp:20261105121640-f46a706d",
+   "updated": "2026-11-05T12:16:40Z",
+   "lastReported": "2026-11-05T12:16:40Z",
+   "firstReported": "2026-11-05T12:16:40Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-05T12:16:40Z"
+   },
+   "reopenedAt": "2026-11-05T14:00:59Z",
+   "evidence": {
+    "agency": "Florida Highway Patrol",
+    "kind": "feed-dropped",
+    "missingSince": "2026-11-05T13:45:39Z",
+    "reopenedAt": "2026-11-05T14:00:59Z",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
+   },
+   "stillReported": []
+  },
   {
    "dir": "SB",
    "fullClosure": false,
