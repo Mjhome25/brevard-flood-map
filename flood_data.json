@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-05T23:15:30Z",
+ "generated": "2026-11-05T23:31:43Z",
  "errors": [],
  "items": [
   {
@@ -104,6 +104,35 @@
     "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
     "kind": "feed",
     "publishedAt": "2026-11-05T10:53:27Z"
+   },
+   "awaitingOfficial": false,
+   "missingSince": null,
+   "recheck": []
+  },
+  {
+   "fullClosure": false,
+   "lanes": "Roadblock",
+   "lat": 28.4533837110233,
+   "layer": "FHP",
+   "lng": -80.8211822837767,
+   "reported": "2026-11-05T11:25:04Z",
+   "road": "I-95 NB [MM208]",
+   "roadShort": "I-95 Nb [MM208]",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "spot": "at Mm208",
+   "status": "closed",
+   "title": "Disabled Vehicle In Roadway at I-95 NB [MM208] x[MM208] [COCOA] (Roadblock)",
+   "where": "I-95 Nb [MM208] at Mm208",
+   "id": "brevard:fhp:20261105112504-24441ccf",
+   "updated": "2026-11-05T11:25:04Z",
+   "lastReported": "2026-11-05T11:25:04Z",
+   "firstReported": "2026-11-05T11:25:04Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-05T11:25:04Z"
    },
    "awaitingOfficial": false,
    "missingSince": null,
@@ -242,9 +271,15 @@
     "kind": "feed",
     "publishedAt": "2026-11-05T22:00:00Z"
    },
-   "awaitingOfficial": false,
-   "missingSince": null,
-   "recheck": []
+   "awaitingOfficial": true,
+   "missingSince": "2026-11-05T23:31:51Z",
+   "recheck": [],
+   "noLongerListed": {
+    "agency": "FL511 (FDOT)",
+    "url": "https://fl511.com",
+    "since": "2026-11-05T23:31:51Z",
+    "wasClosed": true
+   }
   },
   {
    "dir": "SB",
@@ -296,9 +331,15 @@
     "kind": "feed",
     "publishedAt": "2026-11-05T22:01:00Z"
    },
-   "awaitingOfficial": false,
-   "missingSince": null,
-   "recheck": []
+   "awaitingOfficial": true,
+   "missingSince": "2026-11-05T23:31:51Z",
+   "recheck": [],
+   "noLongerListed": {
+    "agency": "FL511 (FDOT)",
+    "url": "https://fl511.com",
+    "since": "2026-11-05T23:31:51Z",
+    "wasClosed": true
+   }
   },
   {
    "approx": true,
@@ -2478,12 +2519,6 @@
    "time": "2026-11-05T01:39:00Z",
    "text": "A flood warning continues for the St. Johns River near Cocoa (9 miles west) in Brevard County. The river has risen into moderate flood stage and is forecast to reach major flood stage late this week and stay there through the weekend. Do not drive around barricades or through flooded areas, and use caution near the riverbanks. The next update is due Thursday at 11 a.m. EST.",
    "url": "https://govonestop.com/nws/florida-severe-flood-warning-effective-11042026-1739"
-  },
-  {
-   "agency": "Brevard County Government (via WFTV)",
-   "time": "2026-11-04T23:00:00Z",
-   "text": "Brevard County officials warn the flooding threat is not over as water keeps moving through the county. Lamplighter Village and Barefoot Bay remain areas of concern. Officials are watching water levels around Lake Washington and in low-lying areas west of I-95 in Rockledge and West Cocoa as the St. Johns River keeps rising and flowing north. Residents in areas threatened by rising river levels should be ready to evacuate if needed.",
-   "url": "https://www.wftv.com/news/local/thousands-report-damage-brevard-county-flood-recovery-continues/U4FFZDMKHRFXFLIIS4OYUROZ5Y/"
   }
  ]
 }
