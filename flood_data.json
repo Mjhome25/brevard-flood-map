@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-05T21:01:00Z",
+ "generated": "2026-11-05T21:15:36Z",
  "errors": [],
  "items": [
   {
@@ -51,9 +51,15 @@
     "kind": "feed",
     "publishedAt": "2026-11-05T06:36:08Z"
    },
-   "awaitingOfficial": false,
-   "missingSince": null,
-   "recheck": []
+   "awaitingOfficial": true,
+   "missingSince": "2026-11-05T21:15:42Z",
+   "recheck": [],
+   "noLongerListed": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "since": "2026-11-05T21:15:42Z",
+    "wasClosed": true
+   }
   },
   {
    "dir": "both directions",
@@ -128,8 +134,8 @@
    "title": "MVC on I-95 South, at MM 190. 2 Right lanes blocked",
    "where": "I-95 SB at MM 190",
    "id": "brevard:fl511:943231",
-   "updated": "2026-11-05T20:39:00Z",
-   "lastReported": "2026-11-05T20:39:00Z",
+   "updated": "2026-11-05T21:10:00Z",
+   "lastReported": "2026-11-05T21:10:00Z",
    "firstReported": "2026-11-05T18:42:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
@@ -142,6 +148,100 @@
    "recheck": [
     "source changed its lane description"
    ]
+  },
+  {
+   "dir": "SB",
+   "from": "Ballard Dr",
+   "fullClosure": true,
+   "lanes": "All lanes closed",
+   "lat": 28.116128,
+   "layer": "Closures",
+   "line": [
+    [
+     28.116072,
+     -80.623131
+    ],
+    [
+     28.116068,
+     -80.62312
+    ],
+    [
+     28.115855,
+     -80.6225
+    ],
+    [
+     28.115645,
+     -80.621896
+    ],
+    [
+     28.115524,
+     -80.621641
+    ],
+    [
+     28.115446,
+     -80.621477
+    ],
+    [
+     28.115358,
+     -80.621298
+    ],
+    [
+     28.115252,
+     -80.621135
+    ],
+    [
+     28.115183,
+     -80.621031
+    ],
+    [
+     28.115095,
+     -80.620896
+    ],
+    [
+     28.115011,
+     -80.620798
+    ],
+    [
+     28.114882,
+     -80.620648
+    ],
+    [
+     28.114763,
+     -80.620535
+    ],
+    [
+     28.114642,
+     -80.620418
+    ],
+    [
+     28.114551,
+     -80.620337
+    ]
+   ],
+   "lng": -80.623094,
+   "reported": "2026-11-05T21:10:00Z",
+   "road": "US-1",
+   "roadShort": "US-1",
+   "source": "FL511 (FDOT)",
+   "sourceUrl": "https://fl511.com",
+   "spot": "at Babcock St",
+   "status": "closed",
+   "title": "MVC on US-1 South, at Babcock St. All lanes closed",
+   "to": "Laurie St",
+   "where": "US-1 SB at Babcock St",
+   "id": "brevard:fl511:943619",
+   "updated": "2026-11-05T21:12:00Z",
+   "lastReported": "2026-11-05T21:12:00Z",
+   "firstReported": "2026-11-05T21:12:00Z",
+   "verified": {
+    "agency": "FL511 (FDOT)",
+    "url": "https://fl511.com",
+    "kind": "feed",
+    "publishedAt": "2026-11-05T21:12:00Z"
+   },
+   "awaitingOfficial": false,
+   "missingSince": null,
+   "recheck": []
   },
   {
    "approx": true,
