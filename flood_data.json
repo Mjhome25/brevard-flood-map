@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-05T20:32:03Z",
+ "generated": "2026-11-05T20:45:35Z",
  "errors": [],
  "items": [
   {
@@ -28,11 +28,17 @@
     "publishedAt": "2026-11-05T06:28:55Z"
    },
    "awaitingOfficial": true,
-   "missingSince": null,
+   "missingSince": "2026-11-05T20:45:38Z",
    "recheck": [
     "source shows reduced impact",
     "source changed its lane description"
-   ]
+   ],
+   "noLongerListed": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "since": "2026-11-05T20:45:38Z",
+    "wasClosed": true
+   }
   },
   {
    "from": "N Highway 1",
@@ -86,41 +92,6 @@
    "awaitingOfficial": false,
    "missingSince": null,
    "recheck": []
-  },
-  {
-   "fullClosure": false,
-   "lanes": "No Roadblock",
-   "lat": 28.36653609574,
-   "layer": "FHP",
-   "lng": -80.700397339757,
-   "reported": "2026-11-05T07:06:35Z",
-   "road": "MINNA LN",
-   "roadShort": "Minna Ln",
-   "source": "FHP live CAD",
-   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-   "spot": "at N Courtenay Pkwy",
-   "status": "caution",
-   "title": "MVC at MINNA LN x[N COURTENAY PKWY] [MERRITT ISLAND] (No Roadblock)",
-   "where": "Minna Ln at N Courtenay Pkwy",
-   "id": "brevard:fhp:20261105070635-bab8abfa",
-   "updated": "2026-11-05T07:06:35Z",
-   "lastReported": "2026-11-05T07:06:35Z",
-   "firstReported": "2026-11-05T07:06:35Z",
-   "verified": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "kind": "feed",
-    "publishedAt": "2026-11-05T07:06:35Z"
-   },
-   "awaitingOfficial": true,
-   "missingSince": "2026-11-05T20:32:06Z",
-   "recheck": [],
-   "noLongerListed": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "since": "2026-11-05T20:32:06Z",
-    "wasClosed": false
-   }
   },
   {
    "dir": "both directions",
@@ -195,8 +166,8 @@
    "title": "MVC on I-95 South, at MM 190. 2 Right lanes blocked",
    "where": "I-95 SB at MM 190",
    "id": "brevard:fl511:943231",
-   "updated": "2026-11-05T20:08:00Z",
-   "lastReported": "2026-11-05T20:08:00Z",
+   "updated": "2026-11-05T20:39:00Z",
+   "lastReported": "2026-11-05T20:39:00Z",
    "firstReported": "2026-11-05T18:42:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
@@ -312,6 +283,41 @@
   }
  ],
  "reopened": [
+  {
+   "fullClosure": false,
+   "lanes": "No Roadblock",
+   "lat": 28.36653609574,
+   "layer": "FHP",
+   "lng": -80.700397339757,
+   "reported": "2026-11-05T07:06:35Z",
+   "road": "MINNA LN",
+   "roadShort": "Minna Ln",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "spot": "at N Courtenay Pkwy",
+   "status": "caution",
+   "title": "MVC at MINNA LN x[N COURTENAY PKWY] [MERRITT ISLAND] (No Roadblock)",
+   "where": "Minna Ln at N Courtenay Pkwy",
+   "id": "brevard:fhp:20261105070635-bab8abfa",
+   "updated": "2026-11-05T07:06:35Z",
+   "lastReported": "2026-11-05T07:06:35Z",
+   "firstReported": "2026-11-05T07:06:35Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-05T07:06:35Z"
+   },
+   "reopenedAt": "2026-11-05T20:45:38Z",
+   "evidence": {
+    "agency": "Florida Highway Patrol",
+    "kind": "feed-dropped",
+    "missingSince": "2026-11-05T20:32:06Z",
+    "reopenedAt": "2026-11-05T20:45:38Z",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
+   },
+   "stillReported": []
+  },
   {
    "dir": "EB",
    "fullClosure": false,
