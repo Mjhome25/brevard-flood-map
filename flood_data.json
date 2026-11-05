@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-05T07:00:43Z",
+ "generated": "2026-11-05T07:15:33Z",
  "errors": [],
  "items": [
   {
@@ -178,41 +178,6 @@
    "recheck": []
   },
   {
-   "fullClosure": false,
-   "lanes": "No Roadblock",
-   "lat": 28.1140997935881,
-   "layer": "FHP",
-   "lng": -80.7058992644244,
-   "reported": "2026-11-05T17:18:54Z",
-   "road": "I-95 SB [EXIT]",
-   "roadShort": "I-95 Sb [Exit]",
-   "source": "FHP live CAD",
-   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-   "spot": "at Mm183",
-   "status": "caution",
-   "title": "MVC at I-95 SB [EXIT] x[MM183] [MELBOURNE] (No Roadblock)",
-   "where": "I-95 Sb [Exit] at Mm183",
-   "id": "brevard:fhp:20261105171854-7d20a6f4",
-   "updated": "2026-11-05T17:18:54Z",
-   "lastReported": "2026-11-05T17:18:54Z",
-   "firstReported": "2026-11-05T17:18:54Z",
-   "verified": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "kind": "feed",
-    "publishedAt": "2026-11-05T17:18:54Z"
-   },
-   "awaitingOfficial": true,
-   "missingSince": "2026-11-05T07:00:47Z",
-   "recheck": [],
-   "noLongerListed": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "since": "2026-11-05T07:00:47Z",
-    "wasClosed": false
-   }
-  },
-  {
    "dir": "both directions",
    "fullClosure": true,
    "lanes": "All lanes closed",
@@ -388,6 +353,48 @@
   }
  ],
  "reopened": [
+  {
+   "fullClosure": false,
+   "lanes": "No Roadblock",
+   "lat": 28.1140997935881,
+   "layer": "FHP",
+   "lng": -80.7058992644244,
+   "reported": "2026-11-05T17:18:54Z",
+   "road": "I-95 SB [EXIT]",
+   "roadShort": "I-95 Sb [Exit]",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "spot": "at Mm183",
+   "status": "caution",
+   "title": "MVC at I-95 SB [EXIT] x[MM183] [MELBOURNE] (No Roadblock)",
+   "where": "I-95 Sb [Exit] at Mm183",
+   "id": "brevard:fhp:20261105171854-7d20a6f4",
+   "updated": "2026-11-05T17:18:54Z",
+   "lastReported": "2026-11-05T17:18:54Z",
+   "firstReported": "2026-11-05T17:18:54Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-05T17:18:54Z"
+   },
+   "reopenedAt": "2026-11-05T07:15:40Z",
+   "evidence": {
+    "agency": "Florida Highway Patrol",
+    "kind": "feed-dropped",
+    "missingSince": "2026-11-05T07:00:47Z",
+    "reopenedAt": "2026-11-05T07:15:40Z",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
+   },
+   "stillReported": [
+    {
+     "id": "brevard:fhp:20261104130221-029206f3",
+     "where": "I-95 Sb [MM183] at Mm183",
+     "source": "FHP live CAD",
+     "since": null
+    }
+   ]
+  },
   {
    "from": "Pine Sap Ave",
    "fullClosure": false,
