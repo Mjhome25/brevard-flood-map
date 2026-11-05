@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-05T10:31:35Z",
+ "generated": "2026-11-05T10:45:35Z",
  "errors": [],
  "items": [
   {
@@ -208,56 +208,6 @@
    "recheck": []
   },
   {
-   "dir": "SB",
-   "fullClosure": false,
-   "lanes": "Off-ramp closed, Right lane blocked",
-   "lat": 28.120627,
-   "layer": "Closures",
-   "line": [
-    [
-     28.12063,
-     -80.70605
-    ],
-    [
-     28.12056,
-     -80.70605
-    ],
-    [
-     28.11797,
-     -80.70606
-    ]
-   ],
-   "lng": -80.706081,
-   "reported": "2026-11-05T01:06:00Z",
-   "road": "I-95",
-   "roadShort": "I-95",
-   "source": "FL511 (FDOT)",
-   "sourceUrl": "https://fl511.com",
-   "spot": "before MM 183/SR-518",
-   "status": "closed",
-   "title": "Planned construction on I-95 South, before MM 183/SR-518. Off-ramp closed, Right lane blocked",
-   "where": "I-95 SB before MM 183/SR-518",
-   "id": "brevard:fl511:941879",
-   "updated": "2026-11-05T06:45:00Z",
-   "lastReported": "2026-11-05T06:45:00Z",
-   "firstReported": "2026-11-05T02:31:00Z",
-   "verified": {
-    "agency": "FL511 (FDOT)",
-    "url": "https://fl511.com",
-    "kind": "feed",
-    "publishedAt": "2026-11-05T02:31:00Z"
-   },
-   "awaitingOfficial": true,
-   "missingSince": "2026-11-05T10:31:40Z",
-   "recheck": [],
-   "noLongerListed": {
-    "agency": "FL511 (FDOT)",
-    "url": "https://fl511.com",
-    "since": "2026-11-05T10:31:40Z",
-    "wasClosed": true
-   }
-  },
-  {
    "approx": true,
    "city": "Melbourne",
    "from": "Palm Bay Rd NE",
@@ -359,6 +309,56 @@
   }
  ],
  "reopened": [
+  {
+   "dir": "SB",
+   "fullClosure": false,
+   "lanes": "Off-ramp closed, Right lane blocked",
+   "lat": 28.120627,
+   "layer": "Closures",
+   "line": [
+    [
+     28.12063,
+     -80.70605
+    ],
+    [
+     28.12056,
+     -80.70605
+    ],
+    [
+     28.11797,
+     -80.70606
+    ]
+   ],
+   "lng": -80.706081,
+   "reported": "2026-11-05T01:06:00Z",
+   "road": "I-95",
+   "roadShort": "I-95",
+   "source": "FL511 (FDOT)",
+   "sourceUrl": "https://fl511.com",
+   "spot": "before MM 183/SR-518",
+   "status": "closed",
+   "title": "Planned construction on I-95 South, before MM 183/SR-518. Off-ramp closed, Right lane blocked",
+   "where": "I-95 SB before MM 183/SR-518",
+   "id": "brevard:fl511:941879",
+   "updated": "2026-11-05T06:45:00Z",
+   "lastReported": "2026-11-05T06:45:00Z",
+   "firstReported": "2026-11-05T02:31:00Z",
+   "verified": {
+    "agency": "FL511 (FDOT)",
+    "url": "https://fl511.com",
+    "kind": "feed",
+    "publishedAt": "2026-11-05T02:31:00Z"
+   },
+   "reopenedAt": "2026-11-05T10:45:41Z",
+   "evidence": {
+    "agency": "FL511 (FDOT)",
+    "kind": "feed-dropped",
+    "missingSince": "2026-11-05T10:31:40Z",
+    "reopenedAt": "2026-11-05T10:45:41Z",
+    "url": "https://fl511.com"
+   },
+   "stillReported": []
+  },
   {
    "fullClosure": false,
    "lanes": "No Roadblock",
