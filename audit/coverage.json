@@ -1,5 +1,5 @@
 {
- "checkedAt": "2026-11-05T07:31:42Z",
+ "checkedAt": "2026-11-05T07:45:38Z",
  "fresh": true,
  "pilot": "City of Melbourne",
  "pending": [
@@ -1560,8 +1560,8 @@
     "679866428cf4406fd68d4376fb3934bf99e6e314857217c03f7ed8a888d60e4f",
     "746cdc91f2e0b08cdb9dadc4c9f958c6d390971a96b2908eb8496905fb973e6f"
    ],
-   "sha256": "ebf4cf1a955632253cb619d073b6660ceb9efb055f12806d8b1c3000d00dfc32",
-   "readAt": "2026-11-04T19:45:38Z"
+   "sha256": "69341c8edd6d034c4976a2a634dbf77674b4cf257f31b039aa17b783e745509a",
+   "readAt": "2026-11-05T07:45:38Z"
   },
   "https://www.melbourneflorida.org/Government/City-News/Traffic-Advisories/Road-Closures-1525": {
    "agency": "City of Melbourne",
@@ -1573,8 +1573,8 @@
     "97e677fe040fc517ea06a0c0051d7e189466888dc0cbea88d01828d21040db05",
     "746cdc91f2e0b08cdb9dadc4c9f958c6d390971a96b2908eb8496905fb973e6f"
    ],
-   "sha256": "8c643a9ec457a2f08bd3c7f719bffe8470244e5b7de09abfd09d2c77a58940ba",
-   "readAt": "2026-11-05T07:31:42Z"
+   "sha256": "3c2694e36ac9b68be30e8cd65bb13621e36edf1e2952479bc26cbb6072c9c383",
+   "readAt": "2026-11-05T07:45:38Z"
   },
   "https://www.melbourneflorida.org/Government/City-News/Traffic-Advisories/Lane-Closure-NASA-Blvd": {
    "agency": "City of Melbourne",
@@ -1584,8 +1584,8 @@
    "needsReview": [
     "d3b63822f83243ea40717b27e5b78827b787af45119ff216d61ea39a90a41734"
    ],
-   "sha256": "629869417d3a47b26929bc67bc213bc117a19e4ebd4e7f2b48597d4d95c90ee1",
-   "readAt": "2026-11-05T07:31:42Z"
+   "sha256": "417f43441dfc0e3b94bcc978da15e5a0c15bf0d9f717e4928deeb276b06a1cb0",
+   "readAt": "2026-11-05T07:45:38Z"
   },
   "https://www.melbourneflorida.org/Government/City-News/Traffic-Advisories/Copy-of-Road-Closures-Nov-4-1450": {
    "agency": "City of Melbourne",
@@ -1606,8 +1606,8 @@
     "f1815a2acee2dc12ec9d0fd398355de674f2a5d2013ef4b8c0d1ea938ab72343",
     "746cdc91f2e0b08cdb9dadc4c9f958c6d390971a96b2908eb8496905fb973e6f"
    ],
-   "sha256": "03696f089c176a1cbf1e1233b69b14c1b812796a86d7fea79a7ff9bcde60dfa2",
-   "readAt": "2026-11-05T07:31:42Z"
+   "sha256": "6747880b06d3e424ab0497e7cb8b182d6dbb9ed4586797f9f3e49fc592ba59de",
+   "readAt": "2026-11-05T07:45:38Z"
   }
  }
 }
