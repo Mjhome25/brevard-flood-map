@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-05T17:31:58Z",
+ "generated": "2026-11-05T17:45:33Z",
  "errors": [],
  "items": [
   {
@@ -121,68 +121,6 @@
    ]
   },
   {
-   "from": "Office Park Pl",
-   "fullClosure": false,
-   "lanes": "Roadblock",
-   "lat": 28.2306386209925,
-   "layer": "FHP",
-   "line": [
-    [
-     28.230414,
-     -80.710644
-    ],
-    [
-     28.230491,
-     -80.709023
-    ],
-    [
-     28.230531,
-     -80.708066
-    ],
-    [
-     28.230535,
-     -80.70799
-    ],
-    [
-     28.230643,
-     -80.705835
-    ]
-   ],
-   "lng": -80.7079964926498,
-   "reported": "2026-11-05T14:28:50Z",
-   "road": "N WICKHAM RD",
-   "roadShort": "N Wickham Rd",
-   "source": "FHP live CAD",
-   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-   "spot": "at Dolina Ct",
-   "status": "closed",
-   "title": "MVC W/Roadblock at N WICKHAM RD x[DOLINA CT] [MELBOURNE] (Roadblock)",
-   "to": "Baytree Dr",
-   "where": "N Wickham Rd at Dolina Ct",
-   "id": "brevard:fhp:20261105142850-57a1c060",
-   "updated": "2026-11-05T14:28:50Z",
-   "lastReported": "2026-11-05T14:28:50Z",
-   "firstReported": "2026-11-05T14:28:50Z",
-   "verified": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "kind": "feed",
-    "publishedAt": "2026-11-05T14:28:50Z"
-   },
-   "awaitingOfficial": true,
-   "missingSince": "2026-11-05T17:32:07Z",
-   "recheck": [
-    "source shows reduced impact",
-    "source changed its lane description"
-   ],
-   "noLongerListed": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "since": "2026-11-05T17:32:07Z",
-    "wasClosed": true
-   }
-  },
-  {
    "fullClosure": false,
    "lanes": "Source said \"Roadway Open\" (2026-11-05 16:55 UTC); not a verified reopening",
    "lat": 28.4771180281072,
@@ -206,6 +144,35 @@
     "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
     "kind": "feed",
     "publishedAt": "2026-11-05T16:55:38Z"
+   },
+   "awaitingOfficial": false,
+   "missingSince": null,
+   "recheck": []
+  },
+  {
+   "fullClosure": false,
+   "lanes": "No Roadblock",
+   "lat": 28.2278811594203,
+   "layer": "FHP",
+   "lng": -80.678931195788,
+   "reported": "2026-11-05T17:38:58Z",
+   "road": "N WICKHAM RD",
+   "roadShort": "N Wickham Rd",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "spot": "at Suntree Blvd",
+   "status": "caution",
+   "title": "MVC at N WICKHAM RD x[SUNTREE BLVD] [MELBOURNE] (No Roadblock)",
+   "where": "N Wickham Rd at Suntree Blvd",
+   "id": "brevard:fhp:20261105173858-daccc08d",
+   "updated": "2026-11-05T17:38:58Z",
+   "lastReported": "2026-11-05T17:38:58Z",
+   "firstReported": "2026-11-05T17:38:58Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-05T17:38:58Z"
    },
    "awaitingOfficial": false,
    "missingSince": null,
@@ -343,6 +310,65 @@
   }
  ],
  "reopened": [
+  {
+   "from": "Office Park Pl",
+   "fullClosure": false,
+   "lanes": "Roadblock",
+   "lat": 28.2306386209925,
+   "layer": "FHP",
+   "line": [
+    [
+     28.230414,
+     -80.710644
+    ],
+    [
+     28.230491,
+     -80.709023
+    ],
+    [
+     28.230531,
+     -80.708066
+    ],
+    [
+     28.230535,
+     -80.70799
+    ],
+    [
+     28.230643,
+     -80.705835
+    ]
+   ],
+   "lng": -80.7079964926498,
+   "reported": "2026-11-05T14:28:50Z",
+   "road": "N WICKHAM RD",
+   "roadShort": "N Wickham Rd",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "spot": "at Dolina Ct",
+   "status": "closed",
+   "title": "MVC W/Roadblock at N WICKHAM RD x[DOLINA CT] [MELBOURNE] (Roadblock)",
+   "to": "Baytree Dr",
+   "where": "N Wickham Rd at Dolina Ct",
+   "id": "brevard:fhp:20261105142850-57a1c060",
+   "updated": "2026-11-05T14:28:50Z",
+   "lastReported": "2026-11-05T14:28:50Z",
+   "firstReported": "2026-11-05T14:28:50Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-05T14:28:50Z"
+   },
+   "reopenedAt": "2026-11-05T17:45:41Z",
+   "evidence": {
+    "agency": "Florida Highway Patrol",
+    "kind": "feed-dropped",
+    "missingSince": "2026-11-05T17:32:07Z",
+    "reopenedAt": "2026-11-05T17:45:41Z",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
+   },
+   "stillReported": []
+  },
   {
    "fullClosure": false,
    "lanes": "Wire Debris In The Left Lane",
