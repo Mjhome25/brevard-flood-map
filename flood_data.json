@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-06T15:31:25Z",
+ "generated": "2026-11-06T15:45:35Z",
  "errors": [],
  "items": [
   {
@@ -2632,41 +2632,6 @@
     "kind": "feed-dropped",
     "missingSince": "2026-11-05T16:45:40Z",
     "reopenedAt": "2026-11-05T17:00:55Z",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
-   },
-   "stillReported": []
-  },
-  {
-   "fullClosure": false,
-   "lanes": "Debris In Roadway, Use Caution",
-   "lat": 28.4238046903821,
-   "layer": "FHP",
-   "lng": -80.8204482067743,
-   "reported": "2026-11-05T15:00:50Z",
-   "road": "I-95 SB [MM206]",
-   "roadShort": "I-95 Sb [MM206]",
-   "source": "FHP live CAD",
-   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-   "spot": "at Mm206",
-   "status": "caution",
-   "title": "Roadway Debris/Object at I-95 SB [MM206] x[MM206] [COCOA] (Debris In Roadway, Use Caution)",
-   "where": "I-95 Sb [MM206] at Mm206",
-   "id": "brevard:fhp:20261105150050-b94f888e",
-   "updated": "2026-11-05T15:00:50Z",
-   "lastReported": "2026-11-05T15:00:50Z",
-   "firstReported": "2026-11-05T15:00:50Z",
-   "verified": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "kind": "feed",
-    "publishedAt": "2026-11-05T15:00:50Z"
-   },
-   "reopenedAt": "2026-11-05T15:45:38Z",
-   "evidence": {
-    "agency": "Florida Highway Patrol",
-    "kind": "feed-dropped",
-    "missingSince": "2026-11-05T15:31:39Z",
-    "reopenedAt": "2026-11-05T15:45:38Z",
     "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
    },
    "stillReported": []
