@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-06T01:00:49Z",
+ "generated": "2026-11-06T01:15:34Z",
  "errors": [],
  "items": [
   {
@@ -2173,52 +2173,6 @@
     "kind": "feed-dropped",
     "missingSince": "2026-11-05T02:00:46Z",
     "reopenedAt": "2026-11-05T02:15:41Z",
-    "url": "https://fl511.com"
-   },
-   "stillReported": []
-  },
-  {
-   "dir": "SB",
-   "fullClosure": false,
-   "lanes": "Right shoulder blocked",
-   "lat": 28.017419,
-   "layer": "Incidents",
-   "line": [
-    [
-     28.01741,
-     -80.64404
-    ],
-    [
-     28.01711,
-     -80.64383
-    ]
-   ],
-   "lng": -80.644025,
-   "reported": "2026-11-04T21:23:00Z",
-   "road": "I-95",
-   "roadShort": "I-95",
-   "source": "FL511 (FDOT)",
-   "sourceUrl": "https://fl511.com",
-   "spot": "beyond MM 175",
-   "status": "caution",
-   "title": "MVC on I-95 South, beyond MM 175. Right shoulder blocked",
-   "where": "I-95 SB beyond MM 175",
-   "id": "brevard:fl511:941494",
-   "updated": "2026-11-05T00:03:00Z",
-   "lastReported": "2026-11-05T00:03:00Z",
-   "firstReported": "2026-11-04T21:25:00Z",
-   "verified": {
-    "agency": "FL511 (FDOT)",
-    "url": "https://fl511.com",
-    "kind": "feed",
-    "publishedAt": "2026-11-04T21:25:00Z"
-   },
-   "reopenedAt": "2026-11-05T01:01:08Z",
-   "evidence": {
-    "agency": "FL511 (FDOT)",
-    "kind": "feed-dropped",
-    "missingSince": "2026-11-05T00:45:44Z",
-    "reopenedAt": "2026-11-05T01:01:08Z",
     "url": "https://fl511.com"
    },
    "stillReported": []
