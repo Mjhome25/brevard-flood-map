@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-06T17:31:23Z",
+ "generated": "2026-11-06T17:45:38Z",
  "errors": [],
  "items": [
   {
@@ -89,11 +89,17 @@
     "publishedAt": "2026-11-06T17:03:31Z"
    },
    "awaitingOfficial": true,
-   "missingSince": null,
+   "missingSince": "2026-11-06T17:45:42Z",
    "recheck": [
     "source shows reduced impact",
     "source changed its lane description"
-   ]
+   ],
+   "noLongerListed": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "since": "2026-11-06T17:45:42Z",
+    "wasClosed": true
+   }
   },
   {
    "fullClosure": false,
@@ -119,9 +125,15 @@
     "kind": "feed",
     "publishedAt": "2026-11-06T17:08:01Z"
    },
-   "awaitingOfficial": false,
-   "missingSince": null,
-   "recheck": []
+   "awaitingOfficial": true,
+   "missingSince": "2026-11-06T17:45:42Z",
+   "recheck": [],
+   "noLongerListed": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "since": "2026-11-06T17:45:42Z",
+    "wasClosed": false
+   }
   },
   {
    "dir": "both directions",
@@ -246,6 +258,50 @@
    "recheck": [
     "source changed the closed stretch"
    ]
+  },
+  {
+   "dir": "NB",
+   "fullClosure": false,
+   "lanes": "Right shoulder blocked",
+   "lat": 28.423731,
+   "layer": "Incidents",
+   "line": [
+    [
+     28.4216,
+     -80.82021
+    ],
+    [
+     28.42178,
+     -80.82021
+    ],
+    [
+     28.42373,
+     -80.82022
+    ]
+   ],
+   "lng": -80.820236,
+   "reported": "2026-11-06T17:22:00Z",
+   "road": "I-95",
+   "roadShort": "I-95",
+   "source": "FL511 (FDOT)",
+   "sourceUrl": "https://fl511.com",
+   "spot": "at MM 206",
+   "status": "caution",
+   "title": "Vehicle on fire on I-95 North, at MM 206. Right shoulder blocked",
+   "where": "I-95 NB at MM 206",
+   "id": "brevard:fl511:945400",
+   "updated": "2026-11-06T17:42:00Z",
+   "lastReported": "2026-11-06T17:42:00Z",
+   "firstReported": "2026-11-06T17:42:00Z",
+   "verified": {
+    "agency": "FL511 (FDOT)",
+    "url": "https://fl511.com",
+    "kind": "feed",
+    "publishedAt": "2026-11-06T17:42:00Z"
+   },
+   "awaitingOfficial": false,
+   "missingSince": null,
+   "recheck": []
   },
   {
    "approx": true,
@@ -2659,65 +2715,6 @@
     "kind": "feed-dropped",
     "missingSince": "2026-11-05T18:45:43Z",
     "reopenedAt": "2026-11-05T19:00:49Z",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
-   },
-   "stillReported": []
-  },
-  {
-   "from": "Office Park Pl",
-   "fullClosure": false,
-   "lanes": "Roadblock",
-   "lat": 28.2306386209925,
-   "layer": "FHP",
-   "line": [
-    [
-     28.230414,
-     -80.710644
-    ],
-    [
-     28.230491,
-     -80.709023
-    ],
-    [
-     28.230531,
-     -80.708066
-    ],
-    [
-     28.230535,
-     -80.70799
-    ],
-    [
-     28.230643,
-     -80.705835
-    ]
-   ],
-   "lng": -80.7079964926498,
-   "reported": "2026-11-05T14:28:50Z",
-   "road": "N WICKHAM RD",
-   "roadShort": "N Wickham Rd",
-   "source": "FHP live CAD",
-   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-   "spot": "at Dolina Ct",
-   "status": "closed",
-   "title": "MVC W/Roadblock at N WICKHAM RD x[DOLINA CT] [MELBOURNE] (Roadblock)",
-   "to": "Baytree Dr",
-   "where": "N Wickham Rd at Dolina Ct",
-   "id": "brevard:fhp:20261105142850-57a1c060",
-   "updated": "2026-11-05T14:28:50Z",
-   "lastReported": "2026-11-05T14:28:50Z",
-   "firstReported": "2026-11-05T14:28:50Z",
-   "verified": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "kind": "feed",
-    "publishedAt": "2026-11-05T14:28:50Z"
-   },
-   "reopenedAt": "2026-11-05T17:45:41Z",
-   "evidence": {
-    "agency": "Florida Highway Patrol",
-    "kind": "feed-dropped",
-    "missingSince": "2026-11-05T17:32:07Z",
-    "reopenedAt": "2026-11-05T17:45:41Z",
     "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
    },
    "stillReported": []
