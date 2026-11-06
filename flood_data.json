@@ -1,75 +1,35 @@
 {
- "generated": "2026-11-06T13:31:26Z",
+ "generated": "2026-11-06T13:45:39Z",
  "errors": [],
  "items": [
   {
    "fullClosure": false,
-   "lanes": "No Roadblock",
-   "lat": 28.6659803864734,
+   "lanes": "Source said \"Road Clear\" (2026-11-06 13:39 UTC); not a verified reopening",
+   "lat": 28.1601852832675,
    "layer": "FHP",
-   "lng": -80.8890966629131,
-   "reported": "2026-11-06T11:22:31Z",
-   "road": "SR-46",
-   "roadShort": "SR-46",
+   "lng": -80.7058614292283,
+   "reported": "2026-11-06T13:39:32Z",
+   "road": "I-95 NB [MM186]",
+   "roadShort": "I-95 Nb [MM186]",
    "source": "FHP live CAD",
    "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-   "spot": "at Blake Lee Trl",
+   "spot": "at Mm186",
    "status": "caution",
-   "title": "MVC at SR-46 x[BLAKE LEE TRL] [MIMS] (No Roadblock)",
-   "where": "SR-46 at Blake Lee Trl",
-   "id": "brevard:fhp:20261106112231-25ba4a51",
-   "updated": "2026-11-06T11:22:31Z",
-   "lastReported": "2026-11-06T11:22:31Z",
-   "firstReported": "2026-11-06T11:22:31Z",
+   "title": "MVC at I-95 NB [MM186] x[MM186] [MELBOURNE] (Road Clear)",
+   "where": "I-95 Nb [MM186] at Mm186",
+   "id": "brevard:fhp:20261106133932-9ccfc09d",
+   "updated": "2026-11-06T13:39:32Z",
+   "lastReported": "2026-11-06T13:39:32Z",
+   "firstReported": "2026-11-06T13:39:32Z",
    "verified": {
     "agency": "Florida Highway Patrol",
     "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
     "kind": "feed",
-    "publishedAt": "2026-11-06T11:22:31Z"
+    "publishedAt": "2026-11-06T13:39:32Z"
    },
-   "awaitingOfficial": true,
-   "missingSince": "2026-11-06T13:31:32Z",
-   "recheck": [],
-   "noLongerListed": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "since": "2026-11-06T13:31:32Z",
-    "wasClosed": false
-   }
-  },
-  {
-   "fullClosure": false,
-   "lat": 28.6657990206412,
-   "layer": "FHP",
-   "lng": -80.8975428314755,
-   "reported": "2026-11-06T13:13:58Z",
-   "road": "SR-46",
-   "roadShort": "SR-46",
-   "source": "FHP live CAD",
-   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-   "spot": "at Lee Rd",
-   "status": "caution",
-   "title": "MVC at SR-46 x[LEE RD] [MIMS]",
-   "where": "SR-46 at Lee Rd",
-   "id": "brevard:fhp:20261106131358-6897bac9",
-   "updated": "2026-11-06T13:13:58Z",
-   "lastReported": "2026-11-06T13:13:58Z",
-   "firstReported": "2026-11-06T13:13:58Z",
-   "verified": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "kind": "feed",
-    "publishedAt": "2026-11-06T13:13:58Z"
-   },
-   "awaitingOfficial": true,
-   "missingSince": "2026-11-06T13:31:32Z",
-   "recheck": [],
-   "noLongerListed": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "since": "2026-11-06T13:31:32Z",
-    "wasClosed": false
-   }
+   "awaitingOfficial": false,
+   "missingSince": null,
+   "recheck": []
   },
   {
    "dir": "both directions",
@@ -203,6 +163,75 @@
   }
  ],
  "reopened": [
+  {
+   "fullClosure": false,
+   "lanes": "No Roadblock",
+   "lat": 28.6659803864734,
+   "layer": "FHP",
+   "lng": -80.8890966629131,
+   "reported": "2026-11-06T11:22:31Z",
+   "road": "SR-46",
+   "roadShort": "SR-46",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "spot": "at Blake Lee Trl",
+   "status": "caution",
+   "title": "MVC at SR-46 x[BLAKE LEE TRL] [MIMS] (No Roadblock)",
+   "where": "SR-46 at Blake Lee Trl",
+   "id": "brevard:fhp:20261106112231-25ba4a51",
+   "updated": "2026-11-06T11:22:31Z",
+   "lastReported": "2026-11-06T11:22:31Z",
+   "firstReported": "2026-11-06T11:22:31Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-06T11:22:31Z"
+   },
+   "reopenedAt": "2026-11-06T13:45:44Z",
+   "evidence": {
+    "agency": "Florida Highway Patrol",
+    "kind": "feed-dropped",
+    "missingSince": "2026-11-06T13:31:32Z",
+    "reopenedAt": "2026-11-06T13:45:44Z",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
+   },
+   "stillReported": []
+  },
+  {
+   "fullClosure": false,
+   "lat": 28.6657990206412,
+   "layer": "FHP",
+   "lng": -80.8975428314755,
+   "reported": "2026-11-06T13:13:58Z",
+   "road": "SR-46",
+   "roadShort": "SR-46",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "spot": "at Lee Rd",
+   "status": "caution",
+   "title": "MVC at SR-46 x[LEE RD] [MIMS]",
+   "where": "SR-46 at Lee Rd",
+   "id": "brevard:fhp:20261106131358-6897bac9",
+   "updated": "2026-11-06T13:13:58Z",
+   "lastReported": "2026-11-06T13:13:58Z",
+   "firstReported": "2026-11-06T13:13:58Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-06T13:13:58Z"
+   },
+   "reopenedAt": "2026-11-06T13:45:44Z",
+   "evidence": {
+    "agency": "Florida Highway Patrol",
+    "kind": "feed-dropped",
+    "missingSince": "2026-11-06T13:31:32Z",
+    "reopenedAt": "2026-11-06T13:45:44Z",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
+   },
+   "stillReported": []
+  },
   {
    "fullClosure": false,
    "lanes": "Roadway Open",
@@ -927,7 +956,14 @@
     "reopenedAt": "2026-11-06T04:31:44Z",
     "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
    },
-   "stillReported": []
+   "stillReported": [
+    {
+     "id": "brevard:fhp:20261106133932-9ccfc09d",
+     "where": "I-95 Nb [MM186] at Mm186",
+     "source": "FHP live CAD",
+     "since": null
+    }
+   ]
   },
   {
    "dir": "NB",
@@ -973,7 +1009,14 @@
     "reopenedAt": "2026-11-06T04:31:44Z",
     "url": "https://fl511.com"
    },
-   "stillReported": []
+   "stillReported": [
+    {
+     "id": "brevard:fhp:20261106133932-9ccfc09d",
+     "where": "I-95 Nb [MM186] at Mm186",
+     "source": "FHP live CAD",
+     "since": null
+    }
+   ]
   },
   {
    "fullClosure": false,
@@ -1008,7 +1051,14 @@
     "reopenedAt": "2026-11-06T04:00:45Z",
     "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
    },
-   "stillReported": []
+   "stillReported": [
+    {
+     "id": "brevard:fhp:20261106133932-9ccfc09d",
+     "where": "I-95 Nb [MM186] at Mm186",
+     "source": "FHP live CAD",
+     "since": null
+    }
+   ]
   },
   {
    "dir": "SB",
@@ -2609,51 +2659,6 @@
     "missingSince": "2026-11-05T13:45:39Z",
     "reopenedAt": "2026-11-05T14:00:59Z",
     "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
-   },
-   "stillReported": []
-  },
-  {
-   "dir": "SB",
-   "fullClosure": false,
-   "lat": 28.357167,
-   "layer": "Incidents",
-   "line": [
-    [
-     28.35715,
-     -80.79302
-    ],
-    [
-     28.35666,
-     -80.7927
-    ]
-   ],
-   "lng": -80.793,
-   "reported": "2026-11-05T12:24:00Z",
-   "road": "I-95",
-   "roadShort": "I-95",
-   "source": "FL511 (FDOT)",
-   "sourceUrl": "https://fl511.com",
-   "spot": "before MM 201/SR-520",
-   "status": "caution",
-   "title": "Incident on I-95 South, before MM 201/SR-520",
-   "where": "I-95 SB before MM 201/SR-520",
-   "id": "brevard:fl511:942491",
-   "updated": "2026-11-05T12:56:00Z",
-   "lastReported": "2026-11-05T12:56:00Z",
-   "firstReported": "2026-11-05T12:56:00Z",
-   "verified": {
-    "agency": "FL511 (FDOT)",
-    "url": "https://fl511.com",
-    "kind": "feed",
-    "publishedAt": "2026-11-05T12:56:00Z"
-   },
-   "reopenedAt": "2026-11-05T13:45:39Z",
-   "evidence": {
-    "agency": "FL511 (FDOT)",
-    "kind": "feed-dropped",
-    "missingSince": "2026-11-05T13:31:49Z",
-    "reopenedAt": "2026-11-05T13:45:39Z",
-    "url": "https://fl511.com"
    },
    "stillReported": []
   }
