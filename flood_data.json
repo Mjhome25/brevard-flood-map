@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-06T14:00:54Z",
+ "generated": "2026-11-06T14:15:37Z",
  "errors": [],
  "items": [
   {
@@ -2680,41 +2680,6 @@
     "kind": "feed-dropped",
     "missingSince": "2026-11-05T15:31:39Z",
     "reopenedAt": "2026-11-05T15:45:38Z",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
-   },
-   "stillReported": []
-  },
-  {
-   "fullClosure": false,
-   "lanes": "Debris In Roadway, Use Caution",
-   "lat": 28.1889778480457,
-   "layer": "FHP",
-   "lng": -80.7064440837287,
-   "reported": "2026-11-05T13:02:11Z",
-   "road": "I-95 NB [MM188]",
-   "roadShort": "I-95 Nb [MM188]",
-   "source": "FHP live CAD",
-   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-   "spot": "at Mm188",
-   "status": "caution",
-   "title": "Roadway Debris/Object at I-95 NB [MM188] x[MM188] [MELBOURNE] (Debris In Roadway, Use Caution)",
-   "where": "I-95 Nb [MM188] at Mm188",
-   "id": "brevard:fhp:20261105130211-a5bc347b",
-   "updated": "2026-11-05T13:02:11Z",
-   "lastReported": "2026-11-05T13:02:11Z",
-   "firstReported": "2026-11-05T13:02:11Z",
-   "verified": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "kind": "feed",
-    "publishedAt": "2026-11-05T13:02:11Z"
-   },
-   "reopenedAt": "2026-11-05T14:15:40Z",
-   "evidence": {
-    "agency": "Florida Highway Patrol",
-    "kind": "feed-dropped",
-    "missingSince": "2026-11-05T14:00:59Z",
-    "reopenedAt": "2026-11-05T14:15:40Z",
     "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
    },
    "stillReported": []
