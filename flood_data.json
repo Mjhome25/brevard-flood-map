@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-05T23:45:33Z",
+ "generated": "2026-11-06T00:00:51Z",
  "errors": [],
  "items": [
   {
@@ -79,41 +79,6 @@
    "awaitingOfficial": false,
    "missingSince": null,
    "recheck": []
-  },
-  {
-   "fullClosure": false,
-   "lanes": "Source said \"Roadway Clear\" (2026-11-05 10:53 UTC); not a verified reopening",
-   "lat": 28.0788833245498,
-   "layer": "FHP",
-   "lng": -80.676966902044,
-   "reported": "2026-11-05T10:53:27Z",
-   "road": "W NEW HAVEN AVE",
-   "roadShort": "W New Haven Ave",
-   "source": "FHP live CAD",
-   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-   "spot": "at Hickory St",
-   "status": "caution",
-   "title": "MVC at W NEW HAVEN AVE x[HICKORY ST] [MELBOURNE] (Roadway Clear)",
-   "where": "W New Haven Ave at Hickory St",
-   "id": "brevard:fhp:20261105105327-6542b854",
-   "updated": "2026-11-05T10:53:27Z",
-   "lastReported": "2026-11-05T10:53:27Z",
-   "firstReported": "2026-11-05T10:53:27Z",
-   "verified": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "kind": "feed",
-    "publishedAt": "2026-11-05T10:53:27Z"
-   },
-   "awaitingOfficial": true,
-   "missingSince": "2026-11-05T23:45:40Z",
-   "recheck": [],
-   "noLongerListed": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "since": "2026-11-05T23:45:40Z",
-    "wasClosed": false
-   }
   },
   {
    "fullClosure": false,
@@ -378,6 +343,41 @@
   }
  ],
  "reopened": [
+  {
+   "fullClosure": false,
+   "lanes": "Roadway Clear",
+   "lat": 28.0788833245498,
+   "layer": "FHP",
+   "lng": -80.676966902044,
+   "reported": "2026-11-05T10:53:27Z",
+   "road": "W NEW HAVEN AVE",
+   "roadShort": "W New Haven Ave",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "spot": "at Hickory St",
+   "status": "caution",
+   "title": "MVC at W NEW HAVEN AVE x[HICKORY ST] [MELBOURNE] (Roadway Clear)",
+   "where": "W New Haven Ave at Hickory St",
+   "id": "brevard:fhp:20261105105327-6542b854",
+   "updated": "2026-11-05T10:53:27Z",
+   "lastReported": "2026-11-05T10:53:27Z",
+   "firstReported": "2026-11-05T10:53:27Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-05T10:53:27Z"
+   },
+   "reopenedAt": "2026-11-06T00:00:55Z",
+   "evidence": {
+    "agency": "Florida Highway Patrol",
+    "kind": "feed-dropped",
+    "missingSince": "2026-11-05T23:45:40Z",
+    "reopenedAt": "2026-11-06T00:00:55Z",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
+   },
+   "stillReported": []
+  },
   {
    "dir": "SB",
    "from": "Laurie St",
