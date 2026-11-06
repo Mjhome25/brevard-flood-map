@@ -1,30 +1,30 @@
 {
- "checkedAt": "2026-11-06T05:15:44Z",
+ "checkedAt": "2026-11-06T05:31:37Z",
  "fresh": true,
  "trial": {
   "from": "2026-11-03T17:36:43Z",
   "to": "2026-11-10T17:36:43Z",
   "windowElapsed": false,
-  "episodes": 137,
-  "incidents": 136,
+  "episodes": 140,
+  "incidents": 139,
   "bySource": {
-   "fhp": 83,
-   "fl511": 54
+   "fhp": 85,
+   "fl511": 55
   },
   "contrary evidence": 10,
-  "possibly stale entry": 2,
-  "nothing found": 125,
+  "possibly stale entry": 3,
+  "nothing found": 127,
   "byGroup": {
    "crash, state road": {
-    "episodes": 49,
-    "incidents": 49,
+    "episodes": 52,
+    "incidents": 52,
     "bySource": {
-     "fhp": 29,
-     "fl511": 20
+     "fhp": 31,
+     "fl511": 21
     },
     "contrary evidence": 5,
-    "possibly stale entry": 0,
-    "nothing found": 44
+    "possibly stale entry": 1,
+    "nothing found": 46
    },
    "crash, local street": {
     "episodes": 20,
@@ -111,7 +111,8 @@
   "drop:fcb6d7d87709b6c82b06736d2f410864",
   "drop:73c1eaf6d449db99f3cc53a3ec2c9fbd",
   "drop:e22083ed6b848d8ecf629ed38d2a469c",
-  "drop:85772e4499263b5159a77d6112981be2"
+  "drop:85772e4499263b5159a77d6112981be2",
+  "drop:47c53c80e32808701d4131367159da6f"
  ],
  "newForMike": [
   "drop:8fcbb4e3e4fa3d02124ec3878edf686c",
@@ -128,7 +129,8 @@
   "drop:fcb6d7d87709b6c82b06736d2f410864",
   "drop:73c1eaf6d449db99f3cc53a3ec2c9fbd",
   "drop:e22083ed6b848d8ecf629ed38d2a469c",
-  "drop:85772e4499263b5159a77d6112981be2"
+  "drop:85772e4499263b5159a77d6112981be2",
+  "drop:47c53c80e32808701d4131367159da6f"
  ],
  "note": "nothing found means no contrary report on our map, not proof the road reopened",
  "cases": [
@@ -152,7 +154,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-06T05:15:44Z"
+   "checkedAt": "2026-11-06T05:31:37Z"
   },
   {
    "id": "drop:df68d63a24d6f427cec24e2dfce0903a",
@@ -174,7 +176,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-06T05:15:44Z"
+   "checkedAt": "2026-11-06T05:31:37Z"
   },
   {
    "id": "drop:6ebc8286d59a975aa20810641bcbb853",
@@ -196,7 +198,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-06T05:15:44Z"
+   "checkedAt": "2026-11-06T05:31:37Z"
   },
   {
    "id": "drop:4018a14e01fff018d32bba9e7d15c5ad",
@@ -218,7 +220,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-06T05:15:44Z"
+   "checkedAt": "2026-11-06T05:31:37Z"
   },
   {
    "id": "drop:bd3693b03e420575bc3cbf4ae3441ee9",
@@ -240,7 +242,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": "2026-11-03T18:14:41Z",
-   "checkedAt": "2026-11-06T05:15:44Z"
+   "checkedAt": "2026-11-06T05:31:37Z"
   },
   {
    "id": "drop:d3d3569778a94ee69fd99fd50543fd20",
@@ -262,7 +264,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-06T05:15:44Z"
+   "checkedAt": "2026-11-06T05:31:37Z"
   },
   {
    "id": "drop:10c7fe7b40d2a77c27177b3e7f05b684",
@@ -300,7 +302,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-06T05:15:44Z"
+   "checkedAt": "2026-11-06T05:31:37Z"
   },
   {
    "id": "drop:e01f98e88a3093e657636d0a0bdd484c",
@@ -322,7 +324,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-06T05:15:44Z"
+   "checkedAt": "2026-11-06T05:31:37Z"
   },
   {
    "id": "drop:f82019e8a1567b555c15960c76afaf70",
@@ -344,7 +346,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": "2026-11-03T18:14:41Z",
-   "checkedAt": "2026-11-06T05:15:44Z"
+   "checkedAt": "2026-11-06T05:31:37Z"
   },
   {
    "id": "drop:72861753ae13cbb1817921a748ab0688",
@@ -366,7 +368,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-06T05:15:44Z"
+   "checkedAt": "2026-11-06T05:31:37Z"
   },
   {
    "id": "drop:5407a0915e764b934e8540e5c0e4610f",
@@ -388,7 +390,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-06T05:15:44Z"
+   "checkedAt": "2026-11-06T05:31:37Z"
   },
   {
    "id": "drop:23875b856f473bd11d9853a9e249295a",
@@ -410,7 +412,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-06T05:15:44Z"
+   "checkedAt": "2026-11-06T05:31:37Z"
   },
   {
    "id": "drop:289a254b7113519c1f11c3184fc8f1fe",
@@ -432,7 +434,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-06T05:15:44Z"
+   "checkedAt": "2026-11-06T05:31:37Z"
   },
   {
    "id": "drop:fbb9e7f8cc77c299e1535953072a2f74",
@@ -454,7 +456,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-06T05:15:44Z"
+   "checkedAt": "2026-11-06T05:31:37Z"
   },
   {
    "id": "drop:3b9d9e8f164becfa5fcfeec783c30cc7",
@@ -476,7 +478,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-06T05:15:44Z"
+   "checkedAt": "2026-11-06T05:31:37Z"
   },
   {
    "id": "drop:0807353f5fdbc93591b36bbfd2df0e65",
@@ -498,7 +500,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-06T05:15:44Z"
+   "checkedAt": "2026-11-06T05:31:37Z"
   },
   {
    "id": "drop:13d150a394c88fb9aa8c7e5c3571cb97",
@@ -520,7 +522,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-06T05:15:44Z"
+   "checkedAt": "2026-11-06T05:31:37Z"
   },
   {
    "id": "drop:06a5ef0035220c87ff48e8d86fefc85d",
@@ -542,7 +544,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-06T05:15:44Z"
+   "checkedAt": "2026-11-06T05:31:37Z"
   },
   {
    "id": "drop:a9ef9bf925123399799da39101acff23",
@@ -564,7 +566,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-06T05:15:44Z"
+   "checkedAt": "2026-11-06T05:31:37Z"
   },
   {
    "id": "drop:02c3037142cd717f121c745f49705cd0",
@@ -586,7 +588,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": "2026-11-03T18:14:41Z",
-   "checkedAt": "2026-11-06T05:15:44Z"
+   "checkedAt": "2026-11-06T05:31:37Z"
   },
   {
    "id": "drop:a60bdee1a1cb80c57c1ef481976f4b93",
@@ -608,7 +610,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": "2026-11-03T18:14:41Z",
-   "checkedAt": "2026-11-06T05:15:44Z"
+   "checkedAt": "2026-11-06T05:31:37Z"
   },
   {
    "id": "drop:530e5a1f0f5dc00c5926e18100771b83",
@@ -630,7 +632,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-06T05:15:44Z"
+   "checkedAt": "2026-11-06T05:31:37Z"
   },
   {
    "id": "drop:8fcbb4e3e4fa3d02124ec3878edf686c",
@@ -668,7 +670,7 @@
    "fingerprint": "220b69f977c392fa",
    "review": "unreviewed",
    "firstFound": "2026-11-03T18:14:41Z",
-   "checkedAt": "2026-11-06T05:15:44Z"
+   "checkedAt": "2026-11-06T05:31:37Z"
   },
   {
    "id": "drop:5e80be05cd9557a04fdea3984859956d",
@@ -706,7 +708,7 @@
    "fingerprint": "0b115858417b60bf",
    "review": "unreviewed",
    "firstFound": "2026-11-03T18:14:41Z",
-   "checkedAt": "2026-11-06T05:15:44Z"
+   "checkedAt": "2026-11-06T05:31:37Z"
   },
   {
    "id": "drop:d5de43a41199026e73a157d1d7298457",
@@ -728,7 +730,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-06T05:15:44Z"
+   "checkedAt": "2026-11-06T05:31:37Z"
   },
   {
    "id": "drop:dac4714e1f0d888d83c7a9f1b11f1b41",
@@ -750,7 +752,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-06T05:15:44Z"
+   "checkedAt": "2026-11-06T05:31:37Z"
   },
   {
    "id": "drop:24c750b4bc77fda99bbcc75b57b2094f",
@@ -772,7 +774,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-06T05:15:44Z"
+   "checkedAt": "2026-11-06T05:31:37Z"
   },
   {
    "id": "drop:13c64b7501b05a528a7be5946d3829b0",
@@ -794,7 +796,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-06T05:15:44Z"
+   "checkedAt": "2026-11-06T05:31:37Z"
   },
   {
    "id": "drop:3457eee0793d266fb1001178253ade06",
@@ -816,7 +818,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-06T05:15:44Z"
+   "checkedAt": "2026-11-06T05:31:37Z"
   },
   {
    "id": "drop:fe8534c587b5b4a8e4c542039046f2b2",
@@ -838,7 +840,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-06T05:15:44Z"
+   "checkedAt": "2026-11-06T05:31:37Z"
   },
   {
    "id": "drop:67cf16b14367c1ac9a3cd8729d9eeb69",
@@ -860,7 +862,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": "2026-11-03T18:14:41Z",
-   "checkedAt": "2026-11-06T05:15:44Z"
+   "checkedAt": "2026-11-06T05:31:37Z"
   },
   {
    "id": "drop:c7eb53e1813026901550bc9cfaccb502",
@@ -928,7 +930,7 @@
    "fingerprint": "0cf1cac85fe1dbe5",
    "review": "unreviewed",
    "firstFound": "2026-11-05T01:15:41Z",
-   "checkedAt": "2026-11-06T05:15:44Z"
+   "checkedAt": "2026-11-06T05:31:37Z"
   },
   {
    "id": "drop:777931949a98ca7790f484dbe9f268c1",
@@ -950,7 +952,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-06T05:15:44Z"
+   "checkedAt": "2026-11-06T05:31:37Z"
   },
   {
    "id": "drop:b31fee7296a8aa363f6c05e515b42af9",
@@ -972,7 +974,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-06T05:15:44Z"
+   "checkedAt": "2026-11-06T05:31:37Z"
   },
   {
    "id": "drop:749e41871d71ed6c9d92723c30a1363a",
@@ -994,7 +996,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-06T05:15:44Z"
+   "checkedAt": "2026-11-06T05:31:37Z"
   },
   {
    "id": "drop:0d780920a0446c7a40cbaf58a2ef06e4",
@@ -1016,7 +1018,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-06T05:15:44Z"
+   "checkedAt": "2026-11-06T05:31:37Z"
   },
   {
    "id": "drop:e0d68e17e8e60e31732b81ae85fbb610",
@@ -1038,7 +1040,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-06T05:15:44Z"
+   "checkedAt": "2026-11-06T05:31:37Z"
   },
   {
    "id": "drop:12426ddfd155202d0e58f4f0a2ec56a4",
@@ -1060,7 +1062,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-06T05:15:44Z"
+   "checkedAt": "2026-11-06T05:31:37Z"
   },
   {
    "id": "drop:9006ef30cbd9148b1dcb099b05ea254f",
@@ -1082,7 +1084,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-06T05:15:44Z"
+   "checkedAt": "2026-11-06T05:31:37Z"
   },
   {
    "id": "drop:530072dfd915eabdd2154e28393cabea",
@@ -1104,7 +1106,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-06T05:15:44Z"
+   "checkedAt": "2026-11-06T05:31:37Z"
   },
   {
    "id": "drop:acba85db46577c66fbb71c5ee826267e",
@@ -1126,7 +1128,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": "2026-11-03T18:14:41Z",
-   "checkedAt": "2026-11-06T05:15:44Z"
+   "checkedAt": "2026-11-06T05:31:37Z"
   },
   {
    "id": "drop:4eeaeab17e51a14e100799cc16d1997f",
@@ -1148,7 +1150,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-06T05:15:44Z"
+   "checkedAt": "2026-11-06T05:31:37Z"
   },
   {
    "id": "drop:f92e2656caeda579e1cd4f4a002c561b",
@@ -1170,7 +1172,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-06T05:15:44Z"
+   "checkedAt": "2026-11-06T05:31:37Z"
   },
   {
    "id": "drop:4d1d55af82bb6d136aad78951ce1166f",
@@ -1192,7 +1194,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-06T05:15:44Z"
+   "checkedAt": "2026-11-06T05:31:37Z"
   },
   {
    "id": "drop:4fd1a8d22b0cba9501306d286856af66",
@@ -1214,7 +1216,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-06T05:15:44Z"
+   "checkedAt": "2026-11-06T05:31:37Z"
   },
   {
    "id": "drop:e75e33eda36400704eb93c5e604c8f34",
@@ -1236,7 +1238,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-06T05:15:44Z"
+   "checkedAt": "2026-11-06T05:31:37Z"
   },
   {
    "id": "drop:e2046326fbc44e40ccfad5bae40d448d",
@@ -1258,7 +1260,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-06T05:15:44Z"
+   "checkedAt": "2026-11-06T05:31:37Z"
   },
   {
    "id": "drop:147b5424732bc727aa1d1c64b95b1a3c",
@@ -1280,7 +1282,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-06T05:15:44Z"
+   "checkedAt": "2026-11-06T05:31:37Z"
   },
   {
    "id": "drop:db1871b64117bbe9a9dbcee6354068c3",
@@ -1302,7 +1304,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-06T05:15:44Z"
+   "checkedAt": "2026-11-06T05:31:37Z"
   },
   {
    "id": "drop:e1479ac925f3fc381db00a53175a6ba5",
@@ -1324,7 +1326,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-06T05:15:44Z"
+   "checkedAt": "2026-11-06T05:31:37Z"
   },
   {
    "id": "drop:36cfb665f93d8927ce318ac33745ca5d",
@@ -1362,7 +1364,7 @@
    "fingerprint": "2b52278fc832d275",
    "review": "unreviewed",
    "firstFound": "2026-11-03T23:45:49Z",
-   "checkedAt": "2026-11-06T05:15:44Z"
+   "checkedAt": "2026-11-06T05:31:37Z"
   },
   {
    "id": "drop:10d5d3a076087bff7367102ec2b85a61",
@@ -1384,7 +1386,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-06T05:15:44Z"
+   "checkedAt": "2026-11-06T05:31:37Z"
   },
   {
    "id": "drop:b4be7fd4d6bed08327907a13ed749a40",
@@ -1406,7 +1408,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-06T05:15:44Z"
+   "checkedAt": "2026-11-06T05:31:37Z"
   },
   {
    "id": "drop:30facf98374e1eb59c4458b95d4c717a",
@@ -1428,7 +1430,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-06T05:15:44Z"
+   "checkedAt": "2026-11-06T05:31:37Z"
   },
   {
    "id": "drop:e61ea9d2864aa635e241538d2c974839",
@@ -1462,7 +1464,7 @@
    "fingerprint": "fc2911fda6cb8546",
    "review": "unreviewed",
    "firstFound": "2026-11-03T21:02:32Z",
-   "checkedAt": "2026-11-06T05:15:44Z"
+   "checkedAt": "2026-11-06T05:31:37Z"
   },
   {
    "id": "drop:f41f82037d0005187899c8ebea4aba97",
@@ -1500,7 +1502,7 @@
    "fingerprint": "65d55000adf57c29",
    "review": "unreviewed",
    "firstFound": "2026-11-04T22:45:49Z",
-   "checkedAt": "2026-11-06T05:15:44Z"
+   "checkedAt": "2026-11-06T05:31:37Z"
   },
   {
    "id": "drop:08e899d319e36a03d4b1d35ea3293d97",
@@ -1522,7 +1524,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-06T05:15:44Z"
+   "checkedAt": "2026-11-06T05:31:37Z"
   },
   {
    "id": "drop:7e69454d37985d4d4b54e810adaca27e",
@@ -1544,7 +1546,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-06T05:15:44Z"
+   "checkedAt": "2026-11-06T05:31:37Z"
   },
   {
    "id": "drop:9d51aebe3d0213bad2cd620a7f299343",
@@ -1566,7 +1568,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-06T05:15:44Z"
+   "checkedAt": "2026-11-06T05:31:37Z"
   },
   {
    "id": "drop:4cdb9816d0203379f1a532c7b26fe5e3",
@@ -1588,7 +1590,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-06T05:15:44Z"
+   "checkedAt": "2026-11-06T05:31:37Z"
   },
   {
    "id": "drop:257d72299ad405b373ff3250143e855a",
@@ -1610,7 +1612,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-06T05:15:44Z"
+   "checkedAt": "2026-11-06T05:31:37Z"
   },
   {
    "id": "drop:d862c7f72680c70005f887f2357e1c61",
@@ -1632,7 +1634,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-06T05:15:44Z"
+   "checkedAt": "2026-11-06T05:31:37Z"
   },
   {
    "id": "drop:1b33dffab9a2ea379781e0bc5b8cdc37",
@@ -1654,7 +1656,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-06T05:15:44Z"
+   "checkedAt": "2026-11-06T05:31:37Z"
   },
   {
    "id": "drop:db9c89b442d476b24a5010ef8a89e4a7",
@@ -1676,7 +1678,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": "2026-11-03T23:30:40Z",
-   "checkedAt": "2026-11-06T05:15:44Z"
+   "checkedAt": "2026-11-06T05:31:37Z"
   },
   {
    "id": "drop:b7f5b92c2900edb1e565cc1ab2bcc1ee",
@@ -1698,7 +1700,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-06T05:15:44Z"
+   "checkedAt": "2026-11-06T05:31:37Z"
   },
   {
    "id": "drop:0d9e4e45b68edcc9c5f764858c916c3a",
@@ -1736,7 +1738,7 @@
    "fingerprint": "0b115858417b60bf",
    "review": "unreviewed",
    "firstFound": "2026-11-03T23:45:49Z",
-   "checkedAt": "2026-11-06T05:15:44Z"
+   "checkedAt": "2026-11-06T05:31:37Z"
   },
   {
    "id": "drop:a39fb134a8daea95abb7c74d8cf8db61",
@@ -1774,7 +1776,7 @@
    "fingerprint": "fcc97cd03d5a3442",
    "review": "unreviewed",
    "firstFound": "2026-11-04T00:02:09Z",
-   "checkedAt": "2026-11-06T05:15:44Z"
+   "checkedAt": "2026-11-06T05:31:37Z"
   },
   {
    "id": "drop:2da671dbd9b08e065d8dab54a5a50aa1",
@@ -1796,7 +1798,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-06T05:15:44Z"
+   "checkedAt": "2026-11-06T05:31:37Z"
   },
   {
    "id": "drop:f1e4de49dfcc86b56bb7631f8efe783e",
@@ -1834,7 +1836,7 @@
    "fingerprint": "2b52278fc832d275",
    "review": "unreviewed",
    "firstFound": "2026-11-04T01:30:39Z",
-   "checkedAt": "2026-11-06T05:15:44Z"
+   "checkedAt": "2026-11-06T05:31:37Z"
   },
   {
    "id": "drop:8eeb6726db05a23a4a8fed1f2007b709",
@@ -1856,7 +1858,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-06T05:15:44Z"
+   "checkedAt": "2026-11-06T05:31:37Z"
   },
   {
    "id": "drop:3a1353aba59274562194adbede53145c",
@@ -1878,7 +1880,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-06T05:15:44Z"
+   "checkedAt": "2026-11-06T05:31:37Z"
   },
   {
    "id": "drop:9cccb91f2866f20a6cf0f8edcb68f3ad",
@@ -1900,7 +1902,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-06T05:15:44Z"
+   "checkedAt": "2026-11-06T05:31:37Z"
   },
   {
    "id": "drop:f500647d0acbee56bd48ef01cdc165d8",
@@ -1922,7 +1924,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-06T05:15:44Z"
+   "checkedAt": "2026-11-06T05:31:37Z"
   },
   {
    "id": "drop:d36a7f7a4336eecc16d1062cfa95c312",
@@ -1960,7 +1962,7 @@
    "fingerprint": "bda25d1269f7c503",
    "review": "unreviewed",
    "firstFound": "2026-11-04T13:01:09Z",
-   "checkedAt": "2026-11-06T05:15:44Z"
+   "checkedAt": "2026-11-06T05:31:37Z"
   },
   {
    "id": "drop:482f104145bf7347b97db74d941e5bbc",
@@ -1982,7 +1984,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-06T05:15:44Z"
+   "checkedAt": "2026-11-06T05:31:37Z"
   },
   {
    "id": "drop:349f9a07444ac3f2a6648f975d60fc26",
@@ -2004,7 +2006,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-06T05:15:44Z"
+   "checkedAt": "2026-11-06T05:31:37Z"
   },
   {
    "id": "drop:ac69ba51c39b9c711a49296e72222fbb",
@@ -2026,7 +2028,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-06T05:15:44Z"
+   "checkedAt": "2026-11-06T05:31:37Z"
   },
   {
    "id": "drop:b57e85f8dd28e29a47eef6bf097a04cf",
@@ -2048,7 +2050,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-06T05:15:44Z"
+   "checkedAt": "2026-11-06T05:31:37Z"
   },
   {
    "id": "drop:fbca4ad1ee4f618598ee7707f0ec3e2b",
@@ -2070,7 +2072,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-06T05:15:44Z"
+   "checkedAt": "2026-11-06T05:31:37Z"
   },
   {
    "id": "drop:9fd747a42eee930db8ec8854dc517bf0",
@@ -2108,7 +2110,7 @@
    "fingerprint": "2b52278fc832d275",
    "review": "unreviewed",
    "firstFound": "2026-11-05T01:45:42Z",
-   "checkedAt": "2026-11-06T05:15:44Z"
+   "checkedAt": "2026-11-06T05:31:37Z"
   },
   {
    "id": "drop:57c84a445482f77783edc737f1d5598c",
@@ -2130,7 +2132,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-06T05:15:44Z"
+   "checkedAt": "2026-11-06T05:31:37Z"
   },
   {
    "id": "drop:87840de9cc1c7a08a33d12036b9dbe4f",
@@ -2152,7 +2154,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-06T05:15:44Z"
+   "checkedAt": "2026-11-06T05:31:37Z"
   },
   {
    "id": "drop:06ab10082ffababa760ae850fadaa650",
@@ -2174,7 +2176,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-06T05:15:44Z"
+   "checkedAt": "2026-11-06T05:31:37Z"
   },
   {
    "id": "drop:34ac0f3de9291f8f07051a9a7503f966",
@@ -2196,7 +2198,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-06T05:15:44Z"
+   "checkedAt": "2026-11-06T05:31:37Z"
   },
   {
    "id": "drop:d53080131fd64032a3fcbcbd7402c6a9",
@@ -2218,7 +2220,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-06T05:15:44Z"
+   "checkedAt": "2026-11-06T05:31:37Z"
   },
   {
    "id": "drop:138ef7eebcdb44100d5c34ce233616a2",
@@ -2240,7 +2242,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": "2026-11-04T12:00:54Z",
-   "checkedAt": "2026-11-06T05:15:44Z"
+   "checkedAt": "2026-11-06T05:31:37Z"
   },
   {
    "id": "drop:71cdeb3b753dd8dc376dd91703826825",
@@ -2262,7 +2264,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-06T05:15:44Z"
+   "checkedAt": "2026-11-06T05:31:37Z"
   },
   {
    "id": "drop:263d7bc1dbe9600809355d3e4e4d18b2",
@@ -2284,7 +2286,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-06T05:15:44Z"
+   "checkedAt": "2026-11-06T05:31:37Z"
   },
   {
    "id": "drop:5ad6ebb7af9a507ecd1b3b635a0afcad",
@@ -2306,7 +2308,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-06T05:15:44Z"
+   "checkedAt": "2026-11-06T05:31:37Z"
   },
   {
    "id": "drop:fa0f5804ea3842e9666a84c376d64a20",
@@ -2328,7 +2330,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-06T05:15:44Z"
+   "checkedAt": "2026-11-06T05:31:37Z"
   },
   {
    "id": "drop:50454e446b90f476de5966d0f0e61bc2",
@@ -2350,7 +2352,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-06T05:15:44Z"
+   "checkedAt": "2026-11-06T05:31:37Z"
   },
   {
    "id": "drop:8da13bf677b4ed618ddd88e9f194e0a5",
@@ -2372,7 +2374,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-06T05:15:44Z"
+   "checkedAt": "2026-11-06T05:31:37Z"
   },
   {
    "id": "drop:a413047ba9b04c8c76fabf0d76447b00",
@@ -2394,7 +2396,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-06T05:15:44Z"
+   "checkedAt": "2026-11-06T05:31:37Z"
   },
   {
    "id": "drop:faf234791f50e1fbacf587571bac8bae",
@@ -2416,7 +2418,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-06T05:15:44Z"
+   "checkedAt": "2026-11-06T05:31:37Z"
   },
   {
    "id": "drop:3befdd621c418da4af25e53d490a51f4",
@@ -2438,7 +2440,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-06T05:15:44Z"
+   "checkedAt": "2026-11-06T05:31:37Z"
   },
   {
    "id": "drop:6ea75cdb4c7e5c45cdc9adf244bacede",
@@ -2460,7 +2462,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-06T05:15:44Z"
+   "checkedAt": "2026-11-06T05:31:37Z"
   },
   {
    "id": "drop:a29190bf002c4d017e534af7537a715d",
@@ -2482,7 +2484,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-06T05:15:44Z"
+   "checkedAt": "2026-11-06T05:31:37Z"
   },
   {
    "id": "drop:0480d5804cfc6ac8ee33576cc4116b85",
@@ -2504,7 +2506,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-06T05:15:44Z"
+   "checkedAt": "2026-11-06T05:31:37Z"
   },
   {
    "id": "drop:e8f4a80a7ccb02da2a8a870fad5fa92b",
@@ -2526,7 +2528,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-06T05:15:44Z"
+   "checkedAt": "2026-11-06T05:31:37Z"
   },
   {
    "id": "drop:eb5446a04f93c731262a3d1122042529",
@@ -2548,7 +2550,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": "2026-11-04T14:01:00Z",
-   "checkedAt": "2026-11-06T05:15:44Z"
+   "checkedAt": "2026-11-06T05:31:37Z"
   },
   {
    "id": "drop:26774952dd9ea18c681f045725306a97",
@@ -2570,7 +2572,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-06T05:15:44Z"
+   "checkedAt": "2026-11-06T05:31:37Z"
   },
   {
    "id": "drop:7e2df20f07b286f383d3f948eab7160c",
@@ -2592,7 +2594,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-06T05:15:44Z"
+   "checkedAt": "2026-11-06T05:31:37Z"
   },
   {
    "id": "drop:ba05fd54a39a8d61a4a2dda687133d30",
@@ -2614,7 +2616,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-06T05:15:44Z"
+   "checkedAt": "2026-11-06T05:31:37Z"
   },
   {
    "id": "drop:72e4df244af6a478ab51e4f40bb77353",
@@ -2636,7 +2638,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": "2026-11-04T15:15:50Z",
-   "checkedAt": "2026-11-06T05:15:44Z"
+   "checkedAt": "2026-11-06T05:31:37Z"
   },
   {
    "id": "drop:b271b87483a949ac04a8e37ee9a0dc18",
@@ -2658,7 +2660,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": "2026-11-04T19:45:41Z",
-   "checkedAt": "2026-11-06T05:15:44Z"
+   "checkedAt": "2026-11-06T05:31:37Z"
   },
   {
    "id": "drop:2b8fbc9b4c8f1ab6f3a290b736b238cf",
@@ -2680,7 +2682,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-06T05:15:44Z"
+   "checkedAt": "2026-11-06T05:31:37Z"
   },
   {
    "id": "drop:2a0a13e77534d287dabd70a68ff86ab0",
@@ -2702,7 +2704,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-06T05:15:44Z"
+   "checkedAt": "2026-11-06T05:31:37Z"
   },
   {
    "id": "drop:c680ecb12c494407efffe9e7af22e789",
@@ -2724,7 +2726,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": "2026-11-04T17:31:48Z",
-   "checkedAt": "2026-11-06T05:15:44Z"
+   "checkedAt": "2026-11-06T05:31:37Z"
   },
   {
    "id": "drop:24887fdae1887afaa9d1c062f0b12f7c",
@@ -2746,7 +2748,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-06T05:15:44Z"
+   "checkedAt": "2026-11-06T05:31:37Z"
   },
   {
    "id": "drop:2bada1e51e729ef782bb6ae44a3f4d7b",
@@ -2768,7 +2770,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-06T05:15:44Z"
+   "checkedAt": "2026-11-06T05:31:37Z"
   },
   {
    "id": "drop:ebe8e2a3344832b51b41e0f6125cf1f5",
@@ -2790,7 +2792,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-06T05:15:44Z"
+   "checkedAt": "2026-11-06T05:31:37Z"
   },
   {
    "id": "drop:1133801c33d04c7bbd68d15b8768cc8b",
@@ -2812,7 +2814,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-06T05:15:44Z"
+   "checkedAt": "2026-11-06T05:31:37Z"
   },
   {
    "id": "drop:6c01d0771176db4556298251fc7e0451",
@@ -2834,7 +2836,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-06T05:15:44Z"
+   "checkedAt": "2026-11-06T05:31:37Z"
   },
   {
    "id": "drop:03c26a8413f3607700af87887168dbb9",
@@ -2856,7 +2858,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-06T05:15:44Z"
+   "checkedAt": "2026-11-06T05:31:37Z"
   },
   {
    "id": "drop:e02cc74cebeb77f0485322e5c0b4ce84",
@@ -2878,7 +2880,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-06T05:15:44Z"
+   "checkedAt": "2026-11-06T05:31:37Z"
   },
   {
    "id": "drop:979bc62a51ab1fa6c301ae26e749b934",
@@ -2900,7 +2902,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-06T05:15:44Z"
+   "checkedAt": "2026-11-06T05:31:37Z"
   },
   {
    "id": "drop:2d6190aef026b600476b7f2d4ba1fd79",
@@ -2922,7 +2924,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-06T05:15:44Z"
+   "checkedAt": "2026-11-06T05:31:37Z"
   },
   {
    "id": "drop:b0d7f70bf9faa1de1034d10445f20d08",
@@ -2944,7 +2946,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-06T05:15:44Z"
+   "checkedAt": "2026-11-06T05:31:37Z"
   },
   {
    "id": "drop:022cb842e9bb820653d52957809bb389",
@@ -2966,7 +2968,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-06T05:15:44Z"
+   "checkedAt": "2026-11-06T05:31:37Z"
   },
   {
    "id": "drop:a516b19e90d91f5e9fe266efbf832646",
@@ -2988,7 +2990,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-06T05:15:44Z"
+   "checkedAt": "2026-11-06T05:31:37Z"
   },
   {
    "id": "drop:c71e2313964b6651e149d915d1aaf0c8",
@@ -3010,7 +3012,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-06T05:15:44Z"
+   "checkedAt": "2026-11-06T05:31:37Z"
   },
   {
    "id": "drop:20bf0a76bb103259b4e3317b9e97e2e3",
@@ -3032,7 +3034,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-06T05:15:44Z"
+   "checkedAt": "2026-11-06T05:31:37Z"
   },
   {
    "id": "drop:51825ea262eb4c92bd10bf6ede7b1457",
@@ -3054,7 +3056,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-06T05:15:44Z"
+   "checkedAt": "2026-11-06T05:31:37Z"
   },
   {
    "id": "drop:94738f1e43981e7709abe53414551872",
@@ -3076,7 +3078,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-06T05:15:44Z"
+   "checkedAt": "2026-11-06T05:31:37Z"
   },
   {
    "id": "drop:d9e9d3fbc580ac51c2cf83223ec13297",
@@ -3098,7 +3100,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-06T05:15:44Z"
+   "checkedAt": "2026-11-06T05:31:37Z"
   },
   {
    "id": "drop:0686251b140eb30737f70967474cb0e6",
@@ -3120,7 +3122,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-06T05:15:44Z"
+   "checkedAt": "2026-11-06T05:31:37Z"
   },
   {
    "id": "drop:c15cb4b0901ef6530433e1a6e13f5b66",
@@ -3142,7 +3144,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-06T05:15:44Z"
+   "checkedAt": "2026-11-06T05:31:37Z"
   },
   {
    "id": "drop:703d0ce6f8912bf8ca9248e654789fc2",
@@ -3164,7 +3166,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-06T05:15:44Z"
+   "checkedAt": "2026-11-06T05:31:37Z"
   },
   {
    "id": "drop:318083b729952ffcb02ec0bf676577cb",
@@ -3186,7 +3188,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-06T05:15:44Z"
+   "checkedAt": "2026-11-06T05:31:37Z"
   },
   {
    "id": "drop:3fc120146f184dc9c25313c4659ff8a4",
@@ -3208,7 +3210,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-06T05:15:44Z"
+   "checkedAt": "2026-11-06T05:31:37Z"
   },
   {
    "id": "drop:fcb6d7d87709b6c82b06736d2f410864",
@@ -3246,7 +3248,7 @@
    "fingerprint": "4214c2f585edca2d",
    "review": "unreviewed",
    "firstFound": "2026-11-05T07:00:49Z",
-   "checkedAt": "2026-11-06T05:15:44Z"
+   "checkedAt": "2026-11-06T05:31:37Z"
   },
   {
    "id": "drop:517053c5e6d4540c901498ae937cc0fc",
@@ -3268,7 +3270,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-06T05:15:44Z"
+   "checkedAt": "2026-11-06T05:31:37Z"
   },
   {
    "id": "drop:73c1eaf6d449db99f3cc53a3ec2c9fbd",
@@ -3321,7 +3323,7 @@
    "fingerprint": "00c9f4793755b216",
    "review": "unreviewed",
    "firstFound": "2026-11-05T11:15:42Z",
-   "checkedAt": "2026-11-06T05:15:44Z"
+   "checkedAt": "2026-11-06T05:31:37Z"
   },
   {
    "id": "drop:78accc63ca4bc50fdc912ead29b6c214",
@@ -3343,7 +3345,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-06T05:15:44Z"
+   "checkedAt": "2026-11-06T05:31:37Z"
   },
   {
    "id": "drop:b540f4703999a6ee97e6d8f06b41d212",
@@ -3365,7 +3367,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": "2026-11-05T11:31:59Z",
-   "checkedAt": "2026-11-06T05:15:44Z"
+   "checkedAt": "2026-11-06T05:31:37Z"
   },
   {
    "id": "drop:8d8ba8522a1e148ad927225007643f10",
@@ -3387,7 +3389,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-06T05:15:44Z"
+   "checkedAt": "2026-11-06T05:31:37Z"
   },
   {
    "id": "drop:06ad79666c12352bc3b01cc33f0dc1f4",
@@ -3409,7 +3411,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-06T05:15:44Z"
+   "checkedAt": "2026-11-06T05:31:37Z"
   },
   {
    "id": "drop:a0cd760c77d601b229df00eff4b8ed6c",
@@ -3431,7 +3433,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-06T05:15:44Z"
+   "checkedAt": "2026-11-06T05:31:37Z"
   },
   {
    "id": "drop:715cf4badbe6b25db16abfd178aff0ab",
@@ -3453,7 +3455,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-06T05:15:44Z"
+   "checkedAt": "2026-11-06T05:31:37Z"
   },
   {
    "id": "drop:f2bb6b686b1d7e792061992b6731ff19",
@@ -3475,7 +3477,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-06T05:15:44Z"
+   "checkedAt": "2026-11-06T05:31:37Z"
   },
   {
    "id": "drop:fca444b9fd4e0c0eb04d7f77d52919c0",
@@ -3497,7 +3499,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-06T05:15:44Z"
+   "checkedAt": "2026-11-06T05:31:37Z"
   },
   {
    "id": "drop:fe8f7452d365ec6e8d0eb31d3ee9a85c",
@@ -3519,7 +3521,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-06T05:15:44Z"
+   "checkedAt": "2026-11-06T05:31:37Z"
   },
   {
    "id": "drop:c5930e65da7f05f7ddcdd52984b82f71",
@@ -3541,7 +3543,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-06T05:15:44Z"
+   "checkedAt": "2026-11-06T05:31:37Z"
   },
   {
    "id": "drop:c98b4a54b00a896d100c49e369237cfb",
@@ -3563,7 +3565,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-06T05:15:44Z"
+   "checkedAt": "2026-11-06T05:31:37Z"
   },
   {
    "id": "drop:1b297b398ef50d95ed22028bf1e1e082",
@@ -3585,7 +3587,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-06T05:15:44Z"
+   "checkedAt": "2026-11-06T05:31:37Z"
   },
   {
    "id": "drop:91241b5cda927da86e88b0df7e924921",
@@ -3607,7 +3609,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-06T05:15:44Z"
+   "checkedAt": "2026-11-06T05:31:37Z"
   },
   {
    "id": "drop:74f47895131e90454a603118ff8ff43b",
@@ -3629,7 +3631,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-06T05:15:44Z"
+   "checkedAt": "2026-11-06T05:31:37Z"
   },
   {
    "id": "drop:5340e7cfcaefd89daff816e09e17dbd0",
@@ -3651,7 +3653,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-06T05:15:44Z"
+   "checkedAt": "2026-11-06T05:31:37Z"
   },
   {
    "id": "drop:3d5112fe1196149ae4cadac58dfd4bc3",
@@ -3673,7 +3675,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-06T05:15:44Z"
+   "checkedAt": "2026-11-06T05:31:37Z"
   },
   {
    "id": "drop:1b4202d6ef5d8c2150f4a8e648348beb",
@@ -3695,7 +3697,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-06T05:15:44Z"
+   "checkedAt": "2026-11-06T05:31:37Z"
   },
   {
    "id": "drop:990d137bceeae8bf2c6ac6427f569615",
@@ -3717,7 +3719,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-06T05:15:44Z"
+   "checkedAt": "2026-11-06T05:31:37Z"
   },
   {
    "id": "drop:2e8b99a006df51f33e5f4aa6d5e94550",
@@ -3739,7 +3741,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-06T05:15:44Z"
+   "checkedAt": "2026-11-06T05:31:37Z"
   },
   {
    "id": "drop:2ec2ebddc2e6bb1e47000bdf980322dd",
@@ -3761,7 +3763,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-06T05:15:44Z"
+   "checkedAt": "2026-11-06T05:31:37Z"
   },
   {
    "id": "drop:4d250181076a190a43ba6cac37462439",
@@ -3783,7 +3785,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-06T05:15:44Z"
+   "checkedAt": "2026-11-06T05:31:37Z"
   },
   {
    "id": "drop:d4e6f88c6ebef37ae62d02a0bccc8139",
@@ -3805,7 +3807,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": "2026-11-05T22:01:31Z",
-   "checkedAt": "2026-11-06T05:15:44Z"
+   "checkedAt": "2026-11-06T05:31:37Z"
   },
   {
    "id": "drop:af4f08e5c27cf17d6cf01a94b4613e3c",
@@ -3827,7 +3829,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": "2026-11-05T22:01:31Z",
-   "checkedAt": "2026-11-06T05:15:44Z"
+   "checkedAt": "2026-11-06T05:31:37Z"
   },
   {
    "id": "drop:ca26842982729e54df06c444ae003458",
@@ -3849,7 +3851,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-06T05:15:44Z"
+   "checkedAt": "2026-11-06T05:31:37Z"
   },
   {
    "id": "drop:2033cd78827c726a54008d6f2c2d10ca",
@@ -3871,7 +3873,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-06T05:15:44Z"
+   "checkedAt": "2026-11-06T05:31:37Z"
   },
   {
    "id": "drop:cb9ab975f5906e97e7cc061929e07307",
@@ -3893,7 +3895,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-06T05:15:44Z"
+   "checkedAt": "2026-11-06T05:31:37Z"
   },
   {
    "id": "drop:007188d723312a4364c8a8a9f383ae30",
@@ -3915,7 +3917,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-06T05:15:44Z"
+   "checkedAt": "2026-11-06T05:31:37Z"
   },
   {
    "id": "drop:65b560d8760b6ea1d30350c5028d5c9e",
@@ -3937,7 +3939,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-06T05:15:44Z"
+   "checkedAt": "2026-11-06T05:31:37Z"
   },
   {
    "id": "drop:f6608629f682d7e0d6469df2d324f477",
@@ -3959,7 +3961,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-06T05:15:44Z"
+   "checkedAt": "2026-11-06T05:31:37Z"
   },
   {
    "id": "drop:9d222dcb9503ffc83f6046fb9f2700b4",
@@ -3981,7 +3983,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-06T05:15:44Z"
+   "checkedAt": "2026-11-06T05:31:37Z"
   },
   {
    "id": "drop:0698ec4d6f2481c2a410ac7ee0cd6bc7",
@@ -4003,7 +4005,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-06T05:15:44Z"
+   "checkedAt": "2026-11-06T05:31:37Z"
   },
   {
    "id": "drop:98384514dc92f8c5c6429bf9d05e5a85",
@@ -4025,7 +4027,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-06T05:15:44Z"
+   "checkedAt": "2026-11-06T05:31:37Z"
   },
   {
    "id": "drop:0d89cd8779f02f0f542560df2c5efae0",
@@ -4047,7 +4049,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-06T05:15:44Z"
+   "checkedAt": "2026-11-06T05:31:37Z"
   },
   {
    "id": "drop:a6b4d6c6318be669290432850b132673",
@@ -4069,7 +4071,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-06T05:15:44Z"
+   "checkedAt": "2026-11-06T05:31:37Z"
   },
   {
    "id": "drop:e22083ed6b848d8ecf629ed38d2a469c",
@@ -4107,7 +4109,7 @@
    "fingerprint": "b38b2d55635e38e7",
    "review": "unreviewed",
    "firstFound": "2026-11-06T03:45:46Z",
-   "checkedAt": "2026-11-06T05:15:44Z"
+   "checkedAt": "2026-11-06T05:31:37Z"
   },
   {
    "id": "drop:a518b24e33cdf095308b77689c843963",
@@ -4129,7 +4131,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-06T05:15:44Z"
+   "checkedAt": "2026-11-06T05:31:37Z"
   },
   {
    "id": "drop:85772e4499263b5159a77d6112981be2",
@@ -4167,7 +4169,7 @@
    "fingerprint": "b0027ec87bff1753",
    "review": "unreviewed",
    "firstFound": "2026-11-06T03:45:46Z",
-   "checkedAt": "2026-11-06T05:15:44Z"
+   "checkedAt": "2026-11-06T05:31:37Z"
   },
   {
    "id": "drop:e7bdf44ca3b41fee896b588e5c031034",
@@ -4189,7 +4191,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-06T05:15:44Z"
+   "checkedAt": "2026-11-06T05:31:37Z"
   },
   {
    "id": "drop:4bd1605481590bbb54653700b0bb734c",
@@ -4211,7 +4213,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-06T05:15:44Z"
+   "checkedAt": "2026-11-06T05:31:37Z"
   },
   {
    "id": "drop:2bf043a1b682939a967007969bb5c727",
@@ -4233,7 +4235,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": "2026-11-06T03:45:46Z",
-   "checkedAt": "2026-11-06T05:15:44Z"
+   "checkedAt": "2026-11-06T05:31:37Z"
   },
   {
    "id": "drop:992276804a7c02b56a04bf56d703fce4",
@@ -4255,7 +4257,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-06T05:15:44Z"
+   "checkedAt": "2026-11-06T05:31:37Z"
   },
   {
    "id": "drop:faa68c09ee692e4d87507f2b71da2e57",
@@ -4277,7 +4279,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": "2026-11-06T04:15:46Z",
-   "checkedAt": "2026-11-06T05:15:44Z"
+   "checkedAt": "2026-11-06T05:31:37Z"
   },
   {
    "id": "drop:0763cc54fc92ee2f033222e929fc2f7c",
@@ -4299,7 +4301,7 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-06T05:15:44Z"
+   "checkedAt": "2026-11-06T05:31:37Z"
   },
   {
    "id": "drop:74470dd5a7b6f6c0a8d83b57182ef532",
@@ -4321,7 +4323,105 @@
    "fingerprint": null,
    "review": "unreviewed",
    "firstFound": null,
-   "checkedAt": "2026-11-06T05:15:44Z"
+   "checkedAt": "2026-11-06T05:31:37Z"
+  },
+  {
+   "id": "drop:6135f3e9667b6385c85f2c1e75d31ef9",
+   "rid": "brevard:fhp:20261105160740-a71b8da9",
+   "src": "fhp",
+   "where": "I-95 Sb [MM210] at Mm210",
+   "status": "closed",
+   "fullClosure": false,
+   "group": "crash, state road",
+   "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "firstReported": "2026-11-05T16:07:40Z",
+   "sourceLastReported": "2026-11-05T16:07:40Z",
+   "missingSince": "2026-11-06T05:31:34Z",
+   "seenGoneAt": "2026-11-06T05:31:34Z",
+   "cohort": "trial",
+   "finding": "nothing found",
+   "counterparts": [],
+   "lesser": [
+    {
+     "relation": "older-entry",
+     "rid": "brevard:fl511:944362",
+     "src": "fl511",
+     "source": "FL511 (FDOT)",
+     "url": "https://fl511.com",
+     "where": "I-95 SB at MM 210",
+     "status": "caution",
+     "fullClosure": false,
+     "firstReported": "2026-11-06T04:13:00Z",
+     "lastReported": "2026-11-06T05:07:00Z",
+     "missingSince": "2026-11-06T05:31:34Z",
+     "onMap": true,
+     "listing": "no longer listed by its feed"
+    }
+   ],
+   "fingerprint": null,
+   "review": "unreviewed",
+   "firstFound": null,
+   "checkedAt": "2026-11-06T05:31:37Z"
+  },
+  {
+   "id": "drop:01fb8a11c8d1eb223e3e82ee2f0c3c61",
+   "rid": "brevard:fhp:20261105162322-547172eb",
+   "src": "fhp",
+   "where": "US-1 at Sunset Ave",
+   "status": "closed",
+   "fullClosure": false,
+   "group": "crash, state road",
+   "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "firstReported": "2026-11-05T16:23:22Z",
+   "sourceLastReported": "2026-11-05T16:23:22Z",
+   "missingSince": "2026-11-06T05:31:34Z",
+   "seenGoneAt": "2026-11-06T05:31:34Z",
+   "cohort": "trial",
+   "finding": "nothing found",
+   "counterparts": [],
+   "lesser": [],
+   "fingerprint": null,
+   "review": "unreviewed",
+   "firstFound": null,
+   "checkedAt": "2026-11-06T05:31:37Z"
+  },
+  {
+   "id": "drop:47c53c80e32808701d4131367159da6f",
+   "rid": "brevard:fl511:944362",
+   "src": "fl511",
+   "where": "I-95 SB at MM 210",
+   "status": "caution",
+   "fullClosure": false,
+   "group": "crash, state road",
+   "url": "https://fl511.com",
+   "firstReported": "2026-11-06T04:13:00Z",
+   "sourceLastReported": "2026-11-06T05:07:00Z",
+   "missingSince": "2026-11-06T05:31:34Z",
+   "seenGoneAt": "2026-11-06T05:31:34Z",
+   "cohort": "trial",
+   "finding": "possibly stale entry",
+   "counterparts": [
+    {
+     "relation": "older-entry",
+     "rid": "brevard:fhp:20261105160740-a71b8da9",
+     "src": "fhp",
+     "source": "FHP live CAD",
+     "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+     "where": "I-95 Sb [MM210] at Mm210",
+     "status": "closed",
+     "fullClosure": false,
+     "firstReported": "2026-11-05T16:07:40Z",
+     "lastReported": "2026-11-05T16:07:40Z",
+     "missingSince": "2026-11-06T05:31:34Z",
+     "onMap": true,
+     "listing": "no longer listed by its feed"
+    }
+   ],
+   "lesser": [],
+   "fingerprint": "b3e0cba6c8e7b834",
+   "review": "unreviewed",
+   "firstFound": "2026-11-06T05:31:37Z",
+   "checkedAt": "2026-11-06T05:31:37Z"
   }
  ]
 }
