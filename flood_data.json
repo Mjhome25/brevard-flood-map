@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-06T23:15:37Z",
+ "generated": "2026-11-06T23:31:29Z",
  "errors": [],
  "items": [
   {
@@ -30,41 +30,6 @@
    "awaitingOfficial": false,
    "missingSince": null,
    "recheck": []
-  },
-  {
-   "fullClosure": false,
-   "lanes": "No Roadblock",
-   "lat": 28.2599092138779,
-   "layer": "FHP",
-   "lng": -80.7269444573884,
-   "reported": "2026-11-06T10:34:18Z",
-   "road": "I-95 NB [MM193]",
-   "roadShort": "I-95 Nb [MM193]",
-   "source": "FHP live CAD",
-   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-   "spot": "at Mm193",
-   "status": "caution",
-   "title": "MVC at I-95 NB [MM193] x[MM193] [MELBOURNE] (No Roadblock)",
-   "where": "I-95 Nb [MM193] at Mm193",
-   "id": "brevard:fhp:20261106103418-0bb5b3b5",
-   "updated": "2026-11-06T10:34:18Z",
-   "lastReported": "2026-11-06T10:34:18Z",
-   "firstReported": "2026-11-06T10:34:18Z",
-   "verified": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "kind": "feed",
-    "publishedAt": "2026-11-06T10:34:18Z"
-   },
-   "awaitingOfficial": true,
-   "missingSince": "2026-11-06T23:15:40Z",
-   "recheck": [],
-   "noLongerListed": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "since": "2026-11-06T23:15:40Z",
-    "wasClosed": false
-   }
   },
   {
    "fullClosure": false,
@@ -119,6 +84,64 @@
     "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
     "kind": "feed",
     "publishedAt": "2026-11-06T10:56:06Z"
+   },
+   "awaitingOfficial": false,
+   "missingSince": null,
+   "recheck": []
+  },
+  {
+   "fullClosure": false,
+   "lanes": "No Roadblock",
+   "lat": 28.5466727580149,
+   "layer": "FHP",
+   "lng": -80.8519432510067,
+   "reported": "2026-11-06T11:20:22Z",
+   "road": "I-95 SB [EXIT RAMP]",
+   "roadShort": "I-95 Sb [Exit Ramp]",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "spot": "at Mm215",
+   "status": "caution",
+   "title": "MVC at I-95 SB [EXIT RAMP] x[MM215] [TITUSVILLE] (No Roadblock)",
+   "where": "I-95 Sb [Exit Ramp] at Mm215",
+   "id": "brevard:fhp:20261106112022-ea661c4f",
+   "updated": "2026-11-06T11:20:22Z",
+   "lastReported": "2026-11-06T11:20:22Z",
+   "firstReported": "2026-11-06T11:20:22Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-06T11:20:22Z"
+   },
+   "awaitingOfficial": false,
+   "missingSince": null,
+   "recheck": []
+  },
+  {
+   "fullClosure": false,
+   "lanes": "Unknown Roadblock - Use Caution",
+   "lat": 28.0788554896794,
+   "layer": "FHP",
+   "lng": -80.7085144836653,
+   "reported": "2026-11-06T11:25:47Z",
+   "road": "US-192 [WOF]",
+   "roadShort": "US-192 [Wof]",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "spot": "at I-95",
+   "status": "closed",
+   "title": "MVC at US-192 [WOF] x[I-95] [MELBOURNE] (Unknown Roadblock - Use Caution)",
+   "where": "US-192 [Wof] at I-95",
+   "id": "brevard:fhp:20261106112547-9b3eaa90",
+   "updated": "2026-11-06T11:25:47Z",
+   "lastReported": "2026-11-06T11:25:47Z",
+   "firstReported": "2026-11-06T11:25:47Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-06T11:25:47Z"
    },
    "awaitingOfficial": false,
    "missingSince": null,
@@ -316,6 +339,41 @@
   }
  ],
  "reopened": [
+  {
+   "fullClosure": false,
+   "lanes": "No Roadblock",
+   "lat": 28.2599092138779,
+   "layer": "FHP",
+   "lng": -80.7269444573884,
+   "reported": "2026-11-06T10:34:18Z",
+   "road": "I-95 NB [MM193]",
+   "roadShort": "I-95 Nb [MM193]",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "spot": "at Mm193",
+   "status": "caution",
+   "title": "MVC at I-95 NB [MM193] x[MM193] [MELBOURNE] (No Roadblock)",
+   "where": "I-95 Nb [MM193] at Mm193",
+   "id": "brevard:fhp:20261106103418-0bb5b3b5",
+   "updated": "2026-11-06T10:34:18Z",
+   "lastReported": "2026-11-06T10:34:18Z",
+   "firstReported": "2026-11-06T10:34:18Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-06T10:34:18Z"
+   },
+   "reopenedAt": "2026-11-06T23:31:35Z",
+   "evidence": {
+    "agency": "Florida Highway Patrol",
+    "kind": "feed-dropped",
+    "missingSince": "2026-11-06T23:15:40Z",
+    "reopenedAt": "2026-11-06T23:31:35Z",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
+   },
+   "stillReported": []
+  },
   {
    "fullClosure": false,
    "lat": 28.4538117654809,
@@ -1259,7 +1317,14 @@
     "reopenedAt": "2026-11-06T06:00:52Z",
     "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
    },
-   "stillReported": []
+   "stillReported": [
+    {
+     "id": "brevard:fhp:20261106112022-ea661c4f",
+     "where": "I-95 Sb [Exit Ramp] at Mm215",
+     "source": "FHP live CAD",
+     "since": null
+    }
+   ]
   },
   {
    "dir": "SB",
@@ -1859,14 +1924,7 @@
     "reopenedAt": "2026-11-06T03:31:36Z",
     "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
    },
-   "stillReported": [
-    {
-     "id": "brevard:fhp:20261106103418-0bb5b3b5",
-     "where": "I-95 Nb [MM193] at Mm193",
-     "source": "FHP live CAD",
-     "since": "2026-11-06T23:15:40Z"
-    }
-   ]
+   "stillReported": []
   },
   {
    "fullClosure": false,
