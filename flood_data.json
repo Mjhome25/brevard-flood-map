@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-06T05:00:39Z",
+ "generated": "2026-11-06T05:15:36Z",
  "errors": [],
  "items": [
   {
@@ -85,9 +85,12 @@
     "kind": "feed",
     "publishedAt": "2026-11-05T16:07:40Z"
    },
-   "awaitingOfficial": false,
+   "awaitingOfficial": true,
    "missingSince": null,
-   "recheck": []
+   "recheck": [
+    "source shows reduced impact",
+    "source changed its lane description"
+   ]
   },
   {
    "from": "Magoon Ave",
@@ -169,6 +172,34 @@
     "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
     "kind": "feed",
     "publishedAt": "2026-11-05T16:23:22Z"
+   },
+   "awaitingOfficial": false,
+   "missingSince": null,
+   "recheck": []
+  },
+  {
+   "fullClosure": false,
+   "lat": 28.5467798067633,
+   "layer": "FHP",
+   "lng": -80.8516845440139,
+   "reported": "2026-11-06T17:11:10Z",
+   "road": "I-95 SB [MM215]",
+   "roadShort": "I-95 Sb [MM215]",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "spot": "at Mm215",
+   "status": "caution",
+   "title": "MVC at I-95 SB [MM215] x[MM215] [TITUSVILLE]",
+   "where": "I-95 Sb [MM215] at Mm215",
+   "id": "brevard:fhp:20261106171110-d2e89f72",
+   "updated": "2026-11-06T17:11:10Z",
+   "lastReported": "2026-11-06T17:11:10Z",
+   "firstReported": "2026-11-06T17:11:10Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-06T17:11:10Z"
    },
    "awaitingOfficial": false,
    "missingSince": null,
@@ -347,8 +378,8 @@
    "title": "MVC on I-95 South, at MM 210. Both shoulders blocked",
    "where": "I-95 SB at MM 210",
    "id": "brevard:fl511:944362",
-   "updated": "2026-11-06T04:40:00Z",
-   "lastReported": "2026-11-06T04:40:00Z",
+   "updated": "2026-11-06T05:07:00Z",
+   "lastReported": "2026-11-06T05:07:00Z",
    "firstReported": "2026-11-06T04:13:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
