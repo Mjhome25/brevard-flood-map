@@ -1,42 +1,35 @@
 {
- "generated": "2026-11-06T19:00:54Z",
+ "generated": "2026-11-06T19:15:38Z",
  "errors": [],
  "items": [
   {
-   "dir": "both directions",
-   "fullClosure": true,
-   "lanes": "All lanes closed",
-   "lat": 28.04231,
-   "layer": "Closures",
-   "lng": -80.6214301233189,
-   "reported": "2026-11-03T17:57:00Z",
-   "road": "Sunlake Rd",
-   "roadShort": "Sunlake Rd",
-   "source": "FL511 (FDOT)",
-   "sourceUrl": "https://fl511.com",
-   "spot": "At SR-507 Northbound",
-   "status": "flooded",
-   "title": "Flooding on Sunlake Rd Both Directions At SR-507 Northbound. All lanes closed.",
-   "where": "Sunlake Rd both directions At SR-507 Northbound",
-   "id": "brevard:fl511:939237",
-   "updated": "2026-11-06T13:05:00Z",
-   "lastReported": "2026-11-06T13:05:00Z",
-   "firstReported": "2026-11-03T17:58:00Z",
+   "fullClosure": false,
+   "lanes": "Source said \"Roadway Open\" (2026-11-06 07:09 UTC); not a verified reopening",
+   "lat": 28.2093592007027,
+   "layer": "FHP",
+   "lng": -80.6063343604387,
+   "reported": "2026-11-06T07:09:52Z",
+   "road": "S PATRICK DR",
+   "roadShort": "S Patrick Dr",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "spot": "at Pineda Cswy",
+   "status": "caution",
+   "title": "MVC at S PATRICK DR x[PINEDA CSWY] [SATELLITE BEACH] (Roadway Open)",
+   "where": "S Patrick Dr at Pineda Cswy",
+   "id": "brevard:fhp:20261106070952-460732cf",
+   "updated": "2026-11-06T07:09:52Z",
+   "lastReported": "2026-11-06T07:09:52Z",
+   "firstReported": "2026-11-06T07:09:52Z",
    "verified": {
-    "agency": "FL511 (FDOT)",
-    "url": "https://fl511.com",
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
     "kind": "feed",
-    "publishedAt": "2026-11-03T17:58:00Z"
+    "publishedAt": "2026-11-06T07:09:52Z"
    },
-   "awaitingOfficial": true,
-   "missingSince": "2026-11-06T19:00:59Z",
-   "recheck": [],
-   "noLongerListed": {
-    "agency": "FL511 (FDOT)",
-    "url": "https://fl511.com",
-    "since": "2026-11-06T19:00:59Z",
-    "wasClosed": true
-   }
+   "awaitingOfficial": false,
+   "missingSince": null,
+   "recheck": []
   },
   {
    "dir": "NB",
@@ -184,6 +177,42 @@
   }
  ],
  "reopened": [
+  {
+   "dir": "both directions",
+   "fullClosure": true,
+   "lanes": "All lanes closed",
+   "lat": 28.04231,
+   "layer": "Closures",
+   "lng": -80.6214301233189,
+   "reported": "2026-11-03T17:57:00Z",
+   "road": "Sunlake Rd",
+   "roadShort": "Sunlake Rd",
+   "source": "FL511 (FDOT)",
+   "sourceUrl": "https://fl511.com",
+   "spot": "At SR-507 Northbound",
+   "status": "flooded",
+   "title": "Flooding on Sunlake Rd Both Directions At SR-507 Northbound. All lanes closed.",
+   "where": "Sunlake Rd both directions At SR-507 Northbound",
+   "id": "brevard:fl511:939237",
+   "updated": "2026-11-06T13:05:00Z",
+   "lastReported": "2026-11-06T13:05:00Z",
+   "firstReported": "2026-11-03T17:58:00Z",
+   "verified": {
+    "agency": "FL511 (FDOT)",
+    "url": "https://fl511.com",
+    "kind": "feed",
+    "publishedAt": "2026-11-03T17:58:00Z"
+   },
+   "reopenedAt": "2026-11-06T19:15:42Z",
+   "evidence": {
+    "agency": "FL511 (FDOT)",
+    "kind": "feed-dropped",
+    "missingSince": "2026-11-06T19:00:59Z",
+    "reopenedAt": "2026-11-06T19:15:42Z",
+    "url": "https://fl511.com"
+   },
+   "stillReported": []
+  },
   {
    "fullClosure": false,
    "lanes": "No Road Block",
@@ -2623,41 +2652,6 @@
     "kind": "feed-dropped",
     "missingSince": "2026-11-05T19:45:41Z",
     "reopenedAt": "2026-11-05T20:00:49Z",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
-   },
-   "stillReported": []
-  },
-  {
-   "fullClosure": false,
-   "lanes": "No Roadblock",
-   "lat": 28.2278811594203,
-   "layer": "FHP",
-   "lng": -80.678931195788,
-   "reported": "2026-11-05T17:38:58Z",
-   "road": "N WICKHAM RD",
-   "roadShort": "N Wickham Rd",
-   "source": "FHP live CAD",
-   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-   "spot": "at Suntree Blvd",
-   "status": "caution",
-   "title": "MVC at N WICKHAM RD x[SUNTREE BLVD] [MELBOURNE] (No Roadblock)",
-   "where": "N Wickham Rd at Suntree Blvd",
-   "id": "brevard:fhp:20261105173858-daccc08d",
-   "updated": "2026-11-05T17:38:58Z",
-   "lastReported": "2026-11-05T17:38:58Z",
-   "firstReported": "2026-11-05T17:38:58Z",
-   "verified": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "kind": "feed",
-    "publishedAt": "2026-11-05T17:38:58Z"
-   },
-   "reopenedAt": "2026-11-05T19:15:37Z",
-   "evidence": {
-    "agency": "Florida Highway Patrol",
-    "kind": "feed-dropped",
-    "missingSince": "2026-11-05T19:00:49Z",
-    "reopenedAt": "2026-11-05T19:15:37Z",
     "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
    },
    "stillReported": []
