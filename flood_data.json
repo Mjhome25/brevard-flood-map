@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-06T13:01:07Z",
+ "generated": "2026-11-06T13:15:39Z",
  "errors": [],
  "items": [
   {
@@ -32,6 +32,34 @@
    "recheck": []
   },
   {
+   "fullClosure": false,
+   "lat": 28.6657990206412,
+   "layer": "FHP",
+   "lng": -80.8975428314755,
+   "reported": "2026-11-06T13:13:58Z",
+   "road": "SR-46",
+   "roadShort": "SR-46",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "spot": "at Lee Rd",
+   "status": "caution",
+   "title": "MVC at SR-46 x[LEE RD] [MIMS]",
+   "where": "SR-46 at Lee Rd",
+   "id": "brevard:fhp:20261106131358-6897bac9",
+   "updated": "2026-11-06T13:13:58Z",
+   "lastReported": "2026-11-06T13:13:58Z",
+   "firstReported": "2026-11-06T13:13:58Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-06T13:13:58Z"
+   },
+   "awaitingOfficial": false,
+   "missingSince": null,
+   "recheck": []
+  },
+  {
    "dir": "both directions",
    "fullClosure": true,
    "lanes": "All lanes closed",
@@ -48,8 +76,8 @@
    "title": "Flooding on Sunlake Rd Both Directions At SR-507 Northbound. All lanes closed.",
    "where": "Sunlake Rd both directions At SR-507 Northbound",
    "id": "brevard:fl511:939237",
-   "updated": "2026-11-05T16:50:00Z",
-   "lastReported": "2026-11-05T16:50:00Z",
+   "updated": "2026-11-06T13:05:00Z",
+   "lastReported": "2026-11-06T13:05:00Z",
    "firstReported": "2026-11-03T17:58:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
@@ -2614,40 +2642,6 @@
     "missingSince": "2026-11-05T13:31:49Z",
     "reopenedAt": "2026-11-05T13:45:39Z",
     "url": "https://fl511.com"
-   },
-   "stillReported": []
-  },
-  {
-   "fullClosure": false,
-   "lat": 28.1024137373737,
-   "layer": "FHP",
-   "lng": -80.5702237774925,
-   "reported": "2026-11-05T12:29:50Z",
-   "road": "HIGHWAY A1A N [1220]",
-   "roadShort": "Highway A1A N [1220]",
-   "source": "FHP live CAD",
-   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-   "spot": "at Flug Ave",
-   "status": "caution",
-   "title": "MVC at HIGHWAY A1A N [1220] x[FLUG AVE] [INDIALANTIC]",
-   "where": "Highway A1A N [1220] at Flug Ave",
-   "id": "brevard:fhp:20261105122950-f2019aeb",
-   "updated": "2026-11-05T12:29:50Z",
-   "lastReported": "2026-11-05T12:29:50Z",
-   "firstReported": "2026-11-05T12:29:50Z",
-   "verified": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "kind": "feed",
-    "publishedAt": "2026-11-05T12:29:50Z"
-   },
-   "reopenedAt": "2026-11-05T13:15:40Z",
-   "evidence": {
-    "agency": "Florida Highway Patrol",
-    "kind": "feed-dropped",
-    "missingSince": "2026-11-05T13:00:53Z",
-    "reopenedAt": "2026-11-05T13:15:40Z",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
    },
    "stillReported": []
   }
