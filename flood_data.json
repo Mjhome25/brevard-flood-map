@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-06T20:15:33Z",
+ "generated": "2026-11-06T20:31:56Z",
  "errors": [],
  "items": [
   {
@@ -2410,91 +2410,6 @@
     "kind": "feed-dropped",
     "missingSince": "2026-11-05T20:32:06Z",
     "reopenedAt": "2026-11-05T20:45:38Z",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
-   },
-   "stillReported": []
-  },
-  {
-   "dir": "EB",
-   "fullClosure": false,
-   "lanes": "Right lane blocked",
-   "lat": 28.204698,
-   "layer": "Incidents",
-   "line": [
-    [
-     28.20466,
-     -80.66173
-    ],
-    [
-     28.20467,
-     -80.66167
-    ],
-    [
-     28.20471,
-     -80.66134
-    ]
-   ],
-   "lng": -80.661736,
-   "reported": "2026-11-05T18:21:00Z",
-   "road": "SR-404",
-   "roadShort": "SR-404",
-   "source": "FL511 (FDOT)",
-   "sourceUrl": "https://fl511.com",
-   "spot": "at US-1",
-   "status": "caution",
-   "title": "MVC on SR-404 East, at US-1. Right lane blocked",
-   "where": "SR-404 EB at US-1",
-   "id": "brevard:fl511:943268",
-   "updated": "2026-11-05T18:50:00Z",
-   "lastReported": "2026-11-05T18:50:00Z",
-   "firstReported": "2026-11-05T18:50:00Z",
-   "verified": {
-    "agency": "FL511 (FDOT)",
-    "url": "https://fl511.com",
-    "kind": "feed",
-    "publishedAt": "2026-11-05T18:50:00Z"
-   },
-   "reopenedAt": "2026-11-05T20:15:43Z",
-   "evidence": {
-    "agency": "FL511 (FDOT)",
-    "kind": "feed-dropped",
-    "missingSince": "2026-11-05T20:00:49Z",
-    "reopenedAt": "2026-11-05T20:15:43Z",
-    "url": "https://fl511.com"
-   },
-   "stillReported": []
-  },
-  {
-   "fullClosure": false,
-   "lanes": "No Road Block",
-   "lat": 28.3698717523057,
-   "layer": "FHP",
-   "lng": -80.77148622347,
-   "reported": "2026-11-05T07:42:45Z",
-   "road": "PALM DR N",
-   "roadShort": "Palm Dr N",
-   "source": "FHP live CAD",
-   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-   "spot": "at Range Rd N",
-   "status": "caution",
-   "title": "MVC at PALM DR N x[RANGE RD N] [COCOA] (No Road Block)",
-   "where": "Palm Dr N at Range Rd N",
-   "id": "brevard:fhp:20261105074245-16edd26e",
-   "updated": "2026-11-05T07:42:45Z",
-   "lastReported": "2026-11-05T07:42:45Z",
-   "firstReported": "2026-11-05T07:42:45Z",
-   "verified": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "kind": "feed",
-    "publishedAt": "2026-11-05T07:42:45Z"
-   },
-   "reopenedAt": "2026-11-05T20:15:43Z",
-   "evidence": {
-    "agency": "Florida Highway Patrol",
-    "kind": "feed-dropped",
-    "missingSince": "2026-11-05T20:00:49Z",
-    "reopenedAt": "2026-11-05T20:15:43Z",
     "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
    },
    "stillReported": []
