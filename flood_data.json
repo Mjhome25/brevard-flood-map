@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-06T18:00:47Z",
+ "generated": "2026-11-06T18:15:39Z",
  "errors": [],
  "items": [
   {
@@ -60,106 +60,6 @@
    "awaitingOfficial": false,
    "missingSince": null,
    "recheck": []
-  },
-  {
-   "dir": "NB",
-   "fullClosure": false,
-   "lanes": "Right shoulder blocked",
-   "lat": 28.15987,
-   "layer": "Incidents",
-   "line": [
-    [
-     28.12748,
-     -80.70583
-    ],
-    [
-     28.12967,
-     -80.70583
-    ],
-    [
-     28.13156,
-     -80.70583
-    ],
-    [
-     28.13313,
-     -80.70582
-    ],
-    [
-     28.13469,
-     -80.70582
-    ],
-    [
-     28.13735,
-     -80.70582
-    ],
-    [
-     28.13901,
-     -80.70581
-    ],
-    [
-     28.14142,
-     -80.70581
-    ],
-    [
-     28.14451,
-     -80.70581
-    ],
-    [
-     28.14607,
-     -80.7058
-    ],
-    [
-     28.14949,
-     -80.7058
-    ],
-    [
-     28.15201,
-     -80.7058
-    ],
-    [
-     28.15598,
-     -80.70579
-    ],
-    [
-     28.15879,
-     -80.70579
-    ],
-    [
-     28.15955,
-     -80.70579
-    ]
-   ],
-   "lng": -80.705823,
-   "reported": "2026-11-06T13:44:00Z",
-   "road": "I-95",
-   "roadShort": "I-95",
-   "source": "FL511 (FDOT)",
-   "sourceUrl": "https://fl511.com",
-   "spot": "from before MM 184 to MM 186",
-   "status": "caution",
-   "title": "MVC on I-95 North, from before MM 184 to MM 186. Right shoulder blocked",
-   "where": "I-95 NB from before MM 184 to MM 186",
-   "id": "brevard:fl511:944892",
-   "updated": "2026-11-06T17:16:00Z",
-   "lastReported": "2026-11-06T17:16:00Z",
-   "firstReported": "2026-11-06T13:48:00Z",
-   "verified": {
-    "agency": "FL511 (FDOT)",
-    "url": "https://fl511.com",
-    "kind": "feed",
-    "publishedAt": "2026-11-06T13:48:00Z"
-   },
-   "awaitingOfficial": true,
-   "missingSince": "2026-11-06T18:00:50Z",
-   "recheck": [
-    "source changed the closed stretch"
-   ],
-   "noLongerListed": {
-    "agency": "FL511 (FDOT)",
-    "url": "https://fl511.com",
-    "since": "2026-11-06T18:00:50Z",
-    "wasClosed": false
-   }
   },
   {
    "dir": "NB",
@@ -307,6 +207,104 @@
   }
  ],
  "reopened": [
+  {
+   "dir": "NB",
+   "fullClosure": false,
+   "lanes": "Right shoulder blocked",
+   "lat": 28.15987,
+   "layer": "Incidents",
+   "line": [
+    [
+     28.12748,
+     -80.70583
+    ],
+    [
+     28.12967,
+     -80.70583
+    ],
+    [
+     28.13156,
+     -80.70583
+    ],
+    [
+     28.13313,
+     -80.70582
+    ],
+    [
+     28.13469,
+     -80.70582
+    ],
+    [
+     28.13735,
+     -80.70582
+    ],
+    [
+     28.13901,
+     -80.70581
+    ],
+    [
+     28.14142,
+     -80.70581
+    ],
+    [
+     28.14451,
+     -80.70581
+    ],
+    [
+     28.14607,
+     -80.7058
+    ],
+    [
+     28.14949,
+     -80.7058
+    ],
+    [
+     28.15201,
+     -80.7058
+    ],
+    [
+     28.15598,
+     -80.70579
+    ],
+    [
+     28.15879,
+     -80.70579
+    ],
+    [
+     28.15955,
+     -80.70579
+    ]
+   ],
+   "lng": -80.705823,
+   "reported": "2026-11-06T13:44:00Z",
+   "road": "I-95",
+   "roadShort": "I-95",
+   "source": "FL511 (FDOT)",
+   "sourceUrl": "https://fl511.com",
+   "spot": "from before MM 184 to MM 186",
+   "status": "caution",
+   "title": "MVC on I-95 North, from before MM 184 to MM 186. Right shoulder blocked",
+   "where": "I-95 NB from before MM 184 to MM 186",
+   "id": "brevard:fl511:944892",
+   "updated": "2026-11-06T17:16:00Z",
+   "lastReported": "2026-11-06T17:16:00Z",
+   "firstReported": "2026-11-06T13:48:00Z",
+   "verified": {
+    "agency": "FL511 (FDOT)",
+    "url": "https://fl511.com",
+    "kind": "feed",
+    "publishedAt": "2026-11-06T13:48:00Z"
+   },
+   "reopenedAt": "2026-11-06T18:15:46Z",
+   "evidence": {
+    "agency": "FL511 (FDOT)",
+    "kind": "feed-dropped",
+    "missingSince": "2026-11-06T18:00:50Z",
+    "reopenedAt": "2026-11-06T18:15:46Z",
+    "url": "https://fl511.com"
+   },
+   "stillReported": []
+  },
   {
    "fullClosure": false,
    "lat": 28.2453741238472,
