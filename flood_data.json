@@ -1,79 +1,9 @@
 {
- "generated": "2026-11-06T22:45:45Z",
+ "generated": "2026-11-06T23:00:57Z",
  "errors": [
   "FL511 map locations: 1 report(s) without a pin"
  ],
  "items": [
-  {
-   "fullClosure": false,
-   "lanes": "Source said \"Road Open\" (2026-11-06 09:32 UTC); not a verified reopening",
-   "lat": 28.3568892270531,
-   "layer": "FHP",
-   "lng": -80.6955542362583,
-   "reported": "2026-11-06T09:32:17Z",
-   "road": "MERRITT ISLAND CSWY E",
-   "roadShort": "Merritt Island Cswy E",
-   "source": "FHP live CAD",
-   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-   "spot": "at Imperial St",
-   "status": "caution",
-   "title": "MVC at MERRITT ISLAND CSWY E x[IMPERIAL ST] [MERRITT ISLAND] (Road Open)",
-   "where": "Merritt Island Cswy E at Imperial St",
-   "id": "brevard:fhp:20261106093217-f79a066f",
-   "updated": "2026-11-06T09:32:17Z",
-   "lastReported": "2026-11-06T09:32:17Z",
-   "firstReported": "2026-11-06T09:32:17Z",
-   "verified": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "kind": "feed",
-    "publishedAt": "2026-11-06T09:32:17Z"
-   },
-   "awaitingOfficial": true,
-   "missingSince": "2026-11-06T22:45:52Z",
-   "recheck": [],
-   "noLongerListed": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "since": "2026-11-06T22:45:52Z",
-    "wasClosed": false
-   }
-  },
-  {
-   "fullClosure": false,
-   "lanes": "No Roadblock",
-   "lat": 28.1418309793588,
-   "layer": "FHP",
-   "lng": -80.5820176748247,
-   "reported": "2026-11-06T09:56:41Z",
-   "road": "SR-A1A",
-   "roadShort": "SR-A1A",
-   "source": "FHP live CAD",
-   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-   "spot": "at Golden Beach Blvd",
-   "status": "caution",
-   "title": "MVC at SR-A1A x[GOLDEN BEACH BLVD] [SATELLITE BEACH] (No Roadblock)",
-   "where": "SR-A1A at Golden Beach Blvd",
-   "id": "brevard:fhp:20261106095641-c7a03b8d",
-   "updated": "2026-11-06T09:56:41Z",
-   "lastReported": "2026-11-06T09:56:41Z",
-   "firstReported": "2026-11-06T09:56:41Z",
-   "verified": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "kind": "feed",
-    "publishedAt": "2026-11-06T09:56:41Z"
-   },
-   "awaitingOfficial": true,
-   "missingSince": "2026-11-06T22:45:52Z",
-   "recheck": [],
-   "noLongerListed": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "since": "2026-11-06T22:45:52Z",
-    "wasClosed": false
-   }
-  },
   {
    "fullClosure": false,
    "lanes": "No Roadblock",
@@ -155,6 +85,41 @@
     "kind": "feed",
     "publishedAt": "2026-11-06T10:37:44Z"
    },
+   "awaitingOfficial": true,
+   "missingSince": "2026-11-06T23:01:04Z",
+   "recheck": [],
+   "noLongerListed": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "since": "2026-11-06T23:01:04Z",
+    "wasClosed": false
+   }
+  },
+  {
+   "fullClosure": false,
+   "lanes": "Source said \"Roadway Open\" (2026-11-06 10:56 UTC); not a verified reopening",
+   "lat": 28.0345947035573,
+   "layer": "FHP",
+   "lng": -80.6561855522652,
+   "reported": "2026-11-06T10:56:06Z",
+   "road": "I-95 SB [MM176]",
+   "roadShort": "I-95 Sb [MM176]",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "spot": "at Mm176",
+   "status": "caution",
+   "title": "MVC at I-95 SB [MM176] x[MM176] [PALM BAY] (Roadway Open)",
+   "where": "I-95 Sb [MM176] at Mm176",
+   "id": "brevard:fhp:20261106105606-f477ea16",
+   "updated": "2026-11-06T10:56:06Z",
+   "lastReported": "2026-11-06T10:56:06Z",
+   "firstReported": "2026-11-06T10:56:06Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-06T10:56:06Z"
+   },
    "awaitingOfficial": false,
    "missingSince": null,
    "recheck": []
@@ -234,8 +199,8 @@
    "title": "MVC on I-95 North, at MM 194. Left lane blocked",
    "where": "I-95 NB at MM 194",
    "id": "brevard:fl511:946057",
-   "updated": "2026-11-06T22:35:00Z",
-   "lastReported": "2026-11-06T22:35:00Z",
+   "updated": "2026-11-06T22:47:00Z",
+   "lastReported": "2026-11-06T22:47:00Z",
    "firstReported": "2026-11-06T22:35:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
@@ -243,9 +208,11 @@
     "kind": "feed",
     "publishedAt": "2026-11-06T22:35:00Z"
    },
-   "awaitingOfficial": false,
+   "awaitingOfficial": true,
    "missingSince": null,
-   "recheck": []
+   "recheck": [
+    "source changed its lane description"
+   ]
   },
   {
    "approx": true,
@@ -349,6 +316,76 @@
   }
  ],
  "reopened": [
+  {
+   "fullClosure": false,
+   "lanes": "No Roadblock",
+   "lat": 28.1418309793588,
+   "layer": "FHP",
+   "lng": -80.5820176748247,
+   "reported": "2026-11-06T09:56:41Z",
+   "road": "SR-A1A",
+   "roadShort": "SR-A1A",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "spot": "at Golden Beach Blvd",
+   "status": "caution",
+   "title": "MVC at SR-A1A x[GOLDEN BEACH BLVD] [SATELLITE BEACH] (No Roadblock)",
+   "where": "SR-A1A at Golden Beach Blvd",
+   "id": "brevard:fhp:20261106095641-c7a03b8d",
+   "updated": "2026-11-06T09:56:41Z",
+   "lastReported": "2026-11-06T09:56:41Z",
+   "firstReported": "2026-11-06T09:56:41Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-06T09:56:41Z"
+   },
+   "reopenedAt": "2026-11-06T23:01:04Z",
+   "evidence": {
+    "agency": "Florida Highway Patrol",
+    "kind": "feed-dropped",
+    "missingSince": "2026-11-06T22:45:52Z",
+    "reopenedAt": "2026-11-06T23:01:04Z",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
+   },
+   "stillReported": []
+  },
+  {
+   "fullClosure": false,
+   "lanes": "Road Open",
+   "lat": 28.3568892270531,
+   "layer": "FHP",
+   "lng": -80.6955542362583,
+   "reported": "2026-11-06T09:32:17Z",
+   "road": "MERRITT ISLAND CSWY E",
+   "roadShort": "Merritt Island Cswy E",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "spot": "at Imperial St",
+   "status": "caution",
+   "title": "MVC at MERRITT ISLAND CSWY E x[IMPERIAL ST] [MERRITT ISLAND] (Road Open)",
+   "where": "Merritt Island Cswy E at Imperial St",
+   "id": "brevard:fhp:20261106093217-f79a066f",
+   "updated": "2026-11-06T09:32:17Z",
+   "lastReported": "2026-11-06T09:32:17Z",
+   "firstReported": "2026-11-06T09:32:17Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-06T09:32:17Z"
+   },
+   "reopenedAt": "2026-11-06T23:01:04Z",
+   "evidence": {
+    "agency": "Florida Highway Patrol",
+    "kind": "feed-dropped",
+    "missingSince": "2026-11-06T22:45:52Z",
+    "reopenedAt": "2026-11-06T23:01:04Z",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
+   },
+   "stillReported": []
+  },
   {
    "fullClosure": false,
    "lanes": "Road Open",
