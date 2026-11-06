@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-06T02:31:48Z",
+ "generated": "2026-11-06T02:45:37Z",
  "errors": [
   "FL511 map locations: 1 report(s) without a pin"
  ],
@@ -87,9 +87,15 @@
     "kind": "feed",
     "publishedAt": "2026-11-05T14:27:49Z"
    },
-   "awaitingOfficial": false,
-   "missingSince": null,
-   "recheck": []
+   "awaitingOfficial": true,
+   "missingSince": "2026-11-06T02:45:42Z",
+   "recheck": [],
+   "noLongerListed": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "since": "2026-11-06T02:45:42Z",
+    "wasClosed": false
+   }
   },
   {
    "dir": "both directions",
@@ -151,8 +157,8 @@
    "title": "Incident on I-95 South, before MM 202/SR-524",
    "where": "I-95 SB before MM 202/SR-524",
    "id": "brevard:fl511:944134",
-   "updated": "2026-11-06T01:54:00Z",
-   "lastReported": "2026-11-06T01:54:00Z",
+   "updated": "2026-11-06T02:42:00Z",
+   "lastReported": "2026-11-06T02:42:00Z",
    "firstReported": "2026-11-06T01:54:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
