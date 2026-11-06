@@ -1,43 +1,9 @@
 {
- "generated": "2026-11-06T02:15:39Z",
+ "generated": "2026-11-06T02:31:48Z",
  "errors": [
   "FL511 map locations: 1 report(s) without a pin"
  ],
  "items": [
-  {
-   "fullClosure": false,
-   "lanes": "No Roadblock",
-   "lat": 28.2134693939394,
-   "layer": "FHP",
-   "lng": -80.6722949650907,
-   "reported": "2026-11-05T12:06:25Z",
-   "road": "6300 N WICKHAM RD [MELBOURNE]",
-   "roadShort": "6300 N Wickham Rd [Melbourne]",
-   "source": "FHP live CAD",
-   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-   "status": "caution",
-   "title": "MVC at 6300 N WICKHAM RD [MELBOURNE] (No Roadblock)",
-   "where": "6300 N Wickham Rd [Melbourne]",
-   "id": "brevard:fhp:20261105120625-90ac3b9f",
-   "updated": "2026-11-05T12:06:25Z",
-   "lastReported": "2026-11-05T12:06:25Z",
-   "firstReported": "2026-11-05T12:06:25Z",
-   "verified": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "kind": "feed",
-    "publishedAt": "2026-11-05T12:06:25Z"
-   },
-   "awaitingOfficial": true,
-   "missingSince": "2026-11-06T02:15:45Z",
-   "recheck": [],
-   "noLongerListed": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "since": "2026-11-06T02:15:45Z",
-    "wasClosed": false
-   }
-  },
   {
    "fullClosure": false,
    "lanes": "Roadblock Left Lane And Center Due To Construction Use Caution",
@@ -91,6 +57,35 @@
     "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
     "kind": "feed",
     "publishedAt": "2026-11-05T13:22:19Z"
+   },
+   "awaitingOfficial": false,
+   "missingSince": null,
+   "recheck": []
+  },
+  {
+   "fullClosure": false,
+   "lanes": "No Roadblock",
+   "lat": 28.1745060693896,
+   "layer": "FHP",
+   "lng": -80.7058600750106,
+   "reported": "2026-11-05T14:27:49Z",
+   "road": "I-95 NB [MM187]",
+   "roadShort": "I-95 Nb [MM187]",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "spot": "at Mm187",
+   "status": "caution",
+   "title": "MVC at I-95 NB [MM187] x[MM187] [MELBOURNE] (No Roadblock)",
+   "where": "I-95 Nb [MM187] at Mm187",
+   "id": "brevard:fhp:20261105142749-d17eb3b9",
+   "updated": "2026-11-05T14:27:49Z",
+   "lastReported": "2026-11-05T14:27:49Z",
+   "firstReported": "2026-11-05T14:27:49Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-05T14:27:49Z"
    },
    "awaitingOfficial": false,
    "missingSince": null,
@@ -271,6 +266,40 @@
   }
  ],
  "reopened": [
+  {
+   "fullClosure": false,
+   "lanes": "No Roadblock",
+   "lat": 28.2134693939394,
+   "layer": "FHP",
+   "lng": -80.6722949650907,
+   "reported": "2026-11-05T12:06:25Z",
+   "road": "6300 N WICKHAM RD [MELBOURNE]",
+   "roadShort": "6300 N Wickham Rd [Melbourne]",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "status": "caution",
+   "title": "MVC at 6300 N WICKHAM RD [MELBOURNE] (No Roadblock)",
+   "where": "6300 N Wickham Rd [Melbourne]",
+   "id": "brevard:fhp:20261105120625-90ac3b9f",
+   "updated": "2026-11-05T12:06:25Z",
+   "lastReported": "2026-11-05T12:06:25Z",
+   "firstReported": "2026-11-05T12:06:25Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-05T12:06:25Z"
+   },
+   "reopenedAt": "2026-11-06T02:31:52Z",
+   "evidence": {
+    "agency": "Florida Highway Patrol",
+    "kind": "feed-dropped",
+    "missingSince": "2026-11-06T02:15:45Z",
+    "reopenedAt": "2026-11-06T02:31:52Z",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
+   },
+   "stillReported": []
+  },
   {
    "dir": "SB",
    "fullClosure": false,
@@ -2251,9 +2280,9 @@
  "advisories": [
   {
    "agency": "National Weather Service Melbourne",
-   "time": "2026-11-05T01:39:00Z",
-   "text": "A flood warning continues for the St. Johns River near Cocoa (9 miles west) in Brevard County. The river has risen into moderate flood stage and is forecast to reach major flood stage late this week and stay there through the weekend. Do not drive around barricades or through flooded areas, and use caution near the riverbanks. The next update is due Thursday at 11 a.m. EST.",
-   "url": "https://govonestop.com/nws/florida-severe-flood-warning-effective-11042026-1739"
+   "time": "2026-11-05T21:43:01Z",
+   "text": "Update to the St. Johns River flood warning near Cocoa in Brevard County: rain water is still draining into the river. The river near Cocoa is expected to crest at major flood stage on Friday, higher than the crest after Hurricane Ian, and to stay flooded to some degree for weeks. Do not drive around barricades or through flooded areas, and use caution near the riverbanks.",
+   "url": "https://www.clickorlando.com/weather/2026/11/05/st-johns-river-in-brevard-to-crest-in-major-flood-stage/"
   }
  ]
 }
