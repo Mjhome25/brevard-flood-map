@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-06T21:45:37Z",
+ "generated": "2026-11-06T22:00:51Z",
  "errors": [],
  "items": [
   {
@@ -27,9 +27,15 @@
     "kind": "feed",
     "publishedAt": "2026-11-06T07:09:52Z"
    },
-   "awaitingOfficial": false,
-   "missingSince": null,
-   "recheck": []
+   "awaitingOfficial": true,
+   "missingSince": "2026-11-06T22:00:53Z",
+   "recheck": [],
+   "noLongerListed": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "since": "2026-11-06T22:00:53Z",
+    "wasClosed": false
+   }
   },
   {
    "fullClosure": false,
@@ -56,9 +62,15 @@
     "kind": "feed",
     "publishedAt": "2026-11-06T09:06:28Z"
    },
-   "awaitingOfficial": false,
-   "missingSince": null,
-   "recheck": []
+   "awaitingOfficial": true,
+   "missingSince": "2026-11-06T22:00:53Z",
+   "recheck": [],
+   "noLongerListed": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "since": "2026-11-06T22:00:53Z",
+    "wasClosed": false
+   }
   },
   {
    "fullClosure": false,
@@ -83,6 +95,35 @@
     "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
     "kind": "feed",
     "publishedAt": "2026-11-06T09:32:17Z"
+   },
+   "awaitingOfficial": false,
+   "missingSince": null,
+   "recheck": []
+  },
+  {
+   "fullClosure": false,
+   "lanes": "No Roadblock",
+   "lat": 28.1418309793588,
+   "layer": "FHP",
+   "lng": -80.5820176748247,
+   "reported": "2026-11-06T09:56:41Z",
+   "road": "SR-A1A",
+   "roadShort": "SR-A1A",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "spot": "at Golden Beach Blvd",
+   "status": "caution",
+   "title": "MVC at SR-A1A x[GOLDEN BEACH BLVD] [SATELLITE BEACH] (No Roadblock)",
+   "where": "SR-A1A at Golden Beach Blvd",
+   "id": "brevard:fhp:20261106095641-c7a03b8d",
+   "updated": "2026-11-06T09:56:41Z",
+   "lastReported": "2026-11-06T09:56:41Z",
+   "firstReported": "2026-11-06T09:56:41Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-06T09:56:41Z"
    },
    "awaitingOfficial": false,
    "missingSince": null,
@@ -127,6 +168,73 @@
     "url": "https://fl511.com",
     "kind": "feed",
     "publishedAt": "2026-11-06T17:42:00Z"
+   },
+   "awaitingOfficial": false,
+   "missingSince": null,
+   "recheck": []
+  },
+  {
+   "dir": "SB",
+   "fullClosure": false,
+   "lat": 28.774472,
+   "layer": "Incidents",
+   "line": [
+    [
+     28.77447,
+     -80.89495
+    ],
+    [
+     28.77243,
+     -80.89436
+    ],
+    [
+     28.77129,
+     -80.89403
+    ],
+    [
+     28.77116,
+     -80.89399
+    ],
+    [
+     28.77058,
+     -80.89382
+    ],
+    [
+     28.76983,
+     -80.89362
+    ],
+    [
+     28.76906,
+     -80.89339
+    ],
+    [
+     28.76858,
+     -80.89326
+    ],
+    [
+     28.76843,
+     -80.89323
+    ]
+   ],
+   "lng": -80.894944,
+   "reported": "2026-11-06T21:49:00Z",
+   "road": "I-95",
+   "roadShort": "I-95",
+   "source": "FL511 (FDOT)",
+   "sourceUrl": "https://fl511.com",
+   "spot": "before MM 231/CR-5A",
+   "status": "caution",
+   "title": "Object on roadway on I-95 South, before MM 231/CR-5A",
+   "where": "I-95 SB before MM 231/CR-5A",
+   "id": "brevard:fl511:945973",
+   "updated": "2026-11-06T21:51:00Z",
+   "lastReported": "2026-11-06T21:51:00Z",
+   "firstReported": "2026-11-06T21:51:00Z",
+   "verified": {
+    "agency": "FL511 (FDOT)",
+    "url": "https://fl511.com",
+    "kind": "feed",
+    "publishedAt": "2026-11-06T21:51:00Z"
    },
    "awaitingOfficial": false,
    "missingSince": null,
