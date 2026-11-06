@@ -1,6 +1,8 @@
 {
- "generated": "2026-11-06T03:15:43Z",
- "errors": [],
+ "generated": "2026-11-06T03:31:31Z",
+ "errors": [
+  "FL511 map locations: 1 report(s) without a pin"
+ ],
  "items": [
   {
    "fullClosure": false,
@@ -88,41 +90,6 @@
    "awaitingOfficial": false,
    "missingSince": null,
    "recheck": []
-  },
-  {
-   "fullClosure": false,
-   "lanes": "Roadblock",
-   "lat": 28.2600272419851,
-   "layer": "FHP",
-   "lng": -80.7271713795174,
-   "reported": "2026-11-05T14:58:17Z",
-   "road": "I-95 NB [MM193]",
-   "roadShort": "I-95 Nb [MM193]",
-   "source": "FHP live CAD",
-   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-   "spot": "at Mm193",
-   "status": "closed",
-   "title": "MVC W/Roadblock at I-95 NB [MM193] x[MM193] [MELBOURNE] (Roadblock)",
-   "where": "I-95 Nb [MM193] at Mm193",
-   "id": "brevard:fhp:20261105145817-0bb5b3b5",
-   "updated": "2026-11-05T14:58:17Z",
-   "lastReported": "2026-11-05T14:58:17Z",
-   "firstReported": "2026-11-05T14:58:17Z",
-   "verified": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "kind": "feed",
-    "publishedAt": "2026-11-05T14:58:17Z"
-   },
-   "awaitingOfficial": true,
-   "missingSince": "2026-11-06T03:15:46Z",
-   "recheck": [],
-   "noLongerListed": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "since": "2026-11-06T03:15:46Z",
-    "wasClosed": true
-   }
   },
   {
    "fullClosure": false,
@@ -221,6 +188,52 @@
     "url": "https://fl511.com",
     "kind": "feed",
     "publishedAt": "2026-11-06T01:54:00Z"
+   },
+   "awaitingOfficial": true,
+   "missingSince": "2026-11-06T03:31:36Z",
+   "recheck": [],
+   "noLongerListed": {
+    "agency": "FL511 (FDOT)",
+    "url": "https://fl511.com",
+    "since": "2026-11-06T03:31:36Z",
+    "wasClosed": false
+   }
+  },
+  {
+   "dir": "NB",
+   "fullClosure": false,
+   "lanes": "Right shoulder blocked",
+   "lat": 28.15987,
+   "layer": "Incidents",
+   "line": [
+    [
+     28.15955,
+     -80.70579
+    ],
+    [
+     28.15987,
+     -80.70579
+    ]
+   ],
+   "lng": -80.705823,
+   "reported": "2026-11-06T02:58:00Z",
+   "road": "I-95",
+   "roadShort": "I-95",
+   "source": "FL511 (FDOT)",
+   "sourceUrl": "https://fl511.com",
+   "spot": "at MM 186",
+   "status": "caution",
+   "title": "MVC on I-95 North, at MM 186. Right shoulder blocked",
+   "where": "I-95 NB at MM 186",
+   "id": "brevard:fl511:944265",
+   "updated": "2026-11-06T03:17:00Z",
+   "lastReported": "2026-11-06T03:17:00Z",
+   "firstReported": "2026-11-06T03:17:00Z",
+   "verified": {
+    "agency": "FL511 (FDOT)",
+    "url": "https://fl511.com",
+    "kind": "feed",
+    "publishedAt": "2026-11-06T03:17:00Z"
    },
    "awaitingOfficial": false,
    "missingSince": null,
@@ -328,6 +341,41 @@
   }
  ],
  "reopened": [
+  {
+   "fullClosure": false,
+   "lanes": "Roadblock",
+   "lat": 28.2600272419851,
+   "layer": "FHP",
+   "lng": -80.7271713795174,
+   "reported": "2026-11-05T14:58:17Z",
+   "road": "I-95 NB [MM193]",
+   "roadShort": "I-95 Nb [MM193]",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "spot": "at Mm193",
+   "status": "closed",
+   "title": "MVC W/Roadblock at I-95 NB [MM193] x[MM193] [MELBOURNE] (Roadblock)",
+   "where": "I-95 Nb [MM193] at Mm193",
+   "id": "brevard:fhp:20261105145817-0bb5b3b5",
+   "updated": "2026-11-05T14:58:17Z",
+   "lastReported": "2026-11-05T14:58:17Z",
+   "firstReported": "2026-11-05T14:58:17Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-05T14:58:17Z"
+   },
+   "reopenedAt": "2026-11-06T03:31:36Z",
+   "evidence": {
+    "agency": "Florida Highway Patrol",
+    "kind": "feed-dropped",
+    "missingSince": "2026-11-06T03:15:46Z",
+    "reopenedAt": "2026-11-06T03:31:36Z",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
+   },
+   "stillReported": []
+  },
   {
    "fullClosure": false,
    "lanes": "No Roadblock",
