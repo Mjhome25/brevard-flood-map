@@ -1,5 +1,5 @@
 {
- "checkedAt": "2026-11-06T18:45:45Z",
+ "checkedAt": "2026-11-06T19:01:00Z",
  "fresh": true,
  "pilot": "City of Melbourne",
  "pending": [
@@ -972,8 +972,8 @@
    "needsReview": [
     "d54071e726fa2354c58e08d89eb84b6797fc16d3ebe4259b1f257e4db1a39e2a"
    ],
-   "sha256": "6925bfbd2cff72feb18830c60136f36e98180a4359d47b6268939a16d14750a1",
-   "readAt": "2026-11-06T07:00:46Z"
+   "sha256": "d2153999b7de0af20dc4a42a80762fc46e74c4eff6f54d021d448306af8ccdc9",
+   "readAt": "2026-11-06T19:01:00Z"
   },
   "https://www.melbourneflorida.org/Government/City-News/Traffic-Advisories/Road-Closures-0830": {
    "agency": "City of Melbourne",
@@ -1573,8 +1573,8 @@
     "97e677fe040fc517ea06a0c0051d7e189466888dc0cbea88d01828d21040db05",
     "746cdc91f2e0b08cdb9dadc4c9f958c6d390971a96b2908eb8496905fb973e6f"
    ],
-   "sha256": "2e4d33a028a71b723db9c9f1e44aba18154451af5b38f5818f1a75c18c062ec7",
-   "readAt": "2026-11-06T18:45:45Z"
+   "sha256": "47bd2b46073dc9d9d174398821ae1134bf18d965bc15f940c407c0fb15897126",
+   "readAt": "2026-11-06T19:01:00Z"
   },
   "https://www.melbourneflorida.org/Government/City-News/Traffic-Advisories/Lane-Closure-NASA-Blvd": {
    "agency": "City of Melbourne",
@@ -1584,8 +1584,8 @@
    "needsReview": [
     "d3b63822f83243ea40717b27e5b78827b787af45119ff216d61ea39a90a41734"
    ],
-   "sha256": "d640ca24acadea414e7dd017568d287d58a44f5e9bc653eb5532cd7e29c81f31",
-   "readAt": "2026-11-06T18:45:45Z"
+   "sha256": "72a9802a5cd6163619f3520958bba054d667a22344d695f4d65c00d0286fc435",
+   "readAt": "2026-11-06T19:01:00Z"
   },
   "https://www.melbourneflorida.org/Government/City-News/Traffic-Advisories/Copy-of-Road-Closures-Nov-4-1450": {
    "agency": "City of Melbourne",
@@ -1606,8 +1606,8 @@
     "f1815a2acee2dc12ec9d0fd398355de674f2a5d2013ef4b8c0d1ea938ab72343",
     "746cdc91f2e0b08cdb9dadc4c9f958c6d390971a96b2908eb8496905fb973e6f"
    ],
-   "sha256": "02bcd6607a476bb39e160f9c6c00b2a1ece274f3c85b1e3995192902d477e9b5",
-   "readAt": "2026-11-06T18:45:45Z"
+   "sha256": "9d0ac0162a077c154f4bf6bc54a1339eef419c02b49917dd505dae917d93239b",
+   "readAt": "2026-11-06T19:01:00Z"
   }
  }
 }

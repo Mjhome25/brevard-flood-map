@@ -1,42 +1,7 @@
 {
- "generated": "2026-11-06T18:45:37Z",
+ "generated": "2026-11-06T19:00:54Z",
  "errors": [],
  "items": [
-  {
-   "fullClosure": false,
-   "lanes": "No Road Block",
-   "lat": 28.2311490206412,
-   "layer": "FHP",
-   "lng": -80.722214061669,
-   "reported": "2026-11-06T16:37:28Z",
-   "road": "SHOPPES DR",
-   "roadShort": "Shoppes Dr",
-   "source": "FHP live CAD",
-   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-   "spot": "at George T Edwards Dr",
-   "status": "caution",
-   "title": "MVC at SHOPPES DR x[GEORGE T EDWARDS DR] [MELBOURNE] (No Road Block)",
-   "where": "Shoppes Dr at George T Edwards Dr",
-   "id": "brevard:fhp:20261106163728-f2c6e480",
-   "updated": "2026-11-06T16:37:28Z",
-   "lastReported": "2026-11-06T16:37:28Z",
-   "firstReported": "2026-11-06T16:37:28Z",
-   "verified": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "kind": "feed",
-    "publishedAt": "2026-11-06T16:37:28Z"
-   },
-   "awaitingOfficial": true,
-   "missingSince": "2026-11-06T18:45:45Z",
-   "recheck": [],
-   "noLongerListed": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "since": "2026-11-06T18:45:45Z",
-    "wasClosed": false
-   }
-  },
   {
    "dir": "both directions",
    "fullClosure": true,
@@ -63,9 +28,15 @@
     "kind": "feed",
     "publishedAt": "2026-11-03T17:58:00Z"
    },
-   "awaitingOfficial": false,
-   "missingSince": null,
-   "recheck": []
+   "awaitingOfficial": true,
+   "missingSince": "2026-11-06T19:00:59Z",
+   "recheck": [],
+   "noLongerListed": {
+    "agency": "FL511 (FDOT)",
+    "url": "https://fl511.com",
+    "since": "2026-11-06T19:00:59Z",
+    "wasClosed": true
+   }
   },
   {
    "dir": "NB",
@@ -213,6 +184,41 @@
   }
  ],
  "reopened": [
+  {
+   "fullClosure": false,
+   "lanes": "No Road Block",
+   "lat": 28.2311490206412,
+   "layer": "FHP",
+   "lng": -80.722214061669,
+   "reported": "2026-11-06T16:37:28Z",
+   "road": "SHOPPES DR",
+   "roadShort": "Shoppes Dr",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "spot": "at George T Edwards Dr",
+   "status": "caution",
+   "title": "MVC at SHOPPES DR x[GEORGE T EDWARDS DR] [MELBOURNE] (No Road Block)",
+   "where": "Shoppes Dr at George T Edwards Dr",
+   "id": "brevard:fhp:20261106163728-f2c6e480",
+   "updated": "2026-11-06T16:37:28Z",
+   "lastReported": "2026-11-06T16:37:28Z",
+   "firstReported": "2026-11-06T16:37:28Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-06T16:37:28Z"
+   },
+   "reopenedAt": "2026-11-06T19:00:59Z",
+   "evidence": {
+    "agency": "Florida Highway Patrol",
+    "kind": "feed-dropped",
+    "missingSince": "2026-11-06T18:45:45Z",
+    "reopenedAt": "2026-11-06T19:00:59Z",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
+   },
+   "stillReported": []
+  },
   {
    "dir": "NB",
    "fullClosure": false,
@@ -2652,76 +2658,6 @@
     "kind": "feed-dropped",
     "missingSince": "2026-11-05T19:00:49Z",
     "reopenedAt": "2026-11-05T19:15:37Z",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
-   },
-   "stillReported": []
-  },
-  {
-   "fullClosure": false,
-   "lanes": "Roadway Open",
-   "lat": 28.4771180281072,
-   "layer": "FHP",
-   "lng": -80.7734078639824,
-   "reported": "2026-11-05T16:55:38Z",
-   "road": "FAY BLVD",
-   "roadShort": "Fay Blvd",
-   "source": "FHP live CAD",
-   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-   "spot": "at Lindsay Ave",
-   "status": "caution",
-   "title": "MVC at FAY BLVD x[LINDSAY AVE] [COCOA] (Roadway Open)",
-   "where": "Fay Blvd at Lindsay Ave",
-   "id": "brevard:fhp:20261105165538-a3e2d543",
-   "updated": "2026-11-05T16:55:38Z",
-   "lastReported": "2026-11-05T16:55:38Z",
-   "firstReported": "2026-11-05T16:55:38Z",
-   "verified": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "kind": "feed",
-    "publishedAt": "2026-11-05T16:55:38Z"
-   },
-   "reopenedAt": "2026-11-05T19:00:49Z",
-   "evidence": {
-    "agency": "Florida Highway Patrol",
-    "kind": "feed-dropped",
-    "missingSince": "2026-11-05T18:45:43Z",
-    "reopenedAt": "2026-11-05T19:00:49Z",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
-   },
-   "stillReported": []
-  },
-  {
-   "fullClosure": false,
-   "lanes": "No Road Block",
-   "lat": 28.1891382213439,
-   "layer": "FHP",
-   "lng": -80.7070549389591,
-   "reported": "2026-11-05T06:29:47Z",
-   "road": "I-95 SB [MM188]",
-   "roadShort": "I-95 Sb [MM188]",
-   "source": "FHP live CAD",
-   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-   "spot": "at Mm188",
-   "status": "caution",
-   "title": "MVC W/ And Roadblock at I-95 SB [MM188] x[MM188] [MELBOURNE] (No Road Block)",
-   "where": "I-95 Sb [MM188] at Mm188",
-   "id": "brevard:fhp:20261105062947-7696869c",
-   "updated": "2026-11-05T06:29:47Z",
-   "lastReported": "2026-11-05T06:29:47Z",
-   "firstReported": "2026-11-05T06:29:47Z",
-   "verified": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "kind": "feed",
-    "publishedAt": "2026-11-05T06:29:47Z"
-   },
-   "reopenedAt": "2026-11-05T19:00:49Z",
-   "evidence": {
-    "agency": "Florida Highway Patrol",
-    "kind": "feed-dropped",
-    "missingSince": "2026-11-05T18:45:43Z",
-    "reopenedAt": "2026-11-05T19:00:49Z",
     "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
    },
    "stillReported": []
