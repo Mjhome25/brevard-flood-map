@@ -1,7 +1,36 @@
 {
- "generated": "2026-11-06T16:31:24Z",
+ "generated": "2026-11-06T16:45:44Z",
  "errors": [],
  "items": [
+  {
+   "fullClosure": false,
+   "lanes": "No Road Block",
+   "lat": 28.2311490206412,
+   "layer": "FHP",
+   "lng": -80.722214061669,
+   "reported": "2026-11-06T16:37:28Z",
+   "road": "SHOPPES DR",
+   "roadShort": "Shoppes Dr",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "spot": "at George T Edwards Dr",
+   "status": "caution",
+   "title": "MVC at SHOPPES DR x[GEORGE T EDWARDS DR] [MELBOURNE] (No Road Block)",
+   "where": "Shoppes Dr at George T Edwards Dr",
+   "id": "brevard:fhp:20261106163728-f2c6e480",
+   "updated": "2026-11-06T16:37:28Z",
+   "lastReported": "2026-11-06T16:37:28Z",
+   "firstReported": "2026-11-06T16:37:28Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-06T16:37:28Z"
+   },
+   "awaitingOfficial": false,
+   "missingSince": null,
+   "recheck": []
+  },
   {
    "dir": "both directions",
    "fullClosure": true,
