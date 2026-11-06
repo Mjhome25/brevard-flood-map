@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-06T21:00:50Z",
+ "generated": "2026-11-06T21:15:33Z",
  "errors": [],
  "items": [
   {
@@ -26,6 +26,35 @@
     "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
     "kind": "feed",
     "publishedAt": "2026-11-06T07:09:52Z"
+   },
+   "awaitingOfficial": false,
+   "missingSince": null,
+   "recheck": []
+  },
+  {
+   "fullClosure": false,
+   "lanes": "No Road Block",
+   "lat": 28.635806455863,
+   "layer": "FHP",
+   "lng": -80.8332792721512,
+   "reported": "2026-11-06T09:06:28Z",
+   "road": "LAGRANGE RD",
+   "roadShort": "Lagrange Rd",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "spot": "at Old Dixie Hwy",
+   "status": "caution",
+   "title": "MVC at LAGRANGE RD x[OLD DIXIE HWY] [TITUSVILLE] (No Road Block)",
+   "where": "Lagrange Rd at Old Dixie Hwy",
+   "id": "brevard:fhp:20261106090628-974ecbe7",
+   "updated": "2026-11-06T09:06:28Z",
+   "lastReported": "2026-11-06T09:06:28Z",
+   "firstReported": "2026-11-06T09:06:28Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-06T09:06:28Z"
    },
    "awaitingOfficial": false,
    "missingSince": null,
@@ -2340,41 +2369,6 @@
     "kind": "feed-dropped",
     "missingSince": "2026-11-05T21:15:42Z",
     "reopenedAt": "2026-11-05T21:31:52Z",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
-   },
-   "stillReported": []
-  },
-  {
-   "fullClosure": false,
-   "lanes": "Road Block",
-   "lat": 28.2029154896794,
-   "layer": "FHP",
-   "lng": -80.7106471833292,
-   "reported": "2026-11-05T06:28:55Z",
-   "road": "I-95 SB [MM189]",
-   "roadShort": "I-95 Sb [MM189]",
-   "source": "FHP live CAD",
-   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-   "spot": "at Mm189",
-   "status": "closed",
-   "title": "MVC W/Roadblock at I-95 SB [MM189] x[MM189] [MELBOURNE] (Road Block)",
-   "where": "I-95 Sb [MM189] at Mm189",
-   "id": "brevard:fhp:20261105062855-b2d937f8",
-   "updated": "2026-11-05T06:28:55Z",
-   "lastReported": "2026-11-05T06:28:55Z",
-   "firstReported": "2026-11-05T06:28:55Z",
-   "verified": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "kind": "feed",
-    "publishedAt": "2026-11-05T06:28:55Z"
-   },
-   "reopenedAt": "2026-11-05T21:01:06Z",
-   "evidence": {
-    "agency": "Florida Highway Patrol",
-    "kind": "feed-dropped",
-    "missingSince": "2026-11-05T20:45:38Z",
-    "reopenedAt": "2026-11-05T21:01:06Z",
     "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
    },
    "stillReported": []
