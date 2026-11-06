@@ -1,5 +1,5 @@
 {
- "checkedAt": "2026-11-06T00:45:43Z",
+ "checkedAt": "2026-11-06T01:00:55Z",
  "fresh": true,
  "pilot": "City of Melbourne",
  "pending": [
@@ -1573,8 +1573,8 @@
     "97e677fe040fc517ea06a0c0051d7e189466888dc0cbea88d01828d21040db05",
     "746cdc91f2e0b08cdb9dadc4c9f958c6d390971a96b2908eb8496905fb973e6f"
    ],
-   "sha256": "aec842bd04a5441d4a3772c2cd46f53c820263a6290b1becb180b3102b779208",
-   "readAt": "2026-11-06T00:45:43Z"
+   "sha256": "73fe731fa862ef081aed82318870d86fa6b350206e5cb4802bbf0553d446823c",
+   "readAt": "2026-11-06T01:00:55Z"
   },
   "https://www.melbourneflorida.org/Government/City-News/Traffic-Advisories/Lane-Closure-NASA-Blvd": {
    "agency": "City of Melbourne",
@@ -1584,8 +1584,8 @@
    "needsReview": [
     "d3b63822f83243ea40717b27e5b78827b787af45119ff216d61ea39a90a41734"
    ],
-   "sha256": "ca9c0c755038faa448a4ab84e0266f1f61ac4555929ef510cfc8e9b6ebbe89b7",
-   "readAt": "2026-11-06T00:45:43Z"
+   "sha256": "8a1ed3bc3ea89ce90f4d9b88eb664bdcc19c149eb7c8e6cd4f4ac300b8ce8868",
+   "readAt": "2026-11-06T01:00:55Z"
   },
   "https://www.melbourneflorida.org/Government/City-News/Traffic-Advisories/Copy-of-Road-Closures-Nov-4-1450": {
    "agency": "City of Melbourne",
@@ -1606,8 +1606,8 @@
     "f1815a2acee2dc12ec9d0fd398355de674f2a5d2013ef4b8c0d1ea938ab72343",
     "746cdc91f2e0b08cdb9dadc4c9f958c6d390971a96b2908eb8496905fb973e6f"
    ],
-   "sha256": "1daac865b135453cda5d7e99bc0adb8c737e910962d787b613c1218ce1988c6b",
-   "readAt": "2026-11-06T00:45:43Z"
+   "sha256": "a79c9384fffcedd760f89bd69e7017255f8aee64c2ad0eef0c88d59ca9fdc373",
+   "readAt": "2026-11-06T01:00:55Z"
   }
  }
 }
