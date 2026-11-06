@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-06T12:31:38Z",
+ "generated": "2026-11-06T12:45:30Z",
  "errors": [],
  "items": [
   {
@@ -56,9 +56,15 @@
     "kind": "feed",
     "publishedAt": "2026-11-06T11:51:44Z"
    },
-   "awaitingOfficial": false,
-   "missingSince": null,
-   "recheck": []
+   "awaitingOfficial": true,
+   "missingSince": "2026-11-06T12:45:36Z",
+   "recheck": [],
+   "noLongerListed": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "since": "2026-11-06T12:45:36Z",
+    "wasClosed": false
+   }
   },
   {
    "dir": "both directions",
@@ -1217,7 +1223,7 @@
      "id": "brevard:fhp:20261106115144-5069f212",
      "where": "N Wickham Rd at I-95",
      "source": "FHP live CAD",
-     "since": null
+     "since": "2026-11-06T12:45:36Z"
     }
    ]
   },
