@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-06T17:45:38Z",
+ "generated": "2026-11-06T18:00:47Z",
  "errors": [],
  "items": [
   {
@@ -30,110 +30,6 @@
    "awaitingOfficial": false,
    "missingSince": null,
    "recheck": []
-  },
-  {
-   "from": "River Grove Dr",
-   "fullClosure": false,
-   "lanes": "Roadblock",
-   "lat": 27.8754301800615,
-   "layer": "FHP",
-   "line": [
-    [
-     27.873762,
-     -80.497906
-    ],
-    [
-     27.874128,
-     -80.498094
-    ],
-    [
-     27.874415,
-     -80.498238
-    ],
-    [
-     27.875082,
-     -80.498549
-    ],
-    [
-     27.87528,
-     -80.498633
-    ],
-    [
-     27.875408,
-     -80.498688
-    ],
-    [
-     27.876024,
-     -80.498952
-    ]
-   ],
-   "lng": -80.4986220397307,
-   "reported": "2026-11-06T17:03:31Z",
-   "road": "US-1",
-   "roadShort": "US-1",
-   "source": "FHP live CAD",
-   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-   "spot": "at Garretts Rd",
-   "status": "closed",
-   "title": "MVC W/Roadblock at US-1 x[GARRETTS RD] [SEBASTIAN] (Roadblock)",
-   "to": "Lindsay Rd",
-   "where": "US-1 at Garretts Rd",
-   "id": "brevard:fhp:20261106170331-9139495c",
-   "updated": "2026-11-06T17:03:31Z",
-   "lastReported": "2026-11-06T17:03:31Z",
-   "firstReported": "2026-11-06T17:03:31Z",
-   "verified": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "kind": "feed",
-    "publishedAt": "2026-11-06T17:03:31Z"
-   },
-   "awaitingOfficial": true,
-   "missingSince": "2026-11-06T17:45:42Z",
-   "recheck": [
-    "source shows reduced impact",
-    "source changed its lane description"
-   ],
-   "noLongerListed": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "since": "2026-11-06T17:45:42Z",
-    "wasClosed": true
-   }
-  },
-  {
-   "fullClosure": false,
-   "lat": 28.2453741238472,
-   "layer": "FHP",
-   "lng": -80.7227482432926,
-   "reported": "2026-11-06T17:08:01Z",
-   "road": "I-95 NB [MM192]",
-   "roadShort": "I-95 Nb [MM192]",
-   "source": "FHP live CAD",
-   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-   "spot": "at Mm192",
-   "status": "caution",
-   "title": "Roadway Debris/Object at I-95 NB [MM192] x[MM192] [MELBOURNE]",
-   "where": "I-95 Nb [MM192] at Mm192",
-   "id": "brevard:fhp:20261106170801-31378f66",
-   "updated": "2026-11-06T17:08:01Z",
-   "lastReported": "2026-11-06T17:08:01Z",
-   "firstReported": "2026-11-06T17:08:01Z",
-   "verified": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "kind": "feed",
-    "publishedAt": "2026-11-06T17:08:01Z"
-   },
-   "awaitingOfficial": true,
-   "missingSince": "2026-11-06T17:45:42Z",
-   "recheck": [],
-   "noLongerListed": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "since": "2026-11-06T17:45:42Z",
-    "wasClosed": false
-   }
   },
   {
    "dir": "both directions",
@@ -254,10 +150,16 @@
     "publishedAt": "2026-11-06T13:48:00Z"
    },
    "awaitingOfficial": true,
-   "missingSince": null,
+   "missingSince": "2026-11-06T18:00:50Z",
    "recheck": [
     "source changed the closed stretch"
-   ]
+   ],
+   "noLongerListed": {
+    "agency": "FL511 (FDOT)",
+    "url": "https://fl511.com",
+    "since": "2026-11-06T18:00:50Z",
+    "wasClosed": false
+   }
   },
   {
    "dir": "NB",
@@ -405,6 +307,107 @@
   }
  ],
  "reopened": [
+  {
+   "fullClosure": false,
+   "lat": 28.2453741238472,
+   "layer": "FHP",
+   "lng": -80.7227482432926,
+   "reported": "2026-11-06T17:08:01Z",
+   "road": "I-95 NB [MM192]",
+   "roadShort": "I-95 Nb [MM192]",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "spot": "at Mm192",
+   "status": "caution",
+   "title": "Roadway Debris/Object at I-95 NB [MM192] x[MM192] [MELBOURNE]",
+   "where": "I-95 Nb [MM192] at Mm192",
+   "id": "brevard:fhp:20261106170801-31378f66",
+   "updated": "2026-11-06T17:08:01Z",
+   "lastReported": "2026-11-06T17:08:01Z",
+   "firstReported": "2026-11-06T17:08:01Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-06T17:08:01Z"
+   },
+   "reopenedAt": "2026-11-06T18:00:50Z",
+   "evidence": {
+    "agency": "Florida Highway Patrol",
+    "kind": "feed-dropped",
+    "missingSince": "2026-11-06T17:45:42Z",
+    "reopenedAt": "2026-11-06T18:00:50Z",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
+   },
+   "stillReported": []
+  },
+  {
+   "from": "River Grove Dr",
+   "fullClosure": false,
+   "lanes": "Roadblock",
+   "lat": 27.8754301800615,
+   "layer": "FHP",
+   "line": [
+    [
+     27.873762,
+     -80.497906
+    ],
+    [
+     27.874128,
+     -80.498094
+    ],
+    [
+     27.874415,
+     -80.498238
+    ],
+    [
+     27.875082,
+     -80.498549
+    ],
+    [
+     27.87528,
+     -80.498633
+    ],
+    [
+     27.875408,
+     -80.498688
+    ],
+    [
+     27.876024,
+     -80.498952
+    ]
+   ],
+   "lng": -80.4986220397307,
+   "reported": "2026-11-06T17:03:31Z",
+   "road": "US-1",
+   "roadShort": "US-1",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "spot": "at Garretts Rd",
+   "status": "closed",
+   "title": "MVC W/Roadblock at US-1 x[GARRETTS RD] [SEBASTIAN] (Roadblock)",
+   "to": "Lindsay Rd",
+   "where": "US-1 at Garretts Rd",
+   "id": "brevard:fhp:20261106170331-9139495c",
+   "updated": "2026-11-06T17:03:31Z",
+   "lastReported": "2026-11-06T17:03:31Z",
+   "firstReported": "2026-11-06T17:03:31Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-06T17:03:31Z"
+   },
+   "reopenedAt": "2026-11-06T18:00:50Z",
+   "evidence": {
+    "agency": "Florida Highway Patrol",
+    "kind": "feed-dropped",
+    "missingSince": "2026-11-06T17:45:42Z",
+    "reopenedAt": "2026-11-06T18:00:50Z",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
+   },
+   "stillReported": []
+  },
   {
    "fullClosure": false,
    "lanes": "Road Clear",
