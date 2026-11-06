@@ -328,5 +328,15 @@
   "quoteSha256": "a3fefa003b5b713e0efbbb95938e785244fdf45610c1213dcf0b828fd738c665",
   "time": "2026-11-05T16:00:00Z",
   "found": "2026-11-05T22:31:45Z"
+ },
+ {
+  "id": "man-sheridan-rd-at-john-rodes-blvd",
+  "where": "Sheridan Rd at John Rodes Blvd",
+  "partial": false,
+  "sourceHost": "westmelbourne.gov",
+  "sourceUrlSha256": "30fed4362e60bbcb96b99956e22d0074dc7b5757069196e6ca1cd2829ae18284",
+  "quoteSha256": "a3fefa003b5b713e0efbbb95938e785244fdf45610c1213dcf0b828fd738c665",
+  "time": "2026-11-05T16:00:00Z",
+  "found": "2026-11-06T04:31:31Z"
  }
 ]

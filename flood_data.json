@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-06T04:15:38Z",
+ "generated": "2026-11-06T04:31:39Z",
  "errors": [
   "FL511 map locations: 1 report(s) without a pin"
  ],
@@ -65,44 +65,6 @@
   {
    "fullClosure": false,
    "lanes": "Roadblock",
-   "lat": 28.1602072419851,
-   "layer": "FHP",
-   "lng": -80.7060011820662,
-   "reported": "2026-11-05T14:58:17Z",
-   "road": "I-95 NB [MM186]",
-   "roadShort": "I-95 Nb [MM186]",
-   "source": "FHP live CAD",
-   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-   "spot": "at Mm186",
-   "status": "closed",
-   "title": "MVC W/Roadblock at I-95 NB [MM186] x[MM186] [MELBOURNE] (Roadblock)",
-   "where": "I-95 Nb [MM186] at Mm186",
-   "id": "brevard:fhp:20261105145817-9ccfc09d",
-   "updated": "2026-11-05T14:58:17Z",
-   "lastReported": "2026-11-05T14:58:17Z",
-   "firstReported": "2026-11-05T14:58:17Z",
-   "verified": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "kind": "feed",
-    "publishedAt": "2026-11-05T14:58:17Z"
-   },
-   "awaitingOfficial": true,
-   "missingSince": "2026-11-06T04:15:44Z",
-   "recheck": [
-    "source shows reduced impact",
-    "source changed its lane description"
-   ],
-   "noLongerListed": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "since": "2026-11-06T04:15:44Z",
-    "wasClosed": true
-   }
-  },
-  {
-   "fullClosure": false,
-   "lanes": "Roadblock",
    "lat": 28.4822658761528,
    "layer": "FHP",
    "lng": -80.8232823008549,
@@ -124,6 +86,91 @@
     "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
     "kind": "feed",
     "publishedAt": "2026-11-05T16:07:40Z"
+   },
+   "awaitingOfficial": false,
+   "missingSince": null,
+   "recheck": []
+  },
+  {
+   "from": "Magoon Ave",
+   "fullClosure": false,
+   "lanes": "Unknown Roadblock",
+   "lat": 28.7679890206412,
+   "layer": "FHP",
+   "line": [
+    [
+     28.765562,
+     -80.877201
+    ],
+    [
+     28.765817,
+     -80.87726
+    ],
+    [
+     28.767334,
+     -80.877726
+    ],
+    [
+     28.767885,
+     -80.87792
+    ],
+    [
+     28.767994,
+     -80.87795
+    ],
+    [
+     28.768032,
+     -80.87796
+    ],
+    [
+     28.768278,
+     -80.878007
+    ],
+    [
+     28.768895,
+     -80.878231
+    ],
+    [
+     28.769033,
+     -80.878272
+    ],
+    [
+     28.769422,
+     -80.878375
+    ],
+    [
+     28.771409,
+     -80.878997
+    ],
+    [
+     28.77349,
+     -80.879635
+    ],
+    [
+     28.773855,
+     -80.879743
+    ]
+   ],
+   "lng": -80.8779749882793,
+   "reported": "2026-11-05T16:23:22Z",
+   "road": "US-1",
+   "roadShort": "US-1",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "spot": "at Sunset Ave",
+   "status": "closed",
+   "title": "MVC at US-1 x[SUNSET AVE] [MIMS] (Unknown Roadblock)",
+   "to": "Coral Ave",
+   "where": "US-1 at Sunset Ave",
+   "id": "brevard:fhp:20261105162322-547172eb",
+   "updated": "2026-11-05T16:23:22Z",
+   "lastReported": "2026-11-05T16:23:22Z",
+   "firstReported": "2026-11-05T16:23:22Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-05T16:23:22Z"
    },
    "awaitingOfficial": false,
    "missingSince": null,
@@ -158,52 +205,6 @@
    "awaitingOfficial": false,
    "missingSince": null,
    "recheck": []
-  },
-  {
-   "dir": "NB",
-   "fullClosure": false,
-   "lanes": "Right shoulder blocked",
-   "lat": 28.15987,
-   "layer": "Incidents",
-   "line": [
-    [
-     28.15955,
-     -80.70579
-    ],
-    [
-     28.15987,
-     -80.70579
-    ]
-   ],
-   "lng": -80.705823,
-   "reported": "2026-11-06T02:58:00Z",
-   "road": "I-95",
-   "roadShort": "I-95",
-   "source": "FL511 (FDOT)",
-   "sourceUrl": "https://fl511.com",
-   "spot": "at MM 186",
-   "status": "caution",
-   "title": "MVC on I-95 North, at MM 186. Right shoulder blocked",
-   "where": "I-95 NB at MM 186",
-   "id": "brevard:fl511:944265",
-   "updated": "2026-11-06T03:17:00Z",
-   "lastReported": "2026-11-06T03:17:00Z",
-   "firstReported": "2026-11-06T03:17:00Z",
-   "verified": {
-    "agency": "FL511 (FDOT)",
-    "url": "https://fl511.com",
-    "kind": "feed",
-    "publishedAt": "2026-11-06T03:17:00Z"
-   },
-   "awaitingOfficial": true,
-   "missingSince": "2026-11-06T04:15:44Z",
-   "recheck": [],
-   "noLongerListed": {
-    "agency": "FL511 (FDOT)",
-    "url": "https://fl511.com",
-    "since": "2026-11-06T04:15:44Z",
-    "wasClosed": false
-   }
   },
   {
    "dir": "SB",
@@ -301,9 +302,15 @@
     "kind": "feed",
     "publishedAt": "2026-11-06T03:37:00Z"
    },
-   "awaitingOfficial": false,
-   "missingSince": null,
-   "recheck": []
+   "awaitingOfficial": true,
+   "missingSince": "2026-11-06T04:31:44Z",
+   "recheck": [],
+   "noLongerListed": {
+    "agency": "FL511 (FDOT)",
+    "url": "https://fl511.com",
+    "since": "2026-11-06T04:31:44Z",
+    "wasClosed": false
+   }
   },
   {
    "dir": "SB",
@@ -448,8 +455,8 @@
    "title": "MVC on I-95 South, at MM 210. Both shoulders blocked",
    "where": "I-95 SB at MM 210",
    "id": "brevard:fl511:944362",
-   "updated": "2026-11-06T04:13:00Z",
-   "lastReported": "2026-11-06T04:13:00Z",
+   "updated": "2026-11-06T04:22:00Z",
+   "lastReported": "2026-11-06T04:22:00Z",
    "firstReported": "2026-11-06T04:13:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
@@ -457,9 +464,11 @@
     "kind": "feed",
     "publishedAt": "2026-11-06T04:13:00Z"
    },
-   "awaitingOfficial": false,
+   "awaitingOfficial": true,
    "missingSince": null,
-   "recheck": []
+   "recheck": [
+    "source changed its lane description"
+   ]
   },
   {
    "approx": true,
@@ -565,6 +574,87 @@
  "reopened": [
   {
    "fullClosure": false,
+   "lanes": "Roadblock",
+   "lat": 28.1602072419851,
+   "layer": "FHP",
+   "lng": -80.7060011820662,
+   "reported": "2026-11-05T14:58:17Z",
+   "road": "I-95 NB [MM186]",
+   "roadShort": "I-95 Nb [MM186]",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "spot": "at Mm186",
+   "status": "closed",
+   "title": "MVC W/Roadblock at I-95 NB [MM186] x[MM186] [MELBOURNE] (Roadblock)",
+   "where": "I-95 Nb [MM186] at Mm186",
+   "id": "brevard:fhp:20261105145817-9ccfc09d",
+   "updated": "2026-11-05T14:58:17Z",
+   "lastReported": "2026-11-05T14:58:17Z",
+   "firstReported": "2026-11-05T14:58:17Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-05T14:58:17Z"
+   },
+   "reopenedAt": "2026-11-06T04:31:44Z",
+   "evidence": {
+    "agency": "Florida Highway Patrol",
+    "kind": "feed-dropped",
+    "missingSince": "2026-11-06T04:15:44Z",
+    "reopenedAt": "2026-11-06T04:31:44Z",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
+   },
+   "stillReported": []
+  },
+  {
+   "dir": "NB",
+   "fullClosure": false,
+   "lanes": "Right shoulder blocked",
+   "lat": 28.15987,
+   "layer": "Incidents",
+   "line": [
+    [
+     28.15955,
+     -80.70579
+    ],
+    [
+     28.15987,
+     -80.70579
+    ]
+   ],
+   "lng": -80.705823,
+   "reported": "2026-11-06T02:58:00Z",
+   "road": "I-95",
+   "roadShort": "I-95",
+   "source": "FL511 (FDOT)",
+   "sourceUrl": "https://fl511.com",
+   "spot": "at MM 186",
+   "status": "caution",
+   "title": "MVC on I-95 North, at MM 186. Right shoulder blocked",
+   "where": "I-95 NB at MM 186",
+   "id": "brevard:fl511:944265",
+   "updated": "2026-11-06T03:17:00Z",
+   "lastReported": "2026-11-06T03:17:00Z",
+   "firstReported": "2026-11-06T03:17:00Z",
+   "verified": {
+    "agency": "FL511 (FDOT)",
+    "url": "https://fl511.com",
+    "kind": "feed",
+    "publishedAt": "2026-11-06T03:17:00Z"
+   },
+   "reopenedAt": "2026-11-06T04:31:44Z",
+   "evidence": {
+    "agency": "FL511 (FDOT)",
+    "kind": "feed-dropped",
+    "missingSince": "2026-11-06T04:15:44Z",
+    "reopenedAt": "2026-11-06T04:31:44Z",
+    "url": "https://fl511.com"
+   },
+   "stillReported": []
+  },
+  {
+   "fullClosure": false,
    "lanes": "No Roadblock",
    "lat": 28.1599739306105,
    "layer": "FHP",
@@ -596,20 +686,7 @@
     "reopenedAt": "2026-11-06T04:00:45Z",
     "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
    },
-   "stillReported": [
-    {
-     "id": "brevard:fhp:20261105145817-9ccfc09d",
-     "where": "I-95 Nb [MM186] at Mm186",
-     "source": "FHP live CAD",
-     "since": "2026-11-06T04:15:44Z"
-    },
-    {
-     "id": "brevard:fl511:944265",
-     "where": "I-95 NB at MM 186",
-     "source": "FL511 (FDOT)",
-     "since": "2026-11-06T04:15:44Z"
-    }
-   ]
+   "stillReported": []
   },
   {
    "dir": "SB",
@@ -733,7 +810,7 @@
      "id": "brevard:fl511:944317",
      "where": "I-95 NB at MM 187",
      "source": "FL511 (FDOT)",
-     "since": null
+     "since": "2026-11-06T04:31:44Z"
     }
    ]
   },
@@ -2708,6 +2785,12 @@
    "time": "2026-11-05T21:43:01Z",
    "text": "Update to the St. Johns River flood warning near Cocoa in Brevard County: rain water is still draining into the river. The river near Cocoa is expected to crest at major flood stage on Friday, higher than the crest after Hurricane Ian, and to stay flooded to some degree for weeks. Do not drive around barricades or through flooded areas, and use caution near the riverbanks.",
    "url": "https://www.clickorlando.com/weather/2026/11/05/st-johns-river-in-brevard-to-crest-in-major-flood-stage/"
+  },
+  {
+   "agency": "National Weather Service Melbourne",
+   "time": "2026-11-06T01:25:00Z",
+   "text": "The flood warning for the St. Johns River near Cocoa in Brevard County is still in effect. At 7:15 PM Thursday the river stood at 16.9 feet, which is above the 16.0-foot flood stage and in moderate flood stage. NWS expects it to reach major flood stage late this week and stay there through the weekend and into early next week. Do not drive around barricades or through flooded roads near the river.",
+   "url": "https://www.defconlevel.com/alert/2026-11-06-nws-noaa-weather-flood-warning-issued-november-5-at-8-25pm-est-by-nws-melbourne-fl"
   }
  ]
 }
