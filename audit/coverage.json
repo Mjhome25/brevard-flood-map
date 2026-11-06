@@ -1,5 +1,5 @@
 {
- "checkedAt": "2026-11-06T05:45:39Z",
+ "checkedAt": "2026-11-06T06:00:53Z",
  "fresh": true,
  "pilot": "City of Melbourne",
  "pending": [
@@ -1070,8 +1070,8 @@
     }
    ],
    "needsReview": [],
-   "sha256": "70c5cee2c097ab1d564a9a446d97c3a64e6ad5141744be89e1974f928e28aa2f",
-   "readAt": "2026-11-05T18:00:51Z"
+   "sha256": "c7d61a9e44ea5b9f6d496b28e02d09553ea9526386fd376109d3810860bac85e",
+   "readAt": "2026-11-06T06:00:53Z"
   },
   "https://www.melbourneflorida.org/Government/City-News/Traffic-Advisories/Flooding-and-Road-Closure-Update": {
    "agency": "City of Melbourne",
@@ -1086,8 +1086,8 @@
     "0ed52bd71f24962e1bf611bde4b84010235ca4aca093c421c93094fc059a9786",
     "ed33a4be2c0026687f4902dd76e3294576ae908b1a9416a0cb06e1a64ed1721a"
    ],
-   "sha256": "1987cc6f5fa0d2ed8c62fb4b68feee122b4ce6bf5fe359a6fae55ce863e9464d",
-   "readAt": "2026-11-05T18:00:51Z"
+   "sha256": "4816102f3ad1bd4dbec52a5ae54291a88d7cd22dbbd430beb8f3b47a77a6b351",
+   "readAt": "2026-11-06T06:00:53Z"
   },
   "https://www.melbourneflorida.org/Government/City-News/Traffic-Advisories/Traffic-Advisory-November-2": {
    "agency": "City of Melbourne",
@@ -1332,8 +1332,8 @@
    "needsReview": [
     "a8f22b7b18e6b8639032514b2783060f56a8f836ba444642c4555d6fcbba5c2c"
    ],
-   "sha256": "0c2e3475f193b61610b303f93847b70c1c4f55949c2b63363af676614d7e8014",
-   "readAt": "2026-11-05T18:00:51Z"
+   "sha256": "e17453dd767a94691603a764cbf1900d62e46de3c7ed7517a81cc4ff0c295521",
+   "readAt": "2026-11-06T06:00:53Z"
   },
   "https://www.melbourneflorida.org/Government/City-News/Traffic-Advisories/Road-Closures-Dairy-Babcock-Lake-Washington": {
    "agency": "City of Melbourne",
@@ -1573,8 +1573,8 @@
     "97e677fe040fc517ea06a0c0051d7e189466888dc0cbea88d01828d21040db05",
     "746cdc91f2e0b08cdb9dadc4c9f958c6d390971a96b2908eb8496905fb973e6f"
    ],
-   "sha256": "4486832c8037beb5877d891d909a53ea330e18e9194ed3932763ff3a93b68959",
-   "readAt": "2026-11-06T05:45:39Z"
+   "sha256": "bc3d7a3e2ba361179264f3c45cfb6491670b00d127cebc1fb61a748d42bbe668",
+   "readAt": "2026-11-06T06:00:53Z"
   },
   "https://www.melbourneflorida.org/Government/City-News/Traffic-Advisories/Lane-Closure-NASA-Blvd": {
    "agency": "City of Melbourne",
@@ -1584,8 +1584,8 @@
    "needsReview": [
     "d3b63822f83243ea40717b27e5b78827b787af45119ff216d61ea39a90a41734"
    ],
-   "sha256": "7c71814d1efbb42180a184a0f73b340c2b96eb47fb623a6205c4cc507fcdc35e",
-   "readAt": "2026-11-06T05:45:39Z"
+   "sha256": "c43d798bb25348ff4e111fb3b22bf7875f77f2708a4fac138ab79942ca283617",
+   "readAt": "2026-11-06T06:00:53Z"
   },
   "https://www.melbourneflorida.org/Government/City-News/Traffic-Advisories/Copy-of-Road-Closures-Nov-4-1450": {
    "agency": "City of Melbourne",
@@ -1606,8 +1606,8 @@
     "f1815a2acee2dc12ec9d0fd398355de674f2a5d2013ef4b8c0d1ea938ab72343",
     "746cdc91f2e0b08cdb9dadc4c9f958c6d390971a96b2908eb8496905fb973e6f"
    ],
-   "sha256": "fd30a4fd6cb0e13d0979180fdc1a822d66b3719daaf993b48fe58aae872148a0",
-   "readAt": "2026-11-06T05:45:39Z"
+   "sha256": "e386e4655389137936445f82c2dfe764470ad907c56c2bb6c7eb091f3e6c305b",
+   "readAt": "2026-11-06T06:00:53Z"
   }
  }
 }

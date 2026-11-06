@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-06T05:45:32Z",
+ "generated": "2026-11-06T06:00:46Z",
  "errors": [],
  "items": [
   {
@@ -124,40 +124,6 @@
    "awaitingOfficial": false,
    "missingSince": null,
    "recheck": []
-  },
-  {
-   "fullClosure": false,
-   "lat": 28.5467798067633,
-   "layer": "FHP",
-   "lng": -80.8516845440139,
-   "reported": "2026-11-06T17:11:10Z",
-   "road": "I-95 SB [MM215]",
-   "roadShort": "I-95 Sb [MM215]",
-   "source": "FHP live CAD",
-   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-   "spot": "at Mm215",
-   "status": "caution",
-   "title": "MVC at I-95 SB [MM215] x[MM215] [TITUSVILLE]",
-   "where": "I-95 Sb [MM215] at Mm215",
-   "id": "brevard:fhp:20261106171110-d2e89f72",
-   "updated": "2026-11-06T17:11:10Z",
-   "lastReported": "2026-11-06T17:11:10Z",
-   "firstReported": "2026-11-06T17:11:10Z",
-   "verified": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "kind": "feed",
-    "publishedAt": "2026-11-06T17:11:10Z"
-   },
-   "awaitingOfficial": true,
-   "missingSince": "2026-11-06T05:45:39Z",
-   "recheck": [],
-   "noLongerListed": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "since": "2026-11-06T05:45:39Z",
-    "wasClosed": false
-   }
   },
   {
    "dir": "both directions",
@@ -331,6 +297,40 @@
   }
  ],
  "reopened": [
+  {
+   "fullClosure": false,
+   "lat": 28.5467798067633,
+   "layer": "FHP",
+   "lng": -80.8516845440139,
+   "reported": "2026-11-06T17:11:10Z",
+   "road": "I-95 SB [MM215]",
+   "roadShort": "I-95 Sb [MM215]",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "spot": "at Mm215",
+   "status": "caution",
+   "title": "MVC at I-95 SB [MM215] x[MM215] [TITUSVILLE]",
+   "where": "I-95 Sb [MM215] at Mm215",
+   "id": "brevard:fhp:20261106171110-d2e89f72",
+   "updated": "2026-11-06T17:11:10Z",
+   "lastReported": "2026-11-06T17:11:10Z",
+   "firstReported": "2026-11-06T17:11:10Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-06T17:11:10Z"
+   },
+   "reopenedAt": "2026-11-06T06:00:52Z",
+   "evidence": {
+    "agency": "Florida Highway Patrol",
+    "kind": "feed-dropped",
+    "missingSince": "2026-11-06T05:45:39Z",
+    "reopenedAt": "2026-11-06T06:00:52Z",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
+   },
+   "stillReported": []
+  },
   {
    "dir": "SB",
    "fullClosure": false,
@@ -2764,72 +2764,6 @@
      "since": null
     }
    ]
-  },
-  {
-   "from": "Pine Sap Ave",
-   "fullClosure": false,
-   "lat": 27.9245305797101,
-   "layer": "FHP",
-   "line": [
-    [
-     27.924449,
-     -80.541352
-    ],
-    [
-     27.924444,
-     -80.53921
-    ],
-    [
-     27.924444,
-     -80.539203
-    ],
-    [
-     27.924417,
-     -80.536328
-    ],
-    [
-     27.924398,
-     -80.535007
-    ],
-    [
-     27.924379,
-     -80.534072
-    ],
-    [
-     27.924342,
-     -80.533148
-    ]
-   ],
-   "lng": -80.5392092964691,
-   "reported": "2026-11-05T17:13:42Z",
-   "road": "GRANT RD",
-   "roadShort": "Grant Rd",
-   "source": "FHP live CAD",
-   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-   "spot": "at Adobe Ln",
-   "status": "closed",
-   "title": "MVC W/Roadblock at GRANT RD x[ADOBE LN] [GRANT-VALKARIA]",
-   "to": "Brabrook Ave",
-   "where": "Grant Rd at Adobe Ln",
-   "id": "brevard:fhp:20261105171342-50fb1773",
-   "updated": "2026-11-05T17:13:42Z",
-   "lastReported": "2026-11-05T17:13:42Z",
-   "firstReported": "2026-11-05T17:13:42Z",
-   "verified": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "kind": "feed",
-    "publishedAt": "2026-11-05T17:13:42Z"
-   },
-   "reopenedAt": "2026-11-05T05:45:42Z",
-   "evidence": {
-    "agency": "Florida Highway Patrol",
-    "kind": "feed-dropped",
-    "missingSince": "2026-11-05T05:31:43Z",
-    "reopenedAt": "2026-11-05T05:45:42Z",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
-   },
-   "stillReported": []
   }
  ],
  "sources": {
