@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-06T00:31:35Z",
+ "generated": "2026-11-06T00:45:35Z",
  "errors": [],
  "items": [
   {
@@ -58,41 +58,6 @@
    "awaitingOfficial": false,
    "missingSince": null,
    "recheck": []
-  },
-  {
-   "fullClosure": false,
-   "lanes": "No Roadblock",
-   "lat": 28.2128211594203,
-   "layer": "FHP",
-   "lng": -80.5977405713282,
-   "reported": "2026-11-05T12:14:19Z",
-   "road": "PINEDA CSWY",
-   "roadShort": "Pineda Cswy",
-   "source": "FHP live CAD",
-   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-   "spot": "at Sr-A1A",
-   "status": "caution",
-   "title": "MVC at PINEDA CSWY x[SR-A1A] [PATRICK AIR FORCE] (No Roadblock)",
-   "where": "Pineda Cswy at Sr-A1A",
-   "id": "brevard:fhp:20261105121419-33517b53",
-   "updated": "2026-11-05T12:14:19Z",
-   "lastReported": "2026-11-05T12:14:19Z",
-   "firstReported": "2026-11-05T12:14:19Z",
-   "verified": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "kind": "feed",
-    "publishedAt": "2026-11-05T12:14:19Z"
-   },
-   "awaitingOfficial": true,
-   "missingSince": "2026-11-06T00:31:41Z",
-   "recheck": [],
-   "noLongerListed": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "since": "2026-11-06T00:31:41Z",
-    "wasClosed": false
-   }
   },
   {
    "dir": "both directions",
@@ -167,8 +132,8 @@
    "title": "MVC on I-95 South, at MM 190. 2 Right lanes blocked",
    "where": "I-95 SB at MM 190",
    "id": "brevard:fl511:943231",
-   "updated": "2026-11-06T00:07:00Z",
-   "lastReported": "2026-11-06T00:07:00Z",
+   "updated": "2026-11-06T00:41:00Z",
+   "lastReported": "2026-11-06T00:41:00Z",
    "firstReported": "2026-11-05T18:42:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
@@ -222,9 +187,15 @@
     "kind": "feed",
     "publishedAt": "2026-11-05T23:42:00Z"
    },
-   "awaitingOfficial": false,
-   "missingSince": null,
-   "recheck": []
+   "awaitingOfficial": true,
+   "missingSince": "2026-11-06T00:45:43Z",
+   "recheck": [],
+   "noLongerListed": {
+    "agency": "FL511 (FDOT)",
+    "url": "https://fl511.com",
+    "since": "2026-11-06T00:45:43Z",
+    "wasClosed": false
+   }
   },
   {
    "approx": true,
@@ -328,6 +299,41 @@
   }
  ],
  "reopened": [
+  {
+   "fullClosure": false,
+   "lanes": "No Roadblock",
+   "lat": 28.2128211594203,
+   "layer": "FHP",
+   "lng": -80.5977405713282,
+   "reported": "2026-11-05T12:14:19Z",
+   "road": "PINEDA CSWY",
+   "roadShort": "Pineda Cswy",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "spot": "at Sr-A1A",
+   "status": "caution",
+   "title": "MVC at PINEDA CSWY x[SR-A1A] [PATRICK AIR FORCE] (No Roadblock)",
+   "where": "Pineda Cswy at Sr-A1A",
+   "id": "brevard:fhp:20261105121419-33517b53",
+   "updated": "2026-11-05T12:14:19Z",
+   "lastReported": "2026-11-05T12:14:19Z",
+   "firstReported": "2026-11-05T12:14:19Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-05T12:14:19Z"
+   },
+   "reopenedAt": "2026-11-06T00:45:43Z",
+   "evidence": {
+    "agency": "Florida Highway Patrol",
+    "kind": "feed-dropped",
+    "missingSince": "2026-11-06T00:31:41Z",
+    "reopenedAt": "2026-11-06T00:45:43Z",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
+   },
+   "stillReported": []
+  },
   {
    "from": "Artemis Blvd",
    "fullClosure": false,
