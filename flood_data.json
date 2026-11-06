@@ -1,41 +1,7 @@
 {
- "generated": "2026-11-06T22:15:36Z",
+ "generated": "2026-11-06T22:31:31Z",
  "errors": [],
  "items": [
-  {
-   "fullClosure": false,
-   "lanes": "Source said \"Road Open\" (2026-11-06 09:32 UTC); not a verified reopening",
-   "lat": 28.3568992270531,
-   "layer": "FHP",
-   "lng": -80.6948842362747,
-   "reported": "2026-11-06T09:32:17Z",
-   "road": "265 MERRITT ISLAND CSWY E [MERRITT ISLAND]",
-   "roadShort": "265 Merritt Island Cswy E [Merritt Island]",
-   "source": "FHP live CAD",
-   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-   "status": "caution",
-   "title": "MVC at 265 MERRITT ISLAND CSWY E [MERRITT ISLAND] (Road Open)",
-   "where": "265 Merritt Island Cswy E [Merritt Island]",
-   "id": "brevard:fhp:20261106093217-1fcd27bf",
-   "updated": "2026-11-06T09:32:17Z",
-   "lastReported": "2026-11-06T09:32:17Z",
-   "firstReported": "2026-11-06T09:32:17Z",
-   "verified": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "kind": "feed",
-    "publishedAt": "2026-11-06T09:32:17Z"
-   },
-   "awaitingOfficial": true,
-   "missingSince": "2026-11-06T22:15:41Z",
-   "recheck": [],
-   "noLongerListed": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "since": "2026-11-06T22:15:41Z",
-    "wasClosed": false
-   }
-  },
   {
    "fullClosure": false,
    "lanes": "Source said \"Road Open\" (2026-11-06 09:32 UTC); not a verified reopening",
@@ -95,6 +61,35 @@
    "recheck": []
   },
   {
+   "fullClosure": false,
+   "lanes": "No Roadblock",
+   "lat": 28.4758966490997,
+   "layer": "FHP",
+   "lng": -80.7808662297027,
+   "reported": "2026-11-06T10:21:35Z",
+   "road": "FAY BLVD",
+   "roadShort": "Fay Blvd",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "spot": "at Carole Ave",
+   "status": "caution",
+   "title": "MVC at FAY BLVD x[CAROLE AVE] [COCOA] (No Roadblock)",
+   "where": "Fay Blvd at Carole Ave",
+   "id": "brevard:fhp:20261106102135-dd927c7d",
+   "updated": "2026-11-06T10:21:35Z",
+   "lastReported": "2026-11-06T10:21:35Z",
+   "firstReported": "2026-11-06T10:21:35Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-06T10:21:35Z"
+   },
+   "awaitingOfficial": false,
+   "missingSince": null,
+   "recheck": []
+  },
+  {
    "dir": "NB",
    "fullClosure": false,
    "lanes": "Right shoulder blocked",
@@ -125,8 +120,8 @@
    "title": "Vehicle on fire on I-95 North, at MM 206. Right shoulder blocked",
    "where": "I-95 NB at MM 206",
    "id": "brevard:fl511:945400",
-   "updated": "2026-11-06T21:36:00Z",
-   "lastReported": "2026-11-06T21:36:00Z",
+   "updated": "2026-11-06T22:25:00Z",
+   "lastReported": "2026-11-06T22:25:00Z",
    "firstReported": "2026-11-06T17:42:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
@@ -137,79 +132,6 @@
    "awaitingOfficial": false,
    "missingSince": null,
    "recheck": []
-  },
-  {
-   "dir": "SB",
-   "fullClosure": false,
-   "lat": 28.774472,
-   "layer": "Incidents",
-   "line": [
-    [
-     28.77447,
-     -80.89495
-    ],
-    [
-     28.77243,
-     -80.89436
-    ],
-    [
-     28.77129,
-     -80.89403
-    ],
-    [
-     28.77116,
-     -80.89399
-    ],
-    [
-     28.77058,
-     -80.89382
-    ],
-    [
-     28.76983,
-     -80.89362
-    ],
-    [
-     28.76906,
-     -80.89339
-    ],
-    [
-     28.76858,
-     -80.89326
-    ],
-    [
-     28.76843,
-     -80.89323
-    ]
-   ],
-   "lng": -80.894944,
-   "reported": "2026-11-06T21:49:00Z",
-   "road": "I-95",
-   "roadShort": "I-95",
-   "source": "FL511 (FDOT)",
-   "sourceUrl": "https://fl511.com",
-   "spot": "before MM 231/CR-5A",
-   "status": "caution",
-   "title": "Object on roadway on I-95 South, before MM 231/CR-5A",
-   "where": "I-95 SB before MM 231/CR-5A",
-   "id": "brevard:fl511:945973",
-   "updated": "2026-11-06T21:51:00Z",
-   "lastReported": "2026-11-06T21:51:00Z",
-   "firstReported": "2026-11-06T21:51:00Z",
-   "verified": {
-    "agency": "FL511 (FDOT)",
-    "url": "https://fl511.com",
-    "kind": "feed",
-    "publishedAt": "2026-11-06T21:51:00Z"
-   },
-   "awaitingOfficial": true,
-   "missingSince": "2026-11-06T22:15:41Z",
-   "recheck": [],
-   "noLongerListed": {
-    "agency": "FL511 (FDOT)",
-    "url": "https://fl511.com",
-    "since": "2026-11-06T22:15:41Z",
-    "wasClosed": false
-   }
   },
   {
    "approx": true,
@@ -313,6 +235,113 @@
   }
  ],
  "reopened": [
+  {
+   "fullClosure": false,
+   "lanes": "Road Open",
+   "lat": 28.3568992270531,
+   "layer": "FHP",
+   "lng": -80.6948842362747,
+   "reported": "2026-11-06T09:32:17Z",
+   "road": "265 MERRITT ISLAND CSWY E [MERRITT ISLAND]",
+   "roadShort": "265 Merritt Island Cswy E [Merritt Island]",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "status": "caution",
+   "title": "MVC at 265 MERRITT ISLAND CSWY E [MERRITT ISLAND] (Road Open)",
+   "where": "265 Merritt Island Cswy E [Merritt Island]",
+   "id": "brevard:fhp:20261106093217-1fcd27bf",
+   "updated": "2026-11-06T09:32:17Z",
+   "lastReported": "2026-11-06T09:32:17Z",
+   "firstReported": "2026-11-06T09:32:17Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-06T09:32:17Z"
+   },
+   "reopenedAt": "2026-11-06T22:31:35Z",
+   "evidence": {
+    "agency": "Florida Highway Patrol",
+    "kind": "feed-dropped",
+    "missingSince": "2026-11-06T22:15:41Z",
+    "reopenedAt": "2026-11-06T22:31:35Z",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
+   },
+   "stillReported": []
+  },
+  {
+   "dir": "SB",
+   "fullClosure": false,
+   "lat": 28.774472,
+   "layer": "Incidents",
+   "line": [
+    [
+     28.77447,
+     -80.89495
+    ],
+    [
+     28.77243,
+     -80.89436
+    ],
+    [
+     28.77129,
+     -80.89403
+    ],
+    [
+     28.77116,
+     -80.89399
+    ],
+    [
+     28.77058,
+     -80.89382
+    ],
+    [
+     28.76983,
+     -80.89362
+    ],
+    [
+     28.76906,
+     -80.89339
+    ],
+    [
+     28.76858,
+     -80.89326
+    ],
+    [
+     28.76843,
+     -80.89323
+    ]
+   ],
+   "lng": -80.894944,
+   "reported": "2026-11-06T21:49:00Z",
+   "road": "I-95",
+   "roadShort": "I-95",
+   "source": "FL511 (FDOT)",
+   "sourceUrl": "https://fl511.com",
+   "spot": "before MM 231/CR-5A",
+   "status": "caution",
+   "title": "Object on roadway on I-95 South, before MM 231/CR-5A",
+   "where": "I-95 SB before MM 231/CR-5A",
+   "id": "brevard:fl511:945973",
+   "updated": "2026-11-06T21:51:00Z",
+   "lastReported": "2026-11-06T21:51:00Z",
+   "firstReported": "2026-11-06T21:51:00Z",
+   "verified": {
+    "agency": "FL511 (FDOT)",
+    "url": "https://fl511.com",
+    "kind": "feed",
+    "publishedAt": "2026-11-06T21:51:00Z"
+   },
+   "reopenedAt": "2026-11-06T22:31:35Z",
+   "evidence": {
+    "agency": "FL511 (FDOT)",
+    "kind": "feed-dropped",
+    "missingSince": "2026-11-06T22:15:41Z",
+    "reopenedAt": "2026-11-06T22:31:35Z",
+    "url": "https://fl511.com"
+   },
+   "stillReported": []
+  },
   {
    "fullClosure": false,
    "lanes": "Roadway Open",
@@ -2345,12 +2374,6 @@
   }
  ],
  "advisories": [
-  {
-   "agency": "National Weather Service Melbourne",
-   "time": "2026-11-05T21:43:01Z",
-   "text": "Update to the St. Johns River flood warning near Cocoa in Brevard County: rain water is still draining into the river. The river near Cocoa is expected to crest at major flood stage on Friday, higher than the crest after Hurricane Ian, and to stay flooded to some degree for weeks. Do not drive around barricades or through flooded areas, and use caution near the riverbanks.",
-   "url": "https://www.clickorlando.com/weather/2026/11/05/st-johns-river-in-brevard-to-crest-in-major-flood-stage/"
-  },
   {
    "agency": "National Weather Service Melbourne",
    "time": "2026-11-06T01:25:00Z",
