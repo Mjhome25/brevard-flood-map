@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-06T05:31:27Z",
+ "generated": "2026-11-06T05:45:32Z",
  "errors": [],
  "items": [
   {
@@ -59,135 +59,6 @@
    "awaitingOfficial": false,
    "missingSince": null,
    "recheck": []
-  },
-  {
-   "fullClosure": false,
-   "lanes": "Roadblock",
-   "lat": 28.4822658761528,
-   "layer": "FHP",
-   "lng": -80.8232823008549,
-   "reported": "2026-11-05T16:07:40Z",
-   "road": "I-95 SB [MM210]",
-   "roadShort": "I-95 Sb [MM210]",
-   "source": "FHP live CAD",
-   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-   "spot": "at Mm210",
-   "status": "closed",
-   "title": "MVC W/ And Roadblock at I-95 SB [MM210] x[MM210] [COCOA] (Roadblock)",
-   "where": "I-95 Sb [MM210] at Mm210",
-   "id": "brevard:fhp:20261105160740-a71b8da9",
-   "updated": "2026-11-05T16:07:40Z",
-   "lastReported": "2026-11-05T16:07:40Z",
-   "firstReported": "2026-11-05T16:07:40Z",
-   "verified": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "kind": "feed",
-    "publishedAt": "2026-11-05T16:07:40Z"
-   },
-   "awaitingOfficial": true,
-   "missingSince": "2026-11-06T05:31:34Z",
-   "recheck": [
-    "source shows reduced impact",
-    "source changed its lane description"
-   ],
-   "noLongerListed": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "since": "2026-11-06T05:31:34Z",
-    "wasClosed": true
-   }
-  },
-  {
-   "from": "Magoon Ave",
-   "fullClosure": false,
-   "lanes": "Unknown Roadblock",
-   "lat": 28.7679890206412,
-   "layer": "FHP",
-   "line": [
-    [
-     28.765562,
-     -80.877201
-    ],
-    [
-     28.765817,
-     -80.87726
-    ],
-    [
-     28.767334,
-     -80.877726
-    ],
-    [
-     28.767885,
-     -80.87792
-    ],
-    [
-     28.767994,
-     -80.87795
-    ],
-    [
-     28.768032,
-     -80.87796
-    ],
-    [
-     28.768278,
-     -80.878007
-    ],
-    [
-     28.768895,
-     -80.878231
-    ],
-    [
-     28.769033,
-     -80.878272
-    ],
-    [
-     28.769422,
-     -80.878375
-    ],
-    [
-     28.771409,
-     -80.878997
-    ],
-    [
-     28.77349,
-     -80.879635
-    ],
-    [
-     28.773855,
-     -80.879743
-    ]
-   ],
-   "lng": -80.8779749882793,
-   "reported": "2026-11-05T16:23:22Z",
-   "road": "US-1",
-   "roadShort": "US-1",
-   "source": "FHP live CAD",
-   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-   "spot": "at Sunset Ave",
-   "status": "closed",
-   "title": "MVC at US-1 x[SUNSET AVE] [MIMS] (Unknown Roadblock)",
-   "to": "Coral Ave",
-   "where": "US-1 at Sunset Ave",
-   "id": "brevard:fhp:20261105162322-547172eb",
-   "updated": "2026-11-05T16:23:22Z",
-   "lastReported": "2026-11-05T16:23:22Z",
-   "firstReported": "2026-11-05T16:23:22Z",
-   "verified": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "kind": "feed",
-    "publishedAt": "2026-11-05T16:23:22Z"
-   },
-   "awaitingOfficial": true,
-   "missingSince": "2026-11-06T05:31:34Z",
-   "recheck": [],
-   "noLongerListed": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "since": "2026-11-06T05:31:34Z",
-    "wasClosed": true
-   }
   },
   {
    "from": "River Park Blvd",
@@ -278,9 +149,15 @@
     "kind": "feed",
     "publishedAt": "2026-11-06T17:11:10Z"
    },
-   "awaitingOfficial": false,
-   "missingSince": null,
-   "recheck": []
+   "awaitingOfficial": true,
+   "missingSince": "2026-11-06T05:45:39Z",
+   "recheck": [],
+   "noLongerListed": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "since": "2026-11-06T05:45:39Z",
+    "wasClosed": false
+   }
   },
   {
    "dir": "both directions",
@@ -312,6 +189,148 @@
    "missingSince": null,
    "recheck": []
   },
+  {
+   "dir": "SB",
+   "fullClosure": false,
+   "lanes": "2 Left lanes blocked",
+   "lat": 28.547028,
+   "layer": "Incidents",
+   "line": [
+    [
+     28.54703,
+     -80.85176
+    ],
+    [
+     28.5461,
+     -80.85175
+    ]
+   ],
+   "lng": -80.85175,
+   "reported": "2026-11-06T05:13:00Z",
+   "road": "I-95",
+   "roadShort": "I-95",
+   "source": "FL511 (FDOT)",
+   "sourceUrl": "https://fl511.com",
+   "spot": "before MM 215/SR-50",
+   "status": "caution",
+   "title": "MVC on I-95 South, before MM 215/SR-50. 2 Left lanes blocked",
+   "where": "I-95 SB before MM 215/SR-50",
+   "id": "brevard:fl511:944397",
+   "updated": "2026-11-06T05:18:00Z",
+   "lastReported": "2026-11-06T05:18:00Z",
+   "firstReported": "2026-11-06T05:18:00Z",
+   "verified": {
+    "agency": "FL511 (FDOT)",
+    "url": "https://fl511.com",
+    "kind": "feed",
+    "publishedAt": "2026-11-06T05:18:00Z"
+   },
+   "awaitingOfficial": false,
+   "missingSince": null,
+   "recheck": []
+  },
+  {
+   "approx": true,
+   "city": "Melbourne",
+   "from": "Palm Bay Rd NE",
+   "fullClosure": false,
+   "lanes": "Northbound and eastbound closed, barricades",
+   "lat": 28.04232,
+   "layer": "manual",
+   "line": [
+    [
+     28.035239,
+     -80.621917
+    ],
+    [
+     28.036665,
+     -80.621874
+    ],
+    [
+     28.037489,
+     -80.62185
+    ],
+    [
+     28.03789,
+     -80.621838
+    ],
+    [
+     28.038098,
+     -80.621832
+    ],
+    [
+     28.038518,
+     -80.621819
+    ],
+    [
+     28.038718,
+     -80.621809
+    ],
+    [
+     28.039948,
+     -80.621734
+    ],
+    [
+     28.041151,
+     -80.621679
+    ],
+    [
+     28.04232,
+     -80.621674
+    ],
+    [
+     28.042323,
+     -80.621674
+    ]
+   ],
+   "lng": -80.62167,
+   "note": "City of Melbourne 8:30 a.m. Nov 3 traffic update ('Babcock St/Sunlake Rd'): northbound and eastbound remain closed with barricades blocking the roadway. The county road map names the crossing road Sun Lakes Rd. Pin approximate.",
+   "reported": "2026-11-03T13:30:00Z",
+   "road": "Babcock St at Sun Lakes Rd",
+   "roadShort": "Babcock St",
+   "source": "City of Melbourne",
+   "sourceUrl": "https://www.melbourneflorida.org/Government/City-News/Traffic-Advisories/Road-Closures-0830",
+   "spot": "at Sun Lakes Rd",
+   "status": "closed",
+   "title": "Babcock St northbound and Sun Lakes Rd eastbound closed at the intersection",
+   "to": "Lake In The Woods Dr",
+   "where": "Babcock St NB and Sun Lakes Rd EB at their intersection",
+   "id": "brevard:manual:babcock-sunlakes",
+   "updated": "2026-11-03T13:30:00Z",
+   "lastReported": "2026-11-03T13:30:00Z",
+   "firstReported": "2026-11-03T13:30:00Z",
+   "verified": null,
+   "awaitingOfficial": false,
+   "missingSince": null,
+   "recheck": []
+  },
+  {
+   "approx": true,
+   "city": "Melbourne",
+   "fullClosure": false,
+   "lanes": "All lanes passable; signal out, works as a four-way stop",
+   "lat": 28.1225,
+   "layer": "manual",
+   "lng": -80.672,
+   "note": "Lanes can be driven, but the traffic light is out and the intersection works as a four-way stop. Pin approximate.",
+   "reported": "2026-11-03T13:17:00Z",
+   "road": "Commodore Blvd",
+   "source": "City of Melbourne (via Spectrum News 13)",
+   "sourceUrl": "https://mynews13.com/fl/orlando/news/2026/11/03/several-roads-remain-closed-in-melbourne-due-to-severe-flooding",
+   "status": "caution",
+   "title": "Commodore Blvd at Aurora Rd: traffic light out, four-way stop",
+   "where": "Commodore Blvd at Aurora Rd (intersection signal out)",
+   "id": "brevard:manual:commodore-blvd-at-aurora-rd-intersection",
+   "updated": "2026-11-03T13:17:00Z",
+   "lastReported": "2026-11-03T13:17:00Z",
+   "firstReported": "2026-11-03T13:17:00Z",
+   "verified": null,
+   "awaitingOfficial": false,
+   "missingSince": null,
+   "recheck": []
+  }
+ ],
+ "reopened": [
   {
    "dir": "SB",
    "fullClosure": false,
@@ -464,160 +483,142 @@
     "kind": "feed",
     "publishedAt": "2026-11-06T04:13:00Z"
    },
-   "awaitingOfficial": true,
-   "missingSince": "2026-11-06T05:31:34Z",
-   "recheck": [
-    "source changed its lane description"
-   ],
-   "noLongerListed": {
+   "reopenedAt": "2026-11-06T05:45:39Z",
+   "evidence": {
     "agency": "FL511 (FDOT)",
-    "url": "https://fl511.com",
-    "since": "2026-11-06T05:31:34Z",
-    "wasClosed": false
-   }
-  },
-  {
-   "dir": "SB",
-   "fullClosure": false,
-   "lanes": "2 Left lanes blocked",
-   "lat": 28.547028,
-   "layer": "Incidents",
-   "line": [
-    [
-     28.54703,
-     -80.85176
-    ],
-    [
-     28.5461,
-     -80.85175
-    ]
-   ],
-   "lng": -80.85175,
-   "reported": "2026-11-06T05:13:00Z",
-   "road": "I-95",
-   "roadShort": "I-95",
-   "source": "FL511 (FDOT)",
-   "sourceUrl": "https://fl511.com",
-   "spot": "before MM 215/SR-50",
-   "status": "caution",
-   "title": "MVC on I-95 South, before MM 215/SR-50. 2 Left lanes blocked",
-   "where": "I-95 SB before MM 215/SR-50",
-   "id": "brevard:fl511:944397",
-   "updated": "2026-11-06T05:18:00Z",
-   "lastReported": "2026-11-06T05:18:00Z",
-   "firstReported": "2026-11-06T05:18:00Z",
-   "verified": {
-    "agency": "FL511 (FDOT)",
-    "url": "https://fl511.com",
-    "kind": "feed",
-    "publishedAt": "2026-11-06T05:18:00Z"
+    "kind": "feed-dropped",
+    "missingSince": "2026-11-06T05:31:34Z",
+    "reopenedAt": "2026-11-06T05:45:39Z",
+    "url": "https://fl511.com"
    },
-   "awaitingOfficial": false,
-   "missingSince": null,
-   "recheck": []
+   "stillReported": []
   },
   {
-   "approx": true,
-   "city": "Melbourne",
-   "from": "Palm Bay Rd NE",
    "fullClosure": false,
-   "lanes": "Northbound and eastbound closed, barricades",
-   "lat": 28.04232,
-   "layer": "manual",
+   "lanes": "Roadblock",
+   "lat": 28.4822658761528,
+   "layer": "FHP",
+   "lng": -80.8232823008549,
+   "reported": "2026-11-05T16:07:40Z",
+   "road": "I-95 SB [MM210]",
+   "roadShort": "I-95 Sb [MM210]",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "spot": "at Mm210",
+   "status": "closed",
+   "title": "MVC W/ And Roadblock at I-95 SB [MM210] x[MM210] [COCOA] (Roadblock)",
+   "where": "I-95 Sb [MM210] at Mm210",
+   "id": "brevard:fhp:20261105160740-a71b8da9",
+   "updated": "2026-11-05T16:07:40Z",
+   "lastReported": "2026-11-05T16:07:40Z",
+   "firstReported": "2026-11-05T16:07:40Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-05T16:07:40Z"
+   },
+   "reopenedAt": "2026-11-06T05:45:39Z",
+   "evidence": {
+    "agency": "Florida Highway Patrol",
+    "kind": "feed-dropped",
+    "missingSince": "2026-11-06T05:31:34Z",
+    "reopenedAt": "2026-11-06T05:45:39Z",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
+   },
+   "stillReported": []
+  },
+  {
+   "from": "Magoon Ave",
+   "fullClosure": false,
+   "lanes": "Unknown Roadblock",
+   "lat": 28.7679890206412,
+   "layer": "FHP",
    "line": [
     [
-     28.035239,
-     -80.621917
+     28.765562,
+     -80.877201
     ],
     [
-     28.036665,
-     -80.621874
+     28.765817,
+     -80.87726
     ],
     [
-     28.037489,
-     -80.62185
+     28.767334,
+     -80.877726
     ],
     [
-     28.03789,
-     -80.621838
+     28.767885,
+     -80.87792
     ],
     [
-     28.038098,
-     -80.621832
+     28.767994,
+     -80.87795
     ],
     [
-     28.038518,
-     -80.621819
+     28.768032,
+     -80.87796
     ],
     [
-     28.038718,
-     -80.621809
+     28.768278,
+     -80.878007
     ],
     [
-     28.039948,
-     -80.621734
+     28.768895,
+     -80.878231
     ],
     [
-     28.041151,
-     -80.621679
+     28.769033,
+     -80.878272
     ],
     [
-     28.04232,
-     -80.621674
+     28.769422,
+     -80.878375
     ],
     [
-     28.042323,
-     -80.621674
+     28.771409,
+     -80.878997
+    ],
+    [
+     28.77349,
+     -80.879635
+    ],
+    [
+     28.773855,
+     -80.879743
     ]
    ],
-   "lng": -80.62167,
-   "note": "City of Melbourne 8:30 a.m. Nov 3 traffic update ('Babcock St/Sunlake Rd'): northbound and eastbound remain closed with barricades blocking the roadway. The county road map names the crossing road Sun Lakes Rd. Pin approximate.",
-   "reported": "2026-11-03T13:30:00Z",
-   "road": "Babcock St at Sun Lakes Rd",
-   "roadShort": "Babcock St",
-   "source": "City of Melbourne",
-   "sourceUrl": "https://www.melbourneflorida.org/Government/City-News/Traffic-Advisories/Road-Closures-0830",
-   "spot": "at Sun Lakes Rd",
+   "lng": -80.8779749882793,
+   "reported": "2026-11-05T16:23:22Z",
+   "road": "US-1",
+   "roadShort": "US-1",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "spot": "at Sunset Ave",
    "status": "closed",
-   "title": "Babcock St northbound and Sun Lakes Rd eastbound closed at the intersection",
-   "to": "Lake In The Woods Dr",
-   "where": "Babcock St NB and Sun Lakes Rd EB at their intersection",
-   "id": "brevard:manual:babcock-sunlakes",
-   "updated": "2026-11-03T13:30:00Z",
-   "lastReported": "2026-11-03T13:30:00Z",
-   "firstReported": "2026-11-03T13:30:00Z",
-   "verified": null,
-   "awaitingOfficial": false,
-   "missingSince": null,
-   "recheck": []
+   "title": "MVC at US-1 x[SUNSET AVE] [MIMS] (Unknown Roadblock)",
+   "to": "Coral Ave",
+   "where": "US-1 at Sunset Ave",
+   "id": "brevard:fhp:20261105162322-547172eb",
+   "updated": "2026-11-05T16:23:22Z",
+   "lastReported": "2026-11-05T16:23:22Z",
+   "firstReported": "2026-11-05T16:23:22Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-05T16:23:22Z"
+   },
+   "reopenedAt": "2026-11-06T05:45:39Z",
+   "evidence": {
+    "agency": "Florida Highway Patrol",
+    "kind": "feed-dropped",
+    "missingSince": "2026-11-06T05:31:34Z",
+    "reopenedAt": "2026-11-06T05:45:39Z",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
+   },
+   "stillReported": []
   },
-  {
-   "approx": true,
-   "city": "Melbourne",
-   "fullClosure": false,
-   "lanes": "All lanes passable; signal out, works as a four-way stop",
-   "lat": 28.1225,
-   "layer": "manual",
-   "lng": -80.672,
-   "note": "Lanes can be driven, but the traffic light is out and the intersection works as a four-way stop. Pin approximate.",
-   "reported": "2026-11-03T13:17:00Z",
-   "road": "Commodore Blvd",
-   "source": "City of Melbourne (via Spectrum News 13)",
-   "sourceUrl": "https://mynews13.com/fl/orlando/news/2026/11/03/several-roads-remain-closed-in-melbourne-due-to-severe-flooding",
-   "status": "caution",
-   "title": "Commodore Blvd at Aurora Rd: traffic light out, four-way stop",
-   "where": "Commodore Blvd at Aurora Rd (intersection signal out)",
-   "id": "brevard:manual:commodore-blvd-at-aurora-rd-intersection",
-   "updated": "2026-11-03T13:17:00Z",
-   "lastReported": "2026-11-03T13:17:00Z",
-   "firstReported": "2026-11-03T13:17:00Z",
-   "verified": null,
-   "awaitingOfficial": false,
-   "missingSince": null,
-   "recheck": []
-  }
- ],
- "reopened": [
   {
    "dir": "SB",
    "fullClosure": false,
