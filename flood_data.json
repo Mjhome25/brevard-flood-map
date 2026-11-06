@@ -1,8 +1,6 @@
 {
- "generated": "2026-11-06T03:00:52Z",
- "errors": [
-  "FL511 map locations: 1 report(s) without a pin"
- ],
+ "generated": "2026-11-06T03:15:43Z",
+ "errors": [],
  "items": [
   {
    "fullClosure": false,
@@ -107,6 +105,41 @@
    "title": "MVC W/Roadblock at I-95 NB [MM193] x[MM193] [MELBOURNE] (Roadblock)",
    "where": "I-95 Nb [MM193] at Mm193",
    "id": "brevard:fhp:20261105145817-0bb5b3b5",
+   "updated": "2026-11-05T14:58:17Z",
+   "lastReported": "2026-11-05T14:58:17Z",
+   "firstReported": "2026-11-05T14:58:17Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-05T14:58:17Z"
+   },
+   "awaitingOfficial": true,
+   "missingSince": "2026-11-06T03:15:46Z",
+   "recheck": [],
+   "noLongerListed": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "since": "2026-11-06T03:15:46Z",
+    "wasClosed": true
+   }
+  },
+  {
+   "fullClosure": false,
+   "lanes": "Roadblock",
+   "lat": 28.1602072419851,
+   "layer": "FHP",
+   "lng": -80.7060011820662,
+   "reported": "2026-11-05T14:58:17Z",
+   "road": "I-95 NB [MM186]",
+   "roadShort": "I-95 Nb [MM186]",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "spot": "at Mm186",
+   "status": "closed",
+   "title": "MVC W/Roadblock at I-95 NB [MM186] x[MM186] [MELBOURNE] (Roadblock)",
+   "where": "I-95 Nb [MM186] at Mm186",
+   "id": "brevard:fhp:20261105145817-9ccfc09d",
    "updated": "2026-11-05T14:58:17Z",
    "lastReported": "2026-11-05T14:58:17Z",
    "firstReported": "2026-11-05T14:58:17Z",
@@ -2227,59 +2260,6 @@
     "missingSince": "2026-11-05T04:31:36Z",
     "reopenedAt": "2026-11-05T04:45:38Z",
     "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
-   },
-   "stillReported": []
-  },
-  {
-   "dir": "EB",
-   "fullClosure": false,
-   "lat": 28.208125,
-   "layer": "Incidents",
-   "line": [
-    [
-     28.20803,
-     -80.6382
-    ],
-    [
-     28.20805,
-     -80.63812
-    ],
-    [
-     28.20824,
-     -80.63718
-    ],
-    [
-     28.2084,
-     -80.63639
-    ]
-   ],
-   "lng": -80.638223,
-   "reported": "2026-11-05T01:48:00Z",
-   "road": "SR-404",
-   "roadShort": "SR-404",
-   "source": "FL511 (FDOT)",
-   "sourceUrl": "https://fl511.com",
-   "spot": "at CR-3/S Tropical Trail",
-   "status": "caution",
-   "title": "Incident on SR-404 East, at CR-3/S Tropical Trail",
-   "where": "SR-404 EB at CR-3/S Tropical Trail",
-   "id": "brevard:fl511:941925",
-   "updated": "2026-11-05T01:54:00Z",
-   "lastReported": "2026-11-05T01:54:00Z",
-   "firstReported": "2026-11-05T01:54:00Z",
-   "verified": {
-    "agency": "FL511 (FDOT)",
-    "url": "https://fl511.com",
-    "kind": "feed",
-    "publishedAt": "2026-11-05T01:54:00Z"
-   },
-   "reopenedAt": "2026-11-05T03:15:38Z",
-   "evidence": {
-    "agency": "FL511 (FDOT)",
-    "kind": "feed-dropped",
-    "missingSince": "2026-11-05T03:01:41Z",
-    "reopenedAt": "2026-11-05T03:15:38Z",
-    "url": "https://fl511.com"
    },
    "stillReported": []
   }
