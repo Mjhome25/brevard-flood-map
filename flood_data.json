@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-06T01:15:34Z",
+ "generated": "2026-11-06T01:31:38Z",
  "errors": [],
  "items": [
   {
@@ -2198,14 +2198,14 @@
  },
  "alerts": [
   {
-   "id": "urn:oid:2.49.0.1.840.0.48188c715b42181a12a0eddf79fffe1de3c87256.001.1",
+   "id": "urn:oid:2.49.0.1.840.0.c56254b0febcc04cc635379195c3ebec1c31e19c.001.1",
    "event": "Flood Warning",
    "severity": "Severe",
-   "headline": "Flood Warning issued November 5 at 3:10PM EST by NWS Melbourne FL",
+   "headline": "Flood Warning issued November 5 at 8:25PM EST by NWS Melbourne FL",
    "areas": "Brevard, FL",
-   "effective": "2026-11-05T15:10:00-05:00",
-   "expires": "2026-11-06T00:00:00-05:00",
-   "description": "...The Flood Warning continues for the following rivers in Florida...\n\nSt Johns River Near Cocoa 9w affecting Brevard County.\n\n.Heavy rainfall has caused the St. Johns River near Cocoa to rise\ninto Moderate flood stage. The river is forecast to rise into Major\nflood stage late this week and remain within Major Flood Stage this\nweekend and into early next week.\n\nFor the St. Johns River...including Cocoa...Major flooding is\nforecast.\n\n* WHAT...Moderate flooding is occurring and major flooding is\nforecast.\n\n* WHERE...St Johns River near Cocoa 9w.\n\n* WHEN...Until further notice.\n\n* IMPACTS...At 17.2 feet, Water enters homes along the St Johns River\nin the Lake Poinsett area west of Cocoa, also low lying homes in\nthe Silver Pines subdivision in Rockledge and the Shakespeare Park\narea of Cocoa. Providence Road area west of Cocoa becomes\nimpassable, cutting off access to homes in the Mullet Lane and Bass\nRoad area. Docks flooded and water in parking lot at Lone Cabbage\nFish Camp.\n\n* ADDITIONAL DETAILS...\n- At 2:15 PM EST Thursday the stage was 16.9 feet.\n- Bankfull stage is 15.8 feet.\n- Recent Activity...The maximum river stage in the 24 hours ending\nat 2:15 PM EST Thursday was 16.9 feet.",
+   "effective": "2026-11-05T20:25:00-05:00",
+   "expires": "2026-11-06T11:00:00-05:00",
+   "description": "...The Flood Warning continues for the following rivers in Florida...\n\nSt Johns River Near Cocoa 9w affecting Brevard County.\n\n.Heavy rainfall has caused the St. Johns River near Cocoa to rise\ninto Moderate flood stage. The river is forecast to rise into Major\nflood stage late this week and remain within Major Flood Stage this\nweekend and into early next week.\n\nFor the St. Johns River...including Cocoa 9w...Major flooding is\nforecast.\n\n* WHAT...Moderate flooding is occurring and major flooding is\nforecast.\n\n* WHERE...St Johns River near Cocoa 9w.\n\n* WHEN...Until further notice.\n\n* IMPACTS...At 17.2 feet, Water enters homes along the St Johns River\nin the Lake Poinsett area west of Cocoa, also low lying homes in\nthe Silver Pines subdivision in Rockledge and the Shakespeare Park\narea of Cocoa. Providence Road area west of Cocoa becomes\nimpassable, cutting off access to homes in the Mullet Lane and Bass\nRoad area. Docks flooded and water in parking lot at Lone Cabbage\nFish Camp.\n\n* ADDITIONAL DETAILS...\n- At 7:15 PM EST Thursday the stage was 16.9 feet.\n- Bankfull stage is 15.8 feet.\n- Recent Activity...The maximum river stage in the 24 hours ending\nat 7:15 PM EST Thursday was 16.9 fe",
    "geometry": {
     "type": "Polygon",
     "coordinates": [
