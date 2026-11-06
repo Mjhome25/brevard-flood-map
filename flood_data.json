@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-06T00:00:51Z",
+ "generated": "2026-11-06T00:15:38Z",
  "errors": [],
  "items": [
   {
@@ -47,9 +47,15 @@
     "kind": "feed",
     "publishedAt": "2026-11-05T09:51:42Z"
    },
-   "awaitingOfficial": false,
-   "missingSince": null,
-   "recheck": []
+   "awaitingOfficial": true,
+   "missingSince": "2026-11-06T00:15:41Z",
+   "recheck": [],
+   "noLongerListed": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "since": "2026-11-06T00:15:41Z",
+    "wasClosed": true
+   }
   },
   {
    "fullClosure": false,
@@ -104,6 +110,69 @@
     "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
     "kind": "feed",
     "publishedAt": "2026-11-05T11:25:04Z"
+   },
+   "awaitingOfficial": true,
+   "missingSince": "2026-11-06T00:15:41Z",
+   "recheck": [],
+   "noLongerListed": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "since": "2026-11-06T00:15:41Z",
+    "wasClosed": true
+   }
+  },
+  {
+   "fullClosure": false,
+   "lanes": "No Roadblock",
+   "lat": 28.2134693939394,
+   "layer": "FHP",
+   "lng": -80.6722949650907,
+   "reported": "2026-11-05T12:06:25Z",
+   "road": "6300 N WICKHAM RD [MELBOURNE]",
+   "roadShort": "6300 N Wickham Rd [Melbourne]",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "status": "caution",
+   "title": "MVC at 6300 N WICKHAM RD [MELBOURNE] (No Roadblock)",
+   "where": "6300 N Wickham Rd [Melbourne]",
+   "id": "brevard:fhp:20261105120625-90ac3b9f",
+   "updated": "2026-11-05T12:06:25Z",
+   "lastReported": "2026-11-05T12:06:25Z",
+   "firstReported": "2026-11-05T12:06:25Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-05T12:06:25Z"
+   },
+   "awaitingOfficial": false,
+   "missingSince": null,
+   "recheck": []
+  },
+  {
+   "fullClosure": false,
+   "lanes": "No Roadblock",
+   "lat": 28.2128211594203,
+   "layer": "FHP",
+   "lng": -80.5977405713282,
+   "reported": "2026-11-05T12:14:19Z",
+   "road": "PINEDA CSWY",
+   "roadShort": "Pineda Cswy",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "spot": "at Sr-A1A",
+   "status": "caution",
+   "title": "MVC at PINEDA CSWY x[SR-A1A] [PATRICK AIR FORCE] (No Roadblock)",
+   "where": "Pineda Cswy at Sr-A1A",
+   "id": "brevard:fhp:20261105121419-33517b53",
+   "updated": "2026-11-05T12:14:19Z",
+   "lastReported": "2026-11-05T12:14:19Z",
+   "firstReported": "2026-11-05T12:14:19Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-05T12:14:19Z"
    },
    "awaitingOfficial": false,
    "missingSince": null,
@@ -182,8 +251,8 @@
    "title": "MVC on I-95 South, at MM 190. 2 Right lanes blocked",
    "where": "I-95 SB at MM 190",
    "id": "brevard:fl511:943231",
-   "updated": "2026-11-05T23:13:00Z",
-   "lastReported": "2026-11-05T23:13:00Z",
+   "updated": "2026-11-06T00:07:00Z",
+   "lastReported": "2026-11-06T00:07:00Z",
    "firstReported": "2026-11-05T18:42:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
@@ -2309,75 +2378,6 @@
     "missingSince": "2026-11-05T00:01:05Z",
     "reopenedAt": "2026-11-05T00:15:49Z",
     "url": "https://fl511.com"
-   },
-   "stillReported": []
-  },
-  {
-   "fullClosure": false,
-   "lat": 28.3695437241985,
-   "layer": "FHP",
-   "lng": -80.8009362234576,
-   "reported": "2026-11-04T10:44:00Z",
-   "road": "I-95 NB [MM202]",
-   "roadShort": "I-95 Nb [MM202]",
-   "source": "FHP live CAD",
-   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-   "spot": "at Mm202",
-   "status": "caution",
-   "title": "Roadway Debris/Object at I-95 NB [MM202] x[MM202] [COCOA]",
-   "where": "I-95 Nb [MM202] at Mm202",
-   "id": "brevard:fhp:20261104104400-ac873224",
-   "updated": "2026-11-04T10:44:00Z",
-   "lastReported": "2026-11-04T10:44:00Z",
-   "firstReported": "2026-11-04T10:44:00Z",
-   "verified": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "kind": "feed",
-    "publishedAt": "2026-11-04T10:44:00Z"
-   },
-   "reopenedAt": "2026-11-05T00:01:05Z",
-   "evidence": {
-    "agency": "Florida Highway Patrol",
-    "kind": "feed-dropped",
-    "missingSince": "2026-11-04T23:45:37Z",
-    "reopenedAt": "2026-11-05T00:01:05Z",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
-   },
-   "stillReported": []
-  },
-  {
-   "fullClosure": false,
-   "lanes": "Debris In Roadway",
-   "lat": 27.8873670750988,
-   "layer": "FHP",
-   "lng": -80.5928013548063,
-   "reported": "2026-11-04T10:38:49Z",
-   "road": "I-95 NB [MM165]",
-   "roadShort": "I-95 Nb [MM165]",
-   "source": "FHP live CAD",
-   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-   "spot": "at Mm165",
-   "status": "caution",
-   "title": "Roadway Debris/Object at I-95 NB [MM165] x[MM165] [SEBASTIAN] (Debris In Roadway)",
-   "where": "I-95 Nb [MM165] at Mm165",
-   "id": "brevard:fhp:20261104103849-2762dd35",
-   "updated": "2026-11-04T10:38:49Z",
-   "lastReported": "2026-11-04T10:38:49Z",
-   "firstReported": "2026-11-04T10:38:49Z",
-   "verified": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "kind": "feed",
-    "publishedAt": "2026-11-04T10:38:49Z"
-   },
-   "reopenedAt": "2026-11-05T00:01:05Z",
-   "evidence": {
-    "agency": "Florida Highway Patrol",
-    "kind": "feed-dropped",
-    "missingSince": "2026-11-04T23:45:37Z",
-    "reopenedAt": "2026-11-05T00:01:05Z",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
    },
    "stillReported": []
   }
