@@ -1,6 +1,8 @@
 {
- "generated": "2026-11-06T22:31:31Z",
- "errors": [],
+ "generated": "2026-11-06T22:45:45Z",
+ "errors": [
+  "FL511 map locations: 1 report(s) without a pin"
+ ],
  "items": [
   {
    "fullClosure": false,
@@ -27,9 +29,15 @@
     "kind": "feed",
     "publishedAt": "2026-11-06T09:32:17Z"
    },
-   "awaitingOfficial": false,
-   "missingSince": null,
-   "recheck": []
+   "awaitingOfficial": true,
+   "missingSince": "2026-11-06T22:45:52Z",
+   "recheck": [],
+   "noLongerListed": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "since": "2026-11-06T22:45:52Z",
+    "wasClosed": false
+   }
   },
   {
    "fullClosure": false,
@@ -56,9 +64,15 @@
     "kind": "feed",
     "publishedAt": "2026-11-06T09:56:41Z"
    },
-   "awaitingOfficial": false,
-   "missingSince": null,
-   "recheck": []
+   "awaitingOfficial": true,
+   "missingSince": "2026-11-06T22:45:52Z",
+   "recheck": [],
+   "noLongerListed": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "since": "2026-11-06T22:45:52Z",
+    "wasClosed": false
+   }
   },
   {
    "fullClosure": false,
@@ -84,6 +98,62 @@
     "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
     "kind": "feed",
     "publishedAt": "2026-11-06T10:21:35Z"
+   },
+   "awaitingOfficial": false,
+   "missingSince": null,
+   "recheck": []
+  },
+  {
+   "fullClosure": false,
+   "lanes": "No Roadblock",
+   "lat": 28.2599092138779,
+   "layer": "FHP",
+   "lng": -80.7269444573884,
+   "reported": "2026-11-06T10:34:18Z",
+   "road": "I-95 NB [MM193]",
+   "roadShort": "I-95 Nb [MM193]",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "spot": "at Mm193",
+   "status": "caution",
+   "title": "MVC at I-95 NB [MM193] x[MM193] [MELBOURNE] (No Roadblock)",
+   "where": "I-95 Nb [MM193] at Mm193",
+   "id": "brevard:fhp:20261106103418-0bb5b3b5",
+   "updated": "2026-11-06T10:34:18Z",
+   "lastReported": "2026-11-06T10:34:18Z",
+   "firstReported": "2026-11-06T10:34:18Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-06T10:34:18Z"
+   },
+   "awaitingOfficial": false,
+   "missingSince": null,
+   "recheck": []
+  },
+  {
+   "fullClosure": false,
+   "lat": 28.4538117654809,
+   "layer": "FHP",
+   "lng": -80.8058469192148,
+   "reported": "2026-11-06T10:37:44Z",
+   "road": "5005 PORT ST JOHN PKWY [COCOA]",
+   "roadShort": "5005 Port St John Pkwy [Cocoa]",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "status": "caution",
+   "title": "Patrol CarMVC at 5005 PORT ST JOHN PKWY [COCOA]",
+   "where": "5005 Port St John Pkwy [Cocoa]",
+   "id": "brevard:fhp:20261106103744-ce7a1d6e",
+   "updated": "2026-11-06T10:37:44Z",
+   "lastReported": "2026-11-06T10:37:44Z",
+   "firstReported": "2026-11-06T10:37:44Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-06T10:37:44Z"
    },
    "awaitingOfficial": false,
    "missingSince": null,
@@ -128,6 +198,50 @@
     "url": "https://fl511.com",
     "kind": "feed",
     "publishedAt": "2026-11-06T17:42:00Z"
+   },
+   "awaitingOfficial": false,
+   "missingSince": null,
+   "recheck": []
+  },
+  {
+   "dir": "NB",
+   "fullClosure": false,
+   "lanes": "Left lane blocked",
+   "lat": 28.273317,
+   "layer": "Incidents",
+   "line": [
+    [
+     28.27128,
+     -80.73026
+    ],
+    [
+     28.27223,
+     -80.73053
+    ],
+    [
+     28.27334,
+     -80.73085
+    ]
+   ],
+   "lng": -80.730929,
+   "reported": "2026-11-06T22:30:00Z",
+   "road": "I-95",
+   "roadShort": "I-95",
+   "source": "FL511 (FDOT)",
+   "sourceUrl": "https://fl511.com",
+   "spot": "at MM 194",
+   "status": "caution",
+   "title": "MVC on I-95 North, at MM 194. Left lane blocked",
+   "where": "I-95 NB at MM 194",
+   "id": "brevard:fl511:946057",
+   "updated": "2026-11-06T22:35:00Z",
+   "lastReported": "2026-11-06T22:35:00Z",
+   "firstReported": "2026-11-06T22:35:00Z",
+   "verified": {
+    "agency": "FL511 (FDOT)",
+    "url": "https://fl511.com",
+    "kind": "feed",
+    "publishedAt": "2026-11-06T22:35:00Z"
    },
    "awaitingOfficial": false,
    "missingSince": null,
@@ -1675,7 +1789,14 @@
     "reopenedAt": "2026-11-06T03:31:36Z",
     "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
    },
-   "stillReported": []
+   "stillReported": [
+    {
+     "id": "brevard:fhp:20261106103418-0bb5b3b5",
+     "where": "I-95 Nb [MM193] at Mm193",
+     "source": "FHP live CAD",
+     "since": null
+    }
+   ]
   },
   {
    "fullClosure": false,
@@ -2199,107 +2320,6 @@
     "kind": "feed-dropped",
     "missingSince": "2026-11-05T23:00:56Z",
     "reopenedAt": "2026-11-05T23:15:36Z",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
-   },
-   "stillReported": []
-  },
-  {
-   "dir": "SB",
-   "fullClosure": false,
-   "lanes": "Right shoulder blocked",
-   "lat": 28.009861,
-   "layer": "Incidents",
-   "line": [
-    [
-     28.00988,
-     -80.63869
-    ],
-    [
-     28.00941,
-     -80.63836
-    ],
-    [
-     28.00895,
-     -80.63803
-    ],
-    [
-     28.00826,
-     -80.63754
-    ],
-    [
-     28.00644,
-     -80.63625
-    ],
-    [
-     28.00556,
-     -80.63562
-    ],
-    [
-     28.00518,
-     -80.63534
-    ]
-   ],
-   "lng": -80.638725,
-   "reported": "2026-11-05T21:27:00Z",
-   "road": "I-95",
-   "roadShort": "I-95",
-   "source": "FL511 (FDOT)",
-   "sourceUrl": "https://fl511.com",
-   "spot": "at MM 174",
-   "status": "caution",
-   "title": "MVC on I-95 South, at MM 174. Right shoulder blocked",
-   "where": "I-95 SB at MM 174",
-   "id": "brevard:fl511:943676",
-   "updated": "2026-11-05T22:02:00Z",
-   "lastReported": "2026-11-05T22:02:00Z",
-   "firstReported": "2026-11-05T21:30:00Z",
-   "verified": {
-    "agency": "FL511 (FDOT)",
-    "url": "https://fl511.com",
-    "kind": "feed",
-    "publishedAt": "2026-11-05T21:30:00Z"
-   },
-   "reopenedAt": "2026-11-05T22:45:38Z",
-   "evidence": {
-    "agency": "FL511 (FDOT)",
-    "kind": "feed-dropped",
-    "missingSince": "2026-11-05T22:31:54Z",
-    "reopenedAt": "2026-11-05T22:45:38Z",
-    "url": "https://fl511.com"
-   },
-   "stillReported": []
-  },
-  {
-   "fullClosure": false,
-   "lanes": "No Road Block",
-   "lat": 27.997144896794,
-   "layer": "FHP",
-   "lng": -80.6296244954525,
-   "reported": "2026-11-05T09:23:13Z",
-   "road": "I-95 SB [MM173]",
-   "roadShort": "I-95 Sb [MM173]",
-   "source": "FHP live CAD",
-   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-   "spot": "at Mm173",
-   "status": "caution",
-   "title": "MVC at I-95 SB [MM173] x[MM173] [PALM BAY] (No Road Block)",
-   "where": "I-95 Sb [MM173] at Mm173",
-   "id": "brevard:fhp:20261105092313-42189524",
-   "updated": "2026-11-05T09:23:13Z",
-   "lastReported": "2026-11-05T09:23:13Z",
-   "firstReported": "2026-11-05T09:23:13Z",
-   "verified": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "kind": "feed",
-    "publishedAt": "2026-11-05T09:23:13Z"
-   },
-   "reopenedAt": "2026-11-05T22:45:38Z",
-   "evidence": {
-    "agency": "Florida Highway Patrol",
-    "kind": "feed-dropped",
-    "missingSince": "2026-11-05T22:31:54Z",
-    "reopenedAt": "2026-11-05T22:45:38Z",
     "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
    },
    "stillReported": []
