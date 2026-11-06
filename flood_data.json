@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-06T07:31:21Z",
+ "generated": "2026-11-06T07:45:30Z",
  "errors": [],
  "items": [
   {
@@ -122,11 +122,17 @@
     "publishedAt": "2026-11-05T16:23:22Z"
    },
    "awaitingOfficial": true,
-   "missingSince": null,
+   "missingSince": "2026-11-06T07:45:35Z",
    "recheck": [
     "source shows reduced impact",
     "source changed its lane description"
-   ]
+   ],
+   "noLongerListed": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "since": "2026-11-06T07:45:35Z",
+    "wasClosed": true
+   }
   },
   {
    "dir": "both directions",
