@@ -1,77 +1,7 @@
 {
- "generated": "2026-11-06T22:00:51Z",
+ "generated": "2026-11-06T22:15:36Z",
  "errors": [],
  "items": [
-  {
-   "fullClosure": false,
-   "lanes": "Source said \"Roadway Open\" (2026-11-06 07:09 UTC); not a verified reopening",
-   "lat": 28.2093592007027,
-   "layer": "FHP",
-   "lng": -80.6063343604387,
-   "reported": "2026-11-06T07:09:52Z",
-   "road": "S PATRICK DR",
-   "roadShort": "S Patrick Dr",
-   "source": "FHP live CAD",
-   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-   "spot": "at Pineda Cswy",
-   "status": "caution",
-   "title": "MVC at S PATRICK DR x[PINEDA CSWY] [SATELLITE BEACH] (Roadway Open)",
-   "where": "S Patrick Dr at Pineda Cswy",
-   "id": "brevard:fhp:20261106070952-460732cf",
-   "updated": "2026-11-06T07:09:52Z",
-   "lastReported": "2026-11-06T07:09:52Z",
-   "firstReported": "2026-11-06T07:09:52Z",
-   "verified": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "kind": "feed",
-    "publishedAt": "2026-11-06T07:09:52Z"
-   },
-   "awaitingOfficial": true,
-   "missingSince": "2026-11-06T22:00:53Z",
-   "recheck": [],
-   "noLongerListed": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "since": "2026-11-06T22:00:53Z",
-    "wasClosed": false
-   }
-  },
-  {
-   "fullClosure": false,
-   "lanes": "No Road Block",
-   "lat": 28.635806455863,
-   "layer": "FHP",
-   "lng": -80.8332792721512,
-   "reported": "2026-11-06T09:06:28Z",
-   "road": "LAGRANGE RD",
-   "roadShort": "Lagrange Rd",
-   "source": "FHP live CAD",
-   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-   "spot": "at Old Dixie Hwy",
-   "status": "caution",
-   "title": "MVC at LAGRANGE RD x[OLD DIXIE HWY] [TITUSVILLE] (No Road Block)",
-   "where": "Lagrange Rd at Old Dixie Hwy",
-   "id": "brevard:fhp:20261106090628-974ecbe7",
-   "updated": "2026-11-06T09:06:28Z",
-   "lastReported": "2026-11-06T09:06:28Z",
-   "firstReported": "2026-11-06T09:06:28Z",
-   "verified": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "kind": "feed",
-    "publishedAt": "2026-11-06T09:06:28Z"
-   },
-   "awaitingOfficial": true,
-   "missingSince": "2026-11-06T22:00:53Z",
-   "recheck": [],
-   "noLongerListed": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "since": "2026-11-06T22:00:53Z",
-    "wasClosed": false
-   }
-  },
   {
    "fullClosure": false,
    "lanes": "Source said \"Road Open\" (2026-11-06 09:32 UTC); not a verified reopening",
@@ -87,6 +17,41 @@
    "title": "MVC at 265 MERRITT ISLAND CSWY E [MERRITT ISLAND] (Road Open)",
    "where": "265 Merritt Island Cswy E [Merritt Island]",
    "id": "brevard:fhp:20261106093217-1fcd27bf",
+   "updated": "2026-11-06T09:32:17Z",
+   "lastReported": "2026-11-06T09:32:17Z",
+   "firstReported": "2026-11-06T09:32:17Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-06T09:32:17Z"
+   },
+   "awaitingOfficial": true,
+   "missingSince": "2026-11-06T22:15:41Z",
+   "recheck": [],
+   "noLongerListed": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "since": "2026-11-06T22:15:41Z",
+    "wasClosed": false
+   }
+  },
+  {
+   "fullClosure": false,
+   "lanes": "Source said \"Road Open\" (2026-11-06 09:32 UTC); not a verified reopening",
+   "lat": 28.3568892270531,
+   "layer": "FHP",
+   "lng": -80.6955542362583,
+   "reported": "2026-11-06T09:32:17Z",
+   "road": "MERRITT ISLAND CSWY E",
+   "roadShort": "Merritt Island Cswy E",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "spot": "at Imperial St",
+   "status": "caution",
+   "title": "MVC at MERRITT ISLAND CSWY E x[IMPERIAL ST] [MERRITT ISLAND] (Road Open)",
+   "where": "Merritt Island Cswy E at Imperial St",
+   "id": "brevard:fhp:20261106093217-f79a066f",
    "updated": "2026-11-06T09:32:17Z",
    "lastReported": "2026-11-06T09:32:17Z",
    "firstReported": "2026-11-06T09:32:17Z",
@@ -236,9 +201,15 @@
     "kind": "feed",
     "publishedAt": "2026-11-06T21:51:00Z"
    },
-   "awaitingOfficial": false,
-   "missingSince": null,
-   "recheck": []
+   "awaitingOfficial": true,
+   "missingSince": "2026-11-06T22:15:41Z",
+   "recheck": [],
+   "noLongerListed": {
+    "agency": "FL511 (FDOT)",
+    "url": "https://fl511.com",
+    "since": "2026-11-06T22:15:41Z",
+    "wasClosed": false
+   }
   },
   {
    "approx": true,
@@ -342,6 +313,76 @@
   }
  ],
  "reopened": [
+  {
+   "fullClosure": false,
+   "lanes": "Roadway Open",
+   "lat": 28.2093592007027,
+   "layer": "FHP",
+   "lng": -80.6063343604387,
+   "reported": "2026-11-06T07:09:52Z",
+   "road": "S PATRICK DR",
+   "roadShort": "S Patrick Dr",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "spot": "at Pineda Cswy",
+   "status": "caution",
+   "title": "MVC at S PATRICK DR x[PINEDA CSWY] [SATELLITE BEACH] (Roadway Open)",
+   "where": "S Patrick Dr at Pineda Cswy",
+   "id": "brevard:fhp:20261106070952-460732cf",
+   "updated": "2026-11-06T07:09:52Z",
+   "lastReported": "2026-11-06T07:09:52Z",
+   "firstReported": "2026-11-06T07:09:52Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-06T07:09:52Z"
+   },
+   "reopenedAt": "2026-11-06T22:15:41Z",
+   "evidence": {
+    "agency": "Florida Highway Patrol",
+    "kind": "feed-dropped",
+    "missingSince": "2026-11-06T22:00:53Z",
+    "reopenedAt": "2026-11-06T22:15:41Z",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
+   },
+   "stillReported": []
+  },
+  {
+   "fullClosure": false,
+   "lanes": "No Road Block",
+   "lat": 28.635806455863,
+   "layer": "FHP",
+   "lng": -80.8332792721512,
+   "reported": "2026-11-06T09:06:28Z",
+   "road": "LAGRANGE RD",
+   "roadShort": "Lagrange Rd",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "spot": "at Old Dixie Hwy",
+   "status": "caution",
+   "title": "MVC at LAGRANGE RD x[OLD DIXIE HWY] [TITUSVILLE] (No Road Block)",
+   "where": "Lagrange Rd at Old Dixie Hwy",
+   "id": "brevard:fhp:20261106090628-974ecbe7",
+   "updated": "2026-11-06T09:06:28Z",
+   "lastReported": "2026-11-06T09:06:28Z",
+   "firstReported": "2026-11-06T09:06:28Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-06T09:06:28Z"
+   },
+   "reopenedAt": "2026-11-06T22:15:41Z",
+   "evidence": {
+    "agency": "Florida Highway Patrol",
+    "kind": "feed-dropped",
+    "missingSince": "2026-11-06T22:00:53Z",
+    "reopenedAt": "2026-11-06T22:15:41Z",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
+   },
+   "stillReported": []
+  },
   {
    "dir": "both directions",
    "fullClosure": true,
@@ -2231,222 +2272,6 @@
     "missingSince": "2026-11-05T22:31:54Z",
     "reopenedAt": "2026-11-05T22:45:38Z",
     "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
-   },
-   "stillReported": []
-  },
-  {
-   "dir": "SB",
-   "from": "Ballard Dr",
-   "fullClosure": true,
-   "lanes": "All lanes closed",
-   "lat": 28.116128,
-   "layer": "Closures",
-   "line": [
-    [
-     28.116072,
-     -80.623131
-    ],
-    [
-     28.116068,
-     -80.62312
-    ],
-    [
-     28.115855,
-     -80.6225
-    ],
-    [
-     28.115645,
-     -80.621896
-    ],
-    [
-     28.115524,
-     -80.621641
-    ],
-    [
-     28.115446,
-     -80.621477
-    ],
-    [
-     28.115358,
-     -80.621298
-    ],
-    [
-     28.115252,
-     -80.621135
-    ],
-    [
-     28.115183,
-     -80.621031
-    ],
-    [
-     28.115095,
-     -80.620896
-    ],
-    [
-     28.115011,
-     -80.620798
-    ],
-    [
-     28.114882,
-     -80.620648
-    ],
-    [
-     28.114763,
-     -80.620535
-    ],
-    [
-     28.114642,
-     -80.620418
-    ],
-    [
-     28.114551,
-     -80.620337
-    ]
-   ],
-   "lng": -80.623094,
-   "reported": "2026-11-05T21:10:00Z",
-   "road": "US-1",
-   "roadShort": "US-1",
-   "source": "FL511 (FDOT)",
-   "sourceUrl": "https://fl511.com",
-   "spot": "at Babcock St",
-   "status": "closed",
-   "title": "MVC on US-1 South, at Babcock St. All lanes closed",
-   "to": "Laurie St",
-   "where": "US-1 SB at Babcock St",
-   "id": "brevard:fl511:943619",
-   "updated": "2026-11-05T21:43:00Z",
-   "lastReported": "2026-11-05T21:43:00Z",
-   "firstReported": "2026-11-05T21:12:00Z",
-   "verified": {
-    "agency": "FL511 (FDOT)",
-    "url": "https://fl511.com",
-    "kind": "feed",
-    "publishedAt": "2026-11-05T21:12:00Z"
-   },
-   "reopenedAt": "2026-11-05T22:15:41Z",
-   "evidence": {
-    "agency": "FL511 (FDOT)",
-    "kind": "feed-dropped",
-    "missingSince": "2026-11-05T22:01:28Z",
-    "reopenedAt": "2026-11-05T22:15:41Z",
-    "url": "https://fl511.com"
-   },
-   "stillReported": []
-  },
-  {
-   "dir": "SB",
-   "fullClosure": false,
-   "lanes": "Right shoulder blocked",
-   "lat": 28.332224,
-   "layer": "Incidents",
-   "line": [
-    [
-     28.33212,
-     -80.77653
-    ],
-    [
-     28.33187,
-     -80.77636
-    ],
-    [
-     28.33099,
-     -80.77579
-    ],
-    [
-     28.33018,
-     -80.77525
-    ],
-    [
-     28.32931,
-     -80.77469
-    ]
-   ],
-   "lng": -80.776376,
-   "reported": "2026-11-05T21:21:00Z",
-   "road": "I-95",
-   "roadShort": "I-95",
-   "source": "FL511 (FDOT)",
-   "sourceUrl": "https://fl511.com",
-   "spot": "at MM 199",
-   "status": "caution",
-   "title": "Object on roadway on I-95 South, at MM 199. Right shoulder blocked",
-   "where": "I-95 SB at MM 199",
-   "id": "brevard:fl511:943686",
-   "updated": "2026-11-05T21:34:00Z",
-   "lastReported": "2026-11-05T21:34:00Z",
-   "firstReported": "2026-11-05T21:34:00Z",
-   "verified": {
-    "agency": "FL511 (FDOT)",
-    "url": "https://fl511.com",
-    "kind": "feed",
-    "publishedAt": "2026-11-05T21:34:00Z"
-   },
-   "reopenedAt": "2026-11-05T22:15:41Z",
-   "evidence": {
-    "agency": "FL511 (FDOT)",
-    "kind": "feed-dropped",
-    "missingSince": "2026-11-05T22:01:28Z",
-    "reopenedAt": "2026-11-05T22:15:41Z",
-    "url": "https://fl511.com"
-   },
-   "stillReported": []
-  },
-  {
-   "dir": "SB",
-   "fullClosure": false,
-   "lanes": "Right shoulder blocked",
-   "lat": 28.332224,
-   "layer": "Incidents",
-   "line": [
-    [
-     28.33212,
-     -80.77653
-    ],
-    [
-     28.33187,
-     -80.77636
-    ],
-    [
-     28.33099,
-     -80.77579
-    ],
-    [
-     28.33018,
-     -80.77525
-    ],
-    [
-     28.32931,
-     -80.77469
-    ]
-   ],
-   "lng": -80.776376,
-   "reported": "2026-11-05T21:38:00Z",
-   "road": "I-95",
-   "roadShort": "I-95",
-   "source": "FL511 (FDOT)",
-   "sourceUrl": "https://fl511.com",
-   "spot": "at MM 199",
-   "status": "caution",
-   "title": "MVC on I-95 South, at MM 199. Right shoulder blocked",
-   "where": "I-95 SB at MM 199",
-   "id": "brevard:fl511:943702",
-   "updated": "2026-11-05T21:38:00Z",
-   "lastReported": "2026-11-05T21:38:00Z",
-   "firstReported": "2026-11-05T21:38:00Z",
-   "verified": {
-    "agency": "FL511 (FDOT)",
-    "url": "https://fl511.com",
-    "kind": "feed",
-    "publishedAt": "2026-11-05T21:38:00Z"
-   },
-   "reopenedAt": "2026-11-05T22:15:41Z",
-   "evidence": {
-    "agency": "FL511 (FDOT)",
-    "kind": "feed-dropped",
-    "missingSince": "2026-11-05T22:01:28Z",
-    "reopenedAt": "2026-11-05T22:15:41Z",
-    "url": "https://fl511.com"
    },
    "stillReported": []
   }
