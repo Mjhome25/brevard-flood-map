@@ -1,42 +1,7 @@
 {
- "generated": "2026-11-06T11:45:39Z",
+ "generated": "2026-11-06T12:00:53Z",
  "errors": [],
  "items": [
-  {
-   "fullClosure": false,
-   "lanes": "Unknown Road Block",
-   "lat": 27.8467796135266,
-   "layer": "FHP",
-   "lng": -80.5768944596599,
-   "reported": "2026-11-06T11:17:27Z",
-   "road": "I-95 NB [MM162]",
-   "roadShort": "I-95 Nb [MM162]",
-   "source": "FHP live CAD",
-   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-   "spot": "at Mm162",
-   "status": "closed",
-   "title": "MVC at I-95 NB [MM162] x[MM162] [SEBASTIAN] (Unknown Road Block)",
-   "where": "I-95 Nb [MM162] at Mm162",
-   "id": "brevard:fhp:20261106111727-639ee3ab",
-   "updated": "2026-11-06T11:17:27Z",
-   "lastReported": "2026-11-06T11:17:27Z",
-   "firstReported": "2026-11-06T11:17:27Z",
-   "verified": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "kind": "feed",
-    "publishedAt": "2026-11-06T11:17:27Z"
-   },
-   "awaitingOfficial": true,
-   "missingSince": "2026-11-06T11:45:45Z",
-   "recheck": [],
-   "noLongerListed": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "since": "2026-11-06T11:45:45Z",
-    "wasClosed": true
-   }
-  },
   {
    "fullClosure": false,
    "lanes": "No Roadblock",
@@ -61,6 +26,35 @@
     "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
     "kind": "feed",
     "publishedAt": "2026-11-06T11:22:31Z"
+   },
+   "awaitingOfficial": false,
+   "missingSince": null,
+   "recheck": []
+  },
+  {
+   "fullClosure": false,
+   "lanes": "Source said \"Roadway Open\" (2026-11-06 11:51 UTC); not a verified reopening",
+   "lat": 28.2302027580149,
+   "layer": "FHP",
+   "lng": -80.7212029524141,
+   "reported": "2026-11-06T11:51:44Z",
+   "road": "N WICKHAM RD",
+   "roadShort": "N Wickham Rd",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "spot": "at I-95",
+   "status": "caution",
+   "title": "MVC at N WICKHAM RD x[I-95] [MELBOURNE] (Roadway Open)",
+   "where": "N Wickham Rd at I-95",
+   "id": "brevard:fhp:20261106115144-5069f212",
+   "updated": "2026-11-06T11:51:44Z",
+   "lastReported": "2026-11-06T11:51:44Z",
+   "firstReported": "2026-11-06T11:51:44Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-06T11:51:44Z"
    },
    "awaitingOfficial": false,
    "missingSince": null,
@@ -198,6 +192,41 @@
   }
  ],
  "reopened": [
+  {
+   "fullClosure": false,
+   "lanes": "Unknown Road Block",
+   "lat": 27.8467796135266,
+   "layer": "FHP",
+   "lng": -80.5768944596599,
+   "reported": "2026-11-06T11:17:27Z",
+   "road": "I-95 NB [MM162]",
+   "roadShort": "I-95 Nb [MM162]",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "spot": "at Mm162",
+   "status": "closed",
+   "title": "MVC at I-95 NB [MM162] x[MM162] [SEBASTIAN] (Unknown Road Block)",
+   "where": "I-95 Nb [MM162] at Mm162",
+   "id": "brevard:fhp:20261106111727-639ee3ab",
+   "updated": "2026-11-06T11:17:27Z",
+   "lastReported": "2026-11-06T11:17:27Z",
+   "firstReported": "2026-11-06T11:17:27Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-06T11:17:27Z"
+   },
+   "reopenedAt": "2026-11-06T12:00:59Z",
+   "evidence": {
+    "agency": "Florida Highway Patrol",
+    "kind": "feed-dropped",
+    "missingSince": "2026-11-06T11:45:45Z",
+    "reopenedAt": "2026-11-06T12:00:59Z",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
+   },
+   "stillReported": []
+  },
   {
    "fullClosure": false,
    "lanes": "Roadblock Right Lane For Construction Use Caution",
@@ -1183,7 +1212,14 @@
     "reopenedAt": "2026-11-06T02:01:01Z",
     "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
    },
-   "stillReported": []
+   "stillReported": [
+    {
+     "id": "brevard:fhp:20261106115144-5069f212",
+     "where": "N Wickham Rd at I-95",
+     "source": "FHP live CAD",
+     "since": null
+    }
+   ]
   },
   {
    "dir": "SB",
