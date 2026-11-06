@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-06T21:31:40Z",
+ "generated": "2026-11-06T21:45:37Z",
  "errors": [],
  "items": [
   {
@@ -61,6 +61,34 @@
    "recheck": []
   },
   {
+   "fullClosure": false,
+   "lanes": "Source said \"Road Open\" (2026-11-06 09:32 UTC); not a verified reopening",
+   "lat": 28.3568992270531,
+   "layer": "FHP",
+   "lng": -80.6948842362747,
+   "reported": "2026-11-06T09:32:17Z",
+   "road": "265 MERRITT ISLAND CSWY E [MERRITT ISLAND]",
+   "roadShort": "265 Merritt Island Cswy E [Merritt Island]",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "status": "caution",
+   "title": "MVC at 265 MERRITT ISLAND CSWY E [MERRITT ISLAND] (Road Open)",
+   "where": "265 Merritt Island Cswy E [Merritt Island]",
+   "id": "brevard:fhp:20261106093217-1fcd27bf",
+   "updated": "2026-11-06T09:32:17Z",
+   "lastReported": "2026-11-06T09:32:17Z",
+   "firstReported": "2026-11-06T09:32:17Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-06T09:32:17Z"
+   },
+   "awaitingOfficial": false,
+   "missingSince": null,
+   "recheck": []
+  },
+  {
    "dir": "NB",
    "fullClosure": false,
    "lanes": "Right shoulder blocked",
@@ -91,8 +119,8 @@
    "title": "Vehicle on fire on I-95 North, at MM 206. Right shoulder blocked",
    "where": "I-95 NB at MM 206",
    "id": "brevard:fl511:945400",
-   "updated": "2026-11-06T20:55:00Z",
-   "lastReported": "2026-11-06T20:55:00Z",
+   "updated": "2026-11-06T21:36:00Z",
+   "lastReported": "2026-11-06T21:36:00Z",
    "firstReported": "2026-11-06T17:42:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
@@ -2311,65 +2339,6 @@
     "missingSince": "2026-11-05T22:01:28Z",
     "reopenedAt": "2026-11-05T22:15:41Z",
     "url": "https://fl511.com"
-   },
-   "stillReported": []
-  },
-  {
-   "from": "N Highway 1",
-   "fullClosure": false,
-   "lanes": "Road Block",
-   "lat": 28.2041919718928,
-   "layer": "FHP",
-   "line": [
-    [
-     28.204624,
-     -80.661947
-    ],
-    [
-     28.204839,
-     -80.660419
-    ],
-    [
-     28.204842,
-     -80.660397
-    ],
-    [
-     28.204988,
-     -80.65936
-    ],
-    [
-     28.205072,
-     -80.65875
-    ]
-   ],
-   "lng": -80.6602808686225,
-   "reported": "2026-11-05T06:36:08Z",
-   "road": "PINEDA CSWY",
-   "roadShort": "Pineda Cswy",
-   "source": "FHP live CAD",
-   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-   "spot": "at Us-1",
-   "status": "closed",
-   "title": "MVC W/Roadblock at PINEDA CSWY x[US-1] [MELBOURNE] (Road Block)",
-   "to": "N Highway 1",
-   "where": "Pineda Cswy at Us-1",
-   "id": "brevard:fhp:20261105063608-adea8f9f",
-   "updated": "2026-11-05T06:36:08Z",
-   "lastReported": "2026-11-05T06:36:08Z",
-   "firstReported": "2026-11-05T06:36:08Z",
-   "verified": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "kind": "feed",
-    "publishedAt": "2026-11-05T06:36:08Z"
-   },
-   "reopenedAt": "2026-11-05T21:31:52Z",
-   "evidence": {
-    "agency": "Florida Highway Patrol",
-    "kind": "feed-dropped",
-    "missingSince": "2026-11-05T21:15:42Z",
-    "reopenedAt": "2026-11-05T21:31:52Z",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
    },
    "stillReported": []
   }
