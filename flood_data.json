@@ -1,8 +1,6 @@
 {
- "generated": "2026-11-06T23:00:57Z",
- "errors": [
-  "FL511 map locations: 1 report(s) without a pin"
- ],
+ "generated": "2026-11-06T23:15:37Z",
+ "errors": [],
  "items": [
   {
    "fullClosure": false,
@@ -58,42 +56,44 @@
     "kind": "feed",
     "publishedAt": "2026-11-06T10:34:18Z"
    },
-   "awaitingOfficial": false,
-   "missingSince": null,
-   "recheck": []
-  },
-  {
-   "fullClosure": false,
-   "lat": 28.4538117654809,
-   "layer": "FHP",
-   "lng": -80.8058469192148,
-   "reported": "2026-11-06T10:37:44Z",
-   "road": "5005 PORT ST JOHN PKWY [COCOA]",
-   "roadShort": "5005 Port St John Pkwy [Cocoa]",
-   "source": "FHP live CAD",
-   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-   "status": "caution",
-   "title": "Patrol CarMVC at 5005 PORT ST JOHN PKWY [COCOA]",
-   "where": "5005 Port St John Pkwy [Cocoa]",
-   "id": "brevard:fhp:20261106103744-ce7a1d6e",
-   "updated": "2026-11-06T10:37:44Z",
-   "lastReported": "2026-11-06T10:37:44Z",
-   "firstReported": "2026-11-06T10:37:44Z",
-   "verified": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "kind": "feed",
-    "publishedAt": "2026-11-06T10:37:44Z"
-   },
    "awaitingOfficial": true,
-   "missingSince": "2026-11-06T23:01:04Z",
+   "missingSince": "2026-11-06T23:15:40Z",
    "recheck": [],
    "noLongerListed": {
     "agency": "Florida Highway Patrol",
     "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "since": "2026-11-06T23:01:04Z",
+    "since": "2026-11-06T23:15:40Z",
     "wasClosed": false
    }
+  },
+  {
+   "fullClosure": false,
+   "lanes": "No Roadblock",
+   "lat": 28.2732492138779,
+   "layer": "FHP",
+   "lng": -80.7308044554425,
+   "reported": "2026-11-06T10:34:18Z",
+   "road": "I-95 NB [MM194]",
+   "roadShort": "I-95 Nb [MM194]",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "spot": "at Mm194",
+   "status": "caution",
+   "title": "MVC at I-95 NB [MM194] x[MM194] [ROCKLEDGE] (No Roadblock)",
+   "where": "I-95 Nb [MM194] at Mm194",
+   "id": "brevard:fhp:20261106103418-d272ddc6",
+   "updated": "2026-11-06T10:34:18Z",
+   "lastReported": "2026-11-06T10:34:18Z",
+   "firstReported": "2026-11-06T10:34:18Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-06T10:34:18Z"
+   },
+   "awaitingOfficial": false,
+   "missingSince": null,
+   "recheck": []
   },
   {
    "fullClosure": false,
@@ -155,8 +155,8 @@
    "title": "Vehicle on fire on I-95 North, at MM 206. Right shoulder blocked",
    "where": "I-95 NB at MM 206",
    "id": "brevard:fl511:945400",
-   "updated": "2026-11-06T22:25:00Z",
-   "lastReported": "2026-11-06T22:25:00Z",
+   "updated": "2026-11-06T23:09:00Z",
+   "lastReported": "2026-11-06T23:09:00Z",
    "firstReported": "2026-11-06T17:42:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
@@ -316,6 +316,39 @@
   }
  ],
  "reopened": [
+  {
+   "fullClosure": false,
+   "lat": 28.4538117654809,
+   "layer": "FHP",
+   "lng": -80.8058469192148,
+   "reported": "2026-11-06T10:37:44Z",
+   "road": "5005 PORT ST JOHN PKWY [COCOA]",
+   "roadShort": "5005 Port St John Pkwy [Cocoa]",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "status": "caution",
+   "title": "Patrol CarMVC at 5005 PORT ST JOHN PKWY [COCOA]",
+   "where": "5005 Port St John Pkwy [Cocoa]",
+   "id": "brevard:fhp:20261106103744-ce7a1d6e",
+   "updated": "2026-11-06T10:37:44Z",
+   "lastReported": "2026-11-06T10:37:44Z",
+   "firstReported": "2026-11-06T10:37:44Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-06T10:37:44Z"
+   },
+   "reopenedAt": "2026-11-06T23:15:40Z",
+   "evidence": {
+    "agency": "Florida Highway Patrol",
+    "kind": "feed-dropped",
+    "missingSince": "2026-11-06T23:01:04Z",
+    "reopenedAt": "2026-11-06T23:15:40Z",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
+   },
+   "stillReported": []
+  },
   {
    "fullClosure": false,
    "lanes": "No Roadblock",
@@ -1831,7 +1864,7 @@
      "id": "brevard:fhp:20261106103418-0bb5b3b5",
      "where": "I-95 Nb [MM193] at Mm193",
      "source": "FHP live CAD",
-     "since": null
+     "since": "2026-11-06T23:15:40Z"
     }
    ]
   },
@@ -2323,41 +2356,6 @@
     "missingSince": "2026-11-05T23:31:51Z",
     "reopenedAt": "2026-11-05T23:45:40Z",
     "url": "https://fl511.com"
-   },
-   "stillReported": []
-  },
-  {
-   "fullClosure": false,
-   "lanes": "Roadway Open",
-   "lat": 28.3572307992973,
-   "layer": "FHP",
-   "lng": -80.6474608956952,
-   "reported": "2026-11-05T10:09:47Z",
-   "road": "MERRITT ISLAND CSWY E",
-   "roadShort": "Merritt Island Cswy E",
-   "source": "FHP live CAD",
-   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-   "spot": "at Cocoa Beach Cswy W",
-   "status": "caution",
-   "title": "MVC at MERRITT ISLAND CSWY E x[COCOA BEACH CSWY W] [COCOA BEACH] (Roadway Open)",
-   "where": "Merritt Island Cswy E at Cocoa Beach Cswy W",
-   "id": "brevard:fhp:20261105100947-e7ff6175",
-   "updated": "2026-11-05T10:09:47Z",
-   "lastReported": "2026-11-05T10:09:47Z",
-   "firstReported": "2026-11-05T10:09:47Z",
-   "verified": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "kind": "feed",
-    "publishedAt": "2026-11-05T10:09:47Z"
-   },
-   "reopenedAt": "2026-11-05T23:15:36Z",
-   "evidence": {
-    "agency": "Florida Highway Patrol",
-    "kind": "feed-dropped",
-    "missingSince": "2026-11-05T23:00:56Z",
-    "reopenedAt": "2026-11-05T23:15:36Z",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
    },
    "stillReported": []
   }
