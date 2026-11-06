@@ -1,6 +1,8 @@
 {
- "generated": "2026-11-06T04:00:38Z",
- "errors": [],
+ "generated": "2026-11-06T04:15:38Z",
+ "errors": [
+  "FL511 map locations: 1 report(s) without a pin"
+ ],
  "items": [
   {
    "fullClosure": false,
@@ -86,11 +88,46 @@
     "publishedAt": "2026-11-05T14:58:17Z"
    },
    "awaitingOfficial": true,
-   "missingSince": null,
+   "missingSince": "2026-11-06T04:15:44Z",
    "recheck": [
     "source shows reduced impact",
     "source changed its lane description"
-   ]
+   ],
+   "noLongerListed": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "since": "2026-11-06T04:15:44Z",
+    "wasClosed": true
+   }
+  },
+  {
+   "fullClosure": false,
+   "lanes": "Roadblock",
+   "lat": 28.4822658761528,
+   "layer": "FHP",
+   "lng": -80.8232823008549,
+   "reported": "2026-11-05T16:07:40Z",
+   "road": "I-95 SB [MM210]",
+   "roadShort": "I-95 Sb [MM210]",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "spot": "at Mm210",
+   "status": "closed",
+   "title": "MVC W/ And Roadblock at I-95 SB [MM210] x[MM210] [COCOA] (Roadblock)",
+   "where": "I-95 Sb [MM210] at Mm210",
+   "id": "brevard:fhp:20261105160740-a71b8da9",
+   "updated": "2026-11-05T16:07:40Z",
+   "lastReported": "2026-11-05T16:07:40Z",
+   "firstReported": "2026-11-05T16:07:40Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-05T16:07:40Z"
+   },
+   "awaitingOfficial": false,
+   "missingSince": null,
+   "recheck": []
   },
   {
    "dir": "both directions",
@@ -158,9 +195,15 @@
     "kind": "feed",
     "publishedAt": "2026-11-06T03:17:00Z"
    },
-   "awaitingOfficial": false,
-   "missingSince": null,
-   "recheck": []
+   "awaitingOfficial": true,
+   "missingSince": "2026-11-06T04:15:44Z",
+   "recheck": [],
+   "noLongerListed": {
+    "agency": "FL511 (FDOT)",
+    "url": "https://fl511.com",
+    "since": "2026-11-06T04:15:44Z",
+    "wasClosed": false
+   }
   },
   {
    "dir": "SB",
@@ -257,6 +300,162 @@
     "url": "https://fl511.com",
     "kind": "feed",
     "publishedAt": "2026-11-06T03:37:00Z"
+   },
+   "awaitingOfficial": false,
+   "missingSince": null,
+   "recheck": []
+  },
+  {
+   "dir": "SB",
+   "fullClosure": false,
+   "lanes": "Both shoulders blocked",
+   "lat": 28.482025,
+   "layer": "Incidents",
+   "line": [
+    [
+     28.48196,
+     -80.82305
+    ],
+    [
+     28.48166,
+     -80.82284
+    ],
+    [
+     28.48146,
+     -80.82271
+    ],
+    [
+     28.4812,
+     -80.82256
+    ],
+    [
+     28.48092,
+     -80.8224
+    ],
+    [
+     28.48064,
+     -80.82226
+    ],
+    [
+     28.48036,
+     -80.82212
+    ],
+    [
+     28.48007,
+     -80.822
+    ],
+    [
+     28.47977,
+     -80.82188
+    ],
+    [
+     28.47948,
+     -80.82177
+    ],
+    [
+     28.47919,
+     -80.82167
+    ],
+    [
+     28.47888,
+     -80.82158
+    ],
+    [
+     28.47859,
+     -80.82151
+    ],
+    [
+     28.47828,
+     -80.82144
+    ],
+    [
+     28.47798,
+     -80.82138
+    ],
+    [
+     28.47768,
+     -80.82134
+    ],
+    [
+     28.47735,
+     -80.8213
+    ],
+    [
+     28.47703,
+     -80.82127
+    ],
+    [
+     28.47673,
+     -80.82126
+    ],
+    [
+     28.47642,
+     -80.82125
+    ],
+    [
+     28.4761,
+     -80.82125
+    ],
+    [
+     28.47395,
+     -80.82128
+    ],
+    [
+     28.46981,
+     -80.82134
+    ],
+    [
+     28.46801,
+     -80.82137
+    ],
+    [
+     28.4666,
+     -80.82139
+    ],
+    [
+     28.46571,
+     -80.8214
+    ],
+    [
+     28.46492,
+     -80.82141
+    ],
+    [
+     28.46478,
+     -80.82142
+    ],
+    [
+     28.46404,
+     -80.82143
+    ],
+    [
+     28.46243,
+     -80.82144
+    ],
+    [
+     28.45999,
+     -80.82147
+    ]
+   ],
+   "lng": -80.822947,
+   "reported": "2026-11-06T04:08:00Z",
+   "road": "I-95",
+   "roadShort": "I-95",
+   "source": "FL511 (FDOT)",
+   "sourceUrl": "https://fl511.com",
+   "spot": "at MM 210",
+   "status": "caution",
+   "title": "MVC on I-95 South, at MM 210. Both shoulders blocked",
+   "where": "I-95 SB at MM 210",
+   "id": "brevard:fl511:944362",
+   "updated": "2026-11-06T04:13:00Z",
+   "lastReported": "2026-11-06T04:13:00Z",
+   "firstReported": "2026-11-06T04:13:00Z",
+   "verified": {
+    "agency": "FL511 (FDOT)",
+    "url": "https://fl511.com",
+    "kind": "feed",
+    "publishedAt": "2026-11-06T04:13:00Z"
    },
    "awaitingOfficial": false,
    "missingSince": null,
@@ -402,13 +601,13 @@
      "id": "brevard:fhp:20261105145817-9ccfc09d",
      "where": "I-95 Nb [MM186] at Mm186",
      "source": "FHP live CAD",
-     "since": null
+     "since": "2026-11-06T04:15:44Z"
     },
     {
      "id": "brevard:fl511:944265",
      "where": "I-95 NB at MM 186",
      "source": "FL511 (FDOT)",
-     "since": null
+     "since": "2026-11-06T04:15:44Z"
     }
    ]
   },
