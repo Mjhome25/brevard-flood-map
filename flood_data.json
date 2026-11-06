@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-06T14:31:26Z",
+ "generated": "2026-11-06T14:45:42Z",
  "errors": [],
  "items": [
   {
@@ -27,9 +27,15 @@
     "kind": "feed",
     "publishedAt": "2026-11-06T13:39:32Z"
    },
-   "awaitingOfficial": false,
-   "missingSince": null,
-   "recheck": []
+   "awaitingOfficial": true,
+   "missingSince": "2026-11-06T14:45:48Z",
+   "recheck": [],
+   "noLongerListed": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "since": "2026-11-06T14:45:48Z",
+    "wasClosed": false
+   }
   },
   {
    "dir": "both directions",
@@ -1053,7 +1059,7 @@
      "id": "brevard:fhp:20261106133932-9ccfc09d",
      "where": "I-95 Nb [MM186] at Mm186",
      "source": "FHP live CAD",
-     "since": null
+     "since": "2026-11-06T14:45:48Z"
     }
    ]
   },
@@ -1106,7 +1112,7 @@
      "id": "brevard:fhp:20261106133932-9ccfc09d",
      "where": "I-95 Nb [MM186] at Mm186",
      "source": "FHP live CAD",
-     "since": null
+     "since": "2026-11-06T14:45:48Z"
     }
    ]
   },
@@ -1148,7 +1154,7 @@
      "id": "brevard:fhp:20261106133932-9ccfc09d",
      "where": "I-95 Nb [MM186] at Mm186",
      "source": "FHP live CAD",
-     "since": null
+     "since": "2026-11-06T14:45:48Z"
     }
    ]
   },
