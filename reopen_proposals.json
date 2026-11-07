@@ -408,5 +408,25 @@
   "quoteSha256": "a3fefa003b5b713e0efbbb95938e785244fdf45610c1213dcf0b828fd738c665",
   "time": "2026-11-06T15:00:00Z",
   "found": "2026-11-06T20:31:52Z"
+ },
+ {
+  "id": "man-minton-helen",
+  "where": "Minton Rd northbound at Helen St",
+  "partial": false,
+  "sourceHost": "westmelbourne.gov",
+  "sourceUrlSha256": "30fed4362e60bbcb96b99956e22d0074dc7b5757069196e6ca1cd2829ae18284",
+  "quoteSha256": "a3fefa003b5b713e0efbbb95938e785244fdf45610c1213dcf0b828fd738c665",
+  "time": "2026-11-06T15:00:00Z",
+  "found": "2026-11-07T06:31:49Z"
+ },
+ {
+  "id": "man-w-new-haven-ave-at-s-wickham-rd",
+  "where": "W New Haven Ave at S Wickham Rd",
+  "partial": false,
+  "sourceHost": "westmelbourne.gov",
+  "sourceUrlSha256": "30fed4362e60bbcb96b99956e22d0074dc7b5757069196e6ca1cd2829ae18284",
+  "quoteSha256": "a3fefa003b5b713e0efbbb95938e785244fdf45610c1213dcf0b828fd738c665",
+  "time": "2026-11-06T15:00:00Z",
+  "found": "2026-11-07T06:31:49Z"
  }
 ]
