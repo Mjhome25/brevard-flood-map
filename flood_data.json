@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-07T11:31:25Z",
+ "generated": "2026-11-07T11:45:39Z",
  "errors": [],
  "items": [
   {
@@ -1916,76 +1916,6 @@
     "kind": "feed-dropped",
     "missingSince": "2026-11-06T11:45:45Z",
     "reopenedAt": "2026-11-06T12:00:59Z",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
-   },
-   "stillReported": []
-  },
-  {
-   "fullClosure": false,
-   "lanes": "Roadblock Right Lane For Construction Use Caution",
-   "lat": 28.1140311725955,
-   "layer": "FHP",
-   "lng": -80.7060513743008,
-   "reported": "2026-11-05T13:22:19Z",
-   "road": "I-95 SB [MM183]",
-   "roadShort": "I-95 Sb [MM183]",
-   "source": "FHP live CAD",
-   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-   "spot": "at Mm183",
-   "status": "caution",
-   "title": "Construction at I-95 SB [MM183] x[MM183] [MELBOURNE] (Roadblock Right Lane For Construction Use Caution)",
-   "where": "I-95 Sb [MM183] at Mm183",
-   "id": "brevard:fhp:20261105132219-029206f3",
-   "updated": "2026-11-05T13:22:19Z",
-   "lastReported": "2026-11-05T13:22:19Z",
-   "firstReported": "2026-11-05T13:22:19Z",
-   "verified": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "kind": "feed",
-    "publishedAt": "2026-11-05T13:22:19Z"
-   },
-   "reopenedAt": "2026-11-06T11:31:32Z",
-   "evidence": {
-    "agency": "Florida Highway Patrol",
-    "kind": "feed-dropped",
-    "missingSince": "2026-11-06T11:15:35Z",
-    "reopenedAt": "2026-11-06T11:31:32Z",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
-   },
-   "stillReported": []
-  },
-  {
-   "fullClosure": false,
-   "lanes": "Roadblock Left Lane And Center Due To Construction Use Caution",
-   "lat": 28.1423882345191,
-   "layer": "FHP",
-   "lng": -80.7059342042232,
-   "reported": "2026-11-05T13:15:41Z",
-   "road": "I-95 NB [MM185]",
-   "roadShort": "I-95 Nb [MM185]",
-   "source": "FHP live CAD",
-   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-   "spot": "at Mm185",
-   "status": "caution",
-   "title": "Construction at I-95 NB [MM185] x[MM185] [MELBOURNE] (Roadblock Left Lane And Center Due To Construction Use Caution)",
-   "where": "I-95 Nb [MM185] at Mm185",
-   "id": "brevard:fhp:20261105131541-8c8af929",
-   "updated": "2026-11-05T13:15:41Z",
-   "lastReported": "2026-11-05T13:15:41Z",
-   "firstReported": "2026-11-05T13:15:41Z",
-   "verified": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "kind": "feed",
-    "publishedAt": "2026-11-05T13:15:41Z"
-   },
-   "reopenedAt": "2026-11-06T11:31:32Z",
-   "evidence": {
-    "agency": "Florida Highway Patrol",
-    "kind": "feed-dropped",
-    "missingSince": "2026-11-06T11:15:35Z",
-    "reopenedAt": "2026-11-06T11:31:32Z",
     "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
    },
    "stillReported": []
