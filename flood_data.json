@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-07T01:15:37Z",
+ "generated": "2026-11-07T01:31:29Z",
  "errors": [],
  "items": [
   {
@@ -477,70 +477,6 @@
    "recheck": []
   },
   {
-   "dir": "EB",
-   "from": "Porcella Ave",
-   "fullClosure": true,
-   "lanes": "All lanes blocked",
-   "lat": 28.121605,
-   "layer": "Closures",
-   "line": [
-    [
-     28.121386,
-     -80.675733
-    ],
-    [
-     28.121392,
-     -80.675601
-    ],
-    [
-     28.121548,
-     -80.672671
-    ],
-    [
-     28.121606,
-     -80.671584
-    ],
-    [
-     28.121606,
-     -80.671577
-    ],
-    [
-     28.121631,
-     -80.667022
-    ]
-   ],
-   "lng": -80.671577,
-   "reported": "2026-11-07T00:32:00Z",
-   "road": "Sarno Rd",
-   "roadShort": "Sarno Rd",
-   "source": "FL511 (FDOT)",
-   "sourceUrl": "https://fl511.com",
-   "spot": "at Wickham Rd",
-   "status": "closed",
-   "title": "MVC on Sarno Rd East, at Wickham Rd. All lanes blocked",
-   "to": "Iroquois Ave",
-   "where": "Sarno Rd EB at Wickham Rd",
-   "id": "brevard:fl511:946256",
-   "updated": "2026-11-07T00:53:00Z",
-   "lastReported": "2026-11-07T00:53:00Z",
-   "firstReported": "2026-11-07T00:32:00Z",
-   "verified": {
-    "agency": "FL511 (FDOT)",
-    "url": "https://fl511.com",
-    "kind": "feed",
-    "publishedAt": "2026-11-07T00:32:00Z"
-   },
-   "awaitingOfficial": true,
-   "missingSince": "2026-11-07T01:15:44Z",
-   "recheck": [],
-   "noLongerListed": {
-    "agency": "FL511 (FDOT)",
-    "url": "https://fl511.com",
-    "since": "2026-11-07T01:15:44Z",
-    "wasClosed": true
-   }
-  },
-  {
    "approx": true,
    "city": "Melbourne",
    "from": "Palm Bay Rd NE",
@@ -642,6 +578,70 @@
   }
  ],
  "reopened": [
+  {
+   "dir": "EB",
+   "from": "Porcella Ave",
+   "fullClosure": true,
+   "lanes": "All lanes blocked",
+   "lat": 28.121605,
+   "layer": "Closures",
+   "line": [
+    [
+     28.121386,
+     -80.675733
+    ],
+    [
+     28.121392,
+     -80.675601
+    ],
+    [
+     28.121548,
+     -80.672671
+    ],
+    [
+     28.121606,
+     -80.671584
+    ],
+    [
+     28.121606,
+     -80.671577
+    ],
+    [
+     28.121631,
+     -80.667022
+    ]
+   ],
+   "lng": -80.671577,
+   "reported": "2026-11-07T00:32:00Z",
+   "road": "Sarno Rd",
+   "roadShort": "Sarno Rd",
+   "source": "FL511 (FDOT)",
+   "sourceUrl": "https://fl511.com",
+   "spot": "at Wickham Rd",
+   "status": "closed",
+   "title": "MVC on Sarno Rd East, at Wickham Rd. All lanes blocked",
+   "to": "Iroquois Ave",
+   "where": "Sarno Rd EB at Wickham Rd",
+   "id": "brevard:fl511:946256",
+   "updated": "2026-11-07T00:53:00Z",
+   "lastReported": "2026-11-07T00:53:00Z",
+   "firstReported": "2026-11-07T00:32:00Z",
+   "verified": {
+    "agency": "FL511 (FDOT)",
+    "url": "https://fl511.com",
+    "kind": "feed",
+    "publishedAt": "2026-11-07T00:32:00Z"
+   },
+   "reopenedAt": "2026-11-07T01:31:41Z",
+   "evidence": {
+    "agency": "FL511 (FDOT)",
+    "kind": "feed-dropped",
+    "missingSince": "2026-11-07T01:15:44Z",
+    "reopenedAt": "2026-11-07T01:31:41Z",
+    "url": "https://fl511.com"
+   },
+   "stillReported": []
+  },
   {
    "fullClosure": false,
    "lanes": "No Roadblock",
@@ -2528,14 +2528,14 @@
  },
  "alerts": [
   {
-   "id": "urn:oid:2.49.0.1.840.0.bfcd812c4f8a2de5fb134c715f22f3541d0e9783.001.1",
+   "id": "urn:oid:2.49.0.1.840.0.735c64a8c6fdb3be9d994b12914a2bb2fbabc70c.001.1",
    "event": "Flood Warning",
    "severity": "Severe",
-   "headline": "Flood Warning issued November 6 at 9:17AM EST by NWS Melbourne FL",
+   "headline": "Flood Warning issued November 6 at 8:21PM EST by NWS Melbourne FL",
    "areas": "Brevard, FL",
-   "effective": "2026-11-06T09:17:00-05:00",
-   "expires": "2026-11-06T23:00:00-05:00",
-   "description": "...The Flood Warning continues for the following rivers in Florida...\n\nSt Johns River Near Cocoa 9w affecting Brevard County.\n\n.Heavy rainfall will cause a continued rise through Moderate flood\nstage through the end of the week at the St. Johns River near Cocoa.\nThe river is then forecast to rise into Major flood stage this\nweekend and into early next week.\n\nFor the St. Johns River...including Cocoa...Major flooding is\nforecast.\n\n* WHAT...Moderate flooding is occurring and major flooding is\nforecast.\n\n* WHERE...St Johns River near Cocoa 9w.\n\n* WHEN...Until further notice.\n\n* IMPACTS...At 17.2 feet, Water enters homes along the St Johns River\nin the Lake Poinsett area west of Cocoa, also low lying homes in\nthe Silver Pines subdivision in Rockledge and the Shakespeare Park\narea of Cocoa. Providence Road area west of Cocoa becomes\nimpassable, cutting off access to homes in the Mullet Lane and Bass\nRoad area. Docks flooded and water in parking lot at Lone Cabbage\nFish Camp.\n\n* ADDITIONAL DETAILS...\n- At 8:15 AM EST Friday the stage was 16.9 feet.\n- Bankfull stage is 15.8 feet.\n- Recent Activity...The maximum river stage in the 24 hours ending\nat 8:15 AM EST Friday was 16.9 feet.\n- Fore",
+   "effective": "2026-11-06T20:21:00-05:00",
+   "expires": "2026-11-07T11:30:00-05:00",
+   "description": "...The Flood Warning continues for the following rivers in Florida...\n\nSt Johns River Near Cocoa 9w affecting Brevard County.\n\n.Exceptional rainfall over the headwaters of the St. Johns River has\ncaused Moderate flooding at the gauge west of Cocoa. The river is\nforecast to slowly rise into Major flood stage this weekend and into\nearly next week.\n\nFor the St. Johns River...including Cocoa...Major flooding is\nforecast.\n\n* WHAT...Moderate flooding is occurring and major flooding is\nforecast.\n\n* WHERE...St Johns River near Cocoa 9w.\n\n* WHEN...Until further notice.\n\n* IMPACTS...At 17.2 feet, Water enters homes along the St Johns River\nin the Lake Poinsett area west of Cocoa, also low lying homes in\nthe Silver Pines subdivision in Rockledge and the Shakespeare Park\narea of Cocoa. Providence Road area west of Cocoa becomes\nimpassable, cutting off access to homes in the Mullet Lane and Bass\nRoad area. Docks flooded and water in parking lot at Lone Cabbage\nFish Camp.\n\n* ADDITIONAL DETAILS...\n- At 7:15 PM EST Friday the stage was 16.9 feet.\n- Bankfull stage is 15.8 feet.\n- Recent Activity...The maximum river stage in the 24 hours ending\nat 7:15 PM EST Friday was 16.9 feet.\n- Forecast...The r",
    "geometry": {
     "type": "Polygon",
     "coordinates": [
@@ -2577,12 +2577,6 @@
   }
  ],
  "advisories": [
-  {
-   "agency": "National Weather Service Melbourne",
-   "time": "2026-11-06T01:25:00Z",
-   "text": "The flood warning for the St. Johns River near Cocoa in Brevard County is still in effect. At 7:15 PM Thursday the river stood at 16.9 feet, which is above the 16.0-foot flood stage and in moderate flood stage. NWS expects it to reach major flood stage late this week and stay there through the weekend and into early next week. Do not drive around barricades or through flooded roads near the river.",
-   "url": "https://www.defconlevel.com/alert/2026-11-06-nws-noaa-weather-flood-warning-issued-november-5-at-8-25pm-est-by-nws-melbourne-fl"
-  },
   {
    "agency": "National Weather Service Melbourne",
    "time": "2026-11-06T14:17:00Z",
