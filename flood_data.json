@@ -1,43 +1,7 @@
 {
- "generated": "2026-11-07T09:31:21Z",
+ "generated": "2026-11-07T09:45:42Z",
  "errors": [],
  "items": [
-  {
-   "fullClosure": false,
-   "lat": 27.9971486341678,
-   "layer": "FHP",
-   "lng": -80.629279376256,
-   "reported": "2026-11-07T07:36:03Z",
-   "road": "I-95 NB [MM173]",
-   "roadShort": "I-95 Nb [MM173]",
-   "source": "FHP live CAD",
-   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-   "spot": "at Mm173",
-   "status": "caution",
-   "title": "Roadway Debris/Object at I-95 NB [MM173] x[MM173] [PALM BAY]",
-   "where": "I-95 Nb [MM173] at Mm173",
-   "id": "brevard:fhp:20261107073603-ee62a3cc",
-   "updated": "2026-11-07T07:36:03Z",
-   "lastReported": "2026-11-07T07:36:03Z",
-   "firstReported": "2026-11-07T07:36:03Z",
-   "verified": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "kind": "feed",
-    "publishedAt": "2026-11-07T07:36:03Z"
-   },
-   "awaitingOfficial": true,
-   "missingSince": "2026-11-07T09:31:26Z",
-   "recheck": [
-    "source changed its lane description"
-   ],
-   "noLongerListed": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "since": "2026-11-07T09:31:26Z",
-    "wasClosed": false
-   }
-  },
   {
    "fullClosure": false,
    "lanes": "No Roadblock",
@@ -159,8 +123,8 @@
    "title": "MVC on I-95 South, at MM 177. Right shoulder blocked",
    "where": "I-95 SB at MM 177",
    "id": "brevard:fl511:946710",
-   "updated": "2026-11-07T08:55:00Z",
-   "lastReported": "2026-11-07T08:55:00Z",
+   "updated": "2026-11-07T09:36:00Z",
+   "lastReported": "2026-11-07T09:36:00Z",
    "firstReported": "2026-11-07T08:55:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
@@ -274,6 +238,40 @@
   }
  ],
  "reopened": [
+  {
+   "fullClosure": false,
+   "lat": 27.9971486341678,
+   "layer": "FHP",
+   "lng": -80.629279376256,
+   "reported": "2026-11-07T07:36:03Z",
+   "road": "I-95 NB [MM173]",
+   "roadShort": "I-95 Nb [MM173]",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "spot": "at Mm173",
+   "status": "caution",
+   "title": "Roadway Debris/Object at I-95 NB [MM173] x[MM173] [PALM BAY]",
+   "where": "I-95 Nb [MM173] at Mm173",
+   "id": "brevard:fhp:20261107073603-ee62a3cc",
+   "updated": "2026-11-07T07:36:03Z",
+   "lastReported": "2026-11-07T07:36:03Z",
+   "firstReported": "2026-11-07T07:36:03Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-07T07:36:03Z"
+   },
+   "reopenedAt": "2026-11-07T09:45:47Z",
+   "evidence": {
+    "agency": "Florida Highway Patrol",
+    "kind": "feed-dropped",
+    "missingSince": "2026-11-07T09:31:26Z",
+    "reopenedAt": "2026-11-07T09:45:47Z",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
+   },
+   "stillReported": []
+  },
   {
    "fullClosure": false,
    "lanes": "No Roadblock",
