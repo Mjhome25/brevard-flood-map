@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-07T13:00:54Z",
+ "generated": "2026-11-07T13:15:38Z",
  "errors": [],
  "items": [
   {
@@ -1846,41 +1846,6 @@
     "kind": "feed-dropped",
     "missingSince": "2026-11-06T13:31:32Z",
     "reopenedAt": "2026-11-06T13:45:44Z",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
-   },
-   "stillReported": []
-  },
-  {
-   "fullClosure": false,
-   "lanes": "Roadway Open",
-   "lat": 28.2302027580149,
-   "layer": "FHP",
-   "lng": -80.7212029524141,
-   "reported": "2026-11-06T11:51:44Z",
-   "road": "N WICKHAM RD",
-   "roadShort": "N Wickham Rd",
-   "source": "FHP live CAD",
-   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-   "spot": "at I-95",
-   "status": "caution",
-   "title": "MVC at N WICKHAM RD x[I-95] [MELBOURNE] (Roadway Open)",
-   "where": "N Wickham Rd at I-95",
-   "id": "brevard:fhp:20261106115144-5069f212",
-   "updated": "2026-11-06T11:51:44Z",
-   "lastReported": "2026-11-06T11:51:44Z",
-   "firstReported": "2026-11-06T11:51:44Z",
-   "verified": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "kind": "feed",
-    "publishedAt": "2026-11-06T11:51:44Z"
-   },
-   "reopenedAt": "2026-11-06T13:01:09Z",
-   "evidence": {
-    "agency": "Florida Highway Patrol",
-    "kind": "feed-dropped",
-    "missingSince": "2026-11-06T12:45:36Z",
-    "reopenedAt": "2026-11-06T13:01:09Z",
     "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
    },
    "stillReported": []
