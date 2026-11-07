@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-07T20:30:35Z",
+ "generated": "2026-11-07T20:45:33Z",
  "errors": [],
  "items": [
   {
@@ -77,45 +77,16 @@
     "publishedAt": "2026-11-07T06:33:35Z"
    },
    "awaitingOfficial": true,
-   "missingSince": null,
+   "missingSince": "2026-11-07T20:45:40Z",
    "recheck": [
     "source changed its lane description",
     "source shows reduced impact"
-   ]
-  },
-  {
-   "fullClosure": false,
-   "lanes": "Debris In Road - Use Caution",
-   "lat": 28.4605392007027,
-   "layer": "FHP",
-   "lng": -80.7635032623756,
-   "reported": "2026-11-07T06:49:00Z",
-   "road": "N COCOA BLVD [SB]",
-   "roadShort": "N Cocoa Blvd [Sb]",
-   "source": "FHP live CAD",
-   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-   "spot": "at Broadway Blvd",
-   "status": "caution",
-   "title": "Roadway Debris/Object at N COCOA BLVD [SB] x[BROADWAY BLVD] [COCOA] (Debris In Road - Use Caution)",
-   "where": "N Cocoa Blvd [Sb] at Broadway Blvd",
-   "id": "brevard:fhp:20261107064900-8f0c1ddb",
-   "updated": "2026-11-07T06:49:00Z",
-   "lastReported": "2026-11-07T06:49:00Z",
-   "firstReported": "2026-11-07T06:49:00Z",
-   "verified": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "kind": "feed",
-    "publishedAt": "2026-11-07T06:49:00Z"
-   },
-   "awaitingOfficial": true,
-   "missingSince": "2026-11-07T20:30:40Z",
-   "recheck": [],
+   ],
    "noLongerListed": {
     "agency": "Florida Highway Patrol",
     "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "since": "2026-11-07T20:30:40Z",
-    "wasClosed": false
+    "since": "2026-11-07T20:45:40Z",
+    "wasClosed": true
    }
   },
   {
@@ -249,6 +220,41 @@
   }
  ],
  "reopened": [
+  {
+   "fullClosure": false,
+   "lanes": "Debris In Road - Use Caution",
+   "lat": 28.4605392007027,
+   "layer": "FHP",
+   "lng": -80.7635032623756,
+   "reported": "2026-11-07T06:49:00Z",
+   "road": "N COCOA BLVD [SB]",
+   "roadShort": "N Cocoa Blvd [Sb]",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "spot": "at Broadway Blvd",
+   "status": "caution",
+   "title": "Roadway Debris/Object at N COCOA BLVD [SB] x[BROADWAY BLVD] [COCOA] (Debris In Road - Use Caution)",
+   "where": "N Cocoa Blvd [Sb] at Broadway Blvd",
+   "id": "brevard:fhp:20261107064900-8f0c1ddb",
+   "updated": "2026-11-07T06:49:00Z",
+   "lastReported": "2026-11-07T06:49:00Z",
+   "firstReported": "2026-11-07T06:49:00Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-07T06:49:00Z"
+   },
+   "reopenedAt": "2026-11-07T20:45:40Z",
+   "evidence": {
+    "agency": "Florida Highway Patrol",
+    "kind": "feed-dropped",
+    "missingSince": "2026-11-07T20:30:40Z",
+    "reopenedAt": "2026-11-07T20:45:40Z",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
+   },
+   "stillReported": []
+  },
   {
    "fullClosure": false,
    "lanes": "No Road Block",
