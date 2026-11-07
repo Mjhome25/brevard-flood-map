@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-07T19:15:33Z",
+ "generated": "2026-11-07T19:31:25Z",
  "errors": [],
  "items": [
   {
@@ -79,7 +79,8 @@
    "awaitingOfficial": true,
    "missingSince": null,
    "recheck": [
-    "source changed its lane description"
+    "source changed its lane description",
+    "source shows reduced impact"
    ]
   },
   {
@@ -139,76 +140,6 @@
    "awaitingOfficial": false,
    "missingSince": null,
    "recheck": []
-  },
-  {
-   "fullClosure": false,
-   "lanes": "Roadblock",
-   "lat": 28.3613239306105,
-   "layer": "FHP",
-   "lng": -80.7002893515691,
-   "reported": "2026-11-07T16:05:49Z",
-   "road": "MERRITT AVE E",
-   "roadShort": "Merritt Ave E",
-   "source": "FHP live CAD",
-   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-   "spot": "at N Courtenay Pkwy",
-   "status": "closed",
-   "title": "MVC W/Roadblock at MERRITT AVE E x[N COURTENAY PKWY] [MERRITT ISLAND] (Roadblock)",
-   "where": "Merritt Ave E at N Courtenay Pkwy",
-   "id": "brevard:fhp:20261107160549-546272bd",
-   "updated": "2026-11-07T16:05:49Z",
-   "lastReported": "2026-11-07T16:05:49Z",
-   "firstReported": "2026-11-07T16:05:49Z",
-   "verified": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "kind": "feed",
-    "publishedAt": "2026-11-07T16:05:49Z"
-   },
-   "awaitingOfficial": true,
-   "missingSince": "2026-11-07T19:15:39Z",
-   "recheck": [],
-   "noLongerListed": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "since": "2026-11-07T19:15:39Z",
-    "wasClosed": true
-   }
-  },
-  {
-   "fullClosure": false,
-   "lanes": "No Roadblock",
-   "lat": 28.1883607729469,
-   "layer": "FHP",
-   "lng": -80.70597118806,
-   "reported": "2026-11-07T17:46:32Z",
-   "road": "PINEDA CSWY",
-   "roadShort": "Pineda Cswy",
-   "source": "FHP live CAD",
-   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-   "spot": "at I-95 Nb Exit",
-   "status": "caution",
-   "title": "MVC at PINEDA CSWY x[I-95 NB EXIT] [MELBOURNE] (No Roadblock)",
-   "where": "Pineda Cswy at I-95 Nb Exit",
-   "id": "brevard:fhp:20261107174632-f5827c05",
-   "updated": "2026-11-07T17:46:32Z",
-   "lastReported": "2026-11-07T17:46:32Z",
-   "firstReported": "2026-11-07T17:46:32Z",
-   "verified": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "kind": "feed",
-    "publishedAt": "2026-11-07T17:46:32Z"
-   },
-   "awaitingOfficial": true,
-   "missingSince": "2026-11-07T19:15:39Z",
-   "recheck": [],
-   "noLongerListed": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "since": "2026-11-07T19:15:39Z",
-    "wasClosed": false
-   }
   },
   {
    "approx": true,
@@ -312,6 +243,76 @@
   }
  ],
  "reopened": [
+  {
+   "fullClosure": false,
+   "lanes": "Roadblock",
+   "lat": 28.3613239306105,
+   "layer": "FHP",
+   "lng": -80.7002893515691,
+   "reported": "2026-11-07T16:05:49Z",
+   "road": "MERRITT AVE E",
+   "roadShort": "Merritt Ave E",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "spot": "at N Courtenay Pkwy",
+   "status": "closed",
+   "title": "MVC W/Roadblock at MERRITT AVE E x[N COURTENAY PKWY] [MERRITT ISLAND] (Roadblock)",
+   "where": "Merritt Ave E at N Courtenay Pkwy",
+   "id": "brevard:fhp:20261107160549-546272bd",
+   "updated": "2026-11-07T16:05:49Z",
+   "lastReported": "2026-11-07T16:05:49Z",
+   "firstReported": "2026-11-07T16:05:49Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-07T16:05:49Z"
+   },
+   "reopenedAt": "2026-11-07T19:31:31Z",
+   "evidence": {
+    "agency": "Florida Highway Patrol",
+    "kind": "feed-dropped",
+    "missingSince": "2026-11-07T19:15:39Z",
+    "reopenedAt": "2026-11-07T19:31:31Z",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
+   },
+   "stillReported": []
+  },
+  {
+   "fullClosure": false,
+   "lanes": "No Roadblock",
+   "lat": 28.1883607729469,
+   "layer": "FHP",
+   "lng": -80.70597118806,
+   "reported": "2026-11-07T17:46:32Z",
+   "road": "PINEDA CSWY",
+   "roadShort": "Pineda Cswy",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "spot": "at I-95 Nb Exit",
+   "status": "caution",
+   "title": "MVC at PINEDA CSWY x[I-95 NB EXIT] [MELBOURNE] (No Roadblock)",
+   "where": "Pineda Cswy at I-95 Nb Exit",
+   "id": "brevard:fhp:20261107174632-f5827c05",
+   "updated": "2026-11-07T17:46:32Z",
+   "lastReported": "2026-11-07T17:46:32Z",
+   "firstReported": "2026-11-07T17:46:32Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-07T17:46:32Z"
+   },
+   "reopenedAt": "2026-11-07T19:31:31Z",
+   "evidence": {
+    "agency": "Florida Highway Patrol",
+    "kind": "feed-dropped",
+    "missingSince": "2026-11-07T19:15:39Z",
+    "reopenedAt": "2026-11-07T19:31:31Z",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
+   },
+   "stillReported": []
+  },
   {
    "fullClosure": false,
    "lanes": "Road Open",
@@ -1819,42 +1820,6 @@
     "missingSince": "2026-11-06T22:00:53Z",
     "reopenedAt": "2026-11-06T22:15:41Z",
     "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
-   },
-   "stillReported": []
-  },
-  {
-   "dir": "both directions",
-   "fullClosure": true,
-   "lanes": "All lanes closed",
-   "lat": 28.04231,
-   "layer": "Closures",
-   "lng": -80.6214301233189,
-   "reported": "2026-11-03T17:57:00Z",
-   "road": "Sunlake Rd",
-   "roadShort": "Sunlake Rd",
-   "source": "FL511 (FDOT)",
-   "sourceUrl": "https://fl511.com",
-   "spot": "At SR-507 Northbound",
-   "status": "flooded",
-   "title": "Flooding on Sunlake Rd Both Directions At SR-507 Northbound. All lanes closed.",
-   "where": "Sunlake Rd both directions At SR-507 Northbound",
-   "id": "brevard:fl511:939237",
-   "updated": "2026-11-06T13:05:00Z",
-   "lastReported": "2026-11-06T13:05:00Z",
-   "firstReported": "2026-11-03T17:58:00Z",
-   "verified": {
-    "agency": "FL511 (FDOT)",
-    "url": "https://fl511.com",
-    "kind": "feed",
-    "publishedAt": "2026-11-03T17:58:00Z"
-   },
-   "reopenedAt": "2026-11-06T19:15:42Z",
-   "evidence": {
-    "agency": "FL511 (FDOT)",
-    "kind": "feed-dropped",
-    "missingSince": "2026-11-06T19:00:59Z",
-    "reopenedAt": "2026-11-06T19:15:42Z",
-    "url": "https://fl511.com"
    },
    "stillReported": []
   }
