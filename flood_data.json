@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-07T08:00:36Z",
+ "generated": "2026-11-07T08:15:32Z",
  "errors": [],
  "items": [
   {
@@ -1829,77 +1829,6 @@
     "kind": "feed-dropped",
     "missingSince": "2026-11-06T11:15:35Z",
     "reopenedAt": "2026-11-06T11:31:32Z",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
-   },
-   "stillReported": []
-  },
-  {
-   "from": "River Park Blvd",
-   "fullClosure": false,
-   "lanes": "Unknown Roadblock",
-   "lat": 28.4994890206412,
-   "layer": "FHP",
-   "line": [
-    [
-     28.49837,
-     -80.781076
-    ],
-    [
-     28.498491,
-     -80.781119
-    ],
-    [
-     28.499497,
-     -80.781593
-    ],
-    [
-     28.499538,
-     -80.781612
-    ],
-    [
-     28.499928,
-     -80.781792
-    ],
-    [
-     28.500075,
-     -80.781858
-    ],
-    [
-     28.500163,
-     -80.781899
-    ],
-    [
-     28.501083,
-     -80.782325
-    ]
-   ],
-   "lng": -80.7816149244262,
-   "reported": "2026-11-05T16:23:22Z",
-   "road": "US-1",
-   "roadShort": "US-1",
-   "source": "FHP live CAD",
-   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-   "spot": "at Secluded Way",
-   "status": "closed",
-   "title": "MVC at US-1 x[SECLUDED WAY] [TITUSVILLE] (Unknown Roadblock)",
-   "to": "May Dr",
-   "where": "US-1 at Secluded Way",
-   "id": "brevard:fhp:20261105162322-7d0727c5",
-   "updated": "2026-11-05T16:23:22Z",
-   "lastReported": "2026-11-05T16:23:22Z",
-   "firstReported": "2026-11-05T16:23:22Z",
-   "verified": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "kind": "feed",
-    "publishedAt": "2026-11-05T16:23:22Z"
-   },
-   "reopenedAt": "2026-11-06T08:00:50Z",
-   "evidence": {
-    "agency": "Florida Highway Patrol",
-    "kind": "feed-dropped",
-    "missingSince": "2026-11-06T07:45:35Z",
-    "reopenedAt": "2026-11-06T08:00:50Z",
     "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
    },
    "stillReported": []
