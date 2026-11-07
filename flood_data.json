@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-07T04:31:03Z",
+ "generated": "2026-11-07T04:45:46Z",
  "errors": [],
  "items": [
   {
@@ -56,43 +56,14 @@
     "kind": "feed",
     "publishedAt": "2026-11-06T11:25:47Z"
    },
-   "awaitingOfficial": false,
-   "missingSince": null,
-   "recheck": []
-  },
-  {
-   "fullClosure": false,
-   "lanes": "Tire In Middle Of Exit Ramp",
-   "lat": 28.1138966754502,
-   "layer": "FHP",
-   "lng": -80.7059489329555,
-   "reported": "2026-11-06T15:52:10Z",
-   "road": "I-95 SB [EXIT RAMP]",
-   "roadShort": "I-95 Sb [Exit Ramp]",
-   "source": "FHP live CAD",
-   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-   "spot": "at Mm183",
-   "status": "caution",
-   "title": "Roadway Debris/Object at I-95 SB [EXIT RAMP] x[MM183] [MELBOURNE] (Tire In Middle Of Exit Ramp)",
-   "where": "I-95 Sb [Exit Ramp] at Mm183",
-   "id": "brevard:fhp:20261106155210-d73a53ab",
-   "updated": "2026-11-06T15:52:10Z",
-   "lastReported": "2026-11-06T15:52:10Z",
-   "firstReported": "2026-11-06T15:52:10Z",
-   "verified": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "kind": "feed",
-    "publishedAt": "2026-11-06T15:52:10Z"
-   },
    "awaitingOfficial": true,
-   "missingSince": "2026-11-07T04:31:06Z",
+   "missingSince": "2026-11-07T04:45:53Z",
    "recheck": [],
    "noLongerListed": {
     "agency": "Florida Highway Patrol",
     "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "since": "2026-11-07T04:31:06Z",
-    "wasClosed": false
+    "since": "2026-11-07T04:45:53Z",
+    "wasClosed": true
    }
   },
   {
@@ -143,9 +114,15 @@
     "kind": "feed",
     "publishedAt": "2026-11-07T02:06:00Z"
    },
-   "awaitingOfficial": false,
-   "missingSince": null,
-   "recheck": []
+   "awaitingOfficial": true,
+   "missingSince": "2026-11-07T04:45:53Z",
+   "recheck": [],
+   "noLongerListed": {
+    "agency": "FL511 (FDOT)",
+    "url": "https://fl511.com",
+    "since": "2026-11-07T04:45:53Z",
+    "wasClosed": false
+   }
   },
   {
    "approx": true,
@@ -249,6 +226,41 @@
   }
  ],
  "reopened": [
+  {
+   "fullClosure": false,
+   "lanes": "Tire In Middle Of Exit Ramp",
+   "lat": 28.1138966754502,
+   "layer": "FHP",
+   "lng": -80.7059489329555,
+   "reported": "2026-11-06T15:52:10Z",
+   "road": "I-95 SB [EXIT RAMP]",
+   "roadShort": "I-95 Sb [Exit Ramp]",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "spot": "at Mm183",
+   "status": "caution",
+   "title": "Roadway Debris/Object at I-95 SB [EXIT RAMP] x[MM183] [MELBOURNE] (Tire In Middle Of Exit Ramp)",
+   "where": "I-95 Sb [Exit Ramp] at Mm183",
+   "id": "brevard:fhp:20261106155210-d73a53ab",
+   "updated": "2026-11-06T15:52:10Z",
+   "lastReported": "2026-11-06T15:52:10Z",
+   "firstReported": "2026-11-06T15:52:10Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-06T15:52:10Z"
+   },
+   "reopenedAt": "2026-11-07T04:45:53Z",
+   "evidence": {
+    "agency": "Florida Highway Patrol",
+    "kind": "feed-dropped",
+    "missingSince": "2026-11-07T04:31:06Z",
+    "reopenedAt": "2026-11-07T04:45:53Z",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
+   },
+   "stillReported": []
+  },
   {
    "fullClosure": false,
    "lanes": "Roadway Open",
@@ -622,7 +634,7 @@
      "id": "brevard:fl511:946380",
      "where": "I-95 SB at MM 197",
      "source": "FL511 (FDOT)",
-     "since": null
+     "since": "2026-11-07T04:45:53Z"
     }
    ]
   },
@@ -797,7 +809,7 @@
      "id": "brevard:fl511:946380",
      "where": "I-95 SB at MM 197",
      "source": "FL511 (FDOT)",
-     "since": null
+     "since": "2026-11-07T04:45:53Z"
     }
    ]
   },
@@ -1762,14 +1774,7 @@
     "reopenedAt": "2026-11-06T11:31:32Z",
     "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
    },
-   "stillReported": [
-    {
-     "id": "brevard:fhp:20261106155210-d73a53ab",
-     "where": "I-95 Sb [Exit Ramp] at Mm183",
-     "source": "FHP live CAD",
-     "since": "2026-11-07T04:31:06Z"
-    }
-   ]
+   "stillReported": []
   },
   {
    "fullClosure": false,
@@ -2310,137 +2315,6 @@
     "kind": "feed-dropped",
     "missingSince": "2026-11-06T04:45:45Z",
     "reopenedAt": "2026-11-06T05:00:47Z",
-    "url": "https://fl511.com"
-   },
-   "stillReported": []
-  },
-  {
-   "dir": "NB",
-   "fullClosure": false,
-   "lanes": "Left lane blocked",
-   "lat": 28.17436,
-   "layer": "Incidents",
-   "line": [
-    [
-     28.17213,
-     -80.70577
-    ],
-    [
-     28.17423,
-     -80.70576
-    ],
-    [
-     28.17436,
-     -80.70576
-    ]
-   ],
-   "lng": -80.70578,
-   "reported": "2026-11-06T03:36:00Z",
-   "road": "I-95",
-   "roadShort": "I-95",
-   "source": "FL511 (FDOT)",
-   "sourceUrl": "https://fl511.com",
-   "spot": "at MM 187",
-   "status": "caution",
-   "title": "MVC on I-95 North, at MM 187. Left lane blocked",
-   "where": "I-95 NB at MM 187",
-   "id": "brevard:fl511:944317",
-   "updated": "2026-11-06T03:46:00Z",
-   "lastReported": "2026-11-06T03:46:00Z",
-   "firstReported": "2026-11-06T03:37:00Z",
-   "verified": {
-    "agency": "FL511 (FDOT)",
-    "url": "https://fl511.com",
-    "kind": "feed",
-    "publishedAt": "2026-11-06T03:37:00Z"
-   },
-   "reopenedAt": "2026-11-06T04:45:45Z",
-   "evidence": {
-    "agency": "FL511 (FDOT)",
-    "kind": "feed-dropped",
-    "missingSince": "2026-11-06T04:31:44Z",
-    "reopenedAt": "2026-11-06T04:45:45Z",
-    "url": "https://fl511.com"
-   },
-   "stillReported": []
-  },
-  {
-   "fullClosure": false,
-   "lanes": "Roadblock",
-   "lat": 28.1602072419851,
-   "layer": "FHP",
-   "lng": -80.7060011820662,
-   "reported": "2026-11-05T14:58:17Z",
-   "road": "I-95 NB [MM186]",
-   "roadShort": "I-95 Nb [MM186]",
-   "source": "FHP live CAD",
-   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-   "spot": "at Mm186",
-   "status": "closed",
-   "title": "MVC W/Roadblock at I-95 NB [MM186] x[MM186] [MELBOURNE] (Roadblock)",
-   "where": "I-95 Nb [MM186] at Mm186",
-   "id": "brevard:fhp:20261105145817-9ccfc09d",
-   "updated": "2026-11-05T14:58:17Z",
-   "lastReported": "2026-11-05T14:58:17Z",
-   "firstReported": "2026-11-05T14:58:17Z",
-   "verified": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "kind": "feed",
-    "publishedAt": "2026-11-05T14:58:17Z"
-   },
-   "reopenedAt": "2026-11-06T04:31:44Z",
-   "evidence": {
-    "agency": "Florida Highway Patrol",
-    "kind": "feed-dropped",
-    "missingSince": "2026-11-06T04:15:44Z",
-    "reopenedAt": "2026-11-06T04:31:44Z",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
-   },
-   "stillReported": []
-  },
-  {
-   "dir": "NB",
-   "fullClosure": false,
-   "lanes": "Right shoulder blocked",
-   "lat": 28.15987,
-   "layer": "Incidents",
-   "line": [
-    [
-     28.15955,
-     -80.70579
-    ],
-    [
-     28.15987,
-     -80.70579
-    ]
-   ],
-   "lng": -80.705823,
-   "reported": "2026-11-06T02:58:00Z",
-   "road": "I-95",
-   "roadShort": "I-95",
-   "source": "FL511 (FDOT)",
-   "sourceUrl": "https://fl511.com",
-   "spot": "at MM 186",
-   "status": "caution",
-   "title": "MVC on I-95 North, at MM 186. Right shoulder blocked",
-   "where": "I-95 NB at MM 186",
-   "id": "brevard:fl511:944265",
-   "updated": "2026-11-06T03:17:00Z",
-   "lastReported": "2026-11-06T03:17:00Z",
-   "firstReported": "2026-11-06T03:17:00Z",
-   "verified": {
-    "agency": "FL511 (FDOT)",
-    "url": "https://fl511.com",
-    "kind": "feed",
-    "publishedAt": "2026-11-06T03:17:00Z"
-   },
-   "reopenedAt": "2026-11-06T04:31:44Z",
-   "evidence": {
-    "agency": "FL511 (FDOT)",
-    "kind": "feed-dropped",
-    "missingSince": "2026-11-06T04:15:44Z",
-    "reopenedAt": "2026-11-06T04:31:44Z",
     "url": "https://fl511.com"
    },
    "stillReported": []
