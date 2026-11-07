@@ -1,42 +1,7 @@
 {
- "generated": "2026-11-07T01:00:57Z",
+ "generated": "2026-11-07T01:15:37Z",
  "errors": [],
  "items": [
-  {
-   "fullClosure": false,
-   "lanes": "No Roadblock",
-   "lat": 28.4758966490997,
-   "layer": "FHP",
-   "lng": -80.7808662297027,
-   "reported": "2026-11-06T10:21:35Z",
-   "road": "FAY BLVD",
-   "roadShort": "Fay Blvd",
-   "source": "FHP live CAD",
-   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-   "spot": "at Carole Ave",
-   "status": "caution",
-   "title": "MVC at FAY BLVD x[CAROLE AVE] [COCOA] (No Roadblock)",
-   "where": "Fay Blvd at Carole Ave",
-   "id": "brevard:fhp:20261106102135-dd927c7d",
-   "updated": "2026-11-06T10:21:35Z",
-   "lastReported": "2026-11-06T10:21:35Z",
-   "firstReported": "2026-11-06T10:21:35Z",
-   "verified": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "kind": "feed",
-    "publishedAt": "2026-11-06T10:21:35Z"
-   },
-   "awaitingOfficial": true,
-   "missingSince": "2026-11-07T01:01:02Z",
-   "recheck": [],
-   "noLongerListed": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "since": "2026-11-07T01:01:02Z",
-    "wasClosed": false
-   }
-  },
   {
    "fullClosure": false,
    "lanes": "Source said \"Roadway Open\" (2026-11-06 10:56 UTC); not a verified reopening",
@@ -259,6 +224,35 @@
    "recheck": []
   },
   {
+   "fullClosure": false,
+   "lanes": "Unknown Roadblock - Use Caution",
+   "lat": 27.8629492270531,
+   "layer": "FHP",
+   "lng": -80.4972299232042,
+   "reported": "2026-11-06T13:11:04Z",
+   "road": "HICKORY DR [3900]",
+   "roadShort": "Hickory Dr [3900]",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "spot": "at Central Ave",
+   "status": "closed",
+   "title": "MVC at HICKORY DR [3900] x[CENTRAL AVE] [SEBASTIAN] (Unknown Roadblock - Use Caution)",
+   "where": "Hickory Dr [3900] at Central Ave",
+   "id": "brevard:fhp:20261106131104-e9845b9b",
+   "updated": "2026-11-06T13:11:04Z",
+   "lastReported": "2026-11-06T13:11:04Z",
+   "firstReported": "2026-11-06T13:11:04Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-06T13:11:04Z"
+   },
+   "awaitingOfficial": false,
+   "missingSince": null,
+   "recheck": []
+  },
+  {
    "dir": "NB",
    "fullClosure": false,
    "lanes": "Right shoulder blocked",
@@ -375,8 +369,8 @@
    "title": "MVC on US-1 South, before SR-46. Right lane blocked",
    "where": "US-1 SB before SR-46",
    "id": "brevard:fl511:946195",
-   "updated": "2026-11-07T00:33:00Z",
-   "lastReported": "2026-11-07T00:33:00Z",
+   "updated": "2026-11-07T01:06:00Z",
+   "lastReported": "2026-11-07T01:06:00Z",
    "firstReported": "2026-11-06T23:57:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
@@ -469,8 +463,8 @@
    "to": "Highway 1",
    "where": "SR-46 EB at US-1",
    "id": "brevard:fl511:946208",
-   "updated": "2026-11-07T00:34:00Z",
-   "lastReported": "2026-11-07T00:34:00Z",
+   "updated": "2026-11-07T01:07:00Z",
+   "lastReported": "2026-11-07T01:07:00Z",
    "firstReported": "2026-11-07T00:01:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
@@ -536,9 +530,15 @@
     "kind": "feed",
     "publishedAt": "2026-11-07T00:32:00Z"
    },
-   "awaitingOfficial": false,
-   "missingSince": null,
-   "recheck": []
+   "awaitingOfficial": true,
+   "missingSince": "2026-11-07T01:15:44Z",
+   "recheck": [],
+   "noLongerListed": {
+    "agency": "FL511 (FDOT)",
+    "url": "https://fl511.com",
+    "since": "2026-11-07T01:15:44Z",
+    "wasClosed": true
+   }
   },
   {
    "approx": true,
@@ -642,6 +642,41 @@
   }
  ],
  "reopened": [
+  {
+   "fullClosure": false,
+   "lanes": "No Roadblock",
+   "lat": 28.4758966490997,
+   "layer": "FHP",
+   "lng": -80.7808662297027,
+   "reported": "2026-11-06T10:21:35Z",
+   "road": "FAY BLVD",
+   "roadShort": "Fay Blvd",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "spot": "at Carole Ave",
+   "status": "caution",
+   "title": "MVC at FAY BLVD x[CAROLE AVE] [COCOA] (No Roadblock)",
+   "where": "Fay Blvd at Carole Ave",
+   "id": "brevard:fhp:20261106102135-dd927c7d",
+   "updated": "2026-11-06T10:21:35Z",
+   "lastReported": "2026-11-06T10:21:35Z",
+   "firstReported": "2026-11-06T10:21:35Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-06T10:21:35Z"
+   },
+   "reopenedAt": "2026-11-07T01:15:44Z",
+   "evidence": {
+    "agency": "Florida Highway Patrol",
+    "kind": "feed-dropped",
+    "missingSince": "2026-11-07T01:01:02Z",
+    "reopenedAt": "2026-11-07T01:15:44Z",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
+   },
+   "stillReported": []
+  },
   {
    "fullClosure": false,
    "lanes": "No Roadblock",
