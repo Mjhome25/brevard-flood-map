@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-07T22:00:44Z",
+ "generated": "2026-11-07T22:15:43Z",
  "errors": [],
  "items": [
   {
@@ -26,77 +26,13 @@
     "kind": "feed",
     "publishedAt": "2026-11-07T09:01:12Z"
    },
-   "awaitingOfficial": false,
-   "missingSince": null,
-   "recheck": []
-  },
-  {
-   "fullClosure": false,
-   "lanes": "Debris In Right Lane - Use Caution",
-   "lat": 28.356210992534,
-   "layer": "FHP",
-   "lng": -80.7923188761835,
-   "reported": "2026-11-07T09:08:37Z",
-   "road": "I-95 SB [MM201]",
-   "roadShort": "I-95 Sb [MM201]",
-   "source": "FHP live CAD",
-   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-   "spot": "at Mm201",
-   "status": "caution",
-   "title": "Roadway Debris/Object at I-95 SB [MM201] x[MM201] [COCOA] (Debris In Right Lane - Use Caution)",
-   "where": "I-95 Sb [MM201] at Mm201",
-   "id": "brevard:fhp:20261107090837-bc29a303",
-   "updated": "2026-11-07T09:08:37Z",
-   "lastReported": "2026-11-07T09:08:37Z",
-   "firstReported": "2026-11-07T09:08:37Z",
-   "verified": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "kind": "feed",
-    "publishedAt": "2026-11-07T09:08:37Z"
-   },
    "awaitingOfficial": true,
-   "missingSince": "2026-11-07T22:00:49Z",
+   "missingSince": "2026-11-07T22:15:49Z",
    "recheck": [],
    "noLongerListed": {
     "agency": "Florida Highway Patrol",
     "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "since": "2026-11-07T22:00:49Z",
-    "wasClosed": false
-   }
-  },
-  {
-   "fullClosure": false,
-   "lanes": "No Roadblock",
-   "lat": 28.4041223583663,
-   "layer": "FHP",
-   "lng": -80.7057813970916,
-   "reported": "2026-11-07T09:29:39Z",
-   "road": "N COURTENAY PKWY",
-   "roadShort": "N Courtenay Pkwy",
-   "source": "FHP live CAD",
-   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-   "spot": "at Sr-528",
-   "status": "caution",
-   "title": "MVC at N COURTENAY PKWY x[SR-528] [MERRITT ISLAND] (No Roadblock)",
-   "where": "N Courtenay Pkwy at Sr-528",
-   "id": "brevard:fhp:20261107092939-587205c6",
-   "updated": "2026-11-07T09:29:39Z",
-   "lastReported": "2026-11-07T09:29:39Z",
-   "firstReported": "2026-11-07T09:29:39Z",
-   "verified": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "kind": "feed",
-    "publishedAt": "2026-11-07T09:29:39Z"
-   },
-   "awaitingOfficial": true,
-   "missingSince": "2026-11-07T22:00:49Z",
-   "recheck": [],
-   "noLongerListed": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "since": "2026-11-07T22:00:49Z",
+    "since": "2026-11-07T22:15:49Z",
     "wasClosed": false
    }
   },
@@ -202,6 +138,76 @@
   }
  ],
  "reopened": [
+  {
+   "fullClosure": false,
+   "lanes": "Debris In Right Lane - Use Caution",
+   "lat": 28.356210992534,
+   "layer": "FHP",
+   "lng": -80.7923188761835,
+   "reported": "2026-11-07T09:08:37Z",
+   "road": "I-95 SB [MM201]",
+   "roadShort": "I-95 Sb [MM201]",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "spot": "at Mm201",
+   "status": "caution",
+   "title": "Roadway Debris/Object at I-95 SB [MM201] x[MM201] [COCOA] (Debris In Right Lane - Use Caution)",
+   "where": "I-95 Sb [MM201] at Mm201",
+   "id": "brevard:fhp:20261107090837-bc29a303",
+   "updated": "2026-11-07T09:08:37Z",
+   "lastReported": "2026-11-07T09:08:37Z",
+   "firstReported": "2026-11-07T09:08:37Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-07T09:08:37Z"
+   },
+   "reopenedAt": "2026-11-07T22:15:49Z",
+   "evidence": {
+    "agency": "Florida Highway Patrol",
+    "kind": "feed-dropped",
+    "missingSince": "2026-11-07T22:00:49Z",
+    "reopenedAt": "2026-11-07T22:15:49Z",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
+   },
+   "stillReported": []
+  },
+  {
+   "fullClosure": false,
+   "lanes": "No Roadblock",
+   "lat": 28.4041223583663,
+   "layer": "FHP",
+   "lng": -80.7057813970916,
+   "reported": "2026-11-07T09:29:39Z",
+   "road": "N COURTENAY PKWY",
+   "roadShort": "N Courtenay Pkwy",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "spot": "at Sr-528",
+   "status": "caution",
+   "title": "MVC at N COURTENAY PKWY x[SR-528] [MERRITT ISLAND] (No Roadblock)",
+   "where": "N Courtenay Pkwy at Sr-528",
+   "id": "brevard:fhp:20261107092939-587205c6",
+   "updated": "2026-11-07T09:29:39Z",
+   "lastReported": "2026-11-07T09:29:39Z",
+   "firstReported": "2026-11-07T09:29:39Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-07T09:29:39Z"
+   },
+   "reopenedAt": "2026-11-07T22:15:49Z",
+   "evidence": {
+    "agency": "Florida Highway Patrol",
+    "kind": "feed-dropped",
+    "missingSince": "2026-11-07T22:00:49Z",
+    "reopenedAt": "2026-11-07T22:15:49Z",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
+   },
+   "stillReported": []
+  },
   {
    "fullClosure": false,
    "lanes": "Road Block",
@@ -1904,76 +1910,6 @@
     "missingSince": "2026-11-06T22:15:41Z",
     "reopenedAt": "2026-11-06T22:31:35Z",
     "url": "https://fl511.com"
-   },
-   "stillReported": []
-  },
-  {
-   "fullClosure": false,
-   "lanes": "Roadway Open",
-   "lat": 28.2093592007027,
-   "layer": "FHP",
-   "lng": -80.6063343604387,
-   "reported": "2026-11-06T07:09:52Z",
-   "road": "S PATRICK DR",
-   "roadShort": "S Patrick Dr",
-   "source": "FHP live CAD",
-   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-   "spot": "at Pineda Cswy",
-   "status": "caution",
-   "title": "MVC at S PATRICK DR x[PINEDA CSWY] [SATELLITE BEACH] (Roadway Open)",
-   "where": "S Patrick Dr at Pineda Cswy",
-   "id": "brevard:fhp:20261106070952-460732cf",
-   "updated": "2026-11-06T07:09:52Z",
-   "lastReported": "2026-11-06T07:09:52Z",
-   "firstReported": "2026-11-06T07:09:52Z",
-   "verified": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "kind": "feed",
-    "publishedAt": "2026-11-06T07:09:52Z"
-   },
-   "reopenedAt": "2026-11-06T22:15:41Z",
-   "evidence": {
-    "agency": "Florida Highway Patrol",
-    "kind": "feed-dropped",
-    "missingSince": "2026-11-06T22:00:53Z",
-    "reopenedAt": "2026-11-06T22:15:41Z",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
-   },
-   "stillReported": []
-  },
-  {
-   "fullClosure": false,
-   "lanes": "No Road Block",
-   "lat": 28.635806455863,
-   "layer": "FHP",
-   "lng": -80.8332792721512,
-   "reported": "2026-11-06T09:06:28Z",
-   "road": "LAGRANGE RD",
-   "roadShort": "Lagrange Rd",
-   "source": "FHP live CAD",
-   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-   "spot": "at Old Dixie Hwy",
-   "status": "caution",
-   "title": "MVC at LAGRANGE RD x[OLD DIXIE HWY] [TITUSVILLE] (No Road Block)",
-   "where": "Lagrange Rd at Old Dixie Hwy",
-   "id": "brevard:fhp:20261106090628-974ecbe7",
-   "updated": "2026-11-06T09:06:28Z",
-   "lastReported": "2026-11-06T09:06:28Z",
-   "firstReported": "2026-11-06T09:06:28Z",
-   "verified": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "kind": "feed",
-    "publishedAt": "2026-11-06T09:06:28Z"
-   },
-   "reopenedAt": "2026-11-06T22:15:41Z",
-   "evidence": {
-    "agency": "Florida Highway Patrol",
-    "kind": "feed-dropped",
-    "missingSince": "2026-11-06T22:00:53Z",
-    "reopenedAt": "2026-11-06T22:15:41Z",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
    },
    "stillReported": []
   }
