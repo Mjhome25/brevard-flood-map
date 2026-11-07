@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-07T17:31:41Z",
+ "generated": "2026-11-07T17:45:32Z",
  "errors": [],
  "items": [
   {
@@ -30,41 +30,6 @@
    "awaitingOfficial": false,
    "missingSince": null,
    "recheck": []
-  },
-  {
-   "fullClosure": false,
-   "lanes": "Source said \"Road Open\" (2026-11-07 15:50 UTC); not a verified reopening",
-   "lat": 27.9734321651296,
-   "layer": "FHP",
-   "lng": -80.6148704895727,
-   "reported": "2026-11-07T15:50:35Z",
-   "road": "I-95 SB [MM170.5]",
-   "roadShort": "I-95 Sb [MM170.5]",
-   "source": "FHP live CAD",
-   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-   "spot": "at Mm171",
-   "status": "caution",
-   "title": "MVC at I-95 SB [MM170.5] x[MM171] [MALABAR] (Road Open)",
-   "where": "I-95 Sb [MM170.5] at Mm171",
-   "id": "brevard:fhp:20261107155035-2ca1454c",
-   "updated": "2026-11-07T15:50:35Z",
-   "lastReported": "2026-11-07T15:50:35Z",
-   "firstReported": "2026-11-07T15:50:35Z",
-   "verified": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "kind": "feed",
-    "publishedAt": "2026-11-07T15:50:35Z"
-   },
-   "awaitingOfficial": true,
-   "missingSince": "2026-11-07T17:31:47Z",
-   "recheck": [],
-   "noLongerListed": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "since": "2026-11-07T17:31:47Z",
-    "wasClosed": false
-   }
   },
   {
    "fullClosure": false,
@@ -197,6 +162,41 @@
   }
  ],
  "reopened": [
+  {
+   "fullClosure": false,
+   "lanes": "Road Open",
+   "lat": 27.9734321651296,
+   "layer": "FHP",
+   "lng": -80.6148704895727,
+   "reported": "2026-11-07T15:50:35Z",
+   "road": "I-95 SB [MM170.5]",
+   "roadShort": "I-95 Sb [MM170.5]",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "spot": "at Mm171",
+   "status": "caution",
+   "title": "MVC at I-95 SB [MM170.5] x[MM171] [MALABAR] (Road Open)",
+   "where": "I-95 Sb [MM170.5] at Mm171",
+   "id": "brevard:fhp:20261107155035-2ca1454c",
+   "updated": "2026-11-07T15:50:35Z",
+   "lastReported": "2026-11-07T15:50:35Z",
+   "firstReported": "2026-11-07T15:50:35Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-07T15:50:35Z"
+   },
+   "reopenedAt": "2026-11-07T17:45:37Z",
+   "evidence": {
+    "agency": "Florida Highway Patrol",
+    "kind": "feed-dropped",
+    "missingSince": "2026-11-07T17:31:47Z",
+    "reopenedAt": "2026-11-07T17:45:37Z",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
+   },
+   "stillReported": []
+  },
   {
    "fullClosure": false,
    "lanes": "Road Open",
