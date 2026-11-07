@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-07T02:31:29Z",
+ "generated": "2026-11-07T02:45:43Z",
  "errors": [],
  "items": [
   {
@@ -267,62 +267,14 @@
     "publishedAt": "2026-11-06T22:35:00Z"
    },
    "awaitingOfficial": true,
-   "missingSince": null,
+   "missingSince": "2026-11-07T02:45:49Z",
    "recheck": [
     "source changed its lane description"
-   ]
-  },
-  {
-   "dir": "SB",
-   "fullClosure": false,
-   "lanes": "Right shoulder blocked",
-   "lat": 28.035375,
-   "layer": "Incidents",
-   "line": [
-    [
-     28.03538,
-     -80.65683
-    ],
-    [
-     28.03527,
-     -80.65675
-    ],
-    [
-     28.03323,
-     -80.65532
-    ],
-    [
-     28.03206,
-     -80.6545
-    ]
    ],
-   "lng": -80.656836,
-   "reported": "2026-11-06T23:00:00Z",
-   "road": "I-95",
-   "roadShort": "I-95",
-   "source": "FL511 (FDOT)",
-   "sourceUrl": "https://fl511.com",
-   "spot": "before MM 176/CR-516",
-   "status": "caution",
-   "title": "MVC on I-95 South, before MM 176/CR-516. Right shoulder blocked",
-   "where": "I-95 SB before MM 176/CR-516",
-   "id": "brevard:fl511:946196",
-   "updated": "2026-11-07T01:53:00Z",
-   "lastReported": "2026-11-07T01:53:00Z",
-   "firstReported": "2026-11-06T23:57:00Z",
-   "verified": {
-    "agency": "FL511 (FDOT)",
-    "url": "https://fl511.com",
-    "kind": "feed",
-    "publishedAt": "2026-11-06T23:57:00Z"
-   },
-   "awaitingOfficial": true,
-   "missingSince": "2026-11-07T02:31:36Z",
-   "recheck": [],
    "noLongerListed": {
     "agency": "FL511 (FDOT)",
     "url": "https://fl511.com",
-    "since": "2026-11-07T02:31:36Z",
+    "since": "2026-11-07T02:45:49Z",
     "wasClosed": false
    }
   },
@@ -480,6 +432,60 @@
   }
  ],
  "reopened": [
+  {
+   "dir": "SB",
+   "fullClosure": false,
+   "lanes": "Right shoulder blocked",
+   "lat": 28.035375,
+   "layer": "Incidents",
+   "line": [
+    [
+     28.03538,
+     -80.65683
+    ],
+    [
+     28.03527,
+     -80.65675
+    ],
+    [
+     28.03323,
+     -80.65532
+    ],
+    [
+     28.03206,
+     -80.6545
+    ]
+   ],
+   "lng": -80.656836,
+   "reported": "2026-11-06T23:00:00Z",
+   "road": "I-95",
+   "roadShort": "I-95",
+   "source": "FL511 (FDOT)",
+   "sourceUrl": "https://fl511.com",
+   "spot": "before MM 176/CR-516",
+   "status": "caution",
+   "title": "MVC on I-95 South, before MM 176/CR-516. Right shoulder blocked",
+   "where": "I-95 SB before MM 176/CR-516",
+   "id": "brevard:fl511:946196",
+   "updated": "2026-11-07T01:53:00Z",
+   "lastReported": "2026-11-07T01:53:00Z",
+   "firstReported": "2026-11-06T23:57:00Z",
+   "verified": {
+    "agency": "FL511 (FDOT)",
+    "url": "https://fl511.com",
+    "kind": "feed",
+    "publishedAt": "2026-11-06T23:57:00Z"
+   },
+   "reopenedAt": "2026-11-07T02:45:49Z",
+   "evidence": {
+    "agency": "FL511 (FDOT)",
+    "kind": "feed-dropped",
+    "missingSince": "2026-11-07T02:31:36Z",
+    "reopenedAt": "2026-11-07T02:45:49Z",
+    "url": "https://fl511.com"
+   },
+   "stillReported": []
+  },
   {
    "dir": "NB",
    "fullClosure": false,
@@ -884,7 +890,7 @@
      "id": "brevard:fl511:946057",
      "where": "I-95 NB at MM 194",
      "source": "FL511 (FDOT)",
-     "since": null
+     "since": "2026-11-07T02:45:49Z"
     }
    ]
   },
@@ -2541,40 +2547,6 @@
     "kind": "feed-dropped",
     "missingSince": "2026-11-06T02:45:42Z",
     "reopenedAt": "2026-11-06T03:00:59Z",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
-   },
-   "stillReported": []
-  },
-  {
-   "fullClosure": false,
-   "lanes": "No Roadblock",
-   "lat": 28.2134693939394,
-   "layer": "FHP",
-   "lng": -80.6722949650907,
-   "reported": "2026-11-05T12:06:25Z",
-   "road": "6300 N WICKHAM RD [MELBOURNE]",
-   "roadShort": "6300 N Wickham Rd [Melbourne]",
-   "source": "FHP live CAD",
-   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-   "status": "caution",
-   "title": "MVC at 6300 N WICKHAM RD [MELBOURNE] (No Roadblock)",
-   "where": "6300 N Wickham Rd [Melbourne]",
-   "id": "brevard:fhp:20261105120625-90ac3b9f",
-   "updated": "2026-11-05T12:06:25Z",
-   "lastReported": "2026-11-05T12:06:25Z",
-   "firstReported": "2026-11-05T12:06:25Z",
-   "verified": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "kind": "feed",
-    "publishedAt": "2026-11-05T12:06:25Z"
-   },
-   "reopenedAt": "2026-11-06T02:31:52Z",
-   "evidence": {
-    "agency": "Florida Highway Patrol",
-    "kind": "feed-dropped",
-    "missingSince": "2026-11-06T02:15:45Z",
-    "reopenedAt": "2026-11-06T02:31:52Z",
     "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
    },
    "stillReported": []
