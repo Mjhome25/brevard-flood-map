@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-07T00:31:29Z",
+ "generated": "2026-11-07T00:45:41Z",
  "errors": [],
  "items": [
   {
@@ -56,9 +56,15 @@
     "kind": "feed",
     "publishedAt": "2026-11-06T10:34:18Z"
    },
-   "awaitingOfficial": false,
-   "missingSince": null,
-   "recheck": []
+   "awaitingOfficial": true,
+   "missingSince": "2026-11-07T00:45:46Z",
+   "recheck": [],
+   "noLongerListed": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "since": "2026-11-07T00:45:46Z",
+    "wasClosed": false
+   }
   },
   {
    "fullClosure": false,
@@ -217,9 +223,15 @@
     "kind": "feed",
     "publishedAt": "2026-11-06T11:54:12Z"
    },
-   "awaitingOfficial": false,
-   "missingSince": null,
-   "recheck": []
+   "awaitingOfficial": true,
+   "missingSince": "2026-11-07T00:45:46Z",
+   "recheck": [],
+   "noLongerListed": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "since": "2026-11-07T00:45:46Z",
+    "wasClosed": false
+   }
   },
   {
    "from": "Star Rush Dr",
@@ -427,8 +439,8 @@
    "title": "MVC on US-1 South, before SR-46. Right lane blocked",
    "where": "US-1 SB before SR-46",
    "id": "brevard:fl511:946195",
-   "updated": "2026-11-06T23:57:00Z",
-   "lastReported": "2026-11-06T23:57:00Z",
+   "updated": "2026-11-07T00:33:00Z",
+   "lastReported": "2026-11-07T00:33:00Z",
    "firstReported": "2026-11-06T23:57:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
@@ -521,14 +533,72 @@
    "to": "Highway 1",
    "where": "SR-46 EB at US-1",
    "id": "brevard:fl511:946208",
-   "updated": "2026-11-07T00:01:00Z",
-   "lastReported": "2026-11-07T00:01:00Z",
+   "updated": "2026-11-07T00:34:00Z",
+   "lastReported": "2026-11-07T00:34:00Z",
    "firstReported": "2026-11-07T00:01:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
     "url": "https://fl511.com",
     "kind": "feed",
     "publishedAt": "2026-11-07T00:01:00Z"
+   },
+   "awaitingOfficial": false,
+   "missingSince": null,
+   "recheck": []
+  },
+  {
+   "dir": "EB",
+   "from": "Porcella Ave",
+   "fullClosure": true,
+   "lanes": "All lanes blocked",
+   "lat": 28.121605,
+   "layer": "Closures",
+   "line": [
+    [
+     28.121386,
+     -80.675733
+    ],
+    [
+     28.121392,
+     -80.675601
+    ],
+    [
+     28.121548,
+     -80.672671
+    ],
+    [
+     28.121606,
+     -80.671584
+    ],
+    [
+     28.121606,
+     -80.671577
+    ],
+    [
+     28.121631,
+     -80.667022
+    ]
+   ],
+   "lng": -80.671577,
+   "reported": "2026-11-07T00:32:00Z",
+   "road": "Sarno Rd",
+   "roadShort": "Sarno Rd",
+   "source": "FL511 (FDOT)",
+   "sourceUrl": "https://fl511.com",
+   "spot": "at Wickham Rd",
+   "status": "closed",
+   "title": "MVC on Sarno Rd East, at Wickham Rd. All lanes blocked",
+   "to": "Iroquois Ave",
+   "where": "Sarno Rd EB at Wickham Rd",
+   "id": "brevard:fl511:946256",
+   "updated": "2026-11-07T00:32:00Z",
+   "lastReported": "2026-11-07T00:32:00Z",
+   "firstReported": "2026-11-07T00:32:00Z",
+   "verified": {
+    "agency": "FL511 (FDOT)",
+    "url": "https://fl511.com",
+    "kind": "feed",
+    "publishedAt": "2026-11-07T00:32:00Z"
    },
    "awaitingOfficial": false,
    "missingSince": null,
@@ -2436,131 +2506,6 @@
     "missingSince": "2026-11-06T00:45:43Z",
     "reopenedAt": "2026-11-06T01:00:55Z",
     "url": "https://fl511.com"
-   },
-   "stillReported": []
-  },
-  {
-   "fullClosure": false,
-   "lanes": "No Roadblock",
-   "lat": 28.2128211594203,
-   "layer": "FHP",
-   "lng": -80.5977405713282,
-   "reported": "2026-11-05T12:14:19Z",
-   "road": "PINEDA CSWY",
-   "roadShort": "Pineda Cswy",
-   "source": "FHP live CAD",
-   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-   "spot": "at Sr-A1A",
-   "status": "caution",
-   "title": "MVC at PINEDA CSWY x[SR-A1A] [PATRICK AIR FORCE] (No Roadblock)",
-   "where": "Pineda Cswy at Sr-A1A",
-   "id": "brevard:fhp:20261105121419-33517b53",
-   "updated": "2026-11-05T12:14:19Z",
-   "lastReported": "2026-11-05T12:14:19Z",
-   "firstReported": "2026-11-05T12:14:19Z",
-   "verified": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "kind": "feed",
-    "publishedAt": "2026-11-05T12:14:19Z"
-   },
-   "reopenedAt": "2026-11-06T00:45:43Z",
-   "evidence": {
-    "agency": "Florida Highway Patrol",
-    "kind": "feed-dropped",
-    "missingSince": "2026-11-06T00:31:41Z",
-    "reopenedAt": "2026-11-06T00:45:43Z",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
-   },
-   "stillReported": []
-  },
-  {
-   "from": "Artemis Blvd",
-   "fullClosure": false,
-   "lanes": "Roadblock",
-   "lat": 28.3832462889767,
-   "layer": "FHP",
-   "line": [
-    [
-     28.381552,
-     -80.702587
-    ],
-    [
-     28.383236,
-     -80.702718
-    ],
-    [
-     28.383369,
-     -80.702728
-    ],
-    [
-     28.385168,
-     -80.70279
-    ]
-   ],
-   "lng": -80.7025426082624,
-   "reported": "2026-11-05T09:51:42Z",
-   "road": "N COURTENAY PKWY",
-   "roadShort": "N Courtenay Pkwy",
-   "source": "FHP live CAD",
-   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-   "spot": "at Alma Blvd",
-   "status": "closed",
-   "title": "MVC W/Roadblock at N COURTENAY PKWY x[ALMA BLVD] [MERRITT ISLAND] (Roadblock)",
-   "to": "Diana Blvd",
-   "where": "N Courtenay Pkwy at Alma Blvd",
-   "id": "brevard:fhp:20261105095142-94d6684c",
-   "updated": "2026-11-05T09:51:42Z",
-   "lastReported": "2026-11-05T09:51:42Z",
-   "firstReported": "2026-11-05T09:51:42Z",
-   "verified": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "kind": "feed",
-    "publishedAt": "2026-11-05T09:51:42Z"
-   },
-   "reopenedAt": "2026-11-06T00:31:41Z",
-   "evidence": {
-    "agency": "Florida Highway Patrol",
-    "kind": "feed-dropped",
-    "missingSince": "2026-11-06T00:15:41Z",
-    "reopenedAt": "2026-11-06T00:31:41Z",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
-   },
-   "stillReported": []
-  },
-  {
-   "fullClosure": false,
-   "lanes": "Roadblock",
-   "lat": 28.4533837110233,
-   "layer": "FHP",
-   "lng": -80.8211822837767,
-   "reported": "2026-11-05T11:25:04Z",
-   "road": "I-95 NB [MM208]",
-   "roadShort": "I-95 Nb [MM208]",
-   "source": "FHP live CAD",
-   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-   "spot": "at Mm208",
-   "status": "closed",
-   "title": "Disabled Vehicle In Roadway at I-95 NB [MM208] x[MM208] [COCOA] (Roadblock)",
-   "where": "I-95 Nb [MM208] at Mm208",
-   "id": "brevard:fhp:20261105112504-24441ccf",
-   "updated": "2026-11-05T11:25:04Z",
-   "lastReported": "2026-11-05T11:25:04Z",
-   "firstReported": "2026-11-05T11:25:04Z",
-   "verified": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "kind": "feed",
-    "publishedAt": "2026-11-05T11:25:04Z"
-   },
-   "reopenedAt": "2026-11-06T00:31:41Z",
-   "evidence": {
-    "agency": "Florida Highway Patrol",
-    "kind": "feed-dropped",
-    "missingSince": "2026-11-06T00:15:41Z",
-    "reopenedAt": "2026-11-06T00:31:41Z",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
    },
    "stillReported": []
   }
