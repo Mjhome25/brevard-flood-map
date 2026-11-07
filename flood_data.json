@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-07T23:00:44Z",
+ "generated": "2026-11-07T23:15:34Z",
  "errors": [],
  "items": [
   {
@@ -1699,109 +1699,6 @@
     "kind": "feed-dropped",
     "missingSince": "2026-11-06T23:15:40Z",
     "reopenedAt": "2026-11-06T23:31:35Z",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
-   },
-   "stillReported": []
-  },
-  {
-   "fullClosure": false,
-   "lat": 28.4538117654809,
-   "layer": "FHP",
-   "lng": -80.8058469192148,
-   "reported": "2026-11-06T10:37:44Z",
-   "road": "5005 PORT ST JOHN PKWY [COCOA]",
-   "roadShort": "5005 Port St John Pkwy [Cocoa]",
-   "source": "FHP live CAD",
-   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-   "status": "caution",
-   "title": "Patrol CarMVC at 5005 PORT ST JOHN PKWY [COCOA]",
-   "where": "5005 Port St John Pkwy [Cocoa]",
-   "id": "brevard:fhp:20261106103744-ce7a1d6e",
-   "updated": "2026-11-06T10:37:44Z",
-   "lastReported": "2026-11-06T10:37:44Z",
-   "firstReported": "2026-11-06T10:37:44Z",
-   "verified": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "kind": "feed",
-    "publishedAt": "2026-11-06T10:37:44Z"
-   },
-   "reopenedAt": "2026-11-06T23:15:40Z",
-   "evidence": {
-    "agency": "Florida Highway Patrol",
-    "kind": "feed-dropped",
-    "missingSince": "2026-11-06T23:01:04Z",
-    "reopenedAt": "2026-11-06T23:15:40Z",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
-   },
-   "stillReported": []
-  },
-  {
-   "fullClosure": false,
-   "lanes": "No Roadblock",
-   "lat": 28.1418309793588,
-   "layer": "FHP",
-   "lng": -80.5820176748247,
-   "reported": "2026-11-06T09:56:41Z",
-   "road": "SR-A1A",
-   "roadShort": "SR-A1A",
-   "source": "FHP live CAD",
-   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-   "spot": "at Golden Beach Blvd",
-   "status": "caution",
-   "title": "MVC at SR-A1A x[GOLDEN BEACH BLVD] [SATELLITE BEACH] (No Roadblock)",
-   "where": "SR-A1A at Golden Beach Blvd",
-   "id": "brevard:fhp:20261106095641-c7a03b8d",
-   "updated": "2026-11-06T09:56:41Z",
-   "lastReported": "2026-11-06T09:56:41Z",
-   "firstReported": "2026-11-06T09:56:41Z",
-   "verified": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "kind": "feed",
-    "publishedAt": "2026-11-06T09:56:41Z"
-   },
-   "reopenedAt": "2026-11-06T23:01:04Z",
-   "evidence": {
-    "agency": "Florida Highway Patrol",
-    "kind": "feed-dropped",
-    "missingSince": "2026-11-06T22:45:52Z",
-    "reopenedAt": "2026-11-06T23:01:04Z",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
-   },
-   "stillReported": []
-  },
-  {
-   "fullClosure": false,
-   "lanes": "Road Open",
-   "lat": 28.3568892270531,
-   "layer": "FHP",
-   "lng": -80.6955542362583,
-   "reported": "2026-11-06T09:32:17Z",
-   "road": "MERRITT ISLAND CSWY E",
-   "roadShort": "Merritt Island Cswy E",
-   "source": "FHP live CAD",
-   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-   "spot": "at Imperial St",
-   "status": "caution",
-   "title": "MVC at MERRITT ISLAND CSWY E x[IMPERIAL ST] [MERRITT ISLAND] (Road Open)",
-   "where": "Merritt Island Cswy E at Imperial St",
-   "id": "brevard:fhp:20261106093217-f79a066f",
-   "updated": "2026-11-06T09:32:17Z",
-   "lastReported": "2026-11-06T09:32:17Z",
-   "firstReported": "2026-11-06T09:32:17Z",
-   "verified": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "kind": "feed",
-    "publishedAt": "2026-11-06T09:32:17Z"
-   },
-   "reopenedAt": "2026-11-06T23:01:04Z",
-   "evidence": {
-    "agency": "Florida Highway Patrol",
-    "kind": "feed-dropped",
-    "missingSince": "2026-11-06T22:45:52Z",
-    "reopenedAt": "2026-11-06T23:01:04Z",
     "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
    },
    "stillReported": []
