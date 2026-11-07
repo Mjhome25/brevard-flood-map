@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-07T20:00:46Z",
+ "generated": "2026-11-07T20:15:41Z",
  "errors": [],
  "items": [
   {
@@ -107,6 +107,35 @@
     "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
     "kind": "feed",
     "publishedAt": "2026-11-07T06:49:00Z"
+   },
+   "awaitingOfficial": false,
+   "missingSince": null,
+   "recheck": []
+  },
+  {
+   "fullClosure": false,
+   "lanes": "Branches In Right Lane",
+   "lat": 27.99703609574,
+   "layer": "FHP",
+   "lng": -80.6292514680369,
+   "reported": "2026-11-07T08:06:38Z",
+   "road": "I-95 NB [MM173]",
+   "roadShort": "I-95 Nb [MM173]",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "spot": "at Mm173",
+   "status": "caution",
+   "title": "Roadway Debris/Object at I-95 NB [MM173] x[MM173] [PALM BAY] (Branches In Right Lane)",
+   "where": "I-95 Nb [MM173] at Mm173",
+   "id": "brevard:fhp:20261107080638-ee62a3cc",
+   "updated": "2026-11-07T08:06:38Z",
+   "lastReported": "2026-11-07T08:06:38Z",
+   "firstReported": "2026-11-07T08:06:38Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-07T08:06:38Z"
    },
    "awaitingOfficial": false,
    "missingSince": null,
@@ -642,7 +671,14 @@
     "reopenedAt": "2026-11-07T09:45:47Z",
     "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
    },
-   "stillReported": []
+   "stillReported": [
+    {
+     "id": "brevard:fhp:20261107080638-ee62a3cc",
+     "where": "I-95 Nb [MM173] at Mm173",
+     "source": "FHP live CAD",
+     "since": null
+    }
+   ]
   },
   {
    "fullClosure": false,
