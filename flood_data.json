@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-07T17:45:32Z",
+ "generated": "2026-11-07T18:00:49Z",
  "errors": [],
  "items": [
   {
@@ -27,9 +27,15 @@
     "kind": "feed",
     "publishedAt": "2026-11-07T15:45:00Z"
    },
-   "awaitingOfficial": false,
-   "missingSince": null,
-   "recheck": []
+   "awaitingOfficial": true,
+   "missingSince": "2026-11-07T18:00:56Z",
+   "recheck": [],
+   "noLongerListed": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "since": "2026-11-07T18:00:56Z",
+    "wasClosed": false
+   }
   },
   {
    "fullClosure": false,
@@ -55,6 +61,35 @@
     "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
     "kind": "feed",
     "publishedAt": "2026-11-07T16:05:49Z"
+   },
+   "awaitingOfficial": false,
+   "missingSince": null,
+   "recheck": []
+  },
+  {
+   "fullClosure": false,
+   "lanes": "No Roadblock",
+   "lat": 28.1883607729469,
+   "layer": "FHP",
+   "lng": -80.70597118806,
+   "reported": "2026-11-07T17:46:32Z",
+   "road": "PINEDA CSWY",
+   "roadShort": "Pineda Cswy",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "spot": "at I-95 Nb Exit",
+   "status": "caution",
+   "title": "MVC at PINEDA CSWY x[I-95 NB EXIT] [MELBOURNE] (No Roadblock)",
+   "where": "Pineda Cswy at I-95 Nb Exit",
+   "id": "brevard:fhp:20261107174632-f5827c05",
+   "updated": "2026-11-07T17:46:32Z",
+   "lastReported": "2026-11-07T17:46:32Z",
+   "firstReported": "2026-11-07T17:46:32Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-07T17:46:32Z"
    },
    "awaitingOfficial": false,
    "missingSince": null,
@@ -1803,107 +1838,6 @@
     "missingSince": "2026-11-06T18:00:50Z",
     "reopenedAt": "2026-11-06T18:15:46Z",
     "url": "https://fl511.com"
-   },
-   "stillReported": []
-  },
-  {
-   "fullClosure": false,
-   "lat": 28.2453741238472,
-   "layer": "FHP",
-   "lng": -80.7227482432926,
-   "reported": "2026-11-06T17:08:01Z",
-   "road": "I-95 NB [MM192]",
-   "roadShort": "I-95 Nb [MM192]",
-   "source": "FHP live CAD",
-   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-   "spot": "at Mm192",
-   "status": "caution",
-   "title": "Roadway Debris/Object at I-95 NB [MM192] x[MM192] [MELBOURNE]",
-   "where": "I-95 Nb [MM192] at Mm192",
-   "id": "brevard:fhp:20261106170801-31378f66",
-   "updated": "2026-11-06T17:08:01Z",
-   "lastReported": "2026-11-06T17:08:01Z",
-   "firstReported": "2026-11-06T17:08:01Z",
-   "verified": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "kind": "feed",
-    "publishedAt": "2026-11-06T17:08:01Z"
-   },
-   "reopenedAt": "2026-11-06T18:00:50Z",
-   "evidence": {
-    "agency": "Florida Highway Patrol",
-    "kind": "feed-dropped",
-    "missingSince": "2026-11-06T17:45:42Z",
-    "reopenedAt": "2026-11-06T18:00:50Z",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
-   },
-   "stillReported": []
-  },
-  {
-   "from": "River Grove Dr",
-   "fullClosure": false,
-   "lanes": "Roadblock",
-   "lat": 27.8754301800615,
-   "layer": "FHP",
-   "line": [
-    [
-     27.873762,
-     -80.497906
-    ],
-    [
-     27.874128,
-     -80.498094
-    ],
-    [
-     27.874415,
-     -80.498238
-    ],
-    [
-     27.875082,
-     -80.498549
-    ],
-    [
-     27.87528,
-     -80.498633
-    ],
-    [
-     27.875408,
-     -80.498688
-    ],
-    [
-     27.876024,
-     -80.498952
-    ]
-   ],
-   "lng": -80.4986220397307,
-   "reported": "2026-11-06T17:03:31Z",
-   "road": "US-1",
-   "roadShort": "US-1",
-   "source": "FHP live CAD",
-   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-   "spot": "at Garretts Rd",
-   "status": "closed",
-   "title": "MVC W/Roadblock at US-1 x[GARRETTS RD] [SEBASTIAN] (Roadblock)",
-   "to": "Lindsay Rd",
-   "where": "US-1 at Garretts Rd",
-   "id": "brevard:fhp:20261106170331-9139495c",
-   "updated": "2026-11-06T17:03:31Z",
-   "lastReported": "2026-11-06T17:03:31Z",
-   "firstReported": "2026-11-06T17:03:31Z",
-   "verified": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "kind": "feed",
-    "publishedAt": "2026-11-06T17:03:31Z"
-   },
-   "reopenedAt": "2026-11-06T18:00:50Z",
-   "evidence": {
-    "agency": "Florida Highway Patrol",
-    "kind": "feed-dropped",
-    "missingSince": "2026-11-06T17:45:42Z",
-    "reopenedAt": "2026-11-06T18:00:50Z",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
    },
    "stillReported": []
   }
