@@ -1,77 +1,7 @@
 {
- "generated": "2026-11-07T11:00:46Z",
+ "generated": "2026-11-07T11:15:35Z",
  "errors": [],
  "items": [
-  {
-   "fullClosure": false,
-   "lanes": "No Roadblock",
-   "lat": 28.0455798067633,
-   "layer": "FHP",
-   "lng": -80.6661838284735,
-   "reported": "2026-11-07T08:42:11Z",
-   "road": "I-95 SB [MM177]",
-   "roadShort": "I-95 Sb [MM177]",
-   "source": "FHP live CAD",
-   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-   "spot": "at Mm177",
-   "status": "caution",
-   "title": "MVC at I-95 SB [MM177] x[MM177] [MELBOURNE] (No Roadblock)",
-   "where": "I-95 Sb [MM177] at Mm177",
-   "id": "brevard:fhp:20261107084211-71a5f6bc",
-   "updated": "2026-11-07T08:42:11Z",
-   "lastReported": "2026-11-07T08:42:11Z",
-   "firstReported": "2026-11-07T08:42:11Z",
-   "verified": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "kind": "feed",
-    "publishedAt": "2026-11-07T08:42:11Z"
-   },
-   "awaitingOfficial": true,
-   "missingSince": "2026-11-07T11:00:53Z",
-   "recheck": [],
-   "noLongerListed": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "since": "2026-11-07T11:00:53Z",
-    "wasClosed": false
-   }
-  },
-  {
-   "fullClosure": false,
-   "lanes": "Tire In Road // Use Caution",
-   "lat": 28.0546254896794,
-   "layer": "FHP",
-   "lng": -80.6801038204149,
-   "reported": "2026-11-07T09:24:47Z",
-   "road": "I-95 SB [SOF]",
-   "roadShort": "I-95 Sb [Sof]",
-   "source": "FHP live CAD",
-   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-   "spot": "at Mm178",
-   "status": "caution",
-   "title": "Roadway Debris/Object at I-95 SB [SOF] x[MM178] [MELBOURNE] (Tire In Road // Use Caution)",
-   "where": "I-95 Sb [Sof] at Mm178",
-   "id": "brevard:fhp:20261107092447-a68648b6",
-   "updated": "2026-11-07T09:24:47Z",
-   "lastReported": "2026-11-07T09:24:47Z",
-   "firstReported": "2026-11-07T09:24:47Z",
-   "verified": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "kind": "feed",
-    "publishedAt": "2026-11-07T09:24:47Z"
-   },
-   "awaitingOfficial": true,
-   "missingSince": "2026-11-07T11:00:53Z",
-   "recheck": [],
-   "noLongerListed": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "since": "2026-11-07T11:00:53Z",
-    "wasClosed": false
-   }
-  },
   {
    "dir": "SB",
    "fullClosure": false,
@@ -250,6 +180,83 @@
   }
  ],
  "reopened": [
+  {
+   "fullClosure": false,
+   "lanes": "No Roadblock",
+   "lat": 28.0455798067633,
+   "layer": "FHP",
+   "lng": -80.6661838284735,
+   "reported": "2026-11-07T08:42:11Z",
+   "road": "I-95 SB [MM177]",
+   "roadShort": "I-95 Sb [MM177]",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "spot": "at Mm177",
+   "status": "caution",
+   "title": "MVC at I-95 SB [MM177] x[MM177] [MELBOURNE] (No Roadblock)",
+   "where": "I-95 Sb [MM177] at Mm177",
+   "id": "brevard:fhp:20261107084211-71a5f6bc",
+   "updated": "2026-11-07T08:42:11Z",
+   "lastReported": "2026-11-07T08:42:11Z",
+   "firstReported": "2026-11-07T08:42:11Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-07T08:42:11Z"
+   },
+   "reopenedAt": "2026-11-07T11:15:41Z",
+   "evidence": {
+    "agency": "Florida Highway Patrol",
+    "kind": "feed-dropped",
+    "missingSince": "2026-11-07T11:00:53Z",
+    "reopenedAt": "2026-11-07T11:15:41Z",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
+   },
+   "stillReported": [
+    {
+     "id": "brevard:fl511:946710",
+     "where": "I-95 SB at MM 177",
+     "source": "FL511 (FDOT)",
+     "since": null
+    }
+   ]
+  },
+  {
+   "fullClosure": false,
+   "lanes": "Tire In Road // Use Caution",
+   "lat": 28.0546254896794,
+   "layer": "FHP",
+   "lng": -80.6801038204149,
+   "reported": "2026-11-07T09:24:47Z",
+   "road": "I-95 SB [SOF]",
+   "roadShort": "I-95 Sb [Sof]",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "spot": "at Mm178",
+   "status": "caution",
+   "title": "Roadway Debris/Object at I-95 SB [SOF] x[MM178] [MELBOURNE] (Tire In Road // Use Caution)",
+   "where": "I-95 Sb [Sof] at Mm178",
+   "id": "brevard:fhp:20261107092447-a68648b6",
+   "updated": "2026-11-07T09:24:47Z",
+   "lastReported": "2026-11-07T09:24:47Z",
+   "firstReported": "2026-11-07T09:24:47Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-07T09:24:47Z"
+   },
+   "reopenedAt": "2026-11-07T11:15:41Z",
+   "evidence": {
+    "agency": "Florida Highway Patrol",
+    "kind": "feed-dropped",
+    "missingSince": "2026-11-07T11:00:53Z",
+    "reopenedAt": "2026-11-07T11:15:41Z",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
+   },
+   "stillReported": []
+  },
   {
    "fullClosure": false,
    "lat": 27.9971486341678,
