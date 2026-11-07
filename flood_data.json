@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-07T07:45:41Z",
+ "generated": "2026-11-07T08:00:36Z",
  "errors": [],
  "items": [
   {
@@ -26,9 +26,11 @@
     "kind": "feed",
     "publishedAt": "2026-11-07T07:36:03Z"
    },
-   "awaitingOfficial": false,
+   "awaitingOfficial": true,
    "missingSince": null,
-   "recheck": []
+   "recheck": [
+    "source changed its lane description"
+   ]
   },
   {
    "approx": true,
