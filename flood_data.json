@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-07T08:31:17Z",
+ "generated": "2026-11-07T08:45:39Z",
  "errors": [],
  "items": [
   {
@@ -31,6 +31,35 @@
    "recheck": [
     "source changed its lane description"
    ]
+  },
+  {
+   "fullClosure": false,
+   "lanes": "No Roadblock",
+   "lat": 28.0455798067633,
+   "layer": "FHP",
+   "lng": -80.6661838284735,
+   "reported": "2026-11-07T08:42:11Z",
+   "road": "I-95 SB [MM177]",
+   "roadShort": "I-95 Sb [MM177]",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "spot": "at Mm177",
+   "status": "caution",
+   "title": "MVC at I-95 SB [MM177] x[MM177] [MELBOURNE] (No Roadblock)",
+   "where": "I-95 Sb [MM177] at Mm177",
+   "id": "brevard:fhp:20261107084211-71a5f6bc",
+   "updated": "2026-11-07T08:42:11Z",
+   "lastReported": "2026-11-07T08:42:11Z",
+   "firstReported": "2026-11-07T08:42:11Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-07T08:42:11Z"
+   },
+   "awaitingOfficial": false,
+   "missingSince": null,
+   "recheck": []
   },
   {
    "approx": true,
