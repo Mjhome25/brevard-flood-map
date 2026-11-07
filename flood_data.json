@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-07T18:31:57Z",
+ "generated": "2026-11-07T18:45:36Z",
  "errors": [],
  "items": [
   {
@@ -26,6 +26,55 @@
     "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
     "kind": "feed",
     "publishedAt": "2026-11-07T06:02:24Z"
+   },
+   "awaitingOfficial": false,
+   "missingSince": null,
+   "recheck": []
+  },
+  {
+   "from": "Buddy Dr",
+   "fullClosure": false,
+   "lanes": "Roadblock",
+   "lat": 28.0499627448397,
+   "layer": "FHP",
+   "line": [
+    [
+     28.049989,
+     -80.665948
+    ],
+    [
+     28.049956,
+     -80.664129
+    ],
+    [
+     28.049955,
+     -80.664051
+    ],
+    [
+     28.049932,
+     -80.662494
+    ]
+   ],
+   "lng": -80.6640510537769,
+   "reported": "2026-11-07T06:33:35Z",
+   "road": "EBER BLVD",
+   "roadShort": "Eber Blvd",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "spot": "at Elcar Dr",
+   "status": "closed",
+   "title": "MVC W/ And Roadblock at EBER BLVD x[ELCAR DR] [MELBOURNE] (Roadblock)",
+   "to": "Brunswick Way",
+   "where": "Eber Blvd at Elcar Dr",
+   "id": "brevard:fhp:20261107063335-fee06029",
+   "updated": "2026-11-07T06:33:35Z",
+   "lastReported": "2026-11-07T06:33:35Z",
+   "firstReported": "2026-11-07T06:33:35Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-07T06:33:35Z"
    },
    "awaitingOfficial": false,
    "missingSince": null,
