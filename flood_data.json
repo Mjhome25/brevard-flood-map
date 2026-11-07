@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-07T06:31:53Z",
+ "generated": "2026-11-07T06:45:35Z",
  "errors": [],
  "items": [
   {
@@ -1871,52 +1871,6 @@
     "missingSince": "2026-11-06T07:45:35Z",
     "reopenedAt": "2026-11-06T08:00:50Z",
     "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
-   },
-   "stillReported": []
-  },
-  {
-   "dir": "SB",
-   "fullClosure": false,
-   "lanes": "2 Left lanes blocked",
-   "lat": 28.547028,
-   "layer": "Incidents",
-   "line": [
-    [
-     28.54703,
-     -80.85176
-    ],
-    [
-     28.5461,
-     -80.85175
-    ]
-   ],
-   "lng": -80.85175,
-   "reported": "2026-11-06T05:13:00Z",
-   "road": "I-95",
-   "roadShort": "I-95",
-   "source": "FL511 (FDOT)",
-   "sourceUrl": "https://fl511.com",
-   "spot": "before MM 215/SR-50",
-   "status": "caution",
-   "title": "MVC on I-95 South, before MM 215/SR-50. 2 Left lanes blocked",
-   "where": "I-95 SB before MM 215/SR-50",
-   "id": "brevard:fl511:944397",
-   "updated": "2026-11-06T05:18:00Z",
-   "lastReported": "2026-11-06T05:18:00Z",
-   "firstReported": "2026-11-06T05:18:00Z",
-   "verified": {
-    "agency": "FL511 (FDOT)",
-    "url": "https://fl511.com",
-    "kind": "feed",
-    "publishedAt": "2026-11-06T05:18:00Z"
-   },
-   "reopenedAt": "2026-11-06T06:45:34Z",
-   "evidence": {
-    "agency": "FL511 (FDOT)",
-    "kind": "feed-dropped",
-    "missingSince": "2026-11-06T06:32:05Z",
-    "reopenedAt": "2026-11-06T06:45:34Z",
-    "url": "https://fl511.com"
    },
    "stillReported": []
   }
