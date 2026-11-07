@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-07T02:00:47Z",
+ "generated": "2026-11-07T02:15:42Z",
  "errors": [],
  "items": [
   {
@@ -228,41 +228,6 @@
   },
   {
    "fullClosure": false,
-   "lanes": "Unknown Roadblock - Use Caution",
-   "lat": 27.8629492270531,
-   "layer": "FHP",
-   "lng": -80.4972299232042,
-   "reported": "2026-11-06T13:11:04Z",
-   "road": "HICKORY DR [3900]",
-   "roadShort": "Hickory Dr [3900]",
-   "source": "FHP live CAD",
-   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-   "spot": "at Central Ave",
-   "status": "closed",
-   "title": "MVC at HICKORY DR [3900] x[CENTRAL AVE] [SEBASTIAN] (Unknown Roadblock - Use Caution)",
-   "where": "Hickory Dr [3900] at Central Ave",
-   "id": "brevard:fhp:20261106131104-e9845b9b",
-   "updated": "2026-11-06T13:11:04Z",
-   "lastReported": "2026-11-06T13:11:04Z",
-   "firstReported": "2026-11-06T13:11:04Z",
-   "verified": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "kind": "feed",
-    "publishedAt": "2026-11-06T13:11:04Z"
-   },
-   "awaitingOfficial": true,
-   "missingSince": "2026-11-07T02:00:53Z",
-   "recheck": [],
-   "noLongerListed": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "since": "2026-11-07T02:00:53Z",
-    "wasClosed": true
-   }
-  },
-  {
-   "fullClosure": false,
    "lanes": "No Roadblock",
    "lat": 28.3075968555116,
    "layer": "FHP",
@@ -286,42 +251,13 @@
     "kind": "feed",
     "publishedAt": "2026-11-06T13:44:27Z"
    },
-   "awaitingOfficial": false,
-   "missingSince": null,
-   "recheck": []
-  },
-  {
-   "fullClosure": false,
-   "lanes": "No Road Block",
-   "lat": 28.307418440931,
-   "layer": "FHP",
-   "lng": -80.7604221982616,
-   "reported": "2026-11-06T13:44:28Z",
-   "road": "I-95 SB [MM197]",
-   "roadShort": "I-95 Sb [MM197]",
-   "source": "FHP live CAD",
-   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-   "spot": "at Mm197",
-   "status": "caution",
-   "title": "MVC at I-95 SB [MM197] x[MM197] [ROCKLEDGE] (No Road Block)",
-   "where": "I-95 Sb [MM197] at Mm197",
-   "id": "brevard:fhp:20261106134428-cf56805d",
-   "updated": "2026-11-06T13:44:28Z",
-   "lastReported": "2026-11-06T13:44:28Z",
-   "firstReported": "2026-11-06T13:44:28Z",
-   "verified": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "kind": "feed",
-    "publishedAt": "2026-11-06T13:44:28Z"
-   },
    "awaitingOfficial": true,
-   "missingSince": "2026-11-07T02:00:53Z",
+   "missingSince": "2026-11-07T02:15:52Z",
    "recheck": [],
    "noLongerListed": {
     "agency": "Florida Highway Patrol",
     "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "since": "2026-11-07T02:00:53Z",
+    "since": "2026-11-07T02:15:52Z",
     "wasClosed": false
    }
   },
@@ -365,9 +301,15 @@
     "kind": "feed",
     "publishedAt": "2026-11-06T17:42:00Z"
    },
-   "awaitingOfficial": false,
-   "missingSince": null,
-   "recheck": []
+   "awaitingOfficial": true,
+   "missingSince": "2026-11-07T02:15:52Z",
+   "recheck": [],
+   "noLongerListed": {
+    "agency": "FL511 (FDOT)",
+    "url": "https://fl511.com",
+    "since": "2026-11-07T02:15:52Z",
+    "wasClosed": false
+   }
   },
   {
    "dir": "NB",
@@ -418,52 +360,6 @@
   {
    "dir": "SB",
    "fullClosure": false,
-   "lanes": "Right lane blocked",
-   "lat": 28.665589,
-   "layer": "Incidents",
-   "line": [
-    [
-     28.66557,
-     -80.84501
-    ],
-    [
-     28.66556,
-     -80.84501
-    ]
-   ],
-   "lng": -80.844968,
-   "reported": "2026-11-06T23:50:00Z",
-   "road": "US-1",
-   "roadShort": "US-1",
-   "source": "FL511 (FDOT)",
-   "sourceUrl": "https://fl511.com",
-   "spot": "before SR-46",
-   "status": "caution",
-   "title": "MVC on US-1 South, before SR-46. Right lane blocked",
-   "where": "US-1 SB before SR-46",
-   "id": "brevard:fl511:946195",
-   "updated": "2026-11-07T01:37:00Z",
-   "lastReported": "2026-11-07T01:37:00Z",
-   "firstReported": "2026-11-06T23:57:00Z",
-   "verified": {
-    "agency": "FL511 (FDOT)",
-    "url": "https://fl511.com",
-    "kind": "feed",
-    "publishedAt": "2026-11-06T23:57:00Z"
-   },
-   "awaitingOfficial": true,
-   "missingSince": "2026-11-07T02:00:53Z",
-   "recheck": [],
-   "noLongerListed": {
-    "agency": "FL511 (FDOT)",
-    "url": "https://fl511.com",
-    "since": "2026-11-07T02:00:53Z",
-    "wasClosed": false
-   }
-  },
-  {
-   "dir": "SB",
-   "fullClosure": false,
    "lanes": "Right shoulder blocked",
    "lat": 28.035375,
    "layer": "Incidents",
@@ -510,56 +406,56 @@
    "recheck": []
   },
   {
-   "dir": "EB",
-   "from": "Taylor St",
-   "fullClosure": true,
-   "lanes": "All lanes closed",
-   "lat": 28.665568,
-   "layer": "Closures",
+   "dir": "SB",
+   "fullClosure": false,
+   "lanes": "Right shoulder blocked",
+   "lat": 28.307403,
+   "layer": "Incidents",
    "line": [
     [
-     28.665241,
-     -80.84563
+     28.30727,
+     -80.76018
     ],
     [
-     28.665553,
-     -80.844989
+     28.30574,
+     -80.75917
     ],
     [
-     28.665586,
-     -80.844921
+     28.3047,
+     -80.75844
+    ],
+    [
+     28.30378,
+     -80.75774
+    ],
+    [
+     28.30293,
+     -80.75704
     ]
    ],
-   "lng": -80.844998,
-   "reported": "2026-11-07T00:00:00Z",
-   "road": "SR-46",
-   "roadShort": "SR-46",
+   "lng": -80.759983,
+   "reported": "2026-11-07T02:01:00Z",
+   "road": "I-95",
+   "roadShort": "I-95",
    "source": "FL511 (FDOT)",
    "sourceUrl": "https://fl511.com",
-   "spot": "at US-1",
-   "status": "closed",
-   "title": "Emergency vehicles on SR-46 East, at US-1. All lanes closed",
-   "to": "Highway 1",
-   "where": "SR-46 EB at US-1",
-   "id": "brevard:fl511:946208",
-   "updated": "2026-11-07T01:40:00Z",
-   "lastReported": "2026-11-07T01:40:00Z",
-   "firstReported": "2026-11-07T00:01:00Z",
+   "spot": "at MM 197",
+   "status": "caution",
+   "title": "MVC on I-95 South, at MM 197. Right shoulder blocked",
+   "where": "I-95 SB at MM 197",
+   "id": "brevard:fl511:946380",
+   "updated": "2026-11-07T02:06:00Z",
+   "lastReported": "2026-11-07T02:06:00Z",
+   "firstReported": "2026-11-07T02:06:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
     "url": "https://fl511.com",
     "kind": "feed",
-    "publishedAt": "2026-11-07T00:01:00Z"
+    "publishedAt": "2026-11-07T02:06:00Z"
    },
-   "awaitingOfficial": true,
-   "missingSince": "2026-11-07T02:00:53Z",
-   "recheck": [],
-   "noLongerListed": {
-    "agency": "FL511 (FDOT)",
-    "url": "https://fl511.com",
-    "since": "2026-11-07T02:00:53Z",
-    "wasClosed": true
-   }
+   "awaitingOfficial": false,
+   "missingSince": null,
+   "recheck": []
   },
   {
    "approx": true,
@@ -663,6 +559,187 @@
   }
  ],
  "reopened": [
+  {
+   "dir": "SB",
+   "fullClosure": false,
+   "lanes": "Right lane blocked",
+   "lat": 28.665589,
+   "layer": "Incidents",
+   "line": [
+    [
+     28.66557,
+     -80.84501
+    ],
+    [
+     28.66556,
+     -80.84501
+    ]
+   ],
+   "lng": -80.844968,
+   "reported": "2026-11-06T23:50:00Z",
+   "road": "US-1",
+   "roadShort": "US-1",
+   "source": "FL511 (FDOT)",
+   "sourceUrl": "https://fl511.com",
+   "spot": "before SR-46",
+   "status": "caution",
+   "title": "MVC on US-1 South, before SR-46. Right lane blocked",
+   "where": "US-1 SB before SR-46",
+   "id": "brevard:fl511:946195",
+   "updated": "2026-11-07T01:37:00Z",
+   "lastReported": "2026-11-07T01:37:00Z",
+   "firstReported": "2026-11-06T23:57:00Z",
+   "verified": {
+    "agency": "FL511 (FDOT)",
+    "url": "https://fl511.com",
+    "kind": "feed",
+    "publishedAt": "2026-11-06T23:57:00Z"
+   },
+   "reopenedAt": "2026-11-07T02:15:52Z",
+   "evidence": {
+    "agency": "FL511 (FDOT)",
+    "kind": "feed-dropped",
+    "missingSince": "2026-11-07T02:00:53Z",
+    "reopenedAt": "2026-11-07T02:15:52Z",
+    "url": "https://fl511.com"
+   },
+   "stillReported": []
+  },
+  {
+   "dir": "EB",
+   "from": "Taylor St",
+   "fullClosure": true,
+   "lanes": "All lanes closed",
+   "lat": 28.665568,
+   "layer": "Closures",
+   "line": [
+    [
+     28.665241,
+     -80.84563
+    ],
+    [
+     28.665553,
+     -80.844989
+    ],
+    [
+     28.665586,
+     -80.844921
+    ]
+   ],
+   "lng": -80.844998,
+   "reported": "2026-11-07T00:00:00Z",
+   "road": "SR-46",
+   "roadShort": "SR-46",
+   "source": "FL511 (FDOT)",
+   "sourceUrl": "https://fl511.com",
+   "spot": "at US-1",
+   "status": "closed",
+   "title": "Emergency vehicles on SR-46 East, at US-1. All lanes closed",
+   "to": "Highway 1",
+   "where": "SR-46 EB at US-1",
+   "id": "brevard:fl511:946208",
+   "updated": "2026-11-07T01:40:00Z",
+   "lastReported": "2026-11-07T01:40:00Z",
+   "firstReported": "2026-11-07T00:01:00Z",
+   "verified": {
+    "agency": "FL511 (FDOT)",
+    "url": "https://fl511.com",
+    "kind": "feed",
+    "publishedAt": "2026-11-07T00:01:00Z"
+   },
+   "reopenedAt": "2026-11-07T02:15:52Z",
+   "evidence": {
+    "agency": "FL511 (FDOT)",
+    "kind": "feed-dropped",
+    "missingSince": "2026-11-07T02:00:53Z",
+    "reopenedAt": "2026-11-07T02:15:52Z",
+    "url": "https://fl511.com"
+   },
+   "stillReported": []
+  },
+  {
+   "fullClosure": false,
+   "lanes": "Unknown Roadblock - Use Caution",
+   "lat": 27.8629492270531,
+   "layer": "FHP",
+   "lng": -80.4972299232042,
+   "reported": "2026-11-06T13:11:04Z",
+   "road": "HICKORY DR [3900]",
+   "roadShort": "Hickory Dr [3900]",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "spot": "at Central Ave",
+   "status": "closed",
+   "title": "MVC at HICKORY DR [3900] x[CENTRAL AVE] [SEBASTIAN] (Unknown Roadblock - Use Caution)",
+   "where": "Hickory Dr [3900] at Central Ave",
+   "id": "brevard:fhp:20261106131104-e9845b9b",
+   "updated": "2026-11-06T13:11:04Z",
+   "lastReported": "2026-11-06T13:11:04Z",
+   "firstReported": "2026-11-06T13:11:04Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-06T13:11:04Z"
+   },
+   "reopenedAt": "2026-11-07T02:15:52Z",
+   "evidence": {
+    "agency": "Florida Highway Patrol",
+    "kind": "feed-dropped",
+    "missingSince": "2026-11-07T02:00:53Z",
+    "reopenedAt": "2026-11-07T02:15:52Z",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
+   },
+   "stillReported": []
+  },
+  {
+   "fullClosure": false,
+   "lanes": "No Road Block",
+   "lat": 28.307418440931,
+   "layer": "FHP",
+   "lng": -80.7604221982616,
+   "reported": "2026-11-06T13:44:28Z",
+   "road": "I-95 SB [MM197]",
+   "roadShort": "I-95 Sb [MM197]",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "spot": "at Mm197",
+   "status": "caution",
+   "title": "MVC at I-95 SB [MM197] x[MM197] [ROCKLEDGE] (No Road Block)",
+   "where": "I-95 Sb [MM197] at Mm197",
+   "id": "brevard:fhp:20261106134428-cf56805d",
+   "updated": "2026-11-06T13:44:28Z",
+   "lastReported": "2026-11-06T13:44:28Z",
+   "firstReported": "2026-11-06T13:44:28Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-06T13:44:28Z"
+   },
+   "reopenedAt": "2026-11-07T02:15:52Z",
+   "evidence": {
+    "agency": "Florida Highway Patrol",
+    "kind": "feed-dropped",
+    "missingSince": "2026-11-07T02:00:53Z",
+    "reopenedAt": "2026-11-07T02:15:52Z",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
+   },
+   "stillReported": [
+    {
+     "id": "brevard:fhp:20261106134427-cf56805d",
+     "where": "I-95 Sb [MM197] at Mm197",
+     "source": "FHP live CAD",
+     "since": "2026-11-07T02:15:52Z"
+    },
+    {
+     "id": "brevard:fl511:946380",
+     "where": "I-95 SB at MM 197",
+     "source": "FL511 (FDOT)",
+     "since": null
+    }
+   ]
+  },
   {
    "dir": "EB",
    "from": "Porcella Ave",
@@ -2491,103 +2568,6 @@
     "kind": "feed-dropped",
     "missingSince": "2026-11-06T02:15:45Z",
     "reopenedAt": "2026-11-06T02:31:52Z",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
-   },
-   "stillReported": []
-  },
-  {
-   "dir": "SB",
-   "fullClosure": false,
-   "lanes": "2 Right lanes blocked",
-   "lat": 28.216117,
-   "layer": "Incidents",
-   "line": [
-    [
-     28.21606,
-     -80.71449
-    ],
-    [
-     28.21417,
-     -80.71395
-    ],
-    [
-     28.2116,
-     -80.71321
-    ],
-    [
-     28.20958,
-     -80.71262
-    ],
-    [
-     28.20732,
-     -80.71197
-    ],
-    [
-     28.20583,
-     -80.71154
-    ]
-   ],
-   "lng": -80.714278,
-   "reported": "2026-11-05T18:32:00Z",
-   "road": "I-95",
-   "roadShort": "I-95",
-   "source": "FL511 (FDOT)",
-   "sourceUrl": "https://fl511.com",
-   "spot": "at MM 190",
-   "status": "caution",
-   "title": "MVC on I-95 South, at MM 190. 2 Right lanes blocked",
-   "where": "I-95 SB at MM 190",
-   "id": "brevard:fl511:943231",
-   "updated": "2026-11-06T00:41:00Z",
-   "lastReported": "2026-11-06T00:41:00Z",
-   "firstReported": "2026-11-05T18:42:00Z",
-   "verified": {
-    "agency": "FL511 (FDOT)",
-    "url": "https://fl511.com",
-    "kind": "feed",
-    "publishedAt": "2026-11-05T18:42:00Z"
-   },
-   "reopenedAt": "2026-11-06T02:15:45Z",
-   "evidence": {
-    "agency": "FL511 (FDOT)",
-    "kind": "feed-dropped",
-    "missingSince": "2026-11-06T02:01:01Z",
-    "reopenedAt": "2026-11-06T02:15:45Z",
-    "url": "https://fl511.com"
-   },
-   "stillReported": []
-  },
-  {
-   "fullClosure": false,
-   "lanes": "Traffic Light Malfunctioning - Use Caution - Treat As A Four Way Stop",
-   "lat": 28.23097390426,
-   "layer": "FHP",
-   "lng": -80.7184896002343,
-   "reported": "2026-11-05T10:18:30Z",
-   "road": "WICKHAM RD",
-   "roadShort": "Wickham Rd",
-   "source": "FHP live CAD",
-   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-   "spot": "at I-95",
-   "status": "caution",
-   "title": "Traffic Light Out at WICKHAM RD x[I-95] [MELBOURNE] (Traffic Light Malfunctioning - Use Caution - Treat As A Four Way Stop)",
-   "where": "Wickham Rd at I-95",
-   "id": "brevard:fhp:20261105101830-2b834052",
-   "updated": "2026-11-05T10:18:30Z",
-   "lastReported": "2026-11-05T10:18:30Z",
-   "firstReported": "2026-11-05T10:18:30Z",
-   "verified": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "kind": "feed",
-    "publishedAt": "2026-11-05T10:18:30Z"
-   },
-   "reopenedAt": "2026-11-06T02:01:01Z",
-   "evidence": {
-    "agency": "Florida Highway Patrol",
-    "kind": "feed-dropped",
-    "missingSince": "2026-11-06T01:45:41Z",
-    "reopenedAt": "2026-11-06T02:01:01Z",
     "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
    },
    "stillReported": []
