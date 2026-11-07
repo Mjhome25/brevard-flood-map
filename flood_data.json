@@ -1,7 +1,35 @@
 {
- "generated": "2026-11-07T15:31:24Z",
+ "generated": "2026-11-07T15:45:32Z",
  "errors": [],
  "items": [
+  {
+   "fullClosure": false,
+   "lanes": "Source said \"Road Open\" (2026-11-07 15:32 UTC); not a verified reopening",
+   "lat": 28.6663005797101,
+   "layer": "FHP",
+   "lng": -80.8724726261078,
+   "reported": "2026-11-07T15:32:52Z",
+   "road": "4440 SR-46 [MIMS]",
+   "roadShort": "4440 SR-46 [Mims]",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "status": "caution",
+   "title": "MVC at 4440 SR-46 [MIMS] (Road Open)",
+   "where": "4440 SR-46 [Mims]",
+   "id": "brevard:fhp:20261107153252-f6633fba",
+   "updated": "2026-11-07T15:32:52Z",
+   "lastReported": "2026-11-07T15:32:52Z",
+   "firstReported": "2026-11-07T15:32:52Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-07T15:32:52Z"
+   },
+   "awaitingOfficial": false,
+   "missingSince": null,
+   "recheck": []
+  },
   {
    "approx": true,
    "city": "Melbourne",
