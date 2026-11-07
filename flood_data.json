@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-07T12:00:50Z",
+ "generated": "2026-11-07T12:15:33Z",
  "errors": [],
  "items": [
   {
@@ -1881,41 +1881,6 @@
     "kind": "feed-dropped",
     "missingSince": "2026-11-06T12:45:36Z",
     "reopenedAt": "2026-11-06T13:01:09Z",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
-   },
-   "stillReported": []
-  },
-  {
-   "fullClosure": false,
-   "lanes": "Unknown Road Block",
-   "lat": 27.8467796135266,
-   "layer": "FHP",
-   "lng": -80.5768944596599,
-   "reported": "2026-11-06T11:17:27Z",
-   "road": "I-95 NB [MM162]",
-   "roadShort": "I-95 Nb [MM162]",
-   "source": "FHP live CAD",
-   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-   "spot": "at Mm162",
-   "status": "closed",
-   "title": "MVC at I-95 NB [MM162] x[MM162] [SEBASTIAN] (Unknown Road Block)",
-   "where": "I-95 Nb [MM162] at Mm162",
-   "id": "brevard:fhp:20261106111727-639ee3ab",
-   "updated": "2026-11-06T11:17:27Z",
-   "lastReported": "2026-11-06T11:17:27Z",
-   "firstReported": "2026-11-06T11:17:27Z",
-   "verified": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "kind": "feed",
-    "publishedAt": "2026-11-06T11:17:27Z"
-   },
-   "reopenedAt": "2026-11-06T12:00:59Z",
-   "evidence": {
-    "agency": "Florida Highway Patrol",
-    "kind": "feed-dropped",
-    "missingSince": "2026-11-06T11:45:45Z",
-    "reopenedAt": "2026-11-06T12:00:59Z",
     "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
    },
    "stillReported": []
