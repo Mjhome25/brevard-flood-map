@@ -1,7 +1,35 @@
 {
- "generated": "2026-11-07T07:31:18Z",
+ "generated": "2026-11-07T07:45:41Z",
  "errors": [],
  "items": [
+  {
+   "fullClosure": false,
+   "lat": 27.9971486341678,
+   "layer": "FHP",
+   "lng": -80.629279376256,
+   "reported": "2026-11-07T07:36:03Z",
+   "road": "I-95 NB [MM173]",
+   "roadShort": "I-95 Nb [MM173]",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "spot": "at Mm173",
+   "status": "caution",
+   "title": "Roadway Debris/Object at I-95 NB [MM173] x[MM173] [PALM BAY]",
+   "where": "I-95 Nb [MM173] at Mm173",
+   "id": "brevard:fhp:20261107073603-ee62a3cc",
+   "updated": "2026-11-07T07:36:03Z",
+   "lastReported": "2026-11-07T07:36:03Z",
+   "firstReported": "2026-11-07T07:36:03Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-07T07:36:03Z"
+   },
+   "awaitingOfficial": false,
+   "missingSince": null,
+   "recheck": []
+  },
   {
    "approx": true,
    "city": "Melbourne",
