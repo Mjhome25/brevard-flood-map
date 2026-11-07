@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-07T01:31:29Z",
+ "generated": "2026-11-07T01:45:36Z",
  "errors": [],
  "items": [
   {
@@ -253,6 +253,64 @@
    "recheck": []
   },
   {
+   "fullClosure": false,
+   "lanes": "No Roadblock",
+   "lat": 28.3075968555116,
+   "layer": "FHP",
+   "lng": -80.7601547457367,
+   "reported": "2026-11-06T13:44:27Z",
+   "road": "I-95 SB [MM197]",
+   "roadShort": "I-95 Sb [MM197]",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "spot": "at Mm197",
+   "status": "caution",
+   "title": "MVC at I-95 SB [MM197] x[MM197] [ROCKLEDGE] (No Roadblock)",
+   "where": "I-95 Sb [MM197] at Mm197",
+   "id": "brevard:fhp:20261106134427-cf56805d",
+   "updated": "2026-11-06T13:44:27Z",
+   "lastReported": "2026-11-06T13:44:27Z",
+   "firstReported": "2026-11-06T13:44:27Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-06T13:44:27Z"
+   },
+   "awaitingOfficial": false,
+   "missingSince": null,
+   "recheck": []
+  },
+  {
+   "fullClosure": false,
+   "lanes": "No Road Block",
+   "lat": 28.307418440931,
+   "layer": "FHP",
+   "lng": -80.7604221982616,
+   "reported": "2026-11-06T13:44:28Z",
+   "road": "I-95 SB [MM197]",
+   "roadShort": "I-95 Sb [MM197]",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "spot": "at Mm197",
+   "status": "caution",
+   "title": "MVC at I-95 SB [MM197] x[MM197] [ROCKLEDGE] (No Road Block)",
+   "where": "I-95 Sb [MM197] at Mm197",
+   "id": "brevard:fhp:20261106134428-cf56805d",
+   "updated": "2026-11-06T13:44:28Z",
+   "lastReported": "2026-11-06T13:44:28Z",
+   "firstReported": "2026-11-06T13:44:28Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-06T13:44:28Z"
+   },
+   "awaitingOfficial": false,
+   "missingSince": null,
+   "recheck": []
+  },
+  {
    "dir": "NB",
    "fullClosure": false,
    "lanes": "Right shoulder blocked",
@@ -369,8 +427,8 @@
    "title": "MVC on US-1 South, before SR-46. Right lane blocked",
    "where": "US-1 SB before SR-46",
    "id": "brevard:fl511:946195",
-   "updated": "2026-11-07T01:06:00Z",
-   "lastReported": "2026-11-07T01:06:00Z",
+   "updated": "2026-11-07T01:37:00Z",
+   "lastReported": "2026-11-07T01:37:00Z",
    "firstReported": "2026-11-06T23:57:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
@@ -463,8 +521,8 @@
    "to": "Highway 1",
    "where": "SR-46 EB at US-1",
    "id": "brevard:fl511:946208",
-   "updated": "2026-11-07T01:07:00Z",
-   "lastReported": "2026-11-07T01:07:00Z",
+   "updated": "2026-11-07T01:40:00Z",
+   "lastReported": "2026-11-07T01:40:00Z",
    "firstReported": "2026-11-07T00:01:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
