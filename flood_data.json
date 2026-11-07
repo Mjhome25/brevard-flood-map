@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-07T23:30:46Z",
+ "generated": "2026-11-07T23:45:44Z",
  "errors": [],
  "items": [
   {
@@ -27,9 +27,15 @@
     "kind": "feed",
     "publishedAt": "2026-11-07T11:17:13Z"
    },
-   "awaitingOfficial": false,
-   "missingSince": null,
-   "recheck": []
+   "awaitingOfficial": true,
+   "missingSince": "2026-11-07T23:45:51Z",
+   "recheck": [],
+   "noLongerListed": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "since": "2026-11-07T23:45:51Z",
+    "wasClosed": false
+   }
   },
   {
    "fullClosure": false,
@@ -54,6 +60,41 @@
     "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
     "kind": "feed",
     "publishedAt": "2026-11-07T11:24:43Z"
+   },
+   "awaitingOfficial": true,
+   "missingSince": "2026-11-07T23:45:51Z",
+   "recheck": [],
+   "noLongerListed": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "since": "2026-11-07T23:45:51Z",
+    "wasClosed": false
+   }
+  },
+  {
+   "fullClosure": false,
+   "lanes": "No Roadblock",
+   "lat": 28.3598898067633,
+   "layer": "FHP",
+   "lng": -80.7884953403881,
+   "reported": "2026-11-07T11:38:16Z",
+   "road": "W KING ST",
+   "roadShort": "W King St",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "spot": "at Cox Rd",
+   "status": "caution",
+   "title": "MVC at W KING ST x[COX RD] [COCOA] (No Roadblock)",
+   "where": "W King St at Cox Rd",
+   "id": "brevard:fhp:20261107113816-d1e7c0af",
+   "updated": "2026-11-07T11:38:16Z",
+   "lastReported": "2026-11-07T11:38:16Z",
+   "firstReported": "2026-11-07T11:38:16Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-07T11:38:16Z"
    },
    "awaitingOfficial": false,
    "missingSince": null,
@@ -1721,41 +1762,6 @@
     "kind": "feed-dropped",
     "missingSince": "2026-11-07T00:45:46Z",
     "reopenedAt": "2026-11-07T01:01:02Z",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
-   },
-   "stillReported": []
-  },
-  {
-   "fullClosure": false,
-   "lanes": "No Roadblock",
-   "lat": 28.2599092138779,
-   "layer": "FHP",
-   "lng": -80.7269444573884,
-   "reported": "2026-11-06T10:34:18Z",
-   "road": "I-95 NB [MM193]",
-   "roadShort": "I-95 Nb [MM193]",
-   "source": "FHP live CAD",
-   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-   "spot": "at Mm193",
-   "status": "caution",
-   "title": "MVC at I-95 NB [MM193] x[MM193] [MELBOURNE] (No Roadblock)",
-   "where": "I-95 Nb [MM193] at Mm193",
-   "id": "brevard:fhp:20261106103418-0bb5b3b5",
-   "updated": "2026-11-06T10:34:18Z",
-   "lastReported": "2026-11-06T10:34:18Z",
-   "firstReported": "2026-11-06T10:34:18Z",
-   "verified": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "kind": "feed",
-    "publishedAt": "2026-11-06T10:34:18Z"
-   },
-   "reopenedAt": "2026-11-06T23:31:35Z",
-   "evidence": {
-    "agency": "Florida Highway Patrol",
-    "kind": "feed-dropped",
-    "missingSince": "2026-11-06T23:15:40Z",
-    "reopenedAt": "2026-11-06T23:31:35Z",
     "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
    },
    "stillReported": []
