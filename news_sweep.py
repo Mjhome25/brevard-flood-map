@@ -150,4 +150,9 @@ def main():
     print(f"news sweep: +{added} road reports, {proposed} reopen reports held for review, +{len(new_adv)} advisories")
 
 if __name__ == "__main__":
-    main()
+    # Off by Mike's decision, November 7, 2026: this job's sweep no longer feeds a public site. Commit an empty
+    # news_sweep.on file to run it again.
+    if os.path.exists(os.path.join(os.path.dirname(os.path.abspath(__file__)), "news_sweep.on")):
+        main()
+    else:
+        print("news sweep: turned off (no news_sweep.on file), skipped (no model call)")
