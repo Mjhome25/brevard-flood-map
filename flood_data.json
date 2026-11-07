@@ -1,41 +1,7 @@
 {
- "generated": "2026-11-07T22:15:43Z",
+ "generated": "2026-11-07T22:30:39Z",
  "errors": [],
  "items": [
-  {
-   "fullClosure": false,
-   "lanes": "No Roadblock",
-   "lat": 28.2288227580149,
-   "layer": "FHP",
-   "lng": -80.6791973274984,
-   "reported": "2026-11-07T09:01:12Z",
-   "road": "7165 N WICKHAM RD [MELBOURNE]",
-   "roadShort": "7165 N Wickham Rd [Melbourne]",
-   "source": "FHP live CAD",
-   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-   "status": "caution",
-   "title": "MVC at 7165 N WICKHAM RD [MELBOURNE] (No Roadblock)",
-   "where": "7165 N Wickham Rd [Melbourne]",
-   "id": "brevard:fhp:20261107090112-347bbd47",
-   "updated": "2026-11-07T09:01:12Z",
-   "lastReported": "2026-11-07T09:01:12Z",
-   "firstReported": "2026-11-07T09:01:12Z",
-   "verified": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "kind": "feed",
-    "publishedAt": "2026-11-07T09:01:12Z"
-   },
-   "awaitingOfficial": true,
-   "missingSince": "2026-11-07T22:15:49Z",
-   "recheck": [],
-   "noLongerListed": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "since": "2026-11-07T22:15:49Z",
-    "wasClosed": false
-   }
-  },
   {
    "approx": true,
    "city": "Melbourne",
@@ -138,6 +104,40 @@
   }
  ],
  "reopened": [
+  {
+   "fullClosure": false,
+   "lanes": "No Roadblock",
+   "lat": 28.2288227580149,
+   "layer": "FHP",
+   "lng": -80.6791973274984,
+   "reported": "2026-11-07T09:01:12Z",
+   "road": "7165 N WICKHAM RD [MELBOURNE]",
+   "roadShort": "7165 N Wickham Rd [Melbourne]",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "status": "caution",
+   "title": "MVC at 7165 N WICKHAM RD [MELBOURNE] (No Roadblock)",
+   "where": "7165 N Wickham Rd [Melbourne]",
+   "id": "brevard:fhp:20261107090112-347bbd47",
+   "updated": "2026-11-07T09:01:12Z",
+   "lastReported": "2026-11-07T09:01:12Z",
+   "firstReported": "2026-11-07T09:01:12Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-07T09:01:12Z"
+   },
+   "reopenedAt": "2026-11-07T22:30:42Z",
+   "evidence": {
+    "agency": "Florida Highway Patrol",
+    "kind": "feed-dropped",
+    "missingSince": "2026-11-07T22:15:49Z",
+    "reopenedAt": "2026-11-07T22:30:42Z",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
+   },
+   "stillReported": []
+  },
   {
    "fullClosure": false,
    "lanes": "Debris In Right Lane - Use Caution",
