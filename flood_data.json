@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-07T05:00:42Z",
+ "generated": "2026-11-07T05:15:39Z",
  "errors": [],
  "items": [
   {
@@ -27,9 +27,15 @@
     "kind": "feed",
     "publishedAt": "2026-11-06T11:20:22Z"
    },
-   "awaitingOfficial": false,
-   "missingSince": null,
-   "recheck": []
+   "awaitingOfficial": true,
+   "missingSince": "2026-11-07T05:15:41Z",
+   "recheck": [],
+   "noLongerListed": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "since": "2026-11-07T05:15:41Z",
+    "wasClosed": false
+   }
   },
   {
    "approx": true,
@@ -1951,7 +1957,7 @@
      "id": "brevard:fhp:20261106112022-ea661c4f",
      "where": "I-95 Sb [Exit Ramp] at Mm215",
      "source": "FHP live CAD",
-     "since": null
+     "since": "2026-11-07T05:15:41Z"
     }
    ]
   },
