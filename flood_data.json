@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-07T14:45:44Z",
+ "generated": "2026-11-07T15:00:58Z",
  "errors": [],
  "items": [
   {
@@ -1741,41 +1741,6 @@
     "kind": "feed-dropped",
     "missingSince": "2026-11-06T17:45:42Z",
     "reopenedAt": "2026-11-06T18:00:50Z",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
-   },
-   "stillReported": []
-  },
-  {
-   "fullClosure": false,
-   "lanes": "Road Clear",
-   "lat": 28.1601852832675,
-   "layer": "FHP",
-   "lng": -80.7058614292283,
-   "reported": "2026-11-06T13:39:32Z",
-   "road": "I-95 NB [MM186]",
-   "roadShort": "I-95 Nb [MM186]",
-   "source": "FHP live CAD",
-   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-   "spot": "at Mm186",
-   "status": "caution",
-   "title": "MVC at I-95 NB [MM186] x[MM186] [MELBOURNE] (Road Clear)",
-   "where": "I-95 Nb [MM186] at Mm186",
-   "id": "brevard:fhp:20261106133932-9ccfc09d",
-   "updated": "2026-11-06T13:39:32Z",
-   "lastReported": "2026-11-06T13:39:32Z",
-   "firstReported": "2026-11-06T13:39:32Z",
-   "verified": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "kind": "feed",
-    "publishedAt": "2026-11-06T13:39:32Z"
-   },
-   "reopenedAt": "2026-11-06T15:00:54Z",
-   "evidence": {
-    "agency": "Florida Highway Patrol",
-    "kind": "feed-dropped",
-    "missingSince": "2026-11-06T14:45:48Z",
-    "reopenedAt": "2026-11-06T15:00:54Z",
     "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
    },
    "stillReported": []
