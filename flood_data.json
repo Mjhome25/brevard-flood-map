@@ -1,41 +1,35 @@
 {
- "generated": "2026-11-07T18:00:49Z",
+ "generated": "2026-11-07T18:15:44Z",
  "errors": [],
  "items": [
   {
    "fullClosure": false,
-   "lanes": "Source said \"Road Open\" (2026-11-07 15:45 UTC); not a verified reopening",
-   "lat": 28.446715103206,
+   "lanes": "Road Block",
+   "lat": 28.114012551603,
    "layer": "FHP",
-   "lng": -80.7631748659031,
-   "reported": "2026-11-07T15:45:00Z",
-   "road": "N COCOA BLVD",
-   "roadShort": "N Cocoa Blvd",
+   "lng": -80.7057072029066,
+   "reported": "2026-11-07T06:02:24Z",
+   "road": "I-95 NB [ENT RAMP]",
+   "roadShort": "I-95 Nb [Ent Ramp]",
    "source": "FHP live CAD",
    "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-   "spot": "at Camp Rd",
-   "status": "caution",
-   "title": "MVC at N COCOA BLVD x[CAMP RD] [COCOA] (Road Open)",
-   "where": "N Cocoa Blvd at Camp Rd",
-   "id": "brevard:fhp:20261107154500-73691d39",
-   "updated": "2026-11-07T15:45:00Z",
-   "lastReported": "2026-11-07T15:45:00Z",
-   "firstReported": "2026-11-07T15:45:00Z",
+   "spot": "at Mm183",
+   "status": "closed",
+   "title": "MVC W/Roadblock at I-95 NB [ENT RAMP] x[MM183] [MELBOURNE] (Road Block)",
+   "where": "I-95 Nb [Ent Ramp] at Mm183",
+   "id": "brevard:fhp:20261107060224-913059a8",
+   "updated": "2026-11-07T06:02:24Z",
+   "lastReported": "2026-11-07T06:02:24Z",
+   "firstReported": "2026-11-07T06:02:24Z",
    "verified": {
     "agency": "Florida Highway Patrol",
     "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
     "kind": "feed",
-    "publishedAt": "2026-11-07T15:45:00Z"
+    "publishedAt": "2026-11-07T06:02:24Z"
    },
-   "awaitingOfficial": true,
-   "missingSince": "2026-11-07T18:00:56Z",
-   "recheck": [],
-   "noLongerListed": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "since": "2026-11-07T18:00:56Z",
-    "wasClosed": false
-   }
+   "awaitingOfficial": false,
+   "missingSince": null,
+   "recheck": []
   },
   {
    "fullClosure": false,
@@ -197,6 +191,41 @@
   }
  ],
  "reopened": [
+  {
+   "fullClosure": false,
+   "lanes": "Road Open",
+   "lat": 28.446715103206,
+   "layer": "FHP",
+   "lng": -80.7631748659031,
+   "reported": "2026-11-07T15:45:00Z",
+   "road": "N COCOA BLVD",
+   "roadShort": "N Cocoa Blvd",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "spot": "at Camp Rd",
+   "status": "caution",
+   "title": "MVC at N COCOA BLVD x[CAMP RD] [COCOA] (Road Open)",
+   "where": "N Cocoa Blvd at Camp Rd",
+   "id": "brevard:fhp:20261107154500-73691d39",
+   "updated": "2026-11-07T15:45:00Z",
+   "lastReported": "2026-11-07T15:45:00Z",
+   "firstReported": "2026-11-07T15:45:00Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-07T15:45:00Z"
+   },
+   "reopenedAt": "2026-11-07T18:15:51Z",
+   "evidence": {
+    "agency": "Florida Highway Patrol",
+    "kind": "feed-dropped",
+    "missingSince": "2026-11-07T18:00:56Z",
+    "reopenedAt": "2026-11-07T18:15:51Z",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
+   },
+   "stillReported": []
+  },
   {
    "fullClosure": false,
    "lanes": "Road Open",
@@ -1740,104 +1769,6 @@
     "missingSince": "2026-11-06T18:45:45Z",
     "reopenedAt": "2026-11-06T19:00:59Z",
     "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
-   },
-   "stillReported": []
-  },
-  {
-   "dir": "NB",
-   "fullClosure": false,
-   "lanes": "Right shoulder blocked",
-   "lat": 28.15987,
-   "layer": "Incidents",
-   "line": [
-    [
-     28.12748,
-     -80.70583
-    ],
-    [
-     28.12967,
-     -80.70583
-    ],
-    [
-     28.13156,
-     -80.70583
-    ],
-    [
-     28.13313,
-     -80.70582
-    ],
-    [
-     28.13469,
-     -80.70582
-    ],
-    [
-     28.13735,
-     -80.70582
-    ],
-    [
-     28.13901,
-     -80.70581
-    ],
-    [
-     28.14142,
-     -80.70581
-    ],
-    [
-     28.14451,
-     -80.70581
-    ],
-    [
-     28.14607,
-     -80.7058
-    ],
-    [
-     28.14949,
-     -80.7058
-    ],
-    [
-     28.15201,
-     -80.7058
-    ],
-    [
-     28.15598,
-     -80.70579
-    ],
-    [
-     28.15879,
-     -80.70579
-    ],
-    [
-     28.15955,
-     -80.70579
-    ]
-   ],
-   "lng": -80.705823,
-   "reported": "2026-11-06T13:44:00Z",
-   "road": "I-95",
-   "roadShort": "I-95",
-   "source": "FL511 (FDOT)",
-   "sourceUrl": "https://fl511.com",
-   "spot": "from before MM 184 to MM 186",
-   "status": "caution",
-   "title": "MVC on I-95 North, from before MM 184 to MM 186. Right shoulder blocked",
-   "where": "I-95 NB from before MM 184 to MM 186",
-   "id": "brevard:fl511:944892",
-   "updated": "2026-11-06T17:16:00Z",
-   "lastReported": "2026-11-06T17:16:00Z",
-   "firstReported": "2026-11-06T13:48:00Z",
-   "verified": {
-    "agency": "FL511 (FDOT)",
-    "url": "https://fl511.com",
-    "kind": "feed",
-    "publishedAt": "2026-11-06T13:48:00Z"
-   },
-   "reopenedAt": "2026-11-06T18:15:46Z",
-   "evidence": {
-    "agency": "FL511 (FDOT)",
-    "kind": "feed-dropped",
-    "missingSince": "2026-11-06T18:00:50Z",
-    "reopenedAt": "2026-11-06T18:15:46Z",
-    "url": "https://fl511.com"
    },
    "stillReported": []
   }
