@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-07T16:31:37Z",
+ "generated": "2026-11-07T16:45:44Z",
  "errors": [],
  "items": [
   {
@@ -26,9 +26,15 @@
     "kind": "feed",
     "publishedAt": "2026-11-07T15:32:52Z"
    },
-   "awaitingOfficial": false,
-   "missingSince": null,
-   "recheck": []
+   "awaitingOfficial": true,
+   "missingSince": "2026-11-07T16:45:50Z",
+   "recheck": [],
+   "noLongerListed": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "since": "2026-11-07T16:45:50Z",
+    "wasClosed": false
+   }
   },
   {
    "fullClosure": false,
