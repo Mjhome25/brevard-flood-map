@@ -1,89 +1,7 @@
 {
- "generated": "2026-11-07T14:00:50Z",
+ "generated": "2026-11-07T14:15:42Z",
  "errors": [],
  "items": [
-  {
-   "dir": "SB",
-   "fullClosure": false,
-   "lanes": "Right shoulder blocked",
-   "lat": 28.045678,
-   "layer": "Incidents",
-   "line": [
-    [
-     28.0457,
-     -80.66641
-    ],
-    [
-     28.04531,
-     -80.66582
-    ],
-    [
-     28.04465,
-     -80.6648
-    ],
-    [
-     28.04428,
-     -80.66423
-    ],
-    [
-     28.04399,
-     -80.66379
-    ],
-    [
-     28.04369,
-     -80.66336
-    ],
-    [
-     28.04344,
-     -80.66304
-    ],
-    [
-     28.04322,
-     -80.66277
-    ],
-    [
-     28.043,
-     -80.66253
-    ],
-    [
-     28.04275,
-     -80.66228
-    ],
-    [
-     28.04252,
-     -80.66209
-    ]
-   ],
-   "lng": -80.666427,
-   "reported": "2026-11-07T08:42:00Z",
-   "road": "I-95",
-   "roadShort": "I-95",
-   "source": "FL511 (FDOT)",
-   "sourceUrl": "https://fl511.com",
-   "spot": "at MM 177",
-   "status": "caution",
-   "title": "MVC on I-95 South, at MM 177. Right shoulder blocked",
-   "where": "I-95 SB at MM 177",
-   "id": "brevard:fl511:946710",
-   "updated": "2026-11-07T12:42:00Z",
-   "lastReported": "2026-11-07T12:42:00Z",
-   "firstReported": "2026-11-07T08:55:00Z",
-   "verified": {
-    "agency": "FL511 (FDOT)",
-    "url": "https://fl511.com",
-    "kind": "feed",
-    "publishedAt": "2026-11-07T08:55:00Z"
-   },
-   "awaitingOfficial": true,
-   "missingSince": "2026-11-07T14:00:54Z",
-   "recheck": [],
-   "noLongerListed": {
-    "agency": "FL511 (FDOT)",
-    "url": "https://fl511.com",
-    "since": "2026-11-07T14:00:54Z",
-    "wasClosed": false
-   }
-  },
   {
    "approx": true,
    "city": "Melbourne",
@@ -187,6 +105,88 @@
  ],
  "reopened": [
   {
+   "dir": "SB",
+   "fullClosure": false,
+   "lanes": "Right shoulder blocked",
+   "lat": 28.045678,
+   "layer": "Incidents",
+   "line": [
+    [
+     28.0457,
+     -80.66641
+    ],
+    [
+     28.04531,
+     -80.66582
+    ],
+    [
+     28.04465,
+     -80.6648
+    ],
+    [
+     28.04428,
+     -80.66423
+    ],
+    [
+     28.04399,
+     -80.66379
+    ],
+    [
+     28.04369,
+     -80.66336
+    ],
+    [
+     28.04344,
+     -80.66304
+    ],
+    [
+     28.04322,
+     -80.66277
+    ],
+    [
+     28.043,
+     -80.66253
+    ],
+    [
+     28.04275,
+     -80.66228
+    ],
+    [
+     28.04252,
+     -80.66209
+    ]
+   ],
+   "lng": -80.666427,
+   "reported": "2026-11-07T08:42:00Z",
+   "road": "I-95",
+   "roadShort": "I-95",
+   "source": "FL511 (FDOT)",
+   "sourceUrl": "https://fl511.com",
+   "spot": "at MM 177",
+   "status": "caution",
+   "title": "MVC on I-95 South, at MM 177. Right shoulder blocked",
+   "where": "I-95 SB at MM 177",
+   "id": "brevard:fl511:946710",
+   "updated": "2026-11-07T12:42:00Z",
+   "lastReported": "2026-11-07T12:42:00Z",
+   "firstReported": "2026-11-07T08:55:00Z",
+   "verified": {
+    "agency": "FL511 (FDOT)",
+    "url": "https://fl511.com",
+    "kind": "feed",
+    "publishedAt": "2026-11-07T08:55:00Z"
+   },
+   "reopenedAt": "2026-11-07T14:15:49Z",
+   "evidence": {
+    "agency": "FL511 (FDOT)",
+    "kind": "feed-dropped",
+    "missingSince": "2026-11-07T14:00:54Z",
+    "reopenedAt": "2026-11-07T14:15:49Z",
+    "url": "https://fl511.com"
+   },
+   "stillReported": []
+  },
+  {
    "fullClosure": false,
    "lanes": "No Roadblock",
    "lat": 28.0455798067633,
@@ -219,14 +219,7 @@
     "reopenedAt": "2026-11-07T11:15:41Z",
     "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
    },
-   "stillReported": [
-    {
-     "id": "brevard:fl511:946710",
-     "where": "I-95 SB at MM 177",
-     "source": "FL511 (FDOT)",
-     "since": "2026-11-07T14:00:54Z"
-    }
-   ]
+   "stillReported": []
   },
   {
    "fullClosure": false,
