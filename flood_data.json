@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-07T19:00:52Z",
+ "generated": "2026-11-07T19:15:33Z",
  "errors": [],
  "items": [
   {
@@ -165,9 +165,15 @@
     "kind": "feed",
     "publishedAt": "2026-11-07T16:05:49Z"
    },
-   "awaitingOfficial": false,
-   "missingSince": null,
-   "recheck": []
+   "awaitingOfficial": true,
+   "missingSince": "2026-11-07T19:15:39Z",
+   "recheck": [],
+   "noLongerListed": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "since": "2026-11-07T19:15:39Z",
+    "wasClosed": true
+   }
   },
   {
    "fullClosure": false,
@@ -194,9 +200,15 @@
     "kind": "feed",
     "publishedAt": "2026-11-07T17:46:32Z"
    },
-   "awaitingOfficial": false,
-   "missingSince": null,
-   "recheck": []
+   "awaitingOfficial": true,
+   "missingSince": "2026-11-07T19:15:39Z",
+   "recheck": [],
+   "noLongerListed": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "since": "2026-11-07T19:15:39Z",
+    "wasClosed": false
+   }
   },
   {
    "approx": true,
@@ -1843,41 +1855,6 @@
     "missingSince": "2026-11-06T19:00:59Z",
     "reopenedAt": "2026-11-06T19:15:42Z",
     "url": "https://fl511.com"
-   },
-   "stillReported": []
-  },
-  {
-   "fullClosure": false,
-   "lanes": "No Road Block",
-   "lat": 28.2311490206412,
-   "layer": "FHP",
-   "lng": -80.722214061669,
-   "reported": "2026-11-06T16:37:28Z",
-   "road": "SHOPPES DR",
-   "roadShort": "Shoppes Dr",
-   "source": "FHP live CAD",
-   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-   "spot": "at George T Edwards Dr",
-   "status": "caution",
-   "title": "MVC at SHOPPES DR x[GEORGE T EDWARDS DR] [MELBOURNE] (No Road Block)",
-   "where": "Shoppes Dr at George T Edwards Dr",
-   "id": "brevard:fhp:20261106163728-f2c6e480",
-   "updated": "2026-11-06T16:37:28Z",
-   "lastReported": "2026-11-06T16:37:28Z",
-   "firstReported": "2026-11-06T16:37:28Z",
-   "verified": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "kind": "feed",
-    "publishedAt": "2026-11-06T16:37:28Z"
-   },
-   "reopenedAt": "2026-11-06T19:00:59Z",
-   "evidence": {
-    "agency": "Florida Highway Patrol",
-    "kind": "feed-dropped",
-    "missingSince": "2026-11-06T18:45:45Z",
-    "reopenedAt": "2026-11-06T19:00:59Z",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
    },
    "stillReported": []
   }
