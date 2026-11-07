@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-07T05:45:35Z",
+ "generated": "2026-11-07T06:00:49Z",
  "errors": [],
  "items": [
   {
@@ -1917,40 +1917,6 @@
     "missingSince": "2026-11-06T06:32:05Z",
     "reopenedAt": "2026-11-06T06:45:34Z",
     "url": "https://fl511.com"
-   },
-   "stillReported": []
-  },
-  {
-   "fullClosure": false,
-   "lat": 28.5467798067633,
-   "layer": "FHP",
-   "lng": -80.8516845440139,
-   "reported": "2026-11-06T17:11:10Z",
-   "road": "I-95 SB [MM215]",
-   "roadShort": "I-95 Sb [MM215]",
-   "source": "FHP live CAD",
-   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-   "spot": "at Mm215",
-   "status": "caution",
-   "title": "MVC at I-95 SB [MM215] x[MM215] [TITUSVILLE]",
-   "where": "I-95 Sb [MM215] at Mm215",
-   "id": "brevard:fhp:20261106171110-d2e89f72",
-   "updated": "2026-11-06T17:11:10Z",
-   "lastReported": "2026-11-06T17:11:10Z",
-   "firstReported": "2026-11-06T17:11:10Z",
-   "verified": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "kind": "feed",
-    "publishedAt": "2026-11-06T17:11:10Z"
-   },
-   "reopenedAt": "2026-11-06T06:00:52Z",
-   "evidence": {
-    "agency": "Florida Highway Patrol",
-    "kind": "feed-dropped",
-    "missingSince": "2026-11-06T05:45:39Z",
-    "reopenedAt": "2026-11-06T06:00:52Z",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
    },
    "stillReported": []
   }
