@@ -1,42 +1,7 @@
 {
- "generated": "2026-11-07T03:00:41Z",
+ "generated": "2026-11-07T03:15:44Z",
  "errors": [],
  "items": [
-  {
-   "fullClosure": false,
-   "lanes": "Source said \"Roadway Open\" (2026-11-06 10:56 UTC); not a verified reopening",
-   "lat": 28.0345947035573,
-   "layer": "FHP",
-   "lng": -80.6561855522652,
-   "reported": "2026-11-06T10:56:06Z",
-   "road": "I-95 SB [MM176]",
-   "roadShort": "I-95 Sb [MM176]",
-   "source": "FHP live CAD",
-   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-   "spot": "at Mm176",
-   "status": "caution",
-   "title": "MVC at I-95 SB [MM176] x[MM176] [PALM BAY] (Roadway Open)",
-   "where": "I-95 Sb [MM176] at Mm176",
-   "id": "brevard:fhp:20261106105606-f477ea16",
-   "updated": "2026-11-06T10:56:06Z",
-   "lastReported": "2026-11-06T10:56:06Z",
-   "firstReported": "2026-11-06T10:56:06Z",
-   "verified": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "kind": "feed",
-    "publishedAt": "2026-11-06T10:56:06Z"
-   },
-   "awaitingOfficial": true,
-   "missingSince": "2026-11-07T03:00:47Z",
-   "recheck": [],
-   "noLongerListed": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "since": "2026-11-07T03:00:47Z",
-    "wasClosed": false
-   }
-  },
   {
    "fullClosure": false,
    "lanes": "No Roadblock",
@@ -94,155 +59,6 @@
    "awaitingOfficial": false,
    "missingSince": null,
    "recheck": []
-  },
-  {
-   "from": "Taylor St",
-   "fullClosure": false,
-   "lanes": "Roadblock",
-   "lat": 28.6657301800615,
-   "layer": "FHP",
-   "line": [
-    [
-     28.665241,
-     -80.84563
-    ],
-    [
-     28.665586,
-     -80.844921
-    ],
-    [
-     28.665586,
-     -80.844921
-    ]
-   ],
-   "lng": -80.8449132652194,
-   "reported": "2026-11-06T11:44:50Z",
-   "road": "W MAIN ST",
-   "roadShort": "W Main St",
-   "source": "FHP live CAD",
-   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-   "spot": "at Us-1",
-   "status": "closed",
-   "title": "MVC W/ And Roadblock at W MAIN ST x[US-1] [MIMS] (Roadblock)",
-   "to": "Highway 1",
-   "where": "W Main St at Us-1",
-   "id": "brevard:fhp:20261106114450-594a85fe",
-   "updated": "2026-11-06T11:44:50Z",
-   "lastReported": "2026-11-06T11:44:50Z",
-   "firstReported": "2026-11-06T11:44:50Z",
-   "verified": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "kind": "feed",
-    "publishedAt": "2026-11-06T11:44:50Z"
-   },
-   "awaitingOfficial": true,
-   "missingSince": "2026-11-07T03:00:47Z",
-   "recheck": [
-    "source shows reduced impact",
-    "source changed its lane description"
-   ],
-   "noLongerListed": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "since": "2026-11-07T03:00:47Z",
-    "wasClosed": true
-   }
-  },
-  {
-   "from": "Star Rush Dr",
-   "fullClosure": false,
-   "lanes": "Roadblock - Use Caution",
-   "lat": 28.2653305928854,
-   "layer": "FHP",
-   "line": [
-    [
-     28.265959,
-     -80.721867
-    ],
-    [
-     28.265664,
-     -80.720892
-    ],
-    [
-     28.265575,
-     -80.720499
-    ],
-    [
-     28.265488,
-     -80.720024
-    ],
-    [
-     28.265442,
-     -80.719676
-    ],
-    [
-     28.265407,
-     -80.719359
-    ],
-    [
-     28.265373,
-     -80.718619
-    ],
-    [
-     28.265358,
-     -80.718258
-    ],
-    [
-     28.265342,
-     -80.718118
-    ],
-    [
-     28.265339,
-     -80.718094
-    ],
-    [
-     28.265343,
-     -80.717685
-    ],
-    [
-     28.265323,
-     -80.716773
-    ],
-    [
-     28.265317,
-     -80.71651
-    ],
-    [
-     28.265303,
-     -80.71602
-    ]
-   ],
-   "lng": -80.7181194353373,
-   "reported": "2026-11-06T12:11:30Z",
-   "road": "VIERA BLVD",
-   "roadShort": "Viera Blvd",
-   "source": "FHP live CAD",
-   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-   "spot": "at Murrell Rd",
-   "status": "closed",
-   "title": "MVC W/Roadblock at VIERA BLVD x[MURRELL RD] [MELBOURNE] (Roadblock - Use Caution)",
-   "to": "Berglund Ln",
-   "where": "Viera Blvd at Murrell Rd",
-   "id": "brevard:fhp:20261106121130-53b9d8f4",
-   "updated": "2026-11-06T12:11:30Z",
-   "lastReported": "2026-11-06T12:11:30Z",
-   "firstReported": "2026-11-06T12:11:30Z",
-   "verified": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "kind": "feed",
-    "publishedAt": "2026-11-06T12:11:30Z"
-   },
-   "awaitingOfficial": true,
-   "missingSince": "2026-11-07T03:00:47Z",
-   "recheck": [],
-   "noLongerListed": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "since": "2026-11-07T03:00:47Z",
-    "wasClosed": true
-   }
   },
   {
    "dir": "SB",
@@ -398,6 +214,187 @@
   }
  ],
  "reopened": [
+  {
+   "fullClosure": false,
+   "lanes": "Roadway Open",
+   "lat": 28.0345947035573,
+   "layer": "FHP",
+   "lng": -80.6561855522652,
+   "reported": "2026-11-06T10:56:06Z",
+   "road": "I-95 SB [MM176]",
+   "roadShort": "I-95 Sb [MM176]",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "spot": "at Mm176",
+   "status": "caution",
+   "title": "MVC at I-95 SB [MM176] x[MM176] [PALM BAY] (Roadway Open)",
+   "where": "I-95 Sb [MM176] at Mm176",
+   "id": "brevard:fhp:20261106105606-f477ea16",
+   "updated": "2026-11-06T10:56:06Z",
+   "lastReported": "2026-11-06T10:56:06Z",
+   "firstReported": "2026-11-06T10:56:06Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-06T10:56:06Z"
+   },
+   "reopenedAt": "2026-11-07T03:15:47Z",
+   "evidence": {
+    "agency": "Florida Highway Patrol",
+    "kind": "feed-dropped",
+    "missingSince": "2026-11-07T03:00:47Z",
+    "reopenedAt": "2026-11-07T03:15:47Z",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
+   },
+   "stillReported": []
+  },
+  {
+   "from": "Taylor St",
+   "fullClosure": false,
+   "lanes": "Roadblock",
+   "lat": 28.6657301800615,
+   "layer": "FHP",
+   "line": [
+    [
+     28.665241,
+     -80.84563
+    ],
+    [
+     28.665586,
+     -80.844921
+    ],
+    [
+     28.665586,
+     -80.844921
+    ]
+   ],
+   "lng": -80.8449132652194,
+   "reported": "2026-11-06T11:44:50Z",
+   "road": "W MAIN ST",
+   "roadShort": "W Main St",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "spot": "at Us-1",
+   "status": "closed",
+   "title": "MVC W/ And Roadblock at W MAIN ST x[US-1] [MIMS] (Roadblock)",
+   "to": "Highway 1",
+   "where": "W Main St at Us-1",
+   "id": "brevard:fhp:20261106114450-594a85fe",
+   "updated": "2026-11-06T11:44:50Z",
+   "lastReported": "2026-11-06T11:44:50Z",
+   "firstReported": "2026-11-06T11:44:50Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-06T11:44:50Z"
+   },
+   "reopenedAt": "2026-11-07T03:15:47Z",
+   "evidence": {
+    "agency": "Florida Highway Patrol",
+    "kind": "feed-dropped",
+    "missingSince": "2026-11-07T03:00:47Z",
+    "reopenedAt": "2026-11-07T03:15:47Z",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
+   },
+   "stillReported": []
+  },
+  {
+   "from": "Star Rush Dr",
+   "fullClosure": false,
+   "lanes": "Roadblock - Use Caution",
+   "lat": 28.2653305928854,
+   "layer": "FHP",
+   "line": [
+    [
+     28.265959,
+     -80.721867
+    ],
+    [
+     28.265664,
+     -80.720892
+    ],
+    [
+     28.265575,
+     -80.720499
+    ],
+    [
+     28.265488,
+     -80.720024
+    ],
+    [
+     28.265442,
+     -80.719676
+    ],
+    [
+     28.265407,
+     -80.719359
+    ],
+    [
+     28.265373,
+     -80.718619
+    ],
+    [
+     28.265358,
+     -80.718258
+    ],
+    [
+     28.265342,
+     -80.718118
+    ],
+    [
+     28.265339,
+     -80.718094
+    ],
+    [
+     28.265343,
+     -80.717685
+    ],
+    [
+     28.265323,
+     -80.716773
+    ],
+    [
+     28.265317,
+     -80.71651
+    ],
+    [
+     28.265303,
+     -80.71602
+    ]
+   ],
+   "lng": -80.7181194353373,
+   "reported": "2026-11-06T12:11:30Z",
+   "road": "VIERA BLVD",
+   "roadShort": "Viera Blvd",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "spot": "at Murrell Rd",
+   "status": "closed",
+   "title": "MVC W/Roadblock at VIERA BLVD x[MURRELL RD] [MELBOURNE] (Roadblock - Use Caution)",
+   "to": "Berglund Ln",
+   "where": "Viera Blvd at Murrell Rd",
+   "id": "brevard:fhp:20261106121130-53b9d8f4",
+   "updated": "2026-11-06T12:11:30Z",
+   "lastReported": "2026-11-06T12:11:30Z",
+   "firstReported": "2026-11-06T12:11:30Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-06T12:11:30Z"
+   },
+   "reopenedAt": "2026-11-07T03:15:47Z",
+   "evidence": {
+    "agency": "Florida Highway Patrol",
+    "kind": "feed-dropped",
+    "missingSince": "2026-11-07T03:00:47Z",
+    "reopenedAt": "2026-11-07T03:15:47Z",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
+   },
+   "stillReported": []
+  },
   {
    "dir": "NB",
    "fullClosure": false,
@@ -2521,41 +2518,6 @@
     "kind": "feed-dropped",
     "missingSince": "2026-11-06T03:15:46Z",
     "reopenedAt": "2026-11-06T03:31:36Z",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
-   },
-   "stillReported": []
-  },
-  {
-   "fullClosure": false,
-   "lanes": "No Roadblock",
-   "lat": 28.1745060693896,
-   "layer": "FHP",
-   "lng": -80.7058600750106,
-   "reported": "2026-11-05T14:27:49Z",
-   "road": "I-95 NB [MM187]",
-   "roadShort": "I-95 Nb [MM187]",
-   "source": "FHP live CAD",
-   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-   "spot": "at Mm187",
-   "status": "caution",
-   "title": "MVC at I-95 NB [MM187] x[MM187] [MELBOURNE] (No Roadblock)",
-   "where": "I-95 Nb [MM187] at Mm187",
-   "id": "brevard:fhp:20261105142749-d17eb3b9",
-   "updated": "2026-11-05T14:27:49Z",
-   "lastReported": "2026-11-05T14:27:49Z",
-   "firstReported": "2026-11-05T14:27:49Z",
-   "verified": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "kind": "feed",
-    "publishedAt": "2026-11-05T14:27:49Z"
-   },
-   "reopenedAt": "2026-11-06T03:00:59Z",
-   "evidence": {
-    "agency": "Florida Highway Patrol",
-    "kind": "feed-dropped",
-    "missingSince": "2026-11-06T02:45:42Z",
-    "reopenedAt": "2026-11-06T03:00:59Z",
     "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
    },
    "stillReported": []
