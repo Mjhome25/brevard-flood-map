@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-07T18:45:36Z",
+ "generated": "2026-11-07T19:00:52Z",
  "errors": [],
  "items": [
   {
@@ -75,6 +75,66 @@
     "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
     "kind": "feed",
     "publishedAt": "2026-11-07T06:33:35Z"
+   },
+   "awaitingOfficial": true,
+   "missingSince": null,
+   "recheck": [
+    "source changed its lane description"
+   ]
+  },
+  {
+   "fullClosure": false,
+   "lanes": "Debris In Road - Use Caution",
+   "lat": 28.4605392007027,
+   "layer": "FHP",
+   "lng": -80.7635032623756,
+   "reported": "2026-11-07T06:49:00Z",
+   "road": "N COCOA BLVD [SB]",
+   "roadShort": "N Cocoa Blvd [Sb]",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "spot": "at Broadway Blvd",
+   "status": "caution",
+   "title": "Roadway Debris/Object at N COCOA BLVD [SB] x[BROADWAY BLVD] [COCOA] (Debris In Road - Use Caution)",
+   "where": "N Cocoa Blvd [Sb] at Broadway Blvd",
+   "id": "brevard:fhp:20261107064900-8f0c1ddb",
+   "updated": "2026-11-07T06:49:00Z",
+   "lastReported": "2026-11-07T06:49:00Z",
+   "firstReported": "2026-11-07T06:49:00Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-07T06:49:00Z"
+   },
+   "awaitingOfficial": false,
+   "missingSince": null,
+   "recheck": []
+  },
+  {
+   "fullClosure": false,
+   "lanes": "No Road Block",
+   "lat": 28.2854035177866,
+   "layer": "FHP",
+   "lng": -80.7348938646266,
+   "reported": "2026-11-07T06:59:16Z",
+   "road": "I-95 SB [MM195]",
+   "roadShort": "I-95 Sb [MM195]",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "spot": "at Mm195",
+   "status": "caution",
+   "title": "MVC at I-95 SB [MM195] x[MM195] [ROCKLEDGE] (No Road Block)",
+   "where": "I-95 Sb [MM195] at Mm195",
+   "id": "brevard:fhp:20261107065916-133e8104",
+   "updated": "2026-11-07T06:59:16Z",
+   "lastReported": "2026-11-07T06:59:16Z",
+   "firstReported": "2026-11-07T06:59:16Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-07T06:59:16Z"
    },
    "awaitingOfficial": false,
    "missingSince": null,
