@@ -1,42 +1,7 @@
 {
- "generated": "2026-11-07T05:15:39Z",
+ "generated": "2026-11-07T05:31:34Z",
  "errors": [],
  "items": [
-  {
-   "fullClosure": false,
-   "lanes": "No Roadblock",
-   "lat": 28.5466727580149,
-   "layer": "FHP",
-   "lng": -80.8519432510067,
-   "reported": "2026-11-06T11:20:22Z",
-   "road": "I-95 SB [EXIT RAMP]",
-   "roadShort": "I-95 Sb [Exit Ramp]",
-   "source": "FHP live CAD",
-   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-   "spot": "at Mm215",
-   "status": "caution",
-   "title": "MVC at I-95 SB [EXIT RAMP] x[MM215] [TITUSVILLE] (No Roadblock)",
-   "where": "I-95 Sb [Exit Ramp] at Mm215",
-   "id": "brevard:fhp:20261106112022-ea661c4f",
-   "updated": "2026-11-06T11:20:22Z",
-   "lastReported": "2026-11-06T11:20:22Z",
-   "firstReported": "2026-11-06T11:20:22Z",
-   "verified": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "kind": "feed",
-    "publishedAt": "2026-11-06T11:20:22Z"
-   },
-   "awaitingOfficial": true,
-   "missingSince": "2026-11-07T05:15:41Z",
-   "recheck": [],
-   "noLongerListed": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "since": "2026-11-07T05:15:41Z",
-    "wasClosed": false
-   }
-  },
   {
    "approx": true,
    "city": "Melbourne",
@@ -139,6 +104,41 @@
   }
  ],
  "reopened": [
+  {
+   "fullClosure": false,
+   "lanes": "No Roadblock",
+   "lat": 28.5466727580149,
+   "layer": "FHP",
+   "lng": -80.8519432510067,
+   "reported": "2026-11-06T11:20:22Z",
+   "road": "I-95 SB [EXIT RAMP]",
+   "roadShort": "I-95 Sb [Exit Ramp]",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "spot": "at Mm215",
+   "status": "caution",
+   "title": "MVC at I-95 SB [EXIT RAMP] x[MM215] [TITUSVILLE] (No Roadblock)",
+   "where": "I-95 Sb [Exit Ramp] at Mm215",
+   "id": "brevard:fhp:20261106112022-ea661c4f",
+   "updated": "2026-11-06T11:20:22Z",
+   "lastReported": "2026-11-06T11:20:22Z",
+   "firstReported": "2026-11-06T11:20:22Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-06T11:20:22Z"
+   },
+   "reopenedAt": "2026-11-07T05:31:37Z",
+   "evidence": {
+    "agency": "Florida Highway Patrol",
+    "kind": "feed-dropped",
+    "missingSince": "2026-11-07T05:15:41Z",
+    "reopenedAt": "2026-11-07T05:31:37Z",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
+   },
+   "stillReported": []
+  },
   {
    "fullClosure": false,
    "lanes": "Unknown Roadblock - Use Caution",
@@ -1952,14 +1952,7 @@
     "reopenedAt": "2026-11-06T06:00:52Z",
     "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
    },
-   "stillReported": [
-    {
-     "id": "brevard:fhp:20261106112022-ea661c4f",
-     "where": "I-95 Sb [Exit Ramp] at Mm215",
-     "source": "FHP live CAD",
-     "since": "2026-11-07T05:15:41Z"
-    }
-   ]
+   "stillReported": []
   },
   {
    "dir": "SB",
@@ -2330,6 +2323,12 @@
    "time": "2026-11-07T01:21:00Z",
    "text": "Update to the St. Johns River flood warning near Cocoa (9 miles west) in Brevard County: at 7:15 PM Friday the river stood at 16.9 feet, above the 16.0-foot flood stage, and moderate flooding is happening now. NWS now expects the river to stay steady at about 16.9 feet and still says major flooding is forecast. The warning stays in effect until further notice. At 17.2 feet the Providence Road area west of Cocoa becomes impassable, cutting off access to the Mullet Lane and Bass Road area. Do not drive around barricades or through flooded areas, and use caution near the riverbanks.",
    "url": "https://www.defconlevel.com/alert/2026-11-07-nws-noaa-weather-flood-warning-issued-november-6-at-8-21pm-est-by-nws-melbourne-fl"
+  },
+  {
+   "agency": "National Weather Service Melbourne / Brevard County Emergency Management (via News 6 WKMG)",
+   "time": "2026-11-07T05:00:00Z",
+   "text": "In written answers to News 6 on Friday, NWS Melbourne said the St. Johns River near Cocoa should crest at about 17.1 feet around Tuesday or Wednesday, November 10\u201311. That is above the 17-foot major flood stage. At 17.2 feet, Providence Road west of Cocoa can become impassable, which could cut off access to the Mullet Lane and Bass Road areas. River forecasts can change. Brevard County Emergency Management is warning residents west of I-95 and along flood-prone parts of the St. Johns River to watch for flooding in low-lying areas. Do not drive through flooded roads.",
+   "url": "https://www.clickorlando.com/news/local/2026/11/07/st-johns-river-flooding-near-cocoa-could-rival-tropical-storm-fay-as-residents-brace-for-major-flood/"
   }
  ]
 }
