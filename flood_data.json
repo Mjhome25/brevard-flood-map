@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-07T16:00:43Z",
+ "generated": "2026-11-07T16:15:40Z",
  "errors": [],
  "items": [
   {
@@ -62,6 +62,35 @@
   {
    "fullClosure": false,
    "lanes": "Source said \"Road Open\" (2026-11-07 15:50 UTC); not a verified reopening",
+   "lat": 27.9734321651296,
+   "layer": "FHP",
+   "lng": -80.6148704895727,
+   "reported": "2026-11-07T15:50:35Z",
+   "road": "I-95 SB [MM170.5]",
+   "roadShort": "I-95 Sb [MM170.5]",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "spot": "at Mm171",
+   "status": "caution",
+   "title": "MVC at I-95 SB [MM170.5] x[MM171] [MALABAR] (Road Open)",
+   "where": "I-95 Sb [MM170.5] at Mm171",
+   "id": "brevard:fhp:20261107155035-2ca1454c",
+   "updated": "2026-11-07T15:50:35Z",
+   "lastReported": "2026-11-07T15:50:35Z",
+   "firstReported": "2026-11-07T15:50:35Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-07T15:50:35Z"
+   },
+   "awaitingOfficial": false,
+   "missingSince": null,
+   "recheck": []
+  },
+  {
+   "fullClosure": false,
+   "lanes": "Source said \"Road Open\" (2026-11-07 15:50 UTC); not a verified reopening",
    "lat": 27.9970021651296,
    "layer": "FHP",
    "lng": -80.6295004590729,
@@ -83,6 +112,41 @@
     "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
     "kind": "feed",
     "publishedAt": "2026-11-07T15:50:35Z"
+   },
+   "awaitingOfficial": true,
+   "missingSince": "2026-11-07T16:15:45Z",
+   "recheck": [],
+   "noLongerListed": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "since": "2026-11-07T16:15:45Z",
+    "wasClosed": false
+   }
+  },
+  {
+   "fullClosure": false,
+   "lanes": "Roadblock",
+   "lat": 28.3613239306105,
+   "layer": "FHP",
+   "lng": -80.7002893515691,
+   "reported": "2026-11-07T16:05:49Z",
+   "road": "MERRITT AVE E",
+   "roadShort": "Merritt Ave E",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "spot": "at N Courtenay Pkwy",
+   "status": "closed",
+   "title": "MVC W/Roadblock at MERRITT AVE E x[N COURTENAY PKWY] [MERRITT ISLAND] (Roadblock)",
+   "where": "Merritt Ave E at N Courtenay Pkwy",
+   "id": "brevard:fhp:20261107160549-546272bd",
+   "updated": "2026-11-07T16:05:49Z",
+   "lastReported": "2026-11-07T16:05:49Z",
+   "firstReported": "2026-11-07T16:05:49Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-07T16:05:49Z"
    },
    "awaitingOfficial": false,
    "missingSince": null,
