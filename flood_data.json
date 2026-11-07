@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-07T16:15:40Z",
+ "generated": "2026-11-07T16:31:37Z",
  "errors": [],
  "items": [
   {
@@ -87,41 +87,6 @@
    "awaitingOfficial": false,
    "missingSince": null,
    "recheck": []
-  },
-  {
-   "fullClosure": false,
-   "lanes": "Source said \"Road Open\" (2026-11-07 15:50 UTC); not a verified reopening",
-   "lat": 27.9970021651296,
-   "layer": "FHP",
-   "lng": -80.6295004590729,
-   "reported": "2026-11-07T15:50:35Z",
-   "road": "I-95 SB [MM173]",
-   "roadShort": "I-95 Sb [MM173]",
-   "source": "FHP live CAD",
-   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-   "spot": "at Mm173",
-   "status": "caution",
-   "title": "MVC at I-95 SB [MM173] x[MM173] [PALM BAY] (Road Open)",
-   "where": "I-95 Sb [MM173] at Mm173",
-   "id": "brevard:fhp:20261107155035-42189524",
-   "updated": "2026-11-07T15:50:35Z",
-   "lastReported": "2026-11-07T15:50:35Z",
-   "firstReported": "2026-11-07T15:50:35Z",
-   "verified": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "kind": "feed",
-    "publishedAt": "2026-11-07T15:50:35Z"
-   },
-   "awaitingOfficial": true,
-   "missingSince": "2026-11-07T16:15:45Z",
-   "recheck": [],
-   "noLongerListed": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "since": "2026-11-07T16:15:45Z",
-    "wasClosed": false
-   }
   },
   {
    "fullClosure": false,
@@ -254,6 +219,41 @@
   }
  ],
  "reopened": [
+  {
+   "fullClosure": false,
+   "lanes": "Road Open",
+   "lat": 27.9970021651296,
+   "layer": "FHP",
+   "lng": -80.6295004590729,
+   "reported": "2026-11-07T15:50:35Z",
+   "road": "I-95 SB [MM173]",
+   "roadShort": "I-95 Sb [MM173]",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "spot": "at Mm173",
+   "status": "caution",
+   "title": "MVC at I-95 SB [MM173] x[MM173] [PALM BAY] (Road Open)",
+   "where": "I-95 Sb [MM173] at Mm173",
+   "id": "brevard:fhp:20261107155035-42189524",
+   "updated": "2026-11-07T15:50:35Z",
+   "lastReported": "2026-11-07T15:50:35Z",
+   "firstReported": "2026-11-07T15:50:35Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-07T15:50:35Z"
+   },
+   "reopenedAt": "2026-11-07T16:31:42Z",
+   "evidence": {
+    "agency": "Florida Highway Patrol",
+    "kind": "feed-dropped",
+    "missingSince": "2026-11-07T16:15:45Z",
+    "reopenedAt": "2026-11-07T16:31:42Z",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
+   },
+   "stillReported": []
+  },
   {
    "dir": "SB",
    "fullClosure": false,
@@ -1976,6 +1976,12 @@
    "time": "2026-11-07T05:00:00Z",
    "text": "In written answers to News 6 on Friday, NWS Melbourne said the St. Johns River near Cocoa should crest at about 17.1 feet around Tuesday or Wednesday, November 10\u201311. That is above the 17-foot major flood stage. At 17.2 feet, Providence Road west of Cocoa can become impassable, which could cut off access to the Mullet Lane and Bass Road areas. River forecasts can change. Brevard County Emergency Management is warning residents west of I-95 and along flood-prone parts of the St. Johns River to watch for flooding in low-lying areas. Do not drive through flooded roads.",
    "url": "https://www.clickorlando.com/news/local/2026/11/07/st-johns-river-flooding-near-cocoa-could-rival-tropical-storm-fay-as-residents-brace-for-major-flood/"
+  },
+  {
+   "agency": "National Weather Service Melbourne",
+   "time": "2026-11-07T15:53:00Z",
+   "text": "Update to the St. Johns River flood warning near Cocoa (9 miles west) in Brevard County, issued at 10:53 AM Saturday: at 10:15 AM Saturday the river stood at 16.9 feet, above the 16.0-foot flood stage. The highest level in the 24 hours before that reading was also 16.9 feet. NWS expects the river to stay steady at about 16.9 feet and still says major flooding is forecast. The warning stays in effect. At 17.2 feet the Providence Road area west of Cocoa becomes impassable, cutting off access to the Mullet Lane and Bass Road area. Use caution near the riverbanks and do not drive through flooded areas.",
+   "url": "https://www.defconlevel.com/alert/2026-11-07-nws-noaa-weather-flood-warning-issued-november-7-at-10-53am-est-by-nws-melbourne-fl"
   }
  ]
 }
