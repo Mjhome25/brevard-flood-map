@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-08T04:15:46Z",
+ "generated": "2026-11-08T04:30:43Z",
  "errors": [],
  "items": [
   {
@@ -60,11 +60,17 @@
     "publishedAt": "2026-11-07T14:21:55Z"
    },
    "awaitingOfficial": true,
-   "missingSince": null,
+   "missingSince": "2026-11-08T04:30:50Z",
    "recheck": [
     "source shows reduced impact",
     "source changed its lane description"
-   ]
+   ],
+   "noLongerListed": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "since": "2026-11-08T04:30:50Z",
+    "wasClosed": true
+   }
   },
   {
    "fullClosure": false,
@@ -230,8 +236,8 @@
    "title": "MVC on I-95 South, before MM 205BA/SR-528 East",
    "where": "I-95 SB before MM 205BA/SR-528 East",
    "id": "brevard:fl511:948207",
-   "updated": "2026-11-08T03:44:00Z",
-   "lastReported": "2026-11-08T03:44:00Z",
+   "updated": "2026-11-08T04:16:00Z",
+   "lastReported": "2026-11-08T04:16:00Z",
    "firstReported": "2026-11-08T03:13:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
