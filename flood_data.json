@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-08T00:45:37Z",
+ "generated": "2026-11-08T01:00:50Z",
  "errors": [],
  "items": [
   {
@@ -27,9 +27,15 @@
     "kind": "feed",
     "publishedAt": "2026-11-07T11:38:16Z"
    },
-   "awaitingOfficial": false,
-   "missingSince": null,
-   "recheck": []
+   "awaitingOfficial": true,
+   "missingSince": "2026-11-08T01:00:57Z",
+   "recheck": [],
+   "noLongerListed": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "since": "2026-11-08T01:00:57Z",
+    "wasClosed": false
+   }
   },
   {
    "fullClosure": false,
@@ -55,6 +61,35 @@
     "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
     "kind": "feed",
     "publishedAt": "2026-11-07T12:08:04Z"
+   },
+   "awaitingOfficial": false,
+   "missingSince": null,
+   "recheck": []
+  },
+  {
+   "fullClosure": false,
+   "lanes": "Roadblock",
+   "lat": 28.2307213790075,
+   "layer": "FHP",
+   "lng": -80.7186332623316,
+   "reported": "2026-11-07T12:57:07Z",
+   "road": "I-95 SB [MM191]",
+   "roadShort": "I-95 Sb [MM191]",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "spot": "at Mm191",
+   "status": "closed",
+   "title": "MVC W/Roadblock at I-95 SB [MM191] x[MM191] [MELBOURNE] (Roadblock)",
+   "where": "I-95 Sb [MM191] at Mm191",
+   "id": "brevard:fhp:20261107125707-c7863fcb",
+   "updated": "2026-11-07T12:57:07Z",
+   "lastReported": "2026-11-07T12:57:07Z",
+   "firstReported": "2026-11-07T12:57:07Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-07T12:57:07Z"
    },
    "awaitingOfficial": false,
    "missingSince": null,
@@ -1828,7 +1863,14 @@
     "reopenedAt": "2026-11-07T01:01:02Z",
     "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
    },
-   "stillReported": []
+   "stillReported": [
+    {
+     "id": "brevard:fhp:20261107125707-c7863fcb",
+     "where": "I-95 Sb [MM191] at Mm191",
+     "source": "FHP live CAD",
+     "since": null
+    }
+   ]
   }
  ],
  "sources": {
