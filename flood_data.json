@@ -1,7 +1,36 @@
 {
- "generated": "2026-11-08T07:15:47Z",
+ "generated": "2026-11-08T07:30:34Z",
  "errors": [],
  "items": [
+  {
+   "fullClosure": false,
+   "lanes": "Road Blockage",
+   "lat": 28.2803621519543,
+   "layer": "FHP",
+   "lng": -80.7239410164384,
+   "reported": "2026-11-08T07:29:28Z",
+   "road": "CADET CIR",
+   "roadShort": "Cadet Cir",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "spot": "at Golf Vista Blvd",
+   "status": "closed",
+   "title": "MVC W/Roadblock at CADET CIR x[GOLF VISTA BLVD] [ROCKLEDGE] (Road Blockage)",
+   "where": "Cadet Cir at Golf Vista Blvd",
+   "id": "brevard:fhp:20261108072928-cf933a8f",
+   "updated": "2026-11-08T07:29:28Z",
+   "lastReported": "2026-11-08T07:29:28Z",
+   "firstReported": "2026-11-08T07:29:28Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-08T07:29:28Z"
+   },
+   "awaitingOfficial": false,
+   "missingSince": null,
+   "recheck": []
+  },
   {
    "approx": true,
    "city": "Melbourne",
