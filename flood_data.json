@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-08T05:45:40Z",
+ "generated": "2026-11-08T06:00:43Z",
  "errors": [],
  "items": [
   {
@@ -27,42 +27,13 @@
     "kind": "feed",
     "publishedAt": "2026-11-07T14:24:58Z"
    },
-   "awaitingOfficial": false,
-   "missingSince": null,
-   "recheck": []
-  },
-  {
-   "fullClosure": false,
-   "lanes": "Road Blockage",
-   "lat": 28.3563482345191,
-   "layer": "FHP",
-   "lng": -80.7923997710786,
-   "reported": "2026-11-07T15:58:13Z",
-   "road": "I-95 SB [MM201]",
-   "roadShort": "I-95 Sb [MM201]",
-   "source": "FHP live CAD",
-   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-   "spot": "at Mm201",
-   "status": "caution",
-   "title": "Roadway Debris/Object at I-95 SB [MM201] x[MM201] [COCOA] (Road Blockage)",
-   "where": "I-95 Sb [MM201] at Mm201",
-   "id": "brevard:fhp:20261107155813-bc29a303",
-   "updated": "2026-11-07T15:58:13Z",
-   "lastReported": "2026-11-07T15:58:13Z",
-   "firstReported": "2026-11-07T15:58:13Z",
-   "verified": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "kind": "feed",
-    "publishedAt": "2026-11-07T15:58:13Z"
-   },
    "awaitingOfficial": true,
-   "missingSince": "2026-11-08T05:45:44Z",
+   "missingSince": "2026-11-08T06:00:50Z",
    "recheck": [],
    "noLongerListed": {
     "agency": "Florida Highway Patrol",
     "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "since": "2026-11-08T05:45:44Z",
+    "since": "2026-11-08T06:00:50Z",
     "wasClosed": false
    }
   },
@@ -231,6 +202,41 @@
   }
  ],
  "reopened": [
+  {
+   "fullClosure": false,
+   "lanes": "Road Blockage",
+   "lat": 28.3563482345191,
+   "layer": "FHP",
+   "lng": -80.7923997710786,
+   "reported": "2026-11-07T15:58:13Z",
+   "road": "I-95 SB [MM201]",
+   "roadShort": "I-95 Sb [MM201]",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "spot": "at Mm201",
+   "status": "caution",
+   "title": "Roadway Debris/Object at I-95 SB [MM201] x[MM201] [COCOA] (Road Blockage)",
+   "where": "I-95 Sb [MM201] at Mm201",
+   "id": "brevard:fhp:20261107155813-bc29a303",
+   "updated": "2026-11-07T15:58:13Z",
+   "lastReported": "2026-11-07T15:58:13Z",
+   "firstReported": "2026-11-07T15:58:13Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-07T15:58:13Z"
+   },
+   "reopenedAt": "2026-11-08T06:00:50Z",
+   "evidence": {
+    "agency": "Florida Highway Patrol",
+    "kind": "feed-dropped",
+    "missingSince": "2026-11-08T05:45:44Z",
+    "reopenedAt": "2026-11-08T06:00:50Z",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
+   },
+   "stillReported": []
+  },
   {
    "dir": "SB",
    "fullClosure": false,
@@ -728,14 +734,7 @@
     "reopenedAt": "2026-11-07T22:15:49Z",
     "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
    },
-   "stillReported": [
-    {
-     "id": "brevard:fhp:20261107155813-bc29a303",
-     "where": "I-95 Sb [MM201] at Mm201",
-     "source": "FHP live CAD",
-     "since": "2026-11-08T05:45:44Z"
-    }
-   ]
+   "stillReported": []
   },
   {
    "fullClosure": false,
