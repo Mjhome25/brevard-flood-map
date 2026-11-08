@@ -1,77 +1,7 @@
 {
- "generated": "2026-11-08T04:30:43Z",
+ "generated": "2026-11-08T04:45:40Z",
  "errors": [],
  "items": [
-  {
-   "from": "Fortenberry Rd",
-   "fullClosure": false,
-   "lanes": "Unknown Roadblock",
-   "lat": 28.3571554765042,
-   "layer": "FHP",
-   "line": [
-    [
-     28.35427,
-     -80.695405
-    ],
-    [
-     28.354349,
-     -80.695425
-    ],
-    [
-     28.354915,
-     -80.695407
-    ],
-    [
-     28.355868,
-     -80.695413
-    ],
-    [
-     28.356759,
-     -80.69541
-    ],
-    [
-     28.357007,
-     -80.695406
-    ],
-    [
-     28.357007,
-     -80.695406
-    ]
-   ],
-   "lng": -80.695252434168,
-   "reported": "2026-11-07T14:21:55Z",
-   "road": "IMPERIAL ST",
-   "roadShort": "Imperial St",
-   "source": "FHP live CAD",
-   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-   "spot": "at Merritt Island Cswy E",
-   "status": "closed",
-   "title": "MVC at IMPERIAL ST x[MERRITT ISLAND CSWY E] [MERRITT ISLAND] (Unknown Roadblock)",
-   "to": "E Merritt Island Cswy",
-   "where": "Imperial St at Merritt Island Cswy E",
-   "id": "brevard:fhp:20261107142155-03b7f6d9",
-   "updated": "2026-11-07T14:21:55Z",
-   "lastReported": "2026-11-07T14:21:55Z",
-   "firstReported": "2026-11-07T14:21:55Z",
-   "verified": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "kind": "feed",
-    "publishedAt": "2026-11-07T14:21:55Z"
-   },
-   "awaitingOfficial": true,
-   "missingSince": "2026-11-08T04:30:50Z",
-   "recheck": [
-    "source shows reduced impact",
-    "source changed its lane description"
-   ],
-   "noLongerListed": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "since": "2026-11-08T04:30:50Z",
-    "wasClosed": true
-   }
-  },
   {
    "fullClosure": false,
    "lanes": "No Road Block",
@@ -173,8 +103,8 @@
    "title": "Disabled vehicle on I-95 South, before MM 191/CR-509. On-ramp closed",
    "where": "I-95 SB before MM 191/CR-509",
    "id": "brevard:fl511:948009",
-   "updated": "2026-11-08T04:03:00Z",
-   "lastReported": "2026-11-08T04:03:00Z",
+   "updated": "2026-11-08T04:36:00Z",
+   "lastReported": "2026-11-08T04:36:00Z",
    "firstReported": "2026-11-08T02:10:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
@@ -244,6 +174,46 @@
     "url": "https://fl511.com",
     "kind": "feed",
     "publishedAt": "2026-11-08T03:13:00Z"
+   },
+   "awaitingOfficial": false,
+   "missingSince": null,
+   "recheck": []
+  },
+  {
+   "dir": "SB",
+   "fullClosure": false,
+   "lanes": "Right shoulder blocked",
+   "lat": 28.355722,
+   "layer": "Incidents",
+   "line": [
+    [
+     28.35572,
+     -80.79206
+    ],
+    [
+     28.35565,
+     -80.79202
+    ]
+   ],
+   "lng": -80.792056,
+   "reported": "2026-11-08T03:58:00Z",
+   "road": "I-95",
+   "roadShort": "I-95",
+   "source": "FL511 (FDOT)",
+   "sourceUrl": "https://fl511.com",
+   "spot": "before MM 201/SR-520",
+   "status": "caution",
+   "title": "Object on roadway on I-95 South, before MM 201/SR-520. Right shoulder blocked",
+   "where": "I-95 SB before MM 201/SR-520",
+   "id": "brevard:fl511:948270",
+   "updated": "2026-11-08T04:30:00Z",
+   "lastReported": "2026-11-08T04:30:00Z",
+   "firstReported": "2026-11-08T04:30:00Z",
+   "verified": {
+    "agency": "FL511 (FDOT)",
+    "url": "https://fl511.com",
+    "kind": "feed",
+    "publishedAt": "2026-11-08T04:30:00Z"
    },
    "awaitingOfficial": false,
    "missingSince": null,
@@ -351,6 +321,73 @@
   }
  ],
  "reopened": [
+  {
+   "from": "Fortenberry Rd",
+   "fullClosure": false,
+   "lanes": "Unknown Roadblock",
+   "lat": 28.3571554765042,
+   "layer": "FHP",
+   "line": [
+    [
+     28.35427,
+     -80.695405
+    ],
+    [
+     28.354349,
+     -80.695425
+    ],
+    [
+     28.354915,
+     -80.695407
+    ],
+    [
+     28.355868,
+     -80.695413
+    ],
+    [
+     28.356759,
+     -80.69541
+    ],
+    [
+     28.357007,
+     -80.695406
+    ],
+    [
+     28.357007,
+     -80.695406
+    ]
+   ],
+   "lng": -80.695252434168,
+   "reported": "2026-11-07T14:21:55Z",
+   "road": "IMPERIAL ST",
+   "roadShort": "Imperial St",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "spot": "at Merritt Island Cswy E",
+   "status": "closed",
+   "title": "MVC at IMPERIAL ST x[MERRITT ISLAND CSWY E] [MERRITT ISLAND] (Unknown Roadblock)",
+   "to": "E Merritt Island Cswy",
+   "where": "Imperial St at Merritt Island Cswy E",
+   "id": "brevard:fhp:20261107142155-03b7f6d9",
+   "updated": "2026-11-07T14:21:55Z",
+   "lastReported": "2026-11-07T14:21:55Z",
+   "firstReported": "2026-11-07T14:21:55Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-07T14:21:55Z"
+   },
+   "reopenedAt": "2026-11-08T04:45:46Z",
+   "evidence": {
+    "agency": "Florida Highway Patrol",
+    "kind": "feed-dropped",
+    "missingSince": "2026-11-08T04:30:50Z",
+    "reopenedAt": "2026-11-08T04:45:46Z",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
+   },
+   "stillReported": []
+  },
   {
    "fullClosure": false,
    "lanes": "No Roadblock",
