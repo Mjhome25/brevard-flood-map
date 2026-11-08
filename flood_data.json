@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-08T01:15:43Z",
+ "generated": "2026-11-08T01:30:33Z",
  "errors": [],
  "items": [
   {
@@ -14,7 +14,7 @@
    "source": "FHP live CAD",
    "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
    "spot": "at N Courtenay Pkwy",
-   "status": "caution",
+   "status": "closed",
    "title": "MVC at SKYLINE BLVD x[N COURTENAY PKWY] [MERRITT ISLAND] (No Roadblock)",
    "where": "Skyline Blvd at N Courtenay Pkwy",
    "id": "brevard:fhp:20261107120804-0e64d09c",
@@ -27,9 +27,11 @@
     "kind": "feed",
     "publishedAt": "2026-11-07T12:08:04Z"
    },
-   "awaitingOfficial": false,
+   "awaitingOfficial": true,
    "missingSince": null,
-   "recheck": []
+   "recheck": [
+    "source changed its lane description"
+   ]
   },
   {
    "fullClosure": false,
@@ -87,8 +89,8 @@
    "title": "MVC on I-95 South, before MM 191/CR-509. On-ramp closed",
    "where": "I-95 SB before MM 191/CR-509",
    "id": "brevard:fl511:948072",
-   "updated": "2026-11-08T01:04:00Z",
-   "lastReported": "2026-11-08T01:04:00Z",
+   "updated": "2026-11-08T01:24:00Z",
+   "lastReported": "2026-11-08T01:24:00Z",
    "firstReported": "2026-11-08T01:04:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
@@ -96,9 +98,11 @@
     "kind": "feed",
     "publishedAt": "2026-11-08T01:04:00Z"
    },
-   "awaitingOfficial": false,
+   "awaitingOfficial": true,
    "missingSince": null,
-   "recheck": []
+   "recheck": [
+    "source shows reduced impact"
+   ]
   },
   {
    "approx": true,
