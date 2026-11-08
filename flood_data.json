@@ -1,76 +1,7 @@
 {
- "generated": "2026-11-08T06:15:45Z",
+ "generated": "2026-11-08T06:30:35Z",
  "errors": [],
  "items": [
-  {
-   "dir": "SB",
-   "fullClosure": false,
-   "lat": 28.408861,
-   "layer": "Incidents",
-   "line": [
-    [
-     28.40886,
-     -80.82043
-    ],
-    [
-     28.40833,
-     -80.82043
-    ],
-    [
-     28.40761,
-     -80.82043
-    ],
-    [
-     28.40714,
-     -80.82041
-    ],
-    [
-     28.40685,
-     -80.8204
-    ],
-    [
-     28.40654,
-     -80.82037
-    ],
-    [
-     28.40628,
-     -80.82034
-    ],
-    [
-     28.40608,
-     -80.82031
-    ]
-   ],
-   "lng": -80.820417,
-   "reported": "2026-11-08T02:28:00Z",
-   "road": "I-95",
-   "roadShort": "I-95",
-   "source": "FL511 (FDOT)",
-   "sourceUrl": "https://fl511.com",
-   "spot": "before MM 205BA/SR-528 East",
-   "status": "caution",
-   "title": "MVC on I-95 South, before MM 205BA/SR-528 East",
-   "where": "I-95 SB before MM 205BA/SR-528 East",
-   "id": "brevard:fl511:948207",
-   "updated": "2026-11-08T05:22:00Z",
-   "lastReported": "2026-11-08T05:22:00Z",
-   "firstReported": "2026-11-08T03:13:00Z",
-   "verified": {
-    "agency": "FL511 (FDOT)",
-    "url": "https://fl511.com",
-    "kind": "feed",
-    "publishedAt": "2026-11-08T03:13:00Z"
-   },
-   "awaitingOfficial": true,
-   "missingSince": "2026-11-08T06:15:49Z",
-   "recheck": [],
-   "noLongerListed": {
-    "agency": "FL511 (FDOT)",
-    "url": "https://fl511.com",
-    "since": "2026-11-08T06:15:49Z",
-    "wasClosed": false
-   }
-  },
   {
    "approx": true,
    "city": "Melbourne",
@@ -173,6 +104,75 @@
   }
  ],
  "reopened": [
+  {
+   "dir": "SB",
+   "fullClosure": false,
+   "lat": 28.408861,
+   "layer": "Incidents",
+   "line": [
+    [
+     28.40886,
+     -80.82043
+    ],
+    [
+     28.40833,
+     -80.82043
+    ],
+    [
+     28.40761,
+     -80.82043
+    ],
+    [
+     28.40714,
+     -80.82041
+    ],
+    [
+     28.40685,
+     -80.8204
+    ],
+    [
+     28.40654,
+     -80.82037
+    ],
+    [
+     28.40628,
+     -80.82034
+    ],
+    [
+     28.40608,
+     -80.82031
+    ]
+   ],
+   "lng": -80.820417,
+   "reported": "2026-11-08T02:28:00Z",
+   "road": "I-95",
+   "roadShort": "I-95",
+   "source": "FL511 (FDOT)",
+   "sourceUrl": "https://fl511.com",
+   "spot": "before MM 205BA/SR-528 East",
+   "status": "caution",
+   "title": "MVC on I-95 South, before MM 205BA/SR-528 East",
+   "where": "I-95 SB before MM 205BA/SR-528 East",
+   "id": "brevard:fl511:948207",
+   "updated": "2026-11-08T05:22:00Z",
+   "lastReported": "2026-11-08T05:22:00Z",
+   "firstReported": "2026-11-08T03:13:00Z",
+   "verified": {
+    "agency": "FL511 (FDOT)",
+    "url": "https://fl511.com",
+    "kind": "feed",
+    "publishedAt": "2026-11-08T03:13:00Z"
+   },
+   "reopenedAt": "2026-11-08T06:30:41Z",
+   "evidence": {
+    "agency": "FL511 (FDOT)",
+    "kind": "feed-dropped",
+    "missingSince": "2026-11-08T06:15:49Z",
+    "reopenedAt": "2026-11-08T06:30:41Z",
+    "url": "https://fl511.com"
+   },
+   "stillReported": []
+  },
   {
    "fullClosure": false,
    "lanes": "No Road Block",
