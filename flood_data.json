@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-08T00:15:41Z",
+ "generated": "2026-11-08T00:30:45Z",
  "errors": [],
  "items": [
   {
@@ -30,41 +30,6 @@
    "awaitingOfficial": false,
    "missingSince": null,
    "recheck": []
-  },
-  {
-   "fullClosure": false,
-   "lanes": "No Road Block",
-   "lat": 28.4587986341678,
-   "layer": "FHP",
-   "lng": -80.8209775669264,
-   "reported": "2026-11-07T11:57:53Z",
-   "road": "PORT ST JOHN PKWY [ENT RAMP TO]",
-   "roadShort": "Port St John Pkwy [Ent Ramp To]",
-   "source": "FHP live CAD",
-   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-   "spot": "at I-95",
-   "status": "caution",
-   "title": "MVC at PORT ST JOHN PKWY [ENT RAMP TO] x[I-95] [COCOA] (No Road Block)",
-   "where": "Port St John Pkwy [Ent Ramp To] at I-95",
-   "id": "brevard:fhp:20261107115753-a7ff02aa",
-   "updated": "2026-11-07T11:57:53Z",
-   "lastReported": "2026-11-07T11:57:53Z",
-   "firstReported": "2026-11-07T11:57:53Z",
-   "verified": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "kind": "feed",
-    "publishedAt": "2026-11-07T11:57:53Z"
-   },
-   "awaitingOfficial": true,
-   "missingSince": "2026-11-08T00:15:47Z",
-   "recheck": [],
-   "noLongerListed": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "since": "2026-11-08T00:15:47Z",
-    "wasClosed": false
-   }
   },
   {
    "fullClosure": false,
@@ -197,6 +162,41 @@
   }
  ],
  "reopened": [
+  {
+   "fullClosure": false,
+   "lanes": "No Road Block",
+   "lat": 28.4587986341678,
+   "layer": "FHP",
+   "lng": -80.8209775669264,
+   "reported": "2026-11-07T11:57:53Z",
+   "road": "PORT ST JOHN PKWY [ENT RAMP TO]",
+   "roadShort": "Port St John Pkwy [Ent Ramp To]",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "spot": "at I-95",
+   "status": "caution",
+   "title": "MVC at PORT ST JOHN PKWY [ENT RAMP TO] x[I-95] [COCOA] (No Road Block)",
+   "where": "Port St John Pkwy [Ent Ramp To] at I-95",
+   "id": "brevard:fhp:20261107115753-a7ff02aa",
+   "updated": "2026-11-07T11:57:53Z",
+   "lastReported": "2026-11-07T11:57:53Z",
+   "firstReported": "2026-11-07T11:57:53Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-07T11:57:53Z"
+   },
+   "reopenedAt": "2026-11-08T00:30:51Z",
+   "evidence": {
+    "agency": "Florida Highway Patrol",
+    "kind": "feed-dropped",
+    "missingSince": "2026-11-08T00:15:47Z",
+    "reopenedAt": "2026-11-08T00:30:51Z",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
+   },
+   "stillReported": []
+  },
   {
    "fullClosure": false,
    "lanes": "No Road Block",
