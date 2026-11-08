@@ -1,42 +1,7 @@
 {
- "generated": "2026-11-08T06:00:43Z",
+ "generated": "2026-11-08T06:15:45Z",
  "errors": [],
  "items": [
-  {
-   "fullClosure": false,
-   "lanes": "No Road Block",
-   "lat": 28.4098117523057,
-   "layer": "FHP",
-   "lng": -80.8205482904869,
-   "reported": "2026-11-07T14:24:58Z",
-   "road": "I-95 SB [ENTRANCE FROM WB 528]",
-   "roadShort": "I-95 Sb [Entrance From Wb 528]",
-   "source": "FHP live CAD",
-   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-   "spot": "at Mm205",
-   "status": "caution",
-   "title": "MVC at I-95 SB [ENTRANCE FROM WB 528] x[MM205] [COCOA] (No Road Block)",
-   "where": "I-95 Sb [Entrance From Wb 528] at Mm205",
-   "id": "brevard:fhp:20261107142458-6e5032af",
-   "updated": "2026-11-07T14:24:58Z",
-   "lastReported": "2026-11-07T14:24:58Z",
-   "firstReported": "2026-11-07T14:24:58Z",
-   "verified": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "kind": "feed",
-    "publishedAt": "2026-11-07T14:24:58Z"
-   },
-   "awaitingOfficial": true,
-   "missingSince": "2026-11-08T06:00:50Z",
-   "recheck": [],
-   "noLongerListed": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "since": "2026-11-08T06:00:50Z",
-    "wasClosed": false
-   }
-  },
   {
    "dir": "SB",
    "fullClosure": false,
@@ -96,9 +61,15 @@
     "kind": "feed",
     "publishedAt": "2026-11-08T03:13:00Z"
    },
-   "awaitingOfficial": false,
-   "missingSince": null,
-   "recheck": []
+   "awaitingOfficial": true,
+   "missingSince": "2026-11-08T06:15:49Z",
+   "recheck": [],
+   "noLongerListed": {
+    "agency": "FL511 (FDOT)",
+    "url": "https://fl511.com",
+    "since": "2026-11-08T06:15:49Z",
+    "wasClosed": false
+   }
   },
   {
    "approx": true,
@@ -202,6 +173,41 @@
   }
  ],
  "reopened": [
+  {
+   "fullClosure": false,
+   "lanes": "No Road Block",
+   "lat": 28.4098117523057,
+   "layer": "FHP",
+   "lng": -80.8205482904869,
+   "reported": "2026-11-07T14:24:58Z",
+   "road": "I-95 SB [ENTRANCE FROM WB 528]",
+   "roadShort": "I-95 Sb [Entrance From Wb 528]",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "spot": "at Mm205",
+   "status": "caution",
+   "title": "MVC at I-95 SB [ENTRANCE FROM WB 528] x[MM205] [COCOA] (No Road Block)",
+   "where": "I-95 Sb [Entrance From Wb 528] at Mm205",
+   "id": "brevard:fhp:20261107142458-6e5032af",
+   "updated": "2026-11-07T14:24:58Z",
+   "lastReported": "2026-11-07T14:24:58Z",
+   "firstReported": "2026-11-07T14:24:58Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-07T14:24:58Z"
+   },
+   "reopenedAt": "2026-11-08T06:15:49Z",
+   "evidence": {
+    "agency": "Florida Highway Patrol",
+    "kind": "feed-dropped",
+    "missingSince": "2026-11-08T06:00:50Z",
+    "reopenedAt": "2026-11-08T06:15:49Z",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
+   },
+   "stillReported": []
+  },
   {
    "fullClosure": false,
    "lanes": "Road Blockage",
