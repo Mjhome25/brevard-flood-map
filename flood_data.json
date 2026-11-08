@@ -1,45 +1,7 @@
 {
- "generated": "2026-11-08T10:00:38Z",
+ "generated": "2026-11-08T10:15:34Z",
  "errors": [],
  "items": [
-  {
-   "fullClosure": false,
-   "lanes": "Road Blockage",
-   "lat": 28.2803621519543,
-   "layer": "FHP",
-   "lng": -80.7239410164384,
-   "reported": "2026-11-08T07:29:28Z",
-   "road": "CADET CIR",
-   "roadShort": "Cadet Cir",
-   "source": "FHP live CAD",
-   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-   "spot": "at Golf Vista Blvd",
-   "status": "closed",
-   "title": "MVC W/Roadblock at CADET CIR x[GOLF VISTA BLVD] [ROCKLEDGE] (Road Blockage)",
-   "where": "Cadet Cir at Golf Vista Blvd",
-   "id": "brevard:fhp:20261108072928-cf933a8f",
-   "updated": "2026-11-08T07:29:28Z",
-   "lastReported": "2026-11-08T07:29:28Z",
-   "firstReported": "2026-11-08T07:29:28Z",
-   "verified": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "kind": "feed",
-    "publishedAt": "2026-11-08T07:29:28Z"
-   },
-   "awaitingOfficial": true,
-   "missingSince": "2026-11-08T10:00:41Z",
-   "recheck": [
-    "source shows reduced impact",
-    "source changed its lane description"
-   ],
-   "noLongerListed": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "since": "2026-11-08T10:00:41Z",
-    "wasClosed": true
-   }
-  },
   {
    "approx": true,
    "city": "Melbourne",
@@ -142,6 +104,41 @@
   }
  ],
  "reopened": [
+  {
+   "fullClosure": false,
+   "lanes": "Road Blockage",
+   "lat": 28.2803621519543,
+   "layer": "FHP",
+   "lng": -80.7239410164384,
+   "reported": "2026-11-08T07:29:28Z",
+   "road": "CADET CIR",
+   "roadShort": "Cadet Cir",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "spot": "at Golf Vista Blvd",
+   "status": "closed",
+   "title": "MVC W/Roadblock at CADET CIR x[GOLF VISTA BLVD] [ROCKLEDGE] (Road Blockage)",
+   "where": "Cadet Cir at Golf Vista Blvd",
+   "id": "brevard:fhp:20261108072928-cf933a8f",
+   "updated": "2026-11-08T07:29:28Z",
+   "lastReported": "2026-11-08T07:29:28Z",
+   "firstReported": "2026-11-08T07:29:28Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-08T07:29:28Z"
+   },
+   "reopenedAt": "2026-11-08T10:15:38Z",
+   "evidence": {
+    "agency": "Florida Highway Patrol",
+    "kind": "feed-dropped",
+    "missingSince": "2026-11-08T10:00:41Z",
+    "reopenedAt": "2026-11-08T10:15:38Z",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
+   },
+   "stillReported": []
+  },
   {
    "dir": "SB",
    "fullClosure": false,
