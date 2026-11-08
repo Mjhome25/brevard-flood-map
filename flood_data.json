@@ -1,76 +1,7 @@
 {
- "generated": "2026-11-07T23:45:44Z",
+ "generated": "2026-11-08T00:00:47Z",
  "errors": [],
  "items": [
-  {
-   "fullClosure": false,
-   "lanes": "No Road Block Reported",
-   "lat": 28.2304807729469,
-   "layer": "FHP",
-   "lng": -80.7220859379117,
-   "reported": "2026-11-07T11:17:13Z",
-   "road": "N WICKHAM RD",
-   "roadShort": "N Wickham Rd",
-   "source": "FHP live CAD",
-   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-   "spot": "at Lake Andrew Dr",
-   "status": "caution",
-   "title": "MVC at N WICKHAM RD x[LAKE ANDREW DR] [MELBOURNE] (No Road Block Reported)",
-   "where": "N Wickham Rd at Lake Andrew Dr",
-   "id": "brevard:fhp:20261107111713-e2a87ba6",
-   "updated": "2026-11-07T11:17:13Z",
-   "lastReported": "2026-11-07T11:17:13Z",
-   "firstReported": "2026-11-07T11:17:13Z",
-   "verified": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "kind": "feed",
-    "publishedAt": "2026-11-07T11:17:13Z"
-   },
-   "awaitingOfficial": true,
-   "missingSince": "2026-11-07T23:45:51Z",
-   "recheck": [],
-   "noLongerListed": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "since": "2026-11-07T23:45:51Z",
-    "wasClosed": false
-   }
-  },
-  {
-   "fullClosure": false,
-   "lanes": "No Road Block",
-   "lat": 27.8733937373737,
-   "layer": "FHP",
-   "lng": -80.5615571683831,
-   "reported": "2026-11-07T11:24:43Z",
-   "road": "3185 MICCO RD [SEBASTIAN]",
-   "roadShort": "3185 Micco Rd [Sebastian]",
-   "source": "FHP live CAD",
-   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-   "status": "caution",
-   "title": "MVC at 3185 MICCO RD [SEBASTIAN] (No Road Block)",
-   "where": "3185 Micco Rd [Sebastian]",
-   "id": "brevard:fhp:20261107112443-a16e94ba",
-   "updated": "2026-11-07T11:24:43Z",
-   "lastReported": "2026-11-07T11:24:43Z",
-   "firstReported": "2026-11-07T11:24:43Z",
-   "verified": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "kind": "feed",
-    "publishedAt": "2026-11-07T11:24:43Z"
-   },
-   "awaitingOfficial": true,
-   "missingSince": "2026-11-07T23:45:51Z",
-   "recheck": [],
-   "noLongerListed": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "since": "2026-11-07T23:45:51Z",
-    "wasClosed": false
-   }
-  },
   {
    "fullClosure": false,
    "lanes": "No Roadblock",
@@ -95,6 +26,35 @@
     "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
     "kind": "feed",
     "publishedAt": "2026-11-07T11:38:16Z"
+   },
+   "awaitingOfficial": false,
+   "missingSince": null,
+   "recheck": []
+  },
+  {
+   "fullClosure": false,
+   "lanes": "No Road Block",
+   "lat": 28.4587986341678,
+   "layer": "FHP",
+   "lng": -80.8209775669264,
+   "reported": "2026-11-07T11:57:53Z",
+   "road": "PORT ST JOHN PKWY [ENT RAMP TO]",
+   "roadShort": "Port St John Pkwy [Ent Ramp To]",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "spot": "at I-95",
+   "status": "caution",
+   "title": "MVC at PORT ST JOHN PKWY [ENT RAMP TO] x[I-95] [COCOA] (No Road Block)",
+   "where": "Port St John Pkwy [Ent Ramp To] at I-95",
+   "id": "brevard:fhp:20261107115753-a7ff02aa",
+   "updated": "2026-11-07T11:57:53Z",
+   "lastReported": "2026-11-07T11:57:53Z",
+   "firstReported": "2026-11-07T11:57:53Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-07T11:57:53Z"
    },
    "awaitingOfficial": false,
    "missingSince": null,
@@ -202,6 +162,75 @@
   }
  ],
  "reopened": [
+  {
+   "fullClosure": false,
+   "lanes": "No Road Block",
+   "lat": 27.8733937373737,
+   "layer": "FHP",
+   "lng": -80.5615571683831,
+   "reported": "2026-11-07T11:24:43Z",
+   "road": "3185 MICCO RD [SEBASTIAN]",
+   "roadShort": "3185 Micco Rd [Sebastian]",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "status": "caution",
+   "title": "MVC at 3185 MICCO RD [SEBASTIAN] (No Road Block)",
+   "where": "3185 Micco Rd [Sebastian]",
+   "id": "brevard:fhp:20261107112443-a16e94ba",
+   "updated": "2026-11-07T11:24:43Z",
+   "lastReported": "2026-11-07T11:24:43Z",
+   "firstReported": "2026-11-07T11:24:43Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-07T11:24:43Z"
+   },
+   "reopenedAt": "2026-11-08T00:00:53Z",
+   "evidence": {
+    "agency": "Florida Highway Patrol",
+    "kind": "feed-dropped",
+    "missingSince": "2026-11-07T23:45:51Z",
+    "reopenedAt": "2026-11-08T00:00:53Z",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
+   },
+   "stillReported": []
+  },
+  {
+   "fullClosure": false,
+   "lanes": "No Road Block Reported",
+   "lat": 28.2304807729469,
+   "layer": "FHP",
+   "lng": -80.7220859379117,
+   "reported": "2026-11-07T11:17:13Z",
+   "road": "N WICKHAM RD",
+   "roadShort": "N Wickham Rd",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "spot": "at Lake Andrew Dr",
+   "status": "caution",
+   "title": "MVC at N WICKHAM RD x[LAKE ANDREW DR] [MELBOURNE] (No Road Block Reported)",
+   "where": "N Wickham Rd at Lake Andrew Dr",
+   "id": "brevard:fhp:20261107111713-e2a87ba6",
+   "updated": "2026-11-07T11:17:13Z",
+   "lastReported": "2026-11-07T11:17:13Z",
+   "firstReported": "2026-11-07T11:17:13Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-07T11:17:13Z"
+   },
+   "reopenedAt": "2026-11-08T00:00:53Z",
+   "evidence": {
+    "agency": "Florida Highway Patrol",
+    "kind": "feed-dropped",
+    "missingSince": "2026-11-07T23:45:51Z",
+    "reopenedAt": "2026-11-08T00:00:53Z",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
+   },
+   "stillReported": []
+  },
   {
    "fullClosure": false,
    "lanes": "No Roadblock",
