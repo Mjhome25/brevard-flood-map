@@ -1,7 +1,36 @@
 {
- "generated": "2026-11-08T11:15:39Z",
+ "generated": "2026-11-08T11:30:44Z",
  "errors": [],
  "items": [
+  {
+   "fullClosure": false,
+   "lanes": "No Roadblock",
+   "lat": 28.7138162758015,
+   "layer": "FHP",
+   "lng": -80.8895167793897,
+   "reported": "2026-11-08T11:25:35Z",
+   "road": "I-95 SB [MM227]",
+   "roadShort": "I-95 Sb [MM227]",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "spot": "at Mm227",
+   "status": "caution",
+   "title": "MVC at I-95 SB [MM227] x[MM227] [MIMS] (No Roadblock)",
+   "where": "I-95 Sb [MM227] at Mm227",
+   "id": "brevard:fhp:20261108112535-81a0efae",
+   "updated": "2026-11-08T11:25:35Z",
+   "lastReported": "2026-11-08T11:25:35Z",
+   "firstReported": "2026-11-08T11:25:35Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-08T11:25:35Z"
+   },
+   "awaitingOfficial": false,
+   "missingSince": null,
+   "recheck": []
+  },
   {
    "approx": true,
    "city": "Melbourne",
