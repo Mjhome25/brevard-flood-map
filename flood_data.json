@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-08T03:30:43Z",
+ "generated": "2026-11-08T03:45:49Z",
  "errors": [],
  "items": [
   {
@@ -138,8 +138,8 @@
    "title": "Disabled vehicle on I-95 South, before MM 191/CR-509. On-ramp closed",
    "where": "I-95 SB before MM 191/CR-509",
    "id": "brevard:fl511:948009",
-   "updated": "2026-11-08T02:56:00Z",
-   "lastReported": "2026-11-08T02:56:00Z",
+   "updated": "2026-11-08T03:30:00Z",
+   "lastReported": "2026-11-08T03:30:00Z",
    "firstReported": "2026-11-08T02:10:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
@@ -201,8 +201,8 @@
    "title": "MVC on I-95 South, before MM 205BA/SR-528 East",
    "where": "I-95 SB before MM 205BA/SR-528 East",
    "id": "brevard:fl511:948207",
-   "updated": "2026-11-08T03:13:00Z",
-   "lastReported": "2026-11-08T03:13:00Z",
+   "updated": "2026-11-08T03:44:00Z",
+   "lastReported": "2026-11-08T03:44:00Z",
    "firstReported": "2026-11-08T03:13:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
