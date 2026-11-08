@@ -1,5 +1,5 @@
 {
-  // Every 15 minutes, asks GitHub to run the "Update map" workflow.
+  // RETIRED Nov 8, 2026 (Mike): no schedule. It used to ask GitHub to run "Update map" every 15 minutes.
   // GitHub's own schedule is unreliable; Cloudflare's cron is not.
   "name": "brevard-map-timer",
   "account_id": "35eda903f9264997e98abda46ef035f7",
@@ -7,5 +7,5 @@
   "compatibility_date": "2026-11-01",
   "observability": { "enabled": true },
   "workers_dev": false,
-  "triggers": { "crons": ["*/15 * * * *"] }
+  "triggers": { "crons": [] }
 }
