@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-08T01:30:33Z",
+ "generated": "2026-11-08T01:45:37Z",
  "errors": [],
  "items": [
   {
@@ -1737,70 +1737,6 @@
     "missingSince": "2026-11-07T02:00:53Z",
     "reopenedAt": "2026-11-07T02:15:52Z",
     "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
-   },
-   "stillReported": []
-  },
-  {
-   "dir": "EB",
-   "from": "Porcella Ave",
-   "fullClosure": true,
-   "lanes": "All lanes blocked",
-   "lat": 28.121605,
-   "layer": "Closures",
-   "line": [
-    [
-     28.121386,
-     -80.675733
-    ],
-    [
-     28.121392,
-     -80.675601
-    ],
-    [
-     28.121548,
-     -80.672671
-    ],
-    [
-     28.121606,
-     -80.671584
-    ],
-    [
-     28.121606,
-     -80.671577
-    ],
-    [
-     28.121631,
-     -80.667022
-    ]
-   ],
-   "lng": -80.671577,
-   "reported": "2026-11-07T00:32:00Z",
-   "road": "Sarno Rd",
-   "roadShort": "Sarno Rd",
-   "source": "FL511 (FDOT)",
-   "sourceUrl": "https://fl511.com",
-   "spot": "at Wickham Rd",
-   "status": "closed",
-   "title": "MVC on Sarno Rd East, at Wickham Rd. All lanes blocked",
-   "to": "Iroquois Ave",
-   "where": "Sarno Rd EB at Wickham Rd",
-   "id": "brevard:fl511:946256",
-   "updated": "2026-11-07T00:53:00Z",
-   "lastReported": "2026-11-07T00:53:00Z",
-   "firstReported": "2026-11-07T00:32:00Z",
-   "verified": {
-    "agency": "FL511 (FDOT)",
-    "url": "https://fl511.com",
-    "kind": "feed",
-    "publishedAt": "2026-11-07T00:32:00Z"
-   },
-   "reopenedAt": "2026-11-07T01:31:41Z",
-   "evidence": {
-    "agency": "FL511 (FDOT)",
-    "kind": "feed-dropped",
-    "missingSince": "2026-11-07T01:15:44Z",
-    "reopenedAt": "2026-11-07T01:31:41Z",
-    "url": "https://fl511.com"
    },
    "stillReported": []
   }
