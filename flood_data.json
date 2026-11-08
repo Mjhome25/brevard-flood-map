@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-08T05:30:43Z",
+ "generated": "2026-11-08T05:45:40Z",
  "errors": [],
  "items": [
   {
@@ -56,9 +56,15 @@
     "kind": "feed",
     "publishedAt": "2026-11-07T15:58:13Z"
    },
-   "awaitingOfficial": false,
-   "missingSince": null,
-   "recheck": []
+   "awaitingOfficial": true,
+   "missingSince": "2026-11-08T05:45:44Z",
+   "recheck": [],
+   "noLongerListed": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "since": "2026-11-08T05:45:44Z",
+    "wasClosed": false
+   }
   },
   {
    "dir": "SB",
@@ -727,7 +733,7 @@
      "id": "brevard:fhp:20261107155813-bc29a303",
      "where": "I-95 Sb [MM201] at Mm201",
      "source": "FHP live CAD",
-     "since": null
+     "since": "2026-11-08T05:45:44Z"
     }
    ]
   },
@@ -1352,41 +1358,6 @@
     "kind": "feed-dropped",
     "missingSince": "2026-11-07T09:31:26Z",
     "reopenedAt": "2026-11-07T09:45:47Z",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
-   },
-   "stillReported": []
-  },
-  {
-   "fullClosure": false,
-   "lanes": "No Roadblock",
-   "lat": 28.5466727580149,
-   "layer": "FHP",
-   "lng": -80.8519432510067,
-   "reported": "2026-11-06T11:20:22Z",
-   "road": "I-95 SB [EXIT RAMP]",
-   "roadShort": "I-95 Sb [Exit Ramp]",
-   "source": "FHP live CAD",
-   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-   "spot": "at Mm215",
-   "status": "caution",
-   "title": "MVC at I-95 SB [EXIT RAMP] x[MM215] [TITUSVILLE] (No Roadblock)",
-   "where": "I-95 Sb [Exit Ramp] at Mm215",
-   "id": "brevard:fhp:20261106112022-ea661c4f",
-   "updated": "2026-11-06T11:20:22Z",
-   "lastReported": "2026-11-06T11:20:22Z",
-   "firstReported": "2026-11-06T11:20:22Z",
-   "verified": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "kind": "feed",
-    "publishedAt": "2026-11-06T11:20:22Z"
-   },
-   "reopenedAt": "2026-11-07T05:31:37Z",
-   "evidence": {
-    "agency": "Florida Highway Patrol",
-    "kind": "feed-dropped",
-    "missingSince": "2026-11-07T05:15:41Z",
-    "reopenedAt": "2026-11-07T05:31:37Z",
     "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
    },
    "stillReported": []
