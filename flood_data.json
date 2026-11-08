@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-08T02:45:38Z",
+ "generated": "2026-11-08T03:00:49Z",
  "errors": [],
  "items": [
   {
@@ -59,9 +59,15 @@
     "kind": "feed",
     "publishedAt": "2026-11-07T12:57:07Z"
    },
-   "awaitingOfficial": false,
-   "missingSince": null,
-   "recheck": []
+   "awaitingOfficial": true,
+   "missingSince": "2026-11-08T03:00:52Z",
+   "recheck": [],
+   "noLongerListed": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "since": "2026-11-08T03:00:52Z",
+    "wasClosed": true
+   }
   },
   {
    "from": "Fortenberry Rd",
@@ -196,8 +202,8 @@
    "title": "Disabled vehicle on I-95 South, before MM 191/CR-509. On-ramp closed",
    "where": "I-95 SB before MM 191/CR-509",
    "id": "brevard:fl511:948009",
-   "updated": "2026-11-08T02:43:00Z",
-   "lastReported": "2026-11-08T02:43:00Z",
+   "updated": "2026-11-08T02:56:00Z",
+   "lastReported": "2026-11-08T02:56:00Z",
    "firstReported": "2026-11-08T02:10:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
@@ -1538,110 +1544,6 @@
     "missingSince": "2026-11-07T03:00:47Z",
     "reopenedAt": "2026-11-07T03:15:47Z",
     "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
-   },
-   "stillReported": []
-  },
-  {
-   "dir": "NB",
-   "fullClosure": false,
-   "lanes": "Left lane blocked",
-   "lat": 28.273317,
-   "layer": "Incidents",
-   "line": [
-    [
-     28.27128,
-     -80.73026
-    ],
-    [
-     28.27223,
-     -80.73053
-    ],
-    [
-     28.27334,
-     -80.73085
-    ]
-   ],
-   "lng": -80.730929,
-   "reported": "2026-11-06T22:30:00Z",
-   "road": "I-95",
-   "roadShort": "I-95",
-   "source": "FL511 (FDOT)",
-   "sourceUrl": "https://fl511.com",
-   "spot": "at MM 194",
-   "status": "caution",
-   "title": "MVC on I-95 North, at MM 194. Left lane blocked",
-   "where": "I-95 NB at MM 194",
-   "id": "brevard:fl511:946057",
-   "updated": "2026-11-07T01:54:00Z",
-   "lastReported": "2026-11-07T01:54:00Z",
-   "firstReported": "2026-11-06T22:35:00Z",
-   "verified": {
-    "agency": "FL511 (FDOT)",
-    "url": "https://fl511.com",
-    "kind": "feed",
-    "publishedAt": "2026-11-06T22:35:00Z"
-   },
-   "reopenedAt": "2026-11-07T03:00:47Z",
-   "evidence": {
-    "agency": "FL511 (FDOT)",
-    "kind": "feed-dropped",
-    "missingSince": "2026-11-07T02:45:49Z",
-    "reopenedAt": "2026-11-07T03:00:47Z",
-    "url": "https://fl511.com"
-   },
-   "stillReported": []
-  },
-  {
-   "dir": "SB",
-   "fullClosure": false,
-   "lanes": "Right shoulder blocked",
-   "lat": 28.035375,
-   "layer": "Incidents",
-   "line": [
-    [
-     28.03538,
-     -80.65683
-    ],
-    [
-     28.03527,
-     -80.65675
-    ],
-    [
-     28.03323,
-     -80.65532
-    ],
-    [
-     28.03206,
-     -80.6545
-    ]
-   ],
-   "lng": -80.656836,
-   "reported": "2026-11-06T23:00:00Z",
-   "road": "I-95",
-   "roadShort": "I-95",
-   "source": "FL511 (FDOT)",
-   "sourceUrl": "https://fl511.com",
-   "spot": "before MM 176/CR-516",
-   "status": "caution",
-   "title": "MVC on I-95 South, before MM 176/CR-516. Right shoulder blocked",
-   "where": "I-95 SB before MM 176/CR-516",
-   "id": "brevard:fl511:946196",
-   "updated": "2026-11-07T01:53:00Z",
-   "lastReported": "2026-11-07T01:53:00Z",
-   "firstReported": "2026-11-06T23:57:00Z",
-   "verified": {
-    "agency": "FL511 (FDOT)",
-    "url": "https://fl511.com",
-    "kind": "feed",
-    "publishedAt": "2026-11-06T23:57:00Z"
-   },
-   "reopenedAt": "2026-11-07T02:45:49Z",
-   "evidence": {
-    "agency": "FL511 (FDOT)",
-    "kind": "feed-dropped",
-    "missingSince": "2026-11-07T02:31:36Z",
-    "reopenedAt": "2026-11-07T02:45:49Z",
-    "url": "https://fl511.com"
    },
    "stillReported": []
   }
