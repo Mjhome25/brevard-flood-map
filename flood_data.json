@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-08T00:00:47Z",
+ "generated": "2026-11-08T00:15:41Z",
  "errors": [],
  "items": [
   {
@@ -55,6 +55,41 @@
     "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
     "kind": "feed",
     "publishedAt": "2026-11-07T11:57:53Z"
+   },
+   "awaitingOfficial": true,
+   "missingSince": "2026-11-08T00:15:47Z",
+   "recheck": [],
+   "noLongerListed": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "since": "2026-11-08T00:15:47Z",
+    "wasClosed": false
+   }
+  },
+  {
+   "fullClosure": false,
+   "lanes": "No Roadblock",
+   "lat": 28.3948866490997,
+   "layer": "FHP",
+   "lng": -80.70432,
+   "reported": "2026-11-07T12:08:04Z",
+   "road": "SKYLINE BLVD",
+   "roadShort": "Skyline Blvd",
+   "source": "FHP live CAD",
+   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+   "spot": "at N Courtenay Pkwy",
+   "status": "caution",
+   "title": "MVC at SKYLINE BLVD x[N COURTENAY PKWY] [MERRITT ISLAND] (No Roadblock)",
+   "where": "Skyline Blvd at N Courtenay Pkwy",
+   "id": "brevard:fhp:20261107120804-0e64d09c",
+   "updated": "2026-11-07T12:08:04Z",
+   "lastReported": "2026-11-07T12:08:04Z",
+   "firstReported": "2026-11-07T12:08:04Z",
+   "verified": {
+    "agency": "Florida Highway Patrol",
+    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
+    "kind": "feed",
+    "publishedAt": "2026-11-07T12:08:04Z"
    },
    "awaitingOfficial": false,
    "missingSince": null,
