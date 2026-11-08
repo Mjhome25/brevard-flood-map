@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-08T02:30:46Z",
+ "generated": "2026-11-08T02:45:38Z",
  "errors": [],
  "items": [
   {
@@ -30,7 +30,8 @@
    "awaitingOfficial": true,
    "missingSince": null,
    "recheck": [
-    "source changed its lane description"
+    "source changed its lane description",
+    "source shows reduced impact"
    ]
   },
   {
@@ -195,8 +196,8 @@
    "title": "Disabled vehicle on I-95 South, before MM 191/CR-509. On-ramp closed",
    "where": "I-95 SB before MM 191/CR-509",
    "id": "brevard:fl511:948009",
-   "updated": "2026-11-08T02:10:00Z",
-   "lastReported": "2026-11-08T02:10:00Z",
+   "updated": "2026-11-08T02:43:00Z",
+   "lastReported": "2026-11-08T02:43:00Z",
    "firstReported": "2026-11-08T02:10:00Z",
    "verified": {
     "agency": "FL511 (FDOT)",
@@ -1641,91 +1642,6 @@
     "missingSince": "2026-11-07T02:31:36Z",
     "reopenedAt": "2026-11-07T02:45:49Z",
     "url": "https://fl511.com"
-   },
-   "stillReported": []
-  },
-  {
-   "dir": "NB",
-   "fullClosure": false,
-   "lanes": "Right shoulder blocked",
-   "lat": 28.423731,
-   "layer": "Incidents",
-   "line": [
-    [
-     28.4216,
-     -80.82021
-    ],
-    [
-     28.42178,
-     -80.82021
-    ],
-    [
-     28.42373,
-     -80.82022
-    ]
-   ],
-   "lng": -80.820236,
-   "reported": "2026-11-06T17:22:00Z",
-   "road": "I-95",
-   "roadShort": "I-95",
-   "source": "FL511 (FDOT)",
-   "sourceUrl": "https://fl511.com",
-   "spot": "at MM 206",
-   "status": "caution",
-   "title": "Vehicle on fire on I-95 North, at MM 206. Right shoulder blocked",
-   "where": "I-95 NB at MM 206",
-   "id": "brevard:fl511:945400",
-   "updated": "2026-11-07T01:55:00Z",
-   "lastReported": "2026-11-07T01:55:00Z",
-   "firstReported": "2026-11-06T17:42:00Z",
-   "verified": {
-    "agency": "FL511 (FDOT)",
-    "url": "https://fl511.com",
-    "kind": "feed",
-    "publishedAt": "2026-11-06T17:42:00Z"
-   },
-   "reopenedAt": "2026-11-07T02:31:36Z",
-   "evidence": {
-    "agency": "FL511 (FDOT)",
-    "kind": "feed-dropped",
-    "missingSince": "2026-11-07T02:15:52Z",
-    "reopenedAt": "2026-11-07T02:31:36Z",
-    "url": "https://fl511.com"
-   },
-   "stillReported": []
-  },
-  {
-   "fullClosure": false,
-   "lanes": "No Roadblock",
-   "lat": 28.3075968555116,
-   "layer": "FHP",
-   "lng": -80.7601547457367,
-   "reported": "2026-11-06T13:44:27Z",
-   "road": "I-95 SB [MM197]",
-   "roadShort": "I-95 Sb [MM197]",
-   "source": "FHP live CAD",
-   "sourceUrl": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-   "spot": "at Mm197",
-   "status": "caution",
-   "title": "MVC at I-95 SB [MM197] x[MM197] [ROCKLEDGE] (No Roadblock)",
-   "where": "I-95 Sb [MM197] at Mm197",
-   "id": "brevard:fhp:20261106134427-cf56805d",
-   "updated": "2026-11-06T13:44:27Z",
-   "lastReported": "2026-11-06T13:44:27Z",
-   "firstReported": "2026-11-06T13:44:27Z",
-   "verified": {
-    "agency": "Florida Highway Patrol",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx",
-    "kind": "feed",
-    "publishedAt": "2026-11-06T13:44:27Z"
-   },
-   "reopenedAt": "2026-11-07T02:31:36Z",
-   "evidence": {
-    "agency": "Florida Highway Patrol",
-    "kind": "feed-dropped",
-    "missingSince": "2026-11-07T02:15:52Z",
-    "reopenedAt": "2026-11-07T02:31:36Z",
-    "url": "https://trafficincidents.flhsmv.gov/SmartWebClient/CadView.aspx"
    },
    "stillReported": []
   }
